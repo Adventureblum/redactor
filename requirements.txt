@@ -1,0 +1,23 @@
+# Core dependencies (sans versions fixes pour éviter les conflits)
+aiofiles
+numpy
+spacy
+nltk
+beautifulsoup4
+scikit-learn
+sentence-transformers
+openai
+playwright
+
+# Additional dependencies that may be required
+lxml
+html5lib
+requests
+tqdm
+pandas
+torch
+transformers
+
+# For async HTTP requests (if needed)
+aiohttp
+httpx
