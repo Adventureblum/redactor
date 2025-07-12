@@ -42,7 +42,28 @@ else:
 # === Fichiers et dossiers ===
 BASE_DIR = os.path.dirname(__file__)
 RESULTS_DIR = os.path.join(BASE_DIR, "results")
-CONSIGNE_FILE = os.path.join(BASE_DIR, "static", "consigne.json")
+
+def _find_consigne_file() -> str:
+    """Trouve automatiquement le fichier de consigne dans le dossier static"""
+    consigne_pattern = os.path.join(BASE_DIR, "static", "consigne*.json")
+    consigne_files = glob.glob(consigne_pattern)
+    
+    if not consigne_files:
+        raise FileNotFoundError(f"❌ Aucun fichier de consigne trouvé dans {os.path.join(BASE_DIR, 'static')}/ (pattern: consigne*.json)")
+    
+    if len(consigne_files) == 1:
+        found_file = consigne_files[0]
+        logging.info(f"📁 Fichier de consigne détecté: {os.path.basename(found_file)}")
+        return found_file
+    
+    # Si plusieurs fichiers trouvés, prendre le plus récent
+    consigne_files.sort(key=os.path.getmtime, reverse=True)
+    most_recent = consigne_files[0]
+    logging.info(f"📁 Plusieurs fichiers de consigne trouvés, utilisation du plus récent: {os.path.basename(most_recent)}")
+    logging.info(f"   Autres fichiers ignorés: {', '.join([os.path.basename(f) for f in consigne_files[1:]])}")
+    return most_recent
+
+CONSIGNE_FILE = _find_consigne_file()
 
 # === Configuration parallélisation ===
 MAX_WORKERS_IO = 4  # Pour les opérations I/O
@@ -126,12 +147,37 @@ class ParallelSemanticAnalyzer:
         self.stop_words.update(additional_stops)
     
     def _init_models(self):
-        """Initialise les modèles dans le thread worker"""
+        """Initialise les modèles dans le thread worker avec fallback"""
         try:
-            self.nlp = spacy.load('fr_core_news_lg')
-            self.sentence_model = SentenceTransformer('distiluse-base-multilingual-cased', device='cpu')
+            # Essayer d'abord le modèle large, puis les alternatives
+            models_to_try = ['fr_core_news_lg']
+            
+            self.nlp = None
+            for model_name in models_to_try:
+                try:
+                    self.nlp = spacy.load(model_name)
+                    logging.info(f"✓ Modèle spaCy chargé: {model_name}")
+                    break
+                except Exception as e:
+                    logging.warning(f"Modèle {model_name} non disponible: {e}")
+                    continue
+            
+            if self.nlp is None:
+                logging.error("Aucun modèle spaCy français disponible")
+                return False
+            
+            # Charger le modèle SentenceTransformer
+            try:
+                self.sentence_model = SentenceTransformer('distiluse-base-multilingual-cased', device='cpu')
+                logging.info("✓ Modèle SentenceTransformer chargé")
+            except Exception as e:
+                logging.error(f"Erreur lors du chargement de SentenceTransformer: {e}")
+                return False
+            
+            # Ajouter les stop words spaCy
             self.stop_words.update(self.nlp.Defaults.stop_words)
             return True
+            
         except Exception as e:
             logging.error(f"Erreur lors du chargement des modèles : {str(e)}")
             return False
@@ -844,6 +890,105 @@ async def update_consigne_data(consigne_data: Dict, processed_results: Dict[int,
         logging.error(f"Erreur lors de la mise à jour de {CONSIGNE_FILE}: {e}")
         return False
 
+async def update_processed_queries(processed_results: Dict[int, Dict], consigne_data: Dict) -> bool:
+    """Met à jour le fichier processed_queries.json avec les informations sémantiques"""
+    try:
+        processed_file = os.path.join(BASE_DIR, "processed_queries.json")
+        
+        # Charger les données existantes
+        processed_data = {}
+        if os.path.exists(processed_file):
+            try:
+                async with aiofiles.open(processed_file, 'r', encoding='utf-8') as f:
+                    content = await f.read()
+                    processed_data = json.loads(content)
+            except Exception as e:
+                logging.warning(f"Erreur lors du chargement de {processed_file}: {e}")
+                processed_data = {"processed_queries": [], "query_details": {}}
+        else:
+            processed_data = {"processed_queries": [], "query_details": {}}
+        
+        # Fonction pour générer le hash d'une requête
+        import hashlib
+        def generate_query_hash(query_text: str) -> str:
+            return hashlib.md5(query_text.lower().strip().encode('utf-8')).hexdigest()
+        
+        # Mettre à jour les détails pour chaque requête traitée
+        for query_id, result in processed_results.items():
+            # Trouver la requête correspondante dans consigne_data
+            query_info = None
+            for query in consigne_data.get('queries', []):
+                if query.get('id') == query_id:
+                    query_info = query
+                    break
+            
+            if query_info:
+                query_text = query_info.get('text', '')
+                query_hash = generate_query_hash(query_text)
+                
+                # Ajouter le hash à la liste des requêtes traitées s'il n'y est pas
+                if query_hash not in processed_data.get("processed_queries", []):
+                    processed_data.setdefault("processed_queries", []).append(query_hash)
+                
+                # Mettre à jour ou créer les détails de la requête
+                if "query_details" not in processed_data:
+                    processed_data["query_details"] = {}
+                
+                if query_hash not in processed_data["query_details"]:
+                    processed_data["query_details"][query_hash] = {
+                        'id': query_id,
+                        'text': query_text,
+                        'processed_at': None
+                    }
+                
+                # Ajouter les informations sémantiques
+                processed_data["query_details"][query_hash].update({
+                    'semantic': 1,  # 1 = succès du traitement sémantique
+                    'semantic_processed_at': __import__('time').strftime('%Y-%m-%d %H:%M:%S'),
+                    'semantic_analysis': {
+                        'clusters_count': result.get('semantic_analysis', {}).get('clusters_count', 0),
+                        'relations_found': result.get('semantic_analysis', {}).get('relations_found', 0),
+                        'entities_count': len(result.get('semantic_analysis', {}).get('entities', [])),
+                        'angles_generated': len(result.get('differentiating_angles', [])),
+                        'thematic_diversity': result.get('semantic_analysis', {}).get('thematic_diversity', 0),
+                        'semantic_complexity': result.get('semantic_analysis', {}).get('semantic_complexity', 0)
+                    }
+                })
+                logging.info(f"✓ Détails sémantiques ajoutés pour la requête ID {query_id} (hash: {query_hash[:8]})")
+        
+        # Marquer les requêtes qui ont échoué (semantic = 0)
+        for query in consigne_data.get('queries', []):
+            query_id = query.get('id')
+            if query_id not in processed_results:
+                query_text = query.get('text', '')
+                query_hash = generate_query_hash(query_text)
+                
+                if query_hash in processed_data.get("query_details", {}):
+                    # La requête était déjà dans processed_queries mais le traitement sémantique a échoué
+                    processed_data["query_details"][query_hash]['semantic'] = 0
+                    processed_data["query_details"][query_hash]['semantic_processed_at'] = __import__('time').strftime('%Y-%m-%d %H:%M:%S')
+                    logging.info(f"✗ Traitement sémantique échoué pour la requête ID {query_id} (hash: {query_hash[:8]})")
+        
+        # Mettre à jour les métadonnées
+        processed_data.update({
+            'last_updated': __import__('time').strftime('%Y-%m-%d %H:%M:%S'),
+            'total_processed': len(processed_data.get("processed_queries", [])),
+            'semantic_processed': len([q for q in processed_data.get("query_details", {}).values() if q.get('semantic') == 1])
+        })
+        
+        # Sauvegarder le fichier mis à jour
+        async with aiofiles.open(processed_file, 'w', encoding='utf-8') as f:
+            content = json.dumps(processed_data, indent=2, ensure_ascii=False)
+            await f.write(content)
+        
+        semantic_count = processed_data.get('semantic_processed', 0)
+        logging.info(f"✓ Fichier {os.path.basename(processed_file)} mis à jour avec {semantic_count} traitements sémantiques")
+        return True
+        
+    except Exception as e:
+        logging.error(f"Erreur lors de la mise à jour de processed_queries.json: {e}")
+        return False
+
 async def cleanup_processed_files(successful_files: List[str]) -> None:
     """Supprime les fichiers SERP traités avec succès"""
     try:
@@ -963,6 +1108,14 @@ async def main():
         
         if not update_success:
             logging.error("Erreur lors de la mise à jour de consigne.json")
+            return False
+        
+        # Mise à jour de processed_queries.json avec les informations sémantiques
+        logging.info("Mise à jour de processed_queries.json...")
+        processed_queries_success = await update_processed_queries(processed_results, consigne_data)
+        
+        if not processed_queries_success:
+            logging.error("Erreur lors de la mise à jour de processed_queries.json")
             return False
         
         # Nettoyage des fichiers traités

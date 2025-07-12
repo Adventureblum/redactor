@@ -1,35 +1,166 @@
 {
-  "id": "7abce473",
-  "filename": "consigne_20250701_130809_7abce473.json",
-  "created_at": "2025-07-01T13:08:09.382480",
-  "timestamp": "20250701_130809",
-  "queries": [
-    {
-      "id": 0,
-      "text": "canapé d'angle sans accoudoir"
-    },
-    {
-      "id": 1,
-      "text": "canapé d angle paiement en 10 fois sans frais"
-    },
-    {
-      "id": 2,
-      "text": "canapé d'angle sans pied"
-    },
-    {
-      "id": 3,
-      "text": "canapé d'angle sans coussin"
-    },
-    {
-      "id": 4,
-      "text": "canapé d'angle sans accoudoir ikea"
-    },
-    {
-      "id": 5,
-      "text": "canapé d'angle sans meridienne"
-    }
-  ],
-  "snippets": [],
-  "highlight": "",
-  "main_query": "canapé d'angle"
+    "id": "7abce473",
+    "filename": "consigne_20250701_130809_7abce473.json",
+    "created_at": "2025-07-01T13:08:09.382480",
+    "timestamp": "20250701_130809",
+    "queries": [
+        {
+            "id": 0,
+            "text": "canapé d'angle sans accoudoir",
+            "top_keywords": "canapé d'angle, sans accoudoir, escamotable, garantir, réversible, couleur produit, choix, canapé modulable, table, lit escamotable, plateau, fauteuil, modulable angle, tissu, texturer, tissu texturer, structure, accoudoir tissu, fibre, angle, modulable, lit, assise, colis, pouvoir, produit, convertible, adapter, panoramique convertible, angle convertible, convertible otis, convertible oti, convertible place, canap convertible, modularité, impact, design, offre, réinvente, ligne, longévité, évitez, affaissement, achat, afficher, perspective unique, angle novateur, adapter nettoyer, adapter textile, bleu, impact sur modularité, impact sur design, impact sur ligne, impact sur offre, impact sur canapé, longévité sur évitez, contextes géographiques, France, Europe, Corse, Lisa Design",
+            "word_count": 1435,
+            "plan": {
+                "introduction": {
+                    "longueur": 225
+                },
+                "developpement": {
+                    "nombre_sections": 3,
+                    "mots_par_section": 328.3
+                },
+                "conclusion": {
+                    "longueur": 225
+                }
+            },
+            "selected_differentiating_angle": "**ANGLE CHOISI: Convertibilité Innovante : Adaptation des Canapés d'Angle Sans Accoudoir**\n\n**JUSTIFICATION:** Cet angle répond directement à la requête \"canapé d'angle sans accoudoir\" en se concentrant sur la fonctionnalité essentielle et unique des canapés d'angle sans accoudoir : leur capacité à s'adapter et à se transformer en fonction des besoins d'espace et de design. L'absence d'accoudoirs sur un canapé d'angle peut souvent être perçue comme une limitation, mais cet angle met en lumière les innovations en matière de convertibilité qui transforment cette caractéristique en avantage, offrant une flexibilité accrue et une adaptation à différents environnements de vie. Cela répond non seulement à l'intention de recherche des utilisateurs qui cherchent un canapé d'angle sans accoudoir pour optimiser leur espace, mais cela exploite également un potentiel de différenciation significatif par rapport à la concurrence. En outre, cet angle permet de couvrir plusieurs clusters thématiques, y compris le design, la fonctionnalité, et les tendances actuelles, garantissant ainsi un contenu riche et complet.",
+            "generated_article_plan": {
+                "SEO Title": "Comparatif : Canapés d'Angle Sans Accoudoir - Convertibilité et Adaptabilité",
+                "article_type": "comparative",
+                "introduction_notes": {
+                    "highlight_integration": "Expliquer comment les canapés d'angle sans accoudoir peuvent offrir une flexibilité et un design innovant pour les espaces modernes.",
+                    "suggested_anchor_text": "canapés d'angle sans accoudoir innovants"
+                },
+                "sections": [
+                    {
+                        "section_title": "Introduction à la Convertibilité des Canapés d'Angle Sans Accoudoir",
+                        "snippet_type": "Featured",
+                        "placement": "beginning",
+                        "subsections": [
+                            {
+                                "subsection_title": "Définition des Canapés d'Angle Sans Accoudoir"
+                            },
+                            {
+                                "subsection_title": "Importance de la Convertibilité"
+                            }
+                        ]
+                    },
+                    {
+                        "section_title": "Option A : Canapé Modulable en Tissu Texturé",
+                        "snippet_type": "None",
+                        "placement": "none",
+                        "subsections": [
+                            {
+                                "subsection_title": "Caractéristiques et Design"
+                            },
+                            {
+                                "subsection_title": "Avantages en Matière d'Espace"
+                            }
+                        ]
+                    },
+                    {
+                        "section_title": "Option B : Canapé Réversible avec Structure Fibre",
+                        "snippet_type": "None",
+                        "placement": "none",
+                        "subsections": [
+                            {
+                                "subsection_title": "Innovations Techniques"
+                            },
+                            {
+                                "subsection_title": "Flexibilité et Adaptation"
+                            }
+                        ]
+                    },
+                    {
+                        "section_title": "Tableau Comparatif : Options A vs B",
+                        "snippet_type": "Table",
+                        "placement": "beginning",
+                        "subsections": [
+                            {
+                                "subsection_title": "Critères de Comparaison"
+                            },
+                            {
+                                "subsection_title": "Résultats du Comparatif"
+                            }
+                        ]
+                    },
+                    {
+                        "section_title": "Analyse des Avantages et Inconvénients",
+                        "snippet_type": "None",
+                        "placement": "none",
+                        "subsections": [
+                            {
+                                "subsection_title": "Avantages Commun des Modèles"
+                            },
+                            {
+                                "subsection_title": "Limitations à Considérer"
+                            }
+                        ]
+                    },
+                    {
+                        "section_title": "Recommandation Basée sur Profils Utilisateurs",
+                        "snippet_type": "Featured",
+                        "placement": "end",
+                        "subsections": [
+                            {
+                                "subsection_title": "Profils Idéaux pour l'Option A"
+                            },
+                            {
+                                "subsection_title": "Profils Idéaux pour l'Option B"
+                            }
+                        ]
+                    }
+                ],
+                "conclusion": "Choisir le canapé d'angle sans accoudoir adapté à vos besoins dépend de vos priorités en matière d'espace, de design et de fonctionnalité. Ce guide vous offre les clés pour faire le meilleur choix.",
+                "article_config": {
+                    "template": "comparison_analysis",
+                    "structure_emphasis": "side_by_side_analysis",
+                    "recommended_snippets": [
+                        "Table",
+                        "Featured"
+                    ]
+                },
+                "seo_optimization": {
+                    "total_snippets": 3,
+                    "article_structure": "side_by_side_analysis",
+                    "target_word_count": 1435,
+                    "snippet_distribution": {
+                        "types_used": [
+                            "Featured",
+                            "Table"
+                        ],
+                        "total_count": 3,
+                        "distribution": {
+                            "Featured": 2,
+                            "Table": 1
+                        }
+                    }
+                }
+            },
+            "plan_generation_status": "completed",
+            "last_updated": "unknown",
+            "article_type": "comparative"
+        },
+        {
+            "id": 1,
+            "text": "canapé d angle paiement en 10 fois sans frais"
+        },
+        {
+            "id": 2,
+            "text": "canapé d'angle sans pied"
+        },
+        {
+            "id": 3,
+            "text": "canapé d'angle sans coussin"
+        },
+        {
+            "id": 4,
+            "text": "canapé d'angle sans accoudoir ikea"
+        },
+        {
+            "id": 5,
+            "text": "canapé d'angle sans meridienne"
+        }
+    ],
+    "snippets": [],
+    "highlight": "",
+    "main_query": "canapé d'angle"
 }

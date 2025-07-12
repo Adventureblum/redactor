@@ -1,0 +1,30 @@
+{
+  "processed_queries": [
+    "8fd77c3c354b375b1ca364ee183ebef8",
+    "3b74e323ca583686346ca4770764d37a"
+  ],
+  "query_details": {
+    "8fd77c3c354b375b1ca364ee183ebef8": {
+      "id": 0,
+      "text": "canapé d'angle sans accoudoir",
+      "processed_at": "2025-07-12 13:00:39",
+      "semantic": 1,
+      "semantic_processed_at": "2025-07-12 13:10:48",
+      "semantic_analysis": {
+        "clusters_count": 5,
+        "relations_found": 10,
+        "entities_count": 5,
+        "angles_generated": 10,
+        "thematic_diversity": 0.02,
+        "semantic_complexity": 1.0
+      }
+    },
+    "3b74e323ca583686346ca4770764d37a": {
+      "id": 1,
+      "text": "canapé d angle paiement en 10 fois sans frais",
+      "processed_at": "2025-07-12 13:29:47"
+    }
+  },
+  "last_updated": "2025-07-12 13:29:47",
+  "total_processed": 2
+}

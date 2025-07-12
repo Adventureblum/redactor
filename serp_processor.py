@@ -8,9 +8,10 @@ import time
 from pathlib import Path
 import hashlib
 import argparse
+import glob
 
 class SerpSingleProcessor:
-    def __init__(self, consigne_file: str = "static/consigne.json", 
+    def __init__(self, consigne_file: str = None, 
                  js_script: str = "serp_extractor.js",
                  output_dir: str = "results",
                  processed_file: str = "processed_queries.json"):
@@ -18,18 +19,54 @@ class SerpSingleProcessor:
         Processeur SERP - Une requête par exécution
         
         Args:
-            consigne_file: Chemin vers le fichier consigne.json
+            consigne_file: Chemin vers le fichier consigne.json (None pour auto-détection)
             js_script: Nom du script JavaScript à exécuter
             output_dir: Dossier de sortie pour les résultats
             processed_file: Fichier pour traquer les requêtes déjà traitées
         """
-        self.consigne_file = consigne_file
+        self.consigne_file = self._find_consigne_file(consigne_file)
         self.js_script = js_script
         self.output_dir = Path(output_dir)
         self.processed_file = processed_file
         
         # Créer le dossier de sortie s'il n'existe pas
         self.output_dir.mkdir(exist_ok=True)
+    
+    def _find_consigne_file(self, consigne_file: str = None) -> str:
+        """
+        Trouve automatiquement le fichier de consigne dans le dossier static
+        
+        Args:
+            consigne_file: Chemin spécifique ou None pour auto-détection
+            
+        Returns:
+            str: Chemin vers le fichier de consigne trouvé
+            
+        Raises:
+            FileNotFoundError: Si aucun fichier de consigne n'est trouvé
+        """
+        if consigne_file:
+            # Si un fichier spécifique est fourni, l'utiliser
+            return consigne_file
+        
+        # Chercher les fichiers consigne dans le dossier static
+        consigne_pattern = "static/consigne*.json"
+        consigne_files = glob.glob(consigne_pattern)
+        
+        if not consigne_files:
+            raise FileNotFoundError(f"❌ Aucun fichier de consigne trouvé dans le dossier static/ (pattern: {consigne_pattern})")
+        
+        if len(consigne_files) == 1:
+            found_file = consigne_files[0]
+            print(f"📁 Fichier de consigne détecté: {found_file}")
+            return found_file
+        
+        # Si plusieurs fichiers trouvés, prendre le plus récent
+        consigne_files.sort(key=os.path.getmtime, reverse=True)
+        most_recent = consigne_files[0]
+        print(f"📁 Plusieurs fichiers de consigne trouvés, utilisation du plus récent: {most_recent}")
+        print(f"   Autres fichiers ignorés: {', '.join(consigne_files[1:])}")
+        return most_recent
     
     def _load_processed_queries(self) -> set:
         """Charge la liste des requêtes déjà traitées"""
@@ -368,8 +405,8 @@ def main():
                        help='Mode verbeux')
     parser.add_argument('--status', '-s', action='store_true', 
                        help='Afficher le statut et quitter')
-    parser.add_argument('--consigne', default='static/consigne.json',
-                       help='Chemin vers le fichier consigne.json')
+    parser.add_argument('--consigne', default=None,
+                       help='Chemin vers le fichier consigne.json (auto-détection si non spécifié)')
     parser.add_argument('--js-script', default='serp_extractor.js',
                        help='Nom du script JavaScript')
     parser.add_argument('--output-dir', default='results',
