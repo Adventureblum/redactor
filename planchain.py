@@ -11,6 +11,7 @@ from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage
 from langchain.callbacks.base import BaseCallbackHandler
 from concurrent.futures import ThreadPoolExecutor
+from langdetect import detect
 
 # === Configuration ===
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -61,6 +62,72 @@ except FileNotFoundError as e:
 MAX_CONCURRENT_LLM = 3  # Nombre d'appels LLM simultanés
 MAX_WORKERS = 2  # Pour les tâches CPU
 
+# === Détecteur de langue ===
+class LanguageDetector:
+    """Détecte la langue du contenu et adapte les prompts"""
+    
+    @staticmethod
+    def detect_language(text: str) -> str:
+        """Détecte la langue du texte (fr ou en)"""
+        try:
+            lang = detect(text)
+            # On se limite à français et anglais
+            if lang == 'fr':
+                return 'fr'
+            else:
+                return 'en'  # Par défaut, anglais pour toute autre langue
+        except:
+            # En cas d'erreur, on détermine par des mots-clés
+            french_indicators = ['comment', 'pourquoi', 'qu\'est', 'faire', 'étape', 'guide']
+            text_lower = text.lower()
+            french_count = sum(1 for word in french_indicators if word in text_lower)
+            return 'fr' if french_count >= 2 else 'en'
+    
+    @staticmethod
+    def get_localized_strings(lang: str) -> Dict[str, str]:
+        """Retourne les chaînes localisées selon la langue"""
+        strings = {
+            'fr': {
+                'howto_keywords': ['comment', 'étape', 'guide', 'tuto', 'faire'],
+                'definitional_keywords': ['qu\'est', 'qu est', 'c\'est quoi', 'définition'],
+                'comparative_keywords': ['différence', 'versus', 'vs', 'ou', 'comparaison', 'mieux'],
+                'faq_keywords': ['pourquoi', 'raison', 'cause'],
+                'listicle_keywords': ['liste', 'top', 'meilleur', 'classement'],
+                'intro_label': 'Introduction',
+                'conclusion_label': 'Conclusion',
+                'prerequisites_label': 'Prérequis/Matériel nécessaire',
+                'tips_label': 'Conseils et bonnes pratiques',
+                'summary_label': 'Synthèse',
+                'criteria_label': 'Critères de sélection',
+                'recap_label': 'Récapitulatif',
+                'main_sections': 'sections principales',
+                'words_each': 'mots chacune',
+                'absolute_constraint': 'Le plan doit contenir EXACTEMENT',
+                'priority_keywords': 'MOTS-CLÉS PRIORITAIRES',
+                'specific_requirements': 'EXIGENCES SPÉCIFIQUES'
+            },
+            'en': {
+                'howto_keywords': ['how', 'step', 'guide', 'tutorial', 'make'],
+                'definitional_keywords': ['what is', 'what are', 'definition', 'meaning'],
+                'comparative_keywords': ['difference', 'versus', 'vs', 'or', 'comparison', 'better'],
+                'faq_keywords': ['why', 'reason', 'cause'],
+                'listicle_keywords': ['list', 'top', 'best', 'ranking'],
+                'intro_label': 'Introduction',
+                'conclusion_label': 'Conclusion',
+                'prerequisites_label': 'Prerequisites/Required Materials',
+                'tips_label': 'Tips and Best Practices',
+                'summary_label': 'Summary',
+                'criteria_label': 'Selection Criteria',
+                'recap_label': 'Recap',
+                'main_sections': 'main sections',
+                'words_each': 'words each',
+                'absolute_constraint': 'The plan must contain EXACTLY',
+                'priority_keywords': 'PRIORITY KEYWORDS',
+                'specific_requirements': 'SPECIFIC REQUIREMENTS'
+            }
+        }
+        return strings.get(lang, strings['en'])
+
 # === Callback pour logging asynchrone ===
 class AsyncLoggingCallback(BaseCallbackHandler):
     def __init__(self, query_id: int):
@@ -75,26 +142,33 @@ class AsyncLoggingCallback(BaseCallbackHandler):
     def on_llm_error(self, error, **kwargs):
         logging.error(f"❌ [ID {self.query_id}] Erreur GPT-4o: {error}")
 
-# === Agent d'analyse d'intention et de type d'article ===
+# === Agent d'analyse d'intention et de type d'article (Multilingue) ===
 class ArticleTypeAnalyzer:
     """Analyseur intelligent pour déterminer le type d'article optimal"""
     
     def __init__(self, query_id: int):
         self.query_id = query_id
+        self.language_detector = LanguageDetector()
     
     def analyze_query_intent(self, query_text: str) -> str:
-        """Analyse l'intention de recherche de la requête"""
+        """Analyse l'intention de recherche de la requête (multilingue)"""
         query_lower = query_text.lower()
         
-        if any(word in query_lower for word in ['comment', 'étape', 'guide', 'tuto', 'faire']):
+        # Détection de la langue
+        lang = self.language_detector.detect_language(query_text)
+        strings = self.language_detector.get_localized_strings(lang)
+        
+        logging.info(f"🌐 [ID {self.query_id}] Langue détectée: {lang.upper()}")
+        
+        if any(word in query_lower for word in strings['howto_keywords']):
             return 'howto'
-        elif any(word in query_lower for word in ['qu\'est', 'qu est', 'c\'est quoi', 'définition']):
+        elif any(word in query_lower for word in strings['definitional_keywords']):
             return 'definitional'
-        elif any(word in query_lower for word in ['différence', 'versus', 'vs', 'ou', 'comparaison', 'mieux']):
+        elif any(word in query_lower for word in strings['comparative_keywords']):
             return 'comparative'
-        elif any(word in query_lower for word in ['pourquoi', 'raison', 'cause']):
+        elif any(word in query_lower for word in strings['faq_keywords']):
             return 'faq_page'
-        elif any(word in query_lower for word in ['liste', 'top', 'meilleur', 'classement']):
+        elif any(word in query_lower for word in strings['listicle_keywords']):
             return 'listicle'
         else:
             return 'general'
@@ -105,265 +179,669 @@ class ArticleTypeAnalyzer:
             'howto': {
                 'template': 'guide_step_by_step',
                 'required_sections': ['introduction', 'prerequisites', 'steps', 'conclusion'],
-                'snippet_types': ['HowTo', 'FAQ'],
                 'structure_emphasis': 'sequential_steps'
             },
             'comparative': {
                 'template': 'comparison_analysis',
                 'required_sections': ['introduction', 'option_a', 'option_b', 'comparison', 'recommendation'],
-                'snippet_types': ['Table', 'Featured'],
                 'structure_emphasis': 'side_by_side_analysis'
             },
             'faq_page': {
                 'template': 'question_answer',
                 'required_sections': ['introduction', 'main_questions', 'detailed_answers', 'conclusion'],
-                'snippet_types': ['FAQ', 'Definition'],
                 'structure_emphasis': 'question_driven'
             },
             'listicle': {
                 'template': 'numbered_list',
                 'required_sections': ['introduction', 'items_list', 'analysis', 'conclusion'],
-                'snippet_types': ['List', 'Featured'],
                 'structure_emphasis': 'ranked_items'
             },
             'definitional': {
                 'template': 'comprehensive_definition',
                 'required_sections': ['definition', 'characteristics', 'examples', 'conclusion'],
-                'snippet_types': ['Definition', 'FAQ'],
                 'structure_emphasis': 'concept_explanation'
             },
             'general': {
                 'template': 'comprehensive_guide',
                 'required_sections': ['introduction', 'main_content', 'analysis', 'conclusion'],
-                'snippet_types': ['Featured', 'FAQ'],
                 'structure_emphasis': 'topic_coverage'
             }
         }
         
         return configs.get(intent, configs['general'])
-    
 
-# === Générateurs de plans spécialisés ===
+# === Agent d'optimisation des snippets (Multilingue) ===
+class SnippetOptimizationAgent:
+    """Agent spécialisé dans l'optimisation et le placement intelligent des snippets"""
+    
+    def __init__(self, query_id: int, llm: ChatOpenAI):
+        self.query_id = query_id
+        self.llm = llm
+        self.language_detector = LanguageDetector()
+    
+    async def optimize_snippets(self, article_plan: Dict, query_data: Dict, 
+                               article_intent: str, schema_type: str) -> Dict:
+        """Optimise le placement des snippets dans le plan d'article"""
+        
+        try:
+            # Préparer les données pour le prompt
+            plan_analysis = self._analyze_plan_structure(article_plan)
+            query_context = self._prepare_query_context(query_data, article_intent, schema_type)
+            
+            # Détection de la langue
+            lang = self.language_detector.detect_language(query_data.get('text', ''))
+            
+            # Générer le prompt d'optimisation
+            optimization_prompt = self._generate_optimization_prompt(
+                article_plan, plan_analysis, query_context, lang
+            )
+            
+            # Appel LLM pour optimisation
+            optimized_plan = await self._call_llm_for_optimization(optimization_prompt, lang)
+            
+            # Validation et application des optimisations
+            final_plan = self._apply_optimizations(article_plan, optimized_plan)
+            
+            logging.info(f"✅ [ID {self.query_id}] Snippets optimisés et intégrés")
+            return final_plan
+            
+        except Exception as e:
+            logging.error(f"❌ [ID {self.query_id}] Erreur optimisation snippets: {e}")
+            # Fallback avec valeurs par défaut
+            return self._apply_fallback_snippets(article_plan)
+    
+    def _analyze_plan_structure(self, article_plan: Dict) -> Dict:
+        """Analyse la structure du plan pour identifier les opportunités de snippets"""
+        sections = article_plan.get('sections', [])
+        
+        analysis = {
+            'total_sections': len(sections),
+            'section_types': [],
+            'potential_tables': 0,
+            'potential_lists': 0,
+            'potential_faqs': 0
+        }
+        
+        for i, section in enumerate(sections):
+            title = section.get('section_title', '').lower()
+            
+            # Détection des patterns dans les titres (multilingue)
+            section_info = {
+                'index': i,
+                'title': section.get('section_title', ''),
+                'type': 'standard'
+            }
+            
+            # Détection de patterns spécifiques FR/EN
+            if any(word in title for word in ['étape', 'step', 'comment', 'how']):
+                section_info['type'] = 'how_to_step'
+            elif any(word in title for word in ['vs', 'versus', 'comparaison', 'différence', 'comparison', 'difference']):
+                section_info['type'] = 'comparison'
+                analysis['potential_tables'] += 1
+            elif any(word in title for word in ['liste', 'top', 'meilleur', 'list', 'best']):
+                section_info['type'] = 'list'
+                analysis['potential_lists'] += 1
+            elif any(word in title for word in ['faq', 'question', 'problème', 'problem']):
+                section_info['type'] = 'faq'
+                analysis['potential_faqs'] += 1
+            elif any(word in title for word in ['conseil', 'astuce', 'bonnes pratiques', 'tips', 'best practices']):
+                section_info['type'] = 'tips'
+            
+            analysis['section_types'].append(section_info)
+        
+        return analysis
+    
+    def _prepare_query_context(self, query_data: Dict, article_intent: str, schema_type: str) -> Dict:
+        """Prépare le contexte de la requête pour l'optimisation"""
+        return {
+            'query_text': query_data.get('text', ''),
+            'article_intent': article_intent,
+            'schema_type': schema_type,
+            'word_count': query_data.get('word_count', 0),
+            'keywords': query_data.get('top_keywords', '').split(',')[:10]
+        }
+    
+    def _generate_optimization_prompt(self, article_plan: Dict, plan_analysis: Dict, 
+                                    query_context: Dict, lang: str) -> str:
+        """Génère le prompt pour l'optimisation des snippets (multilingue)"""
+        
+        sections_info = "\n".join([
+            f"Section {i+1}: {section['title']} (Type: {section['type']})"
+            for i, section in enumerate(plan_analysis['section_types'])
+        ])
+        
+        if lang == 'fr':
+            return self._get_french_optimization_prompt(article_plan, sections_info, query_context)
+        else:
+            return self._get_english_optimization_prompt(article_plan, sections_info, query_context)
+    
+    def _get_french_optimization_prompt(self, article_plan: Dict, sections_info: str, query_context: Dict) -> str:
+        """Prompt d'optimisation en français"""
+        return f"""Tu es un expert en optimisation SEO spécialisé dans les rich snippets Google.
+
+**MISSION :** Analyser ce plan d'article et recommander les meilleurs formats de contenu (snippets) pour maximiser les chances d'apparition dans les résultats enrichis de Google.
+
+**CONTEXTE DE LA REQUÊTE :**
+- Requête cible : "{query_context['query_text']}"
+- Type d'article : {query_context['article_intent']}
+- Schema principal : {query_context['schema_type']}
+- Mots cibles : {', '.join(query_context['keywords'][:5])}
+
+**PLAN À OPTIMISER :**
+Titre SEO : {article_plan.get('SEO Title', '')}
+
+Sections disponibles :
+{sections_info}
+
+**FORMATS DE CONTENU DISPONIBLES :**
+- Table_comparative : Pour comparaisons, tableaux de données
+- List_numbered : Pour listes ordonnées, classements, étapes
+- FAQ_structured : Pour questions-réponses
+- Definition_box : Pour définitions, concepts clés
+- HowTo_steps : Pour guides étape par étape
+- Featured_answer : Pour réponses directes courtes
+- None : Aucun format spécial
+
+**INSTRUCTIONS :**
+1. Analyse chaque section et détermine LE format le plus adapté
+2. Ne recommande QU'UN SEUL format par section (pas de cumul)
+3. Place les formats aux endroits les plus stratégiques
+4. Utilise la logique : début = Featured_answer, milieu = formats spécialisés, fin = FAQ
+5. Pour placement, utilise : "introduction", "section_1", "section_2", "section_3", "conclusion"
+
+**FORMAT DE RÉPONSE OBLIGATOIRE (JSON strict) :**
+{{
+  "optimizations": [
+    {{
+      "section_index": 0,
+      "snippet_type": "Featured_answer",
+      "placement": "introduction",
+      "schema_type": "{query_context['schema_type']}",
+      "rationale": "Explication courte du choix"
+    }}
+  ]
+}}
+
+**CONTRAINTES :**
+- Maximum 3 optimisations par plan
+- Privilégier la qualité à la quantité
+- Choisir les sections avec le plus fort potentiel SEO
+- Réponse en JSON valide uniquement, aucun texte supplémentaire"""
+    
+    def _get_english_optimization_prompt(self, article_plan: Dict, sections_info: str, query_context: Dict) -> str:
+        """Prompt d'optimisation en anglais"""
+        return f"""You are an SEO expert specialized in Google rich snippets.
+
+**MISSION:** Analyze this article plan and recommend the best content formats (snippets) to maximize chances of appearing in Google's rich results.
+
+**QUERY CONTEXT:**
+- Target query: "{query_context['query_text']}"
+- Article type: {query_context['article_intent']}
+- Main schema: {query_context['schema_type']}
+- Target keywords: {', '.join(query_context['keywords'][:5])}
+
+**PLAN TO OPTIMIZE:**
+SEO Title: {article_plan.get('SEO Title', '')}
+
+Available sections:
+{sections_info}
+
+**AVAILABLE CONTENT FORMATS:**
+- Table_comparative: For comparisons, data tables
+- List_numbered: For ordered lists, rankings, steps
+- FAQ_structured: For questions and answers
+- Definition_box: For definitions, key concepts
+- HowTo_steps: For step-by-step guides
+- Featured_answer: For short direct answers
+- None: No special format
+
+**INSTRUCTIONS:**
+1. Analyze each section and determine THE most suitable format
+2. Recommend ONLY ONE format per section (no cumulation)
+3. Place formats at the most strategic locations
+4. Use logic: beginning = Featured_answer, middle = specialized formats, end = FAQ
+5. For placement, use: "introduction", "section_1", "section_2", "section_3", "conclusion"
+
+**MANDATORY RESPONSE FORMAT (strict JSON):**
+{{
+  "optimizations": [
+    {{
+      "section_index": 0,
+      "snippet_type": "Featured_answer",
+      "placement": "introduction",
+      "schema_type": "{query_context['schema_type']}",
+      "rationale": "Brief explanation of choice"
+    }}
+  ]
+}}
+
+**CONSTRAINTS:**
+- Maximum 3 optimizations per plan
+- Prioritize quality over quantity
+- Choose sections with highest SEO potential
+- Response in valid JSON only, no additional text"""
+
+    async def _call_llm_for_optimization(self, prompt: str, lang: str) -> Dict:
+        """Effectue l'appel LLM pour optimisation des snippets"""
+        
+        system_content = {
+            'fr': "Tu es un expert en optimisation SEO spécialisé dans les rich snippets Google. Tu réponds uniquement en JSON valide.",
+            'en': "You are an SEO expert specialized in Google rich snippets. You respond only in valid JSON."
+        }
+        
+        messages = [
+            SystemMessage(content=system_content.get(lang, system_content['en'])),
+            HumanMessage(content=prompt)
+        ]
+        
+        logging.info(f"🔍 [ID {self.query_id}] Analyse des snippets en cours...")
+        
+        # Exécution asynchrone dans un thread pool
+        loop = asyncio.get_event_loop()
+        with ThreadPoolExecutor(max_workers=1) as executor:
+            response = await loop.run_in_executor(executor, self.llm.invoke, messages)
+        
+        # Parse de la réponse JSON
+        try:
+            response_content = response.content.strip()
+            
+            # Nettoyage du contenu si nécessaire
+            if response_content.startswith('```json'):
+                response_content = response_content.replace('```json', '').replace('```', '').strip()
+            
+            optimization_data = json.loads(response_content)
+            return optimization_data
+            
+        except json.JSONDecodeError as e:
+            logging.error(f"❌ [ID {self.query_id}] Erreur JSON snippets: {e}")
+            raise Exception(f"Réponse LLM non valide pour snippets: {e}")
+    
+    def _apply_optimizations(self, original_plan: Dict, optimizations: Dict) -> Dict:
+        """Applique les optimisations de snippets au plan original"""
+        
+        optimized_plan = json.loads(json.dumps(original_plan))  # Deep copy
+        sections = optimized_plan.get('sections', [])
+        
+        # Initialiser toutes les sections avec des valeurs par défaut
+        for section in sections:
+            section['snippet_type'] = 'None'
+            section['placement'] = 'none'
+            section['schema_type'] = 'none'
+        
+        # Appliquer les optimisations
+        optimizations_list = optimizations.get('optimizations', [])
+        applied_count = 0
+        
+        for opt in optimizations_list:
+            section_index = opt.get('section_index', -1)
+            
+            # Vérification de l'index
+            if 0 <= section_index < len(sections):
+                sections[section_index]['snippet_type'] = opt.get('snippet_type', 'None')
+                sections[section_index]['placement'] = opt.get('placement', 'none')
+                sections[section_index]['schema_type'] = opt.get('schema_type', 'none')
+                applied_count += 1
+                
+                logging.info(f"📌 [ID {self.query_id}] Snippet {opt.get('snippet_type')} appliqué à section {section_index + 1}")
+        
+        # Ajout des métadonnées d'optimisation
+        optimized_plan['seo_optimization'] = {
+            'total_snippets': applied_count,
+            'article_structure': original_plan.get('article_config', {}).get('structure_emphasis', 'standard'),
+            'target_word_count': 0,  # Sera rempli par le processor principal
+            'snippet_distribution': self._analyze_applied_snippets(sections)
+        }
+        
+        logging.info(f"✅ [ID {self.query_id}] {applied_count} snippets optimisés appliqués")
+        return optimized_plan
+    
+    def _apply_fallback_snippets(self, original_plan: Dict) -> Dict:
+        """Applique des snippets par défaut en cas d'échec de l'optimisation"""
+        
+        fallback_plan = json.loads(json.dumps(original_plan))  # Deep copy
+        sections = fallback_plan.get('sections', [])
+        
+        # Valeurs par défaut pour toutes les sections
+        for section in sections:
+            section['snippet_type'] = 'None'
+            section['placement'] = 'none' 
+            section['schema_type'] = 'none'
+        
+        # Ajout métadonnées fallback
+        fallback_plan['seo_optimization'] = {
+            'total_snippets': 0,
+            'article_structure': 'fallback',
+            'target_word_count': 0,
+            'snippet_distribution': {
+                'types_used': [],
+                'total_count': 0,
+                'distribution': {}
+            }
+        }
+        
+        logging.warning(f"⚠️ [ID {self.query_id}] Fallback snippets appliqué")
+        return fallback_plan
+    
+    def _analyze_applied_snippets(self, sections: List[Dict]) -> Dict:
+        """Analyse la distribution des snippets appliqués"""
+        snippet_types = {}
+        
+        for section in sections:
+            snippet_type = section.get('snippet_type', 'None')
+            if snippet_type != 'None':
+                snippet_types[snippet_type] = snippet_types.get(snippet_type, 0) + 1
+        
+        return {
+            'types_used': list(snippet_types.keys()),
+            'total_count': sum(snippet_types.values()),
+            'distribution': snippet_types
+        }
+
+# === Générateurs de plans spécialisés (Multilingue) ===
 class SpecializedPlanGenerator:
-    """Générateur de plans spécialisés selon le type d'article"""
+    """Générateur de plans spécialisés selon le type d'article (multilingue)"""
     
     def __init__(self, query_id: int, llm: ChatOpenAI):
         self.query_id = query_id
         self.llm = llm
         self.article_analyzer = ArticleTypeAnalyzer(query_id)
+        self.language_detector = LanguageDetector()
     
     def get_template_prompt(self, article_type: str, query_data: Dict, selected_angle: str, highlight_url: str) -> str:
-        """Génère le prompt spécialisé selon le type d'article"""
+        """Génère le prompt spécialisé selon le type d'article et la langue"""
         
-        base_data = self._format_base_data(query_data)
+        # Détection de la langue
+        lang = self.language_detector.detect_language(query_data.get('text', ''))
+        strings = self.language_detector.get_localized_strings(lang)
+        
+        base_data = self._format_base_data(query_data, lang)
         
         templates = {
-            'howto': self._get_howto_template(query_data, selected_angle, highlight_url, base_data),
-            'comparative': self._get_comparative_template(query_data, selected_angle, highlight_url, base_data),
-            'faq_page': self._get_faq_template(query_data, selected_angle, highlight_url, base_data),
-            'listicle': self._get_listicle_template(query_data, selected_angle, highlight_url, base_data),
-            'definitional': self._get_definitional_template(query_data, selected_angle, highlight_url, base_data),
-            'general': self._get_general_template(query_data, selected_angle, highlight_url, base_data)
+            'howto': self._get_howto_template(query_data, selected_angle, highlight_url, base_data, lang, strings),
+            'comparative': self._get_comparative_template(query_data, selected_angle, highlight_url, base_data, lang, strings),
+            'faq_page': self._get_faq_template(query_data, selected_angle, highlight_url, base_data, lang, strings),
+            'listicle': self._get_listicle_template(query_data, selected_angle, highlight_url, base_data, lang, strings),
+            'definitional': self._get_definitional_template(query_data, selected_angle, highlight_url, base_data, lang, strings),
+            'general': self._get_general_template(query_data, selected_angle, highlight_url, base_data, lang, strings)
         }
         
         return templates.get(article_type, templates['general'])
     
-    def _format_base_data(self, query_data: Dict) -> Dict:
-        """Formate les données de base pour les templates en utilisant les vraies valeurs du plan"""
+    def _format_base_data(self, query_data: Dict, lang: str) -> Dict:
+        """Formate les données de base pour les templates"""
         plan_info = query_data.get('plan', {})
         
-        # Utilisation des vraies valeurs du plan, pas de valeurs par défaut
-        intro_length = plan_info.get('introduction', {}).get('longueur', 225)
-        nb_sections = plan_info.get('developpement', {}).get('nombre_sections', 2)
-        mots_par_section = plan_info.get('developpement', {}).get('mots_par_section', 300.0)
-        conclusion_length = plan_info.get('conclusion', {}).get('longueur', 225)
+        # Gestion des clés FR/EN
+        if lang == 'fr':
+            intro_key = 'introduction'
+            dev_key = 'developpement'
+            sections_key = 'nombre_sections'
+            words_key = 'mots_par_section'
+            conclusion_key = 'conclusion'
+            length_key = 'longueur'
+        else:
+            intro_key = 'introduction'
+            dev_key = 'development'
+            sections_key = 'number_sections'
+            words_key = 'words_per_section'
+            conclusion_key = 'conclusion'
+            length_key = 'length'
         
-        logging.info(f"📊 Plan détecté - Intro: {intro_length} mots, Sections: {nb_sections}, Mots/section: {mots_par_section}, Conclusion: {conclusion_length} mots")
+        intro_length = plan_info.get(intro_key, {}).get(length_key, 225)
+        nb_sections = plan_info.get(dev_key, {}).get(sections_key, 2)
+        mots_par_section = plan_info.get(dev_key, {}).get(words_key, 300.0)
+        conclusion_length = plan_info.get(conclusion_key, {}).get(length_key, 225)
+        
+        logging.info(f"📊 [ID {self.query_id}] Plan détecté - Intro: {intro_length} mots, Sections: {nb_sections}, Mots/section: {mots_par_section}, Conclusion: {conclusion_length} mots")
         
         return {
             'intro_length': intro_length,
             'nb_sections': nb_sections,
-            'mots_par_section': int(mots_par_section),  # Conversion en entier pour l'affichage
+            'mots_par_section': int(mots_par_section),
             'conclusion_length': conclusion_length,
             'word_count': query_data.get('word_count', 0),
             'keywords': ', '.join(query_data.get('top_keywords', '').split(',')[:20])
         }
     
-    def _get_howto_template(self, query_data: Dict, selected_angle: str, highlight_url: str, base_data: Dict) -> str:
-        return f"""Crée un plan d'article GUIDE ÉTAPE PAR ÉTAPE optimisé SEO.
+    def _get_howto_template(self, query_data: Dict, selected_angle: str, highlight_url: str, base_data: Dict, lang: str, strings: Dict) -> str:
+        if lang == 'fr':
+            return f"""Crée un plan d'article GUIDE ÉTAPE PAR ÉTAPE optimisé SEO.
 
 **TYPE D'ARTICLE :** Guide pratique (HowTo)
 **ANGLE RETENU :** {selected_angle}
 
-**STRUCTURE OBLIGATOIRE POUR GUIDE :**
-- Introduction : {base_data['intro_length']} mots (intégrer naturellement : {highlight_url})
-- Prérequis/Matériel nécessaire : 150 mots
-- {base_data['nb_sections']} étapes principales : {base_data['mots_par_section']} mots chacune
-- Conseils et bonnes pratiques : 200 mots
-- Conclusion : {base_data['conclusion_length']} mots
+**STRUCTURE OBLIGATOIRE :**
+- {strings['intro_label']} : {base_data['intro_length']} mots (intégrer naturellement : {highlight_url})
+- {strings['prerequisites_label']} : 150 mots
+- {base_data['nb_sections']} étapes principales : {base_data['mots_par_section']} {strings['words_each']}
+- {strings['tips_label']} : 200 mots
+- {strings['conclusion_label']} : {base_data['conclusion_length']} mots
 
-**CONTRAINTE ABSOLUE :** Le plan doit contenir EXACTEMENT {base_data['nb_sections']} sections principales de développement, pas plus, pas moins.
+**CONTRAINTE ABSOLUE :** {strings['absolute_constraint']} {base_data['nb_sections']} {strings['main_sections']} de développement.
 
-**INTÉGRATION SNIPPETS DANS LES SECTIONS :**
-Chaque section doit inclure snippet_type et placement optimal.
-Pour les guides : HowTo Schema (étapes), FAQ (problèmes courants)
+**{strings['priority_keywords']} :** {base_data['keywords']}
 
-**MOTS-CLÉS PRIORITAIRES :** {base_data['keywords']}
-
-**EXIGENCES SPÉCIFIQUES AU GUIDE :**
+**{strings['specific_requirements']} :**
 1. Chaque étape doit être numérotée et actionnable
 2. Intégrer des sous-étapes détaillées
 3. Prévoir section FAQ pour les problèmes courants
 4. Structurer en progression logique
-5. Intégrer conseils pratiques entre les étapes
-6. RESPECTER IMPÉRATIVEMENT : {base_data['nb_sections']} sections de développement exactement"""
+5. Intégrer conseils pratiques entre les étapes"""
+        else:
+            return f"""Create an SEO-optimized STEP-BY-STEP GUIDE article plan.
+
+**ARTICLE TYPE:** Practical Guide (HowTo)
+**SELECTED ANGLE:** {selected_angle}
+
+**MANDATORY STRUCTURE:**
+- {strings['intro_label']}: {base_data['intro_length']} words (naturally integrate: {highlight_url})
+- {strings['prerequisites_label']}: 150 words
+- {base_data['nb_sections']} main steps: {base_data['mots_par_section']} {strings['words_each']}
+- {strings['tips_label']}: 200 words
+- {strings['conclusion_label']}: {base_data['conclusion_length']} words
+
+**{strings['absolute_constraint']} {base_data['nb_sections']} {strings['main_sections']}.
+
+**{strings['priority_keywords']}:** {base_data['keywords']}
+
+**{strings['specific_requirements']}:**
+1. Each step must be numbered and actionable
+2. Include detailed sub-steps
+3. Include FAQ section for common issues
+4. Structure in logical progression
+5. Integrate practical tips between steps"""
     
-    def _get_comparative_template(self, query_data: Dict, selected_angle: str, highlight_url: str, base_data: Dict) -> str:
-        return f"""Crée un plan d'article COMPARATEUR optimisé SEO.
+    def _get_comparative_template(self, query_data: Dict, selected_angle: str, highlight_url: str, base_data: Dict, lang: str, strings: Dict) -> str:
+        if lang == 'fr':
+            return f"""Crée un plan d'article COMPARATEUR optimisé SEO.
 
 **TYPE D'ARTICLE :** Comparateur/Analyse comparative
 **ANGLE RETENU :** {selected_angle}
 
-**STRUCTURE OBLIGATOIRE POUR COMPARATEUR :**
-- Introduction : {base_data['intro_length']} mots (intégrer naturellement : {highlight_url})
-- {base_data['nb_sections']} sections principales de développement : {base_data['mots_par_section']} mots chacune
-- Conclusion : {base_data['conclusion_length']} mots
+**STRUCTURE OBLIGATOIRE :**
+- {strings['intro_label']} : {base_data['intro_length']} mots (intégrer naturellement : {highlight_url})
+- {base_data['nb_sections']} {strings['main_sections']} : {base_data['mots_par_section']} {strings['words_each']}
+- {strings['conclusion_label']} : {base_data['conclusion_length']} mots
 
-**CONTRAINTE ABSOLUE :** Le plan doit contenir EXACTEMENT {base_data['nb_sections']} sections principales de développement, pas plus, pas moins.
+**{strings['absolute_constraint']} {base_data['nb_sections']} {strings['main_sections']}.
 
-**STRUCTURE SUGGÉRÉE POUR LES {base_data['nb_sections']} SECTIONS PRINCIPALES :**
-Pour un comparateur efficace, les {base_data['nb_sections']} sections devraient être organisées ainsi :
-- Section 1 : Présentation détaillée de l'Option A
-- Section 2 : Présentation détaillée de l'Option B  
-- Section 3 : Tableau comparatif et analyse finale
-(Si plus de 3 sections : ajouter critères spécialisés, cas d'usage, recommandations par profils)
+**{strings['priority_keywords']} :** {base_data['keywords']}
 
-**INTÉGRATION SNIPPETS DANS LES SECTIONS :**
-Chaque section doit inclure snippet_type et placement optimal.
-Pour les comparateurs : Table Schema (comparaison), Featured Snippet (recommandation)
-
-**MOTS-CLÉS PRIORITAIRES :** {base_data['keywords']}
-
-**EXIGENCES SPÉCIFIQUES AU COMPARATEUR :**
+**{strings['specific_requirements']} :**
 1. Structurer en opposition claire entre options
 2. Intégrer tableau comparatif avec critères précis
-3. Section dédiée aux cas d'usage selon le nombre de sections disponibles
-4. Recommandation basée sur profils utilisateurs
-5. FAQ sur les différences principales si espace disponible
-6. RESPECTER IMPÉRATIVEMENT : {base_data['nb_sections']} sections de développement exactement"""
+3. Section dédiée aux cas d'usage
+4. Recommandation basée sur profils utilisateurs"""
+        else:
+            return f"""Create an SEO-optimized COMPARISON article plan.
+
+**ARTICLE TYPE:** Comparator/Comparative Analysis
+**SELECTED ANGLE:** {selected_angle}
+
+**MANDATORY STRUCTURE:**
+- {strings['intro_label']}: {base_data['intro_length']} words (naturally integrate: {highlight_url})
+- {base_data['nb_sections']} {strings['main_sections']}: {base_data['mots_par_section']} {strings['words_each']}
+- {strings['conclusion_label']}: {base_data['conclusion_length']} words
+
+**{strings['absolute_constraint']} {base_data['nb_sections']} {strings['main_sections']}.
+
+**{strings['priority_keywords']}:** {base_data['keywords']}
+
+**{strings['specific_requirements']}:**
+1. Structure with clear opposition between options
+2. Include comparison table with precise criteria
+3. Dedicated section for use cases
+4. Recommendation based on user profiles"""
     
-    def _get_faq_template(self, query_data: Dict, selected_angle: str, highlight_url: str, base_data: Dict) -> str:
-        return f"""Crée un plan d'article FAQ PAGE optimisé SEO.
+    def _get_faq_template(self, query_data: Dict, selected_angle: str, highlight_url: str, base_data: Dict, lang: str, strings: Dict) -> str:
+        if lang == 'fr':
+            return f"""Crée un plan d'article FAQ PAGE optimisé SEO.
 
 **TYPE D'ARTICLE :** Page FAQ / Questions-Réponses
 **ANGLE RETENU :** {selected_angle}
 
-**STRUCTURE OBLIGATOIRE POUR FAQ :**
-- Introduction : {base_data['intro_length']} mots (intégrer naturellement : {highlight_url})
-- Questions principales ({base_data['nb_sections']} sections) : {base_data['mots_par_section']} mots chacune
-- Questions secondaires et détails : 400 mots
-- Synthèse et points clés : {base_data['conclusion_length']} mots
+**STRUCTURE OBLIGATOIRE :**
+- {strings['intro_label']} : {base_data['intro_length']} mots (intégrer naturellement : {highlight_url})
+- Questions principales ({base_data['nb_sections']} sections) : {base_data['mots_par_section']} {strings['words_each']}
+- Questions secondaires : 400 mots
+- {strings['summary_label']} : {base_data['conclusion_length']} mots
 
-**INTÉGRATION SNIPPETS DANS LES SECTIONS :**
-Chaque section doit inclure snippet_type et placement optimal.
-Pour les FAQ : FAQ Schema (questions principales), Definition (concepts clés)
+**{strings['priority_keywords']} :** {base_data['keywords']}
 
-**MOTS-CLÉS PRIORITAIRES :** {base_data['keywords']}
-
-**EXIGENCES SPÉCIFIQUES AUX FAQ :**
+**{strings['specific_requirements']} :**
 1. Questions formulées comme recherches Google
 2. Réponses directes et concises
-3. Groupement thématique des questions
-4. Progression du général au spécifique
-5. Intégration de questions longue traîne
-6. RESPECTER IMPÉRATIVEMENT : {base_data['nb_sections']} sections de développement exactement"""
+3. Groupement thématique des questions"""
+        else:
+            return f"""Create an SEO-optimized FAQ PAGE article plan.
+
+**ARTICLE TYPE:** FAQ Page / Questions & Answers
+**SELECTED ANGLE:** {selected_angle}
+
+**MANDATORY STRUCTURE:**
+- {strings['intro_label']}: {base_data['intro_length']} words (naturally integrate: {highlight_url})
+- Main questions ({base_data['nb_sections']} sections): {base_data['mots_par_section']} {strings['words_each']}
+- Secondary questions: 400 words
+- {strings['summary_label']}: {base_data['conclusion_length']} words
+
+**{strings['priority_keywords']}:** {base_data['keywords']}
+
+**{strings['specific_requirements']}:**
+1. Questions formulated as Google searches
+2. Direct and concise answers
+3. Thematic grouping of questions"""
     
-    def _get_listicle_template(self, query_data: Dict, selected_angle: str, highlight_url: str, base_data: Dict) -> str:
-        return f"""Crée un plan d'article LISTE/CLASSEMENT optimisé SEO.
+    def _get_listicle_template(self, query_data: Dict, selected_angle: str, highlight_url: str, base_data: Dict, lang: str, strings: Dict) -> str:
+        if lang == 'fr':
+            return f"""Crée un plan d'article LISTE/CLASSEMENT optimisé SEO.
 
 **TYPE D'ARTICLE :** Listicle/Top/Classement
 **ANGLE RETENU :** {selected_angle}
 
-**STRUCTURE OBLIGATOIRE POUR LISTICLE :**
-- Introduction : {base_data['intro_length']} mots (intégrer naturellement : {highlight_url})
-- {base_data['nb_sections']} items principaux : {base_data['mots_par_section']} mots chacun
-- Critères de sélection/Méthodologie : 250 mots
-- Récapitulatif et recommandations : {base_data['conclusion_length']} mots
+**STRUCTURE OBLIGATOIRE :**
+- {strings['intro_label']} : {base_data['intro_length']} mots (intégrer naturellement : {highlight_url})
+- {base_data['nb_sections']} items principaux : {base_data['mots_par_section']} {strings['words_each']}
+- {strings['criteria_label']} : 250 mots
+- {strings['recap_label']} : {base_data['conclusion_length']} mots
 
-**INTÉGRATION SNIPPETS DANS LES SECTIONS :**
-Chaque section doit inclure snippet_type et placement optimal.
-Pour les listes : List Schema (items), Featured Snippet (top recommandation)
+**{strings['priority_keywords']} :** {base_data['keywords']}
 
-**MOTS-CLÉS PRIORITAIRES :** {base_data['keywords']}
-
-**EXIGENCES SPÉCIFIQUES AU LISTICLE :**
+**{strings['specific_requirements']} :**
 1. Items numérotés par ordre d'importance
 2. Justification pour chaque choix
-3. Critères de sélection transparents
-4. Points forts/faibles pour chaque item
-5. Conclusion avec podium/recommandation finale
-6. RESPECTER IMPÉRATIVEMENT : {base_data['nb_sections']} items principaux exactement"""
+3. Critères de sélection transparents"""
+        else:
+            return f"""Create an SEO-optimized LIST/RANKING article plan.
+
+**ARTICLE TYPE:** Listicle/Top/Ranking
+**SELECTED ANGLE:** {selected_angle}
+
+**MANDATORY STRUCTURE:**
+- {strings['intro_label']}: {base_data['intro_length']} words (naturally integrate: {highlight_url})
+- {base_data['nb_sections']} main items: {base_data['mots_par_section']} {strings['words_each']}
+- {strings['criteria_label']}: 250 words
+- {strings['recap_label']}: {base_data['conclusion_length']} words
+
+**{strings['priority_keywords']}:** {base_data['keywords']}
+
+**{strings['specific_requirements']}:**
+1. Items numbered by order of importance
+2. Justification for each choice
+3. Transparent selection criteria"""
     
-    def _get_definitional_template(self, query_data: Dict, selected_angle: str, highlight_url: str, base_data: Dict) -> str:
-        return f"""Crée un plan d'article DÉFINITION COMPLÈTE optimisé SEO.
+    def _get_definitional_template(self, query_data: Dict, selected_angle: str, highlight_url: str, base_data: Dict, lang: str, strings: Dict) -> str:
+        if lang == 'fr':
+            return f"""Crée un plan d'article DÉFINITION COMPLÈTE optimisé SEO.
 
 **TYPE D'ARTICLE :** Guide définitionnel/Explication concept
 **ANGLE RETENU :** {selected_angle}
 
-**STRUCTURE OBLIGATOIRE POUR DÉFINITION :**
+**STRUCTURE OBLIGATOIRE :**
 - Introduction et définition : {base_data['intro_length']} mots (intégrer naturellement : {highlight_url})
-- {base_data['nb_sections']} sections principales de développement : {base_data['mots_par_section']} mots chacune
-- Conclusion et points clés : {base_data['conclusion_length']} mots
+- {base_data['nb_sections']} {strings['main_sections']} : {base_data['mots_par_section']} {strings['words_each']}
+- {strings['conclusion_label']} : {base_data['conclusion_length']} mots
 
-**CONTRAINTE ABSOLUE :** Le plan doit contenir EXACTEMENT {base_data['nb_sections']} sections principales de développement, pas plus, pas moins.
+**{strings['priority_keywords']} :** {base_data['keywords']}
 
-**STRUCTURE SUGGÉRÉE POUR LES {base_data['nb_sections']} SECTIONS PRINCIPALES :**
-Pour un guide définitionnel efficace, les {base_data['nb_sections']} sections devraient couvrir :
-- Section 1 : Caractéristiques principales et spécificités
-- Section 2 : Types, variantes et classifications
-- Section 3 : Exemples concrets et cas d'usage pratiques
-(Si plus de 3 sections : ajouter contexte historique, comparaisons, applications avancées)
-
-**INTÉGRATION SNIPPETS DANS LES SECTIONS :**
-Chaque section doit inclure snippet_type et placement optimal.
-Pour les définitions : Definition Schema (concept principal), FAQ (questions courantes)
-
-**MOTS-CLÉS PRIORITAIRES :** {base_data['keywords']}
-
-**EXIGENCES SPÉCIFIQUES À LA DÉFINITION :**
+**{strings['specific_requirements']} :**
 1. Définition claire et concise en introduction
 2. Progression du simple au complexe
-3. Exemples pratiques et concrets
-4. Différenciation avec concepts proches
-5. FAQ sur les malentendus courants si espace disponible
-6. RESPECTER IMPÉRATIVEMENT : {base_data['nb_sections']} sections de développement exactement"""
+3. Exemples pratiques et concrets"""
+        else:
+            return f"""Create an SEO-optimized COMPLETE DEFINITION article plan.
+
+**ARTICLE TYPE:** Definitional Guide/Concept Explanation
+**SELECTED ANGLE:** {selected_angle}
+
+**MANDATORY STRUCTURE:**
+- Introduction and definition: {base_data['intro_length']} words (naturally integrate: {highlight_url})
+- {base_data['nb_sections']} {strings['main_sections']}: {base_data['mots_par_section']} {strings['words_each']}
+- {strings['conclusion_label']}: {base_data['conclusion_length']} words
+
+**{strings['priority_keywords']}:** {base_data['keywords']}
+
+**{strings['specific_requirements']}:**
+1. Clear and concise definition in introduction
+2. Progression from simple to complex
+3. Practical and concrete examples"""
     
-    def _get_general_template(self, query_data: Dict, selected_angle: str, highlight_url: str, base_data: Dict) -> str:
-        return f"""Crée un plan d'article GUIDE COMPLET optimisé SEO.
+    def _get_general_template(self, query_data: Dict, selected_angle: str, highlight_url: str, base_data: Dict, lang: str, strings: Dict) -> str:
+        if lang == 'fr':
+            return f"""Crée un plan d'article GUIDE COMPLET optimisé SEO.
 
 **TYPE D'ARTICLE :** Guide général/Article complet
 **ANGLE RETENU :** {selected_angle}
 
 **STRUCTURE STANDARD :**
-- Introduction : {base_data['intro_length']} mots (intégrer naturellement : {highlight_url})
-- {base_data['nb_sections']} sections principales : {base_data['mots_par_section']} mots chacune
-- Conclusion : {base_data['conclusion_length']} mots
+- {strings['intro_label']} : {base_data['intro_length']} mots (intégrer naturellement : {highlight_url})
+- {base_data['nb_sections']} {strings['main_sections']} : {base_data['mots_par_section']} {strings['words_each']}
+- {strings['conclusion_label']} : {base_data['conclusion_length']} mots
 
-**INTÉGRATION SNIPPETS DANS LES SECTIONS :**
-Chaque section doit inclure snippet_type et placement optimal.
-Pour les guides généraux : Featured Snippet (réponse principale), FAQ (questions courantes)
-
-**MOTS-CLÉS PRIORITAIRES :** {base_data['keywords']}
+**{strings['priority_keywords']} :** {base_data['keywords']}
 
 **EXIGENCES GÉNÉRALES :**
 1. Coverage complète du sujet
 2. Progression logique
-3. Sous-sections détaillées
-4. Intégration naturelle des mots-clés
-5. Équilibre entre profondeur et accessibilité
-6. RESPECTER IMPÉRATIVEMENT : {base_data['nb_sections']} sections principales exactement"""
+3. Sous-sections détaillées"""
+        else:
+            return f"""Create an SEO-optimized COMPLETE GUIDE article plan.
 
-# === Classe de traitement asynchrone d'une requête (mise à jour) ===
+**ARTICLE TYPE:** General Guide/Complete Article
+**SELECTED ANGLE:** {selected_angle}
+
+**STANDARD STRUCTURE:**
+- {strings['intro_label']}: {base_data['intro_length']} words (naturally integrate: {highlight_url})
+- {base_data['nb_sections']} {strings['main_sections']}: {base_data['mots_par_section']} {strings['words_each']}
+- {strings['conclusion_label']}: {base_data['conclusion_length']} words
+
+**{strings['priority_keywords']}:** {base_data['keywords']}
+
+**GENERAL REQUIREMENTS:**
+1. Complete topic coverage
+2. Logical progression
+3. Detailed subsections"""
+
+# === Classe de traitement asynchrone d'une requête (Multilingue) ===
 class AsyncQueryProcessor:
     def __init__(self, query_id: int):
         self.query_id = query_id
@@ -375,51 +853,23 @@ class AsyncQueryProcessor:
         )
         self.plan_generator = SpecializedPlanGenerator(query_id, self.llm)
         self.article_analyzer = ArticleTypeAnalyzer(query_id)
-    
-    def format_clusters_for_prompt(self, detailed_clusters: Dict) -> str:
-        """Formate les clusters pour le prompt"""
-        formatted = ""
-        for i, (cluster_name, data) in enumerate(detailed_clusters.items(), 1):
-            keywords = ", ".join(data.get('mots_cles', [])[:5])
-            theme = data.get('theme_principal', 'Thème inconnu')
-            formatted += f"**Cluster {i} ({theme}):** {keywords}\n"
-        return formatted
-    
-    def format_relations_for_prompt(self, semantic_relations: List[Dict]) -> str:
-        """Formate les relations sémantiques pour le prompt"""
-        formatted = ""
-        for i, rel in enumerate(semantic_relations[:5], 1):
-            relation = rel.get('relation', '')
-            angle = rel.get('angle_potentiel', '')
-            formatted += f"{i}. {relation} → {angle}\n"
-        return formatted
-    
-    def format_entities_for_prompt(self, strategic_entities: List[Dict]) -> str:
-        """Formate les entités stratégiques pour le prompt"""
-        entities_by_type = {}
-        for entity in strategic_entities[:8]:
-            type_key = entity.get('type', 'UNKNOWN')
-            nom = entity.get('nom', '')
-            if type_key not in entities_by_type:
-                entities_by_type[type_key] = []
-            entities_by_type[type_key].append(nom)
-        
-        formatted = ""
-        for type_name, entities in entities_by_type.items():
-            formatted += f"**{type_name}:** {', '.join(entities[:3])}\n"
-        return formatted
+        self.snippet_optimizer = SnippetOptimizationAgent(query_id, self.llm)
+        self.language_detector = LanguageDetector()
     
     async def select_best_angle(self, query_data: Dict) -> str:
-        """Étape 1: Sélection du meilleur angle différenciant (async)"""
+        """Étape 1: Sélection du meilleur angle différenciant (multilingue)"""
+        
+        # Détection de la langue
+        lang = self.language_detector.detect_language(query_data.get('text', ''))
         
         angles_list = "\n".join([f"{i+1}. {angle}" for i, angle in enumerate(query_data.get('differentiating_angles', []))])
-        
         semantic_analysis = query_data.get('semantic_analysis', {})
         
-        prompt_selection = f"""Tu es un expert en stratégie de contenu SEO. À partir de cette analyse sémantique SERP, choisis l'angle différenciant le PLUS PERTINENT pour créer un article unique qui se démarquera de la concurrence.
+        if lang == 'fr':
+            prompt_selection = f"""Tu es un expert en stratégie de contenu SEO. À partir de cette analyse sémantique SERP, choisis l'angle différenciant le PLUS PERTINENT pour créer un article unique qui se démarquera de la concurrence.
 
 **REQUÊTE CIBLE (OBLIGATOIRE) :** "{query_data.get('text', 'Sujet non défini')}"
-⚠️ IMPORTANT : Tu DOIS absolument choisir l'angle qui correspond le mieux à cette requête exacte. C'est la recherche que les utilisateurs tapent dans Google.
+⚠️ IMPORTANT : Tu DOIS absolument choisir l'angle qui correspond le mieux à cette requête exacte.
 
 **ANGLES DIFFÉRENCIANTS DISPONIBLES :**
 {angles_list}
@@ -427,23 +877,37 @@ class AsyncQueryProcessor:
 **CONTEXTE CONCURRENTIEL :**
 - Nombre de mots cible : {query_data.get('word_count', 0)}
 - Clusters thématiques identifiés : {semantic_analysis.get('clusters_count', 0)}
-- Complexité sémantique du sujet : {semantic_analysis.get('semantic_complexity', 0)}/1.0
-- Diversité thématique : {semantic_analysis.get('thematic_diversity', 0)}/1.0
-
-**CRITÈRES DE SÉLECTION (PAR ORDRE DE PRIORITÉ) :**
-1. CORRESPONDANCE EXACTE avec la requête cible "{query_data.get('text', 'Sujet non défini')}"
-2. Pertinence pour l'intention de recherche de cette requête spécifique
-3. Potentiel de différenciation vs concurrence
-4. Richesse du contenu possible
-5. Capacité à couvrir plusieurs clusters thématiques
+- Entités identifiées : {semantic_analysis.get('entities', 0)}
+- Relations trouvées : {semantic_analysis.get('relations_found', 0)}
 
 **DEMANDE :**
-Choisis UN SEUL angle qui répond DIRECTEMENT à la requête "{query_data.get('text', 'Sujet non défini')}" et justifie ton choix en expliquant pourquoi cet angle est le plus adapté à cette recherche précise.
+Choisis UN SEUL angle qui répond DIRECTEMENT à la requête "{query_data.get('text', 'Sujet non défini')}" et justifie ton choix.
 Format : "ANGLE CHOISI: [titre] - JUSTIFICATION: [explication en lien direct avec la requête cible]"
 """
+            system_content = "Tu es un expert en stratégie de contenu SEO spécialisé dans la sélection d'angles différenciants."
+        else:
+            prompt_selection = f"""You are an SEO content strategy expert. From this SERP semantic analysis, choose the MOST RELEVANT differentiating angle to create a unique article that will stand out from the competition.
+
+**TARGET QUERY (MANDATORY):** "{query_data.get('text', 'Undefined topic')}"
+⚠️ IMPORTANT: You MUST choose the angle that best matches this exact query.
+
+**AVAILABLE DIFFERENTIATING ANGLES:**
+{angles_list}
+
+**COMPETITIVE CONTEXT:**
+- Target word count: {query_data.get('word_count', 0)}
+- Identified thematic clusters: {semantic_analysis.get('clusters_count', 0)}
+- Identified entities: {semantic_analysis.get('entities', 0)}
+- Found relations: {semantic_analysis.get('relations_found', 0)}
+
+**REQUEST:**
+Choose ONE angle that DIRECTLY answers the query "{query_data.get('text', 'Undefined topic')}" and justify your choice.
+Format: "CHOSEN ANGLE: [title] - JUSTIFICATION: [explanation directly linked to the target query]"
+"""
+            system_content = "You are an SEO content strategy expert specialized in selecting differentiating angles."
         
         messages = [
-            SystemMessage(content="Tu es un expert en stratégie de contenu SEO spécialisé dans la sélection d'angles différenciants."),
+            SystemMessage(content=system_content),
             HumanMessage(content=prompt_selection)
         ]
         
@@ -458,41 +922,159 @@ Format : "ANGLE CHOISI: [titre] - JUSTIFICATION: [explication en lien direct ave
         logging.info(f"✅ [ID {self.query_id}] Angle sélectionné: {selected_angle[:100]}...")
         return selected_angle
     
-    async def generate_article_plan(self, query_data: Dict, selected_angle: str, consigne_data: Dict) -> Dict:
-        """Étape 2: Génération du plan d'article spécialisé avec snippets intégrés"""
+    async def determine_schema_type(self, query_data: Dict, article_intent: str, selected_angle: str) -> str:
+        """Étape 2: Détermination du schema principal via LLM (multilingue)"""
+        
+        # Détection de la langue
+        lang = self.language_detector.detect_language(query_data.get('text', ''))
+        
+        if lang == 'fr':
+            prompt_schema = f"""Tu es un expert en Schema.org et optimisation SEO. Détermine le schema principal le plus approprié pour cet article.
+
+**REQUÊTE CIBLE :** "{query_data.get('text', 'Sujet non défini')}"
+**TYPE D'ARTICLE :** {article_intent}
+**ANGLE SÉLECTIONNÉ :** {selected_angle}
+
+**SCHEMAS DISPONIBLES :**
+- HowTo : Pour guides étape par étape, tutoriels
+- FAQPage : Pour pages questions-réponses
+- Recipe : Pour recettes, instructions de cuisine
+- Product : Pour présentation de produits
+- Article : Pour articles génériques, actualités
+- Organization : Pour présenter entreprises, services
+- Person : Pour biographies, profils
+- Event : Pour événements, formations
+- Course : Pour formations, cours en ligne
+- VideoObject : Pour contenu vidéo principal
+- ImageObject : Pour contenu principalement visuel
+
+**INSTRUCTIONS :**
+1. Analyse l'intention de la requête
+2. Considère le type d'article détecté
+3. Choisis LE schema le plus pertinent
+4. Justifie brièvement ton choix
+
+**FORMAT DE RÉPONSE :**
+Schema recommandé: [NOM_DU_SCHEMA]
+Justification: [explication courte]
+"""
+            system_content = "Tu es un expert en Schema.org spécialisé dans l'optimisation SEO."
+        else:
+            prompt_schema = f"""You are a Schema.org and SEO optimization expert. Determine the most appropriate main schema for this article.
+
+**TARGET QUERY:** "{query_data.get('text', 'Undefined topic')}"
+**ARTICLE TYPE:** {article_intent}
+**SELECTED ANGLE:** {selected_angle}
+
+**AVAILABLE SCHEMAS:**
+- HowTo: For step-by-step guides, tutorials
+- FAQPage: For question-answer pages
+- Recipe: For recipes, cooking instructions
+- Product: For product presentations
+- Article: For generic articles, news
+- Organization: For presenting companies, services
+- Person: For biographies, profiles
+- Event: For events, training
+- Course: For training, online courses
+- VideoObject: For main video content
+- ImageObject: For mainly visual content
+
+**INSTRUCTIONS:**
+1. Analyze the query intent
+2. Consider the detected article type
+3. Choose THE most relevant schema
+4. Briefly justify your choice
+
+**RESPONSE FORMAT:**
+Recommended schema: [SCHEMA_NAME]
+Justification: [brief explanation]
+"""
+            system_content = "You are a Schema.org expert specialized in SEO optimization."
+        
+        messages = [
+            SystemMessage(content=system_content),
+            HumanMessage(content=prompt_schema)
+        ]
+        
+        logging.info(f"🏷️ [ID {self.query_id}] Détermination du schema principal...")
+        
+        # Exécution asynchrone dans un thread pool
+        loop = asyncio.get_event_loop()
+        with ThreadPoolExecutor(max_workers=1) as executor:
+            response = await loop.run_in_executor(executor, self.llm.invoke, messages)
+        
+        # Extraction du schema depuis la réponse
+        response_content = response.content.strip()
+        schema_type = self._extract_schema_from_response(response_content)
+        
+        logging.info(f"✅ [ID {self.query_id}] Schema déterminé: {schema_type}")
+        return schema_type
+    
+    def _extract_schema_from_response(self, response: str) -> str:
+        """Extrait le nom du schema depuis la réponse du LLM"""
+        # Recherche du pattern "Schema recommandé: [SCHEMA]" ou "Recommended schema: [SCHEMA]"
+        import re
+        
+        schema_match = re.search(r'(?:Schema recommandé|Recommended schema):\s*([A-Za-z]+)', response)
+        if schema_match:
+            return schema_match.group(1)
+        
+        # Fallback: recherche de schemas connus dans le texte
+        known_schemas = ['HowTo', 'FAQPage', 'Recipe', 'Product', 'Article', 'Organization', 'Person', 'Event', 'Course']
+        for schema in known_schemas:
+            if schema.lower() in response.lower():
+                return schema
+        
+        # Fallback final
+        return 'Article'
+    
+    async def generate_article_plan(self, query_data: Dict, selected_angle: str, consigne_data: Dict, schema_type: str) -> Dict:
+        """Étape 3: Génération du plan d'article (multilingue)"""
         
         # 1. Analyse du type d'article optimal
         query_text = query_data.get('text', '')
         article_intent = self.article_analyzer.analyze_query_intent(query_text)
         article_config = self.article_analyzer.get_article_type_config(article_intent)
         
+        # Détection de la langue
+        lang = self.language_detector.detect_language(query_text)
+        
         logging.info(f"🎯 [ID {self.query_id}] Type d'article détecté: {article_intent}")
         logging.info(f"📋 [ID {self.query_id}] Template: {article_config['template']}")
+        logging.info(f"🌐 [ID {self.query_id}] Langue: {lang.upper()}")
         
         # 2. Récupération du highlight depuis consigne_data
         highlight_url = consigne_data.get('highlight', '')
         
-        # 3. Génération du prompt spécialisé
+        # 3. Génération du prompt spécialisé (multilingue)
         specialized_prompt = self.plan_generator.get_template_prompt(
             article_intent, query_data, selected_angle, highlight_url
         )
         
-        # 4. Format de sortie adapté au type d'article
-        system_message_content = f"""Your objective: Create a specialized {article_intent.upper()} article outline with integrated snippets.
+        # 4. Format de sortie selon la langue
+        if lang == 'fr':
+            integration_text = "Description de l'intégration naturelle du lien"
+            anchor_text = "Texte d'ancrage suggéré pour le lien"
+            language_instruction = "Langue de réponse: Français"
+        else:
+            integration_text = "Description of how to naturally integrate the link"
+            anchor_text = "Suggested anchor text for the link"
+            language_instruction = "Response language: English"
+        
+        system_message_content = f"""Your objective: Create a specialized {article_intent.upper()} article outline.
 
 Expected output format:
 {{
   "SEO Title": "",
   "article_type": "{article_intent}",
+  "schema_type": "{schema_type}",
   "introduction_notes": {{
-    "highlight_integration": "Description of how to naturally integrate the link",
-    "suggested_anchor_text": "Suggested anchor text for the link"
+    "highlight_integration": "{integration_text}",
+    "suggested_anchor_text": "{anchor_text}"
   }},
   "sections": [
     {{
       "section_title": "",
-      "snippet_type": "HowTo|FAQ|Featured|Table|List|Definition|None",
-      "placement": "beginning|middle|end",
       "subsections": [
         {{ "subsection_title": "" }},
         {{ "subsection_title": "" }}
@@ -502,34 +1084,26 @@ Expected output format:
   "conclusion": "",
   "article_config": {{
     "template": "{article_config['template']}",
-    "structure_emphasis": "{article_config['structure_emphasis']}",
-    "recommended_snippets": {article_config['snippet_types']}
+    "structure_emphasis": "{article_config['structure_emphasis']}"
   }}
 }}
-
-IMPORTANT SNIPPET INTEGRATION:
-- Each section MUST include snippet_type and placement properties
-- snippet_type should be one of: {', '.join(article_config['snippet_types'])} or "None"
-- placement indicates where in the section the snippet should appear
-- Only assign snippets where they add real value
 
 Article Type Guidelines:
 - {article_intent}: {article_config['structure_emphasis']}
 - Required sections: {', '.join(article_config['required_sections'])}
-- Preferred snippets: {', '.join(article_config['snippet_types'])}
 
 Restrictions:
- • Propose only titles and subtitles with snippet integration
- • Each section must specify snippet optimization
- • No additional textual content
-Response language: Match the language of the provided data."""
+• Propose only titles and subtitles
+• No snippet-related properties
+• No additional textual content
+{language_instruction}"""
 
         messages = [
             SystemMessage(content=system_message_content),
             HumanMessage(content=specialized_prompt)
         ]
         
-        logging.info(f"🏗️ [ID {self.query_id}] Génération du plan {article_intent} avec snippets intégrés...")
+        logging.info(f"🏗️ [ID {self.query_id}] Génération du plan {article_intent}...")
         
         # Exécution asynchrone dans un thread pool
         loop = asyncio.get_event_loop()
@@ -546,133 +1120,145 @@ Response language: Match the language of the provided data."""
             
             plan_json = json.loads(plan_content)
             
-            # Validation et enrichissement du plan
-            validated_plan = self._validate_and_enrich_plan(plan_json, article_config, query_data)
+            # Validation du plan
+            validated_plan = self._validate_plan(plan_json, article_config, query_data, schema_type)
             
-            logging.info(f"✅ [ID {self.query_id}] Plan {article_intent} généré avec snippets intégrés")
+            logging.info(f"✅ [ID {self.query_id}] Plan {article_intent} généré")
             return validated_plan
             
         except json.JSONDecodeError as e:
             logging.error(f"❌ [ID {self.query_id}] Erreur de parsing JSON: {e}")
             logging.error(f"Contenu reçu: {response.content}")
             
-            # Fallback: structure basique avec type d'article
-            fallback_plan = self._create_fallback_plan(query_data, article_intent, article_config, highlight_url)
+            # Fallback: structure basique
+            fallback_plan = self._create_fallback_plan(query_data, article_intent, article_config, highlight_url, schema_type)
             return fallback_plan
     
-    def _validate_and_enrich_plan(self, plan_json: Dict, article_config: Dict, query_data: Dict) -> Dict:
-        """Valide et enrichit le plan généré"""
+    def _validate_plan(self, plan_json: Dict, article_config: Dict, query_data: Dict, schema_type: str) -> Dict:
+        """Valide le plan généré (sans snippets)"""
         validated_plan = plan_json.copy()
         
-        # S'assurer que l'article_type est présent
+        # S'assurer que les champs obligatoires sont présents
         if 'article_type' not in validated_plan:
             validated_plan['article_type'] = article_config.get('template', 'general')
         
-        # Valider que chaque section a snippet_type et placement
-        for section in validated_plan.get('sections', []):
-            if 'snippet_type' not in section:
-                section['snippet_type'] = 'None'
-            if 'placement' not in section:
-                section['placement'] = 'middle'
-        
-        # Ajouter métadonnées sur l'optimisation
-        validated_plan['seo_optimization'] = {
-            'total_snippets': len([s for s in validated_plan.get('sections', []) if s.get('snippet_type') != 'None']),
-            'article_structure': article_config.get('structure_emphasis', 'standard'),
-            'target_word_count': query_data.get('word_count', 0),
-            'snippet_distribution': self._analyze_snippet_distribution(validated_plan)
-        }
+        if 'schema_type' not in validated_plan:
+            validated_plan['schema_type'] = schema_type
         
         return validated_plan
     
-    def _analyze_snippet_distribution(self, plan: Dict) -> Dict:
-        """Analyse la distribution des snippets dans le plan"""
-        snippet_types = {}
-        for section in plan.get('sections', []):
-            snippet_type = section.get('snippet_type', 'None')
-            if snippet_type != 'None':
-                snippet_types[snippet_type] = snippet_types.get(snippet_type, 0) + 1
+    def _create_fallback_plan(self, query_data: Dict, article_intent: str, article_config: Dict, highlight_url: str, schema_type: str) -> Dict:
+        """Crée un plan de fallback en cas d'erreur (multilingue)"""
+        # Détection de la langue
+        lang = self.language_detector.detect_language(query_data.get('text', ''))
         
-        return {
-            'types_used': list(snippet_types.keys()),
-            'total_count': sum(snippet_types.values()),
-            'distribution': snippet_types
-        }
-    
-    def _create_fallback_plan(self, query_data: Dict, article_intent: str, article_config: Dict, highlight_url: str) -> Dict:
-        """Crée un plan de fallback en cas d'erreur"""
-        return {
-            "SEO Title": f"Guide {query_data.get('text', 'sujet')} - Plan généré automatiquement",
-            "article_type": article_intent,
-            "introduction_notes": {
-                "highlight_integration": f"Intégrer naturellement le lien {highlight_url} dans le contexte",
-                "suggested_anchor_text": "découvrez notre guide"
-            },
-            "sections": [
-                {
-                    "section_title": "Section principale 1",
-                    "snippet_type": article_config['snippet_types'][0] if article_config['snippet_types'] else "Featured",
-                    "placement": "beginning",
-                    "subsections": [
-                        {"subsection_title": "Sous-section 1.1"},
-                        {"subsection_title": "Sous-section 1.2"}
-                    ]
+        if lang == 'fr':
+            return {
+                "SEO Title": f"Guide {query_data.get('text', 'sujet')} - Plan généré automatiquement",
+                "article_type": article_intent,
+                "schema_type": schema_type,
+                "introduction_notes": {
+                    "highlight_integration": f"Intégrer naturellement le lien {highlight_url} dans le contexte",
+                    "suggested_anchor_text": "découvrez notre guide"
                 },
-                {
-                    "section_title": "Section principale 2",
-                    "snippet_type": "FAQ",
-                    "placement": "end",
-                    "subsections": [
-                        {"subsection_title": "Sous-section 2.1"}
-                    ]
-                }
-            ],
-            "conclusion": "Conclusion optimisée SEO",
-            "article_config": {
-                "template": article_config['template'],
-                "structure_emphasis": article_config['structure_emphasis'],
-                "recommended_snippets": article_config['snippet_types']
-            },
-            "seo_optimization": {
-                "total_snippets": 2,
-                "article_structure": "fallback",
-                "target_word_count": query_data.get('word_count', 0),
-                "snippet_distribution": {
-                    "types_used": ["Featured", "FAQ"],
-                    "total_count": 2,
-                    "distribution": {"Featured": 1, "FAQ": 1}
+                "sections": [
+                    {
+                        "section_title": "Section principale 1",
+                        "subsections": [
+                            {"subsection_title": "Sous-section 1.1"},
+                            {"subsection_title": "Sous-section 1.2"}
+                        ]
+                    },
+                    {
+                        "section_title": "Section principale 2",
+                        "subsections": [
+                            {"subsection_title": "Sous-section 2.1"}
+                        ]
+                    }
+                ],
+                "conclusion": "Conclusion optimisée SEO",
+                "article_config": {
+                    "template": article_config['template'],
+                    "structure_emphasis": article_config['structure_emphasis']
                 }
             }
-        }
+        else:
+            return {
+                "SEO Title": f"{query_data.get('text', 'topic')} Guide - Automatically Generated Plan",
+                "article_type": article_intent,
+                "schema_type": schema_type,
+                "introduction_notes": {
+                    "highlight_integration": f"Naturally integrate the link {highlight_url} in context",
+                    "suggested_anchor_text": "discover our guide"
+                },
+                "sections": [
+                    {
+                        "section_title": "Main Section 1",
+                        "subsections": [
+                            {"subsection_title": "Subsection 1.1"},
+                            {"subsection_title": "Subsection 1.2"}
+                        ]
+                    },
+                    {
+                        "section_title": "Main Section 2",
+                        "subsections": [
+                            {"subsection_title": "Subsection 2.1"}
+                        ]
+                    }
+                ],
+                "conclusion": "SEO-optimized conclusion",
+                "article_config": {
+                    "template": article_config['template'],
+                    "structure_emphasis": article_config['structure_emphasis']
+                }
+            }
     
     async def process_query(self, query_data: Dict, consigne_data: Dict) -> Dict:
-        """Traite une requête complète avec plan spécialisé et snippets intégrés"""
+        """Traite une requête complète avec nouveau workflow"""
         try:
             logging.info(f"🚀 [ID {self.query_id}] Début du traitement: '{query_data.get('text')}'")
             
             # Vérifier si la requête a les données nécessaires
             if not all([query_data.get('differentiating_angles'), 
-                       query_data.get('detailed_clusters'), 
                        query_data.get('semantic_analysis')]):
                 logging.error(f"❌ [ID {self.query_id}] Données sémantiques incomplètes")
                 return {'status': 'failed', 'error': f'Données sémantiques incomplètes pour ID {self.query_id}'}
             
-            # Traitement: sélection d'angle
+            # NOUVEAU WORKFLOW:
+            
+            # Étape 1: Sélection d'angle
             selected_angle = await self.select_best_angle(query_data)
             
-            # Génération du plan spécialisé avec snippets intégrés
+            # Étape 2: Détermination du schema principal
+            query_text = query_data.get('text', '')
+            article_intent = self.article_analyzer.analyze_query_intent(query_text)
+            schema_type = await self.determine_schema_type(query_data, article_intent, selected_angle)
+            
+            # Étape 3: Génération du plan de base
             article_plan = await self.generate_article_plan(
                 query_data, 
                 selected_angle,
-                consigne_data
+                consigne_data,
+                schema_type
             )
+            
+            # Étape 4: Optimisation des snippets
+            optimized_plan = await self.snippet_optimizer.optimize_snippets(
+                article_plan,
+                query_data,
+                article_intent,
+                schema_type
+            )
+            
+            # Finalisation avec métadonnées
+            optimized_plan['seo_optimization']['target_word_count'] = query_data.get('word_count', 0)
             
             logging.info(f"🎉 [ID {self.query_id}] Traitement terminé avec succès")
             
             return {
                 'query_id': self.query_id,
                 'selected_angle': selected_angle,
-                'article_plan': article_plan,
+                'article_plan': optimized_plan,
                 'status': 'success'
             }
             
@@ -683,9 +1269,8 @@ Response language: Match the language of the provided data."""
                 'error': str(e),
                 'status': 'failed'
             }
-    
 
-# === Gestionnaire de traitement en lot parallélisé (mise à jour) ===
+# === Gestionnaire de traitement en lot parallélisé (Inchangé) ===
 class ParallelConsignePlanGenerator:
     def __init__(self):
         self.semaphore = asyncio.Semaphore(MAX_CONCURRENT_LLM)
@@ -763,7 +1348,6 @@ class ParallelConsignePlanGenerator:
         for query in consigne_data.get('queries', []):
             # Vérifier si la requête a les données nécessaires pour la génération de plan
             if (query.get('differentiating_angles') and 
-                query.get('detailed_clusters') and 
                 query.get('semantic_analysis')):
                 
                 # Ignorer les requêtes qui ont déjà un plan généré
@@ -825,7 +1409,7 @@ class ParallelConsignePlanGenerator:
                                 current_data['queries'][i] = self.clean_semantic_data(query)
                                 
                                 updated_count += 1
-                                logging.info(f"✅ [ID {query_id}] Plan {plan.get('article_type', 'general')} ajouté avec snippets intégrés")
+                                logging.info(f"✅ [ID {query_id}] Plan {plan.get('article_type', 'general')} ajouté avec snippets optimisés")
                             else:
                                 logging.warning(f"⚠️ [ID {query_id}] Données incomplètes, ignoré")
                     
@@ -905,7 +1489,7 @@ class ParallelConsignePlanGenerator:
                                 logging.warning(f"⚠️ Impossible de nettoyer: {cleanup_file}")
                     
                     logging.info(f"✅ Sauvegarde atomique terminée avec succès")
-                    logging.info(f"📈 {updated_count} requêtes mises à jour avec plans spécialisés et snippets intégrés")
+                    logging.info(f"📈 {updated_count} requêtes mises à jour avec snippets optimisés")
                     logging.info(f"📊 Taille: {original_size} → {final_size} bytes")
                     
                     return True
@@ -1048,7 +1632,7 @@ class ParallelConsignePlanGenerator:
     
     def display_single_query_summary(self, query_id: int, query_text: str, selected_angle: str, 
                                    article_plan: Dict) -> None:
-        """Affiche un résumé pour une requête individuelle avec plan spécialisé"""
+        """Affiche un résumé pour une requête individuelle avec snippets optimisés"""
         print(f"\n" + "="*70)
         print(f"           RÉSUMÉ REQUÊTE ID {query_id}")
         print("="*70)
@@ -1057,11 +1641,13 @@ class ParallelConsignePlanGenerator:
         print(f"\n🎯 ANGLE SÉLECTIONNÉ:")
         print(f"   {selected_angle[:120]}{'...' if len(selected_angle) > 120 else ''}")
         
-        # Affichage du type d'article
+        # Affichage du type d'article et schema
         article_type = article_plan.get('article_type', 'general')
+        schema_type = article_plan.get('schema_type', 'Article')
         print(f"\n📋 PLAN GÉNÉRÉ ({article_type.upper()}):")
         print(f"   📌 Titre SEO: {article_plan.get('SEO Title', 'Non défini')}")
         print(f"   🎯 Type d'article: {article_type}")
+        print(f"   🏷️ Schema principal: {schema_type}")
         
         # Affichage de l'intégration du highlight
         intro_notes = article_plan.get('introduction_notes', {})
@@ -1070,47 +1656,50 @@ class ParallelConsignePlanGenerator:
             print(f"      • Stratégie: {intro_notes.get('highlight_integration', 'Non définie')[:60]}...")
             print(f"      • Ancre suggérée: {intro_notes.get('suggested_anchor_text', 'Non définie')}")
         
-        # Affichage des sections avec snippets intégrés
+        # Affichage des sections avec snippets optimisés
         sections = article_plan.get('sections', [])
-        print(f"\n   📊 SECTIONS AVEC SNIPPETS INTÉGRÉS: {len(sections)}")
+        print(f"\n   📊 SECTIONS AVEC SNIPPETS OPTIMISÉS: {len(sections)}")
         
         snippet_count = 0
         for i, section in enumerate(sections, 1):
             title = section.get('section_title', 'Titre non défini')
             snippet_type = section.get('snippet_type', 'None')
-            placement = section.get('placement', '')
+            placement = section.get('placement', 'none')
+            schema_section = section.get('schema_type', 'none')
             
             if snippet_type != 'None':
                 snippet_count += 1
-                snippet_info = f" [📍 {snippet_type} - {placement}]"
+                snippet_info = f" [🎯 {snippet_type}@{placement}]"
+                if schema_section != 'none':
+                    snippet_info += f" [📋 {schema_section}]"
             else:
-                snippet_info = ""
+                snippet_info = " [📍 Aucun snippet]"
             
-            print(f"      {i}. {title[:45]}{'...' if len(title) > 45 else ''}{snippet_info}")
+            print(f"      {i}. {title[:40]}{'...' if len(title) > 40 else ''}{snippet_info}")
             
             if i == 3 and len(sections) > 3:
                 print(f"      ... et {len(sections) - 3} autres sections")
                 break
         
-        # Affichage des métriques SEO
+        # Affichage des métriques SEO optimisées
         seo_opt = article_plan.get('seo_optimization', {})
         if seo_opt:
-            print(f"\n   🎯 OPTIMISATION SEO:")
-            print(f"      • Total snippets intégrés: {seo_opt.get('total_snippets', 0)}")
+            print(f"\n   🎯 OPTIMISATION SEO AVANCÉE:")
+            print(f"      • Snippets optimisés: {seo_opt.get('total_snippets', 0)}")
             print(f"      • Structure: {seo_opt.get('article_structure', 'standard')}")
             print(f"      • Mots cibles: {seo_opt.get('target_word_count', 0)}")
             
             distribution = seo_opt.get('snippet_distribution', {})
             if distribution.get('types_used'):
-                print(f"      • Types snippets: {', '.join(distribution['types_used'])}")
+                print(f"      • Types utilisés: {', '.join(distribution['types_used'])}")
         
-        print(f"\n💾 ✅ Sauvegardé dans consigne.json avec plan spécialisé")
+        print(f"\n💾 ✅ Sauvegardé avec agent d'optimisation des snippets")
         print("="*70 + "\n")
     
     def display_batch_summary(self, successful: List[Dict], failed: List[Dict], total: int) -> None:
-        """Affiche un résumé du traitement en lot avec plans spécialisés"""
+        """Affiche un résumé du traitement en lot avec agent d'optimisation"""
         print("\n" + "="*85)
-        print("           RÉSUMÉ DU TRAITEMENT EN LOT - PLANS SPÉCIALISÉS")
+        print("           RÉSUMÉ DU TRAITEMENT EN LOT - SNIPPETS OPTIMISÉS")
         print("="*85)
         
         print(f"🚀 PERFORMANCE:")
@@ -1123,12 +1712,16 @@ class ParallelConsignePlanGenerator:
         if successful:
             # Analyse des types d'articles générés
             article_types = {}
+            schema_types = {}
             total_snippets = 0
             
             for result in successful:
                 plan = result.get('article_plan', {})
                 article_type = plan.get('article_type', 'general')
+                schema_type = plan.get('schema_type', 'Article')
+                
                 article_types[article_type] = article_types.get(article_type, 0) + 1
+                schema_types[schema_type] = schema_types.get(schema_type, 0) + 1
                 
                 seo_opt = plan.get('seo_optimization', {})
                 total_snippets += seo_opt.get('total_snippets', 0)
@@ -1137,21 +1730,39 @@ class ParallelConsignePlanGenerator:
             for article_type, count in article_types.items():
                 print(f"   • {article_type}: {count} articles")
             
+            print(f"\n🏷️ SCHEMAS PRINCIPAUX UTILISÉS:")
+            for schema_type, count in schema_types.items():
+                print(f"   • {schema_type}: {count} articles")
+            
             print(f"\n✅ REQUÊTES TRAITÉES AVEC SUCCÈS:")
             for result in successful[:5]:
                 query_id = result.get('query_id')
                 plan = result.get('article_plan', {})
                 plan_title = plan.get('SEO Title', 'Titre non défini')
                 article_type = plan.get('article_type', 'general')
+                schema_type = plan.get('schema_type', 'Article')
                 snippet_count = plan.get('seo_optimization', {}).get('total_snippets', 0)
-                print(f"   • ID {query_id}: {plan_title[:35]}... [{article_type}] ({snippet_count} snippets)")
+                print(f"   • ID {query_id}: {plan_title[:30]}... [{article_type}|{schema_type}] ({snippet_count} snippets)")
             
             if len(successful) > 5:
                 print(f"   ... et {len(successful) - 5} autres")
             
-            print(f"\n🎯 MÉTRIQUES SNIPPETS:")
+            print(f"\n🎯 MÉTRIQUES SNIPPETS OPTIMISÉS:")
             print(f"   • Total snippets intégrés: {total_snippets}")
             print(f"   • Moyenne par article: {total_snippets/len(successful):.1f}")
+            
+            # Analyse des types de snippets utilisés
+            all_snippet_types = {}
+            for result in successful:
+                plan = result.get('article_plan', {})
+                distribution = plan.get('seo_optimization', {}).get('snippet_distribution', {})
+                for snippet_type, count in distribution.get('distribution', {}).items():
+                    all_snippet_types[snippet_type] = all_snippet_types.get(snippet_type, 0) + count
+            
+            if all_snippet_types:
+                print(f"\n📈 RÉPARTITION DES FORMATS DE CONTENU:")
+                for snippet_type, count in sorted(all_snippet_types.items(), key=lambda x: x[1], reverse=True):
+                    print(f"   • {snippet_type}: {count} utilisations")
         
         if failed:
             print(f"\n❌ REQUÊTES EN ÉCHEC:")
@@ -1164,28 +1775,37 @@ class ParallelConsignePlanGenerator:
         print(f"   ✅ Fichier consigne.json mis à jour")
         print(f"   ✅ Nouvelles clés ajoutées pour chaque requête traitée:")
         print(f"      - selected_differentiating_angle")
-        print(f"      - generated_article_plan (avec plans spécialisés)")
+        print(f"      - generated_article_plan (avec snippets optimisés)")
         print(f"      - article_type (howto, comparative, faq_page, etc.)")
-        print(f"      - seo_optimization (métriques snippets)")
+        print(f"      - schema_type (HowTo, FAQPage, Article, etc.)")
+        print(f"      - seo_optimization (métriques snippets avancées)")
         print(f"      - plan_generation_status")
         
-        print("\n✨ NOUVEAUTÉS INTÉGRÉES:")
-        print(f"   • Plans spécialisés par type d'intention")
-        print(f"   • Snippets intégrés directement dans les sections")
-        print(f"   • Templates adaptatifs (howto, comparateur, faq, etc.)")
-        print(f"   • Intégration automatique du highlight")
-        print(f"   • Métriques SEO détaillées")
+        print("\n✨ NOUVELLES FONCTIONNALITÉS:")
+        print(f"   • Agent SnippetOptimizationAgent dédié")
+        print(f"   • Détermination automatique du schema principal")
+        print(f"   • Analyse intelligente des opportunités de snippets")
+        print(f"   • Placement précis des formats de contenu")
+        print(f"   • Fallback robuste en cas d'échec")
+        print(f"   • Métriques SEO avancées avec distribution")
+        
+        print("\n🔧 WORKFLOW OPTIMISÉ:")
+        print(f"   1. Sélection de l'angle différenciant")
+        print(f"   2. Détermination du schema principal (LLM)")
+        print(f"   3. Génération du plan d'article de base")
+        print(f"   4. Optimisation intelligente des snippets (LLM)")
+        print(f"   5. Validation et sauvegarde")
         
         print("\n⚡ GAIN DE TEMPS:")
-        estimated_sequential_time = total * 35  # 35s par requête en séquentiel (plus complexe)
-        estimated_parallel_time = max(12, total * 35 / MAX_CONCURRENT_LLM)  # En parallèle
+        estimated_sequential_time = total * 45  # 45s par requête avec optimisation
+        estimated_parallel_time = max(15, total * 45 / MAX_CONCURRENT_LLM)  # En parallèle
         time_saved = estimated_sequential_time - estimated_parallel_time
         print(f"   • Temps estimé séquentiel: {estimated_sequential_time//60}min {estimated_sequential_time%60}s")
         print(f"   • Temps parallélisé: {estimated_parallel_time//60}min {estimated_parallel_time%60}s")
         print(f"   • Gain de temps: ~{time_saved//60}min {time_saved%60}s")
         
         print("\n" + "="*85)
-        print("Traitement en lot avec plans spécialisés terminé !")
+        print("Traitement en lot avec agent d'optimisation terminé !")
         print("="*85 + "\n")
 
 # === Fonctions principales asynchrones ===
@@ -1197,7 +1817,8 @@ async def main_single_query_async(query_id: int):
         
         if result['status'] == 'success':
             article_type = result.get('article_plan', {}).get('article_type', 'general')
-            print(f"🎉 Plan {article_type} avec snippets intégrés généré pour requête ID {query_id}!")
+            schema_type = result.get('article_plan', {}).get('schema_type', 'Article')
+            print(f"🎉 Plan {article_type} avec schema {schema_type} et snippets optimisés généré pour requête ID {query_id}!")
             return True
         else:
             print(f"❌ Erreur: {result.get('error', 'Erreur inconnue')}")
@@ -1217,7 +1838,7 @@ async def main_all_queries_async():
         result = await generator.process_all_queries()
         
         if result['status'] == 'completed':
-            print(f"🎉 Traitement parallélisé terminé! {result.get('successful', 0)} requêtes traitées avec succès.")
+            print(f"🎉 Traitement parallélisé terminé! {result.get('successful', 0)} requêtes traitées avec agent d'optimisation.")
             return True
         else:
             print(f"❌ Erreur: {result.get('error', 'Erreur inconnue')}")
@@ -1243,22 +1864,23 @@ def main():
     """Point d'entrée principal avec choix du mode"""
     import sys
     
-    print("🚀 Générateur de Plans d'Articles SEO Spécialisés")
-    print("="*65)
+    print("🚀 Générateur de Plans d'Articles SEO avec Agent d'Optimisation")
+    print("="*70)
     print(f"📁 Dossier de travail: {BASE_DIR}")
     if CONSIGNE_FILE:
         print(f"📁 Fichier consigne: {os.path.basename(CONSIGNE_FILE)}")
         print(f"📁 Fichier existe: {os.path.exists(CONSIGNE_FILE)}")
     else:
         print("📁 Fichier consigne: ❌ Non trouvé")
-    print("="*65)
-    print("✨ NOUVEAUTÉS MAJEURES:")
-    print("   • Plans spécialisés par type d'intention")
-    print("   • Templates adaptatifs (howto, comparateur, faq, listicle)")
-    print("   • Snippets intégrés directement dans les sections")
-    print("   • Intégration automatique du highlight")
-    print("   • Métriques SEO avancées")
-    print("="*65)
+    print("="*70)
+    print("✨ NOUVELLES FONCTIONNALITÉS MAJEURES:")
+    print("   • Agent SnippetOptimizationAgent spécialisé")
+    print("   • Détermination automatique du schema principal")
+    print("   • Analyse intelligente des opportunités de snippets")
+    print("   • Placement précis des formats de contenu")
+    print("   • Workflow en 4 étapes optimisé")
+    print("   • Gestion d'erreurs robuste avec fallbacks")
+    print("="*70)
     
     if len(sys.argv) > 1:
         try:
