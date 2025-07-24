@@ -1,0 +1,109 @@
+2025-07-24 12:51:38,009 - INFO - Début traitement de 1 requêtes
+2025-07-24 12:51:38,009 - INFO - Début traitement ID 0: comment recharger voiture électrique sur borne...
+2025-07-24 12:51:38,011 - INFO - Consigne trouvée: consigne_20250718_133051_ee7e3b48.json
+2025-07-24 12:51:38,870 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-07-24 12:51:38,871 - ERROR - Erreur API OpenAI: Error code: 400 - {'error': {'message': "Unknown parameter: 'prompt.input'.", 'type': 'invalid_request_error', 'param': 'prompt.input', 'code': 'unknown_parameter'}}
+2025-07-24 12:51:38,871 - INFO - Résumé: 0 succès / 1 requêtes
+2025-07-24 12:57:09,750 - INFO - Début traitement de 1 requêtes
+2025-07-24 12:57:09,750 - INFO - Début traitement ID 0: comment recharger voiture électrique sur borne...
+2025-07-24 12:57:09,752 - INFO - Consigne trouvée: consigne_20250718_133051_ee7e3b48.json
+2025-07-24 12:57:18,837 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 12:57:19,040 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_68821186157c819db9db1e8a1f598d480002b59c15786d38 "HTTP/1.1 200 OK"
+2025-07-24 12:57:19,043 - INFO - Succès traitement ID 0
+2025-07-24 12:57:19,043 - INFO - Résumé: 1 succès / 1 requêtes
+2025-07-24 14:04:03,771 - INFO - Début traitement de 1 requêtes
+2025-07-24 14:04:03,773 - INFO - Début traitement ID 1: how to charge an electic car...
+2025-07-24 14:04:03,774 - INFO - Consigne trouvée: consigne_20250718_133051_ee7e3b48.json
+2025-07-24 14:04:15,024 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:04:15,330 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_68822134705481a39e2507ad7ddcfe5a02c33e78328a45a9 "HTTP/1.1 200 OK"
+2025-07-24 14:04:15,420 - INFO - Succès traitement ID 1
+2025-07-24 14:04:15,420 - INFO - Résumé: 1 succès / 1 requêtes
+2025-07-24 14:05:35,350 - INFO - Début traitement de 2 requêtes
+2025-07-24 14:05:35,350 - INFO - Début traitement ID 2: comment brancher voiture électrique...
+2025-07-24 14:05:35,351 - INFO - Début traitement ID 3: pourquoi voiture électrique prend feu...
+2025-07-24 14:05:35,353 - INFO - Consigne trouvée: consigne_20250718_133051_ee7e3b48.json
+2025-07-24 14:05:35,552 - INFO - Consigne trouvée: consigne_20250718_133051_ee7e3b48.json
+2025-07-24 14:05:42,755 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:05:43,049 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_6882218f988081a39facc8f0e623cfe4015ed5f58451065b "HTTP/1.1 200 OK"
+2025-07-24 14:05:43,130 - INFO - Succès traitement ID 2
+2025-07-24 14:05:45,666 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:05:45,807 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_6882218f9504819eaa2c14802812bdce0dc4d47f9c76c386 "HTTP/1.1 200 OK"
+2025-07-24 14:05:45,810 - INFO - Succès traitement ID 3
+2025-07-24 14:05:45,810 - INFO - Résumé: 2 succès / 2 requêtes
+2025-07-24 14:06:23,308 - INFO - Début traitement de 1 requêtes
+2025-07-24 14:06:23,308 - INFO - Début traitement ID 2: comment brancher voiture électrique...
+2025-07-24 14:06:23,310 - INFO - Consigne trouvée: consigne_20250718_133051_ee7e3b48.json
+2025-07-24 14:06:29,700 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:06:29,956 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688221bf7f58819cb7fe00eb874e3ae20c80a1a3c267d621 "HTTP/1.1 200 OK"
+2025-07-24 14:06:30,038 - INFO - Succès traitement ID 2
+2025-07-24 14:06:30,038 - INFO - Résumé: 1 succès / 1 requêtes
+2025-07-24 14:40:18,351 - INFO - Début traitement de 4 requêtes
+2025-07-24 14:40:18,352 - INFO - Début traitement ID 1: how to charge an electic car...
+2025-07-24 14:40:18,353 - INFO - Début traitement ID 2: comment brancher voiture électrique...
+2025-07-24 14:40:18,354 - INFO - Début traitement ID 0: comment recharger voiture électrique sur borne...
+2025-07-24 14:40:18,354 - INFO - Début traitement ID 3: pourquoi voiture électrique prend feu...
+2025-07-24 14:40:18,358 - INFO - Consigne trouvée: consigne_20250718_134201_ed3c4700.json
+2025-07-24 14:40:18,698 - INFO - Consigne trouvée: consigne_20250718_134201_ed3c4700.json
+2025-07-24 14:40:18,699 - INFO - Consigne trouvée: consigne_20250718_134201_ed3c4700.json
+2025-07-24 14:40:18,702 - INFO - Consigne trouvée: consigne_20250718_134201_ed3c4700.json
+2025-07-24 14:40:19,635 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:40:19,883 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688229b2b8b88192b34454833665a40308ff3280c096aa08 "HTTP/1.1 200 OK"
+2025-07-24 14:40:19,887 - INFO - Succès traitement ID 3
+2025-07-24 14:40:19,919 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:40:20,139 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688229b2ba0481928417504ea29a0b460fdc2281d18e7d31 "HTTP/1.1 200 OK"
+2025-07-24 14:40:20,141 - INFO - Succès traitement ID 1
+2025-07-24 14:40:20,349 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:40:20,572 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688229b2b60c81a0ae2a4d84d06ff34f005d820889e13590 "HTTP/1.1 200 OK"
+2025-07-24 14:40:20,575 - INFO - Succès traitement ID 0
+2025-07-24 14:40:21,819 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:40:22,055 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688229b2b898819ebf23eb4790fd34dc050185aa8cf7b105 "HTTP/1.1 200 OK"
+2025-07-24 14:40:22,057 - INFO - Succès traitement ID 2
+2025-07-24 14:40:22,057 - INFO - Résumé: 4 succès / 4 requêtes
+2025-07-24 14:44:17,533 - INFO - Début traitement de 4 requêtes
+2025-07-24 14:44:17,534 - INFO - Début traitement ID 1: how to charge an electic car...
+2025-07-24 14:44:17,535 - INFO - Début traitement ID 2: comment brancher voiture électrique...
+2025-07-24 14:44:17,535 - INFO - Début traitement ID 0: comment recharger voiture électrique sur borne...
+2025-07-24 14:44:17,536 - INFO - Début traitement ID 3: pourquoi voiture électrique prend feu...
+2025-07-24 14:44:17,539 - INFO - Consigne trouvée: consigne_20250718_134201_ed3c4700.json
+2025-07-24 14:44:17,861 - INFO - Consigne trouvée: consigne_20250718_134201_ed3c4700.json
+2025-07-24 14:44:17,862 - INFO - Consigne trouvée: consigne_20250718_134201_ed3c4700.json
+2025-07-24 14:44:17,865 - INFO - Consigne trouvée: consigne_20250718_134201_ed3c4700.json
+2025-07-24 14:44:18,817 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:44:18,909 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:44:18,992 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:44:19,084 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_68822aa1e8d48192a80a04cd44e762ee010706294bb13ec1 "HTTP/1.1 200 OK"
+2025-07-24 14:44:19,087 - INFO - Succès traitement ID 2
+2025-07-24 14:44:19,121 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_68822aa1e58881a18343ef4f54de33330b8b56be2d75824d "HTTP/1.1 200 OK"
+2025-07-24 14:44:19,125 - INFO - Succès traitement ID 3
+2025-07-24 14:44:19,173 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_68822aa1e6c481a294c983b2f60cc39d06a7f3451df78d04 "HTTP/1.1 200 OK"
+2025-07-24 14:44:19,176 - INFO - Succès traitement ID 0
+2025-07-24 14:44:19,673 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:44:19,829 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_68822aa1ed08819ca96fe2991932d5e107c2846e235036ef "HTTP/1.1 200 OK"
+2025-07-24 14:44:19,832 - INFO - Succès traitement ID 1
+2025-07-24 14:44:19,832 - INFO - Résumé: 4 succès / 4 requêtes
+2025-07-24 14:47:47,841 - INFO - Début traitement de 4 requêtes
+2025-07-24 14:47:47,843 - INFO - Début traitement ID 1: how to charge an electic car...
+2025-07-24 14:47:47,844 - INFO - Début traitement ID 2: comment brancher voiture électrique...
+2025-07-24 14:47:47,844 - INFO - Début traitement ID 0: comment recharger voiture électrique sur borne...
+2025-07-24 14:47:47,845 - INFO - Début traitement ID 3: pourquoi voiture électrique prend feu...
+2025-07-24 14:47:47,850 - INFO - Consigne trouvée: consigne_20250718_133051_ee7e3b48.json
+2025-07-24 14:47:48,164 - INFO - Consigne trouvée: consigne_20250718_133051_ee7e3b48.json
+2025-07-24 14:47:48,166 - INFO - Consigne trouvée: consigne_20250718_133051_ee7e3b48.json
+2025-07-24 14:47:48,167 - INFO - Consigne trouvée: consigne_20250718_133051_ee7e3b48.json
+2025-07-24 14:47:49,234 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:47:49,311 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:47:49,349 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:47:49,360 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:47:49,481 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_68822b742f6c8191b967f9d9aa553edc045ef6f3c78d4688 "HTTP/1.1 200 OK"
+2025-07-24 14:47:49,483 - INFO - Schema ajouté pour requête ID 1
+2025-07-24 14:47:49,493 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_68822b743848819da9d55d74696ce046035e25db82a8677d "HTTP/1.1 200 OK"
+2025-07-24 14:47:49,513 - INFO - Schema ajouté pour requête ID 2
+2025-07-24 14:47:49,519 - INFO - Succès traitement ID 2
+2025-07-24 14:47:49,519 - INFO - Succès traitement ID 1
+2025-07-24 14:47:49,540 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_68822b74305c819dab949075709879f902b3f5a1de8cf234 "HTTP/1.1 200 OK"
+2025-07-24 14:47:49,542 - INFO - Schema ajouté pour requête ID 0
+2025-07-24 14:47:49,543 - INFO - Succès traitement ID 0
+2025-07-24 14:47:49,672 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_68822b74349481a2afd34a0213fb970d0ec882e92a1706d1 "HTTP/1.1 200 OK"
+2025-07-24 14:47:49,673 - INFO - Schema ajouté pour requête ID 3
+2025-07-24 14:47:49,675 - INFO - Succès traitement ID 3
+2025-07-24 14:47:49,675 - INFO - Résumé: 4 succès / 4 requêtes

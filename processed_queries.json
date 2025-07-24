@@ -1,25 +1,89 @@
 {
   "processed_queries": [
-    "86e10bc87276f1896a050d7f1cb5e977"
+    "dc45323fad5c62e2275b5d66af4cd993",
+    "f1f40748c58e2934c5d81371ff3aed50",
+    "86e10bc87276f1896a050d7f1cb5e977",
+    "975dbb03276c453c3664183e8724a597"
   ],
   "query_details": {
     "86e10bc87276f1896a050d7f1cb5e977": {
       "id": 0,
       "text": "comment recharger voiture électrique sur borne",
-      "processed_at": "2025-07-22 21:33:04",
+      "processed_at": "2025-07-24 12:15:38",
+      "treated": true,
+      "treated_at": "2025-07-24 14:47:49",
+      "response_length": 40,
       "semantic": 1,
-      "semantic_processed_at": "2025-07-22 21:34:41",
+      "semantic_processed_at": "2025-07-24 14:17:16",
       "semantic_analysis": {
-        "clusters_count": 5,
+        "clusters_count": 1,
         "relations_found": 10,
-        "entities_count": 5,
+        "entities_count": 0,
         "angles_generated": 10,
-        "thematic_diversity": 0.02,
-        "semantic_complexity": 1.0
-      }
+        "thematic_diversity": 0.2,
+        "semantic_complexity": 0.3
+      },
+      "schema": true
+    },
+    "dc45323fad5c62e2275b5d66af4cd993": {
+      "id": 1,
+      "text": "how to charge an electic car",
+      "processed_at": "2025-07-24 14:03:45",
+      "treated": true,
+      "treated_at": "2025-07-24 14:47:49",
+      "response_length": 40,
+      "semantic": 1,
+      "semantic_processed_at": "2025-07-24 14:17:16",
+      "semantic_analysis": {
+        "clusters_count": 1,
+        "relations_found": 6,
+        "entities_count": 0,
+        "angles_generated": 10,
+        "thematic_diversity": 0.2,
+        "semantic_complexity": 0.18
+      },
+      "schema": true
+    },
+    "f1f40748c58e2934c5d81371ff3aed50": {
+      "id": 2,
+      "text": "comment brancher voiture électrique",
+      "processed_at": "2025-07-24 14:05:09",
+      "treated_at": "2025-07-24 14:47:49",
+      "response_length": 40,
+      "treated": true,
+      "semantic": 1,
+      "semantic_processed_at": "2025-07-24 14:17:16",
+      "semantic_analysis": {
+        "clusters_count": 1,
+        "relations_found": 2,
+        "entities_count": 0,
+        "angles_generated": 10,
+        "thematic_diversity": 0.2,
+        "semantic_complexity": 0.06
+      },
+      "schema": true
+    },
+    "975dbb03276c453c3664183e8724a597": {
+      "id": 3,
+      "text": "pourquoi voiture électrique prend feu",
+      "processed_at": "2025-07-24 14:05:27",
+      "treated": true,
+      "treated_at": "2025-07-24 14:47:49",
+      "response_length": 42,
+      "semantic": 1,
+      "semantic_processed_at": "2025-07-24 14:17:16",
+      "semantic_analysis": {
+        "clusters_count": 1,
+        "relations_found": 10,
+        "entities_count": 0,
+        "angles_generated": 10,
+        "thematic_diversity": 0.2,
+        "semantic_complexity": 0.3
+      },
+      "schema": true
     }
   },
-  "last_updated": "2025-07-22 21:34:41",
-  "total_processed": 1,
-  "semantic_processed": 1
+  "last_updated": "2025-07-24 14:17:16",
+  "total_processed": 4,
+  "semantic_processed": 4
 }
