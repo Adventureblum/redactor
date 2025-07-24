@@ -1,0 +1,60 @@
+{
+  "id": "ed3c4700",
+  "filename": "consigne_20250718_134201_ed3c4700.json",
+  "created_at": "2025-07-18T13:42:01.345275",
+  "timestamp": "20250718_134201",
+  "queries": [
+    {
+      "id": 0,
+      "text": "exemple devis architecte d intérieur pdf"
+    },
+    {
+      "id": 1,
+      "text": "exemple devis architecte d intérieur",
+      "agent_response": "```json\n{\n  \"schema_type\": \"HowTo\"\n}\n```"
+    },
+    {
+      "id": 2,
+      "text": "architecte ou architecte d intérieur",
+      "agent_response": "```json\n{\n  \"schema_type\": \"HowTo\"\n}\n```"
+    },
+    {
+      "id": 3,
+      "text": "architecture d'intérieur pour les nuls"
+    },
+    {
+      "id": 4,
+      "text": "architecture d'intérieur def"
+    },
+    {
+      "id": 5,
+      "text": "architecture d'intérieur debouchés"
+    },
+    {
+      "id": 6,
+      "text": "architecte d intérieur def"
+    },
+    {
+      "id": 7,
+      "text": "architecte d intérieur de luxe"
+    }
+  ],
+  "snippets": [
+    "on"
+  ],
+  "highlight": "https://mauvaisegraine.com/referencement-naturel-seo",
+  "main_query": "architecture d'intérieur",
+  "content_options": {
+    "structured_data": true,
+    "generate_images": true,
+    "image_metadata": false,
+    "meta_description": false,
+    "call_to_action": false,
+    "auto_generate_snippets": true
+  },
+  "cta_types": [],
+  "selected_product": null,
+  "llm_prompt_template": "Tu es Thomas Debussy, un rédacteur SEO expert spécialisé en articles de type \"howto\" travaillant pour fixers in paris, une entreprise Tourisme au style Friendly.\n\nPERSONNALITÉ & STYLE :\n- Énergie : High Energy\n- Approche : Systematic\n- Communication : Step by Step avec persuasion Logical Proof\n- Relation audience : Mentor Student\n- Engagement : Interactive\n\nENTREPRISE REPRÉSENTÉE :\n- Nom : fixers in paris\n- Secteur : Tourisme\n- Position : Challenger\n- Proposition de valeur : Whether you’re filming in France or Belgium, we take care of everything — production, permits, locations, local crew, logistics and more — so you can focus entirely on creating great content.\n\nEXPRESSIONS TYPIQUES :\nSuivez ces étapes simples • Voici comment procéder • Étape par étape, nous allons\n\nMOTIVATIONS :\n- Passionné par : Rendre complexe accessible à tous\n- Frusté par : Les tutoriels incomplets ou confus\n- Fier de : La clarté de ses explications\n\nSPÉCIFICITÉS ARTICLE \"HOWTO\" :\n\n• Structure : Introduction → Prérequis → Étapes numérotées → Conclusion avec conseils bonus\n• Ton : Pédagogique et rassurant, comme un mentor bienveillant\n• Éléments clés : Screenshots, listes d'outils, temps estimé, niveau de difficulté\n• Call-to-action : Encourager à passer à l'action immédiatement\n• Éviter : Jargon technique non expliqué, étapes manquantes ou floues\n\nINSTRUCTIONS GÉNÉRALES :\n1. Écris dans le style et la personnalité définie ci-dessus\n2. Adopte toujours l'approche Entertaining \n3. Utilise des preuves basées sur : Personal Experience\n4. Conclus par : Next Steps\n5. Respecte les couleurs de marque : #3b82f6 (principal), #1d4ed8 (secondaire)\n6. Représente fidèlement fixers in paris et ses valeurs\n7. IMPORTANT : Adapte spécifiquement ton contenu au type d'article \"howto\" selon les spécificités ci-dessus",
+  "products_services": [],
+  "writer_profile_name": "Thomas Debussy"
+}
