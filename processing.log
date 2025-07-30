@@ -107,3 +107,50 @@
 2025-07-24 14:47:49,673 - INFO - Schema ajouté pour requête ID 3
 2025-07-24 14:47:49,675 - INFO - Succès traitement ID 3
 2025-07-24 14:47:49,675 - INFO - Résumé: 4 succès / 4 requêtes
+2025-07-30 14:24:47,710 - INFO - Début du traitement séquentiel des consignes
+2025-07-30 14:24:47,711 - INFO - Traitement du fichier: consigne_20250718_134201_ed3c4700.json
+2025-07-30 14:24:47,714 - WARNING - Traitement non séquentiel détecté dans consigne_20250718_134201_ed3c4700.json
+2025-07-30 14:24:47,714 - INFO - Début traitement ID 0
+2025-07-30 14:24:47,715 - INFO - Consigne trouvée pour ID 0: consigne_20250718_134201_ed3c4700.json
+2025-07-30 14:24:47,715 - INFO - Traitement de: exemple devis architecte d intérieur pdf...
+2025-07-30 14:24:55,649 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 14:24:56,137 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a0f106ad081a185bd12e7e02638850825b742bfc03583 "HTTP/1.1 200 OK"
+2025-07-30 14:24:56,178 - INFO - Succès traitement ID 0 - Réponse: 2428 caractères
+2025-07-30 14:24:57,182 - INFO - Début traitement ID 3
+2025-07-30 14:24:57,185 - INFO - Consigne trouvée pour ID 3: consigne_20250718_134201_ed3c4700.json
+2025-07-30 14:24:57,185 - INFO - Traitement de: architecture d'intérieur pour les nuls...
+2025-07-30 14:25:08,916 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 14:25:09,162 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a0f194a0c819e868acd48d0f7da0d0bdc6aa423e72fec "HTTP/1.1 200 OK"
+2025-07-30 14:25:09,187 - INFO - Succès traitement ID 3 - Réponse: 1783 caractères
+2025-07-30 14:25:10,193 - INFO - Début traitement ID 4
+2025-07-30 14:25:10,197 - INFO - Consigne trouvée pour ID 4: consigne_20250718_134201_ed3c4700.json
+2025-07-30 14:25:10,197 - INFO - Traitement de: architecture d'intérieur def...
+2025-07-30 14:25:20,099 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 14:25:20,344 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a0f264a34819ea388dd74c0a148ba0d2034ef67bf63eb "HTTP/1.1 200 OK"
+2025-07-30 14:25:20,353 - INFO - Succès traitement ID 4 - Réponse: 1707 caractères
+2025-07-30 14:25:21,357 - INFO - Début traitement ID 5
+2025-07-30 14:25:21,363 - INFO - Consigne trouvée pour ID 5: consigne_20250718_134201_ed3c4700.json
+2025-07-30 14:25:21,363 - INFO - Traitement de: architecture d'intérieur debouchés...
+2025-07-30 14:25:27,104 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 14:25:27,352 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a0f3174d881a2a787ea68b11f33c1083c6071a70e3cbe "HTTP/1.1 200 OK"
+2025-07-30 14:25:27,361 - INFO - Succès traitement ID 5 - Réponse: 1860 caractères
+2025-07-30 14:25:28,366 - INFO - Début traitement ID 6
+2025-07-30 14:25:28,370 - INFO - Consigne trouvée pour ID 6: consigne_20250718_134201_ed3c4700.json
+2025-07-30 14:25:28,370 - INFO - Traitement de: architecte d intérieur def...
+2025-07-30 14:25:39,146 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 14:25:39,517 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a0f3876c881a296a4008aedd9747d0157e30f30b779d6 "HTTP/1.1 200 OK"
+2025-07-30 14:25:39,525 - INFO - Succès traitement ID 6 - Réponse: 1474 caractères
+2025-07-30 14:25:40,529 - INFO - Début traitement ID 7
+2025-07-30 14:25:40,533 - INFO - Consigne trouvée pour ID 7: consigne_20250718_134201_ed3c4700.json
+2025-07-30 14:25:40,533 - INFO - Traitement de: architecte d intérieur de luxe...
+2025-07-30 14:25:50,573 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 14:25:50,946 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a0f44a13481a3b9cb451ffa3166390930338a9c51bdb3 "HTTP/1.1 200 OK"
+2025-07-30 14:25:50,962 - INFO - Succès traitement ID 7 - Réponse: 1888 caractères
+2025-07-30 14:25:51,965 - INFO - Toutes les queries traitées pour consigne_20250718_134201_ed3c4700.json
+2025-07-30 14:25:51,965 - INFO - Fichier consigne_20250718_134201_ed3c4700.json: 6 traités, 0 erreurs
+2025-07-30 14:25:51,965 - INFO - 
+        Résumé final:
+        - Fichiers traités: 1
+        - Queries traitées: 6
+        - Erreurs: 0
+        
