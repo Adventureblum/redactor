@@ -15,10 +15,10 @@ if (majorVersion < 18) {
   process.exit(1);
 }
 
-// Configuration améliorée avec mode stealth
+// Configuration améliorée avec mode stealth ultra-réaliste
 const CONFIG = {
   browser: {
-    headless: true, // Changé pour éviter la détection
+    headless: false, // Mode visible par défaut pour éviter détection
     args: [
       '--no-sandbox',
       '--disable-setuid-sandbox',
@@ -27,7 +27,7 @@ const CONFIG = {
       '--disable-blink-features=AutomationControlled',
       '--disable-web-security',
       '--disable-features=VizDisplayCompositor',
-      // Nouveaux arguments stealth
+      // Arguments stealth avancés
       '--disable-background-timer-throttling',
       '--disable-backgrounding-occluded-windows',
       '--disable-renderer-backgrounding',
@@ -40,11 +40,15 @@ const CONFIG = {
       '--use-mock-keychain',
       '--disable-component-extensions-with-background-pages',
       '--disable-default-apps',
-      '--mute-audio'
+      '--mute-audio',
+      '--disable-extensions',
+      '--disable-plugins',
+      '--disable-images', // Accélère le chargement
+      '--disable-javascript-harmony-shipping'
     ]
   },
   context: {
-    viewport: { width: 1366, height: 768 }, // Taille plus commune
+    viewport: { width: 1366, height: 768 },
     userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
     locale: 'fr-FR',
     timezoneId: 'Europe/Paris',
@@ -66,8 +70,8 @@ const CONFIG = {
     }
   },
   page: {
-    timeout: 45000, // Augmenté
-    navigationTimeout: 45000
+    timeout: 60000, // Augmenté pour la saisie lente
+    navigationTimeout: 60000
   },
   fetch: {
     timeout: 15000,
@@ -85,16 +89,16 @@ const CONFIG = {
       'Cache-Control': 'no-cache'
     }
   },
-  search: {
-    baseUrl: 'https://www.google.com/search',
-    language: 'fr',
-    waitUntil: 'networkidle'
-  },
-  // Configuration pour les délais humains
-  delays: {
-    betweenActions: [1000, 3000], // Délai aléatoire entre actions
-    beforeSearch: [2000, 4000],   // Délai avant la recherche
-    afterLoad: [3000, 6000]       // Délai après chargement
+  // Configuration pour simulation utilisateur ultra-réaliste
+  human: {
+    typingSpeed: [80, 200],        // Vitesse de frappe en ms par caractère
+    pauseBetweenWords: [200, 800], // Pause entre mots
+    scrollSpeed: [100, 300],       // Vitesse de scroll
+    mouseMovements: true,          // Mouvements de souris aléatoires
+    beforeSearch: [3000, 6000],    // Délai avant recherche
+    afterLoad: [2000, 4000],       // Délai après chargement
+    betweenActions: [1000, 3000],  // Délai entre actions
+    readingTime: [2000, 5000]      // Temps de "lecture" des résultats
   }
 };
 
@@ -103,46 +107,158 @@ function randomDelay(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// Configuration du mode stealth
-async function setupStealthMode(page) {
+// Configuration du mode stealth ultra-avancé
+async function setupAdvancedStealthMode(page) {
   await page.addInitScript(() => {
-    // Supprimer les traces de webdriver
+    // Supprimer toutes les traces de webdriver et automation
     Object.defineProperty(navigator, 'webdriver', {
       get: () => undefined,
     });
     
     // Masquer les plugins de détection
     Object.defineProperty(navigator, 'plugins', {
-      get: () => [1, 2, 3, 4, 5],
+      get: () => [{
+        name: 'Chrome PDF Plugin',
+        filename: 'internal-pdf-viewer',
+        description: 'Portable Document Format'
+      }, {
+        name: 'Chromium PDF Plugin',
+        filename: 'internal-pdf-viewer',
+        description: 'Portable Document Format'
+      }],
     });
     
-    // Simuler les langues du navigateur
+    // Simuler les langues du navigateur de façon plus réaliste
     Object.defineProperty(navigator, 'languages', {
       get: () => ['fr-FR', 'fr', 'en-US', 'en'],
     });
     
-    // Masquer l'automation
+    // Masquer l'automation Chrome
     if (window.chrome) {
       delete window.chrome.loadTimes;
       delete window.chrome.csi;
       delete window.chrome.app;
     }
     
-    // Simuler les permissions
+    // Supprimer les variables d'automation
+    delete window.cdc_adoQpoasnfa76pfcZLmcfl_Array;
+    delete window.cdc_adoQpoasnfa76pfcZLmcfl_Promise;
+    delete window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol;
+    
+    // Simuler les permissions de façon plus réaliste
     const originalQuery = window.navigator.permissions.query;
     window.navigator.permissions.query = (parameters) => (
       parameters.name === 'notifications' ?
         Promise.resolve({ state: Notification.permission }) :
         originalQuery(parameters)
     );
+    
+    // Simuler la mémoire disponible
+    Object.defineProperty(navigator, 'deviceMemory', {
+      get: () => 8,
+    });
+    
+    // Simuler le nombre de coeurs CPU
+    Object.defineProperty(navigator, 'hardwareConcurrency', {
+      get: () => 4,
+    });
+    
+    // Masquer les propriétés spécifiques à Playwright
+    delete window.playwright;
+    delete window.__playwright;
   });
 }
 
-// Gestion des arguments de ligne de commande
+// Simulation de mouvements de souris naturels
+async function simulateMouseMovements(page) {
+  if (!CONFIG.human.mouseMovements) return;
+  
+  try {
+    // Mouvements aléatoires de souris pour simuler un utilisateur réel
+    for (let i = 0; i < 3; i++) {
+      const x = randomDelay(100, 1200);
+      const y = randomDelay(100, 600);
+      await page.mouse.move(x, y);
+      await page.waitForTimeout(randomDelay(200, 800));
+    }
+  } catch (error) {
+    // Ignorer les erreurs de mouvement de souris
+  }
+}
+
+// Simulation de frappe humaine ultra-réaliste
+async function typeHumanLike(page, selector, text) {
+  await page.click(selector);
+  await page.waitForTimeout(randomDelay(300, 800));
+  
+  // Effacer le contenu existant
+  await page.keyboard.down('Control');
+  await page.keyboard.press('KeyA');
+  await page.keyboard.up('Control');
+  await page.keyboard.press('Backspace');
+  await page.waitForTimeout(randomDelay(200, 500));
+  
+  const words = text.split(' ');
+  
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i];
+    
+    // Taper chaque caractère du mot
+    for (let j = 0; j < word.length; j++) {
+      const char = word[j];
+      await page.keyboard.type(char);
+      
+      // Délai variable selon le caractère
+      let delay = randomDelay(...CONFIG.human.typingSpeed);
+      
+      // Délais plus longs pour certains caractères (simulation erreurs de frappe)
+      if ('aeiou'.includes(char.toLowerCase())) {
+        delay = randomDelay(60, 150); // Voyelles plus rapides
+      } else if ('qwerty'.includes(char.toLowerCase())) {
+        delay = randomDelay(100, 250); // Consonnes communes
+      }
+      
+      await page.waitForTimeout(delay);
+    }
+    
+    // Pause entre les mots (sauf pour le dernier mot)
+    if (i < words.length - 1) {
+      await page.keyboard.type(' ');
+      await page.waitForTimeout(randomDelay(...CONFIG.human.pauseBetweenWords));
+    }
+  }
+  
+  // Pause avant d'appuyer sur Entrée
+  await page.waitForTimeout(randomDelay(1000, 2500));
+}
+
+// Simulation de scroll naturel
+async function simulateNaturalScroll(page) {
+  try {
+    // Scroll progressif comme un utilisateur réel
+    const scrollSteps = randomDelay(2, 5);
+    const viewportHeight = await page.evaluate(() => window.innerHeight);
+    const scrollDistance = Math.floor(viewportHeight / scrollSteps);
+    
+    for (let i = 0; i < scrollSteps; i++) {
+      await page.evaluate((distance) => {
+        window.scrollBy(0, distance);
+      }, scrollDistance);
+      
+      await page.waitForTimeout(randomDelay(...CONFIG.human.scrollSpeed));
+    }
+    
+    // Temps de "lecture" des résultats
+    await page.waitForTimeout(randomDelay(...CONFIG.human.readingTime));
+  } catch (error) {
+    // Ignorer les erreurs de scroll
+  }
+}
+
+// Gestion des arguments de ligne de commande (inchangé)
 function parseArguments() {
   const args = process.argv.slice(2);
   
-  // Afficher l'aide
   if (args.includes('--help') || args.includes('-h') || args.length === 0) {
     showHelp();
     process.exit(0);
@@ -152,7 +268,7 @@ function parseArguments() {
   let outputFile = 'serp_corpus.json';
   let maxResults = 3;
   let verbose = false;
-  let stealthMode = true; // Nouveau paramètre
+  let stealthMode = true;
   
   for (let i = 0; i < args.length; i++) {
     const arg = args[i];
@@ -203,11 +319,10 @@ function parseArguments() {
         break;
         
       case '--headless':
-        CONFIG.browser.headless = true;
+        CONFIG.browser.headless = false;
         break;
         
       default:
-        // Si ce n'est pas une option, considérer comme partie de la requête
         if (!arg.startsWith('-')) {
           if (!query) {
             query = arg;
@@ -240,8 +355,8 @@ function parseArguments() {
 
 function showHelp() {
   console.log(`
-🎭 Extracteur SERP avec Playwright + Fetch Natif (Version Anti-Détection)
-===========================================================================
+🎭 Extracteur SERP avec Playwright + Simulation Utilisateur Ultra-Réaliste
+==========================================================================
 
 USAGE:
   node script.js [OPTIONS] [REQUÊTE]
@@ -262,12 +377,15 @@ EXEMPLES:
   node script.js -q "Python vs JavaScript" -n 5 -v
   node script.js --query "web scraping" --max-results 3 --verbose --headless
 
-NOUVEAUTÉS:
-  ✅ Mode stealth activé par défaut (évite les reCAPTCHA)
-  ✅ Délais humains aléatoires
-  ✅ Headers réalistes mis à jour
-  ✅ Navigateur visible par défaut (moins suspect)
-  ✅ User-Agent Linux moderne
+NOUVEAUTÉS ANTI-DÉTECTION:
+  ✅ Simulation de frappe humaine caractère par caractère
+  ✅ Mouvements de souris aléatoires
+  ✅ Scroll progressif naturel
+  ✅ Délais variables entre mots et actions
+  ✅ Temps de "lecture" des résultats
+  ✅ Navigation google.com → saisie → recherche
+  ✅ Gestion cookies avec délais réalistes
+  ✅ Mode stealth ultra-avancé
 
 SORTIE:
   Le script génère un fichier JSON contenant:
@@ -313,14 +431,14 @@ function logWarning(message, data = null) {
   console.log(`⚠️  ${message}`, data && VERBOSE_MODE ? JSON.stringify(data, null, 2) : '');
 }
 
-// Récupération des résultats Google avec Playwright (version améliorée)
-async function getGoogleResults(query, maxResults, stealthMode = true) {
+// Récupération des résultats Google avec simulation utilisateur complète
+async function getGoogleResultsWithHumanSimulation(query, maxResults, stealthMode = true) {
   let browser = null;
   let context = null;
   let page = null;
   
   try {
-    logInfo('Lancement du navigateur Playwright avec mode stealth');
+    logInfo('🚀 Lancement du navigateur avec simulation utilisateur ultra-réaliste');
     
     const launchOptions = {
       headless: CONFIG.browser.headless,
@@ -341,48 +459,63 @@ async function getGoogleResults(query, maxResults, stealthMode = true) {
     });
     
     // Bloquer les ressources inutiles pour plus de rapidité
-    await context.route('**/*.{png,jpg,jpeg,gif,svg,css,woff,woff2}', route => route.abort());
+    await context.route('**/*.{png,jpg,jpeg,gif,svg,css,woff,woff2,ico,mp4,mp3}', route => route.abort());
     
     page = await context.newPage();
     
-    // Appliquer le mode stealth
+    // Appliquer le mode stealth avancé
     if (stealthMode) {
-      await setupStealthMode(page);
-      logInfo('Mode stealth activé');
+      await setupAdvancedStealthMode(page);
+      logInfo('🥷 Mode stealth ultra-avancé activé');
     }
     
     page.setDefaultTimeout(CONFIG.page.timeout);
     page.setDefaultNavigationTimeout(CONFIG.page.navigationTimeout);
     
-    logInfo('Navigation vers Google.com avec délai humain');
+    // ÉTAPE 1: Navigation initiale vers Google.com (comme un utilisateur réel)
+    logInfo('🌐 Navigation vers Google.com (simulation utilisateur)');
     await page.goto('https://www.google.com', { 
       waitUntil: 'domcontentloaded',
       timeout: CONFIG.page.navigationTimeout 
     });
     
-    // Délai humain après chargement
-    const initialDelay = randomDelay(...CONFIG.delays.afterLoad);
-    logInfo(`Délai humain initial: ${initialDelay}ms`);
+    // Délai initial pour simuler le temps de chargement
+    const initialDelay = randomDelay(...CONFIG.human.afterLoad);
+    logInfo(`⏱️ Délai initial de lecture: ${initialDelay}ms`);
     await page.waitForTimeout(initialDelay);
     
-    // Accepter les cookies avec plus de réalisme
+    // Mouvements de souris pendant le chargement
+    await simulateMouseMovements(page);
+    
+    // ÉTAPE 2: Gestion des cookies avec comportement humain
     try {
       const cookieSelectors = [
         'button:has-text("Tout accepter")',
         'button:has-text("J\'accepte")',
         '#L2AGLb',
         'button[aria-label="Tout accepter"]',
-        'button:contains("Accept all")'
+        'button:contains("Accept all")',
+        'button[id="L2AGLb"]'
       ];
       
       let cookieAccepted = false;
       for (const selector of cookieSelectors) {
         try {
-          await page.waitForSelector(selector, { timeout: 3000 });
-          await page.waitForTimeout(randomDelay(500, 1500)); // Délai avant clic
+          await page.waitForSelector(selector, { timeout: 5000 });
+          
+          // Délai de "lecture" avant d'accepter les cookies
+          await page.waitForTimeout(randomDelay(1500, 3500));
+          
+          // Mouvement de souris vers le bouton
+          const buttonBox = await page.locator(selector).boundingBox();
+          if (buttonBox) {
+            await page.mouse.move(buttonBox.x + buttonBox.width/2, buttonBox.y + buttonBox.height/2);
+            await page.waitForTimeout(randomDelay(200, 600));
+          }
+          
           await page.click(selector);
-          await page.waitForTimeout(randomDelay(1000, 2000)); // Délai après clic
-          logInfo('Cookies acceptés');
+          await page.waitForTimeout(randomDelay(1000, 2000));
+          logInfo('🍪 Cookies acceptés avec délai humain');
           cookieAccepted = true;
           break;
         } catch {
@@ -391,87 +524,139 @@ async function getGoogleResults(query, maxResults, stealthMode = true) {
       }
       
       if (!cookieAccepted) {
-        logInfo('Pas de popup de cookies détecté');
+        logInfo('🍪 Pas de popup de cookies détecté');
       }
     } catch {
-      logInfo('Gestion des cookies échouée');
+      logInfo('🍪 Gestion des cookies échouée');
     }
     
-    // Délai avant recherche
-    const searchDelay = randomDelay(...CONFIG.delays.beforeSearch);
-    logInfo(`Délai avant recherche: ${searchDelay}ms`);
+    // ÉTAPE 3: Localiser et interagir avec la barre de recherche
+    const searchDelay = randomDelay(...CONFIG.human.beforeSearch);
+    logInfo(`🔍 Délai avant recherche: ${searchDelay}ms`);
     await page.waitForTimeout(searchDelay);
     
-    const searchUrl = `${CONFIG.search.baseUrl}?q=${encodeURIComponent(query)}&hl=${CONFIG.search.language}&gl=fr`;
-    logInfo('Navigation vers la page de résultats', { searchUrl });
+    // Trouver la barre de recherche
+    const searchSelectors = [
+      'input[name="q"]',
+      'textarea[name="q"]',
+      'input[title="Rechercher"]',
+      'textarea[title="Rechercher"]',
+      '[role="combobox"][name="q"]'
+    ];
     
-    await page.goto(searchUrl, {
-      waitUntil: 'networkidle',
-      timeout: CONFIG.page.navigationTimeout
+    let searchBox = null;
+    for (const selector of searchSelectors) {
+      try {
+        await page.waitForSelector(selector, { timeout: 5000 });
+        searchBox = selector;
+        break;
+      } catch {
+        continue;
+      }
+    }
+    
+    if (!searchBox) {
+      throw new Error('Impossible de trouver la barre de recherche Google');
+    }
+    
+    logInfo('🎯 Barre de recherche trouvée, début de la saisie humaine');
+    
+    // Mouvement de souris vers la barre de recherche
+    const searchBoxElement = await page.locator(searchBox).boundingBox();
+    if (searchBoxElement) {
+      await page.mouse.move(searchBoxElement.x + searchBoxElement.width/2, searchBoxElement.y + searchBoxElement.height/2);
+      await page.waitForTimeout(randomDelay(300, 800));
+    }
+    
+    // ÉTAPE 4: Saisie de la requête avec simulation humaine ultra-réaliste
+    await typeHumanLike(page, searchBox, query);
+    
+    logInfo('⌨️ Saisie terminée, lancement de la recherche');
+    
+    // ÉTAPE 5: Lancer la recherche (Entrée)
+    await page.keyboard.press('Enter');
+    
+    // Attendre la navigation
+    await page.waitForNavigation({ 
+      waitUntil: 'domcontentloaded',
+      timeout: CONFIG.page.navigationTimeout 
     });
     
     // Délai après chargement des résultats
     const resultsDelay = randomDelay(2000, 4000);
-    logInfo(`Délai après chargement des résultats: ${resultsDelay}ms`);
+    logInfo(`📄 Délai après chargement des résultats: ${resultsDelay}ms`);
     await page.waitForTimeout(resultsDelay);
+    
+    // ÉTAPE 6: Scroll naturel pour "lire" les résultats
+    await simulateNaturalScroll(page);
     
     // Vérifier si reCAPTCHA ou blocage
     const pageContent = await page.content();
     if (pageContent.includes('reCAPTCHA') || pageContent.includes('robot') || pageContent.includes('captcha')) {
-      logWarning('reCAPTCHA détecté - prise de screenshot');
+      logWarning('🤖 reCAPTCHA détecté - prise de screenshot');
       await page.screenshot({ path: 'recaptcha_detected.png', fullPage: false });
       throw new Error('reCAPTCHA détecté - changez d\'IP ou attendez');
     }
     
+    // ÉTAPE 7: Extraction des URLs avec sélecteurs multiples
     const urls = await page.evaluate((maxResults) => {
-      // Essayer plusieurs sélecteurs pour les résultats
       const selectors = [
-        'div[class="MjjYud"] a',
-        'div.g a',
-        'div[data-hveid] a',
-        '.rc a',
-        'h3 a'
+        'div[class="MjjYud"] a[href^="http"]:not([href*="google.com"])',
+        'div.g a[href^="http"]:not([href*="google.com"])',
+        'div[data-hveid] a[href^="http"]:not([href*="google.com"])',
+        '.rc a[href^="http"]:not([href*="google.com"])',
+        'h3 a[href^="http"]:not([href*="google.com"])',
+        'div[class*="yuRUbf"] a[href^="http"]:not([href*="google.com"])'
       ];
       
       let elements = [];
       for (const selector of selectors) {
         elements = Array.from(document.querySelectorAll(selector));
         if (elements.length > 0) {
-          console.log(`Sélecteur fonctionnel: ${selector}, ${elements.length} éléments trouvés`);
+          console.log(`✅ Sélecteur fonctionnel: ${selector}, ${elements.length} éléments trouvés`);
           break;
         }
       }
       
       const urls = elements
-        .slice(0, maxResults * 2) // Prendre plus d'éléments au cas où
+        .slice(0, maxResults * 2)
         .map(a => a.href)
-        .filter(url => url && url.startsWith('http') && !url.includes('google.com') && !url.includes('youtube.com'))
-        .slice(0, maxResults); // Limiter au nombre demandé
+        .filter(url => url && 
+          url.startsWith('http') && 
+          !url.includes('google.com') && 
+          !url.includes('youtube.com') &&
+          !url.includes('maps.google.com') &&
+          !url.includes('translate.google.com')
+        )
+        .slice(0, maxResults);
       
-      console.log('URLs extraites:', urls);
+      console.log('🎯 URLs extraites:', urls);
       return urls;
     }, maxResults);
     
     if (urls.length === 0) {
-      logWarning('Aucune URL trouvée, capture d\'écran pour debug');
+      logWarning('🔍 Aucune URL trouvée, capture d\'écran pour debug');
       try {
         await page.screenshot({ path: 'debug_google_results.png', fullPage: true });
-        logInfo('Screenshot complet sauvegardé: debug_google_results.png');
+        logInfo('📸 Screenshot complet sauvegardé: debug_google_results.png');
         
-        // Sauvegarder aussi le HTML pour debug
         const html = await page.content();
         await fs.promises.writeFile('debug_page.html', html, 'utf-8');
-        logInfo('HTML de debug sauvegardé: debug_page.html');
+        logInfo('📄 HTML de debug sauvegardé: debug_page.html');
       } catch (screenshotError) {
-        logWarning('Impossible de faire le screenshot', { error: screenshotError.message });
+        logWarning('📸 Impossible de faire le screenshot', { error: screenshotError.message });
       }
     }
     
-    logSuccess('URLs extraites avec Playwright', { count: urls.length, urls: VERBOSE_MODE ? urls : urls.slice(0, 2) });
+    logSuccess('🎉 URLs extraites avec simulation utilisateur complète', { 
+      count: urls.length, 
+      urls: VERBOSE_MODE ? urls : urls.slice(0, 2) 
+    });
+    
     return urls;
     
   } catch (error) {
-    logError(error, 'Récupération des résultats Google avec Playwright');
+    logError(error, 'Récupération des résultats Google avec simulation utilisateur');
     throw error;
   } finally {
     if (page) await page.close();
@@ -486,7 +671,7 @@ async function fetchPageContent(url, retryCount = 0) {
   const timeoutId = setTimeout(() => controller.abort(), CONFIG.fetch.timeout);
   
   try {
-    logInfo(`Récupération du contenu avec fetch (tentative ${retryCount + 1})`, { url });
+    logInfo(`🌐 Récupération du contenu avec fetch (tentative ${retryCount + 1})`, { url });
     
     const response = await fetch(url, {
       signal: controller.signal,
@@ -507,7 +692,7 @@ async function fetchPageContent(url, retryCount = 0) {
     
     const contentType = response.headers.get('content-type') || '';
     if (!contentType.includes('text/html') && !contentType.includes('text/plain')) {
-      logWarning('Content-Type non HTML détecté', { contentType, url });
+      logWarning('⚠️ Content-Type non HTML détecté', { contentType, url });
     }
     
     const html = await response.text();
@@ -516,7 +701,7 @@ async function fetchPageContent(url, retryCount = 0) {
       throw new Error('Contenu HTML trop court ou vide');
     }
     
-    logSuccess('Contenu récupéré avec fetch', { 
+    logSuccess('✅ Contenu récupéré avec fetch', { 
       url: VERBOSE_MODE ? url : url.substring(0, 50) + '...', 
       status: response.status,
       contentLength: html.length,
@@ -536,7 +721,7 @@ async function fetchPageContent(url, retryCount = 0) {
     
     if (retryCount < CONFIG.fetch.maxRetries && isRetryableError(error)) {
       const delay = CONFIG.fetch.retryDelay * Math.pow(2, retryCount);
-      logInfo(`Retry fetch dans ${delay}ms`, { url, error: error.message, retryCount });
+      logInfo(`🔄 Retry fetch dans ${delay}ms`, { url, error: error.message, retryCount });
       
       await new Promise(resolve => setTimeout(resolve, delay));
       return fetchPageContent(url, retryCount + 1);
@@ -581,7 +766,7 @@ async function fetchWithPlaywright(url) {
   let page = null;
   
   try {
-    logInfo('Fallback Playwright pour récupération de contenu', { url });
+    logInfo('🔄 Fallback Playwright pour récupération de contenu', { url });
     
     browser = await chromium.launch({
       headless: true,
@@ -602,7 +787,7 @@ async function fetchWithPlaywright(url) {
     page.setDefaultTimeout(CONFIG.page.timeout);
     
     const response = await page.goto(url, { 
-      waitUntil: CONFIG.search.waitUntil,
+      waitUntil: 'domcontentloaded',
       timeout: CONFIG.page.navigationTimeout 
     });
     
@@ -612,7 +797,7 @@ async function fetchWithPlaywright(url) {
       const html = await page.content();
       const title = await page.title();
       
-      logSuccess('Playwright fallback réussi', { 
+      logSuccess('✅ Playwright fallback réussi', { 
         url: VERBOSE_MODE ? url : url.substring(0, 50) + '...', 
         htmlLength: html.length,
         title: title.substring(0, 100) 
@@ -650,20 +835,26 @@ function extractTitle(html) {
   return titleMatch ? titleMatch[1].trim().substring(0, 200) : null;
 }
 
-// Fonction principale d'extraction
-async function extractWithHybridApproach(query, maxResults, outputFile, stealthMode) {
+// Fonction principale d'extraction avec simulation utilisateur ultra-réaliste
+async function extractWithHumanSimulation(query, maxResults, outputFile, stealthMode) {
   const startTime = Date.now();
   
   try {
-    logInfo('Début de l\'extraction avec Playwright + Fetch (mode stealth)', { query, maxResults, stealthMode });
+    logInfo('🎭 Début de l\'extraction avec simulation utilisateur ultra-réaliste', { 
+      query, 
+      maxResults, 
+      stealthMode,
+      typingSpeed: CONFIG.human.typingSpeed,
+      mouseMovements: CONFIG.human.mouseMovements
+    });
     
-    const urls = await getGoogleResults(query, maxResults, stealthMode);
+    const urls = await getGoogleResultsWithHumanSimulation(query, maxResults, stealthMode);
     
     if (urls.length === 0) {
-      throw new Error('Aucun résultat trouvé sur Google');
+      throw new Error('Aucun résultat trouvé sur Google avec la simulation utilisateur');
     }
     
-    console.log(`🔍 ${urls.length} URLs trouvées, extraction du contenu...`);
+    console.log(`🔍 ${urls.length} URLs trouvées avec simulation humaine, extraction du contenu...`);
     const results = [];
     
     for (let i = 0; i < urls.length; i++) {
@@ -705,8 +896,8 @@ async function extractWithHybridApproach(query, maxResults, outputFile, stealthM
       
       // Délai entre les pages pour paraître plus humain
       if (i < urls.length - 1) {
-        const pageDelay = randomDelay(1000, 3000);
-        console.log(`⏱️ Délai entre pages: ${pageDelay}ms`);
+        const pageDelay = randomDelay(2000, 5000); // Délais plus longs
+        console.log(`⏱️ Délai entre pages (simulation humaine): ${pageDelay}ms`);
         await new Promise(resolve => setTimeout(resolve, pageDelay));
       }
     }
@@ -722,7 +913,13 @@ async function extractWithHybridApproach(query, maxResults, outputFile, stealthM
       playwrightMethod: results.filter(r => r.method === 'playwright').length,
       durationMs: duration,
       avgTimePerPage: Math.round(duration / results.length),
-      totalHtmlSize: results.reduce((acc, r) => acc + (r.htmlLength || 0), 0)
+      totalHtmlSize: results.reduce((acc, r) => acc + (r.htmlLength || 0), 0),
+      humanSimulation: {
+        typingSpeedRange: CONFIG.human.typingSpeed,
+        mouseMovements: CONFIG.human.mouseMovements,
+        scrollSimulated: true,
+        naturalDelays: true
+      }
     };
     
     const serpData = {
@@ -740,19 +937,26 @@ async function extractWithHybridApproach(query, maxResults, outputFile, stealthM
         browserEngine: 'chromium',
         maxResults,
         stealthMode,
-        headless: CONFIG.browser.headless
+        headless: CONFIG.browser.headless,
+        humanSimulation: {
+          enabled: true,
+          typingSpeed: CONFIG.human.typingSpeed,
+          mouseMovements: CONFIG.human.mouseMovements,
+          scrollSpeed: CONFIG.human.scrollSpeed,
+          naturalDelays: true
+        }
       }
     };
     
     // Sauvegarde
     await fs.promises.writeFile(outputFile, JSON.stringify(serpData, null, 2), 'utf-8');
     
-    logSuccess('Extraction terminée avec succès', stats);
+    logSuccess('🎉 Extraction terminée avec succès (simulation utilisateur)', stats);
     
     return serpData;
     
   } catch (error) {
-    logError(error, 'Extraction hybride avec Playwright');
+    logError(error, 'Extraction avec simulation utilisateur ultra-réaliste');
     throw error;
   }
 }
@@ -763,41 +967,46 @@ async function extractWithHybridApproach(query, maxResults, outputFile, stealthM
     const options = parseArguments();
     VERBOSE_MODE = options.verbose;
     
-    console.log(`🎭 Extracteur SERP avec Playwright + Fetch Natif (Anti-Détection)`);
+    console.log(`🎭 Extracteur SERP avec Simulation Utilisateur Ultra-Réaliste`);
     console.log(`Node.js: ${process.version} | Playwright: ${require('playwright/package.json').version}`);
     console.log('=====================================================');
     console.log(`🎯 Requête: "${options.query}"`);
     console.log(`📄 Fichier de sortie: ${options.outputFile}`);
     console.log(`🔢 Nombre max de résultats: ${options.maxResults}`);
     console.log(`🔊 Mode verbeux: ${options.verbose ? 'Activé' : 'Désactivé'}`);
-    console.log(`🥷 Mode stealth: ${options.stealthMode ? 'Activé' : 'Désactivé'}`);
-    console.log(`👁️ Mode headless: ${CONFIG.browser.headless ? 'Activé' : 'Désactivé'}`);
+    console.log(`🥷 Mode stealth: ${options.stealthMode ? 'Ultra-Avancé' : 'Désactivé'}`);
+    console.log(`👁️ Mode headless: ${CONFIG.browser.headless ? 'Activé' : 'Désactivé (Plus humain)'}`);
+    console.log(`⌨️ Frappe humaine: ${CONFIG.human.typingSpeed[0]}-${CONFIG.human.typingSpeed[1]}ms/caractère`);
+    console.log(`🖱️ Mouvements souris: ${CONFIG.human.mouseMovements ? 'Activés' : 'Désactivés'}`);
     console.log('=====================================================');
     
-    const result = await extractWithHybridApproach(options.query, options.maxResults, options.outputFile, options.stealthMode);
+    const result = await extractWithHumanSimulation(options.query, options.maxResults, options.outputFile, options.stealthMode);
     
-    console.log('\n🎉 EXTRACTION TERMINÉE AVEC SUCCÈS');
-    console.log('==================================');
+    console.log('\n🎉 EXTRACTION TERMINÉE AVEC SUCCÈS (MODE SIMULATION HUMAINE)');
+    console.log('============================================================');
     console.log(`📄 Résultats sauvegardés: ${options.outputFile}`);
     console.log(`📊 Pages récupérées: ${result.stats.successful}/${result.stats.total}`);
     console.log(`⏱️  Durée totale: ${Math.round(result.stats.durationMs / 1000)}s`);
     console.log(`💾 Taille totale HTML: ${Math.round(result.stats.totalHtmlSize / 1024)}KB`);
     console.log(`🔧 Méthodes: ${result.stats.fetchMethod} fetch, ${result.stats.playwrightMethod} playwright`);
+    console.log(`🎭 Simulation humaine: Frappe naturelle + Mouvements souris + Scroll progressif`);
     
     process.exit(0);
   } catch (error) {
-    logError(error, 'Processus principal');
+    logError(error, 'Processus principal avec simulation utilisateur');
     console.log('\n❌ EXTRACTION ÉCHOUÉE');
     console.log('====================');
     console.log('Consultez les logs ci-dessus pour plus de détails.');
     
-    // Si reCAPTCHA détecté, donner des conseils
+    // Si reCAPTCHA détecté, donner des conseils améliorés
     if (error.message.includes('reCAPTCHA') || error.message.includes('robot')) {
-      console.log('\n💡 CONSEILS POUR ÉVITER LE reCAPTCHA:');
-      console.log('- Attendez quelques heures avant de relancer');
+      console.log('\n💡 CONSEILS POUR ÉVITER LE reCAPTCHA (MODE SIMULATION HUMAINE):');
+      console.log('- La simulation utilisateur est déjà activée mais peut nécessiter plus de délais');
+      console.log('- Attendez 2-3 heures avant de relancer (cooldown IP)');
       console.log('- Changez votre IP (redémarrez votre routeur/VPN)');
-      console.log('- Utilisez --headless pour un mode plus discret');
-      console.log('- Réduisez --max-results à 1 ou 2');
+      console.log('- Utilisez --max-results 1 pour minimiser les requêtes');
+      console.log('- Le mode visible (non-headless) est déjà optimisé');
+      console.log('- Vérifiez le screenshot recaptcha_detected.png pour plus d\'infos');
     }
     
     process.exit(1);

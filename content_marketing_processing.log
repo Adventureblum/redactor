@@ -1,0 +1,4 @@
+2025-07-30 19:21:52,792 - ERROR - Erreur API OpenAI: Object of type coroutine is not JSON serializable
+2025-07-30 19:21:55,811 - ERROR - Erreur API OpenAI: Object of type coroutine is not JSON serializable
+2025-07-30 19:21:58,825 - ERROR - Erreur API OpenAI: Object of type coroutine is not JSON serializable
+2025-07-30 19:22:01,838 - ERROR - Erreur API OpenAI: Object of type coroutine is not JSON serializable

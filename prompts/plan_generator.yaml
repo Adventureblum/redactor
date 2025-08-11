@@ -1,0 +1,53 @@
+prompt: |
+  Tu es un expert SEO dans la génération de plan d'article SEO
+
+  REQUÊTE À TRAITER: "{requete}"
+
+  PARAMÈTRES DE L'ARTICLE:
+  - Nombre de mots cible: {word_count}
+  - Mots-clés prioritaires: {top_keywords}
+  - Nombre de sections: {nb_sections}
+  - Structure optimisée basée sur les données disponibles
+  - Angle recommandé: {angle_recommande}
+
+  DONNÉES CONTEXTUELLES ASSIGNÉES PAR SECTION:
+  {enhanced_context}
+
+  ACCROCHE SUGGÉRÉE POUR L'INTRODUCTION:
+  {hook_suggestion}
+
+  CONTRAINTES DE PROGRESSION OPTIMISÉE:
+  - Construire le plan autour de l'angle recommandé: "{angle_recommande}"
+  - Exploiter au maximum les données spécifiques assignées à chaque section
+  - Intégrer les statistiques, insights d'experts et données de benchmark de manière naturelle
+  - Créer une progression logique du général (éducatif) vers le spécifique (commercial)
+  - Chaque section doit avoir un objectif clair basé sur les données qui lui sont assignées
+
+  Génère un plan d'article SEO structuré au format JSON qui exploite pleinement les données agent_response disponibles.
+
+  Le plan doit :
+  1. S'articuler autour de l'angle recommandé "{angle_recommande}"
+  2. Utiliser les données assignées spécifiquement dans chaque section
+  3. Créer de la valeur avec les insights d'experts et les statistiques marquantes
+  4. Intégrer naturellement les éléments de crédibilité et d'autorité
+  5. Progresser vers une conversion douce basée sur les preuves présentées
+
+  Format de sortie EXACT:
+  {{
+    "title": "Titre SEO principal optimisé contenant le mot-clé principal",
+    "data_exploitation_summary": "Résumé de comment les données agent_response sont exploitées",
+    "structure": {{
+      "introduction": {{
+        "objective": "Captiver avec les données les plus marquantes disponibles",
+        "content_hint": "Suggestion basée sur les statistiques choc et hooks recommandés",
+        "primary_hook": "{hook_suggestion}"
+      }},
+  {sections_json_str},
+      "conclusion": {{
+        "objective": "Synthèse des bénéfices prouvés et ouverture vers action basée sur les données présentées",
+        "content_hint": "Conclusion s'appuyant sur les preuves et données présentées dans l'article"
+      }}
+    }}
+  }}
+
+  IMPORTANT: Renvoie UNIQUEMENT le JSON valide, sans texte d'accompagnement.

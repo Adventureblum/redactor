@@ -1,14 +1,25 @@
 {
   "processed_queries": [
-    "c02c28b6c755dbcfd26f58bf43e90cc6"
+    "8fd77c3c354b375b1ca364ee183ebef8"
   ],
   "query_details": {
-    "c02c28b6c755dbcfd26f58bf43e90cc6": {
+    "8fd77c3c354b375b1ca364ee183ebef8": {
       "id": 0,
-      "text": "exemple devis architecte d intérieur pdf",
-      "processed_at": "2025-07-30 14:14:00"
+      "text": "canapé d'angle sans accoudoir",
+      "processed_at": "2025-08-08 15:56:07",
+      "semantic": 1,
+      "semantic_processed_at": "2025-08-08 15:57:16",
+      "semantic_analysis": {
+        "clusters_count": 5,
+        "relations_found": 10,
+        "entities_count": 5,
+        "angles_generated": 10,
+        "thematic_diversity": 0.02,
+        "semantic_complexity": 1.0
+      }
     }
   },
-  "last_updated": "2025-07-30 14:14:00",
-  "total_processed": 1
+  "last_updated": "2025-08-08 15:57:16",
+  "total_processed": 1,
+  "semantic_processed": 1
 }

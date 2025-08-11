@@ -1,0 +1,159 @@
+Prompts SEO Divisés : Introduction, Section, Conclusion
+🚀 PROMPT 1 : INTRODUCTION SEO
+Mission
+
+Rédige une introduction SEO optimisée qui accroche le lecteur dès les premières lignes tout en intégrant naturellement les mots-clés cibles.
+Format d'entrée
+json
+
+{
+  "sujet_principal": "Thème à traiter",
+  "mot_cle_principal": "mot-clé à intégrer",
+  "audience_cible": "Qui lit ce contenu",
+  "intention_recherche": "informationnelle/transactionnelle/navigationnelle",
+  "angle_unique": "Ce qui différencie cet article",
+  "accroche_donnee": "Statistique ou fait surprenant"
+}
+
+Règles strictes
+
+Structure obligatoire (300 mots max) :
+
+    Accroche forte : Statistique surprenante, question ou fait intriguant
+    Contexte rapide : Pourquoi ce sujet est important maintenant
+    Promesse claire : Ce que le lecteur va apprendre/gagner concrètement
+
+Ton et style :
+
+    Conversationnel mais professionnel
+    Intégration naturelle du mot-clé principal (1 fois max)
+    Phrases courtes : 15-20 mots maximum
+    Éviter : "nous allons voir", "il faut savoir", "découvrons ensemble"
+
+Checklist qualité :
+
+    L'accroche interpelle sans être clickbait
+    La promesse est spécifique et actionnable
+    Le mot-clé s'intègre naturellement
+    Le lecteur comprend immédiatement l'enjeu
+
+📝 PROMPT 2 : SECTION DE CONTENU SEO
+Mission
+
+Rédige une section de contenu SEO qui développe un point précis avec expertise tout en maintenant l'engagement et l'optimisation naturelle.
+Format d'entrée
+json
+
+{
+  "titre_section": "H2 ou H3 à développer",
+  "mots_cles_secondaires": ["mots-clés à intégrer"],
+  "points_cles": ["idée 1", "idée 2", "idée 3"],
+  "niveau_expertise": "débutant/intermédiaire/expert",
+  "exemples_concrets": "Données, cas pratiques disponibles",
+  "transition_section_suivante": "Thème de la prochaine section"
+}
+
+Structure obligatoire
+
+Organisation du contenu :
+
+    1 idée par paragraphe (3-5 phrases max)
+    Phrases variées : courtes (5-10 mots) ET moyennes (15-20 mots)
+    Exemples spécifiques et vérifiables
+    Transition naturelle vers la section suivante
+
+Intégration SEO invisible :
+
+    Mots-clés secondaires naturellement répartis
+    Champ sémantique élargi autour du sujet
+    Variantes et synonymes pour éviter répétitions
+    Densité naturelle : 1-2% maximum
+
+Règles de rédaction :
+
+    Voix active privilégiée
+    Données concrètes et contextualisées
+    Définition des termes techniques si nécessaire
+    Éviter les généralités sans valeur ajoutée
+
+À bannir absolument :
+
+    Bourrage de mots-clés
+    Formules robotiques
+    Statistiques non contextualisées
+    Exemples génériques ou inventés
+
+🎯 PROMPT 3 : CONCLUSION SEO
+Mission
+
+Rédige une conclusion SEO qui synthétise les points clés et propose une action concrète au lecteur, tout en renforçant subtilement le positionnement sur les mots-clés.
+Format d'entrée
+json
+
+{
+  "points_cles_article": ["takeaway 1", "takeaway 2", "takeaway 3"],
+  "mot_cle_principal": "À réintégrer naturellement",
+  "action_concrete": "Prochaine étape pour le lecteur",
+  "intention_recherche": "informationnelle/transactionnelle/navigationnelle",
+  "ressources_complementaires": "Liens ou outils à mentionner"
+}
+
+Structure adaptée à l'intention
+
+Pour intention informationnelle :
+
+    Résumé des 2-3 points essentiels
+    Conseil pratique d'application immédiate
+    Mention d'une ressource complémentaire
+
+Pour intention transactionnelle :
+
+    Rappel du problème résolu
+    Recommandation claire et justifiée
+    Étape suivante concrète
+
+Pour intention navigationnelle :
+
+    Synthèse des avantages présentés
+    Invitation à l'action naturelle
+    Contact ou information pratique
+
+Règles de rédaction
+
+Ton et engagement :
+
+    Actionnable et motivant
+    Intégration naturelle du mot-clé principal
+    Éviter les formules vides : "En conclusion", "Pour résumer"
+    Maximum 100-120 mots
+
+Structure technique :
+
+    Dernière chance d'optimisation SEO subtile
+    Préparation d'éventuels liens internes
+    Méta-description potentielle dans la synthèse
+
+Checklist finale :
+
+    Le lecteur sait quoi faire après lecture
+    Les points clés sont mémorisables
+    Le mot-clé principal revient naturellement
+    La conclusion ajoute de la valeur (pas juste un résumé)
+
+🔧 CONSEILS D'UTILISATION
+Workflow recommandé
+
+    Prompt Introduction → Validation → Ajustements
+    Prompt Section × nombre de sections → Cohérence globale
+    Prompt Conclusion → Vérification de l'ensemble
+
+Principe transversal
+
+"Le meilleur SEO reste invisible" - Si l'optimisation se remarque, elle est trop visible. L'objectif : créer du contenu si utile que les lecteurs le partagent naturellement et que Google le comprend parfaitement.
+Vérification globale
+
+    Densité de mots-clés naturelle sur l'ensemble
+    Cohérence du ton du début à la fin
+    Valeur ajoutée de chaque section
+    Fluidité de lecture sans accrocs SEO
+

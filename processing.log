@@ -154,3 +154,534 @@
         - Queries traitées: 6
         - Erreurs: 0
         
+2025-07-30 17:55:31,246 - INFO - Début du traitement séquentiel des consignes
+2025-07-30 17:55:31,247 - INFO - Traitement du fichier: consigne_20250718_134201_ed3c4700.json
+2025-07-30 17:55:31,249 - INFO - Début traitement ID 0
+2025-07-30 17:55:31,250 - INFO - Consigne trouvée pour ID 0: consigne_20250718_134201_ed3c4700.json
+2025-07-30 17:55:31,250 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-30 17:55:40,533 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 17:55:40,900 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a4073f0bc8191a3fbf040e0525b0e00a9a82fe7f34093 "HTTP/1.1 200 OK"
+2025-07-30 17:55:40,945 - INFO - Succès traitement ID 0 - Réponse: 3174 caractères
+2025-07-30 17:55:41,949 - INFO - Début traitement ID 1
+2025-07-30 17:55:41,950 - INFO - Consigne trouvée pour ID 1: consigne_20250718_134201_ed3c4700.json
+2025-07-30 17:55:41,950 - INFO - Traitement de: canapé d angle paiement en 10 fois sans frais...
+2025-07-30 17:55:49,261 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 17:55:49,632 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a407e087c81a19515a178ea2012210a7b414ada03ba64 "HTTP/1.1 200 OK"
+2025-07-30 17:55:49,641 - INFO - Succès traitement ID 1 - Réponse: 1245 caractères
+2025-07-30 17:55:50,645 - INFO - Début traitement ID 2
+2025-07-30 17:55:50,646 - INFO - Consigne trouvée pour ID 2: consigne_20250718_134201_ed3c4700.json
+2025-07-30 17:55:50,646 - INFO - Traitement de: canapé d'angle sans pied...
+2025-07-30 17:55:57,243 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 17:55:57,487 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a4086b9d4819c82751a7dfb7c555e0aaa9ef758766030 "HTTP/1.1 200 OK"
+2025-07-30 17:55:57,496 - INFO - Succès traitement ID 2 - Réponse: 1786 caractères
+2025-07-30 17:55:58,499 - INFO - Début traitement ID 3
+2025-07-30 17:55:58,500 - INFO - Consigne trouvée pour ID 3: consigne_20250718_134201_ed3c4700.json
+2025-07-30 17:55:58,500 - INFO - Traitement de: canapé d'angle sans coussin...
+2025-07-30 17:56:04,985 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 17:56:05,353 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a408e953c8191b5cf7389867a6395031ae21cfbdaccd3 "HTTP/1.1 200 OK"
+2025-07-30 17:56:05,361 - INFO - Succès traitement ID 3 - Réponse: 2204 caractères
+2025-07-30 17:56:06,365 - INFO - Début traitement ID 4
+2025-07-30 17:56:06,366 - INFO - Consigne trouvée pour ID 4: consigne_20250718_134201_ed3c4700.json
+2025-07-30 17:56:06,366 - INFO - Traitement de: canapé d'angle sans accoudoir ikea...
+2025-07-30 17:56:13,230 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 17:56:14,446 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a4096723c81a293705d8f0c7b2af003195fcb0a3e055b "HTTP/1.1 200 OK"
+2025-07-30 17:56:14,454 - INFO - Succès traitement ID 4 - Réponse: 1824 caractères
+2025-07-30 17:56:15,457 - INFO - Début traitement ID 5
+2025-07-30 17:56:15,458 - INFO - Consigne trouvée pour ID 5: consigne_20250718_134201_ed3c4700.json
+2025-07-30 17:56:15,458 - INFO - Traitement de: canapé d'angle sans meridienne...
+2025-07-30 17:56:23,665 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 17:56:24,031 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a409fec2c819294409ff0f1c56336094254660e830376 "HTTP/1.1 200 OK"
+2025-07-30 17:56:24,039 - INFO - Succès traitement ID 5 - Réponse: 2264 caractères
+2025-07-30 17:56:25,042 - INFO - Toutes les queries traitées pour consigne_20250718_134201_ed3c4700.json
+2025-07-30 17:56:25,042 - INFO - Fichier consigne_20250718_134201_ed3c4700.json: 6 traités, 0 erreurs
+2025-07-30 17:56:25,042 - INFO - 
+        Résumé final:
+        - Fichiers traités: 1
+        - Queries traitées: 6
+        - Erreurs: 0
+        
+2025-07-30 18:00:47,774 - INFO - 🚀 Début du traitement séquentiel des consignes avec réponses complètes
+2025-07-30 18:00:47,774 - INFO - 📁 Traitement du fichier: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:00:47,777 - INFO - === Début traitement ID 0 ===
+2025-07-30 18:00:47,778 - INFO - Consigne trouvée pour ID 0: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:00:47,778 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-30 18:00:47,778 - INFO - Tentative 1/2 pour ID 0
+2025-07-30 18:00:47,778 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-30 18:00:58,980 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 18:00:59,200 - INFO - Réponse créée avec ID: resp_688a41b05340819cbd64e2276c6237ab01359895eb74a9cc, statut initial: completed
+2025-07-30 18:00:59,535 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a41b05340819cbd64e2276c6237ab01359895eb74a9cc "HTTP/1.1 200 OK"
+2025-07-30 18:00:59,541 - INFO - Réponse complète reçue: 2192 caractères
+2025-07-30 18:00:59,542 - INFO - Réponse validée comme complète (2192 caractères)
+2025-07-30 18:00:59,545 - INFO - ✅ Succès traitement ID 0 - Réponse: 2192 caractères
+2025-07-30 18:01:01,551 - INFO - === Début traitement ID 1 ===
+2025-07-30 18:01:01,553 - INFO - Consigne trouvée pour ID 1: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:01:01,554 - INFO - Traitement de: canapé d angle paiement en 10 fois sans frais...
+2025-07-30 18:01:01,554 - INFO - Tentative 1/2 pour ID 1
+2025-07-30 18:01:01,554 - INFO - Début appel OpenAI pour: canapé d angle paiement en 10 fois sans frais...
+2025-07-30 18:01:08,008 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 18:01:08,054 - INFO - Réponse créée avec ID: resp_688a41bda98c81a3a5f8049563c3af92088a21e9a943b27b, statut initial: completed
+2025-07-30 18:01:08,499 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a41bda98c81a3a5f8049563c3af92088a21e9a943b27b "HTTP/1.1 200 OK"
+2025-07-30 18:01:08,569 - INFO - Réponse complète reçue: 1547 caractères
+2025-07-30 18:01:08,573 - INFO - Réponse validée comme complète (1547 caractères)
+2025-07-30 18:01:08,579 - INFO - ✅ Succès traitement ID 1 - Réponse: 1547 caractères
+2025-07-30 18:01:10,584 - INFO - === Début traitement ID 2 ===
+2025-07-30 18:01:10,587 - INFO - Consigne trouvée pour ID 2: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:01:10,589 - INFO - Traitement de: canapé d'angle sans pied...
+2025-07-30 18:01:10,589 - INFO - Tentative 1/2 pour ID 2
+2025-07-30 18:01:10,589 - INFO - Début appel OpenAI pour: canapé d'angle sans pied...
+2025-07-30 18:01:17,618 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 18:01:17,697 - INFO - Réponse créée avec ID: resp_688a41c6ae9c81a398beb8e23ce23b200d6dc47a68a03466, statut initial: completed
+2025-07-30 18:01:17,961 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a41c6ae9c81a398beb8e23ce23b200d6dc47a68a03466 "HTTP/1.1 200 OK"
+2025-07-30 18:01:17,967 - INFO - Réponse complète reçue: 2235 caractères
+2025-07-30 18:01:17,967 - INFO - Réponse validée comme complète (2235 caractères)
+2025-07-30 18:01:17,971 - INFO - ✅ Succès traitement ID 2 - Réponse: 2235 caractères
+2025-07-30 18:01:19,976 - INFO - === Début traitement ID 3 ===
+2025-07-30 18:01:19,979 - INFO - Consigne trouvée pour ID 3: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:01:19,979 - INFO - Traitement de: canapé d'angle sans coussin...
+2025-07-30 18:01:19,980 - INFO - Tentative 1/2 pour ID 3
+2025-07-30 18:01:19,980 - INFO - Début appel OpenAI pour: canapé d'angle sans coussin...
+2025-07-30 18:01:29,267 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 18:01:29,272 - INFO - Réponse créée avec ID: resp_688a41d01410819f9605ee09359adb310a52af6d4185342e, statut initial: completed
+2025-07-30 18:01:29,510 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a41d01410819f9605ee09359adb310a52af6d4185342e "HTTP/1.1 200 OK"
+2025-07-30 18:01:29,531 - INFO - Réponse complète reçue: 2305 caractères
+2025-07-30 18:01:29,532 - INFO - Réponse validée comme complète (2305 caractères)
+2025-07-30 18:01:29,539 - INFO - ✅ Succès traitement ID 3 - Réponse: 2305 caractères
+2025-07-30 18:01:31,546 - INFO - === Début traitement ID 4 ===
+2025-07-30 18:01:31,549 - INFO - Consigne trouvée pour ID 4: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:01:31,550 - INFO - Traitement de: canapé d'angle sans accoudoir ikea...
+2025-07-30 18:01:31,550 - INFO - Tentative 1/2 pour ID 4
+2025-07-30 18:01:31,550 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir ikea...
+2025-07-30 18:01:46,099 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 18:01:46,167 - INFO - Réponse créée avec ID: resp_688a41dba3bc819e9da4b3278b458a1b005003812a0c774c, statut initial: completed
+2025-07-30 18:01:46,471 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a41dba3bc819e9da4b3278b458a1b005003812a0c774c "HTTP/1.1 200 OK"
+2025-07-30 18:01:46,477 - INFO - Réponse complète reçue: 2530 caractères
+2025-07-30 18:01:46,477 - INFO - Réponse validée comme complète (2530 caractères)
+2025-07-30 18:01:46,482 - INFO - ✅ Succès traitement ID 4 - Réponse: 2530 caractères
+2025-07-30 18:01:48,487 - INFO - === Début traitement ID 5 ===
+2025-07-30 18:01:48,490 - INFO - Consigne trouvée pour ID 5: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:01:48,491 - INFO - Traitement de: canapé d'angle sans meridienne...
+2025-07-30 18:01:48,491 - INFO - Tentative 1/2 pour ID 5
+2025-07-30 18:01:48,491 - INFO - Début appel OpenAI pour: canapé d'angle sans meridienne...
+2025-07-30 18:02:01,711 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 18:02:01,714 - INFO - Réponse créée avec ID: resp_688a41ec949c819dbb93f080c56860b508f4a4f8b6424f49, statut initial: completed
+2025-07-30 18:02:02,075 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a41ec949c819dbb93f080c56860b508f4a4f8b6424f49 "HTTP/1.1 200 OK"
+2025-07-30 18:02:02,080 - INFO - Réponse complète reçue: 2691 caractères
+2025-07-30 18:02:02,081 - INFO - Réponse validée comme complète (2691 caractères)
+2025-07-30 18:02:02,085 - INFO - ✅ Succès traitement ID 5 - Réponse: 2691 caractères
+2025-07-30 18:02:04,092 - INFO - ✅ Toutes les queries traitées pour consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:02:04,092 - INFO - 📊 Fichier consigne_20250718_134201_ed3c4700.json: 6 traités, 0 erreurs
+2025-07-30 18:02:04,092 - INFO - 
+📈 === RÉSUMÉ FINAL ===
+- Fichiers traités: 1
+- Queries traitées: 6
+- Erreurs: 0
+- Caractères générés: 13,500
+- Longueur moyenne: 2250 caractères
+- Durée totale: 0:01:16.318448
+- Succès: True
+=========================
+2025-07-30 18:22:50,980 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-07-30 18:22:50,980 - INFO - 📁 Traitement du fichier: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:22:50,992 - INFO - === Début traitement ID 0 ===
+2025-07-30 18:22:50,994 - INFO - Consigne trouvée pour ID 0: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:22:50,994 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-30 18:22:50,994 - INFO - Tentative 1/2 pour ID 0
+2025-07-30 18:22:50,994 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-30 18:23:22,986 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-30 18:23:23,023 - INFO - Réponse brute reçue: 5783 caractères
+2025-07-30 18:23:23,024 - INFO - JSON parsé avec succès: 5138 caractères
+2025-07-30 18:23:23,025 - INFO - Réponse agent validée: 3 sources, données dans 4 catégories
+2025-07-30 18:23:23,031 - INFO - ✅ Succès traitement ID 0 - Données structurées: 5658 caractères
+2025-07-30 18:23:23,031 - INFO -    📊 Métadonnées: 3 sources, 3 stats
+2025-07-30 18:23:25,036 - INFO - === Début traitement ID 1 ===
+2025-07-30 18:23:25,039 - INFO - Consigne trouvée pour ID 1: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:23:25,040 - INFO - Traitement de: canapé d angle paiement en 10 fois sans frais...
+2025-07-30 18:23:25,040 - INFO - Tentative 1/2 pour ID 1
+2025-07-30 18:23:25,040 - INFO - Début appel OpenAI pour: canapé d angle paiement en 10 fois sans frais...
+2025-07-30 18:24:00,463 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-30 18:24:00,467 - INFO - Réponse brute reçue: 6218 caractères
+2025-07-30 18:24:00,468 - INFO - JSON parsé avec succès: 5578 caractères
+2025-07-30 18:24:00,469 - INFO - Réponse agent validée: 3 sources, données dans 4 catégories
+2025-07-30 18:24:00,478 - INFO - ✅ Succès traitement ID 1 - Données structurées: 6128 caractères
+2025-07-30 18:24:00,479 - INFO -    📊 Métadonnées: 3 sources, 3 stats
+2025-07-30 18:24:02,484 - INFO - === Début traitement ID 2 ===
+2025-07-30 18:24:02,486 - INFO - Consigne trouvée pour ID 2: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:24:02,486 - INFO - Traitement de: canapé d'angle sans pied...
+2025-07-30 18:24:02,486 - INFO - Tentative 1/2 pour ID 2
+2025-07-30 18:24:02,487 - INFO - Début appel OpenAI pour: canapé d'angle sans pied...
+2025-07-30 18:24:31,129 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-30 18:24:31,132 - INFO - Réponse brute reçue: 5603 caractères
+2025-07-30 18:24:31,132 - INFO - JSON parsé avec succès: 5013 caractères
+2025-07-30 18:24:31,132 - INFO - Réponse agent validée: 2 sources, données dans 4 catégories
+2025-07-30 18:24:31,135 - INFO - ✅ Succès traitement ID 2 - Données structurées: 5543 caractères
+2025-07-30 18:24:31,135 - INFO -    📊 Métadonnées: 2 sources, 3 stats
+2025-07-30 18:24:33,138 - INFO - === Début traitement ID 3 ===
+2025-07-30 18:24:33,140 - INFO - Consigne trouvée pour ID 3: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:24:33,140 - INFO - Traitement de: canapé d'angle sans coussin...
+2025-07-30 18:24:33,140 - INFO - Tentative 1/2 pour ID 3
+2025-07-30 18:24:33,140 - INFO - Début appel OpenAI pour: canapé d'angle sans coussin...
+2025-07-30 18:25:07,434 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-30 18:25:07,438 - INFO - Réponse brute reçue: 5422 caractères
+2025-07-30 18:25:07,439 - INFO - JSON parsé avec succès: 4833 caractères
+2025-07-30 18:25:07,439 - INFO - Réponse agent validée: 2 sources, données dans 4 catégories
+2025-07-30 18:25:07,446 - INFO - ✅ Succès traitement ID 3 - Données structurées: 5378 caractères
+2025-07-30 18:25:07,446 - INFO -    📊 Métadonnées: 2 sources, 3 stats
+2025-07-30 18:25:09,451 - INFO - === Début traitement ID 4 ===
+2025-07-30 18:25:09,455 - INFO - Consigne trouvée pour ID 4: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:25:09,455 - INFO - Traitement de: canapé d'angle sans accoudoir ikea...
+2025-07-30 18:25:09,456 - INFO - Tentative 1/2 pour ID 4
+2025-07-30 18:25:09,456 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir ikea...
+2025-07-30 18:25:43,203 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-30 18:25:43,211 - INFO - Réponse brute reçue: 5945 caractères
+2025-07-30 18:25:43,215 - INFO - JSON parsé avec succès: 5356 caractères
+2025-07-30 18:25:43,216 - INFO - Réponse agent validée: 2 sources, données dans 4 catégories
+2025-07-30 18:25:43,225 - INFO - ✅ Succès traitement ID 4 - Données structurées: 5856 caractères
+2025-07-30 18:25:43,225 - INFO -    📊 Métadonnées: 2 sources, 3 stats
+2025-07-30 18:25:45,231 - INFO - === Début traitement ID 5 ===
+2025-07-30 18:25:45,235 - INFO - Consigne trouvée pour ID 5: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:25:45,236 - INFO - Traitement de: canapé d'angle sans meridienne...
+2025-07-30 18:25:45,236 - INFO - Tentative 1/2 pour ID 5
+2025-07-30 18:25:45,237 - INFO - Début appel OpenAI pour: canapé d'angle sans meridienne...
+2025-07-30 18:26:20,509 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-30 18:26:20,511 - INFO - Réponse brute reçue: 6093 caractères
+2025-07-30 18:26:20,511 - INFO - JSON parsé avec succès: 5453 caractères
+2025-07-30 18:26:20,512 - INFO - Réponse agent validée: 3 sources, données dans 4 catégories
+2025-07-30 18:26:20,515 - INFO - ✅ Succès traitement ID 5 - Données structurées: 6058 caractères
+2025-07-30 18:26:20,515 - INFO -    📊 Métadonnées: 3 sources, 3 stats
+2025-07-30 18:26:22,519 - INFO - ✅ Toutes les queries traitées pour consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:26:22,520 - INFO - 📊 Fichier consigne_20250718_134201_ed3c4700.json: 6 traités, 0 erreurs
+2025-07-30 18:26:22,520 - INFO - 
+📈 === RÉSUMÉ FINAL DÉTAILLÉ ===
+- Fichiers traités: 1
+- Queries traitées: 6
+- Erreurs: 0
+- Caractères générés: 34,621
+- Sources collectées: 15
+- Statistiques trouvées: 18
+- Longueur moyenne: 5770 caractères
+- Sources moyennes/query: 2.5
+- Durée totale: 0:03:31.540158
+- Succès global: True
+=================================
+2025-07-30 19:29:21,827 - INFO - Done: {'processed': 6, 'errors': 0, 'files': 1}
+2025-07-31 12:20:47,727 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-07-31 12:20:47,728 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-07-31 12:20:47,732 - INFO - === Début traitement ID 0 ===
+2025-07-31 12:20:47,733 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-07-31 12:20:47,733 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-31 12:20:47,733 - INFO - Tentative 1/2 pour ID 0
+2025-07-31 12:20:47,733 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 12:21:33,755 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 12:21:33,787 - INFO - Réponse brute reçue: 4956 caractères
+2025-07-31 12:21:33,788 - WARNING - Champ obligatoire manquant: sources
+2025-07-31 12:21:33,789 - INFO - JSON parsé avec succès: 4481 caractères
+2025-07-31 12:21:33,789 - WARNING - Champ obligatoire manquant ou vide: sources
+2025-07-31 12:21:33,789 - WARNING - Tentative 1 échouée pour ID 0
+2025-07-31 12:21:38,794 - INFO - Tentative 2/2 pour ID 0
+2025-07-31 12:21:38,802 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 12:22:04,967 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 12:22:04,975 - INFO - Réponse brute reçue: 4896 caractères
+2025-07-31 12:22:04,978 - WARNING - Champ obligatoire manquant: sources
+2025-07-31 12:22:04,979 - INFO - JSON parsé avec succès: 4422 caractères
+2025-07-31 12:22:04,981 - WARNING - Champ obligatoire manquant ou vide: sources
+2025-07-31 12:22:04,981 - WARNING - Tentative 2 échouée pour ID 0
+2025-07-31 12:22:04,981 - ERROR - ❌ Échec définitif traitement ID 0 après 2 tentatives
+2025-07-31 12:22:04,982 - ERROR - ❌ Arrêt du traitement pour consigne_20250730_160622_ab894598.json après échec ID 0
+2025-07-31 12:22:04,982 - INFO - 📊 Fichier consigne_20250730_160622_ab894598.json: 0 traités, 1 erreurs
+2025-07-31 12:22:04,982 - INFO - 
+📈 === RÉSUMÉ FINAL DÉTAILLÉ ===
+- Fichiers traités: 1
+- Queries traitées: 0
+- Erreurs: 1
+- Caractères générés: 0
+- Sources collectées: 0
+- Statistiques trouvées: 0
+- Longueur moyenne: 0 caractères
+- Sources moyennes/query: 0.0
+- Durée totale: 0:01:17.254707
+- Succès global: False
+=================================
+2025-07-31 14:05:29,589 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-07-31 14:05:29,590 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-07-31 14:05:29,592 - INFO - === Début traitement ID 0 ===
+2025-07-31 14:05:29,593 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-07-31 14:05:29,593 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-31 14:05:29,593 - INFO - Tentative 1/2 pour ID 0
+2025-07-31 14:05:29,593 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:05:52,376 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:05:52,410 - INFO - Réponse brute reçue: 4918 caractères
+2025-07-31 14:05:52,411 - WARNING - Champ obligatoire manquant: sources
+2025-07-31 14:05:52,411 - INFO - JSON parsé avec succès: 4443 caractères
+2025-07-31 14:05:52,411 - WARNING - Champ obligatoire manquant ou vide: sources
+2025-07-31 14:05:52,412 - WARNING - Tentative 1 échouée pour ID 0
+2025-07-31 14:05:57,417 - INFO - Tentative 2/2 pour ID 0
+2025-07-31 14:05:57,418 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:06:22,843 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:06:22,848 - INFO - Réponse brute reçue: 5073 caractères
+2025-07-31 14:06:22,848 - WARNING - Champ obligatoire manquant: sources
+2025-07-31 14:06:22,849 - INFO - JSON parsé avec succès: 4598 caractères
+2025-07-31 14:06:22,849 - WARNING - Champ obligatoire manquant ou vide: sources
+2025-07-31 14:06:22,849 - WARNING - Tentative 2 échouée pour ID 0
+2025-07-31 14:06:22,849 - ERROR - ❌ Échec définitif traitement ID 0 après 2 tentatives
+2025-07-31 14:06:22,850 - ERROR - ❌ Arrêt du traitement pour consigne_20250730_160622_ab894598.json après échec ID 0
+2025-07-31 14:06:22,850 - INFO - 📊 Fichier consigne_20250730_160622_ab894598.json: 0 traités, 1 erreurs
+2025-07-31 14:06:22,850 - INFO - 
+📈 === RÉSUMÉ FINAL DÉTAILLÉ ===
+- Fichiers traités: 1
+- Queries traitées: 0
+- Erreurs: 1
+- Caractères générés: 0
+- Sources collectées: 0
+- Statistiques trouvées: 0
+- Longueur moyenne: 0 caractères
+- Sources moyennes/query: 0.0
+- Durée totale: 0:00:53.260982
+- Succès global: False
+=================================
+2025-07-31 14:10:12,604 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-07-31 14:10:12,604 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-07-31 14:10:12,607 - INFO - === Début traitement ID 0 ===
+2025-07-31 14:10:12,608 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-07-31 14:10:12,608 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-31 14:10:12,608 - INFO - Tentative 1/2 pour ID 0
+2025-07-31 14:10:12,608 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:10:39,542 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:10:39,571 - INFO - Réponse brute reçue: 4686 caractères
+2025-07-31 14:10:39,571 - WARNING - Champ obligatoire manquant: sources
+2025-07-31 14:10:39,572 - INFO - JSON parsé avec succès: 4215 caractères
+2025-07-31 14:10:39,572 - ERROR - Erreur validation réponse agent: name 'sources' is not defined
+2025-07-31 14:10:39,572 - WARNING - Tentative 1 échouée pour ID 0
+2025-07-31 14:10:44,577 - INFO - Tentative 2/2 pour ID 0
+2025-07-31 14:10:44,578 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:13:19,617 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-07-31 14:13:19,618 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-07-31 14:13:19,621 - INFO - === Début traitement ID 0 ===
+2025-07-31 14:13:19,622 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-07-31 14:13:19,622 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-31 14:13:19,622 - INFO - Tentative 1/2 pour ID 0
+2025-07-31 14:13:19,622 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:13:43,002 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:13:43,019 - INFO - Réponse brute reçue: 4756 caractères
+2025-07-31 14:13:43,020 - WARNING - Champ obligatoire manquant: sources
+2025-07-31 14:13:43,020 - INFO - JSON parsé avec succès: 4279 caractères
+2025-07-31 14:13:43,020 - WARNING - Tentative 1 échouée pour ID 0
+2025-07-31 14:13:48,026 - INFO - Tentative 2/2 pour ID 0
+2025-07-31 14:13:48,026 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:14:13,603 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:14:13,606 - INFO - Réponse brute reçue: 5001 caractères
+2025-07-31 14:14:13,607 - WARNING - Champ obligatoire manquant: sources
+2025-07-31 14:14:13,607 - INFO - JSON parsé avec succès: 4531 caractères
+2025-07-31 14:14:13,607 - WARNING - Tentative 2 échouée pour ID 0
+2025-07-31 14:14:13,607 - ERROR - ❌ Échec définitif traitement ID 0 après 2 tentatives
+2025-07-31 14:14:13,607 - ERROR - ❌ Arrêt du traitement pour consigne_20250730_160622_ab894598.json après échec ID 0
+2025-07-31 14:14:13,607 - INFO - 📊 Fichier consigne_20250730_160622_ab894598.json: 0 traités, 1 erreurs
+2025-07-31 14:14:13,607 - INFO - 
+📈 === RÉSUMÉ FINAL DÉTAILLÉ ===
+- Fichiers traités: 1
+- Queries traitées: 0
+- Erreurs: 1
+- Caractères générés: 0
+- Sources collectées: 0
+- Statistiques trouvées: 0
+- Longueur moyenne: 0 caractères
+- Sources moyennes/query: 0.0
+- Durée totale: 0:00:53.989641
+- Succès global: False
+=================================
+2025-07-31 14:28:53,605 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-07-31 14:28:53,605 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-07-31 14:28:53,608 - INFO - === Début traitement ID 0 ===
+2025-07-31 14:28:53,609 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-07-31 14:28:53,609 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-31 14:28:53,609 - INFO - Tentative 1/2 pour ID 0
+2025-07-31 14:28:53,609 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:29:20,704 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:29:20,720 - INFO - Réponse brute reçue: 5093 caractères
+2025-07-31 14:29:20,721 - INFO - JSON parsé avec succès: 4616 caractères
+2025-07-31 14:29:20,723 - WARNING - Tentative 1 échouée pour ID 0
+2025-07-31 14:29:25,729 - INFO - Tentative 2/2 pour ID 0
+2025-07-31 14:29:25,729 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:31:45,151 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-07-31 14:31:45,152 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-07-31 14:31:45,154 - INFO - === Début traitement ID 0 ===
+2025-07-31 14:31:45,155 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-07-31 14:31:45,155 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-31 14:31:45,155 - INFO - Tentative 1/2 pour ID 0
+2025-07-31 14:31:45,155 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:32:12,125 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:32:12,138 - INFO - Réponse brute reçue: 4705 caractères
+2025-07-31 14:32:12,139 - INFO - JSON parsé avec succès: 4235 caractères
+2025-07-31 14:32:12,139 - WARNING - Tentative 1 échouée pour ID 0
+2025-07-31 14:32:17,143 - INFO - Tentative 2/2 pour ID 0
+2025-07-31 14:32:17,144 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:34:49,224 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-07-31 14:34:49,224 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-07-31 14:34:49,227 - INFO - === Début traitement ID 0 ===
+2025-07-31 14:34:49,228 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-07-31 14:34:49,228 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-31 14:34:49,228 - INFO - Tentative 1/2 pour ID 0
+2025-07-31 14:34:49,228 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:35:11,165 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:35:11,196 - INFO - Réponse brute reçue: 4676 caractères
+2025-07-31 14:35:11,197 - INFO - JSON parsé avec succès: 4199 caractères
+2025-07-31 14:35:11,198 - WARNING - Tentative 1 échouée pour ID 0
+2025-07-31 14:35:16,204 - INFO - Tentative 2/2 pour ID 0
+2025-07-31 14:35:16,204 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:35:44,221 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:35:44,226 - INFO - Réponse brute reçue: 4843 caractères
+2025-07-31 14:35:44,227 - INFO - JSON parsé avec succès: 4369 caractères
+2025-07-31 14:35:44,227 - WARNING - Tentative 2 échouée pour ID 0
+2025-07-31 14:35:44,228 - ERROR - ❌ Échec définitif traitement ID 0 après 2 tentatives
+2025-07-31 14:35:44,232 - ERROR - ❌ Arrêt du traitement pour consigne_20250730_160622_ab894598.json après échec ID 0
+2025-07-31 14:35:44,234 - INFO - 📊 Fichier consigne_20250730_160622_ab894598.json: 0 traités, 1 erreurs
+2025-07-31 14:35:44,235 - INFO - 
+📈 === RÉSUMÉ FINAL DÉTAILLÉ ===
+- Fichiers traités: 1
+- Queries traitées: 0
+- Erreurs: 1
+- Caractères générés: 0
+- Statistiques trouvées: 0
+- Longueur moyenne: 0 caractères
+- Durée totale: 0:00:55.010979
+- Succès global: False
+=================================
+2025-07-31 14:38:03,751 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-07-31 14:38:03,751 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-07-31 14:38:03,754 - INFO - === Début traitement ID 0 ===
+2025-07-31 14:38:03,755 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-07-31 14:38:03,755 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-31 14:38:03,755 - INFO - Tentative 1/2 pour ID 0
+2025-07-31 14:38:03,755 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:38:32,807 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:38:32,822 - INFO - Réponse brute reçue: 5014 caractères
+2025-07-31 14:38:32,822 - INFO - JSON parsé avec succès: 4543 caractères
+2025-07-31 14:38:32,829 - INFO - ✅ Succès traitement ID 0 - Données structurées: 4978 caractères
+2025-07-31 14:38:32,829 - INFO -    📊 Métadonnées: 3 stats, 1 insights
+2025-07-31 14:38:34,833 - INFO - === Début traitement ID 1 ===
+2025-07-31 14:38:34,836 - INFO - Consigne trouvée pour ID 1: consigne_20250730_160622_ab894598.json
+2025-07-31 14:38:34,837 - INFO - Traitement de: canapé d angle paiement en 10 fois sans frais...
+2025-07-31 14:38:34,837 - INFO - Tentative 1/2 pour ID 1
+2025-07-31 14:38:34,837 - INFO - Début appel OpenAI pour: canapé d angle paiement en 10 fois sans frais...
+2025-07-31 14:39:00,756 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:39:00,761 - INFO - Réponse brute reçue: 5164 caractères
+2025-07-31 14:39:00,761 - INFO - JSON parsé avec succès: 4689 caractères
+2025-07-31 14:39:00,766 - INFO - ✅ Succès traitement ID 1 - Données structurées: 5209 caractères
+2025-07-31 14:39:00,767 - INFO -    📊 Métadonnées: 3 stats, 1 insights
+2025-07-31 14:39:02,772 - INFO - === Début traitement ID 2 ===
+2025-07-31 14:39:02,775 - INFO - Consigne trouvée pour ID 2: consigne_20250730_160622_ab894598.json
+2025-07-31 14:39:02,775 - INFO - Traitement de: canapé d'angle sans pied...
+2025-07-31 14:39:02,776 - INFO - Tentative 1/2 pour ID 2
+2025-07-31 14:39:02,776 - INFO - Début appel OpenAI pour: canapé d'angle sans pied...
+2025-08-01 12:12:59,616 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-08-01 12:12:59,616 - INFO - 📁 Traitement du fichier: consigne_20250718_133051_ee7e3b48.json
+2025-08-01 12:12:59,619 - INFO - === Début traitement ID 0 ===
+2025-08-01 12:12:59,619 - INFO - Consigne trouvée pour ID 0: consigne_20250718_133051_ee7e3b48.json
+2025-08-01 12:12:59,620 - INFO - Traitement de: comment recharger voiture électrique sur borne...
+2025-08-01 12:12:59,620 - INFO - Tentative 1/2 pour ID 0
+2025-08-01 12:12:59,620 - INFO - Début appel OpenAI pour: comment recharger voiture électrique sur borne...
+2025-08-01 12:13:25,608 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-01 12:13:25,616 - INFO - Réponse brute reçue: 4830 caractères
+2025-08-01 12:13:25,616 - INFO - JSON parsé avec succès: 4384 caractères
+2025-08-01 12:13:25,618 - INFO - ✅ Succès traitement ID 0 - Données structurées: 4899 caractères
+2025-08-01 12:13:25,618 - INFO -    📊 Métadonnées: 3 stats, 1 insights
+2025-08-01 12:13:27,621 - INFO - === Début traitement ID 1 ===
+2025-08-01 12:13:27,624 - INFO - Consigne trouvée pour ID 1: consigne_20250718_133051_ee7e3b48.json
+2025-08-01 12:13:27,626 - INFO - Traitement de: comment recharger voiture électrique sur autoroute...
+2025-08-01 12:13:27,626 - INFO - Tentative 1/2 pour ID 1
+2025-08-01 12:13:27,626 - INFO - Début appel OpenAI pour: comment recharger voiture électrique sur autoroute...
+2025-08-01 12:13:53,745 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-01 12:13:53,750 - INFO - Réponse brute reçue: 5172 caractères
+2025-08-01 12:13:53,751 - INFO - JSON parsé avec succès: 4697 caractères
+2025-08-01 12:13:53,756 - INFO - ✅ Succès traitement ID 1 - Données structurées: 5122 caractères
+2025-08-01 12:13:53,756 - INFO -    📊 Métadonnées: 3 stats, 1 insights
+2025-08-01 12:13:55,760 - INFO - === Début traitement ID 2 ===
+2025-08-01 12:13:55,763 - INFO - Consigne trouvée pour ID 2: consigne_20250718_133051_ee7e3b48.json
+2025-08-01 12:13:55,763 - INFO - Traitement de: comment brancher voiture électrique...
+2025-08-01 12:13:55,764 - INFO - Tentative 1/2 pour ID 2
+2025-08-01 12:13:55,764 - INFO - Début appel OpenAI pour: comment brancher voiture électrique...
+2025-08-01 16:57:17,940 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-08-01 16:57:17,941 - INFO - 📁 Traitement du fichier: consigne_20250718_133051_ee7e3b48.json
+2025-08-01 16:57:17,944 - INFO - === Début traitement ID 2 ===
+2025-08-01 16:57:17,945 - INFO - Consigne trouvée pour ID 2: consigne_20250718_133051_ee7e3b48.json
+2025-08-01 16:57:17,946 - INFO - Traitement de: comment brancher voiture électrique...
+2025-08-01 16:57:17,946 - INFO - Tentative 1/2 pour ID 2
+2025-08-01 16:57:17,946 - INFO - Début appel OpenAI pour: comment brancher voiture électrique...
+2025-08-01 16:57:45,712 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-01 16:57:45,722 - INFO - Réponse brute reçue: 5061 caractères
+2025-08-01 16:57:45,723 - INFO - JSON parsé avec succès: 4587 caractères
+2025-08-01 16:57:45,726 - INFO - ✅ Succès traitement ID 2 - Données structurées: 5147 caractères
+2025-08-01 16:57:45,726 - INFO -    📊 Métadonnées: 3 stats, 1 insights
+2025-08-01 16:57:47,730 - INFO - === Début traitement ID 3 ===
+2025-08-01 16:57:47,735 - INFO - Consigne trouvée pour ID 3: consigne_20250718_133051_ee7e3b48.json
+2025-08-01 16:57:47,735 - INFO - Traitement de: pourquoi voiture électrique prend feu...
+2025-08-01 16:57:47,735 - INFO - Tentative 1/2 pour ID 3
+2025-08-01 16:57:47,735 - INFO - Début appel OpenAI pour: pourquoi voiture électrique prend feu...
+2025-08-01 16:58:10,651 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-01 16:58:10,655 - INFO - Réponse brute reçue: 4295 caractères
+2025-08-01 16:58:10,655 - INFO - JSON parsé avec succès: 3882 caractères
+2025-08-01 16:58:10,658 - INFO - ✅ Succès traitement ID 3 - Données structurées: 4417 caractères
+2025-08-01 16:58:10,658 - INFO -    📊 Métadonnées: 3 stats, 1 insights
+2025-08-01 16:58:12,661 - INFO - ✅ Toutes les queries traitées pour consigne_20250718_133051_ee7e3b48.json
+2025-08-01 16:58:12,662 - INFO - 📊 Fichier consigne_20250718_133051_ee7e3b48.json: 2 traités, 0 erreurs
+2025-08-01 16:58:12,662 - INFO - 
+📈 === RÉSUMÉ FINAL DÉTAILLÉ ===
+- Fichiers traités: 1
+- Queries traitées: 2
+- Erreurs: 0
+- Caractères générés: 9,564
+- Statistiques trouvées: 6
+- Longueur moyenne: 4782 caractères
+- Durée totale: 0:00:54.721223
+- Succès global: True
+=================================
+2025-08-02 02:50:28,219 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-08-02 02:50:28,220 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-08-02 02:50:28,223 - INFO - === Début traitement ID 0 ===
+2025-08-02 02:50:28,223 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-08-02 02:50:28,223 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-08-02 02:50:28,223 - INFO - Tentative 1/2 pour ID 0
+2025-08-02 02:50:28,223 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-08-02 02:50:54,597 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-02 02:50:54,614 - INFO - Réponse brute reçue: 4999 caractères
+2025-08-02 02:50:54,614 - INFO - JSON parsé avec succès: 4524 caractères
+2025-08-02 02:50:54,615 - INFO - ✅ Succès traitement ID 0 - Données structurées: 4949 caractères
+2025-08-02 02:50:54,616 - INFO -    📊 Métadonnées: 3 stats, 1 insights
+2025-08-02 02:50:56,620 - INFO - === Début traitement ID 1 ===
+2025-08-02 02:50:56,624 - INFO - Consigne trouvée pour ID 1: consigne_20250730_160622_ab894598.json
+2025-08-02 02:50:56,624 - INFO - Traitement de: canapé d angle paiement en 10 fois sans frais...
+2025-08-02 02:50:56,624 - INFO - Tentative 1/2 pour ID 1
+2025-08-02 02:50:56,625 - INFO - Début appel OpenAI pour: canapé d angle paiement en 10 fois sans frais...
+2025-08-02 10:34:44,754 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-08-02 10:34:44,755 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-08-02 10:34:44,759 - INFO - === Début traitement ID 0 ===
+2025-08-02 10:34:44,760 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-08-02 10:34:44,760 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-08-02 10:34:44,760 - INFO - Tentative 1/2 pour ID 0
+2025-08-02 10:34:44,760 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-08-02 10:35:13,541 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-02 10:35:13,556 - INFO - Réponse brute reçue: 5128 caractères
+2025-08-02 10:35:13,556 - INFO - JSON parsé avec succès: 4653 caractères
+2025-08-02 10:35:13,561 - INFO - ✅ Succès traitement ID 0 - Données structurées: 5118 caractères
+2025-08-02 10:35:13,561 - INFO -    📊 Métadonnées: 3 stats, 1 insights
+2025-08-02 10:35:15,565 - INFO - === Début traitement ID 1 ===
+2025-08-02 10:35:15,568 - INFO - Consigne trouvée pour ID 1: consigne_20250730_160622_ab894598.json
+2025-08-02 10:35:15,569 - INFO - Traitement de: canapé d angle paiement en 10 fois sans frais...
+2025-08-02 10:35:15,569 - INFO - Tentative 1/2 pour ID 1
+2025-08-02 10:35:15,569 - INFO - Début appel OpenAI pour: canapé d angle paiement en 10 fois sans frais...
+2025-08-08 16:07:14,242 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-08-08 16:07:14,250 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-08-08 16:07:14,257 - INFO - === Début traitement ID 0 ===
+2025-08-08 16:07:14,260 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-08-08 16:07:14,260 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-08-08 16:07:14,261 - INFO - Tentative 1/2 pour ID 0
+2025-08-08 16:07:14,261 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-08-08 16:07:43,811 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-08 16:07:43,842 - INFO - Réponse brute reçue: 4841 caractères
+2025-08-08 16:07:43,843 - INFO - JSON parsé avec succès: 4366 caractères
+2025-08-08 16:07:43,851 - INFO - ✅ Succès traitement ID 0 - Données structurées: 4781 caractères
+2025-08-08 16:07:43,852 - INFO -    📊 Métadonnées: 3 stats, 1 insights
+2025-08-08 16:07:45,859 - INFO - === Début traitement ID 1 ===
+2025-08-08 16:07:45,862 - INFO - Consigne trouvée pour ID 1: consigne_20250730_160622_ab894598.json
+2025-08-08 16:07:45,863 - INFO - Traitement de: canapé d angle paiement en 10 fois sans frais...
+2025-08-08 16:07:45,864 - INFO - Tentative 1/2 pour ID 1
+2025-08-08 16:07:45,864 - INFO - Début appel OpenAI pour: canapé d angle paiement en 10 fois sans frais...
