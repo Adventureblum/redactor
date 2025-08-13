@@ -1,14 +1,16 @@
 {
   "processed_queries": [
-    "8fd77c3c354b375b1ca364ee183ebef8"
+    "8fd77c3c354b375b1ca364ee183ebef8",
+    "0b42aa05ff9a675e7de4ab8c81e46a23",
+    "3b74e323ca583686346ca4770764d37a"
   ],
   "query_details": {
     "8fd77c3c354b375b1ca364ee183ebef8": {
       "id": 0,
       "text": "canapé d'angle sans accoudoir",
       "processed_at": "2025-08-08 15:56:07",
-      "semantic": 1,
-      "semantic_processed_at": "2025-08-08 15:57:16",
+      "semantic": 0,
+      "semantic_processed_at": "2025-08-13 13:42:56",
       "semantic_analysis": {
         "clusters_count": 5,
         "relations_found": 10,
@@ -17,9 +19,39 @@
         "thematic_diversity": 0.02,
         "semantic_complexity": 1.0
       }
+    },
+    "3b74e323ca583686346ca4770764d37a": {
+      "id": 1,
+      "text": "canapé d angle paiement en 10 fois sans frais",
+      "processed_at": "2025-08-11 15:31:04",
+      "semantic": 0,
+      "semantic_processed_at": "2025-08-13 13:42:56",
+      "semantic_analysis": {
+        "clusters_count": 5,
+        "relations_found": 10,
+        "entities_count": 5,
+        "angles_generated": 10,
+        "thematic_diversity": 0.03,
+        "semantic_complexity": 1.0
+      }
+    },
+    "0b42aa05ff9a675e7de4ab8c81e46a23": {
+      "id": 2,
+      "text": "canapé d'angle sans pied",
+      "processed_at": "2025-08-13 13:41:59",
+      "semantic": 1,
+      "semantic_processed_at": "2025-08-13 13:42:56",
+      "semantic_analysis": {
+        "clusters_count": 5,
+        "relations_found": 10,
+        "entities_count": 5,
+        "angles_generated": 10,
+        "thematic_diversity": 0.01,
+        "semantic_complexity": 1.0
+      }
     }
   },
-  "last_updated": "2025-08-08 15:57:16",
-  "total_processed": 1,
+  "last_updated": "2025-08-13 13:42:56",
+  "total_processed": 3,
   "semantic_processed": 1
 }

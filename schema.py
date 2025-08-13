@@ -5,6 +5,7 @@ Générateur de plans d'articles SEO avec agent spécialisé - VERSION MODULAIRE
 - Prompts externalisés dans le dossier prompts/
 - Parfaite maintenabilité avec séparation des responsabilités
 - Utilisation de DeepSeek API au lieu d'OpenAI
+- Variables d'environnement système uniquement
 """
 
 import json
@@ -14,30 +15,6 @@ import glob
 from typing import Dict, List, Any, Optional
 from pathlib import Path
 import requests
-
-# Chargement des variables d'environnement depuis .env si le fichier existe
-def load_env_file():
-    env_file = Path('.env')
-    if env_file.exists():
-        with open(env_file, 'r') as f:
-            for line in f:
-                if '=' in line and not line.startswith('#'):
-                    key, value = line.strip().split('=', 1)
-                    os.environ[key] = value.strip('"').strip("'")
-
-load_env_file()
-
-# Chargement des variables d'environnement depuis .env si le fichier existe
-def load_env_file():
-    env_file = Path('.env')
-    if env_file.exists():
-        with open(env_file, 'r') as f:
-            for line in f:
-                if '=' in line and not line.startswith('#'):
-                    key, value = line.strip().split('=', 1)
-                    os.environ[key] = value.strip('"').strip("'")
-
-load_env_file()
 
 
 class DeepSeekClient:
@@ -72,9 +49,16 @@ class DeepSeekClient:
             raise Exception(f"Erreur lors de l'appel à l'API DeepSeek: {e}")
 
 
-# Configuration DeepSeek - Debug
+# Configuration DeepSeek - Variables d'environnement système uniquement
 deepseek_key = os.getenv('DEEPSEEK_KEY')
-print(f"🔍 Debug: DEEPSEEK_KEY = '{deepseek_key}'")
+if not deepseek_key:
+    print("❌ Variable d'environnement DEEPSEEK_KEY manquante.")
+    print("💡 Pour définir la variable:")
+    print("   Linux/Mac: export DEEPSEEK_KEY='votre_clé_ici'")
+    print("   Windows:   set DEEPSEEK_KEY=votre_clé_ici")
+    sys.exit(1)
+
+print(f"🔍 Debug: DEEPSEEK_KEY configurée (longueur: {len(deepseek_key)} caractères)")
 deepseek_client = DeepSeekClient(deepseek_key)
 
 
@@ -173,30 +157,37 @@ class DataAnalyzer:
 
 
 class SectionPlanner:
-    """Planificateur de sections - Responsabilité unique"""
+    """Planificateur de sections - Responsabilité unique + Conscience de l'angle"""
     
     @staticmethod
-    def suggest_optimal_sections(agent_response: Dict, base_sections: int = 3) -> List[Dict]:
-        """Suggère des sections optimales basées sur les données disponibles"""
+    def suggest_optimal_sections(agent_response: Dict, base_sections: int = 3, angle_recommande: str = "") -> List[Dict]:
+        """Suggère des sections optimales basées sur les données disponibles ET l'angle recommandé"""
         richness = DataAnalyzer.analyze_data_richness(agent_response)
         sections = []
         
-        # Section 1: Toujours éducative (bases)
+        # 🎯 DÉTECTION AUTOMATIQUE DU TYPE D'ANGLE
+        angle_type = SectionPlanner._detect_angle_type(angle_recommande)
+        
+        # Section 1: Toujours une section d'introduction/bases adaptée à l'angle
         sections.append({
             'type': 'éducatif',
             'focus': 'bases_concepts',
             'data_sources': ['shock_statistics', 'expert_insights'],
-            'title_hint': 'Comprendre les bases/fondamentaux'
+            'title_hint': 'Comprendre les bases/fondamentaux',
+            'angle_adaptation': f"Adapter selon l'angle: {angle_recommande}",
+            'angle_type': angle_type
         })
         
-        # Sections adaptatives basées sur les données disponibles
+        # Sections adaptatives basées sur les données ET l'angle
         if richness['benchmark_data'] >= 2:
             sections.append({
                 'type': 'informatif',
                 'focus': 'donnees_performance',
                 'data_sources': ['benchmark_data', 'shock_statistics'],
                 'title_hint': 'Données de performance et statistiques clés',
-                'specific_data': agent_response.get('benchmark_data', [])
+                'specific_data': agent_response.get('benchmark_data', []),
+                'angle_adaptation': f"Interpréter les données selon: {angle_recommande}",
+                'angle_type': angle_type
             })
         
         if richness['market_trends'] >= 1:
@@ -205,7 +196,9 @@ class SectionPlanner:
                 'focus': 'tendances_marche',
                 'data_sources': ['market_trends', 'competitive_landscape'],
                 'title_hint': 'Évolutions du marché et tendances',
-                'specific_data': agent_response.get('market_trends', [])
+                'specific_data': agent_response.get('market_trends', []),
+                'angle_adaptation': f"Contextualiser selon: {angle_recommande}",
+                'angle_type': angle_type
             })
         
         if richness['competitive_landscape'] >= 1:
@@ -214,7 +207,9 @@ class SectionPlanner:
                 'focus': 'comparatifs',
                 'data_sources': ['competitive_landscape', 'benchmark_data'],
                 'title_hint': 'Comparaisons et alternatives',
-                'specific_data': agent_response.get('competitive_landscape', [])
+                'specific_data': agent_response.get('competitive_landscape', []),
+                'angle_adaptation': f"Comparer dans l'optique: {angle_recommande}",
+                'angle_type': angle_type
             })
         
         if richness['expert_insights'] >= 2:
@@ -223,40 +218,69 @@ class SectionPlanner:
                 'focus': 'avis_experts',
                 'data_sources': ['expert_insights', 'credibility_boosters'],
                 'title_hint': 'Recommandations d\'experts',
-                'specific_data': agent_response.get('expert_insights', [])
+                'specific_data': agent_response.get('expert_insights', []),
+                'angle_adaptation': f"Sélectionner experts pertinents pour: {angle_recommande}",
+                'angle_type': angle_type
             })
         
-        # Sections commerciales (toujours en fin)
+        # Sections commerciales (toujours en fin) adaptées à l'angle
         if len(sections) < base_sections - 1:
             sections.append({
                 'type': 'commercial léger',
                 'focus': 'solutions_pratiques',
                 'data_sources': ['content_marketing_angles', 'benchmark_data'],
-                'title_hint': 'Solutions pratiques et conseils'
+                'title_hint': 'Solutions pratiques et conseils',
+                'angle_adaptation': f"Proposer solutions alignées avec: {angle_recommande}",
+                'angle_type': angle_type
             })
         
         sections.append({
             'type': 'commercial subtil',
             'focus': 'optimisation_resultats',
             'data_sources': ['content_marketing_angles', 'market_trends'],
-            'title_hint': 'Optimiser ses résultats/choix'
+            'title_hint': 'Optimiser ses résultats/choix',
+            'angle_adaptation': f"Conclure en cohérence avec: {angle_recommande}",
+            'angle_type': angle_type
         })
         
         return sections[:base_sections] if len(sections) > base_sections else sections
+    
+    @staticmethod
+    def _detect_angle_type(angle_recommande: str) -> str:
+        """Détecte automatiquement le type d'angle pour adapter la stratégie"""
+        angle_lower = angle_recommande.lower()
+        
+        # Détection de mots-clés pour classifier l'angle
+        if any(word in angle_lower for word in ['psycholog', 'émot', 'humain', 'stress', 'mental']):
+            return 'psychologique'
+        elif any(word in angle_lower for word in ['géograph', 'local', 'région', 'ville']):
+            return 'géographique'
+        elif any(word in angle_lower for word in ['budget', 'financ', 'économ', 'gestion']):
+            return 'financier'
+        elif any(word in angle_lower for word in ['technique', 'expert', 'professionnel', 'spécialisé']):
+            return 'technique'
+        elif any(word in angle_lower for word in ['comparai', 'versus', 'alternative', 'choix']):
+            return 'comparatif'
+        elif any(word in angle_lower for word in ['tendance', 'évolution', 'futur', 'innovation']):
+            return 'prospectif'
+        else:
+            return 'généraliste'
 
 
 class DataAssigner:
-    """Assignateur de données aux sections - Responsabilité unique"""
+    """Assignateur de données aux sections - Responsabilité unique + Conscience d'angle"""
     
     @staticmethod
     def assign_specific_data_to_section(section: Dict, agent_response: Dict) -> Dict:
-        """Assigne des données spécifiques à une section basée sur son focus"""
+        """Assigne des données spécifiques à une section basée sur son focus ET son angle"""
         section_copy = section.copy()
         assigned_data = {}
         
         focus = section.get('focus', '')
+        angle_type = section.get('angle_type', 'généraliste')
+        angle_adaptation = section.get('angle_adaptation', '')
         
-        # Assignation spécifique par focus
+        # Assignation spécifique par focus (logique existante)
         if focus == 'bases_concepts':
             stats = agent_response.get('shock_statistics', [])
             if stats:
@@ -283,16 +307,37 @@ class DataAssigner:
             assigned_data['marketing_angles'] = agent_response.get('content_marketing_angles', [])
             assigned_data['hook_elements'] = agent_response.get('hook_potential', {})
         
+        # 🎯 ENRICHISSEMENT AVEC L'ANGLE
+        assigned_data['angle_context'] = {
+            'angle_type': angle_type,
+            'angle_instruction': angle_adaptation,
+            'prioritized_approach': DataAssigner._get_approach_by_angle(angle_type)
+        }
+        
         section_copy['assigned_data'] = assigned_data
         return section_copy
+    
+    @staticmethod
+    def _get_approach_by_angle(angle_type: str) -> str:
+        """Retourne l'approche prioritaire selon le type d'angle détecté"""
+        approaches = {
+            'psychologique': 'Privilégier l\'impact émotionnel et humain des données',
+            'géographique': 'Contextualiser selon les spécificités locales/régionales',
+            'financier': 'Mettre l\'accent sur l\'aspect économique et budgétaire',
+            'technique': 'Approfondir les aspects techniques et expertises',
+            'comparatif': 'Structurer en comparaisons et alternatives',
+            'prospectif': 'Orienter vers les évolutions et tendances futures',
+            'généraliste': 'Équilibrer tous les aspects selon les données disponibles'
+        }
+        return approaches.get(angle_type, approaches['généraliste'])
 
 
 class ContextBuilder:
-    """Constructeur de contexte enrichi - Responsabilité unique"""
+    """Constructeur de contexte enrichi - Responsabilité unique + Contexte d'angle"""
     
     @staticmethod
     def create_enhanced_data_context(sections_with_data: List[Dict]) -> str:
-        """Crée un contexte de données enrichi avec assignation par section"""
+        """Crée un contexte de données enrichi avec assignation par section ET directives d'angle"""
         context_parts = []
         
         for i, section in enumerate(sections_with_data, 1):
@@ -300,9 +345,17 @@ class ContextBuilder:
             
             assigned_data = section.get('assigned_data', {})
             
-            # Données spécifiques assignées
+            # 🎯 AJOUT DU CONTEXTE D'ANGLE EN PREMIER
+            angle_context = assigned_data.get('angle_context', {})
+            if angle_context:
+                section_context.append(f"🎯 ANGLE D'APPROCHE: {angle_context.get('angle_type', 'généraliste').upper()}")
+                section_context.append(f"📋 INSTRUCTION: {angle_context.get('angle_instruction', 'Traitement standard')}")
+                section_context.append(f"🎨 APPROCHE PRIORITAIRE: {angle_context.get('prioritized_approach', 'Équilibrer tous les aspects')}")
+                section_context.append("")  # Ligne vide pour séparation
+            
+            # Données spécifiques assignées (logique existante)
             for data_type, data_content in assigned_data.items():
-                if not data_content:
+                if not data_content or data_type == 'angle_context':  # Skip angle_context déjà traité
                     continue
                     
                 if data_type == 'primary_statistic' and isinstance(data_content, dict):
@@ -438,74 +491,78 @@ class GenerateurPlanArticleModulaire:
         return None
     
     def generer_plan_article_optimise(self, query_data: Dict) -> Optional[Dict]:
-        """Génère un plan d'article optimisé avec exploitation complète des données agent_response"""
-        
-        # Récupération des paramètres
-        requete = query_data.get('text', '')
-        word_count = query_data.get('word_count', 1000)
-        top_keywords = query_data.get('top_keywords', '')
-        plan_config = query_data.get('plan', {})
-        agent_response = query_data.get('agent_response', {})
-        angle_recommande = query_data.get('angle_analysis', {}).get('angle_recommande', '')
-        
-        # Calcul du nombre de sections optimal
-        dev_config = plan_config.get('developpement', {})
-        base_sections = dev_config.get('nombre_sections', 3)
-        
-        # Utilisation des composants modulaires
-        optimal_sections = self.section_planner.suggest_optimal_sections(agent_response, base_sections)
-        sections_with_data = [self.data_assigner.assign_specific_data_to_section(section, agent_response) for section in optimal_sections]
-        enhanced_context = self.context_builder.create_enhanced_data_context(sections_with_data)
-        sections_json_str = self.json_builder.build_sections_json(sections_with_data)
-        
-        # Construction du hook basé sur les données les plus marquantes
-        hook_suggestion = "Statistique générale ou fait marquant"
-        if agent_response.get('shock_statistics'):
-            hook_suggestion = f"ACCROCHE RECOMMANDÉE: {agent_response['shock_statistics'][0].get('statistic', 'Stat non trouvée')}"
-        
-        # Préparation des variables pour le prompt
-        template_vars = {
-            'requete': requete,
-            'word_count': word_count,
-            'top_keywords': top_keywords,
-            'nb_sections': len(sections_with_data),
-            'enhanced_context': enhanced_context,
-            'hook_suggestion': hook_suggestion,
-            'sections_json_str': sections_json_str,
-            'angle_recommande': angle_recommande
-        }
-        
-        # Formatage du prompt avec le gestionnaire
-        formatted_prompt = self.prompt_manager.format_plan_prompt(template_vars)
-        
-        try:
-            response = deepseek_client.chat_completions_create(
-                model="deepseek-chat",
-                messages=[{"role": "user", "content": formatted_prompt}],
-                temperature=0.7,
-                max_tokens=3000
+            """Génère un plan d'article optimisé avec exploitation complète des données agent_response"""
+            
+            # Récupération des paramètres
+            requete = query_data.get('text', '')
+            word_count = query_data.get('word_count', 1000)
+            top_keywords = query_data.get('top_keywords', '')
+            plan_config = query_data.get('plan', {})
+            agent_response = query_data.get('agent_response', {})
+            angle_recommande = query_data.get('angle_analysis', {}).get('angle_recommande', '')
+            
+            # Calcul du nombre de sections optimal
+            dev_config = plan_config.get('developpement', {})
+            base_sections = dev_config.get('nombre_sections', 3)
+            
+            # 🎯 PASSAGE DE L'ANGLE AU PLANIFICATEUR (MODIFICATION ICI)
+            optimal_sections = self.section_planner.suggest_optimal_sections(
+                agent_response, 
+                base_sections, 
+                angle_recommande  # ← AJOUT DU PARAMÈTRE ANGLE
             )
+            sections_with_data = [self.data_assigner.assign_specific_data_to_section(section, agent_response) for section in optimal_sections]
+            enhanced_context = self.context_builder.create_enhanced_data_context(sections_with_data)
+            sections_json_str = self.json_builder.build_sections_json(sections_with_data)
             
-            plan_content = response['choices'][0]['message']['content'].strip()
+            # Construction du hook basé sur les données les plus marquantes
+            hook_suggestion = "Statistique générale ou fait marquant"
+            if agent_response.get('shock_statistics'):
+                hook_suggestion = f"ACCROCHE RECOMMANDÉE: {agent_response['shock_statistics'][0].get('statistic', 'Stat non trouvée')}"
             
-            # Nettoyage du contenu
-            if plan_content.startswith("```json"):
-                plan_content = plan_content[7:]
-            if plan_content.endswith("```"):
-                plan_content = plan_content[:-3]
+            # Préparation des variables pour le prompt
+            template_vars = {
+                'requete': requete,
+                'word_count': word_count,
+                'top_keywords': top_keywords,
+                'nb_sections': len(sections_with_data),
+                'enhanced_context': enhanced_context,
+                'hook_suggestion': hook_suggestion,
+                'sections_json_str': sections_json_str,
+                'angle_recommande': angle_recommande
+            }
             
-            # Parsing JSON
+            # Formatage du prompt avec le gestionnaire
+            formatted_prompt = self.prompt_manager.format_plan_prompt(template_vars)
+            
             try:
-                plan_json = json.loads(plan_content.strip())
-                return plan_json
-            except json.JSONDecodeError as e:
-                print(f"❌ Erreur de parsing JSON: {e}")
-                print(f"Contenu reçu: {plan_content[:500]}...")
-                return None
+                response = deepseek_client.chat_completions_create(
+                    model="deepseek-chat",
+                    messages=[{"role": "user", "content": formatted_prompt}],
+                    temperature=0.7,
+                    max_tokens=3000
+                )
                 
-        except Exception as e:
-            print(f"❌ Erreur lors de la génération du plan: {e}")
-            return None
+                plan_content = response['choices'][0]['message']['content'].strip()
+                
+                # Nettoyage du contenu
+                if plan_content.startswith("```json"):
+                    plan_content = plan_content[7:]
+                if plan_content.endswith("```"):
+                    plan_content = plan_content[:-3]
+                
+                # Parsing JSON
+                try:
+                    plan_json = json.loads(plan_content.strip())
+                    return plan_json
+                except json.JSONDecodeError as e:
+                    print(f"❌ Erreur de parsing JSON: {e}")
+                    print(f"Contenu reçu: {plan_content[:500]}...")
+                    return None
+                    
+            except Exception as e:
+                print(f"❌ Erreur lors de la génération du plan: {e}")
+                return None
     
     def process_queries(self, query_ids: List[int]):
         """Traite une liste de requêtes avec la version modulaire"""
@@ -575,14 +632,9 @@ def main():
     """Fonction principale avec version modulaire"""
     print("📝 GÉNÉRATEUR DE PLANS D'ARTICLES SEO - VERSION MODULAIRE (DeepSeek)")
     print("=" * 70)
-    print("🎯 Prompts externalisés + Architecture modulaire + DeepSeek API")
+    print("🎯 Variables d'environnement système + Architecture modulaire + DeepSeek API")
     
     compare_plan_approaches()
-    
-    # Vérification de la clé API DeepSeek
-    if not os.getenv('DEEPSEEK_KEY'):
-        print("❌ Variable d'environnement DEEPSEEK_KEY manquante.")
-        sys.exit(1)
     
     # Auto-détection du fichier consigne
     try:

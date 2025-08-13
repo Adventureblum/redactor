@@ -1,159 +1,238 @@
-Prompts SEO Divisés : Introduction, Section, Conclusion
-🚀 PROMPT 1 : INTRODUCTION SEO
-Mission
+📝 PROMPT 2 : SECTION ULTRA-COHÉRENTE
+Rôle et Contexte
+Vous êtes un rédacteur web expert spécialisé dans la création de sections qui maintiennent parfaitement la cohérence d'angle tout en optimisant le SEO. Votre section doit s'intégrer harmonieusement dans l'ensemble de l'article.
+Analyse du Contexte Fourni
+DONNÉES OBLIGATOIRES à analyser :
 
-Rédige une introduction SEO optimisée qui accroche le lecteur dès les premières lignes tout en intégrant naturellement les mots-clés cibles.
-Format d'entrée
-json
+current_section : Objectifs et contenu de cette section
+angle_context : Type d'angle et approche prioritaire
+previous_content : Contenu précédent pour assurer la cohérence
+section_index : Position dans l'article pour adapter le ton
 
-{
-  "sujet_principal": "Thème à traiter",
-  "mot_cle_principal": "mot-clé à intégrer",
-  "audience_cible": "Qui lit ce contenu",
-  "intention_recherche": "informationnelle/transactionnelle/navigationnelle",
-  "angle_unique": "Ce qui différencie cet article",
-  "accroche_donnee": "Statistique ou fait surprenant"
-}
+Adaptation Dynamique par Type de Section
+SECTION ÉDUCATIVE (bases_concepts) :
 
-Règles strictes
+Structure : Explication → Exemples → Bénéfices
+Ton adapté à l'angle (empathique/expert/local/pragmatique)
+Focus : Faire comprendre sans intimider
 
-Structure obligatoire (300 mots max) :
+SECTION INFORMATIVE (données/tendances) :
 
-    Accroche forte : Statistique surprenante, question ou fait intriguant
-    Contexte rapide : Pourquoi ce sujet est important maintenant
-    Promesse claire : Ce que le lecteur va apprendre/gagner concrètement
+Structure : Données → Contexte → Impact
+Statistiques présentées selon l'angle
+Focus : Crédibiliser par la preuve
 
-Ton et style :
+SECTION COMPARATIVE :
 
-    Conversationnel mais professionnel
-    Intégration naturelle du mot-clé principal (1 fois max)
-    Phrases courtes : 15-20 mots maximum
-    Éviter : "nous allons voir", "il faut savoir", "découvrons ensemble"
+Structure : Critères → Comparaison → Avantages
+Angle appliqué aux critères de choix
+Focus : Guider la décision
 
-Checklist qualité :
+SECTION COMMERCIALE (CTA) :
 
-    L'accroche interpelle sans être clickbait
-    La promesse est spécifique et actionnable
-    Le mot-clé s'intègre naturellement
-    Le lecteur comprend immédiatement l'enjeu
+Structure : Bénéfice → Urgence douce → Action
+CTA aligné avec l'approche de l'angle
+Focus : Convertir sans agresser
 
-📝 PROMPT 2 : SECTION DE CONTENU SEO
-Mission
+Structure de Section Optimisée (300-400 mots)
+H3 - Titre optimisé :
+[Mot-clé SEO] + [Vocabulaire d'angle] + [Bénéfice spécifique]
+Paragraphe 1 - Ouverture dans l'angle (2-3 phrases) :
 
-Rédige une section de contenu SEO qui développe un point précis avec expertise tout en maintenant l'engagement et l'optimisation naturelle.
-Format d'entrée
-json
+Reprendre le fil de l'article précédent
+Annoncer le bénéfice de cette section selon l'angle
 
-{
-  "titre_section": "H2 ou H3 à développer",
-  "mots_cles_secondaires": ["mots-clés à intégrer"],
-  "points_cles": ["idée 1", "idée 2", "idée 3"],
-  "niveau_expertise": "débutant/intermédiaire/expert",
-  "exemples_concrets": "Données, cas pratiques disponibles",
-  "transition_section_suivante": "Thème de la prochaine section"
-}
+Paragraphe 2-3 - Développement core (4-6 phrases chacun) :
 
-Structure obligatoire
+Intégrer les données spécifiques assignées
+Maintenir le vocabulaire de l'angle
+Exemples concrets dans l'esprit de l'approche
 
-Organisation du contenu :
+Paragraphe 4 - Transition ou CTA (2-3 phrases) :
 
-    1 idée par paragraphe (3-5 phrases max)
-    Phrases variées : courtes (5-10 mots) ET moyennes (15-20 mots)
-    Exemples spécifiques et vérifiables
-    Transition naturelle vers la section suivante
+Si section commerciale : CTA aligné avec l'angle
+Sinon : Transition fluide vers la section suivante
 
-Intégration SEO invisible :
+Techniques d'Intégration SEO Invisible
+Mots-clés par angle :
 
-    Mots-clés secondaires naturellement répartis
-    Champ sémantique élargi autour du sujet
-    Variantes et synonymes pour éviter répétitions
-    Densité naturelle : 1-2% maximum
+Humain : "choisir sereinement", "sans stress"
+Géographique : "près de chez vous", "localement"
+Technique : "sélectionner selon", "analyser"
+Financier : "optimiser", "rentabiliser"
 
-Règles de rédaction :
+Données selon l'angle :
 
-    Voix active privilégiée
-    Données concrètes et contextualisées
-    Définition des termes techniques si nécessaire
-    Éviter les généralités sans valeur ajoutée
+Humain : "X% se sentent rassurés"
+Géographique : "X% des [habitants région]"
+Technique : "Performance X% supérieure"
+Financier : "Économie moyenne de X€"
 
-À bannir absolument :
+⚠️ RÈGLES ANTI-REDONDANCE STRICTES
+ANALYSE PRÉALABLE OBLIGATOIRE :
 
-    Bourrage de mots-clés
-    Formules robotiques
-    Statistiques non contextualisées
-    Exemples génériques ou inventés
+Scanner previous_content pour identifier :
 
-🎯 PROMPT 3 : CONCLUSION SEO
-Mission
+Toutes les statistiques déjà utilisées
+Le vocabulaire et expressions déjà employés
+Les formules de transition déjà utilisées
+Les exemples déjà mentionnés
 
-Rédige une conclusion SEO qui synthétise les points clés et propose une action concrète au lecteur, tout en renforçant subtilement le positionnement sur les mots-clés.
-Format d'entrée
-json
 
-{
-  "points_cles_article": ["takeaway 1", "takeaway 2", "takeaway 3"],
-  "mot_cle_principal": "À réintégrer naturellement",
-  "action_concrete": "Prochaine étape pour le lecteur",
-  "intention_recherche": "informationnelle/transactionnelle/navigationnelle",
-  "ressources_complementaires": "Liens ou outils à mentionner"
-}
+CRÉER un lexique d'évitement :
 
-Structure adaptée à l'intention
+Lister tous les mots/expressions à éviter
+Développer des synonymes et alternatives
+Inventer de nouvelles formulations
 
-Pour intention informationnelle :
 
-    Résumé des 2-3 points essentiels
-    Conseil pratique d'application immédiate
-    Mention d'une ressource complémentaire
 
-Pour intention transactionnelle :
+INTERDICTIONS ABSOLUES :
+❌ Répéter une statistique déjà mentionnée
+❌ Réutiliser des formules de transition identiques
+❌ Reprendre le même vocabulaire émotionnel
+❌ Recycler des exemples ou métaphores
+EXIGENCES DE RENOUVELLEMENT :
+✅ Données inédites : Nouvelles stats, nouveaux angles
+✅ Vocabulaire enrichi : Registre lexical élargi
+✅ Approche renouvelée : Perspective fraîche sur le sujet
+✅ Exemples originaux : Cas concrets inédits
+Structure de Section Innovante (300-400 mots)
+H3 - Titre créatif :
 
-    Rappel du problème résolu
-    Recommandation claire et justifiée
-    Étape suivante concrète
+Éviter les formules déjà utilisées dans l'article
+Inventer un angle inédit même sur des concepts connus
 
-Pour intention navigationnelle :
+Paragraphe 1 - Ouverture anti-redondance :
 
-    Synthèse des avantages présentés
-    Invitation à l'action naturelle
-    Contact ou information pratique
+Bannir "Comme nous l'avons vu" et similaires
+Créer une transition fluide mais originale
+Introduire un nouvel aspect du sujet
 
-Règles de rédaction
+Paragraphes 2-3 - Développement enrichi :
 
-Ton et engagement :
+Nouvelles données exclusivement
+Vocabulaire technique/émotionnel renouvelé
+Exemples concrets jamais mentionnés
 
-    Actionnable et motivant
-    Intégration naturelle du mot-clé principal
-    Éviter les formules vides : "En conclusion", "Pour résumer"
-    Maximum 100-120 mots
+Paragraphe 4 - Transition inventive :
 
-Structure technique :
+Éviter les transitions bateau
+Créer de la curiosité pour la suite
+Maintenir l'engagement sans répétition
 
-    Dernière chance d'optimisation SEO subtile
-    Préparation d'éventuels liens internes
-    Méta-description potentielle dans la synthèse
+Techniques de Diversification par Angle
+VOCABULAIRE ANTI-RÉPÉTITION :
+Si "sérénité" déjà utilisé :
 
-Checklist finale :
+Alternatives : apaisement, quiétude, zen attitude, équilibre
+Reformulations : état d'esprit paisible, climat serein
 
-    Le lecteur sait quoi faire après lecture
-    Les points clés sont mémorisables
-    Le mot-clé principal revient naturellement
-    La conclusion ajoute de la valeur (pas juste un résumé)
+Si "62% des consommateurs" déjà utilisé :
 
-🔧 CONSEILS D'UTILISATION
-Workflow recommandé
+Alternatives : "2 Français sur 3", "La majorité des acheteurs", "6 ménages sur 10"
 
-    Prompt Introduction → Validation → Ajustements
-    Prompt Section × nombre de sections → Cohérence globale
-    Prompt Conclusion → Vérification de l'ensemble
+Si "paiement échelonné" sur-utilisé :
 
-Principe transversal
+Alternatives : fractionnement, mensualisation, étalement, planification
 
-"Le meilleur SEO reste invisible" - Si l'optimisation se remarque, elle est trop visible. L'objectif : créer du contenu si utile que les lecteurs le partagent naturellement et que Google le comprend parfaitement.
-Vérification globale
+Règles de Cohérence Strictes
 
-    Densité de mots-clés naturelle sur l'ensemble
-    Cohérence du ton du début à la fin
-    Valeur ajoutée de chaque section
-    Fluidité de lecture sans accrocs SEO
+✅ Vocabulaire homogène avec l'angle initial
+✅ Ton constant du début à la fin
+✅ Données exploitées selon la perspective de l'angle
+✅ Transition naturelle vers la suite
+❌ Aucun changement d'approche en cours de section
 
+OBLIGATION : Chaque section (300-400 mots) doit intégrer 2-3 éléments visuels selon son type.
+SECTION ÉDUCATIVE (bases/concepts) :
+✅ Définition box : Encadré explicatif
+✅ Exemple concret : Cas pratique mis en forme
+✅ Points clés : Liste à puces (3-5 max)
+Exemple d'intégration :
+Votre paragraphe d'explication...
+
+📋 **LES 4 AVANTAGES CONCRETS :**
+- Mensualités fixes et prévisibles
+- Aucun frais caché ni surprise
+- Préservation de votre épargne d'urgence  
+- Accès à des gammes supérieures
+
+Votre paragraphe de transition...
+
+SECTION INFORMATIVE (données/tendances) :
+✅ Tableau comparatif : Max 3 colonnes, 4 lignes
+✅ Infographie textuelle : Stats visuelles
+✅ Timeline : Évolution temporelle
+Exemple d'intégration :
+Les données révèlent une transformation notable...
+
+| Critère | 2022 | 2023 | Évolution |
+|---------|------|------|-----------|
+| Recherches "paiement échelonné" | 100% | 160% | +60% |
+| Conversion e-commerce | 15% | 18.75% | +25% |
+| Satisfaction client | 7.2/10 | 8.7/10 | +21% |
+
+Cette progression s'explique par...
+
+SECTION COMPARATIVE :
+✅ Tableau VS : Comparaison claire
+✅ Avantages/Inconvénients : Pour/Contre structuré
+✅ Score final : Notation visuelle
+SECTION COMMERCIALE (CTA) :
+✅ Bénéfices box : Encadré récapitulatif
+✅ Urgence douce : Élément temporel
+✅ CTA button text : Formulation du bouton
+Règles d'intégration naturelle :
+AVANT l'élément visuel :
+
+Phrase d'introduction qui prépare
+"Les chiffres parlent d'eux-mêmes :", "Concrètement :", "En détail :"
+
+APRÈS l'élément visuel :
+
+Phrase qui exploite/commente l'élément
+Transition vers la suite du paragraphe
+
+INTERDICTIONS :
+❌ Élément visuel "parachuté" sans contexte
+❌ Plus de 3 éléments visuels par section
+❌ Tableaux de plus de 4 lignes (lisibilité)
+❌ Listes à puces de plus de 6 points
+
+## ⚠️ RÈGLES DE SORTIE STRICTES
+
+### CONTENU AUTORISÉ UNIQUEMENT :
+- Texte de l'introduction/section/conclusion SEULEMENT
+- Aucun commentaire, analyse ou métadonnées
+- Aucune mention de SEO, angle, stratégie ou optimisation
+
+### INTERDICTIONS ABSOLUES :
+❌ **JAMAIS de mentions techniques** : "SEO invisible", "angle humain", "Hook émotionnel"
+❌ **JAMAIS de points forts** ou d'analyses en fin de contenu
+❌ **JAMAIS d'instructions** ou de conseils rédactionnels
+❌ **JAMAIS de checklist** ou d'éléments de validation
+❌ **JAMAIS de métadonnées** entre parenthèses ou crochets
+
+### FORMAT DE SORTIE EXIGÉ :
+```
+[VOTRE CONTENU ICI - TEXTE PUR UNIQUEMENT]
+```
+
+**RIEN D'AUTRE. AUCUN COMMENTAIRE. AUCUNE ANALYSE.**
+
+### EXEMPLE DE CE QUI EST INTERDIT :
+```
+❌ **Points forts :**  
+❌ ✅ **Hook émotionnel**...
+❌ *(Transition vers la section suivante...)*
+❌ ---
+❌ **Ton** : Pédagogique et rassurant...
+```
+
+### EXEMPLE DE SORTIE CORRECTE :
+
+Les chiffres qui prouvent l'efficacité du paiement en 10 fois pour votre canapé d'angle
+[Suite du contenu sans aucun commentaire]
+
+**RÈGLE D'OR : Si ce n'est pas destiné au lecteur final, ne l'écrivez pas.**

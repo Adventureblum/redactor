@@ -685,3 +685,37 @@
 2025-08-08 16:07:45,863 - INFO - Traitement de: canapé d angle paiement en 10 fois sans frais...
 2025-08-08 16:07:45,864 - INFO - Tentative 1/2 pour ID 1
 2025-08-08 16:07:45,864 - INFO - Début appel OpenAI pour: canapé d angle paiement en 10 fois sans frais...
+2025-08-12 17:26:02,740 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-08-12 17:26:02,743 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-08-12 17:26:02,749 - INFO - === Début traitement ID 1 ===
+2025-08-12 17:26:02,750 - INFO - Consigne trouvée pour ID 1: consigne_20250730_160622_ab894598.json
+2025-08-12 17:26:02,751 - INFO - Traitement de: canapé d angle paiement en 10 fois sans frais...
+2025-08-12 17:26:02,751 - INFO - Tentative 1/2 pour ID 1
+2025-08-12 17:26:02,751 - INFO - Début appel OpenAI pour: canapé d angle paiement en 10 fois sans frais...
+2025-08-12 17:26:34,750 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 17:26:34,773 - INFO - Réponse brute reçue: 4891 caractères
+2025-08-12 17:26:34,773 - INFO - JSON parsé avec succès: 4416 caractères
+2025-08-12 17:26:34,778 - INFO - ✅ Succès traitement ID 1 - Données structurées: 4866 caractères
+2025-08-12 17:26:34,778 - INFO -    📊 Métadonnées: 3 stats, 1 insights
+2025-08-12 17:26:36,787 - INFO - === Début traitement ID 2 ===
+2025-08-12 17:26:36,788 - INFO - Consigne trouvée pour ID 2: consigne_20250730_160622_ab894598.json
+2025-08-12 17:26:36,788 - INFO - Traitement de: canapé d'angle sans pied...
+2025-08-12 17:26:36,789 - INFO - Tentative 1/2 pour ID 2
+2025-08-12 17:26:36,789 - INFO - Début appel OpenAI pour: canapé d'angle sans pied...
+2025-08-13 12:03:50,330 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-08-13 12:03:50,331 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-08-13 12:03:50,336 - INFO - === Début traitement ID 2 ===
+2025-08-13 12:03:50,338 - INFO - Consigne trouvée pour ID 2: consigne_20250730_160622_ab894598.json
+2025-08-13 12:03:50,338 - INFO - Traitement de: canapé d'angle sans pied...
+2025-08-13 12:03:50,338 - INFO - Tentative 1/2 pour ID 2
+2025-08-13 12:03:50,338 - INFO - Début appel OpenAI pour: canapé d'angle sans pied...
+2025-08-13 12:04:07,519 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-13 12:04:07,533 - INFO - Réponse brute reçue: 3703 caractères
+2025-08-13 12:04:07,533 - INFO - JSON parsé avec succès: 3331 caractères
+2025-08-13 12:04:07,536 - INFO - ✅ Succès traitement ID 2 - Données structurées: 3666 caractères
+2025-08-13 12:04:07,536 - INFO -    📊 Métadonnées: 1 stats, 1 insights
+2025-08-13 12:04:09,541 - INFO - === Début traitement ID 3 ===
+2025-08-13 12:04:09,543 - INFO - Consigne trouvée pour ID 3: consigne_20250730_160622_ab894598.json
+2025-08-13 12:04:09,543 - INFO - Traitement de: canapé d'angle sans coussin...
+2025-08-13 12:04:09,543 - INFO - Tentative 1/2 pour ID 3
+2025-08-13 12:04:09,543 - INFO - Début appel OpenAI pour: canapé d'angle sans coussin...

@@ -14,18 +14,6 @@ from typing import Dict, List, Any, Optional
 from pathlib import Path
 import requests
 
-# Chargement des variables d'environnement depuis .env si le fichier existe
-def load_env_file():
-    env_file = Path('.env')
-    if env_file.exists():
-        with open(env_file, 'r') as f:
-            for line in f:
-                if '=' in line and not line.startswith('#'):
-                    key, value = line.strip().split('=', 1)
-                    os.environ[key] = value.strip('"').strip("'")
-
-load_env_file()
-
 
 class DeepSeekClient:
     """Client pour l'API DeepSeek avec gestion d'erreurs avancée"""
@@ -137,10 +125,14 @@ class ArticleOrchestrator:
                  temperature: float = 0.1,
                  prompts_dir: str = "prompts"):
         
-        # Initialisation du client DeepSeek
+        # 🎯 MÉTHODE SIMPLIFIÉE - Variables d'environnement uniquement
         deepseek_key = os.getenv('DEEPSEEK_KEY')
         if not deepseek_key:
-            raise ValueError("Variable d'environnement DEEPSEEK_KEY manquante")
+            print("❌ Variable d'environnement DEEPSEEK_KEY manquante.")
+            print("💡 Pour définir la variable:")
+            print("   Linux/Mac: export DEEPSEEK_KEY='votre_clé_ici'")
+            print("   Windows:   set DEEPSEEK_KEY=votre_clé_ici")
+            sys.exit(1)
         
         self.llm = DeepSeekClient(deepseek_key, model_name)
         self.prompt_manager = PromptManager(prompts_dir)
@@ -271,34 +263,35 @@ class ArticleOrchestrator:
         """Appelle un agent avec son prompt et contexte - Version DeepSeek"""
         prompt_file = self.agent_prompts[agent_name]
         system_prompt = self.prompt_manager.load_prompt(prompt_file)
-        
+
+        # Si le contexte contient déjà previous_content, inutile de le doubler
         context_str = json.dumps(context, ensure_ascii=False, indent=2)
-        
-        # Construction des messages au format DeepSeek
+
         messages = [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": f"Données à traiter:\n{context_str}"}
         ]
-        
-        # Ajoute l'historique pour la cohérence
-        if self.context_history:
-            history = "\n---\n".join(self.context_history[-2:])
-            messages.append({"role": "user", "content": f"Contenu précédent pour cohérence:\n{history}"})
-        
-        # Appel à l'API DeepSeek
+
+
+
+        # Debug pour voir exactement ce qui est envoyé
+        print("\n=== 📤 PROMPT ENVOYÉ À L'AGENT:", agent_name, "===")
+        for msg in messages:
+            print(f"[{msg['role'].upper()}] {msg['content']}\n")
+        print("=== FIN PROMPT ===\n")
+
         response = self.llm.chat_completions_create(
             messages=messages,
             temperature=self.temperature,
             max_tokens=3000
         )
-        
-        # Extraction du contenu et tracking
+
         content = response['choices'][0]['message']['content']
         usage = response.get('usage', {})
         tokens_used = usage.get('total_tokens', 0)
-        
+
         print(f"   💰 Agent {agent_name} - Tokens: {tokens_used}")
-        
+
         return content
     
     def _get_first_section_title(self, structure: Dict) -> str:
@@ -454,6 +447,7 @@ def main():
     print("📝 Compatible avec la structure de données existante")
     print("🚀 Utilise l'API DeepSeek pour la génération de contenu")
     
+    # ❌ SUPPRIMER ce bloc (déjà géré dans __init__)
     # Vérification de la clé API DeepSeek
     if not os.getenv('DEEPSEEK_KEY'):
         print("❌ Variable d'environnement DEEPSEEK_KEY manquante.")

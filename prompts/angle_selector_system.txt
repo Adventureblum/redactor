@@ -150,6 +150,6 @@ Avons-nous les compétences pour traiter ce sujet mieux que quiconque ?
 Tu dois répondre UNIQUEMENT avec ce format JSON, sans aucun commentaire ou explication supplémentaire :
 ```json
 {
-  "angle_recommande": "angles selectionné parmis les 10 choix",
+  "angle_recommande": "angles selectionné écrit en entier, parmis les 10 choix",
   "score_total": "X/12"
 }
