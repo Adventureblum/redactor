@@ -1,0 +1,257 @@
+# Prompt SEO : Rédaction de contenu authentique et optimisé
+
+## Principe fondamental
+**Informer d'abord, optimiser ensuite.** Un contenu utile et bien écrit se référence naturellement. L'objectif est de créer du contenu que les humains lisent avec plaisir et que Google comprend facilement.
+
+---
+
+## Format d'entrée
+
+```json
+{
+  "sujet_principal": "Thème à traiter",
+  "mots_cles_cibles": ["mot-clé principal", "mots-clés secondaires"],
+  "audience_cible": "Qui lit ce contenu (débutants, experts, etc.)",
+  "intention_recherche": "informationnelle/transactionnelle/navigationnelle",
+  "longueur_cible": "800-1500 mots (ou autre)",
+  "angle_unique": "Ce qui différencie cet article de la concurrence",
+  "donnees_disponibles": "Statistiques, études, sources fiables"
+}
+```
+
+---
+
+## Structure SEO optimisée
+
+### Titre principal (H1)
+- **Longueur** : 50-60 caractères
+- **Inclut le mot-clé principal** naturellement
+- **Promet une valeur concrète** ("Comment", "Guide", chiffres, année)
+- **Évite le clickbait** : reste descriptif et honnête
+
+### Introduction efficace
+- **Accroche forte** : Statistique surprenante, question ou fait intriguant
+- **Contexte rapide** : Pourquoi ce sujet est important maintenant
+- **Promesse claire** : Ce que le lecteur va apprendre/gagner
+- **Longueur** : 100-150 mots maximum
+
+### Corps de l'article
+**Titres de sections (H2/H3)**
+- Descriptifs ET engageants
+- Incluent naturellement les mots-clés secondaires
+- Maximum 6-8 mots
+- Structure logique (du général au spécifique)
+
+**Paragraphes**
+- **1 idée par paragraphe**
+- **3-5 phrases maximum** par paragraphe
+- **Phrases courtes** : 15-20 mots en moyenne
+- **Voix active** privilégiée
+
+### Conclusion actionnable
+- **Résumé des points clés** (2-3 takeaways maximum)
+- **Conseil pratique** ou étape suivante concrète
+- **Évite les formules vides** ("En conclusion", "Pour résumer")
+
+---
+
+## Règles de rédaction naturelle
+
+### ✅ À faire impérativement
+
+**Valeur d'abord**
+- Chaque section apporte une information utile
+- Données concrètes et vérifiables
+- Exemples spécifiques et détaillés
+- Réponses aux vraies questions des lecteurs
+
+**Lisibilité optimale**
+- Phrases variées : courtes (5-10 mots) ET moyennes (15-20 mots)
+- Transitions naturelles entre idées
+- Mots simples quand c'est possible
+- Définition des termes techniques
+
+**Engagement authentique**
+- Ton conversationnel mais professionnel
+- Questions rhétoriques **parcimonieuses** (1-2 max par article)
+- Éléments visuels : tableaux, listes, mise en forme
+
+### ❌ À éviter absolument
+
+**Pièges SEO classiques**
+- Bourrage de mots-clés (densité naturelle : 1-2%)
+- Répétitions artificielles des mêmes termes
+- Formules robotiques ("nous allons voir", "il faut savoir que")
+- Transitions mécaniques ("fort de ces éléments")
+
+**Contenu creux**
+- Généralités sans valeur ajoutée
+- Phrases de remplissage
+- Statistiques non contextualisées
+- Exemples génériques ou inventés
+
+**Ton artificiel**
+- Questions rhétoriques systématiques
+- Émojis répétitifs
+- Call-to-action forcés
+- Superlatifs excessifs
+
+---
+
+## Optimisation SEO technique
+
+### Mots-clés intelligents
+- **Intégration naturelle** dans le flux de lecture
+- **Variantes et synonymes** pour éviter la répétition
+- **Champ sémantique élargi** autour du sujet principal
+- **Mots-clés longue traîne** dans les sous-titres
+
+### Structure technique
+- **URL optimisée** : courte, descriptive, avec trait d'union
+- **Meta description** : 150-160 caractères, incitative
+- **Balises alt** pour images : descriptives et utiles
+- **Liens internes** pertinents (2-3 maximum)
+
+### Optimisation expérience utilisateur
+- **Temps de lecture** indiqué si pertinent
+- **Table des matières** pour articles longs (>1500 mots)
+- **FAQ** si appropriée au sujet
+- **Mise en forme** aérée avec espaces blancs
+
+---
+
+## Types de contenu selon l'intention
+
+### Intention informationnelle
+**Objectif** : Éduquer et informer
+- Structure : Définition → Explication → Exemples → Applications
+- Ton : Expert mais accessible
+- Longueur : 1000-2000 mots
+- Focus : Exhaustivité et pédagogie
+
+### Intention transactionnelle
+**Objectif** : Aider à choisir/acheter
+- Structure : Problème → Solutions → Comparaisons → Recommandation
+- Ton : Consultant neutre et objectif
+- Longueur : 800-1500 mots
+- Focus : Praticité et aide à la décision
+
+### Intention navigationnelle
+**Objectif** : Présenter une marque/service
+- Structure : Présentation → Avantages → Preuves → Contact
+- Ton : Professionnel et rassurant
+- Longueur : 600-1200 mots
+- Focus : Crédibilité et différenciation
+
+---
+
+## Checklist qualité finale
+
+### Contenu
+- [ ] Chaque section apporte une valeur unique
+- [ ] Les données sont vérifiables et récentes
+- [ ] Les exemples sont spécifiques et crédibles
+- [ ] Le lecteur peut agir concrètement après lecture
+
+### SEO
+- [ ] Mot-clé principal dans le titre et URL
+- [ ] Mots-clés secondaires dans les H2/H3
+- [ ] Densité de mots-clés naturelle (1-2%)
+- [ ] Meta description optimisée
+
+### Lisibilité
+- [ ] Aucune phrase > 25 mots
+- [ ] Paragraphes courts (3-5 phrases max)
+- [ ] Transitions fluides entre sections
+- [ ] Ton cohérent du début à la fin
+
+### Authenticité
+- [ ] Se lit comme écrit par un humain expert
+- [ ] Évite les formules répétitives
+- [ ] Pas de bourrage de mots-clés visible
+- [ ] Apporte une perspective unique sur le sujet
+
+---
+
+## Exemple de transformation
+
+### ❌ Version SEO artificielle
+> "Les voitures électriques sont l'avenir. Les voitures électriques révolutionnent le transport. Découvrons ensemble les voitures électriques et leur recharge. Nous allons voir comment recharger votre voiture électrique..."
+
+### ✅ Version SEO naturelle
+> "70% des propriétaires de véhicules électriques rechargent exclusivement à domicile. Mais que se passe-t-il lors des longs trajets ? Ce guide détaille les solutions pratiques pour recharger sur autoroute, avec des comparaisons de bornes et des coûts réels."
+
+---
+
+## Conseil final
+
+**Le meilleur SEO reste invisible.** Si un lecteur remarque vos optimisations, c'est qu'elles sont trop visibles. L'objectif : créer du contenu si utile et bien écrit que les lecteurs le partagent naturellement et que Google le comprend parfaitement.
+
+
+                "title": "Canapé d'angle paiement en 10 fois sans frais : Guide complet pour un achat malin",
+                "data_exploitation_summary": "L'article exploite les données pour éduquer sur les options de paiement, présenter des solutions pratiques et optimiser le choix du canapé d'angle avec des conseils financiers.",
+                "structure": {
+                    "introduction": {
+                        "objective": "Captiver avec les données les plus marquantes disponibles",
+                        "content_hint": "Présenter une statistique sur l'augmentation des achats de canapés en paiement fractionné.",
+                        "primary_hook": "Saviez-vous que 60% des achats de canapés d'angle se font désormais via des options de paiement fractionné sans frais ?"
+                    },
+                    "section_1": {
+                        "title": "Comprendre les avantages du paiement en 10 fois sans frais pour votre canapé d'angle",
+                        "angle": "éducatif",
+                        "focus_theme": "bases_concepts",
+                        "objectives": [
+                            "Expliquer le fonctionnement du paiement en 10 fois sans frais",
+                            "Démontrer les avantages financiers pour le client"
+                        ],
+                        "key_points": [
+                            "Comment fonctionne le crédit accessoire avec des partenaires comme Alma ou BNP Paribas",
+                            "Impact sur le budget mensuel avec des mensualités fixes"
+                        ],
+                        "data_to_include": [
+                            "Taux annuel effectif et montant des mensualités",
+                            "Exemples concrets avec des canapés à différents prix"
+                        ]
+                    },
+                    "section_2": {
+                        "title": "Où acheter son canapé d'angle en 10 fois sans frais à Ajaccio, Bastia ou Paris ?",
+                        "angle": "commercial léger",
+                        "focus_theme": "solutions_pratiques",
+                        "objectives": [
+                            "Lister les enseignes proposant cette option (Conforama, Mandinet Lognes, etc.)",
+                            "Conseils pour choisir le bon partenaire financier (Alma, BNP Paribas)"
+                        ],
+                        "key_points": [
+                            "Comparaison des offres disponibles sur le Boulevard Haussmann à Paris ou en Corse",
+                            "Avantages des assurances facultatives comme Cardif Assurance"
+                        ],
+                        "data_to_include": [
+                            "Coordonnées des magasins à Ajaccio et Bastia",
+                            "Conditions de résiliation et catégorie mandataire"
+                        ],
+                        "cta_hint": "Découvrez les canapés disponibles près de chez vous avec notre outil de localisation"
+                    },
+                    "section_3": {
+                        "title": "Optimiser son achat : conseils pour profiter au mieux du paiement en 10 fois",
+                        "angle": "commercial subtil",
+                        "focus_theme": "optimisation_resultats",
+                        "objectives": [
+                            "Maximiser les avantages du paiement fractionné",
+                            "Éviter les pièges courants"
+                        ],
+                        "key_points": [
+                            "Comment utiliser les codes promo pour réduire encore le coût total",
+                            "Choisir entre payez en 5x ou 10x selon son budget"
+                        ],
+                        "data_to_include": [
+                            "Témoignages de clients satisfaits",
+                            "Tableau comparatif des solutions de financement"
+                        ],
+                        "cta_hint": "Profitez de notre offre exclusive BNP pour finaliser votre achat en toute sérénité"
+                    },
+                    "conclusion": {
+                        "objective": "Synthèse des bénéfices prouvés et ouverture vers action basée sur les données présentées",
+                        "content_hint": "Résumé des avantages clés et incitation à profiter des offres valables limitées dans le temps"
+                    }
+                }
+            },

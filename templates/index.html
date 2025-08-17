@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sélection des Requêtes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-3xl mx-auto bg-white shadow rounded-xl p-6">
+    <h1 class="text-2xl font-bold mb-4 text-indigo-600">Consigne ID: {{ consigne_id }}</h1>
+    <p class="text-sm text-gray-500 mb-6">Fichier chargé : {{ filename }}</p>
+    
+    <form method="POST" action="{{ url_for('process_queries') }}">
+      <ul class="space-y-3">
+        {% for query in queries %}
+        <li class="flex items-start space-x-3">
+          <input 
+            type="checkbox" 
+            name="selected_queries" 
+            value="{{ query.id }}"
+            {% if query.id|string in processed_ids %} disabled checked {% endif %}
+            class="mt-1 h-4 w-4 text-indigo-600"
+          >
+          <label class="text-gray-800">
+            <span class="font-semibold">#{{ query.id }}</span> – {{ query.text }}
+          </label>
+        </li>
+        {% endfor %}
+      </ul>
+      <button type="submit" class="mt-6 bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700">
+        Traiter les requêtes sélectionnées
+      </button>
+    </form>
+  </div>
+</body>
+</html>

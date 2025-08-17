@@ -1,0 +1,1271 @@
+2025-07-24 12:51:38,009 - INFO - Début traitement de 1 requêtes
+2025-07-24 12:51:38,009 - INFO - Début traitement ID 0: comment recharger voiture électrique sur borne...
+2025-07-24 12:51:38,011 - INFO - Consigne trouvée: consigne_20250718_133051_ee7e3b48.json
+2025-07-24 12:51:38,870 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-07-24 12:51:38,871 - ERROR - Erreur API OpenAI: Error code: 400 - {'error': {'message': "Unknown parameter: 'prompt.input'.", 'type': 'invalid_request_error', 'param': 'prompt.input', 'code': 'unknown_parameter'}}
+2025-07-24 12:51:38,871 - INFO - Résumé: 0 succès / 1 requêtes
+2025-07-24 12:57:09,750 - INFO - Début traitement de 1 requêtes
+2025-07-24 12:57:09,750 - INFO - Début traitement ID 0: comment recharger voiture électrique sur borne...
+2025-07-24 12:57:09,752 - INFO - Consigne trouvée: consigne_20250718_133051_ee7e3b48.json
+2025-07-24 12:57:18,837 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 12:57:19,040 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_68821186157c819db9db1e8a1f598d480002b59c15786d38 "HTTP/1.1 200 OK"
+2025-07-24 12:57:19,043 - INFO - Succès traitement ID 0
+2025-07-24 12:57:19,043 - INFO - Résumé: 1 succès / 1 requêtes
+2025-07-24 14:04:03,771 - INFO - Début traitement de 1 requêtes
+2025-07-24 14:04:03,773 - INFO - Début traitement ID 1: how to charge an electic car...
+2025-07-24 14:04:03,774 - INFO - Consigne trouvée: consigne_20250718_133051_ee7e3b48.json
+2025-07-24 14:04:15,024 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:04:15,330 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_68822134705481a39e2507ad7ddcfe5a02c33e78328a45a9 "HTTP/1.1 200 OK"
+2025-07-24 14:04:15,420 - INFO - Succès traitement ID 1
+2025-07-24 14:04:15,420 - INFO - Résumé: 1 succès / 1 requêtes
+2025-07-24 14:05:35,350 - INFO - Début traitement de 2 requêtes
+2025-07-24 14:05:35,350 - INFO - Début traitement ID 2: comment brancher voiture électrique...
+2025-07-24 14:05:35,351 - INFO - Début traitement ID 3: pourquoi voiture électrique prend feu...
+2025-07-24 14:05:35,353 - INFO - Consigne trouvée: consigne_20250718_133051_ee7e3b48.json
+2025-07-24 14:05:35,552 - INFO - Consigne trouvée: consigne_20250718_133051_ee7e3b48.json
+2025-07-24 14:05:42,755 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:05:43,049 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_6882218f988081a39facc8f0e623cfe4015ed5f58451065b "HTTP/1.1 200 OK"
+2025-07-24 14:05:43,130 - INFO - Succès traitement ID 2
+2025-07-24 14:05:45,666 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:05:45,807 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_6882218f9504819eaa2c14802812bdce0dc4d47f9c76c386 "HTTP/1.1 200 OK"
+2025-07-24 14:05:45,810 - INFO - Succès traitement ID 3
+2025-07-24 14:05:45,810 - INFO - Résumé: 2 succès / 2 requêtes
+2025-07-24 14:06:23,308 - INFO - Début traitement de 1 requêtes
+2025-07-24 14:06:23,308 - INFO - Début traitement ID 2: comment brancher voiture électrique...
+2025-07-24 14:06:23,310 - INFO - Consigne trouvée: consigne_20250718_133051_ee7e3b48.json
+2025-07-24 14:06:29,700 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:06:29,956 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688221bf7f58819cb7fe00eb874e3ae20c80a1a3c267d621 "HTTP/1.1 200 OK"
+2025-07-24 14:06:30,038 - INFO - Succès traitement ID 2
+2025-07-24 14:06:30,038 - INFO - Résumé: 1 succès / 1 requêtes
+2025-07-24 14:40:18,351 - INFO - Début traitement de 4 requêtes
+2025-07-24 14:40:18,352 - INFO - Début traitement ID 1: how to charge an electic car...
+2025-07-24 14:40:18,353 - INFO - Début traitement ID 2: comment brancher voiture électrique...
+2025-07-24 14:40:18,354 - INFO - Début traitement ID 0: comment recharger voiture électrique sur borne...
+2025-07-24 14:40:18,354 - INFO - Début traitement ID 3: pourquoi voiture électrique prend feu...
+2025-07-24 14:40:18,358 - INFO - Consigne trouvée: consigne_20250718_134201_ed3c4700.json
+2025-07-24 14:40:18,698 - INFO - Consigne trouvée: consigne_20250718_134201_ed3c4700.json
+2025-07-24 14:40:18,699 - INFO - Consigne trouvée: consigne_20250718_134201_ed3c4700.json
+2025-07-24 14:40:18,702 - INFO - Consigne trouvée: consigne_20250718_134201_ed3c4700.json
+2025-07-24 14:40:19,635 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:40:19,883 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688229b2b8b88192b34454833665a40308ff3280c096aa08 "HTTP/1.1 200 OK"
+2025-07-24 14:40:19,887 - INFO - Succès traitement ID 3
+2025-07-24 14:40:19,919 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:40:20,139 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688229b2ba0481928417504ea29a0b460fdc2281d18e7d31 "HTTP/1.1 200 OK"
+2025-07-24 14:40:20,141 - INFO - Succès traitement ID 1
+2025-07-24 14:40:20,349 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:40:20,572 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688229b2b60c81a0ae2a4d84d06ff34f005d820889e13590 "HTTP/1.1 200 OK"
+2025-07-24 14:40:20,575 - INFO - Succès traitement ID 0
+2025-07-24 14:40:21,819 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:40:22,055 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688229b2b898819ebf23eb4790fd34dc050185aa8cf7b105 "HTTP/1.1 200 OK"
+2025-07-24 14:40:22,057 - INFO - Succès traitement ID 2
+2025-07-24 14:40:22,057 - INFO - Résumé: 4 succès / 4 requêtes
+2025-07-24 14:44:17,533 - INFO - Début traitement de 4 requêtes
+2025-07-24 14:44:17,534 - INFO - Début traitement ID 1: how to charge an electic car...
+2025-07-24 14:44:17,535 - INFO - Début traitement ID 2: comment brancher voiture électrique...
+2025-07-24 14:44:17,535 - INFO - Début traitement ID 0: comment recharger voiture électrique sur borne...
+2025-07-24 14:44:17,536 - INFO - Début traitement ID 3: pourquoi voiture électrique prend feu...
+2025-07-24 14:44:17,539 - INFO - Consigne trouvée: consigne_20250718_134201_ed3c4700.json
+2025-07-24 14:44:17,861 - INFO - Consigne trouvée: consigne_20250718_134201_ed3c4700.json
+2025-07-24 14:44:17,862 - INFO - Consigne trouvée: consigne_20250718_134201_ed3c4700.json
+2025-07-24 14:44:17,865 - INFO - Consigne trouvée: consigne_20250718_134201_ed3c4700.json
+2025-07-24 14:44:18,817 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:44:18,909 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:44:18,992 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:44:19,084 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_68822aa1e8d48192a80a04cd44e762ee010706294bb13ec1 "HTTP/1.1 200 OK"
+2025-07-24 14:44:19,087 - INFO - Succès traitement ID 2
+2025-07-24 14:44:19,121 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_68822aa1e58881a18343ef4f54de33330b8b56be2d75824d "HTTP/1.1 200 OK"
+2025-07-24 14:44:19,125 - INFO - Succès traitement ID 3
+2025-07-24 14:44:19,173 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_68822aa1e6c481a294c983b2f60cc39d06a7f3451df78d04 "HTTP/1.1 200 OK"
+2025-07-24 14:44:19,176 - INFO - Succès traitement ID 0
+2025-07-24 14:44:19,673 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:44:19,829 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_68822aa1ed08819ca96fe2991932d5e107c2846e235036ef "HTTP/1.1 200 OK"
+2025-07-24 14:44:19,832 - INFO - Succès traitement ID 1
+2025-07-24 14:44:19,832 - INFO - Résumé: 4 succès / 4 requêtes
+2025-07-24 14:47:47,841 - INFO - Début traitement de 4 requêtes
+2025-07-24 14:47:47,843 - INFO - Début traitement ID 1: how to charge an electic car...
+2025-07-24 14:47:47,844 - INFO - Début traitement ID 2: comment brancher voiture électrique...
+2025-07-24 14:47:47,844 - INFO - Début traitement ID 0: comment recharger voiture électrique sur borne...
+2025-07-24 14:47:47,845 - INFO - Début traitement ID 3: pourquoi voiture électrique prend feu...
+2025-07-24 14:47:47,850 - INFO - Consigne trouvée: consigne_20250718_133051_ee7e3b48.json
+2025-07-24 14:47:48,164 - INFO - Consigne trouvée: consigne_20250718_133051_ee7e3b48.json
+2025-07-24 14:47:48,166 - INFO - Consigne trouvée: consigne_20250718_133051_ee7e3b48.json
+2025-07-24 14:47:48,167 - INFO - Consigne trouvée: consigne_20250718_133051_ee7e3b48.json
+2025-07-24 14:47:49,234 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:47:49,311 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:47:49,349 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:47:49,360 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-24 14:47:49,481 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_68822b742f6c8191b967f9d9aa553edc045ef6f3c78d4688 "HTTP/1.1 200 OK"
+2025-07-24 14:47:49,483 - INFO - Schema ajouté pour requête ID 1
+2025-07-24 14:47:49,493 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_68822b743848819da9d55d74696ce046035e25db82a8677d "HTTP/1.1 200 OK"
+2025-07-24 14:47:49,513 - INFO - Schema ajouté pour requête ID 2
+2025-07-24 14:47:49,519 - INFO - Succès traitement ID 2
+2025-07-24 14:47:49,519 - INFO - Succès traitement ID 1
+2025-07-24 14:47:49,540 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_68822b74305c819dab949075709879f902b3f5a1de8cf234 "HTTP/1.1 200 OK"
+2025-07-24 14:47:49,542 - INFO - Schema ajouté pour requête ID 0
+2025-07-24 14:47:49,543 - INFO - Succès traitement ID 0
+2025-07-24 14:47:49,672 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_68822b74349481a2afd34a0213fb970d0ec882e92a1706d1 "HTTP/1.1 200 OK"
+2025-07-24 14:47:49,673 - INFO - Schema ajouté pour requête ID 3
+2025-07-24 14:47:49,675 - INFO - Succès traitement ID 3
+2025-07-24 14:47:49,675 - INFO - Résumé: 4 succès / 4 requêtes
+2025-07-30 14:24:47,710 - INFO - Début du traitement séquentiel des consignes
+2025-07-30 14:24:47,711 - INFO - Traitement du fichier: consigne_20250718_134201_ed3c4700.json
+2025-07-30 14:24:47,714 - WARNING - Traitement non séquentiel détecté dans consigne_20250718_134201_ed3c4700.json
+2025-07-30 14:24:47,714 - INFO - Début traitement ID 0
+2025-07-30 14:24:47,715 - INFO - Consigne trouvée pour ID 0: consigne_20250718_134201_ed3c4700.json
+2025-07-30 14:24:47,715 - INFO - Traitement de: exemple devis architecte d intérieur pdf...
+2025-07-30 14:24:55,649 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 14:24:56,137 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a0f106ad081a185bd12e7e02638850825b742bfc03583 "HTTP/1.1 200 OK"
+2025-07-30 14:24:56,178 - INFO - Succès traitement ID 0 - Réponse: 2428 caractères
+2025-07-30 14:24:57,182 - INFO - Début traitement ID 3
+2025-07-30 14:24:57,185 - INFO - Consigne trouvée pour ID 3: consigne_20250718_134201_ed3c4700.json
+2025-07-30 14:24:57,185 - INFO - Traitement de: architecture d'intérieur pour les nuls...
+2025-07-30 14:25:08,916 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 14:25:09,162 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a0f194a0c819e868acd48d0f7da0d0bdc6aa423e72fec "HTTP/1.1 200 OK"
+2025-07-30 14:25:09,187 - INFO - Succès traitement ID 3 - Réponse: 1783 caractères
+2025-07-30 14:25:10,193 - INFO - Début traitement ID 4
+2025-07-30 14:25:10,197 - INFO - Consigne trouvée pour ID 4: consigne_20250718_134201_ed3c4700.json
+2025-07-30 14:25:10,197 - INFO - Traitement de: architecture d'intérieur def...
+2025-07-30 14:25:20,099 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 14:25:20,344 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a0f264a34819ea388dd74c0a148ba0d2034ef67bf63eb "HTTP/1.1 200 OK"
+2025-07-30 14:25:20,353 - INFO - Succès traitement ID 4 - Réponse: 1707 caractères
+2025-07-30 14:25:21,357 - INFO - Début traitement ID 5
+2025-07-30 14:25:21,363 - INFO - Consigne trouvée pour ID 5: consigne_20250718_134201_ed3c4700.json
+2025-07-30 14:25:21,363 - INFO - Traitement de: architecture d'intérieur debouchés...
+2025-07-30 14:25:27,104 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 14:25:27,352 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a0f3174d881a2a787ea68b11f33c1083c6071a70e3cbe "HTTP/1.1 200 OK"
+2025-07-30 14:25:27,361 - INFO - Succès traitement ID 5 - Réponse: 1860 caractères
+2025-07-30 14:25:28,366 - INFO - Début traitement ID 6
+2025-07-30 14:25:28,370 - INFO - Consigne trouvée pour ID 6: consigne_20250718_134201_ed3c4700.json
+2025-07-30 14:25:28,370 - INFO - Traitement de: architecte d intérieur def...
+2025-07-30 14:25:39,146 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 14:25:39,517 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a0f3876c881a296a4008aedd9747d0157e30f30b779d6 "HTTP/1.1 200 OK"
+2025-07-30 14:25:39,525 - INFO - Succès traitement ID 6 - Réponse: 1474 caractères
+2025-07-30 14:25:40,529 - INFO - Début traitement ID 7
+2025-07-30 14:25:40,533 - INFO - Consigne trouvée pour ID 7: consigne_20250718_134201_ed3c4700.json
+2025-07-30 14:25:40,533 - INFO - Traitement de: architecte d intérieur de luxe...
+2025-07-30 14:25:50,573 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 14:25:50,946 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a0f44a13481a3b9cb451ffa3166390930338a9c51bdb3 "HTTP/1.1 200 OK"
+2025-07-30 14:25:50,962 - INFO - Succès traitement ID 7 - Réponse: 1888 caractères
+2025-07-30 14:25:51,965 - INFO - Toutes les queries traitées pour consigne_20250718_134201_ed3c4700.json
+2025-07-30 14:25:51,965 - INFO - Fichier consigne_20250718_134201_ed3c4700.json: 6 traités, 0 erreurs
+2025-07-30 14:25:51,965 - INFO - 
+        Résumé final:
+        - Fichiers traités: 1
+        - Queries traitées: 6
+        - Erreurs: 0
+        
+2025-07-30 17:55:31,246 - INFO - Début du traitement séquentiel des consignes
+2025-07-30 17:55:31,247 - INFO - Traitement du fichier: consigne_20250718_134201_ed3c4700.json
+2025-07-30 17:55:31,249 - INFO - Début traitement ID 0
+2025-07-30 17:55:31,250 - INFO - Consigne trouvée pour ID 0: consigne_20250718_134201_ed3c4700.json
+2025-07-30 17:55:31,250 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-30 17:55:40,533 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 17:55:40,900 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a4073f0bc8191a3fbf040e0525b0e00a9a82fe7f34093 "HTTP/1.1 200 OK"
+2025-07-30 17:55:40,945 - INFO - Succès traitement ID 0 - Réponse: 3174 caractères
+2025-07-30 17:55:41,949 - INFO - Début traitement ID 1
+2025-07-30 17:55:41,950 - INFO - Consigne trouvée pour ID 1: consigne_20250718_134201_ed3c4700.json
+2025-07-30 17:55:41,950 - INFO - Traitement de: canapé d angle paiement en 10 fois sans frais...
+2025-07-30 17:55:49,261 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 17:55:49,632 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a407e087c81a19515a178ea2012210a7b414ada03ba64 "HTTP/1.1 200 OK"
+2025-07-30 17:55:49,641 - INFO - Succès traitement ID 1 - Réponse: 1245 caractères
+2025-07-30 17:55:50,645 - INFO - Début traitement ID 2
+2025-07-30 17:55:50,646 - INFO - Consigne trouvée pour ID 2: consigne_20250718_134201_ed3c4700.json
+2025-07-30 17:55:50,646 - INFO - Traitement de: canapé d'angle sans pied...
+2025-07-30 17:55:57,243 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 17:55:57,487 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a4086b9d4819c82751a7dfb7c555e0aaa9ef758766030 "HTTP/1.1 200 OK"
+2025-07-30 17:55:57,496 - INFO - Succès traitement ID 2 - Réponse: 1786 caractères
+2025-07-30 17:55:58,499 - INFO - Début traitement ID 3
+2025-07-30 17:55:58,500 - INFO - Consigne trouvée pour ID 3: consigne_20250718_134201_ed3c4700.json
+2025-07-30 17:55:58,500 - INFO - Traitement de: canapé d'angle sans coussin...
+2025-07-30 17:56:04,985 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 17:56:05,353 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a408e953c8191b5cf7389867a6395031ae21cfbdaccd3 "HTTP/1.1 200 OK"
+2025-07-30 17:56:05,361 - INFO - Succès traitement ID 3 - Réponse: 2204 caractères
+2025-07-30 17:56:06,365 - INFO - Début traitement ID 4
+2025-07-30 17:56:06,366 - INFO - Consigne trouvée pour ID 4: consigne_20250718_134201_ed3c4700.json
+2025-07-30 17:56:06,366 - INFO - Traitement de: canapé d'angle sans accoudoir ikea...
+2025-07-30 17:56:13,230 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 17:56:14,446 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a4096723c81a293705d8f0c7b2af003195fcb0a3e055b "HTTP/1.1 200 OK"
+2025-07-30 17:56:14,454 - INFO - Succès traitement ID 4 - Réponse: 1824 caractères
+2025-07-30 17:56:15,457 - INFO - Début traitement ID 5
+2025-07-30 17:56:15,458 - INFO - Consigne trouvée pour ID 5: consigne_20250718_134201_ed3c4700.json
+2025-07-30 17:56:15,458 - INFO - Traitement de: canapé d'angle sans meridienne...
+2025-07-30 17:56:23,665 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 17:56:24,031 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a409fec2c819294409ff0f1c56336094254660e830376 "HTTP/1.1 200 OK"
+2025-07-30 17:56:24,039 - INFO - Succès traitement ID 5 - Réponse: 2264 caractères
+2025-07-30 17:56:25,042 - INFO - Toutes les queries traitées pour consigne_20250718_134201_ed3c4700.json
+2025-07-30 17:56:25,042 - INFO - Fichier consigne_20250718_134201_ed3c4700.json: 6 traités, 0 erreurs
+2025-07-30 17:56:25,042 - INFO - 
+        Résumé final:
+        - Fichiers traités: 1
+        - Queries traitées: 6
+        - Erreurs: 0
+        
+2025-07-30 18:00:47,774 - INFO - 🚀 Début du traitement séquentiel des consignes avec réponses complètes
+2025-07-30 18:00:47,774 - INFO - 📁 Traitement du fichier: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:00:47,777 - INFO - === Début traitement ID 0 ===
+2025-07-30 18:00:47,778 - INFO - Consigne trouvée pour ID 0: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:00:47,778 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-30 18:00:47,778 - INFO - Tentative 1/2 pour ID 0
+2025-07-30 18:00:47,778 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-30 18:00:58,980 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 18:00:59,200 - INFO - Réponse créée avec ID: resp_688a41b05340819cbd64e2276c6237ab01359895eb74a9cc, statut initial: completed
+2025-07-30 18:00:59,535 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a41b05340819cbd64e2276c6237ab01359895eb74a9cc "HTTP/1.1 200 OK"
+2025-07-30 18:00:59,541 - INFO - Réponse complète reçue: 2192 caractères
+2025-07-30 18:00:59,542 - INFO - Réponse validée comme complète (2192 caractères)
+2025-07-30 18:00:59,545 - INFO - ✅ Succès traitement ID 0 - Réponse: 2192 caractères
+2025-07-30 18:01:01,551 - INFO - === Début traitement ID 1 ===
+2025-07-30 18:01:01,553 - INFO - Consigne trouvée pour ID 1: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:01:01,554 - INFO - Traitement de: canapé d angle paiement en 10 fois sans frais...
+2025-07-30 18:01:01,554 - INFO - Tentative 1/2 pour ID 1
+2025-07-30 18:01:01,554 - INFO - Début appel OpenAI pour: canapé d angle paiement en 10 fois sans frais...
+2025-07-30 18:01:08,008 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 18:01:08,054 - INFO - Réponse créée avec ID: resp_688a41bda98c81a3a5f8049563c3af92088a21e9a943b27b, statut initial: completed
+2025-07-30 18:01:08,499 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a41bda98c81a3a5f8049563c3af92088a21e9a943b27b "HTTP/1.1 200 OK"
+2025-07-30 18:01:08,569 - INFO - Réponse complète reçue: 1547 caractères
+2025-07-30 18:01:08,573 - INFO - Réponse validée comme complète (1547 caractères)
+2025-07-30 18:01:08,579 - INFO - ✅ Succès traitement ID 1 - Réponse: 1547 caractères
+2025-07-30 18:01:10,584 - INFO - === Début traitement ID 2 ===
+2025-07-30 18:01:10,587 - INFO - Consigne trouvée pour ID 2: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:01:10,589 - INFO - Traitement de: canapé d'angle sans pied...
+2025-07-30 18:01:10,589 - INFO - Tentative 1/2 pour ID 2
+2025-07-30 18:01:10,589 - INFO - Début appel OpenAI pour: canapé d'angle sans pied...
+2025-07-30 18:01:17,618 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 18:01:17,697 - INFO - Réponse créée avec ID: resp_688a41c6ae9c81a398beb8e23ce23b200d6dc47a68a03466, statut initial: completed
+2025-07-30 18:01:17,961 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a41c6ae9c81a398beb8e23ce23b200d6dc47a68a03466 "HTTP/1.1 200 OK"
+2025-07-30 18:01:17,967 - INFO - Réponse complète reçue: 2235 caractères
+2025-07-30 18:01:17,967 - INFO - Réponse validée comme complète (2235 caractères)
+2025-07-30 18:01:17,971 - INFO - ✅ Succès traitement ID 2 - Réponse: 2235 caractères
+2025-07-30 18:01:19,976 - INFO - === Début traitement ID 3 ===
+2025-07-30 18:01:19,979 - INFO - Consigne trouvée pour ID 3: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:01:19,979 - INFO - Traitement de: canapé d'angle sans coussin...
+2025-07-30 18:01:19,980 - INFO - Tentative 1/2 pour ID 3
+2025-07-30 18:01:19,980 - INFO - Début appel OpenAI pour: canapé d'angle sans coussin...
+2025-07-30 18:01:29,267 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 18:01:29,272 - INFO - Réponse créée avec ID: resp_688a41d01410819f9605ee09359adb310a52af6d4185342e, statut initial: completed
+2025-07-30 18:01:29,510 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a41d01410819f9605ee09359adb310a52af6d4185342e "HTTP/1.1 200 OK"
+2025-07-30 18:01:29,531 - INFO - Réponse complète reçue: 2305 caractères
+2025-07-30 18:01:29,532 - INFO - Réponse validée comme complète (2305 caractères)
+2025-07-30 18:01:29,539 - INFO - ✅ Succès traitement ID 3 - Réponse: 2305 caractères
+2025-07-30 18:01:31,546 - INFO - === Début traitement ID 4 ===
+2025-07-30 18:01:31,549 - INFO - Consigne trouvée pour ID 4: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:01:31,550 - INFO - Traitement de: canapé d'angle sans accoudoir ikea...
+2025-07-30 18:01:31,550 - INFO - Tentative 1/2 pour ID 4
+2025-07-30 18:01:31,550 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir ikea...
+2025-07-30 18:01:46,099 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 18:01:46,167 - INFO - Réponse créée avec ID: resp_688a41dba3bc819e9da4b3278b458a1b005003812a0c774c, statut initial: completed
+2025-07-30 18:01:46,471 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a41dba3bc819e9da4b3278b458a1b005003812a0c774c "HTTP/1.1 200 OK"
+2025-07-30 18:01:46,477 - INFO - Réponse complète reçue: 2530 caractères
+2025-07-30 18:01:46,477 - INFO - Réponse validée comme complète (2530 caractères)
+2025-07-30 18:01:46,482 - INFO - ✅ Succès traitement ID 4 - Réponse: 2530 caractères
+2025-07-30 18:01:48,487 - INFO - === Début traitement ID 5 ===
+2025-07-30 18:01:48,490 - INFO - Consigne trouvée pour ID 5: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:01:48,491 - INFO - Traitement de: canapé d'angle sans meridienne...
+2025-07-30 18:01:48,491 - INFO - Tentative 1/2 pour ID 5
+2025-07-30 18:01:48,491 - INFO - Début appel OpenAI pour: canapé d'angle sans meridienne...
+2025-07-30 18:02:01,711 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-07-30 18:02:01,714 - INFO - Réponse créée avec ID: resp_688a41ec949c819dbb93f080c56860b508f4a4f8b6424f49, statut initial: completed
+2025-07-30 18:02:02,075 - INFO - HTTP Request: GET https://api.openai.com/v1/responses/resp_688a41ec949c819dbb93f080c56860b508f4a4f8b6424f49 "HTTP/1.1 200 OK"
+2025-07-30 18:02:02,080 - INFO - Réponse complète reçue: 2691 caractères
+2025-07-30 18:02:02,081 - INFO - Réponse validée comme complète (2691 caractères)
+2025-07-30 18:02:02,085 - INFO - ✅ Succès traitement ID 5 - Réponse: 2691 caractères
+2025-07-30 18:02:04,092 - INFO - ✅ Toutes les queries traitées pour consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:02:04,092 - INFO - 📊 Fichier consigne_20250718_134201_ed3c4700.json: 6 traités, 0 erreurs
+2025-07-30 18:02:04,092 - INFO - 
+📈 === RÉSUMÉ FINAL ===
+- Fichiers traités: 1
+- Queries traitées: 6
+- Erreurs: 0
+- Caractères générés: 13,500
+- Longueur moyenne: 2250 caractères
+- Durée totale: 0:01:16.318448
+- Succès: True
+=========================
+2025-07-30 18:22:50,980 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-07-30 18:22:50,980 - INFO - 📁 Traitement du fichier: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:22:50,992 - INFO - === Début traitement ID 0 ===
+2025-07-30 18:22:50,994 - INFO - Consigne trouvée pour ID 0: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:22:50,994 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-30 18:22:50,994 - INFO - Tentative 1/2 pour ID 0
+2025-07-30 18:22:50,994 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-30 18:23:22,986 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-30 18:23:23,023 - INFO - Réponse brute reçue: 5783 caractères
+2025-07-30 18:23:23,024 - INFO - JSON parsé avec succès: 5138 caractères
+2025-07-30 18:23:23,025 - INFO - Réponse agent validée: 3 sources, données dans 4 catégories
+2025-07-30 18:23:23,031 - INFO - ✅ Succès traitement ID 0 - Données structurées: 5658 caractères
+2025-07-30 18:23:23,031 - INFO -    📊 Métadonnées: 3 sources, 3 stats
+2025-07-30 18:23:25,036 - INFO - === Début traitement ID 1 ===
+2025-07-30 18:23:25,039 - INFO - Consigne trouvée pour ID 1: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:23:25,040 - INFO - Traitement de: canapé d angle paiement en 10 fois sans frais...
+2025-07-30 18:23:25,040 - INFO - Tentative 1/2 pour ID 1
+2025-07-30 18:23:25,040 - INFO - Début appel OpenAI pour: canapé d angle paiement en 10 fois sans frais...
+2025-07-30 18:24:00,463 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-30 18:24:00,467 - INFO - Réponse brute reçue: 6218 caractères
+2025-07-30 18:24:00,468 - INFO - JSON parsé avec succès: 5578 caractères
+2025-07-30 18:24:00,469 - INFO - Réponse agent validée: 3 sources, données dans 4 catégories
+2025-07-30 18:24:00,478 - INFO - ✅ Succès traitement ID 1 - Données structurées: 6128 caractères
+2025-07-30 18:24:00,479 - INFO -    📊 Métadonnées: 3 sources, 3 stats
+2025-07-30 18:24:02,484 - INFO - === Début traitement ID 2 ===
+2025-07-30 18:24:02,486 - INFO - Consigne trouvée pour ID 2: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:24:02,486 - INFO - Traitement de: canapé d'angle sans pied...
+2025-07-30 18:24:02,486 - INFO - Tentative 1/2 pour ID 2
+2025-07-30 18:24:02,487 - INFO - Début appel OpenAI pour: canapé d'angle sans pied...
+2025-07-30 18:24:31,129 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-30 18:24:31,132 - INFO - Réponse brute reçue: 5603 caractères
+2025-07-30 18:24:31,132 - INFO - JSON parsé avec succès: 5013 caractères
+2025-07-30 18:24:31,132 - INFO - Réponse agent validée: 2 sources, données dans 4 catégories
+2025-07-30 18:24:31,135 - INFO - ✅ Succès traitement ID 2 - Données structurées: 5543 caractères
+2025-07-30 18:24:31,135 - INFO -    📊 Métadonnées: 2 sources, 3 stats
+2025-07-30 18:24:33,138 - INFO - === Début traitement ID 3 ===
+2025-07-30 18:24:33,140 - INFO - Consigne trouvée pour ID 3: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:24:33,140 - INFO - Traitement de: canapé d'angle sans coussin...
+2025-07-30 18:24:33,140 - INFO - Tentative 1/2 pour ID 3
+2025-07-30 18:24:33,140 - INFO - Début appel OpenAI pour: canapé d'angle sans coussin...
+2025-07-30 18:25:07,434 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-30 18:25:07,438 - INFO - Réponse brute reçue: 5422 caractères
+2025-07-30 18:25:07,439 - INFO - JSON parsé avec succès: 4833 caractères
+2025-07-30 18:25:07,439 - INFO - Réponse agent validée: 2 sources, données dans 4 catégories
+2025-07-30 18:25:07,446 - INFO - ✅ Succès traitement ID 3 - Données structurées: 5378 caractères
+2025-07-30 18:25:07,446 - INFO -    📊 Métadonnées: 2 sources, 3 stats
+2025-07-30 18:25:09,451 - INFO - === Début traitement ID 4 ===
+2025-07-30 18:25:09,455 - INFO - Consigne trouvée pour ID 4: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:25:09,455 - INFO - Traitement de: canapé d'angle sans accoudoir ikea...
+2025-07-30 18:25:09,456 - INFO - Tentative 1/2 pour ID 4
+2025-07-30 18:25:09,456 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir ikea...
+2025-07-30 18:25:43,203 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-30 18:25:43,211 - INFO - Réponse brute reçue: 5945 caractères
+2025-07-30 18:25:43,215 - INFO - JSON parsé avec succès: 5356 caractères
+2025-07-30 18:25:43,216 - INFO - Réponse agent validée: 2 sources, données dans 4 catégories
+2025-07-30 18:25:43,225 - INFO - ✅ Succès traitement ID 4 - Données structurées: 5856 caractères
+2025-07-30 18:25:43,225 - INFO -    📊 Métadonnées: 2 sources, 3 stats
+2025-07-30 18:25:45,231 - INFO - === Début traitement ID 5 ===
+2025-07-30 18:25:45,235 - INFO - Consigne trouvée pour ID 5: consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:25:45,236 - INFO - Traitement de: canapé d'angle sans meridienne...
+2025-07-30 18:25:45,236 - INFO - Tentative 1/2 pour ID 5
+2025-07-30 18:25:45,237 - INFO - Début appel OpenAI pour: canapé d'angle sans meridienne...
+2025-07-30 18:26:20,509 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-30 18:26:20,511 - INFO - Réponse brute reçue: 6093 caractères
+2025-07-30 18:26:20,511 - INFO - JSON parsé avec succès: 5453 caractères
+2025-07-30 18:26:20,512 - INFO - Réponse agent validée: 3 sources, données dans 4 catégories
+2025-07-30 18:26:20,515 - INFO - ✅ Succès traitement ID 5 - Données structurées: 6058 caractères
+2025-07-30 18:26:20,515 - INFO -    📊 Métadonnées: 3 sources, 3 stats
+2025-07-30 18:26:22,519 - INFO - ✅ Toutes les queries traitées pour consigne_20250718_134201_ed3c4700.json
+2025-07-30 18:26:22,520 - INFO - 📊 Fichier consigne_20250718_134201_ed3c4700.json: 6 traités, 0 erreurs
+2025-07-30 18:26:22,520 - INFO - 
+📈 === RÉSUMÉ FINAL DÉTAILLÉ ===
+- Fichiers traités: 1
+- Queries traitées: 6
+- Erreurs: 0
+- Caractères générés: 34,621
+- Sources collectées: 15
+- Statistiques trouvées: 18
+- Longueur moyenne: 5770 caractères
+- Sources moyennes/query: 2.5
+- Durée totale: 0:03:31.540158
+- Succès global: True
+=================================
+2025-07-30 19:29:21,827 - INFO - Done: {'processed': 6, 'errors': 0, 'files': 1}
+2025-07-31 12:20:47,727 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-07-31 12:20:47,728 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-07-31 12:20:47,732 - INFO - === Début traitement ID 0 ===
+2025-07-31 12:20:47,733 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-07-31 12:20:47,733 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-31 12:20:47,733 - INFO - Tentative 1/2 pour ID 0
+2025-07-31 12:20:47,733 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 12:21:33,755 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 12:21:33,787 - INFO - Réponse brute reçue: 4956 caractères
+2025-07-31 12:21:33,788 - WARNING - Champ obligatoire manquant: sources
+2025-07-31 12:21:33,789 - INFO - JSON parsé avec succès: 4481 caractères
+2025-07-31 12:21:33,789 - WARNING - Champ obligatoire manquant ou vide: sources
+2025-07-31 12:21:33,789 - WARNING - Tentative 1 échouée pour ID 0
+2025-07-31 12:21:38,794 - INFO - Tentative 2/2 pour ID 0
+2025-07-31 12:21:38,802 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 12:22:04,967 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 12:22:04,975 - INFO - Réponse brute reçue: 4896 caractères
+2025-07-31 12:22:04,978 - WARNING - Champ obligatoire manquant: sources
+2025-07-31 12:22:04,979 - INFO - JSON parsé avec succès: 4422 caractères
+2025-07-31 12:22:04,981 - WARNING - Champ obligatoire manquant ou vide: sources
+2025-07-31 12:22:04,981 - WARNING - Tentative 2 échouée pour ID 0
+2025-07-31 12:22:04,981 - ERROR - ❌ Échec définitif traitement ID 0 après 2 tentatives
+2025-07-31 12:22:04,982 - ERROR - ❌ Arrêt du traitement pour consigne_20250730_160622_ab894598.json après échec ID 0
+2025-07-31 12:22:04,982 - INFO - 📊 Fichier consigne_20250730_160622_ab894598.json: 0 traités, 1 erreurs
+2025-07-31 12:22:04,982 - INFO - 
+📈 === RÉSUMÉ FINAL DÉTAILLÉ ===
+- Fichiers traités: 1
+- Queries traitées: 0
+- Erreurs: 1
+- Caractères générés: 0
+- Sources collectées: 0
+- Statistiques trouvées: 0
+- Longueur moyenne: 0 caractères
+- Sources moyennes/query: 0.0
+- Durée totale: 0:01:17.254707
+- Succès global: False
+=================================
+2025-07-31 14:05:29,589 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-07-31 14:05:29,590 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-07-31 14:05:29,592 - INFO - === Début traitement ID 0 ===
+2025-07-31 14:05:29,593 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-07-31 14:05:29,593 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-31 14:05:29,593 - INFO - Tentative 1/2 pour ID 0
+2025-07-31 14:05:29,593 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:05:52,376 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:05:52,410 - INFO - Réponse brute reçue: 4918 caractères
+2025-07-31 14:05:52,411 - WARNING - Champ obligatoire manquant: sources
+2025-07-31 14:05:52,411 - INFO - JSON parsé avec succès: 4443 caractères
+2025-07-31 14:05:52,411 - WARNING - Champ obligatoire manquant ou vide: sources
+2025-07-31 14:05:52,412 - WARNING - Tentative 1 échouée pour ID 0
+2025-07-31 14:05:57,417 - INFO - Tentative 2/2 pour ID 0
+2025-07-31 14:05:57,418 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:06:22,843 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:06:22,848 - INFO - Réponse brute reçue: 5073 caractères
+2025-07-31 14:06:22,848 - WARNING - Champ obligatoire manquant: sources
+2025-07-31 14:06:22,849 - INFO - JSON parsé avec succès: 4598 caractères
+2025-07-31 14:06:22,849 - WARNING - Champ obligatoire manquant ou vide: sources
+2025-07-31 14:06:22,849 - WARNING - Tentative 2 échouée pour ID 0
+2025-07-31 14:06:22,849 - ERROR - ❌ Échec définitif traitement ID 0 après 2 tentatives
+2025-07-31 14:06:22,850 - ERROR - ❌ Arrêt du traitement pour consigne_20250730_160622_ab894598.json après échec ID 0
+2025-07-31 14:06:22,850 - INFO - 📊 Fichier consigne_20250730_160622_ab894598.json: 0 traités, 1 erreurs
+2025-07-31 14:06:22,850 - INFO - 
+📈 === RÉSUMÉ FINAL DÉTAILLÉ ===
+- Fichiers traités: 1
+- Queries traitées: 0
+- Erreurs: 1
+- Caractères générés: 0
+- Sources collectées: 0
+- Statistiques trouvées: 0
+- Longueur moyenne: 0 caractères
+- Sources moyennes/query: 0.0
+- Durée totale: 0:00:53.260982
+- Succès global: False
+=================================
+2025-07-31 14:10:12,604 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-07-31 14:10:12,604 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-07-31 14:10:12,607 - INFO - === Début traitement ID 0 ===
+2025-07-31 14:10:12,608 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-07-31 14:10:12,608 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-31 14:10:12,608 - INFO - Tentative 1/2 pour ID 0
+2025-07-31 14:10:12,608 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:10:39,542 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:10:39,571 - INFO - Réponse brute reçue: 4686 caractères
+2025-07-31 14:10:39,571 - WARNING - Champ obligatoire manquant: sources
+2025-07-31 14:10:39,572 - INFO - JSON parsé avec succès: 4215 caractères
+2025-07-31 14:10:39,572 - ERROR - Erreur validation réponse agent: name 'sources' is not defined
+2025-07-31 14:10:39,572 - WARNING - Tentative 1 échouée pour ID 0
+2025-07-31 14:10:44,577 - INFO - Tentative 2/2 pour ID 0
+2025-07-31 14:10:44,578 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:13:19,617 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-07-31 14:13:19,618 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-07-31 14:13:19,621 - INFO - === Début traitement ID 0 ===
+2025-07-31 14:13:19,622 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-07-31 14:13:19,622 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-31 14:13:19,622 - INFO - Tentative 1/2 pour ID 0
+2025-07-31 14:13:19,622 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:13:43,002 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:13:43,019 - INFO - Réponse brute reçue: 4756 caractères
+2025-07-31 14:13:43,020 - WARNING - Champ obligatoire manquant: sources
+2025-07-31 14:13:43,020 - INFO - JSON parsé avec succès: 4279 caractères
+2025-07-31 14:13:43,020 - WARNING - Tentative 1 échouée pour ID 0
+2025-07-31 14:13:48,026 - INFO - Tentative 2/2 pour ID 0
+2025-07-31 14:13:48,026 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:14:13,603 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:14:13,606 - INFO - Réponse brute reçue: 5001 caractères
+2025-07-31 14:14:13,607 - WARNING - Champ obligatoire manquant: sources
+2025-07-31 14:14:13,607 - INFO - JSON parsé avec succès: 4531 caractères
+2025-07-31 14:14:13,607 - WARNING - Tentative 2 échouée pour ID 0
+2025-07-31 14:14:13,607 - ERROR - ❌ Échec définitif traitement ID 0 après 2 tentatives
+2025-07-31 14:14:13,607 - ERROR - ❌ Arrêt du traitement pour consigne_20250730_160622_ab894598.json après échec ID 0
+2025-07-31 14:14:13,607 - INFO - 📊 Fichier consigne_20250730_160622_ab894598.json: 0 traités, 1 erreurs
+2025-07-31 14:14:13,607 - INFO - 
+📈 === RÉSUMÉ FINAL DÉTAILLÉ ===
+- Fichiers traités: 1
+- Queries traitées: 0
+- Erreurs: 1
+- Caractères générés: 0
+- Sources collectées: 0
+- Statistiques trouvées: 0
+- Longueur moyenne: 0 caractères
+- Sources moyennes/query: 0.0
+- Durée totale: 0:00:53.989641
+- Succès global: False
+=================================
+2025-07-31 14:28:53,605 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-07-31 14:28:53,605 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-07-31 14:28:53,608 - INFO - === Début traitement ID 0 ===
+2025-07-31 14:28:53,609 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-07-31 14:28:53,609 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-31 14:28:53,609 - INFO - Tentative 1/2 pour ID 0
+2025-07-31 14:28:53,609 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:29:20,704 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:29:20,720 - INFO - Réponse brute reçue: 5093 caractères
+2025-07-31 14:29:20,721 - INFO - JSON parsé avec succès: 4616 caractères
+2025-07-31 14:29:20,723 - WARNING - Tentative 1 échouée pour ID 0
+2025-07-31 14:29:25,729 - INFO - Tentative 2/2 pour ID 0
+2025-07-31 14:29:25,729 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:31:45,151 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-07-31 14:31:45,152 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-07-31 14:31:45,154 - INFO - === Début traitement ID 0 ===
+2025-07-31 14:31:45,155 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-07-31 14:31:45,155 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-31 14:31:45,155 - INFO - Tentative 1/2 pour ID 0
+2025-07-31 14:31:45,155 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:32:12,125 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:32:12,138 - INFO - Réponse brute reçue: 4705 caractères
+2025-07-31 14:32:12,139 - INFO - JSON parsé avec succès: 4235 caractères
+2025-07-31 14:32:12,139 - WARNING - Tentative 1 échouée pour ID 0
+2025-07-31 14:32:17,143 - INFO - Tentative 2/2 pour ID 0
+2025-07-31 14:32:17,144 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:34:49,224 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-07-31 14:34:49,224 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-07-31 14:34:49,227 - INFO - === Début traitement ID 0 ===
+2025-07-31 14:34:49,228 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-07-31 14:34:49,228 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-31 14:34:49,228 - INFO - Tentative 1/2 pour ID 0
+2025-07-31 14:34:49,228 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:35:11,165 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:35:11,196 - INFO - Réponse brute reçue: 4676 caractères
+2025-07-31 14:35:11,197 - INFO - JSON parsé avec succès: 4199 caractères
+2025-07-31 14:35:11,198 - WARNING - Tentative 1 échouée pour ID 0
+2025-07-31 14:35:16,204 - INFO - Tentative 2/2 pour ID 0
+2025-07-31 14:35:16,204 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:35:44,221 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:35:44,226 - INFO - Réponse brute reçue: 4843 caractères
+2025-07-31 14:35:44,227 - INFO - JSON parsé avec succès: 4369 caractères
+2025-07-31 14:35:44,227 - WARNING - Tentative 2 échouée pour ID 0
+2025-07-31 14:35:44,228 - ERROR - ❌ Échec définitif traitement ID 0 après 2 tentatives
+2025-07-31 14:35:44,232 - ERROR - ❌ Arrêt du traitement pour consigne_20250730_160622_ab894598.json après échec ID 0
+2025-07-31 14:35:44,234 - INFO - 📊 Fichier consigne_20250730_160622_ab894598.json: 0 traités, 1 erreurs
+2025-07-31 14:35:44,235 - INFO - 
+📈 === RÉSUMÉ FINAL DÉTAILLÉ ===
+- Fichiers traités: 1
+- Queries traitées: 0
+- Erreurs: 1
+- Caractères générés: 0
+- Statistiques trouvées: 0
+- Longueur moyenne: 0 caractères
+- Durée totale: 0:00:55.010979
+- Succès global: False
+=================================
+2025-07-31 14:38:03,751 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-07-31 14:38:03,751 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-07-31 14:38:03,754 - INFO - === Début traitement ID 0 ===
+2025-07-31 14:38:03,755 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-07-31 14:38:03,755 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-07-31 14:38:03,755 - INFO - Tentative 1/2 pour ID 0
+2025-07-31 14:38:03,755 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-07-31 14:38:32,807 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:38:32,822 - INFO - Réponse brute reçue: 5014 caractères
+2025-07-31 14:38:32,822 - INFO - JSON parsé avec succès: 4543 caractères
+2025-07-31 14:38:32,829 - INFO - ✅ Succès traitement ID 0 - Données structurées: 4978 caractères
+2025-07-31 14:38:32,829 - INFO -    📊 Métadonnées: 3 stats, 1 insights
+2025-07-31 14:38:34,833 - INFO - === Début traitement ID 1 ===
+2025-07-31 14:38:34,836 - INFO - Consigne trouvée pour ID 1: consigne_20250730_160622_ab894598.json
+2025-07-31 14:38:34,837 - INFO - Traitement de: canapé d angle paiement en 10 fois sans frais...
+2025-07-31 14:38:34,837 - INFO - Tentative 1/2 pour ID 1
+2025-07-31 14:38:34,837 - INFO - Début appel OpenAI pour: canapé d angle paiement en 10 fois sans frais...
+2025-07-31 14:39:00,756 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-31 14:39:00,761 - INFO - Réponse brute reçue: 5164 caractères
+2025-07-31 14:39:00,761 - INFO - JSON parsé avec succès: 4689 caractères
+2025-07-31 14:39:00,766 - INFO - ✅ Succès traitement ID 1 - Données structurées: 5209 caractères
+2025-07-31 14:39:00,767 - INFO -    📊 Métadonnées: 3 stats, 1 insights
+2025-07-31 14:39:02,772 - INFO - === Début traitement ID 2 ===
+2025-07-31 14:39:02,775 - INFO - Consigne trouvée pour ID 2: consigne_20250730_160622_ab894598.json
+2025-07-31 14:39:02,775 - INFO - Traitement de: canapé d'angle sans pied...
+2025-07-31 14:39:02,776 - INFO - Tentative 1/2 pour ID 2
+2025-07-31 14:39:02,776 - INFO - Début appel OpenAI pour: canapé d'angle sans pied...
+2025-08-01 12:12:59,616 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-08-01 12:12:59,616 - INFO - 📁 Traitement du fichier: consigne_20250718_133051_ee7e3b48.json
+2025-08-01 12:12:59,619 - INFO - === Début traitement ID 0 ===
+2025-08-01 12:12:59,619 - INFO - Consigne trouvée pour ID 0: consigne_20250718_133051_ee7e3b48.json
+2025-08-01 12:12:59,620 - INFO - Traitement de: comment recharger voiture électrique sur borne...
+2025-08-01 12:12:59,620 - INFO - Tentative 1/2 pour ID 0
+2025-08-01 12:12:59,620 - INFO - Début appel OpenAI pour: comment recharger voiture électrique sur borne...
+2025-08-01 12:13:25,608 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-01 12:13:25,616 - INFO - Réponse brute reçue: 4830 caractères
+2025-08-01 12:13:25,616 - INFO - JSON parsé avec succès: 4384 caractères
+2025-08-01 12:13:25,618 - INFO - ✅ Succès traitement ID 0 - Données structurées: 4899 caractères
+2025-08-01 12:13:25,618 - INFO -    📊 Métadonnées: 3 stats, 1 insights
+2025-08-01 12:13:27,621 - INFO - === Début traitement ID 1 ===
+2025-08-01 12:13:27,624 - INFO - Consigne trouvée pour ID 1: consigne_20250718_133051_ee7e3b48.json
+2025-08-01 12:13:27,626 - INFO - Traitement de: comment recharger voiture électrique sur autoroute...
+2025-08-01 12:13:27,626 - INFO - Tentative 1/2 pour ID 1
+2025-08-01 12:13:27,626 - INFO - Début appel OpenAI pour: comment recharger voiture électrique sur autoroute...
+2025-08-01 12:13:53,745 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-01 12:13:53,750 - INFO - Réponse brute reçue: 5172 caractères
+2025-08-01 12:13:53,751 - INFO - JSON parsé avec succès: 4697 caractères
+2025-08-01 12:13:53,756 - INFO - ✅ Succès traitement ID 1 - Données structurées: 5122 caractères
+2025-08-01 12:13:53,756 - INFO -    📊 Métadonnées: 3 stats, 1 insights
+2025-08-01 12:13:55,760 - INFO - === Début traitement ID 2 ===
+2025-08-01 12:13:55,763 - INFO - Consigne trouvée pour ID 2: consigne_20250718_133051_ee7e3b48.json
+2025-08-01 12:13:55,763 - INFO - Traitement de: comment brancher voiture électrique...
+2025-08-01 12:13:55,764 - INFO - Tentative 1/2 pour ID 2
+2025-08-01 12:13:55,764 - INFO - Début appel OpenAI pour: comment brancher voiture électrique...
+2025-08-01 16:57:17,940 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-08-01 16:57:17,941 - INFO - 📁 Traitement du fichier: consigne_20250718_133051_ee7e3b48.json
+2025-08-01 16:57:17,944 - INFO - === Début traitement ID 2 ===
+2025-08-01 16:57:17,945 - INFO - Consigne trouvée pour ID 2: consigne_20250718_133051_ee7e3b48.json
+2025-08-01 16:57:17,946 - INFO - Traitement de: comment brancher voiture électrique...
+2025-08-01 16:57:17,946 - INFO - Tentative 1/2 pour ID 2
+2025-08-01 16:57:17,946 - INFO - Début appel OpenAI pour: comment brancher voiture électrique...
+2025-08-01 16:57:45,712 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-01 16:57:45,722 - INFO - Réponse brute reçue: 5061 caractères
+2025-08-01 16:57:45,723 - INFO - JSON parsé avec succès: 4587 caractères
+2025-08-01 16:57:45,726 - INFO - ✅ Succès traitement ID 2 - Données structurées: 5147 caractères
+2025-08-01 16:57:45,726 - INFO -    📊 Métadonnées: 3 stats, 1 insights
+2025-08-01 16:57:47,730 - INFO - === Début traitement ID 3 ===
+2025-08-01 16:57:47,735 - INFO - Consigne trouvée pour ID 3: consigne_20250718_133051_ee7e3b48.json
+2025-08-01 16:57:47,735 - INFO - Traitement de: pourquoi voiture électrique prend feu...
+2025-08-01 16:57:47,735 - INFO - Tentative 1/2 pour ID 3
+2025-08-01 16:57:47,735 - INFO - Début appel OpenAI pour: pourquoi voiture électrique prend feu...
+2025-08-01 16:58:10,651 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-01 16:58:10,655 - INFO - Réponse brute reçue: 4295 caractères
+2025-08-01 16:58:10,655 - INFO - JSON parsé avec succès: 3882 caractères
+2025-08-01 16:58:10,658 - INFO - ✅ Succès traitement ID 3 - Données structurées: 4417 caractères
+2025-08-01 16:58:10,658 - INFO -    📊 Métadonnées: 3 stats, 1 insights
+2025-08-01 16:58:12,661 - INFO - ✅ Toutes les queries traitées pour consigne_20250718_133051_ee7e3b48.json
+2025-08-01 16:58:12,662 - INFO - 📊 Fichier consigne_20250718_133051_ee7e3b48.json: 2 traités, 0 erreurs
+2025-08-01 16:58:12,662 - INFO - 
+📈 === RÉSUMÉ FINAL DÉTAILLÉ ===
+- Fichiers traités: 1
+- Queries traitées: 2
+- Erreurs: 0
+- Caractères générés: 9,564
+- Statistiques trouvées: 6
+- Longueur moyenne: 4782 caractères
+- Durée totale: 0:00:54.721223
+- Succès global: True
+=================================
+2025-08-02 02:50:28,219 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-08-02 02:50:28,220 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-08-02 02:50:28,223 - INFO - === Début traitement ID 0 ===
+2025-08-02 02:50:28,223 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-08-02 02:50:28,223 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-08-02 02:50:28,223 - INFO - Tentative 1/2 pour ID 0
+2025-08-02 02:50:28,223 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-08-02 02:50:54,597 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-02 02:50:54,614 - INFO - Réponse brute reçue: 4999 caractères
+2025-08-02 02:50:54,614 - INFO - JSON parsé avec succès: 4524 caractères
+2025-08-02 02:50:54,615 - INFO - ✅ Succès traitement ID 0 - Données structurées: 4949 caractères
+2025-08-02 02:50:54,616 - INFO -    📊 Métadonnées: 3 stats, 1 insights
+2025-08-02 02:50:56,620 - INFO - === Début traitement ID 1 ===
+2025-08-02 02:50:56,624 - INFO - Consigne trouvée pour ID 1: consigne_20250730_160622_ab894598.json
+2025-08-02 02:50:56,624 - INFO - Traitement de: canapé d angle paiement en 10 fois sans frais...
+2025-08-02 02:50:56,624 - INFO - Tentative 1/2 pour ID 1
+2025-08-02 02:50:56,625 - INFO - Début appel OpenAI pour: canapé d angle paiement en 10 fois sans frais...
+2025-08-02 10:34:44,754 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-08-02 10:34:44,755 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-08-02 10:34:44,759 - INFO - === Début traitement ID 0 ===
+2025-08-02 10:34:44,760 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-08-02 10:34:44,760 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-08-02 10:34:44,760 - INFO - Tentative 1/2 pour ID 0
+2025-08-02 10:34:44,760 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-08-02 10:35:13,541 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-02 10:35:13,556 - INFO - Réponse brute reçue: 5128 caractères
+2025-08-02 10:35:13,556 - INFO - JSON parsé avec succès: 4653 caractères
+2025-08-02 10:35:13,561 - INFO - ✅ Succès traitement ID 0 - Données structurées: 5118 caractères
+2025-08-02 10:35:13,561 - INFO -    📊 Métadonnées: 3 stats, 1 insights
+2025-08-02 10:35:15,565 - INFO - === Début traitement ID 1 ===
+2025-08-02 10:35:15,568 - INFO - Consigne trouvée pour ID 1: consigne_20250730_160622_ab894598.json
+2025-08-02 10:35:15,569 - INFO - Traitement de: canapé d angle paiement en 10 fois sans frais...
+2025-08-02 10:35:15,569 - INFO - Tentative 1/2 pour ID 1
+2025-08-02 10:35:15,569 - INFO - Début appel OpenAI pour: canapé d angle paiement en 10 fois sans frais...
+2025-08-08 16:07:14,242 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-08-08 16:07:14,250 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-08-08 16:07:14,257 - INFO - === Début traitement ID 0 ===
+2025-08-08 16:07:14,260 - INFO - Consigne trouvée pour ID 0: consigne_20250730_160622_ab894598.json
+2025-08-08 16:07:14,260 - INFO - Traitement de: canapé d'angle sans accoudoir...
+2025-08-08 16:07:14,261 - INFO - Tentative 1/2 pour ID 0
+2025-08-08 16:07:14,261 - INFO - Début appel OpenAI pour: canapé d'angle sans accoudoir...
+2025-08-08 16:07:43,811 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-08 16:07:43,842 - INFO - Réponse brute reçue: 4841 caractères
+2025-08-08 16:07:43,843 - INFO - JSON parsé avec succès: 4366 caractères
+2025-08-08 16:07:43,851 - INFO - ✅ Succès traitement ID 0 - Données structurées: 4781 caractères
+2025-08-08 16:07:43,852 - INFO -    📊 Métadonnées: 3 stats, 1 insights
+2025-08-08 16:07:45,859 - INFO - === Début traitement ID 1 ===
+2025-08-08 16:07:45,862 - INFO - Consigne trouvée pour ID 1: consigne_20250730_160622_ab894598.json
+2025-08-08 16:07:45,863 - INFO - Traitement de: canapé d angle paiement en 10 fois sans frais...
+2025-08-08 16:07:45,864 - INFO - Tentative 1/2 pour ID 1
+2025-08-08 16:07:45,864 - INFO - Début appel OpenAI pour: canapé d angle paiement en 10 fois sans frais...
+2025-08-12 17:26:02,740 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-08-12 17:26:02,743 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-08-12 17:26:02,749 - INFO - === Début traitement ID 1 ===
+2025-08-12 17:26:02,750 - INFO - Consigne trouvée pour ID 1: consigne_20250730_160622_ab894598.json
+2025-08-12 17:26:02,751 - INFO - Traitement de: canapé d angle paiement en 10 fois sans frais...
+2025-08-12 17:26:02,751 - INFO - Tentative 1/2 pour ID 1
+2025-08-12 17:26:02,751 - INFO - Début appel OpenAI pour: canapé d angle paiement en 10 fois sans frais...
+2025-08-12 17:26:34,750 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-12 17:26:34,773 - INFO - Réponse brute reçue: 4891 caractères
+2025-08-12 17:26:34,773 - INFO - JSON parsé avec succès: 4416 caractères
+2025-08-12 17:26:34,778 - INFO - ✅ Succès traitement ID 1 - Données structurées: 4866 caractères
+2025-08-12 17:26:34,778 - INFO -    📊 Métadonnées: 3 stats, 1 insights
+2025-08-12 17:26:36,787 - INFO - === Début traitement ID 2 ===
+2025-08-12 17:26:36,788 - INFO - Consigne trouvée pour ID 2: consigne_20250730_160622_ab894598.json
+2025-08-12 17:26:36,788 - INFO - Traitement de: canapé d'angle sans pied...
+2025-08-12 17:26:36,789 - INFO - Tentative 1/2 pour ID 2
+2025-08-12 17:26:36,789 - INFO - Début appel OpenAI pour: canapé d'angle sans pied...
+2025-08-13 12:03:50,330 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-08-13 12:03:50,331 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-08-13 12:03:50,336 - INFO - === Début traitement ID 2 ===
+2025-08-13 12:03:50,338 - INFO - Consigne trouvée pour ID 2: consigne_20250730_160622_ab894598.json
+2025-08-13 12:03:50,338 - INFO - Traitement de: canapé d'angle sans pied...
+2025-08-13 12:03:50,338 - INFO - Tentative 1/2 pour ID 2
+2025-08-13 12:03:50,338 - INFO - Début appel OpenAI pour: canapé d'angle sans pied...
+2025-08-13 12:04:07,519 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-13 12:04:07,533 - INFO - Réponse brute reçue: 3703 caractères
+2025-08-13 12:04:07,533 - INFO - JSON parsé avec succès: 3331 caractères
+2025-08-13 12:04:07,536 - INFO - ✅ Succès traitement ID 2 - Données structurées: 3666 caractères
+2025-08-13 12:04:07,536 - INFO -    📊 Métadonnées: 1 stats, 1 insights
+2025-08-13 12:04:09,541 - INFO - === Début traitement ID 3 ===
+2025-08-13 12:04:09,543 - INFO - Consigne trouvée pour ID 3: consigne_20250730_160622_ab894598.json
+2025-08-13 12:04:09,543 - INFO - Traitement de: canapé d'angle sans coussin...
+2025-08-13 12:04:09,543 - INFO - Tentative 1/2 pour ID 3
+2025-08-13 12:04:09,543 - INFO - Début appel OpenAI pour: canapé d'angle sans coussin...
+2025-08-15 19:10:23,017 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-08-15 19:10:23,018 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-08-15 19:10:23,022 - INFO - === Début traitement ID 2 ===
+2025-08-15 19:10:23,024 - INFO - Consigne trouvée pour ID 2: consigne_20250730_160622_ab894598.json
+2025-08-15 19:10:23,024 - INFO - Traitement de: canapé d'angle sans pied...
+2025-08-15 19:10:23,024 - INFO - Tentative 1/2 pour ID 2
+2025-08-15 19:10:23,024 - INFO - Début appel OpenAI pour: canapé d'angle sans pied...
+2025-08-15 19:10:42,619 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-15 19:10:42,626 - INFO - Réponse brute reçue: 3499 caractères
+2025-08-15 19:10:42,626 - INFO - JSON parsé avec succès: 3129 caractères
+2025-08-15 19:10:42,629 - INFO - ✅ Succès traitement ID 2 - Données structurées: 3444 caractères
+2025-08-15 19:10:42,630 - INFO -    📊 Métadonnées: 1 stats, 1 insights
+2025-08-15 19:10:44,634 - INFO - === Début traitement ID 3 ===
+2025-08-15 19:10:44,635 - INFO - Consigne trouvée pour ID 3: consigne_20250730_160622_ab894598.json
+2025-08-15 19:10:44,636 - INFO - Traitement de: canapé d'angle sans coussin...
+2025-08-15 19:10:44,636 - INFO - Tentative 1/2 pour ID 3
+2025-08-15 19:10:44,636 - INFO - Début appel OpenAI pour: canapé d'angle sans coussin...
+2025-08-16 15:33:50,804 - INFO - 🚀 Début du traitement avec agent Content Marketing intégré
+2025-08-16 15:33:50,806 - INFO - 📁 Traitement du fichier: consigne_20250730_160622_ab894598.json
+2025-08-16 15:33:50,809 - INFO - === Début traitement ID 3 ===
+2025-08-16 15:33:50,811 - INFO - Consigne trouvée pour ID 3: consigne_20250730_160622_ab894598.json
+2025-08-16 15:33:50,811 - INFO - Traitement de: canapé d'angle sans coussin...
+2025-08-16 15:33:50,811 - INFO - Tentative 1/2 pour ID 3
+2025-08-16 15:33:50,811 - INFO - Début appel OpenAI pour: canapé d'angle sans coussin...
+2025-08-16 15:33:51,242 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-08-16 15:33:51,243 - ERROR - Erreur API OpenAI: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-.... You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-08-16 15:33:51,243 - WARNING - Tentative 1 échouée pour ID 3
+2025-08-16 15:33:56,248 - INFO - Tentative 2/2 pour ID 3
+2025-08-16 15:33:56,248 - INFO - Début appel OpenAI pour: canapé d'angle sans coussin...
+2025-08-16 15:33:56,418 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-08-16 15:33:56,419 - ERROR - Erreur API OpenAI: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-.... You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-08-16 15:33:56,419 - WARNING - Tentative 2 échouée pour ID 3
+2025-08-16 15:33:56,419 - ERROR - ❌ Échec définitif traitement ID 3 après 2 tentatives
+2025-08-16 15:33:56,419 - ERROR - ❌ Arrêt du traitement pour consigne_20250730_160622_ab894598.json après échec ID 3
+2025-08-16 15:33:56,419 - INFO - 📊 Fichier consigne_20250730_160622_ab894598.json: 0 traités, 1 erreurs
+2025-08-16 15:33:56,419 - INFO - 
+📈 === RÉSUMÉ FINAL DÉTAILLÉ ===
+- Fichiers traités: 1
+- Queries traitées: 0
+- Erreurs: 1
+- Caractères générés: 0
+- Statistiques trouvées: 0
+- Longueur moyenne: 0 caractères
+- Durée totale: 0:00:05.613577
+- Succès global: False
+=================================
+2025-08-16 21:12:46,753 - ERROR - La variable PERPLEXITY_API_KEY n'est pas définie
+2025-08-16 21:17:38,572 - ERROR - La variable PERPLEXITY_API_KEY n'est pas définie
+2025-08-16 21:20:37,768 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing
+2025-08-16 21:20:37,770 - INFO - 📁 Traitement du fichier: consigne_20250721_175658_1d8537c5.json
+2025-08-16 21:20:37,774 - INFO - === Début traitement ID 0 avec Perplexity Sonar ===
+2025-08-16 21:20:37,775 - INFO - Consigne trouvée pour ID 0: consigne_20250721_175658_1d8537c5.json
+2025-08-16 21:20:37,775 - INFO - Traitement avec recherche web: comment recharger voiture électrique sur borne...
+2025-08-16 21:20:37,776 - INFO - Tentative 1/3 pour ID 0
+2025-08-16 21:20:37,776 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur borne...
+2025-08-16 21:20:37,937 - ERROR - Erreur API Perplexity 400: {"error":{"message":"Invalid model 'llama-3.1-sonar-small-128k-online'. Permitted models can be found in the documentation at https://docs.perplexity.ai/guides/model-cards.","type":"invalid_model","code":400}}
+2025-08-16 21:20:37,938 - WARNING - Tentative 1 échouée pour ID 0
+2025-08-16 21:20:47,068 - INFO - Tentative 2/3 pour ID 0
+2025-08-16 21:20:47,068 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur borne...
+2025-08-16 21:20:47,223 - ERROR - Erreur API Perplexity 400: {"error":{"message":"Invalid model 'llama-3.1-sonar-small-128k-online'. Permitted models can be found in the documentation at https://docs.perplexity.ai/guides/model-cards.","type":"invalid_model","code":400}}
+2025-08-16 21:20:47,224 - WARNING - Tentative 2 échouée pour ID 0
+2025-08-16 21:30:20,843 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing
+2025-08-16 21:30:20,843 - INFO - 📁 Traitement du fichier: consigne_20250721_175658_1d8537c5.json
+2025-08-16 21:30:20,845 - INFO - === Début traitement ID 0 avec Perplexity Sonar ===
+2025-08-16 21:30:20,846 - INFO - Consigne trouvée pour ID 0: consigne_20250721_175658_1d8537c5.json
+2025-08-16 21:30:20,846 - INFO - Traitement avec recherche web: comment recharger voiture électrique sur borne...
+2025-08-16 21:30:20,846 - INFO - Tentative 1/3 pour ID 0
+2025-08-16 21:30:20,846 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur borne...
+2025-08-16 21:30:21,017 - ERROR - Erreur API Perplexity 400: {"error":{"message":"Invalid model 'llama-3.1-sonar-small-128k-online'. Permitted models can be found in the documentation at https://docs.perplexity.ai/guides/model-cards.","type":"invalid_model","code":400}}
+2025-08-16 21:30:21,017 - WARNING - Tentative 1 échouée pour ID 0
+2025-08-16 21:30:32,661 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing
+2025-08-16 21:30:32,662 - INFO - 📁 Traitement du fichier: consigne_20250721_175658_1d8537c5.json
+2025-08-16 21:30:32,664 - INFO - === Début traitement ID 0 avec Perplexity Sonar ===
+2025-08-16 21:30:32,665 - INFO - Consigne trouvée pour ID 0: consigne_20250721_175658_1d8537c5.json
+2025-08-16 21:30:32,665 - INFO - Traitement avec recherche web: comment recharger voiture électrique sur borne...
+2025-08-16 21:30:32,665 - INFO - Tentative 1/3 pour ID 0
+2025-08-16 21:30:32,665 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur borne...
+2025-08-16 21:30:42,178 - INFO - Réponse Sonar reçue: 4608 caractères
+2025-08-16 21:30:42,178 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 18 column 7 (char 1318)
+2025-08-16 21:30:42,178 - ERROR - Échec parsing JSON de la réponse Sonar
+2025-08-16 21:30:42,178 - WARNING - Tentative 1 échouée pour ID 0
+2025-08-16 21:42:12,722 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing
+2025-08-16 21:42:12,723 - INFO - 📁 Traitement du fichier: consigne_20250721_175658_1d8537c5.json
+2025-08-16 21:42:12,728 - INFO - === Début traitement ID 0 avec Perplexity Sonar ===
+2025-08-16 21:42:12,729 - INFO - Consigne trouvée pour ID 0: consigne_20250721_175658_1d8537c5.json
+2025-08-16 21:42:12,729 - INFO - Traitement avec recherche web: comment recharger voiture électrique sur borne...
+2025-08-16 21:42:12,729 - INFO - Tentative 1/3 pour ID 0
+2025-08-16 21:42:12,729 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur borne...
+2025-08-16 21:42:22,981 - INFO - Réponse Sonar reçue: 4706 caractères
+2025-08-16 21:42:22,981 - ERROR - Erreur parsing JSON: Expecting ':' delimiter: line 25 column 89 (char 1720)
+2025-08-16 21:42:22,981 - ERROR - Échec parsing JSON de la réponse Sonar
+2025-08-16 21:42:22,982 - WARNING - Tentative 1 échouée pour ID 0
+2025-08-16 21:44:03,536 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing
+2025-08-16 21:44:03,537 - INFO - 📁 Traitement du fichier: consigne_20250721_175658_1d8537c5.json
+2025-08-16 21:44:03,542 - INFO - === Début traitement ID 0 avec Perplexity Sonar ===
+2025-08-16 21:44:03,543 - INFO - Consigne trouvée pour ID 0: consigne_20250721_175658_1d8537c5.json
+2025-08-16 21:44:03,544 - INFO - Traitement avec recherche web: comment recharger voiture électrique sur borne...
+2025-08-16 21:44:03,544 - INFO - Tentative 1/3 pour ID 0
+2025-08-16 21:44:03,544 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur borne...
+2025-08-16 21:44:14,388 - INFO - Réponse Sonar reçue: 4821 caractères
+2025-08-16 21:44:14,388 - ERROR - === DEBUG JSON CONTENT START ===
+2025-08-16 21:44:14,389 - ERROR - {
+  "query": "comment recharger voiture électrique sur borne",
+  "summary": "Recharger une voiture électrique sur une borne est simple et accessible. En France, plus de 60,000 points de recharge publics sont disponibles en 2025, avec des temps de charge variant selon la puissance (de 30 minutes à plusieurs heures). Une charge rapide permet généralement d'atteindre 80% en moins d'une heure.",
+  
+  "shock_statistics": [
+    {
+      "statistic": "En France, le nombre de bornes publiques a augmenté 
+2025-08-16 21:44:14,389 - ERROR - === DEBUG JSON CONTENT END ===
+2025-08-16 21:44:14,389 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 24 column 7 (char 1605)
+2025-08-16 21:44:14,389 - ERROR - Échec parsing JSON de la réponse Sonar
+2025-08-16 21:44:14,390 - WARNING - Tentative 1 échouée pour ID 0
+2025-08-16 21:44:24,404 - INFO - Tentative 2/3 pour ID 0
+2025-08-16 21:44:24,404 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur borne...
+2025-08-16 21:45:25,186 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing
+2025-08-16 21:45:25,187 - INFO - 📁 Traitement du fichier: consigne_20250721_175658_1d8537c5.json
+2025-08-16 21:45:25,192 - INFO - === Début traitement ID 0 avec Perplexity Sonar ===
+2025-08-16 21:45:25,193 - INFO - Consigne trouvée pour ID 0: consigne_20250721_175658_1d8537c5.json
+2025-08-16 21:45:25,193 - INFO - Traitement avec recherche web: comment recharger voiture électrique sur borne...
+2025-08-16 21:45:25,193 - INFO - Tentative 1/3 pour ID 0
+2025-08-16 21:45:25,193 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur borne...
+2025-08-16 21:45:39,165 - INFO - Réponse Sonar reçue: 4262 caractères
+2025-08-16 21:45:39,165 - ERROR - === DEBUG JSON COMPLET ===
+2025-08-16 21:45:39,166 - ERROR - {
+  "query": "comment recharger voiture électrique sur borne",
+  "summary": "Recharger une voiture électrique sur une borne publique est simple et rapide grâce aux différentes technologies disponibles. En moyenne, 80% des utilisateurs trouvent que la recharge sur borne rapide est idéale pour les trajets longs, tandis que la recharge lente à domicile convient mieux pour un usage quotidien.",
+  
+  "shock_statistics": [
+    {
+      "statistic": "Plus de 70% des recharges de voitures électriques en France se font sur des bornes publiques rapides (22 kW et plus).",
+      "source_credibility": "Rapport ADEME 2023 sur la mobilité électrique",
+      "source_url": "https://www.ademe.fr/sites/default/files/assets/documents/rapport-mobilite-electrique-2023.pdf",
+      "usage_potential": "Introduction pour montrer la dominance des bornes publiques rapides",
+      "context": "Analyse des habitudes de recharge en France en 2023"
+    }
+  ],
+  
+  "expert_insights": [
+    {
+      "insight": "Les experts recommandent d’utiliser une borne de recharge AC pour la recharge quotidienne, et une borne DC rapide pour les trajets longue distance.",
+      "authority_source": "Agence de l'Environnement et de la Maîtrise de l'Énergie (ADEME)",
+      "source_url": "https://www.ademe.fr/particuliers-eco-citoyens/transport/mobilite-electrique/recharge-vehicule-electrique",
+      "credibility_boost": "Renforce la fiabilité des conseils avec une source officielle gouvernementale"
+    }
+  ],
+  
+  "benchmark_data": [
+    {
+      "metric": "Temps moyen de recharge sur borne rapide : 30 à 45 minutes pour 80% de la batterie.",
+      "sample_size": "Données issues de 10 000 sessions de recharge en Europe",
+      "methodology": "Analyse des données de recharge en conditions réelles",
+      "source_url": "https://www.statista.com/statistics/1234567/average-electric-car-charging-time-europe/",
+      "article_usage": "Section explicative sur la rapidité des bornes de recharge"
+    }
+  ],
+  
+  "market_trends": [
+    {
+      "trend": "Le nombre de bornes de recharge publiques a augmenté de 45% en Europe entre 2021 et 2024.",
+      "supporting_data": "Rapport European Alternative Fuels Observatory (EAFO) 2024",
+      "source_url": "https://www.eafo.eu/alternative-fuels/electricity/charging-infrastructure",
+      "future_projection": "Projection d’une croissance continue jusqu’en 2030",
+      "commercial_opportunity": "Justifie l’investissement dans les infrastructures et l’adoption du VE"
+    }
+  ],
+  
+  "competitive_landscape": [
+    {
+      "comparison_point": "Recharge AC (courant alternatif) vs DC (courant continu)",
+      "quantified_difference": "La recharge DC rapide peut être jusqu’à 5 fois plus rapide que la recharge AC classique.",
+      "source_url": "https://www.transportenvironment.org/discover/electric-car-charging-explained/",
+      "source_reliability": "Étude indépendante d’organisme européen spécialisé"
+    }
+  ],
+  
+  "technical_depth": "débutant",
+  
+  "credibility_boosters": [
+    "Source gouvernementale française (ADEME)",
+    "Rapport officiel Commission Européenne (EAFO)",
+    "Statista pour données chiffrées",
+    "Étude peer-reviewed sur la recharge VE"
+  ],
+  
+  "content_marketing_angles": [
+    "Angle 1: Faciliter la transition électrique grâce à la simplicité de la recharge",
+    "Angle 2: Opportunité d’accélérer l’adoption VE avec l’expansion des bornes",
+    "Angle 3: Comparaison claire des types de bornes pour mieux informer le consommateur"
+  ],
+  
+  "hook_potential": {
+    "intro_hooks": [
+      "Saviez-vous que 70% des recharges VE se font désormais sur des bornes rapides ?",
+      "La recharge d’une voiture électrique peut être aussi rapide qu’un café !"
+    ],
+    "authority_signals": [
+      "Selon l’ADEME, la recharge en courant continu est recommandée pour les trajets longs",
+      "Rapport officiel EAFO confirme une croissance explosive des bornes"
+    ],
+    "social_proof": [
+      "Des millions d’utilisateurs en Europe rechargent quotidiennement sur des bornes publiques",
+      "Temps de recharge moyen validé par plus de 10 000 sessions"
+    ]
+  },
+  
+  "date_accessed": "2025-08-16",
+  "confidence_score": 0.97,
+  "commercial_readiness": "Prêt pour article sophistiqué orienté conversion"
+}
+2025-08-16 21:45:39,166 - ERROR - === FIN DEBUG JSON ===
+2025-08-16 21:45:39,166 - INFO - JSON parsé avec succès: 4124 caractères
+2025-08-16 21:45:39,169 - INFO - ✅ Succès traitement ID 0 avec Sonar - Données: 4429 caractères
+2025-08-16 21:45:39,169 - INFO -    📊 Stats: 1 stats, 0 sources web
+2025-08-16 21:45:44,181 - INFO - === Début traitement ID 1 avec Perplexity Sonar ===
+2025-08-16 21:45:44,182 - INFO - Consigne trouvée pour ID 1: consigne_20250721_175658_1d8537c5.json
+2025-08-16 21:45:44,182 - INFO - Traitement avec recherche web: comment recharger voiture électrique sur autoroute...
+2025-08-16 21:45:44,182 - INFO - Tentative 1/3 pour ID 1
+2025-08-16 21:45:44,182 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur autoroute...
+2025-08-16 21:49:36,695 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing
+2025-08-16 21:49:36,696 - INFO - 📁 Traitement du fichier: consigne_20250721_175658_1d8537c5.json
+2025-08-16 21:49:36,700 - INFO - === Début traitement ID 1 avec Perplexity Sonar ===
+2025-08-16 21:49:36,701 - INFO - Consigne trouvée pour ID 1: consigne_20250721_175658_1d8537c5.json
+2025-08-16 21:49:36,701 - INFO - Traitement avec recherche web: comment recharger voiture électrique sur autoroute...
+2025-08-16 21:49:36,701 - INFO - Tentative 1/3 pour ID 1
+2025-08-16 21:49:36,701 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur autoroute...
+2025-08-16 21:49:48,437 - INFO - Réponse Sonar reçue: 4833 caractères
+2025-08-16 21:49:48,437 - ERROR - === DEBUG JSON COMPLET ===
+2025-08-16 21:49:48,437 - ERROR - {
+  "query": "comment recharger voiture électrique sur autoroute",
+  "summary": "Recharger une voiture électrique sur autoroute est devenu de plus en plus accessible grâce au déploiement massif de bornes de recharge rapide. En France, les stations équipées permettent une recharge à haute puissance, réduisant considérablement le temps d'attente et facilitant les longs trajets.",
+  "shock_statistics": [
+    {
+      "statistic": "Plus de 1 500 points de recharge rapides sont disponibles sur les autoroutes françaises en 2025.",
+      "source_credibility": "Ministère français de la Transition écologique, Rapport sur la mobilité électrique, 2024",
+      "source_url": "https://www.ecologie.gouv.fr/rapport-mobilite-electrique-2024",
+      "usage_potential": "Illustrer l'accessibilité grandissante des infrastructures pour rassurer le lecteur.",
+      "context": "Données officielles du gouvernement français concernant l'infrastructure des bornes électriques."
+    },
+    {
+      "statistic": "Les bornes rapides sur autoroute proposent généralement une puissance entre 50 kW et jusqu'à 350 kW permettant une recharge à environ 80% en moins de 30 minutes.",
+      "source_credibility": "Agence Internationale de l'Énergie (IEA), Rapport Global EV Outlook, 2024",
+      "source_url": "https://www.iea.org/reports/global-ev-outlook-2024",
+      "usage_potential": "'Temps record' pour convaincre d'adopter la voiture électrique même pour longs trajets.",
+      "context": "- Puissance variable selon borne - Impact direct sur le temps nécessaire pour recharger."
+    }
+  ],
+  
+  "expert_insights": [
+    {
+      “insight”: “Les experts recommandent d’anticiper la planification des arrêts via des applications dédiées qui localisent les bornes disponibles et préviennent leur niveau d’occupation.”,
+      “authority_source”: “Jean-Marc Jancovici, Expert énergie et climat”,
+      “source_url”: “https://jancovici.com/les-recharges-sur-autoroute/”,
+      “credibility_boost”: “Apporte un conseil pratique validé par un expert reconnu dans le domaine énergétique.”
+    }
+   ],
+  
+   "benchmark_data":[
+     {
+       "metric":"Taux d’utilisation moyen des bornes rapides atteint près de 75% aux heures pleines selon Vinci Autoroutes.",
+       "sample_size":"Analyse basée sur données Vinci Autoroutes couvrant toutes leurs stations en France (données année fiscale récente).",
+       "methodology":"Mesure continue avec capteurs intégrés aux stations pendant un an complet.",
+       "source_url":"https://www.vinci-autoroutes.com/fr/newsroom/bornes-recharge-electrique-performance/",
+       "article_usage":"Mettre en avant la popularité croissante et fiabilité du réseau."
+     }
+   ],
+  
+   "market_trends":[
+      {
+       "trend":"Croissance annuelle moyenne du parc automobile électrique dépassant +40% depuis cinq ans en Europe occidentale." ,
+       "supporting_data":"Eurostat & ACEA (Association Européenne Constructeurs Automobiles), rapports combinés depuis2019 à aujourd’hui." ,
+       "source_url":"https://www.acea.auto/publications/electric-vehicles-stock-european-market/" ,
+       "future_projection":"Prévision que d’ici fin décennie plus d’un tiers des véhicules neufs vendus seront électriques." ,
+           
+                
+              
+              
+              
+          ”commercial_opportunity”:“Justifie l’importance croissante des infrastructures adaptées comme celles présentes sur autoroute.”
+       }
+       
+     
+       
+       
+      
+    
+   
+],
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+  
+
+ 
+
+
+
+
+
+  
+
+
+ 
+
+
+ 
+  
+ 
+    
+   
+  
+    
+  
+   
+     
+   
+    
+     
+      
+      
+        
+          
+            
+             
+              
+              
+            
+          
+         
+        
+       
+      
+     
+    
+
+    
+     
+     
+       
+    
+   
+
+     
+
+  
+
+
+ 
+  
+
+  
+    
+  
+
+  
+
+
+ 
+  
+
+  
+    
+  
+
+
+
+
+,"technical_depth":"intermédiaire","credibility_boosters":["Source gouvernementale française (Ministère)","Rapport officiel Agence Internationale Énergie","Données Vinci Autoroutes","Étude Eurostat / ACEA"],"content_marketing_angles":["Angle1: Rassurer avec chiffres concrets montrant accessibilité rapide","Angle2: Opportunité liée au boom VE augmentant besoin infrastructures ","Angle3: Méthodes pratiques via apps recommandées par experts"],"hook_potential":{"intro_hooks":["Plus de1500 points charge rapide disponibles dès aujourd’hui !","Rechargez votre véhicule jusqu’à80% en moinsde30 minutes !"],"authority_signals":["Citation expert énergie Jean-Marc Jancovici","Statistiques officielles Ministère Transition écologique"],"social_proof":["Usage élevé avec75% taux occupation aux heures pleines chez Vinci Autoroutes"]},"date_accessed":"2025-08-16","confidence_score":0.95,"commercial_readiness":"Prêt pour article sophistiqué orienté conversion"
+}
+2025-08-16 21:49:48,437 - ERROR - === FIN DEBUG JSON ===
+2025-08-16 21:49:48,438 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 23 column 7 (char 1613)
+2025-08-16 21:49:48,438 - ERROR - Échec parsing JSON de la réponse Sonar
+2025-08-16 21:49:48,438 - WARNING - Tentative 1 échouée pour ID 1
+2025-08-16 21:49:57,496 - INFO - Tentative 2/3 pour ID 1
+2025-08-16 21:49:57,496 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur autoroute...
+2025-08-16 22:04:13,614 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing
+2025-08-16 22:04:13,616 - INFO - 📁 Traitement du fichier: consigne_20250721_175658_1d8537c5.json
+2025-08-16 22:04:13,620 - INFO - === Début traitement ID 1 avec Perplexity Sonar ===
+2025-08-16 22:04:13,621 - INFO - Consigne trouvée pour ID 1: consigne_20250721_175658_1d8537c5.json
+2025-08-16 22:04:13,622 - INFO - Traitement avec recherche web: comment recharger voiture électrique sur autoroute...
+2025-08-16 22:04:13,622 - INFO - Tentative 1/3 pour ID 1
+2025-08-16 22:04:13,622 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur autoroute...
+2025-08-16 22:04:20,960 - INFO - Réponse Sonar reçue: 1610 caractères
+2025-08-16 22:04:20,960 - ERROR - === DEBUG JSON COMPLET ===
+2025-08-16 22:04:20,960 - ERROR - {
+  "recharge_voiture_electrique_autoroute": {
+    "description": "Pour recharger une voiture électrique sur autoroute, il faut utiliser les bornes de recharge rapide situées aux aires de service. Ces bornes offrent généralement une puissance de 50 kW à 350 kW, permettant de recharger entre 20 et 80 % de la batterie en 20 à 40 minutes selon la capacité du véhicule et du chargeur.",
+    "types_de_bornes": [
+      {
+        "type": "Bornes rapides AC",
+        "puissance": "22 kW à 43 kW",
+        "temps_recharge": "1 à 3 heures"
+      },
+      {
+        "type": "Bornes ultra-rapides DC (type CCS, CHAdeMO)",
+        "puissance": "50 kW à 350 kW",
+        "temps_recharge": "20 à 40 minutes"
+      }
+    ],
+    "fonctionnement": "Pour utiliser ces bornes, il faut une carte RFID ou une application mobile liée à un réseau de recharge (ex. Ionity, TotalEnergies, Fastned). La voiture se connecte via un câble adapté (CCS ou CHAdeMO). La recharge démarre automatiquement après authentification et sélection de la puissance.",
+    "recommandations": [
+      "Planifier les arrêts recharge en amont via des applications GPS dédiées (ex. Chargemap, A Better Route Planner).",
+      "Vérifier la compatibilité de la prise de la voiture avec la borne.",
+      "Préférer les bornes ultra-rapides pour un arrêt court sur autoroute."
+    ],
+    "statistique_utile": "Selon le ministère français de la Transition écologique, en 2024, plus de 70% des aires d'autoroute en France disposent d'au moins une borne de recharge rapide.",
+    "source_url": "https://www.ecologie.gouv.fr/recharge-vehicules-electriques"
+  }
+}
+2025-08-16 22:04:20,960 - ERROR - === FIN DEBUG JSON ===
+2025-08-16 22:04:20,961 - INFO - JSON parsé avec succès: 1701 caractères
+2025-08-16 22:04:20,961 - WARNING - Champ obligatoire manquant ou vide: query
+2025-08-16 22:04:20,961 - WARNING - Tentative 1 échouée pour ID 1
+2025-08-16 22:04:30,984 - INFO - Tentative 2/3 pour ID 1
+2025-08-16 22:04:30,984 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur autoroute...
+2025-08-16 22:04:36,263 - INFO - Réponse Sonar reçue: 1986 caractères
+2025-08-16 22:04:36,263 - ERROR - === DEBUG JSON COMPLET ===
+2025-08-16 22:04:36,263 - ERROR - {
+  "methodes_recharge_voiture_electrique_sur_autoroute": [
+    {
+      "type": "bornes de recharge rapide (DC)",
+      "description": "Les bornes de recharge rapide en courant continu (DC) sont installées sur les aires d'autoroutes. Elles permettent de recharger une batterie à environ 80% en 20 à 40 minutes selon la puissance et le véhicule.",
+      "puissance_typique": "50 kW à plus de 350 kW",
+      "temps_recharge_moyen": "20-40 minutes pour atteindre environ 80%",
+      "exemples_marques_bornes": ["Ionity", "Tesla Supercharger", "TotalEnergies"],
+      "source_url": "https://www.ademe.fr/particuliers-eco-citoyens/transport-mobilite/deplacements-transports/recharger-vehicule-electrique"
+    },
+    {
+      "type": "bornes de recharge accélérée (AC)",
+      "description": "Certaines aires proposent aussi des bornes en courant alternatif (AC) avec une puissance entre 7 kW et 22 kW. Elles sont moins rapides mais utiles pour des arrêts plus longs.",
+      "puissance_typique": "<=22 kW",
+      "temps_recharge_moyen": ">1 heure selon capacité batterie",
+      "source_url": 
+        [
+          {"url":"https://www.autoplus.fr/electricite/voiture-electrique-borne-recharge-sur-autoroute-comment-ca-marche-540864.html"},
+          {"url":"https://www.electrive.com/2023/03/15/e-mobility-on-the-highway-how-fast-charging-stations-work/"}
+        ]
+    },
+    {
+      "_conseils_pratiques_":{
+        "-_planification_itineraire_-_utiliser_applications_de_localisation_de_bornes_de_recharge_":"Google Maps, Chargemap, A Better Route Planner permettent d'anticiper les pauses recharge sur autoroute.",
+        "-_respecter_temps_pause_minimum-_optimiser_autonomie_et_securite_-":"Il est conseillé de ne pas charger au-delà de ~80% pour éviter un ralentissement excessif du taux charge."
+       },
+       "_source_url_conseils_pratiques_" : 
+         ["https://www.iea.org/reports/global-ev-outlook-2023","https://afdc.energy.gov/fuels/electricity_locations.html"]
+     }
+   ]
+}
+2025-08-16 22:04:36,263 - ERROR - === FIN DEBUG JSON ===
+2025-08-16 22:04:36,264 - INFO - JSON parsé avec succès: 2029 caractères
+2025-08-16 22:04:36,264 - WARNING - Champ obligatoire manquant ou vide: query
+2025-08-16 22:04:36,264 - WARNING - Tentative 2 échouée pour ID 1
+2025-08-16 22:04:46,272 - INFO - Tentative 3/3 pour ID 1
+2025-08-16 22:04:46,272 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur autoroute...
+2025-08-16 22:17:27,706 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing (requests)
+2025-08-16 22:17:27,707 - INFO - 📁 Traitement du fichier: consigne_20250721_175658_1d8537c5.json
+2025-08-16 22:17:27,708 - INFO - === Début traitement ID 1 avec Perplexity Sonar ===
+2025-08-16 22:17:27,709 - INFO - Consigne trouvée pour ID 1: consigne_20250721_175658_1d8537c5.json
+2025-08-16 22:17:27,709 - INFO - Traitement avec recherche web: comment recharger voiture électrique sur autoroute...
+2025-08-16 22:17:27,709 - INFO - Tentative 1/3 pour ID 1
+2025-08-16 22:17:27,709 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur autoroute...
+2025-08-16 22:17:54,915 - INFO - Citations trouvées: 5 sources
+2025-08-16 22:17:54,915 - INFO - Réponse Sonar reçue: 5071 caractères
+2025-08-16 22:17:54,920 - INFO - JSON parsé avec succès: 5508 caractères
+2025-08-16 22:17:54,920 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-08-16 22:17:54,923 - INFO - ✅ Succès traitement ID 1 avec Sonar - Données: 5943 caractères
+2025-08-16 22:17:54,923 - INFO -    📊 Stats: 1 stats, 5 sources web
+2025-08-16 22:17:59,925 - INFO - === Début traitement ID 2 avec Perplexity Sonar ===
+2025-08-16 22:17:59,925 - INFO - Consigne trouvée pour ID 2: consigne_20250721_175658_1d8537c5.json
+2025-08-16 22:17:59,925 - INFO - Traitement avec recherche web: comment brancher voiture électrique...
+2025-08-16 22:17:59,925 - INFO - Tentative 1/3 pour ID 2
+2025-08-16 22:17:59,925 - INFO - Début appel Perplexity Sonar pour: comment brancher voiture électrique...
+2025-08-16 22:18:18,735 - INFO - Citations trouvées: 5 sources
+2025-08-16 22:18:18,735 - INFO - Réponse Sonar reçue: 4229 caractères
+2025-08-16 22:18:18,736 - INFO - JSON parsé avec succès: 4469 caractères
+2025-08-16 22:18:18,736 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-08-16 22:18:18,737 - INFO - ✅ Succès traitement ID 2 avec Sonar - Données: 4939 caractères
+2025-08-16 22:18:18,737 - INFO -    📊 Stats: 1 stats, 5 sources web
+2025-08-17 00:18:03,036 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing (requests)
+2025-08-17 00:18:03,038 - INFO - 📁 Traitement du fichier: consigne_20250721_175658_1d8537c5.json
+2025-08-17 00:18:03,038 - INFO - === Début traitement ID 1 avec Perplexity Sonar ===
+2025-08-17 00:18:03,039 - INFO - Consigne trouvée pour ID 1: consigne_20250721_175658_1d8537c5.json
+2025-08-17 00:18:03,039 - INFO - Traitement avec recherche web: comment recharger voiture électrique sur autoroute...
+2025-08-17 00:18:03,039 - INFO - Tentative 1/3 pour ID 1
+2025-08-17 00:18:03,039 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur autoroute...
+2025-08-17 00:18:14,949 - INFO - Citations trouvées: 5 sources
+2025-08-17 00:18:14,949 - INFO - Réponse Sonar reçue: 5358 caractères
+2025-08-17 00:18:14,950 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 39 column 11 (char 3018)
+2025-08-17 00:18:14,950 - ERROR - Échec parsing JSON de la réponse Sonar
+2025-08-17 00:18:14,951 - WARNING - Tentative 1 échouée pour ID 1
+2025-08-17 00:18:23,709 - INFO - Tentative 2/3 pour ID 1
+2025-08-17 00:18:23,709 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur autoroute...
+2025-08-17 00:18:35,643 - INFO - Citations trouvées: 5 sources
+2025-08-17 00:18:35,643 - INFO - Réponse Sonar reçue: 6524 caractères
+2025-08-17 00:18:35,644 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 44 column 9 (char 3214)
+2025-08-17 00:18:35,644 - ERROR - Échec parsing JSON de la réponse Sonar
+2025-08-17 00:18:35,644 - WARNING - Tentative 2 échouée pour ID 1
+2025-08-17 00:18:45,646 - INFO - Tentative 3/3 pour ID 1
+2025-08-17 00:18:45,647 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur autoroute...
+2025-08-17 00:23:00,707 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing (requests)
+2025-08-17 00:23:00,708 - INFO - 📁 Traitement du fichier: consigne_20250721_175658_1d8537c5.json
+2025-08-17 00:23:00,708 - INFO - === Début traitement ID 1 avec Perplexity Sonar ===
+2025-08-17 00:23:00,709 - INFO - Consigne trouvée pour ID 1: consigne_20250721_175658_1d8537c5.json
+2025-08-17 00:23:00,709 - INFO - Traitement avec recherche web: comment recharger voiture électrique sur autoroute...
+2025-08-17 00:23:00,709 - INFO - Tentative 1/3 pour ID 1
+2025-08-17 00:23:00,709 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur autoroute...
+2025-08-17 00:23:11,678 - INFO - Citations trouvées: 5 sources
+2025-08-17 00:23:11,678 - INFO - Réponse Sonar reçue: 5006 caractères
+2025-08-17 00:23:11,680 - ERROR - Erreur parsing JSON: Expecting value: line 23 column 21 (char 2194)
+2025-08-17 00:23:11,680 - ERROR - Échec parsing JSON de la réponse Sonar
+2025-08-17 00:23:11,680 - WARNING - Tentative 1 échouée pour ID 1
+2025-08-17 00:39:44,868 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing (requests)
+2025-08-17 00:39:44,868 - INFO - 📁 Traitement du fichier: consigne_20250721_175658_1d8537c5.json
+2025-08-17 00:39:44,869 - INFO - === Début traitement ID 1 avec Perplexity Sonar ===
+2025-08-17 00:39:44,869 - INFO - Consigne trouvée pour ID 1: consigne_20250721_175658_1d8537c5.json
+2025-08-17 00:39:44,869 - INFO - Traitement avec recherche web: comment recharger voiture électrique sur autoroute...
+2025-08-17 00:39:44,869 - INFO - Tentative 1/3 pour ID 1
+2025-08-17 00:39:44,870 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur autoroute...
+2025-08-17 00:39:56,335 - INFO - Citations trouvées: 5 sources
+2025-08-17 00:39:56,335 - INFO - Réponse Sonar reçue: 5825 caractères
+2025-08-17 00:39:56,340 - ERROR - Erreur parsing JSON: Expecting ',' delimiter: line 35 column 5 (char 2892)
+2025-08-17 00:39:56,341 - ERROR - Échec parsing JSON de la réponse Sonar
+2025-08-17 00:39:56,341 - WARNING - Tentative 1 échouée pour ID 1
+2025-08-17 00:40:05,027 - INFO - Tentative 2/3 pour ID 1
+2025-08-17 00:40:05,027 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur autoroute...

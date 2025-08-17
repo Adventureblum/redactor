@@ -1,0 +1,41 @@
+{
+  "processed_queries": [
+    "86e10bc87276f1896a050d7f1cb5e977",
+    "9d5604a739ef614f93fa817727b4942b"
+  ],
+  "query_details": {
+    "86e10bc87276f1896a050d7f1cb5e977": {
+      "id": 0,
+      "text": "comment recharger voiture électrique sur borne",
+      "processed_at": "2025-08-16 21:05:57",
+      "semantic": 0,
+      "semantic_processed_at": "2025-08-17 00:16:38",
+      "semantic_analysis": {
+        "clusters_count": 5,
+        "relations_found": 10,
+        "entities_count": 5,
+        "angles_generated": 10,
+        "thematic_diversity": 0.03,
+        "semantic_complexity": 1.0
+      }
+    },
+    "9d5604a739ef614f93fa817727b4942b": {
+      "id": 1,
+      "text": "comment recharger voiture électrique sur autoroute",
+      "processed_at": "2025-08-17 00:14:13",
+      "semantic": 1,
+      "semantic_processed_at": "2025-08-17 00:16:38",
+      "semantic_analysis": {
+        "clusters_count": 5,
+        "relations_found": 10,
+        "entities_count": 5,
+        "angles_generated": 10,
+        "thematic_diversity": 0.01,
+        "semantic_complexity": 1.0
+      }
+    }
+  },
+  "last_updated": "2025-08-17 00:16:38",
+  "total_processed": 2,
+  "semantic_processed": 1
+}

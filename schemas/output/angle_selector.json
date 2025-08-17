@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "angle_recommande": { "type": "string" },
+    "score_total": { "type": "string", "pattern": "^[0-9]{1,2}/12$" }
+  },
+  "required": ["angle_recommande", "score_total"],
+  "additionalProperties": false
+}

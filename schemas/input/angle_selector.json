@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "task": { "type": "string", "enum": ["angle_selection"] },
+    "query_text": { "type": "string" },
+    "candidate_angles": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer" },
+        "schema_version": { "type": "string" }
+      },
+      "required": ["id", "schema_version"]
+    }
+  },
+  "required": ["task", "query_text", "candidate_angles", "metadata"],
+  "additionalProperties": false
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processus / Étapes</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 800px; margin: 0 auto; background: white; border-radius: 10px; padding: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: #2c3e50; margin-bottom: 40px; }
+        .timeline { position: relative; }
+        .timeline::before { content: ''; position: absolute; left: 30px; top: 0; bottom: 0; width: 3px; background: #3498db; }
+        .step { position: relative; margin-bottom: 30px; padding-left: 70px; }
+        .step-number { position: absolute; left: 15px; top: 5px; width: 30px; height: 30px; background: #3498db; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+        .step h3 { margin: 0 0 10px 0; color: #2c3e50; }
+        .step p { margin: 0; color: #666; line-height: 1.5; }
+        .step:last-child .timeline::before { display: none; }
+        
+        /* Classes modulaires pour les couleurs */
+        .step-1 .step-number { background: #e74c3c; }
+        .step-2 .step-number { background: #3498db; }
+        .step-3 .step-number { background: #27ae60; }
+        .step-4 .step-number { background: #f39c12; }
+        .step-5 .step-number { background: #9b59b6; }
+        .step-6 .step-number { background: #e67e22; }
+        .step-7 .step-number { background: #1abc9c; }
+        .step-8 .step-number { background: #95a5a6; }
+    </style>
+</head>
+<body>
+    <div class="container" id="infographic-container">
+        <h1>Les 5 Étapes d'un Audit SEO</h1>
+        <div class="timeline">
+            <div class="step step-1" id="step">
+                <div class="step-number">1</div>
+                <h3>Analyse technique</h3>
+                <p>Vérification de l'indexation, vitesse de chargement, structure des URLs et erreurs techniques.</p>
+            </div>
+            
+            <!-- GUIDE D'UTILISATION :
+            
+            Ajoutez autant d'étapes que nécessaire avec les classes :
+            step-1, step-2, step-3, step-4, step-5, step-6, step-7, step-8
+            
+            Exemple pour ajouter plus d'étapes :
+            
+            <div class="step step-2" id="etape-contenu">
+                <div class="step-number">2</div>
+                <h3>Audit du contenu</h3>
+                <p>Évaluation de la qualité, pertinence et optimisation des contenus existants.</p>
+            </div>
+            
+            <div class="step step-3" id="etape-mots-cles">
+                <div class="step-number">3</div>
+                <h3>Recherche de mots-clés</h3>
+                <p>Identification des opportunités de mots-clés selon votre secteur d'activité.</p>
+            </div>
+            
+            <div class="step step-4" id="etape-concurrence">
+                <div class="step-number">4</div>
+                <h3>Analyse concurrentielle</h3>
+                <p>Étude des stratégies SEO de vos principaux concurrents.</p>
+            </div>
+            
+            <div class="step step-5" id="etape-plan">
+                <div class="step-number">5</div>
+                <h3>Plan d'actions</h3>
+                <p>Création d'une roadmap priorisée avec recommandations concrètes.</p>
+            </div>
+            
+            -->
+        </div>
+    </div>
+</body>
+</html>

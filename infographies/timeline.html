@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline Évolution</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 10px; padding: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: #2c3e50; margin-bottom: 40px; }
+        .timeline-container { position: relative; padding: 40px 0; }
+        .timeline-line { position: absolute; top: 20px; left: 0; right: 0; height: 4px; background: linear-gradient(to right, #3498db, #9b59b6); z-index: 1; }
+        .timeline-line::after { content: ''; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-left: 15px solid #9b59b6; }
+        .timeline-items { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 100%; position: relative; z-index: 2; }
+        .timeline-item { position: relative; display: flex; flex-direction: column; align-items: center; }
+        .timeline-content { background: #f8f9fa; border-radius: 10px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: relative; border-left: 4px solid #3498db; text-align: center; width: 100%; box-sizing: border-box; min-height: 200px; display: flex; flex-direction: column; justify-content: space-between; }
+        
+        /* Classes modulaires pour les couleurs */
+        .step-1 .timeline-content { border-left-color: #e74c3c; }
+        .step-2 .timeline-content { border-left-color: #f39c12; }
+        .step-3 .timeline-content { border-left-color: #27ae60; }
+        .step-4 .timeline-content { border-left-color: #f39c12; }
+        .step-5 .timeline-content { border-left-color: #9b59b6; }
+        .step-6 .timeline-content { border-left-color: #e67e22; }
+        .step-7 .timeline-content { border-left-color: #1abc9c; }
+        .step-8 .timeline-content { border-left-color: #95a5a6; }
+
+        .date { font-weight: bold; color: #3498db; margin: 0 0 10px 0; font-size: 14px; }
+        .event-title { font-size: 16px; font-weight: bold; color: #2c3e50; margin: 0 0 8px 0; }
+        .event-description { color: #666; line-height: 1.4; font-size: 12px; margin: 0 0 10px 0; }
+        .metric { background: #ecf0f1; padding: 8px; border-radius: 5px; margin-top: 10px; text-align: center; }
+        .metric-value { font-size: 18px; font-weight: bold; color: #27ae60; margin: 0; }
+        .metric-label { font-size: 10px; color: #666; margin: 0; }
+        @media (max-width: 768px) {
+            .timeline-items { grid-template-columns: 1fr; gap: 20px; }
+            .timeline-content { padding: 15px; }
+            .event-title { font-size: 14px; }
+            .event-description { font-size: 11px; }
+        }
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .timeline-items { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="infographic-container">
+        <h1>Évolution des Algorithmes Google</h1>
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            <div class="timeline-items">
+                <div class="timeline-item step-1" id="step">
+                    <div class="timeline-content">
+                        <p class="date">Mars 2019</p>
+                        <h3 class="event-title">Google BERT</h3>
+                        <p class="event-description">Amélioration de la compréhension du langage naturel et des requêtes conversationnelles</p>
+                        <div class="metric">
+                            <h3 class="metric-value">10%</h3>
+                            <p class="metric-label">des requêtes impactées</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            
+                
+                <!-- Dupliquez ce bloc pour ajouter plus d'événements :
+                
+                <div class="timeline-item step-3" id="event-3">
+                    <div class="timeline-content">
+                        <p class="date">VOTRE DATE</p>
+                        <h3 class="event-title">VOTRE TITRE</h3>
+                        <p class="event-description">Votre description ici</p>
+                        <div class="metric">
+                            <h3 class="metric-value">VALEUR</h3>
+                            <p class="metric-label">label métrique</p>
+                        </div>
+                    </div>
+                </div>
+                
+                -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
