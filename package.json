@@ -1,7 +1,9 @@
 {
   "dependencies": {
+    "dotenv": "^17.2.1",
     "playwright": "^1.54.2",
-    "replicate": "^1.0.1"
+    "replicate": "^1.0.1",
+    "socket.io-client": "^4.8.1"
   },
   "name": "redactor",
   "version": "1.0.0",

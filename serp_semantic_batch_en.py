@@ -547,23 +547,174 @@ class SerpFileProcessor:
             angles.append(current_angle.strip())
         
         return angles[:10]
-    
+
+    def _extract_keywords_from_agent_data(self, agent_data: Dict, main_keyword: str) -> str:
+        """Extract and generate keywords from agent_response data"""
+        try:
+            keywords = []
+
+            # Add main keyword
+            keywords.append(main_keyword)
+
+            # Extract keywords from different sections
+            shock_stats = agent_data.get('shock_statistics', [])
+            for stat in shock_stats[:3]:  # Take first 3 statistics
+                statistic_text = stat.get('statistic', '')
+                # Extract relevant terms from statistic
+                terms = self._extract_terms_from_text(statistic_text)
+                keywords.extend(terms[:5])
+
+            # Add terms from expert_insights
+            expert_insights = agent_data.get('expert_insights', [])
+            for insight in expert_insights[:2]:
+                insight_text = insight.get('insight', '')
+                terms = self._extract_terms_from_text(insight_text)
+                keywords.extend(terms[:3])
+
+            # Add terms from market_trends
+            market_trends = agent_data.get('market_trends', [])
+            for trend in market_trends[:2]:
+                trend_text = trend.get('trend', '')
+                terms = self._extract_terms_from_text(trend_text)
+                keywords.extend(terms[:3])
+
+            # Add terms from content_marketing_angles
+            marketing_angles = agent_data.get('content_marketing_angles', [])
+            for angle in marketing_angles[:3]:
+                terms = self._extract_terms_from_text(angle)
+                keywords.extend(terms[:2])
+
+            # Clean and deduplicate
+            cleaned_keywords = []
+            seen = set()
+            for kw in keywords:
+                kw_clean = kw.lower().strip()
+                if kw_clean and len(kw_clean) > 2 and kw_clean not in seen:
+                    seen.add(kw_clean)
+                    cleaned_keywords.append(kw)
+
+            return ", ".join(cleaned_keywords[:60])
+
+        except Exception as e:
+            logging.warning(f"Error extracting keywords from agent_data: {e}")
+            return ""
+
+    def _extract_terms_from_text(self, text: str) -> List[str]:
+        """Extract relevant terms from text"""
+        try:
+            # Clean text
+            text = re.sub(r'[^\w\s]', ' ', text)
+            words = text.split()
+
+            # Filter relevant words (length > 3, not pure numbers)
+            terms = []
+            for word in words:
+                if len(word) > 3 and not word.isdigit() and word.lower() not in {'with', 'from', 'that', 'this', 'they', 'have', 'their', 'more'}:
+                    terms.append(word)
+
+            return terms[:10]  # Limit to 10 terms
+
+        except Exception:
+            return []
+
+    def _generate_angles_from_agent_data(self, agent_data: Dict, main_keyword: str, enriched_context: Dict) -> List[str]:
+        """Generate differentiating angles based on agent_response data"""
+        try:
+            angles = []
+
+            # 1. Angles based on shock_statistics
+            shock_stats = agent_data.get('shock_statistics', [])
+            for stat in shock_stats[:3]:
+                statistic = stat.get('statistic', '')
+                context = stat.get('context', '')
+                if statistic:
+                    angle = f"**Statistical Analysis: {statistic}** - {context if context else 'Factual data to support your decision regarding ' + main_keyword}"
+                    angles.append(angle)
+
+            # 2. Angles based on expert_insights
+            expert_insights = agent_data.get('expert_insights', [])
+            for insight in expert_insights[:2]:
+                insight_text = insight.get('insight', '')
+                authority = insight.get('authority_source', '')
+                if insight_text:
+                    angle = f"**Expert Perspective ({authority}): {main_keyword}** - {insight_text}"
+                    angles.append(angle)
+
+            # 3. Angles based on market_trends
+            market_trends = agent_data.get('market_trends', [])
+            for trend in market_trends[:2]:
+                trend_text = trend.get('trend', '')
+                projection = trend.get('future_projection', '')
+                if trend_text:
+                    angle = f"**Market Trend: {trend_text}** - {projection if projection else 'Impact on ' + main_keyword}"
+                    angles.append(angle)
+
+            # 4. Angles based on competitive_landscape
+            competitive = agent_data.get('competitive_landscape', [])
+            for comp in competitive[:2]:
+                comparison = comp.get('comparison_point', '')
+                difference = comp.get('quantified_difference', '')
+                if comparison:
+                    angle = f"**Competitive Analysis: {comparison}** - {difference if difference else 'Comparative analysis for ' + main_keyword}"
+                    angles.append(angle)
+
+            # 5. Use content_marketing_angles directly if available
+            marketing_angles = agent_data.get('content_marketing_angles', [])
+            for marketing_angle in marketing_angles[:2]:
+                if marketing_angle:
+                    angle = f"**Marketing Angle: {main_keyword}** - {marketing_angle}"
+                    angles.append(angle)
+
+            # Clean and limit angles
+            cleaned_angles = [angle for angle in angles if angle and len(angle) > 20]
+            return cleaned_angles[:10]
+
+        except Exception as e:
+            logging.warning(f"Error generating angles from agent_data: {e}")
+            return []
+
+    def _build_final_result(self, main_keyword: str, refined_keywords: str, differentiating_angles: List[str], max_word_count: int, enriched_context: Dict) -> Dict:
+        """Build final result"""
+        return {
+            'main_keyword': main_keyword,
+            'top_keywords': refined_keywords,
+            'word_count': max_word_count,
+            'plan': calculate_sections(max_word_count),
+            'semantic_analysis': {
+                'entities': [ent["name"] for ent in enriched_context.get("important_entities", [])[:5]],
+                'clusters_count': enriched_context.get("semantic_statistics", {}).get("number_clusters", 0),
+                'relations_found': enriched_context.get("semantic_statistics", {}).get("number_relations", 0),
+                'thematic_diversity': enriched_context.get("semantic_statistics", {}).get("thematic_diversity", 0),
+                'semantic_complexity': enriched_context.get("semantic_statistics", {}).get("semantic_complexity", 0)
+            },
+            'differentiating_angles': differentiating_angles
+        }
+
     async def process_file(self, filepath: str, query_data: Dict) -> Optional[Dict]:
         """Process individual SERP file asynchronously"""
         try:
             logging.info(f"Starting processing of {os.path.basename(filepath)}")
-            
+
             # Load SERP file
             async with aiofiles.open(filepath, 'r', encoding='utf-8') as f:
                 content = await f.read()
                 serp_data = json.loads(content)
-            
+
             if not serp_data.get('success') or not serp_data.get('organicResults'):
                 logging.warning(f"Invalid SERP data in {filepath}")
                 return None
-            
+
             main_keyword = query_data.get('text', '')
             logging.info(f"Semantic analysis for: {main_keyword}")
+
+            # === NEW: Priority retrieval of agent_response data ===
+            agent_response_data = query_data.get('agent_response', {})
+            has_agent_data = bool(agent_response_data and isinstance(agent_response_data, dict))
+
+            if has_agent_data:
+                logging.info(f"✓ Agent_response data found for {main_keyword}, using as priority")
+            else:
+                logging.info(f"ℹ️ No agent_response data for {main_keyword}, fallback to classic SERP analysis")
             
             # === 1. Document extraction and preparation ===
             documents = []
@@ -663,10 +814,39 @@ class SerpFileProcessor:
                     "differentiating_angles": self._suggest_cluster_angles(cluster_keywords, cluster_name)
                 }
 
-            # === 5. GPT call with concurrency management ===
+            # === 5. Intelligent generation with agent_response priority ===
             refined_keywords = ""
             differentiating_angles = []
-            
+
+            # Priority use of agent_response data if available
+            if has_agent_data:
+                try:
+                    logging.info(f"🎯 Using agent_response data to enrich analysis")
+
+                    # Extract keywords from agent_response
+                    keywords_from_agent = self._extract_keywords_from_agent_data(agent_response_data, main_keyword)
+                    if keywords_from_agent:
+                        refined_keywords = keywords_from_agent
+                        logging.info(f"✓ Keywords extracted from agent_response")
+
+                    # Generate angles based on agent_response
+                    angles_from_agent = self._generate_angles_from_agent_data(agent_response_data, main_keyword, enriched_context)
+                    if angles_from_agent:
+                        differentiating_angles = angles_from_agent
+                        logging.info(f"✓ Angles generated from agent_response ({len(angles_from_agent)} angles)")
+
+                    # If we got both, we can proceed to build the result
+                    if refined_keywords and differentiating_angles:
+                        logging.info(f"✓ Complete generation via agent_response for {os.path.basename(filepath)}")
+                        # Proceed directly to building the result
+                        result = self._build_final_result(main_keyword, refined_keywords, differentiating_angles, max_word_count, enriched_context)
+                        return result
+
+                except Exception as e:
+                    logging.warning(f"Error using agent_response: {e}, fallback to classic method")
+                    has_agent_data = False  # Force fallback
+
+            # Fallback to classic method if no agent_response or error
             try:
                 if not enriched_context["thematic_clusters"]:
                     logging.warning(f"No thematic clusters for {filepath}, using fallback")
@@ -681,7 +861,13 @@ class SerpFileProcessor:
                 else:
                     # Parallel OpenAI API calls
                     context_str = json.dumps(enriched_context, ensure_ascii=False, indent=2)
-                    
+
+                    # Prepare enhanced context with agent_response if available
+                    enhanced_context = context_str
+                    if has_agent_data:
+                        agent_context = json.dumps(agent_response_data, ensure_ascii=False, indent=2)
+                        enhanced_context = f"PRIORITY DATA (agent_response):\n{agent_context}\n\nCOMPLEMENTARY SERP DATA:\n{context_str}"
+
                     # Create two API tasks
                     keywords_task = async_client.chat.completions.create(
                         model="gpt-4o",
@@ -689,14 +875,16 @@ class SerpFileProcessor:
                             {
                                 "role": "system",
                                 "content": (
-                                    "You are an expert in SEO and semantic analysis. Analyze this SERP corpus "
-                                    "and return 60 strategic keywords that cover all important aspects "
-                                    "of the topic. Organize them logically and return only the comma-separated list."
+                                    "You are an expert in SEO and semantic analysis. "
+                                    "PRIORITY: If agent_response data is provided, use it as priority as it contains verified factual information and statistics. "
+                                    "Analyze the corpus and return 60 strategic keywords that cover all important aspects of the topic. "
+                                    "Prioritize terms present in shock statistics, expert insights, and market trends. "
+                                    "Organize them logically and return only the comma-separated list."
                                 )
                             },
                             {
                                 "role": "user",
-                                "content": f"Semantic analysis of topic '{main_keyword}':\n{context_str}"
+                                "content": f"Semantic analysis of topic '{main_keyword}':\n{enhanced_context}"
                             }
                         ],
                         temperature=0.7,
@@ -711,10 +899,11 @@ class SerpFileProcessor:
                                 "role": "system",
                                 "content": (
                                     "You are a content strategy expert. "
-                                    "From this detailed semantic analysis (clusters, entities, relations), "
-                                    "identify 10 differentiating and original angles to address this topic. "
-                                    "Each angle should leverage semantic insights to stand out from competition. "
-                                    "Format: numbered list with title and brief explanation (2-3 lines max per angle)."
+                                    "PRIORITY: If agent_response data is provided, use it as priority as it contains verified statistics, expert insights, and authentic market trends. "
+                                    "Particularly exploit shock_statistics, expert_insights, market_trends and competitive_landscape to create factual and credible angles. "
+                                    "From this enriched data, identify 10 differentiating and original angles to address this topic. "
+                                    "Each angle should leverage factual insights to stand out from competition with concrete data. "
+                                    "Format: numbered list with title and brief explanation, but you must never cut sentences or interrupt text mid-phrase."
                                 )
                             },
                             {
@@ -722,15 +911,16 @@ class SerpFileProcessor:
                                 "content": (
                                     f"TARGET QUERY (MANDATORY): '{main_keyword}'\n"
                                     f"⚠️ IMPORTANT: All angles MUST directly address this exact query. This is what users type in Google.\n\n"
-                                    f"Semantic context:\n{context_str}\n\n"
+                                    f"Enriched data:\n{enhanced_context}\n\n"
                                     "Find unique angles that:\n"
                                     f"1. DIRECTLY ANSWER the query '{main_keyword}'\n"
                                     f"2. Match the search intent of this specific query\n"
-                                    "3. Exploit unexpected semantic relationships\n" 
-                                    "4. Use connections between clusters\n"
-                                    "5. Highlight underutilized entities\n"
-                                    "6. Cover underrepresented aspects in the SERP\n\n"
-                                    f"Each angle must explain how it specifically addresses '{main_keyword}'."
+                                    "3. Exploit shock statistics and factual data (agent_response priority)\n"
+                                    "4. Integrate expert insights and mentioned authorities\n"
+                                    "5. Use market trends and future projections\n"
+                                    "6. Cover competitive and comparative aspects\n"
+                                    "7. Exploit semantic relationships and discovered entities\n\n"
+                                    f"Each angle must explain how it specifically addresses '{main_keyword}' with concrete data."
                                 )
                             }
                         ],
@@ -775,21 +965,8 @@ class SerpFileProcessor:
                 logging.info(f"Using semantic clustering as fallback for {os.path.basename(filepath)}")
 
             # === 6. Build final result ===
-            result = {
-                'main_keyword': main_keyword,
-                'top_keywords': refined_keywords,
-                'word_count': max_word_count,
-                'plan': calculate_sections(max_word_count),
-                'semantic_analysis': {
-                    'entities': [ent["name"] for ent in enriched_context["important_entities"][:5]],
-                    'clusters_count': enriched_context["semantic_statistics"]["number_clusters"],
-                    'relations_found': enriched_context["semantic_statistics"]["number_relations"],
-                    'thematic_diversity': enriched_context["semantic_statistics"]["thematic_diversity"],
-                    'semantic_complexity': enriched_context["semantic_statistics"]["semantic_complexity"]
-                },
-                'differentiating_angles': differentiating_angles
-            }
-            
+            result = self._build_final_result(main_keyword, refined_keywords, differentiating_angles, max_word_count, enriched_context)
+
             logging.info(f"✓ Processing completed successfully for {os.path.basename(filepath)}")
             return result
             

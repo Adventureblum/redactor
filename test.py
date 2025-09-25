@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Script LangChain - Orchestrateur d'Illustration d'Articles
-Analyse les sections d'articles et génère des prompts d'illustration
-Version compatible avec la structure de données existante
+Script DeepSeek Modulaire - Orchestrateur d'Agents
+Compatible avec la structure de données existante (queries + generated_article_plan)
+Version adaptée de LangChain vers DeepSeek API
 """
 
 import json
@@ -10,317 +10,99 @@ import os
 import sys
 import glob
 import time
-from typing import Dict, List, Any, Optional, Tuple
+import asyncio
+from typing import Dict, List, Any, Optional
 from pathlib import Path
-from dataclasses import dataclass
-
-# Imports LangChain (versions récentes)
-from langchain_openai import ChatOpenAI
-from langchain.agents import initialize_agent, AgentType
-from langchain.memory import ConversationBufferMemory
-from langchain.prompts import PromptTemplate
-from langchain.chains import LLMChain
-from langchain_core.tools import BaseTool
-from langchain_core.callbacks import CallbackManagerForToolRun
+from concurrent.futures import ThreadPoolExecutor
+import requests
 
 
-@dataclass
-class IllustrationDecision:
-    """Structure pour stocker la décision d'illustration"""
-    should_illustrate: bool
-    illustration_type: str
-    justification: str
-    section_key: str
-    section_title: str
-
-
-@dataclass
-class ImagePrompt:
-    """Structure pour stocker les prompts d'image générés"""
-    prompt: str
-    title: str
-    alt_text: str
-    caption: str
-    style: str
-    format_type: str
-
-
-@dataclass
-class InfographicPayload:
-    """Structure pour stocker les spécifications d'infographie"""
-    type: str
-    steps: int
-    titles: List[str]
-    contents: List[str]
-    style: str
-    format: str
-
-
-def _is_allowed_type(s: str) -> bool:
-    s = (s or "").lower().strip()
-    if s == "photo":
-        return True
-    if s.startswith("infographie:"):
-        sub = s.split(":", 1)[1]
-        return sub in {"boucle","chiffres_clefs","comparaison","processus","pyramide","timeline"}
-    return False
-
-
-def enforce_infographic_limits(infographic_type: str, titles: List[str], contents: List[str]) -> Tuple[List[str], List[str]]:
-    """Applique les limites de longueur selon le type d'infographie"""
+class DeepSeekClient:
+    """Client pour l'API DeepSeek avec gestion d'erreurs avancée"""
     
-    # Limites par type d'infographie
-    limits = {
-        "boucle": {"title": 25, "content": 80},
-        "chiffres_clefs": {"title": 30, "content": 60},
-        "comparaison": {"title": 35, "content": 100},
-        "processus": {"title": 30, "content": 90},
-        "pyramide": {"title": 25, "content": 70},
-        "timeline": {"title": 40, "content": 120}
-    }
-    
-    # Extraction du sous-type
-    sub_type = infographic_type.split(":", 1)[1] if ":" in infographic_type else infographic_type
-    limit = limits.get(sub_type, {"title": 30, "content": 100})
-    
-    # Application des limites
-    limited_titles = []
-    limited_contents = []
-    
-    for title in titles:
-        if len(title) > limit["title"]:
-            # Troncature intelligente sur un espace
-            truncated = title[:limit["title"]]
-            last_space = truncated.rfind(' ')
-            if last_space > limit["title"] * 0.7:  # Si on peut couper sur un espace pas trop loin
-                truncated = truncated[:last_space]
-            limited_titles.append(truncated + "...")
-        else:
-            limited_titles.append(title)
-    
-    for content in contents:
-        if len(content) > limit["content"]:
-            # Troncature intelligente sur un espace
-            truncated = content[:limit["content"]]
-            last_space = truncated.rfind(' ')
-            if last_space > limit["content"] * 0.7:  # Si on peut couper sur un espace pas trop loin
-                truncated = truncated[:last_space]
-            limited_contents.append(truncated + "...")
-        else:
-            limited_contents.append(content)
-    
-    return limited_titles, limited_contents
-
-
-class IllustrationAnalyzerTool(BaseTool):
-    """Agent spécialisé dans l'analyse des sections pour déterminer les besoins d'illustration"""
-    
-    name: str = "illustration_analyzer"
-    description: str = "Analyse une section d'article et décide si elle doit être illustrée"
-    
-    # Attributs de classe pour stocker llm et chain
-    _llm = None
-    _chain = None
-    
-    @classmethod
-    def create_with_llm(cls, llm):
-        """Factory method pour créer l'outil avec un LLM"""
-        tool = cls()
-        cls._llm = llm
+    def __init__(self, api_key: str, model: str = "bsoner"):
+        if not api_key:
+            raise ValueError("Clé API DeepSeek manquante")
+        self.api_key = api_key
+        self.model = model
+        self.base_url = "https://api.deepseek.com/v1"
+        self.headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json"
+        }
         
-        analysis_template = PromptTemplate(
-            input_variables=["section_content", "section_title"],
-            template="""Tu es expert en design éditorial.
-Analyse la section et choisis le MEILLEUR type d'illustration.
-
-SECTION:
-Titre: {section_title}
-Contenu: {section_content}
-
-Règles rapides:
-- Concept/processus abstrait ou à étapes → infographie:processus (ex-«schéma»)
-- Données/KPI/comparatif → infographie:chiffres_clefs ou infographie:comparaison (ex-«graphique»)
-- Hiérarchie → infographie:pyramide
-- Cycle → infographie:boucle
-- Repères temporels → infographie:timeline
-- Si l'émotion/ambiance prime → photo
-- Si décoratif → ne pas illustrer
-
-Types AUTORISÉS UNIQUEMENT:
-- "photo"
-- "infographie:<boucle|chiffres_clefs|comparaison|processus|pyramide|timeline>"
-
-Réponds en JSON STRICT:
-{
-  "should_illustrate": true/false,
-  "illustration_type": "photo" ou "infographie:<sous-type>",
-  "justification": "explication concise",
-  "key_concept": "concept principal",
-  "visual_priority": "high/medium/low"
-}
-"""
-        )
-
-        cls._chain = LLMChain(llm=llm, prompt=analysis_template)
-        return tool
+        # Statistiques d'usage
+        self.total_tokens_used = 0
+        self.total_requests = 0
     
-    def _run(self, section_content: str, section_title: str = "", run_manager: Optional[CallbackManagerForToolRun] = None) -> str:
-        """Analyse une section et retourne la décision d'illustration"""
-        try:
-            result = self._chain.invoke({
-                "section_content": section_content,
-                "section_title": section_title
-            })
-            # Extraction du contenu de la réponse
-            if hasattr(result, 'content'):
-                return result.content
-            elif isinstance(result, dict) and 'text' in result:
-                return result['text']
-            else:
-                return str(result)
-        except Exception as e:
-            return f"Erreur lors de l'analyse: {str(e)}"
-
-
-class ImagePromptGeneratorTool(BaseTool):
-    """Agent spécialisé dans la génération de prompts d'image détaillés"""
-    
-    name: str = "image_prompt_generator"
-    description: str = "Génère des prompts détaillés pour la création d'images d'illustration"
-    
-    # Attributs de classe pour stocker llm et chain
-    _llm = None
-    _chain = None
-    
-    @classmethod
-    def create_with_llm(cls, llm):
-        """Factory method pour créer l'outil avec un LLM"""
-        tool = cls()
-        cls._llm = llm
+    def chat_completions_create(self, messages: List[Dict], temperature: float = 0.7, max_tokens: int = 3000):
+        """Effectue un appel à l'API chat completions de DeepSeek avec retry logic"""
+        url = f"{self.base_url}/chat/completions"
+        data = {
+            "model": self.model,
+            "messages": messages,
+            "temperature": temperature,
+            "max_tokens": max_tokens,
+            "stream": False
+        }
         
-        prompt_template = PromptTemplate(
-            input_variables=["section_content", "section_title", "illustration_type", "key_concept"],
-            template="""Tu es un expert en direction artistique et en génération de prompts pour l'IA.
-Crée un prompt détaillé pour générer une image d'illustration basée sur les informations suivantes :
-
-SECTION À ILLUSTRER:
-Titre: {section_title}
-Contenu: {section_content}
-Type d'illustration souhaité: {illustration_type}
-Concept clé: {key_concept}
-
-INSTRUCTIONS:
-1. Crée un prompt précis et détaillé pour un générateur d'image IA
-2. Inclus le style visuel approprié au contenu
-3. Spécifie les éléments techniques (composition, couleurs, ambiance)
-4. Génère un titre accrocheur pour l'image
-5. Rédige un texte alternatif descriptif pour l'accessibilité
-6. Crée une légende explicative qui enrichit le contenu
-
-RÉPONSE ATTENDUE (format JSON strict):
-{{
-    "image_prompt": "prompt détaillé pour générateur d'image IA",
-    "title": "titre accrocheur pour l'image",
-    "alt_text": "description accessible de l'image",
-    "caption": "légende explicative qui enrichit le contenu",
-    "style": "style visuel recommandé",
-    "format": "format d'image recommandé (horizontal/vertical/carré)",
-    "technical_specs": "spécifications techniques (résolution, style, etc.)"
-}}"""
-        )
-        cls._chain = LLMChain(llm=llm, prompt=prompt_template)
-        return tool
-    
-    def _run(self, section_content: str, section_title: str = "", illustration_type: str = "", 
-             key_concept: str = "", run_manager: Optional[CallbackManagerForToolRun] = None) -> str:
-        """Génère un prompt d'image détaillé"""
-        try:
-            result = self._chain.invoke({
-                "section_content": section_content,
-                "section_title": section_title,
-                "illustration_type": illustration_type,
-                "key_concept": key_concept
-            })
-            # Extraction du contenu de la réponse
-            if hasattr(result, 'content'):
-                return result.content
-            elif isinstance(result, dict) and 'text' in result:
-                return result['text']
-            else:
-                return str(result)
-        except Exception as e:
-            return f"Erreur lors de la génération du prompt: {str(e)}"
-
-
-class InfographicSpecGeneratorTool(BaseTool):
-    """Agent spécialisé dans la génération de spécifications d'infographie"""
-    
-    name: str = "infographic_spec_generator"
-    description: str = "Génère des spécifications détaillées pour la création d'infographies"
-    
-    # Attributs de classe pour stocker llm et chain
-    _llm = None
-    _chain = None
-    
-    @classmethod
-    def create_with_llm(cls, llm):
-        """Factory method pour créer l'outil avec un LLM"""
-        tool = cls()
-        cls._llm = llm
+        max_retries = 3
+        retry_delay = 1
         
-        spec_template = PromptTemplate(
-            input_variables=["section_content", "section_title", "illustration_type", "key_concept"],
-            template="""Tu es un expert en création d'infographies.
-Génère les spécifications pour une infographie basée sur le contenu suivant :
-
-SECTION À ILLUSTRER:
-Titre: {section_title}
-Contenu: {section_content}
-Type d'infographie: {illustration_type}
-Concept clé: {key_concept}
-
-RÈGLES STRICTES:
-- Maximum 6 étapes/éléments
-- Titres courts et percutants
-- Contenus concis et informatifs
-- Respecter le type demandé
-
-RÉPONSE ATTENDUE (format JSON strict):
-{{
-    "type": "{illustration_type}",
-    "steps": nombre_d_etapes,
-    "titles": ["titre1", "titre2", ...],
-    "contents": ["contenu1", "contenu2", ...],
-    "style": "style visuel recommandé",
-    "format": "format recommandé (horizontal/vertical/carré)"
-}}"""
-        )
-        cls._chain = LLMChain(llm=llm, prompt=spec_template)
-        return tool
+        for attempt in range(max_retries):
+            try:
+                response = requests.post(url, headers=self.headers, json=data, timeout=1200)
+                response.raise_for_status()
+                
+                result = response.json()
+                
+                # Tracking des tokens
+                usage = result.get('usage', {})
+                tokens_used = usage.get('total_tokens', 0)
+                self.total_tokens_used += tokens_used
+                self.total_requests += 1
+                
+                return result
+                
+            except requests.exceptions.RequestException as e:
+                if attempt < max_retries - 1:
+                    print(f"   ⚠️  Tentative {attempt + 1} échouée, retry dans {retry_delay}s...")
+                    time.sleep(retry_delay)
+                    retry_delay *= 2
+                else:
+                    raise Exception(f"Erreur lors de l'appel à l'API DeepSeek après {max_retries} tentatives: {e}")
     
-    def _run(self, section_content: str, section_title: str = "", illustration_type: str = "", 
-             key_concept: str = "", run_manager: Optional[CallbackManagerForToolRun] = None) -> str:
-        """Génère des spécifications d'infographie"""
-        try:
-            result = self._chain.invoke({
-                "section_content": section_content,
-                "section_title": section_title,
-                "illustration_type": illustration_type,
-                "key_concept": key_concept
-            })
-            # Extraction du contenu de la réponse
-            if hasattr(result, 'content'):
-                return result.content
-            elif isinstance(result, dict) and 'text' in result:
-                return result['text']
-            else:
-                return str(result)
-        except Exception as e:
-            return f"Erreur lors de la génération des spécifications: {str(e)}"
+    def get_usage_stats(self) -> Dict[str, int]:
+        """Retourne les statistiques d'usage"""
+        return {
+            "total_tokens": self.total_tokens_used,
+            "total_requests": self.total_requests
+        }
+
+
+class PromptManager:
+    """Gestionnaire des prompts - charge les fichiers depuis les dossiers schema-spécifiques"""
+    
+    def __init__(self, prompts_dir: str = "prompts"):
+        self.prompts_dir = Path(prompts_dir)
+        if not self.prompts_dir.exists():
+            raise FileNotFoundError(f"Le dossier {prompts_dir} n'existe pas. Créez-le avec vos fichiers de prompts.")
+    
+    def load_prompt(self, prompt_file: str, schema: str) -> str:
+        """Charge un prompt depuis un fichier dans le dossier schema-spécifique"""
+        if not schema:
+            raise ValueError("Le paramètre schema est obligatoire")
+        
+        # Utiliser uniquement le dossier schema-spécifique
+        prompt_path = self.prompts_dir / schema / prompt_file
+        
+        if not prompt_path.exists():
+            raise FileNotFoundError(f"Fichier prompt non trouvé: {prompt_path}")
+        return prompt_path.read_text(encoding='utf-8')
 
 
 def _find_consigne_file() -> str:
-    """Trouve automatiquement le fichier de consigne dans le dossier static"""
+    """Trouve automatiquement le fichier de consigne dans le dossier static (même logique que votre script)"""
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     STATIC_DIR = os.path.join(BASE_DIR, "static")
     
@@ -342,76 +124,46 @@ def _find_consigne_file() -> str:
     return most_recent
 
 
-class ArticleIllustrationOrchestrator:
-    """Orchestrateur principal pour l'analyse et l'illustration d'articles"""
+class ArticleOrchestrator:
+    """Orchestrateur principal des agents de rédaction - Version DeepSeek"""
     
     def __init__(self, 
-                 model_name: str = "gpt-4o",
-                 temperature: float = 0.3):
+                 model_name: str = "deepseek-reasoner",
+                 temperature: float = 0.1,
+                 prompts_dir: str = "prompts"):
         
-        # Vérification de la clé API OpenAI
-        openai_key = os.getenv('OPENAI_API_KEY')
-        if not openai_key:
-            print("❌ Variable d'environnement OPENAI_API_KEY manquante.")
+        # 🎯 MÉTHODE SIMPLIFIÉE - Variables d'environnement uniquement
+        deepseek_key = os.getenv('DEEPSEEK_KEY')
+        if not deepseek_key:
+            print("❌ Variable d'environnement DEEPSEEK_KEY manquante.")
             print("💡 Pour définir la variable:")
-            print("   Linux/Mac: export OPENAI_API_KEY='votre_clé_ici'")
-            print("   Windows:   set OPENAI_API_KEY=votre_clé_ici")
+            print("   Linux/Mac: export DEEPSEEK_KEY='votre_clé_ici'")
+            print("   Windows:   set DEEPSEEK_KEY=votre_clé_ici")
             sys.exit(1)
         
-        # Initialisation du LLM
-        self.llm = ChatOpenAI(
-            model=model_name,
-            temperature=temperature,
-            openai_api_key=openai_key
-        )
+        self.llm = DeepSeekClient(deepseek_key, model_name)
+        self.prompt_manager = PromptManager(prompts_dir)
+        self.temperature = temperature
         
-        # Initialisation des agents avec factory methods
-        self.analyzer_tool = IllustrationAnalyzerTool.create_with_llm(self.llm)
-        self.generator_tool = ImagePromptGeneratorTool.create_with_llm(self.llm)
-        self.infographic_tool = InfographicSpecGeneratorTool.create_with_llm(self.llm)
+        # Configuration des agents (fichiers de prompts) - sera défini dynamiquement par schema
+        self.agent_prompts = {
+            "introduction": "introduction.txt",
+            "section": "section.txt", 
+            "cta_section": "section.txt",  # Utilise section.txt par défaut
+            "subsection": "subsection.txt",
+            "conclusion": "conclusion.txt"
+        }
         
-        # Configuration de l'agent orchestrateur
-        tools = [self.analyzer_tool, self.generator_tool, self.infographic_tool]
+        # État partagé pour la cohérence
+        self.context_history = []
+        self.generated_content = {}
         
-        # Mémoire pour maintenir le contexte
-        self.memory = ConversationBufferMemory(
-            memory_key="chat_history",
-            return_messages=True
-        )
-        
-        # Prompt pour l'orchestrateur
-        orchestrator_prompt = """Tu es un orchestrateur d'illustration d'articles. 
-        Tu coordonnes l'analyse des sections d'articles et la génération de prompts d'illustration.
-        
-        Utilise les outils disponibles pour :
-        1. Analyser chaque section avec l'illustration_analyzer
-        2. Générer des prompts détaillés avec l'image_prompt_generator pour les sections à illustrer
-        3. Générer des spécifications d'infographie avec l'infographic_spec_generator
-        
-        Fournis un rapport complet et structuré de tes analyses."""
-        
-        # Initialisation de l'agent
-        self.agent = initialize_agent(
-            tools=tools,
-            llm=self.llm,
-            agent=AgentType.OPENAI_FUNCTIONS,
-            memory=self.memory,
-            verbose=True,
-            agent_kwargs={
-                "system_message": orchestrator_prompt
-            }
-        )
-        
-        # Flag pour la génération d'images pour infographies
-        self.generate_image_for_infographics = False  # infographie => pas de prompt image
-        
-        # Chargement du fichier consigne
+        # Chargement automatique du fichier consigne
         self.consigne_path = _find_consigne_file()
         self.consigne_data = self.load_consigne()
         
-        # Stockage des résultats
-        self.illustration_decisions = []
-        self.generated_prompts = []
+        # Schema détecté (sera défini dynamiquement pour chaque query)
+        self.current_schema = None
     
     def load_consigne(self) -> Dict:
         """Charge le fichier consigne.json"""
@@ -426,7 +178,7 @@ class ArticleIllustrationOrchestrator:
             sys.exit(1)
     
     def save_consigne(self):
-        """Sauvegarde le fichier consigne.json avec les illustrations"""
+        """Sauvegarde le fichier consigne.json"""
         with open(self.consigne_path, 'w', encoding='utf-8') as f:
             json.dump(self.consigne_data, f, ensure_ascii=False, indent=4)
     
@@ -437,342 +189,69 @@ class ArticleIllustrationOrchestrator:
                 return query
         return None
     
-    def list_available_articles(self) -> List[Dict]:
-        """Liste tous les articles avec contenu généré"""
-        articles = []
+    def detect_schema_for_query(self, query_data: Dict) -> str:
+        """Détecte le schema à utiliser pour une requête donnée"""
+        # Essayer de récupérer detected_schema depuis generated_plan/classification_metadata
+        if 'generated_plan' in query_data and 'classification_metadata' in query_data['generated_plan']:
+            detected_schema = query_data['generated_plan']['classification_metadata'].get('detected_schema')
+            if detected_schema:
+                print(f"   🔍 Schema détecté depuis generated_plan: {detected_schema}")
+                return detected_schema
+        
+        # Fallback: essayer classification_metadata directement dans query_data 
+        if 'classification_metadata' in query_data:
+            detected_schema = query_data['classification_metadata'].get('detected_schema')
+            if detected_schema:
+                print(f"   🔍 Schema détecté depuis query directe: {detected_schema}")
+                return detected_schema
+        
+        # Fallback: chercher dans le champ schema direct dans generated_plan
+        if 'generated_plan' in query_data and 'schema' in query_data['generated_plan']:
+            schema = query_data['generated_plan']['schema']
+            print(f"   🔍 Schema depuis generated_plan/schema: {schema}")
+            return schema
+            
+        # Fallback: chercher dans le champ schema direct
+        if 'schema' in query_data:
+            schema = query_data['schema']
+            print(f"   🔍 Schema depuis champ direct: {schema}")
+            return schema
+        
+        # Fallback: défaut à 'informational'
+        print("   ⚠️  Aucun schema détecté, utilisation du défaut: informational")
+        return 'informational'
+    
+    def list_available_queries(self) -> List[Dict]:
+        """Liste toutes les requêtes disponibles avec leur statut"""
+        queries = []
         for query in self.consigne_data.get('queries', []):
-            has_content = 'generated_content' in query
-            if has_content:
-                articles.append({
-                    'id': query['id'],
-                    'text': query['text'],
-                    'sections_count': len([k for k in query['generated_content'].keys() 
-                                         if k.startswith('section_')]),
-                    'has_illustrations': 'illustrations' in query
-                })
-        return articles
+            has_plan = 'generated_plan' in query  # Correction: clé correcte
+            has_article = 'generated_content' in query  # Notre système de contenu généré
+            status = "🟢 Complet" if has_article else "🟡 Plan prêt" if has_plan else "🔴 Non traité"
+            queries.append({
+                'id': query['id'],
+                'text': query['text'],
+                'status': status,
+                'has_plan': has_plan,
+                'has_article': has_article
+            })
+        return queries
     
-    def extract_sections_from_article(self, query_data: Dict) -> List[Tuple[str, str, str]]:
-        """Extrait les sections d'un article généré"""
-        sections = []
-        generated_content = query_data.get('generated_content', {})
+    def select_queries_to_process(self) -> List[int]:
+        """Interface utilisateur pour sélectionner les requêtes à traiter (même logique que votre script)"""
+        queries = self.list_available_queries()
         
-        # Introduction
-        if 'introduction' in generated_content:
-            sections.append(('introduction', 'Introduction', generated_content['introduction']))
-        
-        # Sections numérotées
-        section_keys = sorted([k for k in generated_content.keys() if k.startswith('section_')])
-        for section_key in section_keys:
-            # Extraction du titre depuis le contenu HTML si possible
-            content = generated_content[section_key]
-            title = self._extract_title_from_content(content) or f"Section {section_key.split('_')[1]}"
-            sections.append((section_key, title, content))
-        
-        # Conclusion
-        if 'conclusion' in generated_content:
-            sections.append(('conclusion', 'Conclusion', generated_content['conclusion']))
-        
-        return sections
-    
-    def _extract_title_from_content(self, content: str) -> Optional[str]:
-        """Extrait le titre d'une section depuis son contenu HTML"""
-        import re
-        # Recherche des balises h3, h2, etc.
-        match = re.search(r'<h[1-6][^>]*>([^<]+)</h[1-6]>', content)
-        if match:
-            return match.group(1).strip()
-        return None
-    
-    def analyze_section(self, section_key: str, section_title: str, section_content: str) -> IllustrationDecision:
-        """Analyse une section avec l'agent analyzer"""
-        print(f"   🔍 Analyse de la section: {section_title}")
-        
-        try:
-            # Appel de l'outil d'analyse
-            analysis_result = self.analyzer_tool._run(
-                section_content=section_content,
-                section_title=section_title
-            )
-            
-            # Nettoyage du résultat (suppression des backticks markdown)
-            cleaned_result = analysis_result.strip()
-            if cleaned_result.startswith('```json'):
-                cleaned_result = cleaned_result[7:]  # Supprime ```json
-            if cleaned_result.endswith('```'):
-                cleaned_result = cleaned_result[:-3]  # Supprime ```
-            cleaned_result = cleaned_result.strip()
-            
-            # Parse du résultat JSON
-            try:
-                analysis_data = json.loads(cleaned_result)
-                
-                # Validation du type autorisé
-                t = (analysis_data.get('illustration_type') or "").strip().lower()
-                if not _is_allowed_type(t):
-                    print(f"     ⚠️ Type non autorisé renvoyé par le LLM: {t}")
-                    return IllustrationDecision(False, "", "Type non autorisé", section_key, section_title)
-                
-                decision = IllustrationDecision(
-                    should_illustrate=analysis_data.get('should_illustrate', False),
-                    illustration_type=analysis_data.get('illustration_type', ''),
-                    justification=analysis_data.get('justification', ''),
-                    section_key=section_key,
-                    section_title=section_title
-                )
-                print(f"     → Décision: {'✅ Illustrer' if decision.should_illustrate else '❌ Ne pas illustrer'}")
-                return decision
-                
-            except json.JSONDecodeError as e:
-                print(f"     ⚠️ Erreur de parsing JSON: {cleaned_result[:100]}...")
-                print(f"     ⚠️ Erreur détaillée: {e}")
-                return IllustrationDecision(
-                    should_illustrate=False,
-                    illustration_type="",
-                    justification="Erreur d'analyse JSON",
-                    section_key=section_key,
-                    section_title=section_title
-                )
-                
-        except Exception as e:
-            print(f"     ❌ Erreur lors de l'analyse: {e}")
-            return IllustrationDecision(
-                should_illustrate=False,
-                illustration_type="",
-                justification=f"Erreur: {str(e)}",
-                section_key=section_key,
-                section_title=section_title
-            )
-    
-    def generate_image_prompt(self, decision: IllustrationDecision, section_content: str) -> Optional[ImagePrompt]:
-        """Génère un prompt d'image détaillé pour une section"""
-        if not decision.should_illustrate:
-            return None
-        
-        print(f"   🎨 Génération du prompt pour: {decision.section_title}")
-        
-        try:
-            # Extraction du concept clé depuis la justification
-            key_concept = self._extract_key_concept(decision.justification)
-            
-            # Appel de l'outil de génération
-            prompt_result = self.generator_tool._run(
-                section_content=section_content,
-                section_title=decision.section_title,
-                illustration_type=decision.illustration_type,
-                key_concept=key_concept
-            )
-            
-            # Nettoyage du résultat (suppression des backticks markdown)
-            cleaned_result = prompt_result.strip()
-            if cleaned_result.startswith('```json'):
-                cleaned_result = cleaned_result[7:]  # Supprime ```json
-            if cleaned_result.endswith('```'):
-                cleaned_result = cleaned_result[:-3]  # Supprime ```
-            cleaned_result = cleaned_result.strip()
-            
-            # Parse du résultat JSON
-            try:
-                prompt_data = json.loads(cleaned_result)
-                image_prompt = ImagePrompt(
-                    prompt=prompt_data.get('image_prompt', ''),
-                    title=prompt_data.get('title', ''),
-                    alt_text=prompt_data.get('alt_text', ''),
-                    caption=prompt_data.get('caption', ''),
-                    style=prompt_data.get('style', ''),
-                    format_type=prompt_data.get('format', 'horizontal')
-                )
-                print(f"     → Prompt généré: {len(image_prompt.prompt)} caractères")
-                return image_prompt
-                
-            except json.JSONDecodeError as e:
-                print(f"     ⚠️ Erreur de parsing JSON prompt: {cleaned_result[:100]}...")
-                print(f"     ⚠️ Erreur détaillée: {e}")
-                return None
-                
-        except Exception as e:
-            print(f"     ❌ Erreur lors de la génération: {e}")
-            return None
-    
-    def generate_infographic_payload(self, decision: IllustrationDecision, section_content: str) -> Optional[Dict]:
-        """Génère une payload infographie pour une section"""
-        if not decision.should_illustrate:
-            return None
-        
-        print(f"   📊 Génération de l'infographie pour: {decision.section_title}")
-        
-        try:
-            # Extraction du concept clé depuis la justification
-            key_concept = self._extract_key_concept(decision.justification)
-            
-            # Appel de l'outil de génération d'infographie
-            spec_result = self.infographic_tool._run(
-                section_content=section_content,
-                section_title=decision.section_title,
-                illustration_type=decision.illustration_type,
-                key_concept=key_concept
-            )
-            
-            # Nettoyage du résultat (suppression des backticks markdown)
-            cleaned_result = spec_result.strip()
-            if cleaned_result.startswith('```json'):
-                cleaned_result = cleaned_result[7:]  # Supprime ```json
-            if cleaned_result.endswith('```'):
-                cleaned_result = cleaned_result[:-3]  # Supprime ```
-            cleaned_result = cleaned_result.strip()
-            
-            # Parse du résultat JSON
-            try:
-                spec_data = json.loads(cleaned_result)
-                
-                # Application des limites de longueur
-                titles = spec_data.get('titles', [])
-                contents = spec_data.get('contents', [])
-                limited_titles, limited_contents = enforce_infographic_limits(
-                    decision.illustration_type, titles, contents
-                )
-                
-                # Construction de la payload finale
-                payload = {
-                    'type': decision.illustration_type,
-                    'steps': len(limited_titles),
-                    'style': spec_data.get('style', ''),
-                    'format': spec_data.get('format', 'horizontal')
-                }
-                
-                # Ajout des titres et contenus avec numérotation
-                for i, (title, content) in enumerate(zip(limited_titles, limited_contents), 1):
-                    payload[f'title{i}'] = title
-                    payload[f'content{i}'] = content
-                
-                print(f"     → Infographie générée: {payload['steps']} étapes")
-                return payload
-                
-            except json.JSONDecodeError as e:
-                print(f"     ⚠️ Erreur de parsing JSON infographie: {cleaned_result[:100]}...")
-                print(f"     ⚠️ Erreur détaillée: {e}")
-                return None
-                
-        except Exception as e:
-            print(f"     ❌ Erreur lors de la génération de l'infographie: {e}")
-            return None
-    
-    def _extract_key_concept(self, justification: str) -> str:
-        """Extrait le concept clé de la justification"""
-        # Simple extraction basée sur des mots-clés
-        import re
-        concepts = re.findall(r'concept[^.]*?([^.]+)', justification, re.IGNORECASE)
-        if concepts:
-            return concepts[0].strip()
-        return "concept principal"
-    
-    def process_article_illustrations(self, query_id: int) -> bool:
-        """Traite toutes les sections d'un article pour l'illustration"""
-        query_data = self.get_query_data(query_id)
-        if not query_data or 'generated_content' not in query_data:
-            print(f"❌ Requête {query_id} sans contenu généré")
-            return False
-        
-        print(f"\n🎨 ANALYSE D'ILLUSTRATION pour ID {query_id}: '{query_data['text']}'")
-        
-        # Extraction des sections
-        sections = self.extract_sections_from_article(query_data)
-        print(f"   📄 {len(sections)} sections trouvées")
-        
-        # Analyse de chaque section
-        decisions = []
-        prompts = []
-        
-        for section_key, section_title, section_content in sections:
-            # Analyse de la section
-            decision = self.analyze_section(section_key, section_title, section_content)
-            decisions.append(decision)
-            
-            if not decision.should_illustrate:
-                continue
-
-            itype = (decision.illustration_type or "").strip().lower()
-
-            if itype == "photo":
-                # → seulement prompt image
-                prompt = self.generate_image_prompt(decision, section_content)
-                if prompt:
-                    prompts.append((section_key, prompt))
-
-            elif itype.startswith("infographie:"):
-                # → seulement payload infographie
-                infopayload = self.generate_infographic_payload(decision, section_content)
-                if infopayload:
-                    if 'illustrations' not in query_data:
-                        query_data['illustrations'] = {}
-                    if 'infographics' not in query_data['illustrations']:
-                        query_data['illustrations']['infographics'] = []
-                    query_data['illustrations']['infographics'].append({
-                        'section_key': section_key,
-                        'section_title': decision.section_title,
-                        **infopayload
-                    })
-            else:
-                print(f"     ⚠️ Type non autorisé ignoré: {itype}")
-        
-        # Sauvegarde des résultats pour les photos
-        if prompts:
-            illustrations_data = {
-                'analysis_completed': True,
-                'total_sections': len(sections),
-                'sections_to_illustrate': len([d for d in decisions if d.should_illustrate]),
-                'decisions': [
-                    {
-                        'section_key': d.section_key,
-                        'section_title': d.section_title,
-                        'should_illustrate': d.should_illustrate,
-                        'illustration_type': d.illustration_type,
-                        'justification': d.justification
-                    }
-                    for d in decisions
-                ],
-                'generated_prompts': [
-                    {
-                        'section_key': section_key,
-                        'prompt': prompt.prompt,
-                        'title': prompt.title,
-                        'alt_text': prompt.alt_text,
-                        'caption': prompt.caption,
-                        'style': prompt.style,
-                        'format': prompt.format_type
-                    }
-                    for section_key, prompt in prompts
-                ]
-            }
-            
-            if 'illustrations' not in query_data:
-                query_data['illustrations'] = {}
-            query_data['illustrations'].update(illustrations_data)
-        
-        infographics_count = len(query_data.get('illustrations', {}).get('infographics', []))
-        photos_count = len(prompts)
-        
-        print(f"   ✅ Analyse terminée: {photos_count} photos + {infographics_count} infographies à créer")
-        return True
-    
-    def select_articles_to_process(self) -> List[int]:
-        """Interface utilisateur pour sélectionner les articles à traiter"""
-        articles = self.list_available_articles()
-        
-        if not articles:
-            print("❌ Aucun article avec contenu généré trouvé.")
-            return []
-        
-        print("\n📋 ARTICLES DISPONIBLES POUR ILLUSTRATION:")
+        print("\n📋 REQUÊTES DISPONIBLES:")
         print("=" * 80)
-        for article in articles:
-            status = "🖼️ Illustré" if article['has_illustrations'] else "📝 Prêt"
-            print(f"ID {article['id']:2d} | {status} | {article['sections_count']} sections | {article['text']}")
+        for q in queries:
+            print(f"ID {q['id']:2d} | {q['status']} | {q['text']}")
         
         print("\n💡 Instructions:")
-        print("- Tapez un ID pour traiter un seul article: 5")
+        print("- Tapez un ID pour traiter une seule requête: 5")
         print("- Tapez plusieurs IDs séparés par des virgules: 1,3,5")
-        print("- Tapez 'all' pour traiter tous les articles")
+        print("- Tapez une plage d'IDs: 1-5")
+        print("- Tapez 'all' pour traiter toutes les requêtes avec plan")
+        print("- Tapez 'auto' pour traitement automatique complet (toutes les requêtes)")
         print("- Tapez 'q' pour quitter")
         
         while True:
@@ -783,79 +262,660 @@ class ArticleIllustrationOrchestrator:
                 sys.exit(0)
             
             if user_input == 'all':
-                return [a['id'] for a in articles]
+                all_with_plans = [q['id'] for q in queries if q['has_plan'] and not q['has_article']]
+                print(f"📋 Sélection automatique de {len(all_with_plans)} requêtes avec plan à traiter")
+                return all_with_plans
+            
+            if user_input == 'auto':
+                all_queries = [q['id'] for q in queries]
+                print(f"🚀 Mode automatique: traitement de toutes les {len(all_queries)} requêtes disponibles")
+                print("⚠️  Cela inclut les requêtes sans plan (qui seront ignorées) et les requêtes déjà traitées")
+                confirm = input("Continuer? (y/N): ").lower()
+                if confirm == 'y':
+                    return all_queries
+                else:
+                    continue
             
             try:
-                if ',' in user_input:
+                selected_ids = []
+                
+                # Gestion des plages (1-5)
+                if '-' in user_input and user_input.count('-') == 1:
+                    start, end = map(int, user_input.split('-'))
+                    selected_ids = list(range(start, end + 1))
+                
+                # Gestion des listes (1,3,5)
+                elif ',' in user_input:
                     selected_ids = [int(x.strip()) for x in user_input.split(',')]
+                
+                # ID unique
                 else:
                     selected_ids = [int(user_input)]
                 
                 # Validation
-                valid_ids = [a['id'] for a in articles]
+                valid_ids = [q['id'] for q in queries]
                 invalid_ids = [id for id in selected_ids if id not in valid_ids]
                 
                 if invalid_ids:
                     print(f"❌ IDs invalides: {invalid_ids}")
                     continue
                 
+                # Vérification des plans
+                no_plan_ids = [id for id in selected_ids 
+                              if not any(q['id'] == id and q['has_plan'] for q in queries)]
+                
+                if no_plan_ids:
+                    print(f"⚠️  Les IDs suivants n'ont pas de plan généré: {no_plan_ids}")
+                    continue_anyway = input("Continuer quand même? (y/N): ").lower() == 'y'
+                    if not continue_anyway:
+                        continue
+                
                 return selected_ids
                 
             except ValueError:
-                print("❌ Format invalide. Utilisez des nombres ou des virgules.")
+                print("❌ Format invalide. Utilisez des nombres, des virgules ou des tirets.")
     
-    def process_multiple_articles(self, article_ids: List[int]):
-        """Traite plusieurs articles pour l'illustration"""
-        print(f"\n🎨 TRAITEMENT DE {len(article_ids)} ARTICLE(S): {article_ids}")
+    def call_agent(self, agent_name: str, context: Dict[str, Any]) -> str:
+        """Appelle un agent avec son prompt et contexte - Version DeepSeek avec support du schema"""
+        prompt_file = self.agent_prompts[agent_name]
+        
+        # Charger le prompt depuis le dossier schema-spécifique
+        system_prompt = self.prompt_manager.load_prompt(prompt_file, self.current_schema)
+
+        # Si le contexte contient déjà previous_content, inutile de le doubler
+        context_str = json.dumps(context, ensure_ascii=False, indent=2)
+
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": f"Données à traiter:\n{context_str}"}
+        ]
+
+        # Debug pour voir exactement ce qui est envoyé
+        print(f"\n=== 📤 PROMPT ENVOYÉ À L'AGENT {agent_name} (Schema: {self.current_schema}) ===")
+        for msg in messages:
+            print(f"[{msg['role'].upper()}] {msg['content'][:200]}...\n")
+        print("=== FIN PROMPT ===\n")
+
+        response = self.llm.chat_completions_create(
+            messages=messages,
+            temperature=self.temperature,
+            max_tokens=3000
+        )
+
+        content = response['choices'][0]['message']['content']
+        usage = response.get('usage', {})
+        tokens_used = usage.get('total_tokens', 0)
+
+        print(f"   💰 Agent {agent_name} ({self.current_schema}) - Tokens: {tokens_used}")
+
+        return content
+    
+    def _get_first_section_title(self, structure: Dict) -> str:
+        """Récupère le titre de la première section"""
+        section_keys = sorted([k for k in structure.keys() if k.startswith("section_")])
+        if section_keys:
+            return structure[section_keys[0]].get("title", "Suite de l'article")
+        return "Suite de l'article"
+    
+    def _get_next_section_title(self, structure: Dict, section_keys: List[str], current_index: int) -> str:
+        """Récupère le titre de la section suivante"""
+        if current_index + 1 < len(section_keys):
+            next_key = section_keys[current_index + 1]
+            return structure[next_key].get("title", "Section suivante")
+        elif "conclusion" in structure:
+            return "Conclusion"
+        return "Fin de l'article"
+    
+    def execute_orchestration_for_query(self, query_id: int):
+        """Exécution de l'orchestration pour une requête spécifique"""
+        query_data = self.get_query_data(query_id)
+        if not query_data or 'generated_plan' not in query_data:  # Correction: clé correcte
+            print(f"❌ Requête {query_id} sans plan généré")
+            return False
+        
+        print(f"\n🎼 ORCHESTRATION pour ID {query_id}: '{query_data['text']}'")
+        
+        # Détecter et définir le schema pour cette requête
+        self.current_schema = self.detect_schema_for_query(query_data)
+        
+        # Récupération du plan (structure correcte)
+        plan = query_data['generated_plan']
+        
+        # Réinitialisation du contexte pour cette requête
+        self.context_history = []
+        self.generated_content = {}
+        
+        generated_content = {}
+        
+        # 1. Agent Introduction
+        print("   📝 Agent Introduction...")
+        intro_context = {
+            "title": plan.get('title', query_data['text']),
+            "data_exploitation_summary": plan.get('data_exploitation_summary', ''),
+            "introduction": plan.get('structure', {}).get('introduction', {}),
+            "query_text": query_data['text'],
+            "next_section": self._get_first_section_title(plan.get('structure', {})),
+            "word_count": query_data.get('plan', {}).get('introduction', {}).get('longueur', 150)
+        }
+        
+        intro_content = self.call_agent("introduction", intro_context)
+        generated_content["introduction"] = intro_content
+        self.context_history.append(intro_content)
+        print("   ✅ Introduction générée")
+        
+        # 2. Sections avec subsections
+        sections_content = []
+        structure = plan.get('structure', {})
+        
+        # Récupération des sections (format section_1, section_2, etc.) et comparative_summary
+        section_keys = sorted([key for key in structure.keys() if key.startswith('section_')])
+        # Ajouter comparative_summary s'il existe
+        if 'comparative_summary' in structure:
+            section_keys.append('comparative_summary')
+        
+        for i, section_key in enumerate(section_keys):
+            section_data = structure[section_key]
+            print(f"   📝 Section {i+1}/{len(section_keys)}: '{section_data.get('title', f'Section {i+1}')}'...")
+            
+            # Déterminer le type d'agent selon la présence de CTA
+            agent_name = "cta_section" if 'cta_hint' in section_data else "section"
+            
+            section_context = {
+                "current_section": section_data,
+                "section_index": i,
+                "total_sections": len(section_keys),
+                "query_text": query_data['text'],
+                "previous_content": self.context_history[-1] if self.context_history else "",
+                "next_section_title": self._get_next_section_title(structure, section_keys, i)
+            }
+            
+            if agent_name == "cta_section":
+                # Ajouter des données produit si disponibles
+                section_context["products_services"] = self.consigne_data.get("products_services", [])
+            
+            section_content = self.call_agent(agent_name, section_context)
+            sections_content.append(section_content)
+            # Utiliser le nom réel de la clé pour comparative_summary
+            section_save_key = section_key if section_key == 'comparative_summary' else f"section_{i+1}"
+            generated_content[section_save_key] = section_content
+            self.context_history.append(section_content)
+            section_display_name = "Summary" if section_key == 'comparative_summary' else f"Section {i+1}"
+            print(f"   ✅ {section_display_name} générée")
+            
+            # 2.1 Générer les subsections si présentes
+            if 'subsections' in section_data and section_data['subsections']:
+                print(f"      🔸 Génération des {len(section_data['subsections'])} subsections...")
+                subsections_content = []
+                
+                for j, subsection_data in enumerate(section_data['subsections']):
+                    subsection_title = subsection_data.get('subsection_title', f'Subsection {j+1}')
+                    print(f"      📝 Subsection {j+1}: '{subsection_title}'...")
+                    
+                    subsection_context = {
+                        "subsection_data": subsection_data,
+                        "subsection_index": j,
+                        "total_subsections": len(section_data['subsections']),
+                        "parent_section": section_data,
+                        "section_content": section_content,
+                        "query_text": query_data['text'],
+                        "section_index": i + 1,
+                        "previous_subsection": subsections_content[-1] if subsections_content else ""
+                    }
+                    
+                    subsection_content = self.call_agent("subsection", subsection_context)
+                    subsections_content.append(subsection_content)
+                    # Clé de sauvegarde adaptée pour comparative_summary
+                    subsection_save_key = f"{section_key}_subsection_{j+1}" if section_key == 'comparative_summary' else f"section_{i+1}_subsection_{j+1}"
+                    generated_content[subsection_save_key] = subsection_content
+                    print(f"      ✅ Subsection {j+1} générée")
+                
+                print(f"   ✅ {len(section_data['subsections'])} subsections générées pour Section {i+1}")
+        
+        # 3. Agent Conclusion
+        print("   📝 Agent Conclusion...")
+        conclusion_context = {
+            "conclusion": structure.get('conclusion', {}),
+            "query_text": query_data['text'],
+            "all_previous_content": "\n---\n".join(self.context_history),
+            "word_count": query_data.get('plan', {}).get('conclusion', {}).get('longueur', 100)
+        }
+        
+        conclusion_content = self.call_agent("conclusion", conclusion_context)
+        generated_content["conclusion"] = conclusion_content
+        print("   ✅ Conclusion générée")
+        
+        # 4. Sauvegarde dans la structure de données
+        query_data['generated_content'] = generated_content
+        query_data['orchestration_completed'] = True
+        query_data['generation_method'] = 'deepseek_orchestrator'
+        
+        # Calcul du nombre de mots total (incluant les subsections)
+        all_contents = [intro_content] + sections_content + [conclusion_content]
+        # Ajouter les subsections au décompte
+        for key in generated_content.keys():
+            if '_subsection_' in key:
+                all_contents.append(generated_content[key])
+        total_text = " ".join(all_contents)
+        query_data['final_word_count'] = len(total_text.split())
+        
+        # Ajout des statistiques d'usage DeepSeek
+        usage_stats = self.llm.get_usage_stats()
+        query_data['deepseek_usage'] = usage_stats
+        
+        print(f"   ✅ Article orchestré ({query_data['final_word_count']} mots)")
+        return True
+    
+    def process_queries(self, query_ids: List[int]):
+        """Traite une liste de requêtes avec l'orchestrateur"""
+        print(f"\n🎼 ORCHESTRATION DE {len(query_ids)} REQUÊTE(S): {query_ids}")
         
         successful = 0
+        initial_tokens = self.llm.total_tokens_used
         
-        for article_id in article_ids:
+        for query_id in query_ids:
             try:
-                if self.process_article_illustrations(article_id):
+                if self.execute_orchestration_for_query(query_id):
                     successful += 1
                 else:
-                    print(f"   ❌ Échec traitement pour ID {article_id}")
+                    print(f"   ❌ Échec orchestration pour ID {query_id}")
                     
             except Exception as e:
-                print(f"   ❌ Erreur lors du traitement ID {article_id}: {e}")
+                print(f"   ❌ Erreur lors de l'orchestration ID {query_id}: {e}")
         
         # Sauvegarde finale
         try:
             self.save_consigne()
             print(f"\n💾 Fichier {self.consigne_path} mis à jour avec succès!")
-            print(f"📊 Résultats: {successful}/{len(article_ids)} articles traités avec succès")
+            print(f"📊 Résultats: {successful}/{len(query_ids)} requêtes traitées avec succès")
+            
+            # Statistiques d'usage DeepSeek
+            final_stats = self.llm.get_usage_stats()
+            tokens_used_session = final_stats['total_tokens'] - initial_tokens
+            print(f"🔢 Tokens utilisés cette session: {tokens_used_session}")
+            print(f"📈 Total tokens utilisés: {final_stats['total_tokens']}")
+            print(f"🔄 Total requêtes API: {final_stats['total_requests']}")
             
         except Exception as e:
             print(f"❌ Erreur lors de la sauvegarde: {e}")
 
 
+class OptimizedArticleOrchestrator(ArticleOrchestrator):
+    """Version optimisée avec traitement parallèle basée sur plan_generator.py"""
+    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.max_concurrent = 20  # Augmentation pour traiter plus de requêtes simultanément
+        self.all_schemas = {}  # Cache des schémas détectés pour toutes les requêtes
+    
+    async def execute_orchestration_for_query_async(self, query_data: Dict) -> bool:
+        """Version async de l'orchestration pour une requête spécifique"""
+        query_id = query_data['id']
+        
+        if 'generated_plan' not in query_data:
+            print(f"❌ Requête {query_id} sans plan généré")
+            return False
+        
+        try:
+            print(f"\n🎼 ORCHESTRATION ASYNC pour ID {query_id}: '{query_data['text']}'")
+            
+            # Utiliser le schéma pré-détecté s'il existe, sinon détecter
+            if '_pre_detected_schema' in query_data:
+                self.current_schema = query_data['_pre_detected_schema']
+                print(f"   🎯 Schéma pré-détecté utilisé: {self.current_schema}")
+            else:
+                self.current_schema = self.detect_schema_for_query(query_data)
+                print(f"   🎯 Schéma détecté à la volée: {self.current_schema}")
+            
+            # Récupération du plan (structure correcte)
+            plan = query_data['generated_plan']
+            
+            # Contexte local pour cette requête (évite contamination)
+            local_context_history = []
+            local_generated_content = {}
+            
+            generated_content = {}
+            
+            # 1. Agent Introduction
+            print(f"   📝 Agent Introduction pour ID {query_id}...")
+            intro_context = {
+                "title": plan.get('title', query_data['text']),
+                "data_exploitation_summary": plan.get('data_exploitation_summary', ''),
+                "introduction": plan.get('structure', {}).get('introduction', {}),
+                "query_text": query_data['text'],
+                "next_section": self._get_first_section_title(plan.get('structure', {})),
+                "word_count": query_data.get('plan', {}).get('introduction', {}).get('longueur', 150)
+            }
+            
+            # Appel async pour l'introduction
+            intro_content = await self._call_agent_async("introduction", intro_context, query_id)
+            generated_content["introduction"] = intro_content
+            local_context_history.append(intro_content)
+            print(f"   ✅ Introduction générée pour ID {query_id}")
+            
+            # 2. Sections avec subsections
+            sections_content = []
+            structure = plan.get('structure', {})
+            
+            # Récupération des sections (format section_1, section_2, etc.) et comparative_summary
+            section_keys = sorted([key for key in structure.keys() if key.startswith('section_')])
+            # Ajouter comparative_summary s'il existe
+            if 'comparative_summary' in structure:
+                section_keys.append('comparative_summary')
+            
+            for i, section_key in enumerate(section_keys):
+                section_data = structure[section_key]
+                print(f"   📝 Section {i+1}/{len(section_keys)} pour ID {query_id}: '{section_data.get('title', f'Section {i+1}')}'...")
+                
+                # Déterminer le type d'agent selon la présence de CTA
+                agent_name = "cta_section" if 'cta_hint' in section_data else "section"
+                
+                section_context = {
+                    "current_section": section_data,
+                    "section_index": i,
+                    "total_sections": len(section_keys),
+                    "query_text": query_data['text'],
+                    "previous_content": local_context_history[-1] if local_context_history else "",
+                    "next_section_title": self._get_next_section_title(structure, section_keys, i)
+                }
+                
+                if agent_name == "cta_section":
+                    # Ajouter des données produit si disponibles
+                    section_context["products_services"] = self.consigne_data.get("products_services", [])
+                
+                section_content = await self._call_agent_async(agent_name, section_context, query_id)
+                sections_content.append(section_content)
+                # Utiliser le nom réel de la clé pour comparative_summary
+                section_save_key = section_key if section_key == 'comparative_summary' else f"section_{i+1}"
+                generated_content[section_save_key] = section_content
+                local_context_history.append(section_content)
+                section_display_name = "Summary" if section_key == 'comparative_summary' else f"Section {i+1}"
+                print(f"   ✅ {section_display_name} générée pour ID {query_id}")
+                
+                # 2.1 Générer les subsections si présentes
+                if 'subsections' in section_data and section_data['subsections']:
+                    print(f"      🔸 Génération des {len(section_data['subsections'])} subsections pour ID {query_id}...")
+                    subsections_content = []
+                    
+                    for j, subsection_data in enumerate(section_data['subsections']):
+                        subsection_title = subsection_data.get('subsection_title', f'Subsection {j+1}')
+                        print(f"      📝 Subsection {j+1} pour ID {query_id}: '{subsection_title}'...")
+                        
+                        subsection_context = {
+                            "subsection_data": subsection_data,
+                            "subsection_index": j,
+                            "total_subsections": len(section_data['subsections']),
+                            "parent_section": section_data,
+                            "section_content": section_content,
+                            "query_text": query_data['text'],
+                            "section_index": i + 1,
+                            "previous_subsection": subsections_content[-1] if subsections_content else ""
+                        }
+                        
+                        subsection_content = await self._call_agent_async("subsection", subsection_context, query_id)
+                        subsections_content.append(subsection_content)
+                        # Clé de sauvegarde adaptée pour comparative_summary
+                        subsection_save_key = f"{section_key}_subsection_{j+1}" if section_key == 'comparative_summary' else f"section_{i+1}_subsection_{j+1}"
+                        generated_content[subsection_save_key] = subsection_content
+                        print(f"      ✅ Subsection {j+1} générée pour ID {query_id}")
+                    
+                    print(f"   ✅ {len(section_data['subsections'])} subsections générées pour Section {i+1} (ID {query_id})")
+            
+            # 3. Agent Conclusion
+            print(f"   📝 Agent Conclusion pour ID {query_id}...")
+            conclusion_context = {
+                "conclusion": structure.get('conclusion', {}),
+                "query_text": query_data['text'],
+                "all_previous_content": "\n---\n".join(local_context_history),
+                "word_count": query_data.get('plan', {}).get('conclusion', {}).get('longueur', 100)
+            }
+            
+            conclusion_content = await self._call_agent_async("conclusion", conclusion_context, query_id)
+            generated_content["conclusion"] = conclusion_content
+            print(f"   ✅ Conclusion générée pour ID {query_id}")
+            
+            # 4. Mise à jour des données de la requête
+            query_data['generated_content'] = generated_content
+            query_data['orchestration_completed'] = True
+            query_data['generation_method'] = 'deepseek_orchestrator_parallel'
+            
+            # Calcul du nombre de mots total (incluant les subsections)
+            all_contents = [intro_content] + sections_content + [conclusion_content]
+            # Ajouter les subsections au décompte
+            for key in generated_content.keys():
+                if '_subsection_' in key:
+                    all_contents.append(generated_content[key])
+            total_text = " ".join(all_contents)
+            query_data['final_word_count'] = len(total_text.split())
+            
+            # Ajout des statistiques d'usage DeepSeek
+            usage_stats = self.llm.get_usage_stats()
+            query_data['deepseek_usage'] = usage_stats
+            
+            print(f"   ✅ Article orchestré pour ID {query_id} ({query_data['final_word_count']} mots)")
+            return True
+            
+        except Exception as e:
+            print(f"❌ Erreur lors de l'orchestration async ID {query_id}: {e}")
+            return False
+    
+    async def _call_agent_async(self, agent_name: str, context: Dict[str, Any], query_id: int) -> str:
+        """Version async de l'appel d'agent"""
+        prompt_file = self.agent_prompts[agent_name]
+        
+        # Charger le prompt depuis le dossier schema-spécifique
+        system_prompt = self.prompt_manager.load_prompt(prompt_file, self.current_schema)
+        
+        context_str = json.dumps(context, ensure_ascii=False, indent=2)
+        
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": f"Données à traiter:\n{context_str}"}
+        ]
+        
+        # Debug pour voir exactement ce qui est envoyé
+        print(f"\n=== 📤 PROMPT ENVOYÉ À L'AGENT {agent_name} (Schema: {self.current_schema}) pour ID {query_id} ===")
+        for msg in messages:
+            print(f"[{msg['role'].upper()}] {msg['content'][:200]}...")
+        print("=== FIN PROMPT ===\n")
+        
+        # Appel async avec ThreadPoolExecutor
+        loop = asyncio.get_event_loop()
+        with ThreadPoolExecutor() as executor:
+            response = await loop.run_in_executor(
+                executor,
+                lambda: self.llm.chat_completions_create(
+                    messages=messages,
+                    temperature=self.temperature,
+                    max_tokens=3000
+                )
+            )
+        
+        content = response['choices'][0]['message']['content']
+        usage = response.get('usage', {})
+        tokens_used = usage.get('total_tokens', 0)
+        
+        print(f"   💰 Agent {agent_name} ({self.current_schema} - ID {query_id}) - Tokens: {tokens_used}")
+        
+        return content
+    
+    def batch_detect_all_schemas(self, query_ids: List[int]) -> Dict[int, str]:
+        """Phase 1: Détecte TOUS les schémas d'abord, en une seule fois"""
+        print(f"🎯 Détection des schémas pour {len(query_ids)} requêtes...")
+        start_time = time.time()
+        
+        schemas_detected = {}
+        for query_id in query_ids:
+            query_data = self.get_query_data(query_id)
+            if query_data and 'generated_plan' in query_data:
+                schema = self.detect_schema_for_query(query_data)
+                schemas_detected[query_id] = schema
+                print(f"  ID {query_id}: {schema}")
+            else:
+                print(f"❌ Requête {query_id} ignorée (pas de plan généré)")
+        
+        elapsed = time.time() - start_time
+        print(f"✅ Détection des schémas terminée en {elapsed:.2f}s ({len(schemas_detected)} requêtes)")
+        
+        # Statistiques par schéma
+        schema_counts = {}
+        for schema in schemas_detected.values():
+            schema_counts[schema] = schema_counts.get(schema, 0) + 1
+        
+        print("📊 Répartition par schéma:")
+        for schema, count in schema_counts.items():
+            print(f"  {schema}: {count} requêtes")
+        
+        return schemas_detected
+    
+    async def batch_process_parallel(self, query_ids: List[int]):
+        """Processus complet optimisé avec pré-détection des schémas + parallélisation"""
+        total_start = time.time()
+        
+        print(f"🚀 Traitement en batch de {len(query_ids)} requêtes...")
+        
+        # Phase 1: Détection de TOUS les schémas d'abord
+        schemas_detected = self.batch_detect_all_schemas(query_ids)
+        
+        if not schemas_detected:
+            print("❌ Aucune requête valide à traiter")
+            return
+        
+        # Phase 2: Préparer toutes les données des requêtes avec schémas pré-détectés
+        queries_data = []
+        for query_id, schema in schemas_detected.items():
+            query_data = self.get_query_data(query_id)
+            if query_data:
+                # Pré-assigner le schéma détecté
+                query_data['_pre_detected_schema'] = schema
+                queries_data.append(query_data)
+        
+        print(f"📋 {len(queries_data)} requêtes préparées pour orchestration parallèle")
+        
+        # Phase 3: Créer un semaphore pour limiter les requêtes concurrentes
+        semaphore = asyncio.Semaphore(self.max_concurrent)
+        
+        async def process_with_semaphore(query_data):
+            async with semaphore:
+                return await self.execute_orchestration_for_query_async(query_data)
+        
+        # Phase 4: Lancer toutes les tâches en parallèle
+        print(f"🚀 Lancement de {len(queries_data)} orchestrations en parallèle...")
+        api_start = time.time()
+        tasks = [process_with_semaphore(query_data) for query_data in queries_data]
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+        api_elapsed = time.time() - api_start
+        
+        print(f"⚡ Toutes les orchestrations terminées en {api_elapsed:.2f}s")
+        
+        # Phase 5: Traitement des résultats
+        success_count = 0
+        error_count = 0
+        
+        for result in results:
+            if isinstance(result, Exception):
+                print(f"❌ Erreur: {result}")
+                error_count += 1
+            elif result:
+                success_count += 1
+            else:
+                error_count += 1
+        
+        # Phase 6: Sauvegarde unique du fichier après TOUTES les orchestrations
+        print("💾 Sauvegarde unique du fichier consigne après tous les traitements...")
+        try:
+            self.save_consigne()
+            print(f"💾 Fichier {self.consigne_path} mis à jour avec succès!")
+        except Exception as e:
+            print(f"❌ Erreur lors de la sauvegarde: {e}")
+        
+        total_elapsed = time.time() - total_start
+        
+        # Statistiques finales
+        final_stats = self.llm.get_usage_stats()
+        
+        print(f"\n📊 Résultats du traitement parallèle avec batch:")
+        print(f"   ✅ Succès: {success_count}/{len(query_ids)}")
+        print(f"   ❌ Échecs: {error_count}/{len(query_ids)}")
+        print(f"   ⏱️  Temps total: {total_elapsed:.2f}s")
+        print(f"   🚀 Temps orchestration: {api_elapsed:.2f}s")
+        print(f"   🔢 Total tokens utilisés: {final_stats['total_tokens']}")
+        print(f"   🔄 Total requêtes API: {final_stats['total_requests']}")
+        print(f"   ⚡ Gain estimé vs séquentiel: {len(query_ids) * 10 - total_elapsed:.1f}s")
+        print(f"   💾 Fichier consigne mis à jour UNE SEULE fois à la fin")
+    
+    def process_queries_optimized(self, query_ids: List[int]):
+        """Point d'entrée pour le traitement optimisé avec batch + parallélisation"""
+        try:
+            print("🎆 Lancement du processus optimisé avec traitement en batch")
+            asyncio.run(self.batch_process_parallel(query_ids))
+        except Exception as e:
+            print(f"❌ Erreur traitement optimisé: {e}")
+            print("🔄 Fallback vers traitement séquentiel classique...")
+            super().process_queries(query_ids)
+
+
 def main():
     """Point d'entrée principal"""
-    print("🎨 GÉNÉRATEUR D'ILLUSTRATIONS D'ARTICLES - ORCHESTRATEUR LANGCHAIN")
-    print("=" * 70)
-    print("🤖 Analyse automatique des sections et génération de prompts d'illustration")
-    print("🔗 Utilise LangChain avec des agents spécialisés")
+    print("🎼 GÉNÉRATEUR D'ARTICLES - ORCHESTRATEUR DEEPSEEK")
+    print("=" * 60)
+    print("📝 Compatible avec la structure de données existante")
+    print("🚀 Utilise l'API DeepSeek pour la génération de contenu")
+    print("✨ Nouveau: Traitement en batch avec détection préalable des schémas")
     
-    # Vérification de la clé API OpenAI
-    if not os.getenv('OPENAI_API_KEY'):
-        print("❌ Variable d'environnement OPENAI_API_KEY manquante.")
-        print("Ajoutez votre clé API OpenAI:")
-        print("export OPENAI_API_KEY='your-api-key-here'")
+    # Gestion des arguments
+    if len(sys.argv) > 1:
+        if sys.argv[1] in ['--help', '-h']:
+            print("\nOptions disponibles:")
+            print("  --parallel, -p   : Traitement en batch optimisé (détection schémas + parallélisation)")
+            print("  --help, -h       : Afficher cette aide")
+            print("  (sans option)    : Mode séquentiel classique")
+            return
+        elif sys.argv[1] in ['--parallel', '-p']:
+            print("⚡ Mode parallèle optimisé : Détection batch des schémas + Traitement parallèle + Sauvegarde unique")
+    
+    # ❌ SUPPRIMER ce bloc (déjà géré dans __init__)
+    # Vérification de la clé API DeepSeek
+    if not os.getenv('DEEPSEEK_KEY'):
+        print("❌ Variable d'environnement DEEPSEEK_KEY manquante.")
+        print("Ajoutez votre clé API DeepSeek:")
+        print("export DEEPSEEK_KEY='your-api-key-here'")
+        print("Ou créez un fichier .env avec: DEEPSEEK_KEY=your-api-key-here")
         sys.exit(1)
     
     try:
-        orchestrator = ArticleIllustrationOrchestrator(
-            model_name="gpt-4o",
-            temperature=0.3
-        )
+        # Vérifier si mode parallèle demandé
+        use_parallel = len(sys.argv) > 1 and sys.argv[1] in ['--parallel', '-p']
         
-        # Sélection et traitement
-        selected_ids = orchestrator.select_articles_to_process()
-        if selected_ids:
-            orchestrator.process_multiple_articles(selected_ids)
+        if use_parallel:
+            print("🚀 Mode batch parallèle activé (optimisé)")
+            orchestrator = OptimizedArticleOrchestrator(
+                model_name="deepseek-chat",
+                temperature=0.7
+            )
+            
+            # Sélection et traitement optimisé avec batch
+            selected_ids = orchestrator.select_queries_to_process()
+            if selected_ids:
+                print(f"\n✨ Mode batch activé: traitement optimisé de {len(selected_ids)} requêtes")
+                print("🔄 1. Détection de TOUS les schémas d'abord")
+                print("🚀 2. Orchestration parallèle des articles")
+                print("💾 3. Sauvegarde unique du fichier consigne")
+                orchestrator.process_queries_optimized(selected_ids)
+            else:
+                print("ℹ️  Aucune requête sélectionnée.")
         else:
-            print("ℹ️  Aucun article sélectionné.")
+            orchestrator = ArticleOrchestrator(
+                model_name="deepseek-chat",
+                temperature=0.7
+            )
+            
+            # Sélection et traitement séquentiel classique
+            selected_ids = orchestrator.select_queries_to_process()
+            if selected_ids:
+                print(f"\n🐌 Mode séquentiel: traitement classique de {len(selected_ids)} requêtes")
+                orchestrator.process_queries(selected_ids)
+            else:
+                print("ℹ️  Aucune requête sélectionnée.")
             
     except KeyboardInterrupt:
         print("\n\n⏹️  Arrêt demandé par l'utilisateur.")

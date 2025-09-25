@@ -1,30 +1,20 @@
 {
   "processed_queries": [
-    "86e10bc87276f1896a050d7f1cb5e977",
-    "9d5604a739ef614f93fa817727b4942b"
+    "bde50c3848340e429e17aa76959b2b2b",
+    "50e819dd3e9491a9722b8d080c3d00b7",
+    "b1c2768c0ab91dcfbf8f62f11ba91b6d",
+    "53b79ac7fee7c14f47dd2eff0500f69f",
+    "5a6e913f7ffef1c677fd7a3cd613b4e0",
+    "20c3496a5b34a034362e9cf8dbcc37f6",
+    "f8dabd87ea25769ef48772fea243e325"
   ],
   "query_details": {
-    "86e10bc87276f1896a050d7f1cb5e977": {
+    "f8dabd87ea25769ef48772fea243e325": {
       "id": 0,
-      "text": "comment recharger voiture électrique sur borne",
-      "processed_at": "2025-08-16 21:05:57",
-      "semantic": 0,
-      "semantic_processed_at": "2025-08-17 00:16:38",
-      "semantic_analysis": {
-        "clusters_count": 5,
-        "relations_found": 10,
-        "entities_count": 5,
-        "angles_generated": 10,
-        "thematic_diversity": 0.03,
-        "semantic_complexity": 1.0
-      }
-    },
-    "9d5604a739ef614f93fa817727b4942b": {
-      "id": 1,
-      "text": "comment recharger voiture électrique sur autoroute",
-      "processed_at": "2025-08-17 00:14:13",
+      "text": "changement serrure porte blindée prix",
+      "processed_at": "2025-09-24 13:55:13",
       "semantic": 1,
-      "semantic_processed_at": "2025-08-17 00:16:38",
+      "semantic_processed_at": "2025-09-24 13:57:49",
       "semantic_analysis": {
         "clusters_count": 5,
         "relations_found": 10,
@@ -33,9 +23,91 @@
         "thematic_diversity": 0.01,
         "semantic_complexity": 1.0
       }
+    },
+    "50e819dd3e9491a9722b8d080c3d00b7": {
+      "id": 3,
+      "text": "comment renforcer une porte blindée",
+      "processed_at": "2025-09-24 13:55:22",
+      "semantic": 1,
+      "semantic_processed_at": "2025-09-24 13:57:49",
+      "semantic_analysis": {
+        "clusters_count": 5,
+        "relations_found": 10,
+        "entities_count": 5,
+        "angles_generated": 8,
+        "thematic_diversity": 0.01,
+        "semantic_complexity": 1.0
+      }
+    },
+    "bde50c3848340e429e17aa76959b2b2b": {
+      "id": 2,
+      "text": "changement barillet porte blindée",
+      "processed_at": "2025-09-24 13:55:22",
+      "semantic": 1,
+      "semantic_processed_at": "2025-09-24 13:57:49",
+      "semantic_analysis": {
+        "clusters_count": 5,
+        "relations_found": 10,
+        "entities_count": 5,
+        "angles_generated": 6,
+        "thematic_diversity": 0.04,
+        "semantic_complexity": 1.0
+      }
+    },
+    "b1c2768c0ab91dcfbf8f62f11ba91b6d": {
+      "id": 1,
+      "text": "changer une serrure de porte blindée",
+      "processed_at": "2025-09-24 13:55:26",
+      "semantic": 1,
+      "semantic_processed_at": "2025-09-24 13:57:49",
+      "semantic_analysis": {
+        "clusters_count": 5,
+        "relations_found": 10,
+        "entities_count": 5,
+        "angles_generated": 10,
+        "thematic_diversity": 0.01,
+        "semantic_complexity": 1.0
+      }
+    },
+    "20c3496a5b34a034362e9cf8dbcc37f6": {
+      "id": 6,
+      "text": "prix porte blindée avec pose",
+      "processed_at": "2025-09-24 13:55:44",
+      "semantic": 0,
+      "semantic_processed_at": "2025-09-24 13:57:49"
+    },
+    "5a6e913f7ffef1c677fd7a3cd613b4e0": {
+      "id": 4,
+      "text": "c est quoi une porte blindée",
+      "processed_at": "2025-09-24 13:55:47",
+      "semantic": 1,
+      "semantic_processed_at": "2025-09-24 13:57:49",
+      "semantic_analysis": {
+        "clusters_count": 5,
+        "relations_found": 10,
+        "entities_count": 5,
+        "angles_generated": 6,
+        "thematic_diversity": 0.02,
+        "semantic_complexity": 1.0
+      }
+    },
+    "53b79ac7fee7c14f47dd2eff0500f69f": {
+      "id": 5,
+      "text": "installer une porte blindée",
+      "processed_at": "2025-09-24 13:55:57",
+      "semantic": 1,
+      "semantic_processed_at": "2025-09-24 13:57:49",
+      "semantic_analysis": {
+        "clusters_count": 5,
+        "relations_found": 10,
+        "entities_count": 5,
+        "angles_generated": 8,
+        "thematic_diversity": 0.03,
+        "semantic_complexity": 1.0
+      }
     }
   },
-  "last_updated": "2025-08-17 00:16:38",
-  "total_processed": 2,
-  "semantic_processed": 1
+  "last_updated": "2025-09-24 13:57:49",
+  "total_processed": 7,
+  "semantic_processed": 6
 }

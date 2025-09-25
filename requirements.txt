@@ -1,4 +1,6 @@
-# Core dependencies (sans versions fixes pour éviter les conflits)
+flask==2.3.3
+flask-socketio==5.3.6
+eventlet==0.33.3
 aiofiles
 numpy
 spacy
@@ -8,8 +10,6 @@ scikit-learn
 sentence-transformers
 openai
 playwright
-
-# Additional dependencies that may be required
 lxml
 html5lib
 requests
@@ -17,7 +17,5 @@ tqdm
 pandas
 torch
 transformers
-
-# For async HTTP requests (if needed)
 aiohttp
 httpx

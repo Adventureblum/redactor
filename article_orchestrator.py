@@ -10,8 +10,10 @@ import os
 import sys
 import glob
 import time
+import asyncio
 from typing import Dict, List, Any, Optional
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor
 import requests
 
 
@@ -49,7 +51,7 @@ class DeepSeekClient:
         
         for attempt in range(max_retries):
             try:
-                response = requests.post(url, headers=self.headers, json=data, timeout=60)
+                response = requests.post(url, headers=self.headers, json=data, timeout=1200)
                 response.raise_for_status()
                 
                 result = response.json()
@@ -79,16 +81,21 @@ class DeepSeekClient:
 
 
 class PromptManager:
-    """Gestionnaire des prompts - charge uniquement les fichiers existants"""
+    """Gestionnaire des prompts - charge les fichiers depuis les dossiers schema-spécifiques"""
     
     def __init__(self, prompts_dir: str = "prompts"):
         self.prompts_dir = Path(prompts_dir)
         if not self.prompts_dir.exists():
             raise FileNotFoundError(f"Le dossier {prompts_dir} n'existe pas. Créez-le avec vos fichiers de prompts.")
     
-    def load_prompt(self, prompt_file: str) -> str:
-        """Charge un prompt depuis un fichier"""
-        prompt_path = self.prompts_dir / prompt_file
+    def load_prompt(self, prompt_file: str, schema: str) -> str:
+        """Charge un prompt depuis un fichier dans le dossier schema-spécifique"""
+        if not schema:
+            raise ValueError("Le paramètre schema est obligatoire")
+        
+        # Utiliser uniquement le dossier schema-spécifique
+        prompt_path = self.prompts_dir / schema / prompt_file
+        
         if not prompt_path.exists():
             raise FileNotFoundError(f"Fichier prompt non trouvé: {prompt_path}")
         return prompt_path.read_text(encoding='utf-8')
@@ -138,11 +145,12 @@ class ArticleOrchestrator:
         self.prompt_manager = PromptManager(prompts_dir)
         self.temperature = temperature
         
-        # Configuration des agents (fichiers de prompts)
+        # Configuration des agents (fichiers de prompts) - sera défini dynamiquement par schema
         self.agent_prompts = {
             "introduction": "introduction.txt",
             "section": "section.txt", 
-            "cta_section": "cta_section.txt",
+            "cta_section": "section.txt",  # Utilise section.txt par défaut
+            "subsection": "subsection.txt",
             "conclusion": "conclusion.txt"
         }
         
@@ -153,6 +161,9 @@ class ArticleOrchestrator:
         # Chargement automatique du fichier consigne
         self.consigne_path = _find_consigne_file()
         self.consigne_data = self.load_consigne()
+        
+        # Schema détecté (sera défini dynamiquement pour chaque query)
+        self.current_schema = None
     
     def load_consigne(self) -> Dict:
         """Charge le fichier consigne.json"""
@@ -177,6 +188,84 @@ class ArticleOrchestrator:
             if query['id'] == query_id:
                 return query
         return None
+    
+    def extract_data_sources_from_plan(self, plan: Dict) -> List[str]:
+        """Extrait toutes les URLs data_sources du plan généré"""
+        data_sources = []
+        
+        # Vérifier si data_sources existe au niveau racine du plan
+        if 'data_sources' in plan and isinstance(plan['data_sources'], list):
+            for source in plan['data_sources']:
+                if isinstance(source, dict) and 'url' in source:
+                    data_sources.append(source['url'])
+                elif isinstance(source, str):
+                    data_sources.append(source)
+        
+        # Vérifier dans la structure
+        structure = plan.get('structure', {})
+        
+        # Parcourir toutes les sections
+        for key, section in structure.items():
+            if isinstance(section, dict):
+                # Vérifier data_sources dans la section
+                if 'data_sources' in section and isinstance(section['data_sources'], list):
+                    for source in section['data_sources']:
+                        if isinstance(source, dict) and 'url' in source:
+                            data_sources.append(source['url'])
+                        elif isinstance(source, str):
+                            data_sources.append(source)
+                
+                # Vérifier dans les subsections
+                if 'subsections' in section and isinstance(section['subsections'], list):
+                    for subsection in section['subsections']:
+                        if isinstance(subsection, dict) and 'data_sources' in subsection:
+                            for source in subsection['data_sources']:
+                                if isinstance(source, dict) and 'url' in source:
+                                    data_sources.append(source['url'])
+                                elif isinstance(source, str):
+                                    data_sources.append(source)
+        
+        # Supprimer les doublons tout en préservant l'ordre
+        seen = set()
+        unique_sources = []
+        for source in data_sources:
+            if source not in seen:
+                seen.add(source)
+                unique_sources.append(source)
+        
+        return unique_sources
+    
+    def detect_schema_for_query(self, query_data: Dict) -> str:
+        """Détecte le schema à utiliser pour une requête donnée"""
+        # Essayer de récupérer detected_schema depuis generated_plan/classification_metadata
+        if 'generated_plan' in query_data and 'classification_metadata' in query_data['generated_plan']:
+            detected_schema = query_data['generated_plan']['classification_metadata'].get('detected_schema')
+            if detected_schema:
+                print(f"   🔍 Schema détecté depuis generated_plan: {detected_schema}")
+                return detected_schema
+        
+        # Fallback: essayer classification_metadata directement dans query_data 
+        if 'classification_metadata' in query_data:
+            detected_schema = query_data['classification_metadata'].get('detected_schema')
+            if detected_schema:
+                print(f"   🔍 Schema détecté depuis query directe: {detected_schema}")
+                return detected_schema
+        
+        # Fallback: chercher dans le champ schema direct dans generated_plan
+        if 'generated_plan' in query_data and 'schema' in query_data['generated_plan']:
+            schema = query_data['generated_plan']['schema']
+            print(f"   🔍 Schema depuis generated_plan/schema: {schema}")
+            return schema
+            
+        # Fallback: chercher dans le champ schema direct
+        if 'schema' in query_data:
+            schema = query_data['schema']
+            print(f"   🔍 Schema depuis champ direct: {schema}")
+            return schema
+        
+        # Fallback: défaut à 'informational'
+        print("   ⚠️  Aucun schema détecté, utilisation du défaut: informational")
+        return 'informational'
     
     def list_available_queries(self) -> List[Dict]:
         """Liste toutes les requêtes disponibles avec leur statut"""
@@ -208,6 +297,7 @@ class ArticleOrchestrator:
         print("- Tapez plusieurs IDs séparés par des virgules: 1,3,5")
         print("- Tapez une plage d'IDs: 1-5")
         print("- Tapez 'all' pour traiter toutes les requêtes avec plan")
+        print("- Tapez 'auto' pour traitement automatique complet (toutes les requêtes)")
         print("- Tapez 'q' pour quitter")
         
         while True:
@@ -218,7 +308,19 @@ class ArticleOrchestrator:
                 sys.exit(0)
             
             if user_input == 'all':
-                return [q['id'] for q in queries if q['has_plan'] and not q['has_article']]
+                all_with_plans = [q['id'] for q in queries if q['has_plan'] and not q['has_article']]
+                print(f"📋 Sélection automatique de {len(all_with_plans)} requêtes avec plan à traiter")
+                return all_with_plans
+            
+            if user_input == 'auto':
+                all_queries = [q['id'] for q in queries]
+                print(f"🚀 Mode automatique: traitement de toutes les {len(all_queries)} requêtes disponibles")
+                print("⚠️  Cela inclut les requêtes sans plan (qui seront ignorées) et les requêtes déjà traitées")
+                confirm = input("Continuer? (y/N): ").lower()
+                if confirm == 'y':
+                    return all_queries
+                else:
+                    continue
             
             try:
                 selected_ids = []
@@ -260,9 +362,11 @@ class ArticleOrchestrator:
                 print("❌ Format invalide. Utilisez des nombres, des virgules ou des tirets.")
     
     def call_agent(self, agent_name: str, context: Dict[str, Any]) -> str:
-        """Appelle un agent avec son prompt et contexte - Version DeepSeek"""
+        """Appelle un agent avec son prompt et contexte - Version DeepSeek avec support du schema"""
         prompt_file = self.agent_prompts[agent_name]
-        system_prompt = self.prompt_manager.load_prompt(prompt_file)
+        
+        # Charger le prompt depuis le dossier schema-spécifique
+        system_prompt = self.prompt_manager.load_prompt(prompt_file, self.current_schema)
 
         # Si le contexte contient déjà previous_content, inutile de le doubler
         context_str = json.dumps(context, ensure_ascii=False, indent=2)
@@ -272,12 +376,10 @@ class ArticleOrchestrator:
             {"role": "user", "content": f"Données à traiter:\n{context_str}"}
         ]
 
-
-
         # Debug pour voir exactement ce qui est envoyé
-        print("\n=== 📤 PROMPT ENVOYÉ À L'AGENT:", agent_name, "===")
+        print(f"\n=== 📤 PROMPT ENVOYÉ À L'AGENT {agent_name} (Schema: {self.current_schema}) ===")
         for msg in messages:
-            print(f"[{msg['role'].upper()}] {msg['content']}\n")
+            print(f"[{msg['role'].upper()}] {msg['content'][:200]}...\n")
         print("=== FIN PROMPT ===\n")
 
         response = self.llm.chat_completions_create(
@@ -290,7 +392,7 @@ class ArticleOrchestrator:
         usage = response.get('usage', {})
         tokens_used = usage.get('total_tokens', 0)
 
-        print(f"   💰 Agent {agent_name} - Tokens: {tokens_used}")
+        print(f"   💰 Agent {agent_name} ({self.current_schema}) - Tokens: {tokens_used}")
 
         return content
     
@@ -310,6 +412,7 @@ class ArticleOrchestrator:
             return "Conclusion"
         return "Fin de l'article"
     
+    
     def execute_orchestration_for_query(self, query_id: int):
         """Exécution de l'orchestration pour une requête spécifique"""
         query_data = self.get_query_data(query_id)
@@ -318,6 +421,9 @@ class ArticleOrchestrator:
             return False
         
         print(f"\n🎼 ORCHESTRATION pour ID {query_id}: '{query_data['text']}'")
+        
+        # Détecter et définir le schema pour cette requête
+        self.current_schema = self.detect_schema_for_query(query_data)
         
         # Récupération du plan (structure correcte)
         plan = query_data['generated_plan']
@@ -330,10 +436,12 @@ class ArticleOrchestrator:
         
         # 1. Agent Introduction
         print("   📝 Agent Introduction...")
+        intro_structure = plan.get('structure', {}).get('introduction', {})
         intro_context = {
             "title": plan.get('title', query_data['text']),
             "data_exploitation_summary": plan.get('data_exploitation_summary', ''),
-            "introduction": plan.get('structure', {}).get('introduction', {}),
+            "introduction": intro_structure,
+            "section_title": intro_structure.get('title', 'Introduction'),
             "query_text": query_data['text'],
             "next_section": self._get_first_section_title(plan.get('structure', {})),
             "word_count": query_data.get('plan', {}).get('introduction', {}).get('longueur', 150)
@@ -344,12 +452,15 @@ class ArticleOrchestrator:
         self.context_history.append(intro_content)
         print("   ✅ Introduction générée")
         
-        # 2. Sections
+        # 2. Sections avec subsections
         sections_content = []
         structure = plan.get('structure', {})
         
-        # Récupération des sections (format section_1, section_2, etc.)
+        # Récupération des sections (format section_1, section_2, etc.) et comparative_summary
         section_keys = sorted([key for key in structure.keys() if key.startswith('section_')])
+        # Ajouter comparative_summary s'il existe
+        if 'comparative_summary' in structure:
+            section_keys.append('comparative_summary')
         
         for i, section_key in enumerate(section_keys):
             section_data = structure[section_key]
@@ -360,6 +471,8 @@ class ArticleOrchestrator:
             
             section_context = {
                 "current_section": section_data,
+                "section_key": section_key,
+                "section_title": section_data.get('title', ''),
                 "section_index": i,
                 "total_sections": len(section_keys),
                 "query_text": query_data['text'],
@@ -373,14 +486,48 @@ class ArticleOrchestrator:
             
             section_content = self.call_agent(agent_name, section_context)
             sections_content.append(section_content)
-            generated_content[f"section_{i+1}"] = section_content
+            # Utiliser directement la clé de la section
+            generated_content[section_key] = section_content
             self.context_history.append(section_content)
-            print(f"   ✅ Section {i+1} générée")
+            section_display_name = "Summary" if section_key == 'comparative_summary' else f"Section {i+1}"
+            print(f"   ✅ {section_display_name} générée")
+            
+            # 2.1 Générer les subsections si présentes
+            if 'subsections' in section_data and section_data['subsections']:
+                print(f"      🔸 Génération des {len(section_data['subsections'])} subsections...")
+                subsections_content = []
+                
+                for j, subsection_data in enumerate(section_data['subsections']):
+                    subsection_title = subsection_data.get('subsection_title', f'Subsection {j+1}')
+                    print(f"      📝 Subsection {j+1}: '{subsection_title}'...")
+                    
+                    subsection_context = {
+                        "subsection_data": subsection_data,
+                        "subsection_title": subsection_data.get('subsection_title', f'Subsection {j+1}'),
+                        "subsection_index": j,
+                        "total_subsections": len(section_data['subsections']),
+                        "parent_section": section_data,
+                        "section_content": section_content,
+                        "query_text": query_data['text'],
+                        "section_index": i + 1,
+                        "previous_subsection": subsections_content[-1] if subsections_content else ""
+                    }
+                    
+                    subsection_content = self.call_agent("subsection", subsection_context)
+                    subsections_content.append(subsection_content)
+                    # Utiliser directement la clé de section et l'index de subsection
+                    subsection_save_key = f"{section_key}_subsection_{j+1}"
+                    generated_content[subsection_save_key] = subsection_content
+                    print(f"      ✅ Subsection {j+1} générée")
+                
+                print(f"   ✅ {len(section_data['subsections'])} subsections générées pour Section {i+1}")
         
         # 3. Agent Conclusion
         print("   📝 Agent Conclusion...")
+        conclusion_structure = structure.get('conclusion', {})
         conclusion_context = {
-            "conclusion": structure.get('conclusion', {}),
+            "conclusion": conclusion_structure,
+            "section_title": conclusion_structure.get('title', 'Conclusion'),
             "query_text": query_data['text'],
             "all_previous_content": "\n---\n".join(self.context_history),
             "word_count": query_data.get('plan', {}).get('conclusion', {}).get('longueur', 100)
@@ -390,13 +537,46 @@ class ArticleOrchestrator:
         generated_content["conclusion"] = conclusion_content
         print("   ✅ Conclusion générée")
         
-        # 4. Sauvegarde dans la structure de données
-        query_data['generated_content'] = generated_content
+        # 4. Construction de la structure finale respectant le plan original
+        final_generated_content = {
+            "title": plan.get('title', query_data['text']),
+            "data_sources": self.extract_data_sources_from_plan(plan),
+            "introduction": generated_content["introduction"]
+        }
+
+        # Récupérer les sections dans l'ordre original du plan
+        structure = plan.get('structure', {})
+        section_keys = sorted([key for key in structure.keys() if key.startswith('section_')])
+
+        # Ajouter comparative_summary s'il existe
+        if 'comparative_summary' in structure:
+            section_keys.append('comparative_summary')
+
+        # Mapper directement les sections sans transformation
+        for section_key in section_keys:
+            if section_key in generated_content:
+                final_generated_content[section_key] = generated_content[section_key]
+                
+                # Ajouter les subsections de cette section
+                for content_key in generated_content.keys():
+                    if content_key.startswith(f"{section_key}_subsection_"):
+                        final_generated_content[content_key] = generated_content[content_key]
+
+        # Ajouter la conclusion
+        final_generated_content["conclusion"] = generated_content["conclusion"]
+        
+        # 5. Sauvegarde dans la structure de données
+        query_data['generated_content'] = final_generated_content
         query_data['orchestration_completed'] = True
         query_data['generation_method'] = 'deepseek_orchestrator'
         
-        # Calcul du nombre de mots total
-        total_text = " ".join([intro_content] + sections_content + [conclusion_content])
+        # Calcul du nombre de mots total (incluant les subsections)
+        all_contents = [intro_content] + sections_content + [conclusion_content]
+        # Ajouter les subsections au décompte
+        for key in generated_content.keys():
+            if '_subsection_' in key:
+                all_contents.append(generated_content[key])
+        total_text = " ".join(all_contents)
         query_data['final_word_count'] = len(total_text.split())
         
         # Ajout des statistiques d'usage DeepSeek
@@ -440,12 +620,373 @@ class ArticleOrchestrator:
             print(f"❌ Erreur lors de la sauvegarde: {e}")
 
 
+class OptimizedArticleOrchestrator(ArticleOrchestrator):
+    """Version optimisée avec traitement parallèle basée sur plan_generator.py"""
+    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.max_concurrent = 20  # Augmentation pour traiter plus de requêtes simultanément
+        self.all_schemas = {}  # Cache des schémas détectés pour toutes les requêtes
+    
+    async def execute_orchestration_for_query_async(self, query_data: Dict) -> bool:
+        """Version async de l'orchestration pour une requête spécifique"""
+        query_id = query_data['id']
+        
+        if 'generated_plan' not in query_data:
+            print(f"❌ Requête {query_id} sans plan généré")
+            return False
+        
+        try:
+            print(f"\n🎼 ORCHESTRATION ASYNC pour ID {query_id}: '{query_data['text']}'")
+            
+            # Utiliser le schéma pré-détecté s'il existe, sinon détecter
+            if '_pre_detected_schema' in query_data:
+                self.current_schema = query_data['_pre_detected_schema']
+                print(f"   🎯 Schéma pré-détecté utilisé: {self.current_schema}")
+            else:
+                self.current_schema = self.detect_schema_for_query(query_data)
+                print(f"   🎯 Schéma détecté à la volée: {self.current_schema}")
+            
+            # Récupération du plan (structure correcte)
+            plan = query_data['generated_plan']
+            
+            # Contexte local pour cette requête (évite contamination)
+            local_context_history = []
+            local_generated_content = {}
+            
+            generated_content = {}
+            
+            # 1. Agent Introduction
+            print(f"   📝 Agent Introduction pour ID {query_id}...")
+            intro_structure = plan.get('structure', {}).get('introduction', {})
+            intro_context = {
+                "title": plan.get('title', query_data['text']),
+                "data_exploitation_summary": plan.get('data_exploitation_summary', ''),
+                "introduction": intro_structure,
+                "section_title": intro_structure.get('title', 'Introduction'),
+                "query_text": query_data['text'],
+                "next_section": self._get_first_section_title(plan.get('structure', {})),
+                "word_count": query_data.get('plan', {}).get('introduction', {}).get('longueur', 150)
+            }
+            
+            # Appel async pour l'introduction
+            intro_content = await self._call_agent_async("introduction", intro_context, query_id)
+            generated_content["introduction"] = intro_content
+            local_context_history.append(intro_content)
+            print(f"   ✅ Introduction générée pour ID {query_id}")
+            
+            # 2. Sections avec subsections
+            sections_content = []
+            structure = plan.get('structure', {})
+            
+            # Récupération des sections (format section_1, section_2, etc.) et comparative_summary
+            section_keys = sorted([key for key in structure.keys() if key.startswith('section_')])
+            # Ajouter comparative_summary s'il existe
+            if 'comparative_summary' in structure:
+                section_keys.append('comparative_summary')
+            
+            for i, section_key in enumerate(section_keys):
+                section_data = structure[section_key]
+                print(f"   📝 Section {i+1}/{len(section_keys)} pour ID {query_id}: '{section_data.get('title', f'Section {i+1}')}'...")
+                
+                # Déterminer le type d'agent selon la présence de CTA
+                agent_name = "cta_section" if 'cta_hint' in section_data else "section"
+                
+                section_context = {
+                    "current_section": section_data,
+                    "section_key": section_key,
+                    "section_title": section_data.get('title', ''),
+                    "section_index": i,
+                    "total_sections": len(section_keys),
+                    "query_text": query_data['text'],
+                    "previous_content": local_context_history[-1] if local_context_history else "",
+                    "next_section_title": self._get_next_section_title(structure, section_keys, i)
+                }
+                
+                if agent_name == "cta_section":
+                    # Ajouter des données produit si disponibles
+                    section_context["products_services"] = self.consigne_data.get("products_services", [])
+                
+                section_content = await self._call_agent_async(agent_name, section_context, query_id)
+                sections_content.append(section_content)
+                # Utiliser directement la clé de la section
+                generated_content[section_key] = section_content
+                local_context_history.append(section_content)
+                section_display_name = "Summary" if section_key == 'comparative_summary' else f"Section {i+1}"
+                print(f"   ✅ {section_display_name} générée pour ID {query_id}")
+                
+                # 2.1 Générer les subsections si présentes
+                if 'subsections' in section_data and section_data['subsections']:
+                    print(f"      🔸 Génération des {len(section_data['subsections'])} subsections pour ID {query_id}...")
+                    subsections_content = []
+                    
+                    for j, subsection_data in enumerate(section_data['subsections']):
+                        subsection_title = subsection_data.get('subsection_title', f'Subsection {j+1}')
+                        print(f"      📝 Subsection {j+1} pour ID {query_id}: '{subsection_title}'...")
+                        
+                        subsection_context = {
+                            "subsection_data": subsection_data,
+                            "subsection_title": subsection_data.get('subsection_title', f'Subsection {j+1}'),
+                            "subsection_index": j,
+                            "total_subsections": len(section_data['subsections']),
+                            "parent_section": section_data,
+                            "section_content": section_content,
+                            "query_text": query_data['text'],
+                            "section_index": i + 1,
+                            "previous_subsection": subsections_content[-1] if subsections_content else ""
+                        }
+                        
+                        subsection_content = await self._call_agent_async("subsection", subsection_context, query_id)
+                        subsections_content.append(subsection_content)
+                        # Utiliser directement la clé de section et l'index de subsection
+                        subsection_save_key = f"{section_key}_subsection_{j+1}"
+                        generated_content[subsection_save_key] = subsection_content
+                        print(f"      ✅ Subsection {j+1} générée pour ID {query_id}")
+                    
+                    print(f"   ✅ {len(section_data['subsections'])} subsections générées pour Section {i+1} (ID {query_id})")
+            
+            # 3. Agent Conclusion
+            print(f"   📝 Agent Conclusion pour ID {query_id}...")
+            conclusion_structure = structure.get('conclusion', {})
+            conclusion_context = {
+                "conclusion": conclusion_structure,
+                "section_title": conclusion_structure.get('title', 'Conclusion'),
+                "query_text": query_data['text'],
+                "all_previous_content": "\n---\n".join(local_context_history),
+                "word_count": query_data.get('plan', {}).get('conclusion', {}).get('longueur', 100)
+            }
+            
+            conclusion_content = await self._call_agent_async("conclusion", conclusion_context, query_id)
+            generated_content["conclusion"] = conclusion_content
+            print(f"   ✅ Conclusion générée pour ID {query_id}")
+            
+            # 4. Construction de la structure finale respectant le plan original
+            final_generated_content = {
+                "title": plan.get('title', query_data['text']),
+                "data_sources": self.extract_data_sources_from_plan(plan),
+                "introduction": generated_content["introduction"]
+            }
+
+            # Récupérer les sections dans l'ordre original du plan
+            structure = plan.get('structure', {})
+            section_keys = sorted([key for key in structure.keys() if key.startswith('section_')])
+
+            # Ajouter comparative_summary s'il existe
+            if 'comparative_summary' in structure:
+                section_keys.append('comparative_summary')
+
+            # Mapper directement les sections sans transformation
+            for section_key in section_keys:
+                if section_key in generated_content:
+                    final_generated_content[section_key] = generated_content[section_key]
+                    
+                    # Ajouter les subsections de cette section
+                    for content_key in generated_content.keys():
+                        if content_key.startswith(f"{section_key}_subsection_"):
+                            final_generated_content[content_key] = generated_content[content_key]
+
+            # Ajouter la conclusion
+            final_generated_content["conclusion"] = generated_content["conclusion"]
+            
+            # 5. Mise à jour des données de la requête
+            query_data['generated_content'] = final_generated_content
+            query_data['orchestration_completed'] = True
+            query_data['generation_method'] = 'deepseek_orchestrator_parallel'
+            
+            # Calcul du nombre de mots total (incluant les subsections)
+            all_contents = [intro_content] + sections_content + [conclusion_content]
+            # Ajouter les subsections au décompte
+            for key in generated_content.keys():
+                if '_subsection_' in key:
+                    all_contents.append(generated_content[key])
+            total_text = " ".join(all_contents)
+            query_data['final_word_count'] = len(total_text.split())
+            
+            # Ajout des statistiques d'usage DeepSeek
+            usage_stats = self.llm.get_usage_stats()
+            query_data['deepseek_usage'] = usage_stats
+            
+            print(f"   ✅ Article orchestré pour ID {query_id} ({query_data['final_word_count']} mots)")
+            return True
+            
+        except Exception as e:
+            print(f"❌ Erreur lors de l'orchestration async ID {query_id}: {e}")
+            return False
+    
+    async def _call_agent_async(self, agent_name: str, context: Dict[str, Any], query_id: int) -> str:
+        """Version async de l'appel d'agent"""
+        prompt_file = self.agent_prompts[agent_name]
+        
+        # Charger le prompt depuis le dossier schema-spécifique
+        system_prompt = self.prompt_manager.load_prompt(prompt_file, self.current_schema)
+        
+        context_str = json.dumps(context, ensure_ascii=False, indent=2)
+        
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": f"Données à traiter:\n{context_str}"}
+        ]
+        
+        # Debug pour voir exactement ce qui est envoyé
+        print(f"\n=== 📤 PROMPT ENVOYÉ À L'AGENT {agent_name} (Schema: {self.current_schema}) pour ID {query_id} ===")
+        for msg in messages:
+            print(f"[{msg['role'].upper()}] {msg['content'][:200]}...")
+        print("=== FIN PROMPT ===\n")
+        
+        # Appel async avec ThreadPoolExecutor
+        loop = asyncio.get_event_loop()
+        with ThreadPoolExecutor() as executor:
+            response = await loop.run_in_executor(
+                executor,
+                lambda: self.llm.chat_completions_create(
+                    messages=messages,
+                    temperature=self.temperature,
+                    max_tokens=3000
+                )
+            )
+        
+        content = response['choices'][0]['message']['content']
+        usage = response.get('usage', {})
+        tokens_used = usage.get('total_tokens', 0)
+        
+        print(f"   💰 Agent {agent_name} ({self.current_schema} - ID {query_id}) - Tokens: {tokens_used}")
+        
+        return content
+    
+    def batch_detect_all_schemas(self, query_ids: List[int]) -> Dict[int, str]:
+        """Phase 1: Détecte TOUS les schémas d'abord, en une seule fois"""
+        print(f"🎯 Détection des schémas pour {len(query_ids)} requêtes...")
+        start_time = time.time()
+        
+        schemas_detected = {}
+        for query_id in query_ids:
+            query_data = self.get_query_data(query_id)
+            if query_data and 'generated_plan' in query_data:
+                schema = self.detect_schema_for_query(query_data)
+                schemas_detected[query_id] = schema
+                print(f"  ID {query_id}: {schema}")
+            else:
+                print(f"❌ Requête {query_id} ignorée (pas de plan généré)")
+        
+        elapsed = time.time() - start_time
+        print(f"✅ Détection des schémas terminée en {elapsed:.2f}s ({len(schemas_detected)} requêtes)")
+        
+        # Statistiques par schéma
+        schema_counts = {}
+        for schema in schemas_detected.values():
+            schema_counts[schema] = schema_counts.get(schema, 0) + 1
+        
+        print("📊 Répartition par schéma:")
+        for schema, count in schema_counts.items():
+            print(f"  {schema}: {count} requêtes")
+        
+        return schemas_detected
+    
+    async def batch_process_parallel(self, query_ids: List[int]):
+        """Processus complet optimisé avec pré-détection des schémas + parallélisation"""
+        total_start = time.time()
+        
+        print(f"🚀 Traitement en batch de {len(query_ids)} requêtes...")
+        
+        # Phase 1: Détection de TOUS les schémas d'abord
+        schemas_detected = self.batch_detect_all_schemas(query_ids)
+        
+        if not schemas_detected:
+            print("❌ Aucune requête valide à traiter")
+            return
+        
+        # Phase 2: Préparer toutes les données des requêtes avec schémas pré-détectés
+        queries_data = []
+        for query_id, schema in schemas_detected.items():
+            query_data = self.get_query_data(query_id)
+            if query_data:
+                # Pré-assigner le schéma détecté
+                query_data['_pre_detected_schema'] = schema
+                queries_data.append(query_data)
+        
+        print(f"📋 {len(queries_data)} requêtes préparées pour orchestration parallèle")
+        
+        # Phase 3: Créer un semaphore pour limiter les requêtes concurrentes
+        semaphore = asyncio.Semaphore(self.max_concurrent)
+        
+        async def process_with_semaphore(query_data):
+            async with semaphore:
+                return await self.execute_orchestration_for_query_async(query_data)
+        
+        # Phase 4: Lancer toutes les tâches en parallèle
+        print(f"🚀 Lancement de {len(queries_data)} orchestrations en parallèle...")
+        api_start = time.time()
+        tasks = [process_with_semaphore(query_data) for query_data in queries_data]
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+        api_elapsed = time.time() - api_start
+        
+        print(f"⚡ Toutes les orchestrations terminées en {api_elapsed:.2f}s")
+        
+        # Phase 5: Traitement des résultats
+        success_count = 0
+        error_count = 0
+        
+        for result in results:
+            if isinstance(result, Exception):
+                print(f"❌ Erreur: {result}")
+                error_count += 1
+            elif result:
+                success_count += 1
+            else:
+                error_count += 1
+        
+        # Phase 6: Sauvegarde unique du fichier après TOUTES les orchestrations
+        print("💾 Sauvegarde unique du fichier consigne après tous les traitements...")
+        try:
+            self.save_consigne()
+            print(f"💾 Fichier {self.consigne_path} mis à jour avec succès!")
+        except Exception as e:
+            print(f"❌ Erreur lors de la sauvegarde: {e}")
+        
+        total_elapsed = time.time() - total_start
+        
+        # Statistiques finales
+        final_stats = self.llm.get_usage_stats()
+        
+        print(f"\n📊 Résultats du traitement parallèle avec batch:")
+        print(f"   ✅ Succès: {success_count}/{len(query_ids)}")
+        print(f"   ❌ Échecs: {error_count}/{len(query_ids)}")
+        print(f"   ⏱️  Temps total: {total_elapsed:.2f}s")
+        print(f"   🚀 Temps orchestration: {api_elapsed:.2f}s")
+        print(f"   🔢 Total tokens utilisés: {final_stats['total_tokens']}")
+        print(f"   🔄 Total requêtes API: {final_stats['total_requests']}")
+        print(f"   ⚡ Gain estimé vs séquentiel: {len(query_ids) * 10 - total_elapsed:.1f}s")
+        print(f"   💾 Fichier consigne mis à jour UNE SEULE fois à la fin")
+    
+    def process_queries_optimized(self, query_ids: List[int]):
+        """Point d'entrée pour le traitement optimisé avec batch + parallélisation"""
+        try:
+            print("🎆 Lancement du processus optimisé avec traitement en batch")
+            asyncio.run(self.batch_process_parallel(query_ids))
+        except Exception as e:
+            print(f"❌ Erreur traitement optimisé: {e}")
+            print("🔄 Fallback vers traitement séquentiel classique...")
+            super().process_queries(query_ids)
+
+
 def main():
     """Point d'entrée principal"""
     print("🎼 GÉNÉRATEUR D'ARTICLES - ORCHESTRATEUR DEEPSEEK")
     print("=" * 60)
     print("📝 Compatible avec la structure de données existante")
     print("🚀 Utilise l'API DeepSeek pour la génération de contenu")
+    print("✨ Nouveau: Traitement en batch avec détection préalable des schémas")
+    
+    # Gestion des arguments
+    if len(sys.argv) > 1:
+        if sys.argv[1] in ['--help', '-h']:
+            print("\nOptions disponibles:")
+            print("  --parallel, -p   : Traitement en batch optimisé (détection schémas + parallélisation)")
+            print("  --help, -h       : Afficher cette aide")
+            print("  (sans option)    : Mode séquentiel classique")
+            return
+        elif sys.argv[1] in ['--parallel', '-p']:
+            print("⚡ Mode parallèle optimisé : Détection batch des schémas + Traitement parallèle + Sauvegarde unique")
     
     # ❌ SUPPRIMER ce bloc (déjà géré dans __init__)
     # Vérification de la clé API DeepSeek
@@ -457,17 +998,39 @@ def main():
         sys.exit(1)
     
     try:
-        orchestrator = ArticleOrchestrator(
-            model_name="deepseek-chat",
-            temperature=0.7
-        )
+        # Vérifier si mode parallèle demandé
+        use_parallel = len(sys.argv) > 1 and sys.argv[1] in ['--parallel', '-p']
         
-        # Sélection et traitement
-        selected_ids = orchestrator.select_queries_to_process()
-        if selected_ids:
-            orchestrator.process_queries(selected_ids)
+        if use_parallel:
+            print("🚀 Mode batch parallèle activé (optimisé)")
+            orchestrator = OptimizedArticleOrchestrator(
+                model_name="deepseek-chat",
+                temperature=0.7
+            )
+            
+            # Sélection et traitement optimisé avec batch
+            selected_ids = orchestrator.select_queries_to_process()
+            if selected_ids:
+                print(f"\n✨ Mode batch activé: traitement optimisé de {len(selected_ids)} requêtes")
+                print("🔄 1. Détection de TOUS les schémas d'abord")
+                print("🚀 2. Orchestration parallèle des articles")
+                print("💾 3. Sauvegarde unique du fichier consigne")
+                orchestrator.process_queries_optimized(selected_ids)
+            else:
+                print("ℹ️  Aucune requête sélectionnée.")
         else:
-            print("ℹ️  Aucune requête sélectionnée.")
+            orchestrator = ArticleOrchestrator(
+                model_name="deepseek-chat",
+                temperature=0.7
+            )
+            
+            # Sélection et traitement séquentiel classique
+            selected_ids = orchestrator.select_queries_to_process()
+            if selected_ids:
+                print(f"\n🐌 Mode séquentiel: traitement classique de {len(selected_ids)} requêtes")
+                orchestrator.process_queries(selected_ids)
+            else:
+                print("ℹ️  Aucune requête sélectionnée.")
             
     except KeyboardInterrupt:
         print("\n\n⏹️  Arrêt demandé par l'utilisateur.")

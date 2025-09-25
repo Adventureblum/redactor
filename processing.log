@@ -1269,3 +1269,1315 @@
 2025-08-17 00:39:56,341 - WARNING - Tentative 1 échouée pour ID 1
 2025-08-17 00:40:05,027 - INFO - Tentative 2/3 pour ID 1
 2025-08-17 00:40:05,027 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur autoroute...
+2025-08-17 18:44:08,721 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing (requests)
+2025-08-17 18:44:08,722 - INFO - 📁 Traitement du fichier: consigne_20250721_175658_1d8537c5.json
+2025-08-17 18:44:08,723 - INFO - === Début traitement ID 1 avec Perplexity Sonar ===
+2025-08-17 18:44:08,723 - INFO - Consigne trouvée pour ID 1: consigne_20250721_175658_1d8537c5.json
+2025-08-17 18:44:08,723 - INFO - Traitement avec recherche web: comment recharger voiture électrique sur autoroute...
+2025-08-17 18:44:08,723 - INFO - Tentative 1/3 pour ID 1
+2025-08-17 18:44:08,723 - INFO - Début appel Perplexity Sonar pour: comment recharger voiture électrique sur autoroute...
+2025-08-17 18:44:35,195 - INFO - Citations trouvées: 5 sources
+2025-08-17 18:44:35,195 - INFO - Réponse Sonar reçue: 5442 caractères
+2025-08-17 18:44:35,199 - INFO - JSON parsé avec succès: 5926 caractères
+2025-08-17 18:44:35,200 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-08-17 18:44:35,201 - INFO - ✅ Succès traitement ID 1 avec Sonar - Données JSON: 6306 caractères
+2025-08-17 18:44:40,206 - INFO - === Début traitement ID 2 avec Perplexity Sonar ===
+2025-08-17 18:44:40,206 - INFO - Consigne trouvée pour ID 2: consigne_20250721_175658_1d8537c5.json
+2025-08-17 18:44:40,206 - INFO - Traitement avec recherche web: comment brancher voiture électrique...
+2025-08-17 18:44:40,206 - INFO - Tentative 1/3 pour ID 2
+2025-08-17 18:44:40,206 - INFO - Début appel Perplexity Sonar pour: comment brancher voiture électrique...
+2025-08-17 18:44:53,994 - INFO - Citations trouvées: 5 sources
+2025-08-17 18:44:53,995 - INFO - Réponse Sonar reçue: 4485 caractères
+2025-08-17 18:44:53,995 - ERROR - Erreur parsing JSON: Expecting ',' delimiter: line 18 column 29 (char 1470)
+2025-08-17 18:44:53,995 - ERROR - Échec parsing JSON de la réponse Sonar - retour de la réponse brute
+2025-08-17 18:44:53,996 - WARNING - Réponse n'est pas un dictionnaire
+2025-08-17 18:44:53,997 - INFO - ✅ Succès traitement ID 2 avec Sonar - Réponse brute: 4485 caractères
+2025-08-17 18:44:53,997 - CRITICAL - 💥 Erreur globale dans process_all_consignes_sequentially: 'str' object has no attribute 'get'
+2025-08-17 18:44:53,997 - INFO - 
+📈 === RÉSUMÉ FINAL PERPLEXITY SONAR (REQUESTS) ===
+- Fichiers traités: 0
+- Queries traitées: 0
+- Queries enrichies web: 0
+- Erreurs: 0
+- Caractères générés: 0
+- Statistiques trouvées: 0
+- Citations web: 0
+- Tokens utilisés: 0
+- Longueur moyenne: 0 caractères
+- Durée totale: 0:00:45.275139
+- Succès global: True
+===============================================
+2025-08-17 19:53:26,126 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing (requests)
+2025-08-17 19:53:26,127 - INFO - 📁 Traitement du fichier: consigne_20250718_134201_ed3c4700.json
+2025-08-17 19:53:26,127 - INFO - === Début traitement ID 0 avec Perplexity Sonar ===
+2025-08-17 19:53:26,128 - INFO - Consigne trouvée pour ID 0: consigne_20250718_134201_ed3c4700.json
+2025-08-17 19:53:26,128 - INFO - Traitement avec recherche web: Comment se positionner en haut des résultats de google...
+2025-08-17 19:53:26,128 - INFO - Tentative 1/3 pour ID 0
+2025-08-17 19:53:26,128 - INFO - Début appel Perplexity Sonar pour: Comment se positionner en haut des résultats de go...
+2025-08-17 19:53:39,442 - INFO - Citations trouvées: 5 sources
+2025-08-17 19:53:39,442 - INFO - Réponse Sonar reçue: 5751 caractères
+2025-08-17 19:53:39,443 - INFO - JSON parsé avec succès: 5920 caractères
+2025-08-17 19:53:39,444 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-08-17 19:53:39,445 - INFO - ✅ Succès traitement ID 0 avec Sonar - Données JSON: 6435 caractères
+2025-08-17 19:53:44,445 - INFO - === Début traitement ID 1 avec Perplexity Sonar ===
+2025-08-17 19:53:44,446 - INFO - Consigne trouvée pour ID 1: consigne_20250718_134201_ed3c4700.json
+2025-08-17 19:53:44,446 - INFO - Traitement avec recherche web: exemple devis architecte d intérieur...
+2025-08-17 19:53:44,446 - INFO - Tentative 1/3 pour ID 1
+2025-08-17 19:53:44,446 - INFO - Début appel Perplexity Sonar pour: exemple devis architecte d intérieur...
+2025-08-19 20:02:49,035 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing (requests)
+2025-08-19 20:02:49,037 - INFO - 📁 Traitement du fichier: consigne_20250718_134201_ed3c4700.json
+2025-08-19 20:02:49,038 - INFO - === Début traitement ID 1 avec Perplexity Sonar ===
+2025-08-19 20:02:49,039 - INFO - Consigne trouvée pour ID 1: consigne_20250718_134201_ed3c4700.json
+2025-08-19 20:02:49,039 - INFO - Traitement avec recherche web: comment gérer la comptabilité d'un immeuble en copropriété...
+2025-08-19 20:02:49,039 - INFO - Tentative 1/3 pour ID 1
+2025-08-19 20:02:49,039 - INFO - Début appel Perplexity Sonar pour: comment gérer la comptabilité d'un immeuble en cop...
+2025-08-19 20:03:10,523 - INFO - Citations trouvées: 5 sources
+2025-08-19 20:03:10,524 - INFO - Réponse Sonar reçue: 4757 caractères
+2025-08-19 20:03:10,525 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 27 column 3 (char 2096)
+2025-08-19 20:03:10,526 - ERROR - Échec parsing JSON de la réponse Sonar - retour de la réponse brute
+2025-08-19 20:03:10,527 - WARNING - Réponse n'est pas un dictionnaire
+2025-08-19 20:03:10,527 - INFO - ✅ Succès traitement ID 1 avec Sonar - Réponse brute: 4757 caractères
+2025-08-19 20:03:10,528 - CRITICAL - 💥 Erreur globale dans process_all_consignes_sequentially: 'str' object has no attribute 'get'
+2025-08-19 20:03:10,528 - INFO - 
+📈 === RÉSUMÉ FINAL PERPLEXITY SONAR (REQUESTS) ===
+- Fichiers traités: 0
+- Queries traitées: 0
+- Queries enrichies web: 0
+- Erreurs: 0
+- Caractères générés: 0
+- Statistiques trouvées: 0
+- Citations web: 0
+- Tokens utilisés: 0
+- Longueur moyenne: 0 caractères
+- Durée totale: 0:00:21.492162
+- Succès global: True
+===============================================
+2025-08-20 13:13:24,514 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing (requests)
+2025-08-20 13:13:24,516 - INFO - 📁 Traitement du fichier: consigne_20250718_134201_ed3c4700.json
+2025-08-20 13:13:24,517 - INFO - === Début traitement ID 2 avec Perplexity Sonar ===
+2025-08-20 13:13:24,518 - INFO - Consigne trouvée pour ID 2: consigne_20250718_134201_ed3c4700.json
+2025-08-20 13:13:24,518 - INFO - Traitement avec recherche web: architecte ou architecte d intérieur...
+2025-08-20 13:13:24,518 - INFO - Tentative 1/3 pour ID 2
+2025-08-20 13:13:24,519 - INFO - Début appel Perplexity Sonar pour: architecte ou architecte d intérieur...
+2025-08-20 13:13:43,750 - INFO - Citations trouvées: 5 sources
+2025-08-20 13:13:43,750 - INFO - Réponse Sonar reçue: 4838 caractères
+2025-08-20 13:13:43,755 - INFO - JSON parsé avec succès: 5173 caractères
+2025-08-20 13:13:43,757 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-08-20 13:13:43,757 - INFO - ✅ Succès traitement ID 2 avec Sonar - Données JSON: 5773 caractères
+2025-08-20 13:13:48,769 - INFO - === Début traitement ID 3 avec Perplexity Sonar ===
+2025-08-20 13:13:48,770 - INFO - Consigne trouvée pour ID 3: consigne_20250718_134201_ed3c4700.json
+2025-08-20 13:13:48,770 - INFO - Traitement avec recherche web: architecture d'intérieur pour les nuls...
+2025-08-20 13:13:48,770 - INFO - Tentative 1/3 pour ID 3
+2025-08-20 13:13:48,770 - INFO - Début appel Perplexity Sonar pour: architecture d'intérieur pour les nuls...
+2025-08-20 13:14:10,585 - INFO - Citations trouvées: 5 sources
+2025-08-20 13:14:10,585 - INFO - Réponse Sonar reçue: 5625 caractères
+2025-08-20 13:14:10,586 - INFO - JSON parsé avec succès: 5778 caractères
+2025-08-20 13:14:10,588 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-08-20 13:14:10,588 - INFO - ✅ Succès traitement ID 3 avec Sonar - Données JSON: 6208 caractères
+2025-08-20 13:14:15,593 - INFO - === Début traitement ID 4 avec Perplexity Sonar ===
+2025-08-20 13:14:15,595 - INFO - Consigne trouvée pour ID 4: consigne_20250718_134201_ed3c4700.json
+2025-08-20 13:14:15,595 - INFO - Traitement avec recherche web: architecture d'intérieur def...
+2025-08-20 13:14:15,595 - INFO - Tentative 1/3 pour ID 4
+2025-08-20 13:14:15,595 - INFO - Début appel Perplexity Sonar pour: architecture d'intérieur def...
+2025-08-20 13:18:50,309 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing (requests)
+2025-08-20 13:18:50,313 - INFO - 📁 Traitement du fichier: consigne_20250718_134201_ed3c4700.json
+2025-08-20 13:18:50,315 - INFO - === Début traitement ID 4 avec Perplexity Sonar ===
+2025-08-20 13:18:50,316 - INFO - Consigne trouvée pour ID 4: consigne_20250718_134201_ed3c4700.json
+2025-08-20 13:18:50,316 - INFO - Traitement avec recherche web: architecture d'intérieur def...
+2025-08-20 13:18:50,316 - INFO - Tentative 1/3 pour ID 4
+2025-08-20 13:18:50,316 - INFO - Début appel Perplexity Sonar pour: architecture d'intérieur def...
+2025-08-20 13:19:20,230 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing (requests)
+2025-08-20 13:19:20,231 - INFO - 📁 Traitement du fichier: consigne_20250718_134201_ed3c4700.json
+2025-08-20 13:19:20,232 - INFO - === Début traitement ID 4 avec Perplexity Sonar ===
+2025-08-20 13:19:20,233 - INFO - Consigne trouvée pour ID 4: consigne_20250718_134201_ed3c4700.json
+2025-08-20 13:19:20,233 - INFO - Traitement avec recherche web: architecture d'intérieur def...
+2025-08-20 13:19:20,233 - INFO - Tentative 1/3 pour ID 4
+2025-08-20 13:19:20,233 - INFO - Début appel Perplexity Sonar pour: architecture d'intérieur def...
+2025-08-20 13:19:32,157 - INFO - Citations trouvées: 5 sources
+2025-08-20 13:19:32,157 - INFO - Réponse Sonar reçue: 4213 caractères
+2025-08-20 13:19:32,163 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 30 column 3 (char 2180)
+2025-08-20 13:19:32,163 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-08-20 13:19:32,165 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-08-20 13:19:32,165 - INFO - ✅ Succès traitement ID 4 avec Sonar - Données JSON: 5453 caractères
+2025-08-20 13:19:37,167 - INFO - === Début traitement ID 5 avec Perplexity Sonar ===
+2025-08-20 13:19:37,168 - INFO - Consigne trouvée pour ID 5: consigne_20250718_134201_ed3c4700.json
+2025-08-20 13:19:37,169 - INFO - Traitement avec recherche web: architecture d'intérieur debouchés...
+2025-08-20 13:19:37,169 - INFO - Tentative 1/3 pour ID 5
+2025-08-20 13:19:37,169 - INFO - Début appel Perplexity Sonar pour: architecture d'intérieur debouchés...
+2025-08-20 13:31:01,553 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing (requests)
+2025-08-20 13:31:01,553 - INFO - 📁 Traitement du fichier: consigne_20250717_222656_61cf9d0c.json
+2025-08-20 13:31:01,554 - INFO - === Début traitement ID 0 avec Perplexity Sonar ===
+2025-08-20 13:31:01,554 - INFO - Consigne trouvée pour ID 0: consigne_20250717_222656_61cf9d0c.json
+2025-08-20 13:31:01,554 - INFO - Traitement avec recherche web: comment gérer la comptabilité d'un immeuble en copropriété...
+2025-08-20 13:31:01,554 - INFO - Tentative 1/3 pour ID 0
+2025-08-20 13:31:01,554 - INFO - Début appel Perplexity Sonar pour: comment gérer la comptabilité d'un immeuble en cop...
+2025-08-20 13:31:22,255 - INFO - Citations trouvées: 5 sources
+2025-08-20 13:31:22,255 - INFO - Réponse Sonar reçue: 4833 caractères
+2025-08-20 13:31:22,257 - INFO - JSON parsé avec succès: 5218 caractères
+2025-08-20 13:31:22,258 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-08-20 13:31:22,258 - INFO - ✅ Succès traitement ID 0 avec Sonar - Données JSON: 5818 caractères
+2025-08-24 14:55:18,481 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing (requests)
+2025-08-24 14:55:18,482 - INFO - 📁 Traitement du fichier: consigne_20250717_222656_61cf9d0c.json
+2025-08-24 14:55:18,483 - INFO - === Début traitement ID 1 avec Perplexity Sonar ===
+2025-08-24 14:55:18,484 - INFO - Consigne trouvée pour ID 1: consigne_20250717_222656_61cf9d0c.json
+2025-08-24 14:55:18,485 - INFO - Traitement avec recherche web: exemple devis architecte d intérieur...
+2025-08-24 14:55:18,485 - INFO - Tentative 1/3 pour ID 1
+2025-08-24 14:55:18,485 - INFO - Début appel Perplexity Sonar pour: exemple devis architecte d intérieur...
+2025-08-24 14:55:34,285 - INFO - Citations trouvées: 5 sources
+2025-08-24 14:55:34,285 - INFO - Réponse Sonar reçue: 4362 caractères
+2025-08-24 14:55:34,287 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 17 column 7 (char 1591)
+2025-08-24 14:55:34,287 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-08-24 14:55:34,289 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-08-24 14:55:34,289 - INFO - ✅ Succès traitement ID 1 avec Sonar - Données JSON: 5447 caractères
+2025-08-25 16:50:13,935 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing (requests)
+2025-08-25 16:50:13,936 - INFO - 📁 Traitement du fichier: consigne_20250717_222656_61cf9d0c.json
+2025-08-25 16:50:13,937 - INFO - === Début traitement ID 2 avec Perplexity Sonar ===
+2025-08-25 16:50:13,938 - INFO - Consigne trouvée pour ID 2: consigne_20250717_222656_61cf9d0c.json
+2025-08-25 16:50:13,938 - INFO - Traitement avec recherche web: architecte ou architecte d intérieur...
+2025-08-25 16:50:13,938 - INFO - Tentative 1/3 pour ID 2
+2025-08-25 16:50:13,938 - INFO - Début appel Perplexity Sonar pour: architecte ou architecte d intérieur...
+2025-08-25 16:50:33,001 - INFO - Citations trouvées: 5 sources
+2025-08-25 16:50:33,001 - INFO - Réponse Sonar reçue: 5225 caractères
+2025-08-25 16:50:33,002 - INFO - JSON parsé avec succès: 5519 caractères
+2025-08-25 16:50:33,004 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-08-25 16:50:33,005 - INFO - ✅ Succès traitement ID 2 avec Sonar - Données JSON: 6154 caractères
+2025-08-25 16:50:38,006 - INFO - === Début traitement ID 3 avec Perplexity Sonar ===
+2025-08-25 16:50:38,007 - INFO - Consigne trouvée pour ID 3: consigne_20250717_222656_61cf9d0c.json
+2025-08-25 16:50:38,008 - INFO - Traitement avec recherche web: architecture d'intérieur pour les nuls...
+2025-08-25 16:50:38,008 - INFO - Tentative 1/3 pour ID 3
+2025-08-25 16:50:38,008 - INFO - Début appel Perplexity Sonar pour: architecture d'intérieur pour les nuls...
+2025-08-30 22:35:17,049 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing (requests)
+2025-08-30 22:35:17,051 - INFO - 📁 Traitement du fichier: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:35:17,052 - INFO - === Début traitement ID 0 avec Perplexity Sonar ===
+2025-08-30 22:35:17,052 - INFO - Consigne trouvée pour ID 0: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:35:17,052 - INFO - Traitement avec recherche web: canapé d'angle sans accoudoir...
+2025-08-30 22:35:17,052 - INFO - Tentative 1/3 pour ID 0
+2025-08-30 22:35:17,052 - INFO - Début appel Perplexity Sonar pour: canapé d'angle sans accoudoir...
+2025-08-30 22:35:45,848 - INFO - 🚀 Mode batch: traitement du fichier consigne le plus récent
+2025-08-30 22:35:45,848 - INFO - 📁 Traitement du fichier le plus récent: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:35:45,848 - INFO - Début traitement batch pour consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:35:45,849 - INFO - Trouvé 6 requêtes à traiter: [0, 1, 2, 3, 4, 5]
+2025-08-30 22:35:45,849 - INFO - === Début traitement ID 0 avec Perplexity Sonar ===
+2025-08-30 22:35:45,849 - INFO - Consigne trouvée pour ID 0: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:35:45,849 - INFO - Traitement avec recherche web: canapé d'angle sans accoudoir...
+2025-08-30 22:35:45,849 - INFO - Tentative 1/3 pour ID 0
+2025-08-30 22:35:45,849 - INFO - Début appel Perplexity Sonar pour: canapé d'angle sans accoudoir...
+2025-08-30 22:35:58,897 - INFO - Citations trouvées: 3 sources
+2025-08-30 22:35:58,897 - INFO - Réponse Sonar reçue: 4659 caractères
+2025-08-30 22:35:58,898 - ERROR - Erreur parsing JSON: Expecting ',' delimiter: line 34 column 88 (char 2453)
+2025-08-30 22:35:58,898 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-08-30 22:35:58,899 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-08-30 22:35:58,899 - INFO - ✅ Succès traitement ID 0 avec Sonar - Données JSON: 5362 caractères
+2025-08-30 22:36:03,901 - INFO - === Début traitement ID 1 avec Perplexity Sonar ===
+2025-08-30 22:36:03,901 - INFO - Consigne trouvée pour ID 1: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:36:03,902 - INFO - Traitement avec recherche web: canapé d angle paiement en 10 fois sans frais...
+2025-08-30 22:36:03,902 - INFO - Tentative 1/3 pour ID 1
+2025-08-30 22:36:03,902 - INFO - Début appel Perplexity Sonar pour: canapé d angle paiement en 10 fois sans frais...
+2025-08-30 22:36:24,907 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:36:24,907 - INFO - Réponse Sonar reçue: 4689 caractères
+2025-08-30 22:36:24,907 - ERROR - Erreur parsing JSON: Expecting ',' delimiter: line 8 column 69 (char 818)
+2025-08-30 22:36:24,907 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-08-30 22:36:24,908 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-08-30 22:36:24,909 - INFO - ✅ Succès traitement ID 1 avec Sonar - Données JSON: 5493 caractères
+2025-08-30 22:36:29,910 - INFO - === Début traitement ID 2 avec Perplexity Sonar ===
+2025-08-30 22:36:29,910 - INFO - Consigne trouvée pour ID 2: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:36:29,910 - INFO - Traitement avec recherche web: canapé d'angle sans pied...
+2025-08-30 22:36:29,910 - INFO - Tentative 1/3 pour ID 2
+2025-08-30 22:36:29,910 - INFO - Début appel Perplexity Sonar pour: canapé d'angle sans pied...
+2025-08-30 22:36:39,123 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:36:39,124 - INFO - Réponse Sonar reçue: 4442 caractères
+2025-08-30 22:36:39,124 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 58 column 4 (char 3705)
+2025-08-30 22:36:39,124 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-08-30 22:36:39,125 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-08-30 22:36:39,125 - INFO - ✅ Succès traitement ID 2 avec Sonar - Données JSON: 5406 caractères
+2025-08-30 22:36:44,135 - INFO - === Début traitement ID 3 avec Perplexity Sonar ===
+2025-08-30 22:36:44,135 - INFO - Consigne trouvée pour ID 3: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:36:44,135 - INFO - Traitement avec recherche web: canapé d'angle sans coussin...
+2025-08-30 22:36:44,135 - INFO - Tentative 1/3 pour ID 3
+2025-08-30 22:36:44,135 - INFO - Début appel Perplexity Sonar pour: canapé d'angle sans coussin...
+2025-08-30 22:37:02,452 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:37:02,452 - INFO - Réponse Sonar reçue: 4531 caractères
+2025-08-30 22:37:02,452 - INFO - JSON parsé avec succès: 4712 caractères
+2025-08-30 22:37:02,454 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-08-30 22:37:02,454 - INFO - ✅ Succès traitement ID 3 avec Sonar - Données JSON: 5057 caractères
+2025-08-30 22:37:07,455 - INFO - === Début traitement ID 4 avec Perplexity Sonar ===
+2025-08-30 22:37:07,455 - INFO - Consigne trouvée pour ID 4: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:37:07,455 - INFO - Traitement avec recherche web: canapé d'angle sans accoudoir ikea...
+2025-08-30 22:37:07,455 - INFO - Tentative 1/3 pour ID 4
+2025-08-30 22:37:07,456 - INFO - Début appel Perplexity Sonar pour: canapé d'angle sans accoudoir ikea...
+2025-08-30 22:37:18,191 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:37:18,191 - INFO - Réponse Sonar reçue: 3986 caractères
+2025-08-30 22:37:18,193 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 21 column 3 (char 1311)
+2025-08-30 22:37:18,193 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-08-30 22:37:18,195 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-08-30 22:37:18,195 - INFO - ✅ Succès traitement ID 4 avec Sonar - Données JSON: 5336 caractères
+2025-08-30 22:37:23,196 - INFO - === Début traitement ID 5 avec Perplexity Sonar ===
+2025-08-30 22:37:23,196 - INFO - Consigne trouvée pour ID 5: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:37:23,196 - INFO - Traitement avec recherche web: canapé d'angle sans meridienne...
+2025-08-30 22:37:23,197 - INFO - Tentative 1/3 pour ID 5
+2025-08-30 22:37:23,197 - INFO - Début appel Perplexity Sonar pour: canapé d'angle sans meridienne...
+2025-08-30 22:37:38,202 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:37:38,202 - INFO - Réponse Sonar reçue: 4236 caractères
+2025-08-30 22:37:38,203 - INFO - JSON parsé avec succès: 4544 caractères
+2025-08-30 22:37:38,205 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-08-30 22:37:38,205 - INFO - ✅ Succès traitement ID 5 avec Sonar - Données JSON: 4919 caractères
+2025-08-30 22:37:43,206 - INFO - 
+📈 === RÉSUMÉ BATCH CONSIGNE consigne_20250717_215213_0d421bf9.json ===
+- Queries traitées: 6
+- Queries enrichies web: 2
+- Erreurs: 0
+- Caractères générés: 28,613
+- Statistiques trouvées: 2
+- Citations web: 10
+- Tokens utilisés: 4,800
+- Longueur moyenne: 4768 caractères
+- Durée totale: 0:01:57.357665
+- Succès: True
+===============================================
+2025-08-30 22:41:04,297 - INFO - ⚡ Mode batch parallèle: traitement asynchrone du fichier consigne le plus récent
+2025-08-30 22:41:04,298 - INFO - 📁 Traitement PARALLÈLE du fichier le plus récent: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:41:04,298 - INFO - 🚀 Début traitement batch PARALLÈLE pour consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:41:04,298 - INFO - 📊 Trouvé 6 requêtes à traiter en parallèle: [0, 1, 2, 3, 4, 5]
+2025-08-30 22:41:04,298 - INFO - 🔧 Concurrence maximale: 3 requêtes simultanées
+2025-08-30 22:41:04,298 - INFO - ⚡ Lancement de 6 tâches en parallèle...
+2025-08-30 22:41:04,299 - INFO - === Début traitement async ID 0 ===
+2025-08-30 22:41:04,299 - INFO - Consigne trouvée pour ID 0: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:41:04,299 - INFO - Traitement async avec recherche web: canapé d'angle sans accoudoir...
+2025-08-30 22:41:04,299 - INFO - Début appel async Perplexity Sonar pour: canapé d'angle sans accoudoir...
+2025-08-30 22:41:04,300 - INFO - === Début traitement async ID 1 ===
+2025-08-30 22:41:04,301 - INFO - Consigne trouvée pour ID 1: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:41:04,301 - INFO - Traitement async avec recherche web: canapé d angle paiement en 10 fois sans frais...
+2025-08-30 22:41:04,301 - INFO - Début appel async Perplexity Sonar pour: canapé d angle paiement en 10 fois sans frais...
+2025-08-30 22:41:04,302 - INFO - === Début traitement async ID 2 ===
+2025-08-30 22:41:04,303 - INFO - Consigne trouvée pour ID 2: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:41:04,303 - INFO - Traitement async avec recherche web: canapé d'angle sans pied...
+2025-08-30 22:41:04,303 - INFO - Début appel async Perplexity Sonar pour: canapé d'angle sans pied...
+2025-08-30 22:41:14,773 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:41:14,773 - INFO - Réponse Sonar async reçue: 3923 caractères
+2025-08-30 22:41:14,774 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 23 column 7 (char 1640)
+2025-08-30 22:41:14,774 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-08-30 22:41:14,775 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-08-30 22:41:14,775 - INFO - ✅ Succès traitement async ID 2 - Données JSON: 4894 caractères
+2025-08-30 22:41:14,776 - INFO - === Début traitement async ID 3 ===
+2025-08-30 22:41:14,776 - INFO - Consigne trouvée pour ID 3: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:41:14,776 - INFO - Traitement async avec recherche web: canapé d'angle sans coussin...
+2025-08-30 22:41:14,776 - INFO - Début appel async Perplexity Sonar pour: canapé d'angle sans coussin...
+2025-08-30 22:41:15,636 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:41:15,636 - INFO - Réponse Sonar async reçue: 5309 caractères
+2025-08-30 22:41:15,637 - ERROR - Erreur parsing JSON: Expecting ',' delimiter: line 35 column 71 (char 2753)
+2025-08-30 22:41:15,637 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-08-30 22:41:15,638 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-08-30 22:41:15,638 - INFO - ✅ Succès traitement async ID 1 - Données JSON: 6838 caractères
+2025-08-30 22:41:15,638 - INFO - === Début traitement async ID 4 ===
+2025-08-30 22:41:15,639 - INFO - Consigne trouvée pour ID 4: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:41:15,639 - INFO - Traitement async avec recherche web: canapé d'angle sans accoudoir ikea...
+2025-08-30 22:41:15,639 - INFO - Début appel async Perplexity Sonar pour: canapé d'angle sans accoudoir ikea...
+2025-08-30 22:41:19,807 - INFO - Citations trouvées: 3 sources
+2025-08-30 22:41:19,807 - INFO - Réponse Sonar async reçue: 4315 caractères
+2025-08-30 22:41:19,807 - INFO - JSON parsé avec succès: 4430 caractères
+2025-08-30 22:41:19,808 - INFO - ✅ Réponse enrichie avec 3 sources web récentes
+2025-08-30 22:41:19,808 - INFO - ✅ Succès traitement async ID 0 - Données JSON: 4805 caractères
+2025-08-30 22:41:19,809 - INFO - === Début traitement async ID 5 ===
+2025-08-30 22:41:19,809 - INFO - Consigne trouvée pour ID 5: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:41:19,809 - INFO - Traitement async avec recherche web: canapé d'angle sans meridienne...
+2025-08-30 22:41:19,809 - INFO - Début appel async Perplexity Sonar pour: canapé d'angle sans meridienne...
+2025-08-30 22:41:26,679 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:41:26,680 - INFO - Réponse Sonar async reçue: 4374 caractères
+2025-08-30 22:41:26,680 - ERROR - Erreur parsing JSON: Expecting ',' delimiter: line 18 column 29 (char 1327)
+2025-08-30 22:41:26,680 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-08-30 22:41:26,681 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-08-30 22:41:26,681 - INFO - ✅ Succès traitement async ID 4 - Données JSON: 5633 caractères
+2025-08-30 22:41:29,424 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:41:29,424 - INFO - Réponse Sonar async reçue: 4654 caractères
+2025-08-30 22:41:29,425 - INFO - JSON parsé avec succès: 4861 caractères
+2025-08-30 22:41:29,426 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-08-30 22:41:29,426 - INFO - ✅ Succès traitement async ID 3 - Données JSON: 5176 caractères
+2025-08-30 22:41:32,375 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:41:32,375 - INFO - Réponse Sonar async reçue: 4231 caractères
+2025-08-30 22:41:32,376 - ERROR - Erreur parsing JSON: Expecting value: line 32 column 17 (char 1830)
+2025-08-30 22:41:32,376 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-08-30 22:41:32,377 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-08-30 22:41:32,377 - INFO - ✅ Succès traitement async ID 5 - Données JSON: 5096 caractères
+2025-08-30 22:41:32,377 - INFO - ✅ Succès async pour requête 0
+2025-08-30 22:41:32,377 - INFO - ✅ Succès async pour requête 1
+2025-08-30 22:41:32,377 - INFO - ✅ Succès async pour requête 2
+2025-08-30 22:41:32,378 - INFO - ✅ Succès async pour requête 3
+2025-08-30 22:41:32,378 - INFO - ✅ Succès async pour requête 4
+2025-08-30 22:41:32,378 - INFO - ✅ Succès async pour requête 5
+2025-08-30 22:41:32,378 - INFO - 🏁 Traitement parallèle terminé: 6/6 succès
+2025-08-30 22:41:32,378 - INFO - 
+📈 === RÉSUMÉ BATCH PARALLÈLE CONSIGNE consigne_20250717_215213_0d421bf9.json ===
+- Queries traitées: 6
+- Queries enrichies web: 1
+- Erreurs: 0
+- Caractères générés: 9,106
+- Statistiques trouvées: 1
+- Citations web: 3
+- Tokens utilisés: 2,355
+- Longueur moyenne: 1517 caractères
+- Durée totale: 0:00:28.080421
+- Concurrence utilisée: 3 requêtes simultanées
+- Succès: True
+===============================================
+2025-08-30 22:42:39,490 - INFO - ⚡ Mode batch parallèle: traitement asynchrone du fichier consigne le plus récent
+2025-08-30 22:42:39,491 - INFO - 📁 Traitement PARALLÈLE du fichier le plus récent: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:42:39,491 - INFO - 🚀 Début traitement batch PARALLÈLE pour consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:42:39,491 - INFO - 📊 Trouvé 5 requêtes à traiter en parallèle: [0, 1, 3, 4, 5]
+2025-08-30 22:42:39,491 - INFO - 🔧 Concurrence maximale: 3 requêtes simultanées
+2025-08-30 22:42:39,491 - INFO - ⚡ Lancement de 5 tâches en parallèle...
+2025-08-30 22:42:39,491 - INFO - === Début traitement async ID 0 ===
+2025-08-30 22:42:39,492 - INFO - Consigne trouvée pour ID 0: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:42:39,492 - INFO - Traitement async avec recherche web: canapé d'angle sans accoudoir...
+2025-08-30 22:42:39,492 - INFO - Début appel async Perplexity Sonar pour: canapé d'angle sans accoudoir...
+2025-08-30 22:42:39,493 - INFO - === Début traitement async ID 1 ===
+2025-08-30 22:42:39,493 - INFO - Consigne trouvée pour ID 1: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:42:39,493 - INFO - Traitement async avec recherche web: canapé d angle paiement en 10 fois sans frais...
+2025-08-30 22:42:39,494 - INFO - Début appel async Perplexity Sonar pour: canapé d angle paiement en 10 fois sans frais...
+2025-08-30 22:42:39,495 - INFO - === Début traitement async ID 3 ===
+2025-08-30 22:42:39,495 - INFO - Consigne trouvée pour ID 3: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:42:39,495 - INFO - Traitement async avec recherche web: canapé d'angle sans coussin...
+2025-08-30 22:42:39,496 - INFO - Début appel async Perplexity Sonar pour: canapé d'angle sans coussin...
+2025-08-30 22:42:48,863 - INFO - Citations trouvées: 2 sources
+2025-08-30 22:42:48,864 - INFO - Réponse Sonar async reçue: 3734 caractères
+2025-08-30 22:42:48,865 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 22 column 3 (char 1390)
+2025-08-30 22:42:48,865 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-08-30 22:42:48,866 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-08-30 22:42:48,866 - INFO - ✅ Succès traitement async ID 0 - Données JSON: 4462 caractères
+2025-08-30 22:42:48,866 - INFO - === Début traitement async ID 4 ===
+2025-08-30 22:42:48,867 - INFO - Consigne trouvée pour ID 4: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:42:48,867 - INFO - Traitement async avec recherche web: canapé d'angle sans accoudoir ikea...
+2025-08-30 22:42:48,867 - INFO - Début appel async Perplexity Sonar pour: canapé d'angle sans accoudoir ikea...
+2025-08-30 22:42:57,447 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:42:57,447 - INFO - Réponse Sonar async reçue: 4627 caractères
+2025-08-30 22:42:57,448 - ERROR - Erreur parsing JSON: Expecting ',' delimiter: line 8 column 94 (char 767)
+2025-08-30 22:42:57,448 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-08-30 22:42:57,449 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-08-30 22:42:57,449 - INFO - ✅ Succès traitement async ID 1 - Données JSON: 5371 caractères
+2025-08-30 22:42:57,449 - INFO - === Début traitement async ID 5 ===
+2025-08-30 22:42:57,449 - INFO - Consigne trouvée pour ID 5: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:42:57,450 - INFO - Traitement async avec recherche web: canapé d'angle sans meridienne...
+2025-08-30 22:42:57,450 - INFO - Début appel async Perplexity Sonar pour: canapé d'angle sans meridienne...
+2025-08-30 22:43:00,980 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:43:00,980 - INFO - Réponse Sonar async reçue: 4673 caractères
+2025-08-30 22:43:00,980 - INFO - JSON parsé avec succès: 5008 caractères
+2025-08-30 22:43:00,981 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-08-30 22:43:00,982 - INFO - ✅ Succès traitement async ID 3 - Données JSON: 5408 caractères
+2025-08-30 22:43:05,299 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:43:05,299 - INFO - Réponse Sonar async reçue: 3889 caractères
+2025-08-30 22:43:05,299 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 23 column 7 (char 1316)
+2025-08-30 22:43:05,300 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-08-30 22:43:05,301 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-08-30 22:43:05,301 - INFO - ✅ Succès traitement async ID 4 - Données JSON: 5033 caractères
+2025-08-30 22:43:10,523 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:43:10,524 - INFO - Réponse Sonar async reçue: 4119 caractères
+2025-08-30 22:43:10,524 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 30 column 3 (char 1935)
+2025-08-30 22:43:10,524 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-08-30 22:43:10,525 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-08-30 22:43:10,525 - INFO - ✅ Succès traitement async ID 5 - Données JSON: 5296 caractères
+2025-08-30 22:43:10,526 - INFO - ✅ Succès async pour requête 0
+2025-08-30 22:43:10,526 - INFO - ✅ Succès async pour requête 1
+2025-08-30 22:43:10,526 - INFO - ✅ Succès async pour requête 3
+2025-08-30 22:43:10,526 - INFO - ✅ Succès async pour requête 4
+2025-08-30 22:43:10,526 - INFO - ✅ Succès async pour requête 5
+2025-08-30 22:43:10,527 - INFO - 🏁 Traitement parallèle terminé: 5/5 succès
+2025-08-30 22:43:10,527 - INFO - 
+📈 === RÉSUMÉ BATCH PARALLÈLE CONSIGNE consigne_20250717_215213_0d421bf9.json ===
+- Queries traitées: 5
+- Queries enrichies web: 0
+- Erreurs: 0
+- Caractères générés: 9,487
+- Statistiques trouvées: 0
+- Citations web: 0
+- Tokens utilisés: 0
+- Longueur moyenne: 1897 caractères
+- Durée totale: 0:00:31.036119
+- Concurrence utilisée: 3 requêtes simultanées
+- Succès: True
+===============================================
+2025-08-30 22:52:42,353 - INFO - ⚡ Mode batch parallèle: traitement asynchrone du fichier consigne le plus récent
+2025-08-30 22:52:42,358 - INFO - 📁 Traitement PARALLÈLE du fichier le plus récent: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:52:42,358 - INFO - 🚀 Début traitement batch PARALLÈLE pour consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:52:42,358 - INFO - 📊 Trouvé 6 requêtes à traiter en parallèle: [0, 1, 2, 3, 4, 5]
+2025-08-30 22:52:42,358 - INFO - 🔧 Concurrence maximale: 3 requêtes simultanées
+2025-08-30 22:52:42,358 - INFO - ⚡ Lancement de 6 tâches en parallèle...
+2025-08-30 22:52:42,359 - INFO - === Début traitement async ID 0 ===
+2025-08-30 22:52:42,359 - INFO - Consigne trouvée pour ID 0: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:52:42,359 - INFO - Traitement async avec recherche web: canapé d'angle sans accoudoir...
+2025-08-30 22:52:42,359 - INFO - Début appel async Perplexity Sonar pour: canapé d'angle sans accoudoir...
+2025-08-30 22:52:42,362 - INFO - === Début traitement async ID 1 ===
+2025-08-30 22:52:42,362 - INFO - Consigne trouvée pour ID 1: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:52:42,362 - INFO - Traitement async avec recherche web: canapé d angle paiement en 10 fois sans frais...
+2025-08-30 22:52:42,363 - INFO - Début appel async Perplexity Sonar pour: canapé d angle paiement en 10 fois sans frais...
+2025-08-30 22:52:42,364 - INFO - === Début traitement async ID 2 ===
+2025-08-30 22:52:42,364 - INFO - Consigne trouvée pour ID 2: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:52:42,364 - INFO - Traitement async avec recherche web: canapé d'angle sans pied...
+2025-08-30 22:52:42,365 - INFO - Début appel async Perplexity Sonar pour: canapé d'angle sans pied...
+2025-08-30 22:52:54,143 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:52:54,143 - INFO - Réponse Sonar async reçue: 4239 caractères
+2025-08-30 22:52:54,147 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 39 column 1 (char 2543)
+2025-08-30 22:52:54,147 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-08-30 22:52:54,148 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-08-30 22:52:54,148 - INFO - ✅ Succès traitement async ID 2 - Données JSON: 5485 caractères
+2025-08-30 22:52:54,148 - INFO - === Début traitement async ID 3 ===
+2025-08-30 22:52:54,148 - INFO - Consigne trouvée pour ID 3: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:52:54,148 - INFO - Traitement async avec recherche web: canapé d'angle sans coussin...
+2025-08-30 22:52:54,148 - INFO - Début appel async Perplexity Sonar pour: canapé d'angle sans coussin...
+2025-08-30 22:52:54,681 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:52:54,681 - INFO - Réponse Sonar async reçue: 4584 caractères
+2025-08-30 22:52:54,682 - ERROR - Erreur parsing JSON: Expecting ',' delimiter: line 27 column 56 (char 1808)
+2025-08-30 22:52:54,682 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-08-30 22:52:54,683 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-08-30 22:52:54,683 - INFO - ✅ Succès traitement async ID 1 - Données JSON: 5851 caractères
+2025-08-30 22:52:54,683 - INFO - === Début traitement async ID 4 ===
+2025-08-30 22:52:54,684 - INFO - Consigne trouvée pour ID 4: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:52:54,684 - INFO - Traitement async avec recherche web: canapé d'angle sans accoudoir ikea...
+2025-08-30 22:52:54,684 - INFO - Début appel async Perplexity Sonar pour: canapé d'angle sans accoudoir ikea...
+2025-08-30 22:53:01,648 - INFO - Citations trouvées: 3 sources
+2025-08-30 22:53:01,649 - INFO - Réponse Sonar async reçue: 4874 caractères
+2025-08-30 22:53:01,649 - INFO - JSON parsé avec succès: 4989 caractères
+2025-08-30 22:53:01,650 - INFO - ✅ Réponse enrichie avec 3 sources web récentes
+2025-08-30 22:53:01,651 - INFO - ✅ Succès traitement async ID 0 - Données JSON: 5414 caractères
+2025-08-30 22:53:01,651 - INFO - === Début traitement async ID 5 ===
+2025-08-30 22:53:01,651 - INFO - Consigne trouvée pour ID 5: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:53:01,651 - INFO - Traitement async avec recherche web: canapé d'angle sans meridienne...
+2025-08-30 22:53:01,651 - INFO - Début appel async Perplexity Sonar pour: canapé d'angle sans meridienne...
+2025-08-30 22:53:10,823 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:53:10,824 - INFO - Réponse Sonar async reçue: 4372 caractères
+2025-08-30 22:53:10,824 - INFO - JSON parsé avec succès: 4618 caractères
+2025-08-30 22:53:10,825 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-08-30 22:53:10,825 - INFO - ✅ Succès traitement async ID 4 - Données JSON: 4973 caractères
+2025-08-30 22:53:19,075 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:53:19,076 - INFO - Réponse Sonar async reçue: 4612 caractères
+2025-08-30 22:53:19,076 - INFO - JSON parsé avec succès: 4942 caractères
+2025-08-30 22:53:19,077 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-08-30 22:53:19,078 - INFO - ✅ Succès traitement async ID 5 - Données JSON: 5367 caractères
+2025-08-30 22:53:22,939 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:53:22,939 - INFO - Réponse Sonar async reçue: 5436 caractères
+2025-08-30 22:53:22,940 - ERROR - Erreur parsing JSON: Expecting ',' delimiter: line 40 column 112 (char 3071)
+2025-08-30 22:53:22,940 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-08-30 22:53:22,941 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-08-30 22:53:22,941 - INFO - ✅ Succès traitement async ID 3 - Données JSON: 6294 caractères
+2025-08-30 22:53:22,941 - INFO - ✅ Succès async pour requête 0
+2025-08-30 22:53:22,941 - INFO - ✅ Succès async pour requête 1
+2025-08-30 22:53:22,941 - INFO - ✅ Succès async pour requête 2
+2025-08-30 22:53:22,941 - INFO - ✅ Succès async pour requête 3
+2025-08-30 22:53:22,942 - INFO - ✅ Succès async pour requête 4
+2025-08-30 22:53:22,942 - INFO - ✅ Succès async pour requête 5
+2025-08-30 22:53:22,942 - INFO - 🏁 Traitement parallèle terminé: 6/6 succès
+2025-08-30 22:53:22,942 - INFO - 
+📈 === RÉSUMÉ BATCH PARALLÈLE CONSIGNE consigne_20250717_215213_0d421bf9.json ===
+- Queries traitées: 6
+- Queries enrichies web: 0
+- Erreurs: 0
+- Caractères générés: 10,804
+- Statistiques trouvées: 0
+- Citations web: 0
+- Tokens utilisés: 0
+- Longueur moyenne: 1800 caractères
+- Durée totale: 0:00:40.584546
+- Concurrence utilisée: 3 requêtes simultanées
+- Succès: True
+===============================================
+2025-08-30 22:58:27,622 - INFO - ⚡ Mode batch parallèle: traitement asynchrone du fichier consigne le plus récent
+2025-08-30 22:58:27,623 - INFO - 📁 Traitement PARALLÈLE du fichier le plus récent: consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:58:27,624 - INFO - 🚀 Début traitement batch PARALLÈLE pour consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:58:27,624 - INFO - 📊 Trouvé 6 requêtes à traiter en parallèle: [0, 1, 2, 3, 4, 5]
+2025-08-30 22:58:27,625 - INFO - 🔧 Concurrence maximale: 3 requêtes simultanées
+2025-08-30 22:58:27,625 - INFO - ⚡ Lancement de 6 tâches en parallèle...
+2025-08-30 22:58:27,625 - INFO - === Début traitement async ID 0 ===
+2025-08-30 22:58:27,625 - INFO - Traitement async avec recherche web: canapé d'angle sans accoudoir...
+2025-08-30 22:58:27,625 - INFO - Début appel async Perplexity Sonar pour: canapé d'angle sans accoudoir...
+2025-08-30 22:58:27,627 - INFO - === Début traitement async ID 1 ===
+2025-08-30 22:58:27,627 - INFO - Traitement async avec recherche web: canapé d angle paiement en 10 fois sans frais...
+2025-08-30 22:58:27,628 - INFO - Début appel async Perplexity Sonar pour: canapé d angle paiement en 10 fois sans frais...
+2025-08-30 22:58:27,628 - INFO - === Début traitement async ID 2 ===
+2025-08-30 22:58:27,629 - INFO - Traitement async avec recherche web: canapé d'angle sans pied...
+2025-08-30 22:58:27,629 - INFO - Début appel async Perplexity Sonar pour: canapé d'angle sans pied...
+2025-08-30 22:58:39,169 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:58:39,169 - INFO - Réponse Sonar async reçue: 4860 caractères
+2025-08-30 22:58:39,173 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 64 column 1 (char 4146)
+2025-08-30 22:58:39,173 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-08-30 22:58:39,173 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-08-30 22:58:39,174 - INFO - ✅ Succès traitement async ID 1 - Données JSON: 6867 caractères
+2025-08-30 22:58:39,174 - INFO - === Début traitement async ID 3 ===
+2025-08-30 22:58:39,174 - INFO - Traitement async avec recherche web: canapé d'angle sans coussin...
+2025-08-30 22:58:39,174 - INFO - Début appel async Perplexity Sonar pour: canapé d'angle sans coussin...
+2025-08-30 22:58:39,627 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:58:39,628 - INFO - Réponse Sonar async reçue: 4468 caractères
+2025-08-30 22:58:39,628 - ERROR - Erreur parsing JSON: Invalid control character at: line 45 column 4 (char 3125)
+2025-08-30 22:58:39,628 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-08-30 22:58:39,628 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-08-30 22:58:39,629 - INFO - ✅ Succès traitement async ID 2 - Données JSON: 5915 caractères
+2025-08-30 22:58:39,629 - INFO - === Début traitement async ID 4 ===
+2025-08-30 22:58:39,629 - INFO - Traitement async avec recherche web: canapé d'angle sans accoudoir ikea...
+2025-08-30 22:58:39,629 - INFO - Début appel async Perplexity Sonar pour: canapé d'angle sans accoudoir ikea...
+2025-08-30 22:58:50,257 - INFO - Citations trouvées: 3 sources
+2025-08-30 22:58:50,257 - INFO - Réponse Sonar async reçue: 4729 caractères
+2025-08-30 22:58:50,258 - INFO - JSON parsé avec succès: 4878 caractères
+2025-08-30 22:58:50,258 - INFO - ✅ Réponse enrichie avec 3 sources web récentes
+2025-08-30 22:58:50,258 - INFO - ✅ Succès traitement async ID 0 - Données JSON: 5203 caractères
+2025-08-30 22:58:50,258 - INFO - === Début traitement async ID 5 ===
+2025-08-30 22:58:50,258 - INFO - Traitement async avec recherche web: canapé d'angle sans meridienne...
+2025-08-30 22:58:50,258 - INFO - Début appel async Perplexity Sonar pour: canapé d'angle sans meridienne...
+2025-08-30 22:58:57,383 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:58:57,383 - INFO - Réponse Sonar async reçue: 4103 caractères
+2025-08-30 22:58:57,384 - INFO - JSON parsé avec succès: 4377 caractères
+2025-08-30 22:58:57,384 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-08-30 22:58:57,384 - INFO - ✅ Succès traitement async ID 4 - Données JSON: 4617 caractères
+2025-08-30 22:59:02,951 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:59:02,951 - INFO - Réponse Sonar async reçue: 4579 caractères
+2025-08-30 22:59:02,951 - INFO - JSON parsé avec succès: 4842 caractères
+2025-08-30 22:59:02,951 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-08-30 22:59:02,952 - INFO - ✅ Succès traitement async ID 3 - Données JSON: 5197 caractères
+2025-08-30 22:59:11,196 - INFO - Citations trouvées: 5 sources
+2025-08-30 22:59:11,196 - INFO - Réponse Sonar async reçue: 5034 caractères
+2025-08-30 22:59:11,196 - INFO - JSON parsé avec succès: 5288 caractères
+2025-08-30 22:59:11,197 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-08-30 22:59:11,197 - INFO - ✅ Succès traitement async ID 5 - Données JSON: 5883 caractères
+2025-08-30 22:59:11,197 - INFO - ✅ Succès async pour requête 0
+2025-08-30 22:59:11,197 - INFO - ✅ Succès async pour requête 1
+2025-08-30 22:59:11,197 - INFO - ✅ Succès async pour requête 2
+2025-08-30 22:59:11,197 - INFO - ✅ Succès async pour requête 3
+2025-08-30 22:59:11,197 - INFO - ✅ Succès async pour requête 4
+2025-08-30 22:59:11,198 - INFO - ✅ Succès async pour requête 5
+2025-08-30 22:59:11,198 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 0
+2025-08-30 22:59:11,198 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 1
+2025-08-30 22:59:11,198 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 2
+2025-08-30 22:59:11,198 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 3
+2025-08-30 22:59:11,198 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 4
+2025-08-30 22:59:11,198 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 5
+2025-08-30 22:59:11,200 - INFO - 💾 ✅ Sauvegarde globale réussie: 6 requêtes mises à jour dans consigne_20250717_215213_0d421bf9.json
+2025-08-30 22:59:11,200 - INFO - 🏁 Traitement parallèle terminé: 6/6 succès
+2025-08-30 22:59:11,200 - INFO - 
+📈 === RÉSUMÉ BATCH PARALLÈLE CONSIGNE consigne_20250717_215213_0d421bf9.json ===
+- Queries traitées: 6
+- Queries enrichies web: 4
+- Erreurs: 0
+- Caractères générés: 29,772
+- Statistiques trouvées: 4
+- Citations web: 18
+- Tokens utilisés: 9,778
+- Longueur moyenne: 4962 caractères
+- Durée totale: 0:00:43.576730
+- Concurrence utilisée: 3 requêtes simultanées
+- Succès: True
+===============================================
+2025-08-30 23:29:29,043 - INFO - ⚡ Mode batch parallèle: traitement asynchrone du fichier consigne le plus récent
+2025-08-30 23:29:29,043 - INFO - 📁 Traitement PARALLÈLE du fichier le plus récent: consigne_20250717_215213_0d421bf9.json
+2025-08-30 23:29:29,043 - INFO - 🚀 Début traitement batch PARALLÈLE pour consigne_20250717_215213_0d421bf9.json
+2025-08-30 23:29:29,045 - INFO - Toutes les requêtes sont déjà traitées dans consigne_20250717_215213_0d421bf9.json
+2025-08-30 23:29:29,045 - ERROR - Erreur lors du traitement batch parallèle consigne: 'web_enhanced_queries'
+2025-08-30 23:32:14,544 - INFO - ⚡ Mode batch parallèle: traitement asynchrone du fichier consigne le plus récent
+2025-08-30 23:32:14,544 - INFO - 📁 Traitement PARALLÈLE du fichier le plus récent: consigne_20250717_215213_0d421bf9.json
+2025-08-30 23:32:14,545 - INFO - 🚀 Début traitement batch PARALLÈLE pour consigne_20250717_215213_0d421bf9.json
+2025-08-30 23:32:14,545 - INFO - Toutes les requêtes sont déjà traitées dans consigne_20250717_215213_0d421bf9.json
+2025-08-30 23:32:14,546 - ERROR - Erreur lors du traitement batch parallèle consigne: 'web_enhanced_queries'
+2025-08-30 23:32:21,025 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing (requests)
+2025-08-30 23:32:21,026 - INFO - 📁 Traitement du fichier: consigne_20250717_215213_0d421bf9.json
+2025-08-30 23:32:21,027 - INFO - ✅ Toutes les queries traitées pour consigne_20250717_215213_0d421bf9.json
+2025-08-30 23:32:21,027 - INFO - 📊 Fichier consigne_20250717_215213_0d421bf9.json — 0 traités, 0 erreurs, 0 stats, 0 citations, 0 tokens, 0 caractères.
+2025-08-30 23:32:21,027 - INFO - 
+📈 === RÉSUMÉ FINAL PERPLEXITY SONAR (REQUESTS) ===
+- Fichiers traités: 1
+- Queries traitées: 0
+- Queries enrichies web: 0
+- Erreurs: 0
+- Caractères générés: 0
+- Statistiques trouvées: 0
+- Citations web: 0
+- Tokens utilisés: 0
+- Longueur moyenne: 0 caractères
+- Durée totale: 0:00:00.001232
+- Succès global: True
+===============================================
+2025-08-30 23:34:37,503 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing (requests)
+2025-08-30 23:34:37,503 - INFO - 📁 Traitement du fichier: consigne_20250717_215213_0d421bf9.json
+2025-08-30 23:34:37,504 - INFO - ✅ Toutes les queries traitées pour consigne_20250717_215213_0d421bf9.json
+2025-08-30 23:34:37,504 - INFO - 📊 Fichier consigne_20250717_215213_0d421bf9.json — 0 traités, 0 erreurs, 0 stats, 0 citations, 0 tokens, 0 caractères.
+2025-08-30 23:34:37,504 - INFO - 
+📈 === RÉSUMÉ FINAL PERPLEXITY SONAR (REQUESTS) ===
+- Fichiers traités: 1
+- Queries traitées: 0
+- Queries enrichies web: 0
+- Erreurs: 0
+- Caractères générés: 0
+- Statistiques trouvées: 0
+- Citations web: 0
+- Tokens utilisés: 0
+- Longueur moyenne: 0 caractères
+- Durée totale: 0:00:00.001083
+- Succès global: True
+===============================================
+2025-08-30 23:34:45,011 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing (requests)
+2025-08-30 23:34:45,012 - INFO - 📁 Traitement du fichier: consigne_20250717_215213_0d421bf9.json
+2025-08-30 23:34:45,012 - INFO - ✅ Toutes les queries traitées pour consigne_20250717_215213_0d421bf9.json
+2025-08-30 23:34:45,012 - INFO - 📊 Fichier consigne_20250717_215213_0d421bf9.json — 0 traités, 0 erreurs, 0 stats, 0 citations, 0 tokens, 0 caractères.
+2025-08-30 23:34:45,013 - INFO - 
+📈 === RÉSUMÉ FINAL PERPLEXITY SONAR (REQUESTS) ===
+- Fichiers traités: 1
+- Queries traitées: 0
+- Queries enrichies web: 0
+- Erreurs: 0
+- Caractères générés: 0
+- Statistiques trouvées: 0
+- Citations web: 0
+- Tokens utilisés: 0
+- Longueur moyenne: 0 caractères
+- Durée totale: 0:00:00.001067
+- Succès global: True
+===============================================
+2025-09-04 02:19:06,065 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing (requests)
+2025-09-04 02:19:06,067 - INFO - 📁 Traitement du fichier: consigne_20250904_015723_b57cabd3.json
+2025-09-04 02:19:06,067 - INFO - === Début traitement ID 0 avec Perplexity Sonar ===
+2025-09-04 02:19:06,067 - INFO - Consigne trouvée pour ID 0: consigne_20250904_015723_b57cabd3.json
+2025-09-04 02:19:06,068 - INFO - Traitement avec recherche web: comment déclarer changement de fenêtre aux impôts...
+2025-09-04 02:19:06,068 - INFO - Tentative 1/3 pour ID 0
+2025-09-04 02:19:06,068 - INFO - Début appel Perplexity Sonar pour: comment déclarer changement de fenêtre aux impôts...
+2025-09-04 02:20:06,611 - INFO - ⚡ Mode batch parallèle: traitement asynchrone du fichier consigne le plus récent
+2025-09-04 02:20:06,611 - INFO - 📁 Traitement PARALLÈLE du fichier le plus récent: consigne_20250904_015723_b57cabd3.json
+2025-09-04 02:20:06,611 - INFO - 🚀 Début traitement batch PARALLÈLE pour consigne_20250904_015723_b57cabd3.json
+2025-09-04 02:20:06,612 - INFO - 📊 Trouvé 4 requêtes à traiter en parallèle: [0, 1, 2, 3]
+2025-09-04 02:20:06,612 - INFO - 🔧 Concurrence maximale: 3 requêtes simultanées
+2025-09-04 02:20:06,612 - INFO - ⚡ Lancement de 4 tâches en parallèle...
+2025-09-04 02:20:06,612 - INFO - === Début traitement async ID 0 ===
+2025-09-04 02:20:06,612 - INFO - Traitement async avec recherche web: comment déclarer changement de fenêtre aux impôts...
+2025-09-04 02:20:06,612 - INFO - Début appel async Perplexity Sonar pour: comment déclarer changement de fenêtre aux impôts...
+2025-09-04 02:20:06,614 - INFO - === Début traitement async ID 1 ===
+2025-09-04 02:20:06,614 - INFO - Traitement async avec recherche web: comment déclarer changement de fenêtre aux impôts 2023...
+2025-09-04 02:20:06,614 - INFO - Début appel async Perplexity Sonar pour: comment déclarer changement de fenêtre aux impôts ...
+2025-09-04 02:20:06,615 - INFO - === Début traitement async ID 2 ===
+2025-09-04 02:20:06,615 - INFO - Traitement async avec recherche web: comment déclarer changement de fenêtre...
+2025-09-04 02:20:06,615 - INFO - Début appel async Perplexity Sonar pour: comment déclarer changement de fenêtre...
+2025-09-04 02:20:15,932 - INFO - Citations trouvées: 5 sources
+2025-09-04 02:20:15,933 - INFO - Réponse Sonar async reçue: 2989 caractères
+2025-09-04 02:20:15,934 - ERROR - Erreur parsing JSON: Expecting ',' delimiter: line 3 column 141 (char 211)
+2025-09-04 02:20:15,935 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-09-04 02:20:15,935 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-09-04 02:20:15,935 - INFO - ✅ Succès traitement async ID 1 - Données JSON: 3862 caractères
+2025-09-04 02:20:15,935 - INFO - === Début traitement async ID 3 ===
+2025-09-04 02:20:15,935 - INFO - Traitement async avec recherche web: comment changer de fenêtre...
+2025-09-04 02:20:15,935 - INFO - Début appel async Perplexity Sonar pour: comment changer de fenêtre...
+2025-09-04 02:20:18,413 - INFO - Citations trouvées: 5 sources
+2025-09-04 02:20:18,413 - INFO - Réponse Sonar async reçue: 3650 caractères
+2025-09-04 02:20:18,414 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 24 column 7 (char 1912)
+2025-09-04 02:20:18,414 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-09-04 02:20:18,414 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-09-04 02:20:18,414 - INFO - ✅ Succès traitement async ID 0 - Données JSON: 4801 caractères
+2025-09-04 02:20:22,363 - INFO - Citations trouvées: 5 sources
+2025-09-04 02:20:22,363 - INFO - Réponse Sonar async reçue: 3970 caractères
+2025-09-04 02:20:22,364 - INFO - JSON parsé avec succès: 4518 caractères
+2025-09-04 02:20:22,364 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-09-04 02:20:22,364 - INFO - ✅ Succès traitement async ID 2 - Données JSON: 5023 caractères
+2025-09-04 02:20:35,468 - INFO - Citations trouvées: 5 sources
+2025-09-04 02:20:35,468 - INFO - Réponse Sonar async reçue: 5050 caractères
+2025-09-04 02:20:35,469 - INFO - JSON parsé avec succès: 5390 caractères
+2025-09-04 02:20:35,469 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-09-04 02:20:35,469 - INFO - ✅ Succès traitement async ID 3 - Données JSON: 5915 caractères
+2025-09-04 02:20:35,469 - INFO - ✅ Succès async pour requête 0
+2025-09-04 02:20:35,469 - INFO - ✅ Succès async pour requête 1
+2025-09-04 02:20:35,469 - INFO - ✅ Succès async pour requête 2
+2025-09-04 02:20:35,470 - INFO - ✅ Succès async pour requête 3
+2025-09-04 02:20:35,470 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 0
+2025-09-04 02:20:35,470 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 1
+2025-09-04 02:20:35,470 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 2
+2025-09-04 02:20:35,470 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 3
+2025-09-04 02:20:35,472 - INFO - 💾 ✅ Sauvegarde globale réussie: 4 requêtes mises à jour dans consigne_20250904_015723_b57cabd3.json
+2025-09-04 02:20:35,472 - INFO - 🏁 Traitement parallèle terminé: 4/4 succès
+2025-09-04 02:20:35,472 - INFO - 
+📈 === RÉSUMÉ BATCH PARALLÈLE CONSIGNE consigne_20250904_015723_b57cabd3.json ===
+- Queries traitées: 4
+- Queries enrichies web: 2
+- Erreurs: 0
+- Caractères générés: 17,216
+- Statistiques trouvées: 2
+- Citations web: 10
+- Tokens utilisés: 4,702
+- Longueur moyenne: 4304 caractères
+- Durée totale: 0:00:28.860480
+- Concurrence utilisée: 3 requêtes simultanées
+- Succès: True
+===============================================
+2025-09-08 17:57:41,755 - INFO - ⚡ Mode batch parallèle: traitement asynchrone du fichier consigne le plus récent
+2025-09-08 17:57:41,757 - INFO - 📁 Traitement PARALLÈLE du fichier le plus récent: consigne_20250908_164825_db204b38.json
+2025-09-08 17:57:41,757 - INFO - 🚀 Début traitement batch PARALLÈLE pour consigne_20250908_164825_db204b38.json
+2025-09-08 17:57:41,757 - INFO - 📊 Trouvé 7 requêtes à traiter en parallèle: [0, 1, 2, 3, 4, 5, 6]
+2025-09-08 17:57:41,758 - INFO - 🔧 Concurrence maximale: 3 requêtes simultanées
+2025-09-08 17:57:41,758 - INFO - ⚡ Lancement de 7 tâches en parallèle...
+2025-09-08 17:57:41,758 - INFO - === Début traitement async ID 0 ===
+2025-09-08 17:57:41,758 - INFO - Traitement async avec recherche web: changement serrure porte blindée prix...
+2025-09-08 17:57:41,758 - INFO - Début appel async Perplexity Sonar pour: changement serrure porte blindée prix...
+2025-09-08 17:57:41,759 - INFO - === Début traitement async ID 1 ===
+2025-09-08 17:57:41,760 - INFO - Traitement async avec recherche web: changer une serrure de porte blindée...
+2025-09-08 17:57:41,760 - INFO - Début appel async Perplexity Sonar pour: changer une serrure de porte blindée...
+2025-09-08 17:57:41,761 - INFO - === Début traitement async ID 2 ===
+2025-09-08 17:57:41,761 - INFO - Traitement async avec recherche web: changement barillet porte blindée...
+2025-09-08 17:57:41,761 - INFO - Début appel async Perplexity Sonar pour: changement barillet porte blindée...
+2025-09-08 17:57:56,676 - INFO - Citations trouvées: 5 sources
+2025-09-08 17:57:56,676 - INFO - Réponse Sonar async reçue: 4960 caractères
+2025-09-08 17:57:56,678 - INFO - JSON parsé avec succès: 5159 caractères
+2025-09-08 17:57:56,678 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-09-08 17:57:56,678 - INFO - ✅ Succès traitement async ID 1 - Données JSON: 5559 caractères
+2025-09-08 17:57:56,679 - INFO - === Début traitement async ID 3 ===
+2025-09-08 17:57:56,679 - INFO - Traitement async avec recherche web: comment renforcer une porte blindée...
+2025-09-08 17:57:56,679 - INFO - Début appel async Perplexity Sonar pour: comment renforcer une porte blindée...
+2025-09-08 17:58:06,136 - INFO - Citations trouvées: 5 sources
+2025-09-08 17:58:06,136 - INFO - Réponse Sonar async reçue: 4875 caractères
+2025-09-08 17:58:06,137 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 41 column 1 (char 2855)
+2025-09-08 17:58:06,137 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-09-08 17:58:06,137 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-09-08 17:58:06,137 - INFO - ✅ Succès traitement async ID 2 - Données JSON: 5820 caractères
+2025-09-08 17:58:06,137 - INFO - === Début traitement async ID 4 ===
+2025-09-08 17:58:06,137 - INFO - Traitement async avec recherche web: c est quoi une porte blindée...
+2025-09-08 17:58:06,137 - INFO - Début appel async Perplexity Sonar pour: c est quoi une porte blindée...
+2025-09-08 17:58:10,291 - INFO - Citations trouvées: 5 sources
+2025-09-08 17:58:10,291 - INFO - Réponse Sonar async reçue: 6044 caractères
+2025-09-08 17:58:10,292 - INFO - JSON parsé avec succès: 6280 caractères
+2025-09-08 17:58:10,292 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-09-08 17:58:10,292 - INFO - ✅ Succès traitement async ID 0 - Données JSON: 7010 caractères
+2025-09-08 17:58:10,292 - INFO - === Début traitement async ID 5 ===
+2025-09-08 17:58:10,292 - INFO - Traitement async avec recherche web: installer une porte blindée...
+2025-09-08 17:58:10,292 - INFO - Début appel async Perplexity Sonar pour: installer une porte blindée...
+2025-09-08 17:58:24,208 - INFO - Citations trouvées: 5 sources
+2025-09-08 17:58:24,208 - INFO - Réponse Sonar async reçue: 4430 caractères
+2025-09-08 17:58:24,209 - INFO - JSON parsé avec succès: 4799 caractères
+2025-09-08 17:58:24,209 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-09-08 17:58:24,209 - INFO - ✅ Succès traitement async ID 4 - Données JSON: 5304 caractères
+2025-09-08 17:58:24,209 - INFO - === Début traitement async ID 6 ===
+2025-09-08 17:58:24,209 - INFO - Traitement async avec recherche web: prix porte blindée avec pose...
+2025-09-08 17:58:24,209 - INFO - Début appel async Perplexity Sonar pour: prix porte blindée avec pose...
+2025-09-08 17:58:27,586 - INFO - Citations trouvées: 5 sources
+2025-09-08 17:58:27,586 - INFO - Réponse Sonar async reçue: 5202 caractères
+2025-09-08 17:58:27,587 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 17 column 7 (char 1626)
+2025-09-08 17:58:27,588 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-09-08 17:58:27,588 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-09-08 17:58:27,588 - INFO - ✅ Succès traitement async ID 5 - Données JSON: 6350 caractères
+2025-09-08 17:58:48,440 - INFO - Citations trouvées: 5 sources
+2025-09-08 17:58:48,440 - INFO - Réponse Sonar async reçue: 5390 caractères
+2025-09-08 17:58:48,441 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 52 column 3 (char 3599)
+2025-09-08 17:58:48,441 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-09-08 17:58:48,441 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-09-08 17:58:48,441 - INFO - ✅ Succès traitement async ID 3 - Données JSON: 6797 caractères
+2025-09-08 17:58:57,628 - INFO - Citations trouvées: 5 sources
+2025-09-08 17:58:57,628 - INFO - Réponse Sonar async reçue: 5869 caractères
+2025-09-08 17:58:57,629 - INFO - JSON parsé avec succès: 6019 caractères
+2025-09-08 17:58:57,629 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-09-08 17:58:57,629 - INFO - ✅ Succès traitement async ID 6 - Données JSON: 6659 caractères
+2025-09-08 17:58:57,629 - INFO - ✅ Succès async pour requête 0
+2025-09-08 17:58:57,629 - INFO - ✅ Succès async pour requête 1
+2025-09-08 17:58:57,630 - INFO - ✅ Succès async pour requête 2
+2025-09-08 17:58:57,630 - INFO - ✅ Succès async pour requête 3
+2025-09-08 17:58:57,630 - INFO - ✅ Succès async pour requête 4
+2025-09-08 17:58:57,630 - INFO - ✅ Succès async pour requête 5
+2025-09-08 17:58:57,630 - INFO - ✅ Succès async pour requête 6
+2025-09-08 17:58:57,630 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 0
+2025-09-08 17:58:57,631 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 1
+2025-09-08 17:58:57,631 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 2
+2025-09-08 17:58:57,631 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 3
+2025-09-08 17:58:57,631 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 4
+2025-09-08 17:58:57,631 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 5
+2025-09-08 17:58:57,631 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 6
+2025-09-08 17:58:57,633 - INFO - 💾 ✅ Sauvegarde globale réussie: 7 requêtes mises à jour dans consigne_20250908_164825_db204b38.json
+2025-09-08 17:58:57,634 - INFO - 🏁 Traitement parallèle terminé: 7/7 succès
+2025-09-08 17:58:57,634 - INFO - 
+📈 === RÉSUMÉ BATCH PARALLÈLE CONSIGNE consigne_20250908_164825_db204b38.json ===
+- Queries traitées: 7
+- Queries enrichies web: 4
+- Erreurs: 0
+- Caractères générés: 38,929
+- Statistiques trouvées: 9
+- Citations web: 20
+- Tokens utilisés: 10,425
+- Longueur moyenne: 5561 caractères
+- Durée totale: 0:01:15.876725
+- Concurrence utilisée: 3 requêtes simultanées
+- Succès: True
+===============================================
+2025-09-11 17:39:27,655 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing (requests)
+2025-09-11 17:39:27,656 - INFO - 📁 Traitement du fichier: consigne_20250911_170119_e2521908.json
+2025-09-11 17:39:27,656 - INFO - === Début traitement ID 0 avec Perplexity Sonar ===
+2025-09-11 17:39:27,656 - INFO - Consigne trouvée pour ID 0: consigne_20250911_170119_e2521908.json
+2025-09-11 17:39:27,657 - INFO - Traitement avec recherche web: changement serrure porte blindée prix...
+2025-09-11 17:39:27,657 - INFO - Tentative 1/3 pour ID 0
+2025-09-11 17:39:27,657 - INFO - Début appel Perplexity Sonar pour: changement serrure porte blindée prix...
+2025-09-11 17:39:43,121 - INFO - ⚡ Mode batch parallèle: traitement asynchrone du fichier consigne le plus récent
+2025-09-11 17:39:43,122 - INFO - 📁 Traitement PARALLÈLE du fichier le plus récent: consigne_20250911_170119_e2521908.json
+2025-09-11 17:39:43,122 - INFO - 🚀 Début traitement batch PARALLÈLE pour consigne_20250911_170119_e2521908.json
+2025-09-11 17:39:43,122 - INFO - 📊 Trouvé 7 requêtes à traiter en parallèle: [0, 1, 2, 3, 4, 5, 6]
+2025-09-11 17:39:43,123 - INFO - 🔧 Concurrence maximale: 3 requêtes simultanées
+2025-09-11 17:39:43,123 - INFO - ⚡ Lancement de 7 tâches en parallèle...
+2025-09-11 17:39:43,123 - INFO - === Début traitement async ID 0 ===
+2025-09-11 17:39:43,123 - INFO - Traitement async avec recherche web: changement serrure porte blindée prix...
+2025-09-11 17:39:43,123 - INFO - Début appel async Perplexity Sonar pour: changement serrure porte blindée prix...
+2025-09-11 17:39:43,124 - INFO - === Début traitement async ID 1 ===
+2025-09-11 17:39:43,125 - INFO - Traitement async avec recherche web: changer une serrure de porte blindée...
+2025-09-11 17:39:43,125 - INFO - Début appel async Perplexity Sonar pour: changer une serrure de porte blindée...
+2025-09-11 17:39:43,125 - INFO - === Début traitement async ID 2 ===
+2025-09-11 17:39:43,126 - INFO - Traitement async avec recherche web: changement barillet porte blindée...
+2025-09-11 17:39:43,126 - INFO - Début appel async Perplexity Sonar pour: changement barillet porte blindée...
+2025-09-11 17:40:08,669 - INFO - Citations trouvées: 5 sources
+2025-09-11 17:40:08,670 - INFO - Réponse Sonar async reçue: 6748 caractères
+2025-09-11 17:40:08,671 - INFO - JSON parsé avec succès: 6883 caractères
+2025-09-11 17:40:08,671 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-09-11 17:40:08,671 - INFO - ✅ Succès traitement async ID 0 - Données JSON: 7618 caractères
+2025-09-11 17:40:08,671 - INFO - === Début traitement async ID 3 ===
+2025-09-11 17:40:08,672 - INFO - Traitement async avec recherche web: comment renforcer une porte blindée...
+2025-09-11 17:40:08,672 - INFO - Début appel async Perplexity Sonar pour: comment renforcer une porte blindée...
+2025-09-11 17:40:09,186 - INFO - Citations trouvées: 5 sources
+2025-09-11 17:40:09,186 - INFO - Réponse Sonar async reçue: 6321 caractères
+2025-09-11 17:40:09,187 - INFO - JSON parsé avec succès: 6453 caractères
+2025-09-11 17:40:09,187 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-09-11 17:40:09,187 - INFO - ✅ Succès traitement async ID 1 - Données JSON: 7183 caractères
+2025-09-11 17:40:09,188 - INFO - === Début traitement async ID 4 ===
+2025-09-11 17:40:09,188 - INFO - Traitement async avec recherche web: c est quoi une porte blindée...
+2025-09-11 17:40:09,188 - INFO - Début appel async Perplexity Sonar pour: c est quoi une porte blindée...
+2025-09-11 17:40:30,013 - INFO - Citations trouvées: 5 sources
+2025-09-11 17:40:30,013 - INFO - Réponse Sonar async reçue: 6286 caractères
+2025-09-11 17:40:30,013 - INFO - JSON parsé avec succès: 6410 caractères
+2025-09-11 17:40:30,014 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-09-11 17:40:30,014 - INFO - ✅ Succès traitement async ID 2 - Données JSON: 7030 caractères
+2025-09-11 17:40:30,015 - INFO - === Début traitement async ID 5 ===
+2025-09-11 17:40:30,015 - INFO - Traitement async avec recherche web: installer une porte blindée...
+2025-09-11 17:40:30,015 - INFO - Début appel async Perplexity Sonar pour: installer une porte blindée...
+2025-09-11 17:40:32,360 - INFO - Citations trouvées: 5 sources
+2025-09-11 17:40:32,361 - INFO - Réponse Sonar async reçue: 5375 caractères
+2025-09-11 17:40:32,361 - INFO - JSON parsé avec succès: 5662 caractères
+2025-09-11 17:40:32,361 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-09-11 17:40:32,361 - INFO - ✅ Succès traitement async ID 3 - Données JSON: 6167 caractères
+2025-09-11 17:40:32,362 - INFO - === Début traitement async ID 6 ===
+2025-09-11 17:40:32,362 - INFO - Traitement async avec recherche web: prix porte blindée avec pose...
+2025-09-11 17:40:32,362 - INFO - Début appel async Perplexity Sonar pour: prix porte blindée avec pose...
+2025-09-11 17:40:37,279 - INFO - Citations trouvées: 5 sources
+2025-09-11 17:40:37,280 - INFO - Réponse Sonar async reçue: 6244 caractères
+2025-09-11 17:40:37,280 - INFO - JSON parsé avec succès: 6364 caractères
+2025-09-11 17:40:37,280 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-09-11 17:40:37,281 - INFO - ✅ Succès traitement async ID 4 - Données JSON: 7009 caractères
+2025-09-11 17:40:58,568 - INFO - Citations trouvées: 5 sources
+2025-09-11 17:40:58,568 - INFO - Réponse Sonar async reçue: 6255 caractères
+2025-09-11 17:40:58,569 - INFO - JSON parsé avec succès: 6312 caractères
+2025-09-11 17:40:58,569 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-09-11 17:40:58,569 - INFO - ✅ Succès traitement async ID 6 - Données JSON: 6982 caractères
+2025-09-11 17:41:08,280 - INFO - Citations trouvées: 5 sources
+2025-09-11 17:41:08,280 - INFO - Réponse Sonar async reçue: 6269 caractères
+2025-09-11 17:41:08,281 - INFO - JSON parsé avec succès: 6502 caractères
+2025-09-11 17:41:08,281 - INFO - ✅ Réponse enrichie avec 5 sources web récentes
+2025-09-11 17:41:08,281 - INFO - ✅ Succès traitement async ID 5 - Données JSON: 7222 caractères
+2025-09-11 17:41:08,281 - INFO - ✅ Succès async pour requête 0
+2025-09-11 17:41:08,281 - INFO - ✅ Succès async pour requête 1
+2025-09-11 17:41:08,281 - INFO - ✅ Succès async pour requête 2
+2025-09-11 17:41:08,281 - INFO - ✅ Succès async pour requête 3
+2025-09-11 17:41:08,282 - INFO - ✅ Succès async pour requête 4
+2025-09-11 17:41:08,282 - INFO - ✅ Succès async pour requête 5
+2025-09-11 17:41:08,282 - INFO - ✅ Succès async pour requête 6
+2025-09-11 17:41:08,282 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 0
+2025-09-11 17:41:08,282 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 1
+2025-09-11 17:41:08,282 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 2
+2025-09-11 17:41:08,282 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 3
+2025-09-11 17:41:08,283 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 4
+2025-09-11 17:41:08,283 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 5
+2025-09-11 17:41:08,283 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 6
+2025-09-11 17:41:08,288 - INFO - 💾 ✅ Sauvegarde globale réussie: 7 requêtes mises à jour dans consigne_20250911_170119_e2521908.json
+2025-09-11 17:41:08,288 - INFO - 🏁 Traitement parallèle terminé: 7/7 succès
+2025-09-11 17:41:08,289 - INFO - 
+📈 === RÉSUMÉ BATCH PARALLÈLE CONSIGNE consigne_20250911_170119_e2521908.json ===
+- Queries traitées: 7
+- Queries enrichies web: 7
+- Erreurs: 0
+- Caractères générés: 44,586
+- Statistiques trouvées: 19
+- Citations web: 35
+- Tokens utilisés: 19,804
+- Longueur moyenne: 6369 caractères
+- Durée totale: 0:01:25.166683
+- Concurrence utilisée: 3 requêtes simultanées
+- Succès: True
+===============================================
+2025-09-16 22:45:59,577 - INFO - ⚡ Mode batch parallèle: traitement asynchrone du fichier consigne le plus récent
+2025-09-16 22:45:59,579 - INFO - 📁 Traitement PARALLÈLE du fichier le plus récent: consigne_20250911_183625_3a11e1cc.json
+2025-09-16 22:45:59,579 - INFO - 🚀 Début traitement batch PARALLÈLE pour consigne_20250911_183625_3a11e1cc.json
+2025-09-16 22:45:59,580 - INFO - 📊 Trouvé 7 requêtes à traiter en parallèle: [0, 1, 2, 3, 4, 5, 6]
+2025-09-16 22:45:59,580 - INFO - 🔧 Concurrence maximale: 3 requêtes simultanées
+2025-09-16 22:45:59,580 - INFO - ⚡ Lancement de 7 tâches en parallèle...
+2025-09-16 22:45:59,580 - INFO - === Début traitement async ID 0 ===
+2025-09-16 22:45:59,580 - INFO - Traitement async avec recherche web: changement serrure porte blindée prix...
+2025-09-16 22:45:59,581 - INFO - Début appel async Perplexity Sonar pour: changement serrure porte blindée prix...
+2025-09-16 22:45:59,582 - INFO - === Début traitement async ID 1 ===
+2025-09-16 22:45:59,582 - INFO - Traitement async avec recherche web: changer une serrure de porte blindée...
+2025-09-16 22:45:59,582 - INFO - Début appel async Perplexity Sonar pour: changer une serrure de porte blindée...
+2025-09-16 22:45:59,583 - INFO - === Début traitement async ID 2 ===
+2025-09-16 22:45:59,583 - INFO - Traitement async avec recherche web: changement barillet porte blindée...
+2025-09-16 22:45:59,583 - INFO - Début appel async Perplexity Sonar pour: changement barillet porte blindée...
+2025-09-16 22:46:15,938 - INFO - Citations trouvées: 10 sources
+2025-09-16 22:46:15,938 - INFO - Réponse Sonar async reçue: 3741 caractères
+2025-09-16 22:46:15,939 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 20 column 4 (char 1512)
+2025-09-16 22:46:15,939 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-09-16 22:46:15,940 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-09-16 22:46:15,940 - INFO - ✅ Succès traitement async ID 1 - Données JSON: 4714 caractères
+2025-09-16 22:46:15,940 - INFO - === Début traitement async ID 3 ===
+2025-09-16 22:46:15,940 - INFO - Traitement async avec recherche web: comment renforcer une porte blindée...
+2025-09-16 22:46:15,940 - INFO - Début appel async Perplexity Sonar pour: comment renforcer une porte blindée...
+2025-09-16 22:46:22,890 - INFO - Citations trouvées: 10 sources
+2025-09-16 22:46:22,891 - INFO - Réponse Sonar async reçue: 5174 caractères
+2025-09-16 22:46:22,891 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 52 column 1 (char 3814)
+2025-09-16 22:46:22,891 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-09-16 22:46:22,891 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-09-16 22:46:22,892 - INFO - ✅ Succès traitement async ID 2 - Données JSON: 6620 caractères
+2025-09-16 22:46:22,892 - INFO - === Début traitement async ID 4 ===
+2025-09-16 22:46:22,892 - INFO - Traitement async avec recherche web: c est quoi une porte blindée...
+2025-09-16 22:46:22,892 - INFO - Début appel async Perplexity Sonar pour: c est quoi une porte blindée...
+2025-09-16 22:46:28,450 - INFO - Citations trouvées: 10 sources
+2025-09-16 22:46:28,450 - INFO - Réponse Sonar async reçue: 6183 caractères
+2025-09-16 22:46:28,450 - INFO - JSON parsé avec succès: 6672 caractères
+2025-09-16 22:46:28,451 - INFO - ✅ Réponse enrichie avec 10 sources web récentes
+2025-09-16 22:46:28,451 - INFO - ✅ Succès traitement async ID 0 - Données JSON: 7392 caractères
+2025-09-16 22:46:28,451 - INFO - === Début traitement async ID 5 ===
+2025-09-16 22:46:28,451 - INFO - Traitement async avec recherche web: installer une porte blindée...
+2025-09-16 22:46:28,451 - INFO - Début appel async Perplexity Sonar pour: installer une porte blindée...
+2025-09-16 22:46:42,120 - INFO - Citations trouvées: 10 sources
+2025-09-16 22:46:42,120 - INFO - Réponse Sonar async reçue: 5535 caractères
+2025-09-16 22:46:42,121 - INFO - JSON parsé avec succès: 6478 caractères
+2025-09-16 22:46:42,121 - INFO - ✅ Réponse enrichie avec 10 sources web récentes
+2025-09-16 22:46:42,121 - INFO - ✅ Succès traitement async ID 4 - Données JSON: 7118 caractères
+2025-09-16 22:46:42,121 - INFO - === Début traitement async ID 6 ===
+2025-09-16 22:46:42,121 - INFO - Traitement async avec recherche web: prix porte blindée avec pose...
+2025-09-16 22:46:42,121 - INFO - Début appel async Perplexity Sonar pour: prix porte blindée avec pose...
+2025-09-16 22:46:44,990 - INFO - Citations trouvées: 10 sources
+2025-09-16 22:46:44,990 - INFO - Réponse Sonar async reçue: 5256 caractères
+2025-09-16 22:46:44,991 - INFO - JSON parsé avec succès: 5846 caractères
+2025-09-16 22:46:44,991 - INFO - ✅ Réponse enrichie avec 10 sources web récentes
+2025-09-16 22:46:44,991 - INFO - ✅ Succès traitement async ID 3 - Données JSON: 6286 caractères
+2025-09-16 22:46:58,053 - INFO - Citations trouvées: 10 sources
+2025-09-16 22:46:58,053 - INFO - Réponse Sonar async reçue: 6611 caractères
+2025-09-16 22:46:58,054 - INFO - JSON parsé avec succès: 6986 caractères
+2025-09-16 22:46:58,054 - INFO - ✅ Réponse enrichie avec 10 sources web récentes
+2025-09-16 22:46:58,054 - INFO - ✅ Succès traitement async ID 5 - Données JSON: 7686 caractères
+2025-09-16 22:47:08,818 - INFO - Citations trouvées: 10 sources
+2025-09-16 22:47:08,818 - INFO - Réponse Sonar async reçue: 5789 caractères
+2025-09-16 22:47:08,819 - INFO - JSON parsé avec succès: 6227 caractères
+2025-09-16 22:47:08,819 - INFO - ✅ Réponse enrichie avec 10 sources web récentes
+2025-09-16 22:47:08,819 - INFO - ✅ Succès traitement async ID 6 - Données JSON: 6817 caractères
+2025-09-16 22:47:08,819 - INFO - ✅ Succès async pour requête 0
+2025-09-16 22:47:08,820 - INFO - ✅ Succès async pour requête 1
+2025-09-16 22:47:08,820 - INFO - ✅ Succès async pour requête 2
+2025-09-16 22:47:08,820 - INFO - ✅ Succès async pour requête 3
+2025-09-16 22:47:08,820 - INFO - ✅ Succès async pour requête 4
+2025-09-16 22:47:08,820 - INFO - ✅ Succès async pour requête 5
+2025-09-16 22:47:08,820 - INFO - ✅ Succès async pour requête 6
+2025-09-16 22:47:08,821 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 0
+2025-09-16 22:47:08,821 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 1
+2025-09-16 22:47:08,821 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 2
+2025-09-16 22:47:08,821 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 3
+2025-09-16 22:47:08,821 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 4
+2025-09-16 22:47:08,821 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 5
+2025-09-16 22:47:08,821 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 6
+2025-09-16 22:47:08,824 - INFO - 💾 ✅ Sauvegarde globale réussie: 7 requêtes mises à jour dans consigne_20250911_183625_3a11e1cc.json
+2025-09-16 22:47:08,824 - INFO - 🏁 Traitement parallèle terminé: 7/7 succès
+2025-09-16 22:47:08,824 - INFO - 
+📈 === RÉSUMÉ BATCH PARALLÈLE CONSIGNE consigne_20250911_183625_3a11e1cc.json ===
+- Queries traitées: 7
+- Queries enrichies web: 5
+- Erreurs: 0
+- Caractères générés: 41,988
+- Statistiques trouvées: 11
+- Citations web: 50
+- Tokens utilisés: 13,682
+- Longueur moyenne: 5998 caractères
+- Durée totale: 0:01:09.244816
+- Concurrence utilisée: 3 requêtes simultanées
+- Succès: True
+===============================================
+2025-09-17 14:13:28,485 - INFO - ⚡ Mode batch parallèle: traitement asynchrone du fichier consigne le plus récent
+2025-09-17 14:13:28,486 - INFO - 📁 Traitement PARALLÈLE du fichier le plus récent: consigne_20250911_183625_3a11e1cc.json
+2025-09-17 14:13:28,486 - INFO - 🚀 Début traitement batch PARALLÈLE pour consigne_20250911_183625_3a11e1cc.json
+2025-09-17 14:13:28,486 - INFO - 📊 Trouvé 7 requêtes à traiter en parallèle: [0, 1, 2, 3, 4, 5, 6]
+2025-09-17 14:13:28,486 - INFO - 🔧 Concurrence maximale: 3 requêtes simultanées
+2025-09-17 14:13:28,487 - INFO - ⚡ Lancement de 7 tâches en parallèle...
+2025-09-17 14:13:28,487 - INFO - === Début traitement async ID 0 ===
+2025-09-17 14:13:28,487 - INFO - Traitement async avec recherche web: changement serrure porte blindée prix...
+2025-09-17 14:13:28,487 - INFO - Début appel async Perplexity Sonar pour: changement serrure porte blindée prix...
+2025-09-17 14:13:28,488 - INFO - === Début traitement async ID 1 ===
+2025-09-17 14:13:28,488 - INFO - Traitement async avec recherche web: changer une serrure de porte blindée...
+2025-09-17 14:13:28,488 - INFO - Début appel async Perplexity Sonar pour: changer une serrure de porte blindée...
+2025-09-17 14:13:28,489 - INFO - === Début traitement async ID 2 ===
+2025-09-17 14:13:28,489 - INFO - Traitement async avec recherche web: changement barillet porte blindée...
+2025-09-17 14:13:28,489 - INFO - Début appel async Perplexity Sonar pour: changement barillet porte blindée...
+2025-09-17 14:13:44,549 - INFO - Citations trouvées: 10 sources
+2025-09-17 14:13:44,549 - INFO - Réponse Sonar async reçue: 4877 caractères
+2025-09-17 14:13:44,551 - INFO - JSON parsé avec succès: 5388 caractères
+2025-09-17 14:13:44,551 - INFO - ✅ Réponse enrichie avec 10 sources web récentes
+2025-09-17 14:13:44,551 - INFO - ✅ Succès traitement async ID 1 - Données JSON: 5843 caractères
+2025-09-17 14:13:44,551 - INFO - === Début traitement async ID 3 ===
+2025-09-17 14:13:44,551 - INFO - Traitement async avec recherche web: comment renforcer une porte blindée...
+2025-09-17 14:13:44,551 - INFO - Début appel async Perplexity Sonar pour: comment renforcer une porte blindée...
+2025-09-17 14:13:46,821 - INFO - Citations trouvées: 10 sources
+2025-09-17 14:13:46,821 - INFO - Réponse Sonar async reçue: 5687 caractères
+2025-09-17 14:13:46,822 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 47 column 4 (char 3313)
+2025-09-17 14:13:46,822 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-09-17 14:13:46,822 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-09-17 14:13:46,823 - INFO - ✅ Succès traitement async ID 0 - Données JSON: 7855 caractères
+2025-09-17 14:13:46,823 - INFO - === Début traitement async ID 4 ===
+2025-09-17 14:13:46,823 - INFO - Traitement async avec recherche web: c est quoi une porte blindée...
+2025-09-17 14:13:46,823 - INFO - Début appel async Perplexity Sonar pour: c est quoi une porte blindée...
+2025-09-17 14:13:52,363 - INFO - Citations trouvées: 10 sources
+2025-09-17 14:13:52,364 - INFO - Réponse Sonar async reçue: 5340 caractères
+2025-09-17 14:13:52,364 - INFO - JSON parsé avec succès: 5653 caractères
+2025-09-17 14:13:52,364 - INFO - ✅ Réponse enrichie avec 10 sources web récentes
+2025-09-17 14:13:52,364 - INFO - ✅ Succès traitement async ID 2 - Données JSON: 6223 caractères
+2025-09-17 14:13:52,365 - INFO - === Début traitement async ID 5 ===
+2025-09-17 14:13:52,365 - INFO - Traitement async avec recherche web: installer une porte blindée...
+2025-09-17 14:13:52,365 - INFO - Début appel async Perplexity Sonar pour: installer une porte blindée...
+2025-09-17 14:14:05,591 - INFO - Citations trouvées: 10 sources
+2025-09-17 14:14:05,592 - INFO - Réponse Sonar async reçue: 4954 caractères
+2025-09-17 14:14:05,592 - INFO - JSON parsé avec succès: 5574 caractères
+2025-09-17 14:14:05,592 - INFO - ✅ Réponse enrichie avec 10 sources web récentes
+2025-09-17 14:14:05,592 - INFO - ✅ Succès traitement async ID 3 - Données JSON: 5999 caractères
+2025-09-17 14:14:05,593 - INFO - === Début traitement async ID 6 ===
+2025-09-17 14:14:05,593 - INFO - Traitement async avec recherche web: prix porte blindée avec pose...
+2025-09-17 14:14:05,593 - INFO - Début appel async Perplexity Sonar pour: prix porte blindée avec pose...
+2025-09-17 14:14:05,690 - INFO - Citations trouvées: 10 sources
+2025-09-17 14:14:05,690 - INFO - Réponse Sonar async reçue: 3858 caractères
+2025-09-17 14:14:05,691 - INFO - JSON parsé avec succès: 4405 caractères
+2025-09-17 14:14:05,691 - INFO - ✅ Réponse enrichie avec 10 sources web récentes
+2025-09-17 14:14:05,691 - INFO - ✅ Succès traitement async ID 5 - Données JSON: 4800 caractères
+2025-09-17 14:14:09,424 - INFO - Citations trouvées: 8 sources
+2025-09-17 14:14:09,424 - INFO - Réponse Sonar async reçue: 5249 caractères
+2025-09-17 14:14:09,424 - INFO - JSON parsé avec succès: 5743 caractères
+2025-09-17 14:14:09,425 - INFO - ✅ Réponse enrichie avec 8 sources web récentes
+2025-09-17 14:14:09,425 - INFO - ✅ Succès traitement async ID 4 - Données JSON: 6323 caractères
+2025-09-17 14:14:20,115 - INFO - Citations trouvées: 10 sources
+2025-09-17 14:14:20,115 - INFO - Réponse Sonar async reçue: 4438 caractères
+2025-09-17 14:14:20,116 - ERROR - Erreur parsing JSON: Expecting ',' delimiter: line 16 column 29 (char 1364)
+2025-09-17 14:14:20,116 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-09-17 14:14:20,116 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-09-17 14:14:20,116 - INFO - ✅ Succès traitement async ID 6 - Données JSON: 5696 caractères
+2025-09-17 14:14:20,116 - INFO - ✅ Succès async pour requête 0
+2025-09-17 14:14:20,116 - INFO - ✅ Succès async pour requête 1
+2025-09-17 14:14:20,116 - INFO - ✅ Succès async pour requête 2
+2025-09-17 14:14:20,117 - INFO - ✅ Succès async pour requête 3
+2025-09-17 14:14:20,117 - INFO - ✅ Succès async pour requête 4
+2025-09-17 14:14:20,117 - INFO - ✅ Succès async pour requête 5
+2025-09-17 14:14:20,117 - INFO - ✅ Succès async pour requête 6
+2025-09-17 14:14:20,117 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 0
+2025-09-17 14:14:20,117 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 1
+2025-09-17 14:14:20,117 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 2
+2025-09-17 14:14:20,117 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 3
+2025-09-17 14:14:20,118 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 4
+2025-09-17 14:14:20,118 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 5
+2025-09-17 14:14:20,118 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 6
+2025-09-17 14:14:20,120 - INFO - 💾 ✅ Sauvegarde globale réussie: 7 requêtes mises à jour dans consigne_20250911_183625_3a11e1cc.json
+2025-09-17 14:14:20,120 - INFO - 🏁 Traitement parallèle terminé: 7/7 succès
+2025-09-17 14:14:20,120 - INFO - 
+📈 === RÉSUMÉ BATCH PARALLÈLE CONSIGNE consigne_20250911_183625_3a11e1cc.json ===
+- Queries traitées: 7
+- Queries enrichies web: 5
+- Erreurs: 0
+- Caractères générés: 37,989
+- Statistiques trouvées: 7
+- Citations web: 48
+- Tokens utilisés: 12,351
+- Longueur moyenne: 5427 caractères
+- Durée totale: 0:00:51.634674
+- Concurrence utilisée: 3 requêtes simultanées
+- Succès: True
+===============================================
+2025-09-18 12:50:21,611 - INFO - 🚀 Début du traitement avec Perplexity Sonar Content Marketing (requests)
+2025-09-18 12:50:21,612 - INFO - 📁 Traitement du fichier: consigne_20250911_183625_3a11e1cc.json
+2025-09-18 12:50:21,612 - INFO - === Début traitement ID 0 avec Perplexity Sonar ===
+2025-09-18 12:50:21,612 - INFO - Consigne trouvée pour ID 0: consigne_20250911_183625_3a11e1cc.json
+2025-09-18 12:50:21,613 - INFO - Traitement avec recherche web: changement serrure porte blindée prix...
+2025-09-18 12:50:21,613 - INFO - Tentative 1/3 pour ID 0
+2025-09-18 12:50:21,613 - INFO - Début appel Perplexity Sonar pour: changement serrure porte blindée prix...
+2025-09-18 12:50:38,388 - INFO - ⚡ Mode batch parallèle: traitement asynchrone du fichier consigne le plus récent
+2025-09-18 12:50:38,389 - INFO - 📁 Traitement PARALLÈLE du fichier le plus récent: consigne_20250911_183625_3a11e1cc.json
+2025-09-18 12:50:38,389 - INFO - 🚀 Début traitement batch PARALLÈLE pour consigne_20250911_183625_3a11e1cc.json
+2025-09-18 12:50:38,389 - INFO - 📊 Trouvé 7 requêtes à traiter en parallèle: [0, 1, 2, 3, 4, 5, 6]
+2025-09-18 12:50:38,389 - INFO - 🔧 Concurrence maximale: 3 requêtes simultanées
+2025-09-18 12:50:38,389 - INFO - ⚡ Lancement de 7 tâches en parallèle...
+2025-09-18 12:50:38,390 - INFO - === Début traitement async ID 0 ===
+2025-09-18 12:50:38,390 - INFO - Traitement async avec recherche web: changement serrure porte blindée prix...
+2025-09-18 12:50:38,390 - INFO - Début appel async Perplexity Sonar pour: changement serrure porte blindée prix...
+2025-09-18 12:50:38,391 - INFO - === Début traitement async ID 1 ===
+2025-09-18 12:50:38,392 - INFO - Traitement async avec recherche web: changer une serrure de porte blindée...
+2025-09-18 12:50:38,392 - INFO - Début appel async Perplexity Sonar pour: changer une serrure de porte blindée...
+2025-09-18 12:50:38,393 - INFO - === Début traitement async ID 2 ===
+2025-09-18 12:50:38,393 - INFO - Traitement async avec recherche web: changement barillet porte blindée...
+2025-09-18 12:50:38,393 - INFO - Début appel async Perplexity Sonar pour: changement barillet porte blindée...
+2025-09-18 12:50:58,804 - INFO - Citations trouvées: 10 sources
+2025-09-18 12:50:58,805 - INFO - Réponse Sonar async reçue: 5277 caractères
+2025-09-18 12:50:58,809 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 53 column 3 (char 3572)
+2025-09-18 12:50:58,809 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-09-18 12:50:58,810 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-09-18 12:50:58,810 - INFO - ✅ Succès traitement async ID 1 - Données JSON: 7152 caractères
+2025-09-18 12:50:58,810 - INFO - === Début traitement async ID 3 ===
+2025-09-18 12:50:58,810 - INFO - Traitement async avec recherche web: comment renforcer une porte blindée...
+2025-09-18 12:50:58,810 - INFO - Début appel async Perplexity Sonar pour: comment renforcer une porte blindée...
+2025-09-18 12:51:00,524 - INFO - Citations trouvées: 9 sources
+2025-09-18 12:51:00,524 - INFO - Réponse Sonar async reçue: 5453 caractères
+2025-09-18 12:51:00,525 - INFO - JSON parsé avec succès: 5796 caractères
+2025-09-18 12:51:00,525 - INFO - ✅ Réponse enrichie avec 9 sources web récentes
+2025-09-18 12:51:00,525 - INFO - ✅ Succès traitement async ID 2 - Données JSON: 6381 caractères
+2025-09-18 12:51:00,525 - INFO - === Début traitement async ID 4 ===
+2025-09-18 12:51:00,525 - INFO - Traitement async avec recherche web: c est quoi une porte blindée...
+2025-09-18 12:51:00,526 - INFO - Début appel async Perplexity Sonar pour: c est quoi une porte blindée...
+2025-09-18 12:51:02,589 - INFO - Citations trouvées: 10 sources
+2025-09-18 12:51:02,589 - INFO - Réponse Sonar async reçue: 6472 caractères
+2025-09-18 12:51:02,590 - INFO - JSON parsé avec succès: 6868 caractères
+2025-09-18 12:51:02,590 - INFO - ✅ Réponse enrichie avec 10 sources web récentes
+2025-09-18 12:51:02,590 - INFO - ✅ Succès traitement async ID 0 - Données JSON: 7683 caractères
+2025-09-18 12:51:02,590 - INFO - === Début traitement async ID 5 ===
+2025-09-18 12:51:02,590 - INFO - Traitement async avec recherche web: installer une porte blindée...
+2025-09-18 12:51:02,590 - INFO - Début appel async Perplexity Sonar pour: installer une porte blindée...
+2025-09-18 12:51:20,937 - INFO - Citations trouvées: 10 sources
+2025-09-18 12:51:20,937 - INFO - Réponse Sonar async reçue: 5809 caractères
+2025-09-18 12:51:20,938 - INFO - JSON parsé avec succès: 6466 caractères
+2025-09-18 12:51:20,938 - INFO - ✅ Réponse enrichie avec 10 sources web récentes
+2025-09-18 12:51:20,938 - INFO - ✅ Succès traitement async ID 3 - Données JSON: 6991 caractères
+2025-09-18 12:51:20,939 - INFO - === Début traitement async ID 6 ===
+2025-09-18 12:51:20,939 - INFO - Traitement async avec recherche web: prix porte blindée avec pose...
+2025-09-18 12:51:20,939 - INFO - Début appel async Perplexity Sonar pour: prix porte blindée avec pose...
+2025-09-18 12:51:25,254 - INFO - Citations trouvées: 10 sources
+2025-09-18 12:51:25,254 - INFO - Réponse Sonar async reçue: 5244 caractères
+2025-09-18 12:51:25,255 - INFO - JSON parsé avec succès: 5846 caractères
+2025-09-18 12:51:25,255 - INFO - ✅ Réponse enrichie avec 10 sources web récentes
+2025-09-18 12:51:25,255 - INFO - ✅ Succès traitement async ID 4 - Données JSON: 6461 caractères
+2025-09-18 12:51:31,986 - INFO - Citations trouvées: 10 sources
+2025-09-18 12:51:31,986 - INFO - Réponse Sonar async reçue: 4752 caractères
+2025-09-18 12:51:31,987 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 17 column 7 (char 1319)
+2025-09-18 12:51:31,987 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-09-18 12:51:31,987 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-09-18 12:51:31,987 - INFO - ✅ Succès traitement async ID 5 - Données JSON: 6125 caractères
+2025-09-18 12:51:43,713 - INFO - Citations trouvées: 10 sources
+2025-09-18 12:51:43,713 - INFO - Réponse Sonar async reçue: 5298 caractères
+2025-09-18 12:51:43,714 - INFO - JSON parsé avec succès: 5805 caractères
+2025-09-18 12:51:43,714 - INFO - ✅ Réponse enrichie avec 10 sources web récentes
+2025-09-18 12:51:43,714 - INFO - ✅ Succès traitement async ID 6 - Données JSON: 6400 caractères
+2025-09-18 12:51:43,714 - INFO - ✅ Succès async pour requête 0
+2025-09-18 12:51:43,714 - INFO - ✅ Succès async pour requête 1
+2025-09-18 12:51:43,714 - INFO - ✅ Succès async pour requête 2
+2025-09-18 12:51:43,715 - INFO - ✅ Succès async pour requête 3
+2025-09-18 12:51:43,715 - INFO - ✅ Succès async pour requête 4
+2025-09-18 12:51:43,715 - INFO - ✅ Succès async pour requête 5
+2025-09-18 12:51:43,715 - INFO - ✅ Succès async pour requête 6
+2025-09-18 12:51:43,715 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 0
+2025-09-18 12:51:43,715 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 1
+2025-09-18 12:51:43,716 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 2
+2025-09-18 12:51:43,716 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 3
+2025-09-18 12:51:43,716 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 4
+2025-09-18 12:51:43,716 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 5
+2025-09-18 12:51:43,716 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 6
+2025-09-18 12:51:43,718 - INFO - 💾 ✅ Sauvegarde globale réussie: 7 requêtes mises à jour dans consigne_20250911_183625_3a11e1cc.json
+2025-09-18 12:51:43,718 - INFO - 🏁 Traitement parallèle terminé: 7/7 succès
+2025-09-18 12:51:43,718 - INFO - 
+📈 === RÉSUMÉ BATCH PARALLÈLE CONSIGNE consigne_20250911_183625_3a11e1cc.json ===
+- Queries traitées: 7
+- Queries enrichies web: 5
+- Erreurs: 0
+- Caractères générés: 41,623
+- Statistiques trouvées: 11
+- Citations web: 49
+- Tokens utilisés: 13,447
+- Longueur moyenne: 5946 caractères
+- Durée totale: 0:01:05.329598
+- Concurrence utilisée: 3 requêtes simultanées
+- Succès: True
+===============================================
+2025-09-23 22:15:47,905 - INFO - ⚡ Mode batch parallèle: traitement asynchrone du fichier consigne le plus récent
+2025-09-23 22:15:47,911 - INFO - 📁 Traitement PARALLÈLE du fichier le plus récent: consigne_20250911_164218_437e96f1.json
+2025-09-23 22:15:47,911 - INFO - 🚀 Début traitement batch PARALLÈLE pour consigne_20250911_164218_437e96f1.json
+2025-09-23 22:15:47,911 - INFO - 📊 Trouvé 7 requêtes à traiter en parallèle: [0, 1, 2, 3, 4, 5, 6]
+2025-09-23 22:15:47,912 - INFO - 🔧 Concurrence maximale: 3 requêtes simultanées
+2025-09-23 22:15:47,912 - INFO - ⚡ Lancement de 7 tâches en parallèle...
+2025-09-23 22:15:47,912 - INFO - === Début traitement async ID 0 ===
+2025-09-23 22:15:47,912 - INFO - Traitement async avec recherche web: changement serrure porte blindée prix...
+2025-09-23 22:15:47,912 - INFO - Début appel async Perplexity Sonar pour: changement serrure porte blindée prix...
+2025-09-23 22:15:47,913 - INFO - Prompt système chargé depuis /home/haris/redactorv2/prompts/search.md
+2025-09-23 22:15:47,914 - INFO - === Début traitement async ID 1 ===
+2025-09-23 22:15:47,914 - INFO - Traitement async avec recherche web: changer une serrure de porte blindée...
+2025-09-23 22:15:47,915 - INFO - Début appel async Perplexity Sonar pour: changer une serrure de porte blindée...
+2025-09-23 22:15:47,915 - INFO - Prompt système chargé depuis /home/haris/redactorv2/prompts/search.md
+2025-09-23 22:15:47,916 - INFO - === Début traitement async ID 2 ===
+2025-09-23 22:15:47,916 - INFO - Traitement async avec recherche web: changement barillet porte blindée...
+2025-09-23 22:15:47,916 - INFO - Début appel async Perplexity Sonar pour: changement barillet porte blindée...
+2025-09-23 22:15:47,916 - INFO - Prompt système chargé depuis /home/haris/redactorv2/prompts/search.md
+2025-09-23 22:15:59,545 - INFO - Citations trouvées: 10 sources
+2025-09-23 22:15:59,545 - INFO - Réponse Sonar async reçue: 2956 caractères
+2025-09-23 22:15:59,550 - ERROR - Erreur parsing JSON: Expecting value: line 18 column 22 (char 1768)
+2025-09-23 22:15:59,550 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-09-23 22:15:59,550 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-09-23 22:15:59,550 - INFO - ✅ Succès traitement async ID 0 - Données JSON: 3961 caractères
+2025-09-23 22:15:59,551 - INFO - === Début traitement async ID 3 ===
+2025-09-23 22:15:59,551 - INFO - Traitement async avec recherche web: comment renforcer une porte blindée...
+2025-09-23 22:15:59,551 - INFO - Début appel async Perplexity Sonar pour: comment renforcer une porte blindée...
+2025-09-23 22:15:59,551 - INFO - Prompt système chargé depuis /home/haris/redactorv2/prompts/search.md
+2025-09-23 22:16:10,033 - INFO - Citations trouvées: 10 sources
+2025-09-23 22:16:10,033 - INFO - Réponse Sonar async reçue: 4988 caractères
+2025-09-23 22:16:10,034 - ERROR - Erreur parsing JSON: Expecting property name enclosed in double quotes: line 23 column 3 (char 1810)
+2025-09-23 22:16:10,034 - ERROR - Échec parsing JSON de la réponse Sonar - retour fallback dict
+2025-09-23 22:16:10,034 - INFO - Réponse fallback brute détectée (raw_response) – JSON minimal accepté.
+2025-09-23 22:16:10,034 - INFO - ✅ Succès traitement async ID 1 - Données JSON: 6458 caractères
+2025-09-23 22:16:10,034 - INFO - === Début traitement async ID 4 ===
+2025-09-23 22:16:10,034 - INFO - Traitement async avec recherche web: c est quoi une porte blindée...
+2025-09-23 22:16:10,034 - INFO - Début appel async Perplexity Sonar pour: c est quoi une porte blindée...
+2025-09-23 22:16:10,035 - INFO - Prompt système chargé depuis /home/haris/redactorv2/prompts/search.md
+2025-09-23 22:16:12,894 - INFO - Citations trouvées: 9 sources
+2025-09-23 22:16:12,894 - INFO - Réponse Sonar async reçue: 5984 caractères
+2025-09-23 22:16:12,895 - INFO - JSON parsé avec succès: 6266 caractères
+2025-09-23 22:16:12,895 - INFO - ✅ Réponse enrichie avec 9 sources web récentes
+2025-09-23 22:16:12,895 - INFO - ✅ Succès traitement async ID 2 - Données JSON: 6846 caractères
+2025-09-23 22:16:12,895 - INFO - === Début traitement async ID 5 ===
+2025-09-23 22:16:12,895 - INFO - Traitement async avec recherche web: installer une porte blindée...
+2025-09-23 22:16:12,895 - INFO - Début appel async Perplexity Sonar pour: installer une porte blindée...
+2025-09-23 22:16:12,895 - INFO - Prompt système chargé depuis /home/haris/redactorv2/prompts/search.md
+2025-09-23 22:16:24,739 - INFO - Citations trouvées: 10 sources
+2025-09-23 22:16:24,739 - INFO - Réponse Sonar async reçue: 6856 caractères
+2025-09-23 22:16:24,740 - INFO - JSON parsé avec succès: 7475 caractères
+2025-09-23 22:16:24,740 - INFO - ✅ Réponse enrichie avec 10 sources web récentes
+2025-09-23 22:16:24,740 - INFO - ✅ Succès traitement async ID 3 - Données JSON: 8250 caractères
+2025-09-23 22:16:24,740 - INFO - === Début traitement async ID 6 ===
+2025-09-23 22:16:24,741 - INFO - Traitement async avec recherche web: prix porte blindée avec pose...
+2025-09-23 22:16:24,741 - INFO - Début appel async Perplexity Sonar pour: prix porte blindée avec pose...
+2025-09-23 22:16:24,741 - INFO - Prompt système chargé depuis /home/haris/redactorv2/prompts/search.md
+2025-09-23 22:16:31,017 - INFO - Citations trouvées: 9 sources
+2025-09-23 22:16:31,017 - INFO - Réponse Sonar async reçue: 5355 caractères
+2025-09-23 22:16:31,018 - INFO - JSON parsé avec succès: 5918 caractères
+2025-09-23 22:16:31,018 - INFO - ✅ Réponse enrichie avec 9 sources web récentes
+2025-09-23 22:16:31,019 - INFO - ✅ Succès traitement async ID 4 - Données JSON: 6423 caractères
+2025-09-23 22:16:35,022 - INFO - Citations trouvées: 10 sources
+2025-09-23 22:16:35,022 - INFO - Réponse Sonar async reçue: 7529 caractères
+2025-09-23 22:16:35,023 - INFO - JSON parsé avec succès: 7854 caractères
+2025-09-23 22:16:35,023 - INFO - ✅ Réponse enrichie avec 10 sources web récentes
+2025-09-23 22:16:35,024 - INFO - ✅ Succès traitement async ID 5 - Données JSON: 8774 caractères
+2025-09-23 22:16:49,082 - INFO - Citations trouvées: 10 sources
+2025-09-23 22:16:49,082 - INFO - Réponse Sonar async reçue: 6415 caractères
+2025-09-23 22:16:49,083 - INFO - JSON parsé avec succès: 6717 caractères
+2025-09-23 22:16:49,083 - INFO - ✅ Réponse enrichie avec 10 sources web récentes
+2025-09-23 22:16:49,083 - INFO - ✅ Succès traitement async ID 6 - Données JSON: 7422 caractères
+2025-09-23 22:16:49,083 - INFO - ✅ Succès async pour requête 0
+2025-09-23 22:16:49,083 - INFO - ✅ Succès async pour requête 1
+2025-09-23 22:16:49,084 - INFO - ✅ Succès async pour requête 2
+2025-09-23 22:16:49,084 - INFO - ✅ Succès async pour requête 3
+2025-09-23 22:16:49,084 - INFO - ✅ Succès async pour requête 4
+2025-09-23 22:16:49,084 - INFO - ✅ Succès async pour requête 5
+2025-09-23 22:16:49,084 - INFO - ✅ Succès async pour requête 6
+2025-09-23 22:16:49,084 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 0
+2025-09-23 22:16:49,085 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 1
+2025-09-23 22:16:49,085 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 2
+2025-09-23 22:16:49,085 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 3
+2025-09-23 22:16:49,085 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 4
+2025-09-23 22:16:49,085 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 5
+2025-09-23 22:16:49,085 - INFO - 📝 Résultat ajouté en mémoire pour requête ID 6
+2025-09-23 22:16:49,136 - INFO - 💾 ✅ Sauvegarde globale réussie: 7 requêtes mises à jour dans consigne_20250911_164218_437e96f1.json
+2025-09-23 22:16:49,136 - INFO - 🏁 Traitement parallèle terminé: 7/7 succès
+2025-09-23 22:16:49,136 - INFO - 
+📈 === RÉSUMÉ BATCH PARALLÈLE CONSIGNE consigne_20250911_164218_437e96f1.json ===
+- Queries traitées: 7
+- Queries enrichies web: 5
+- Erreurs: 0
+- Caractères générés: 42,924
+- Statistiques trouvées: 9
+- Citations web: 48
+- Tokens utilisés: 18,901
+- Longueur moyenne: 6132 caractères
+- Durée totale: 0:01:01.224699
+- Concurrence utilisée: 3 requêtes simultanées
+- Succès: True
+===============================================
