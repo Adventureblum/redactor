@@ -27,7 +27,7 @@ API_KEY = os.getenv('PERPLEXITY_API_KEY')
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PROCESSED_QUERIES_FILE = os.path.join(BASE_DIR, "processed_queries.json")
 CONSIGNE_DIR = os.path.join(BASE_DIR, "static")
-PROMPT_FILE = os.path.join(BASE_DIR, "prompts", "search.md")
+PROMPT_FILE = os.path.join(BASE_DIR, "prompts", "fr", "search.md")
 
 # Configuration Perplexity API
 PERPLEXITY_API_URL = "https://api.perplexity.ai/chat/completions"

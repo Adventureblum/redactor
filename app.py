@@ -21,9 +21,13 @@ PROCESSED_FILE="processed_queries.json"
 PYTHON_SCRIPT="serp.py"
 
 def find_consigne_file():
- consigne_pattern="static/consigne*.json"
+ consigne_pattern="static/consignesrun/*.json"
  consigne_files=glob.glob(consigne_pattern)
- if not consigne_files:raise FileNotFoundError(f"Aucun fichier de consigne trouvé dans le dossier static/")
+ if not consigne_files:
+  # Fallback sur l'ancien dossier
+  consigne_pattern="static/consigne*.json"
+  consigne_files=glob.glob(consigne_pattern)
+ if not consigne_files:raise FileNotFoundError(f"Aucun fichier de consigne trouvé dans le dossier static/ ou static/consignesrun/")
  if len(consigne_files)==1:return consigne_files[0]
  consigne_files.sort(key=os.path.getmtime,reverse=True)
  return consigne_files[0]
@@ -63,7 +67,7 @@ def save_processed_query(query_hash,query_id,query_text):
  data={'processed_queries':list(processed_queries),'query_details':details,'last_updated':time.strftime('%Y-%m-%d %H:%M:%S'),'total_processed':len(processed_queries)}
  with open(PROCESSED_FILE,'w',encoding='utf-8') as f:json.dump(data,f,indent=2,ensure_ascii=False)
 
-def execute_python_script_batch(queries,max_results=3,verbose=False,no_delay=False):
+def execute_python_script_batch(queries,max_results=10,verbose=False,no_delay=False):
  Path(OUTPUT_DIR).mkdir(exist_ok=True)
  max_workers = min(len(queries), cpu_count(), 4)
  socketio.emit('batch_log',{'message':f'🚀 Traitement parallèle avec {max_workers} workers pour {len(queries)} requêtes'})
@@ -177,7 +181,7 @@ def process_queries():
   processed=load_processed_queries()
   queries_to_process=[q for q in consigne['queries'] if str(q['id']) in selected_ids and generate_query_hash(q['text']) not in processed]
   socketio.emit('batch_start',{'total':len(queries_to_process)})
-  executor.submit(execute_python_script_batch,queries_to_process,3,True,False)
+  executor.submit(execute_python_script_batch,queries_to_process,10,True,False)
   return redirect(url_for('index'))
  except Exception as e:return f"Erreur: {e}",500
 @socketio.on('log')

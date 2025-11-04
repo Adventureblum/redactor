@@ -1,0 +1,26 @@
+2025-10-30 14:28:13,411 - __main__ - INFO - === DÉMARRAGE ANALYSEUR DOM SEO SIMPLIFIÉ ===
+2025-10-30 14:28:13,412 - SerpDomProcessor - INFO - Fichiers SERP trouvés: 4
+2025-10-30 14:28:13,412 - __main__ - INFO - Traitement de 4 fichiers SERP
+2025-10-30 14:28:13,412 - __main__ - INFO - [1/4] serp_000_production_video.json
+2025-10-30 14:28:13,412 - SerpDomProcessor - INFO - Traitement: serp_000_production_video.json
+2025-10-30 14:28:14,158 - __main__ - INFO -   ✓ 10 résultats analysés
+2025-10-30 14:28:14,158 - __main__ - INFO - [2/4] serp_001_video_production_conferences_2024.json
+2025-10-30 14:28:14,159 - SerpDomProcessor - INFO - Traitement: serp_001_video_production_conferences_2024.json
+2025-10-30 14:28:14,754 - __main__ - INFO -   ✓ 8 résultats analysés
+2025-10-30 14:28:14,754 - __main__ - INFO - [3/4] serp_002_video_production_invoice_breakdown_guide.json
+2025-10-30 14:28:14,754 - SerpDomProcessor - INFO - Traitement: serp_002_video_production_invoice_breakdown_guide.json
+2025-10-30 14:28:16,892 - __main__ - INFO -   ✓ 10 résultats analysés
+2025-10-30 14:28:16,892 - __main__ - INFO - [4/4] serp_003_video_and_podcast_production_guide.json
+2025-10-30 14:28:16,892 - SerpDomProcessor - INFO - Traitement: serp_003_video_and_podcast_production_guide.json
+2025-10-30 14:28:17,520 - __main__ - INFO -   ✓ 10 résultats analysés
+2025-10-30 14:28:17,521 - __main__ - INFO - Traitement terminé en 4.1s: 4 succès, 0 échecs
+2025-10-30 14:28:17,521 - __main__ - INFO - Intégration des analyses SERP dans le fichier consigne...
+2025-10-30 14:28:17,521 - ConsigneManager - INFO - Fichier consigne trouvé: consignes_production_video.json
+2025-10-30 14:28:17,522 - ConsigneManager - INFO - Fichier consigne chargé: 4 queries
+2025-10-30 14:28:17,522 - ConsigneManager - INFO - ✓ Query 0 enrichie avec 10 positions
+2025-10-30 14:28:17,522 - ConsigneManager - INFO - ✓ Query 1 enrichie avec 10 positions
+2025-10-30 14:28:17,522 - ConsigneManager - INFO - ✓ Query 2 enrichie avec 10 positions
+2025-10-30 14:28:17,522 - ConsigneManager - INFO - ✓ Query 3 enrichie avec 10 positions
+2025-10-30 14:28:17,536 - ConsigneManager - INFO - ✓ Fichier consigne enrichi avec données SERP
+2025-10-30 14:28:17,536 - ConsigneManager - INFO - ✓ Fichier: consignes_production_video.json
+2025-10-30 14:28:17,536 - __main__ - INFO - === ANALYSE COMPLÈTE TERMINÉE AVEC SUCCÈS ===

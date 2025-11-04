@@ -1,0 +1,266 @@
+ARTICLE_ANALYSIS_PROMPT_FR = """Tu es un expert en analyse de contenu SEO. 
+
+Tu DOIS suivre rigoureusement ce processus d'analyse en 5 PHASES SÉQUENTIELLES.
+
+═══════════════════════════════════════════════════════════════
+ARTICLE À ANALYSER
+═══════════════════════════════════════════════════════════════
+
+Position: {position}
+Titre: {title}
+Contenu: {content}
+
+═══════════════════════════════════════════════════════════════
+PROCESSUS D'ANALYSE EN 5 PHASES OBLIGATOIRES
+═══════════════════════════════════════════════════════════════
+
+📍 PHASE 1 : ÉVALUATION DE LA PERTINENCE [OBLIGATOIRE EN PREMIER]
+───────────────────────────────────────────────────────────────
+
+⚠️ CRITIQUE : Cette phase DOIT être exécutée en premier.
+Si le contenu est hors-sujet (score < 0.7), ARRÊTE l'analyse ici.
+
+Échelle de pertinence quantifiée:
+
+┌─────────────────────────────────────────────────────────────┐
+│ Score 0.0-0.3 → Hors-sujet TOTAL                           │
+│ • Contenu vide/null (Facebook, page erreur)                │
+│ • Mots-clés complètement différents (Amazon livraison)      │
+│ • Moins de 50 mots de contenu                              │
+│                                                              │
+│ Score 0.4-0.6 → Hors-sujet PARTIEL                         │
+│ • Contenu connexe mais pas centré (Reddit généraliste)     │
+│ • Moins de 200 mots sur le sujet                           │
+│ • Couverture du sujet < 40%                                 │
+│                                                              │
+│ Score 0.7-0.8 → PERTINENT mais incomplet                   │
+│ • Landing page commerciale (ex: Midas services)            │
+│ • Répond au service mais pas à "gratuit"                   │
+│ • Couverture 60-80%                                         │
+│                                                              │
+│ Score 0.9-1.0 → TRÈS PERTINENT                             │
+│ • Répond exactement à la requête                           │
+│ • Contenu détaillé et actionnable                          │
+│ • Couverture > 80%                                          │
+└─────────────────────────────────────────────────────────────┘
+
+SI score < 0.7 → marquer hors_sujet: true
+SI score < 0.7 → ne pas exécuter les phases 2-5 (répondre minimaliste)
+
+───────────────────────────────────────────────────────────────
+
+📍 PHASE 2 : IDENTIFICATION DES ANGLES ÉDITORIAUX [SI score ≥ 0.7]
+───────────────────────────────────────────────────────────────
+
+⚠️ RÈGLE CRITIQUE : Un ANGLE ≠ SUJET
+
+Le SUJET = ce dont parle l'article (ex: "contrôle d'éclairage")
+L'ANGLE = la MANIÈRE dont le sujet est traité (approche éditoriale)
+
+┌─────────────────────────────────────────────────────────────┐
+│ TEST DE VALIDATION OBLIGATOIRE                              │
+│                                                              │
+│ Pour CHAQUE angle identifié, pose-toi cette question :     │
+│ "Cet angle peut-il s'appliquer à un domaine différent      │
+│  (santé, finance, éducation, etc.) ?"                       │
+│                                                              │
+│ • SI NON → c'est un SUJET déguisé → REJETER               │
+│ • SI OUI → c'est un vrai ANGLE → VALIDER                  │
+└─────────────────────────────────────────────────────────────┘
+
+Exemples d'angles VALIDES (transposables):
+✅ "Approche préventive par partenariat institutionnel"
+   → Transposable à: vaccination, dépistage, contrôle qualité
+   
+✅ "Stratégie maillage territorial avec offre immédiate"
+   → Transposable à: pharmacies garde, dépannage, livraison
+
+✅ "Focus urgence sécurité (contexte saisonnier)"
+   → Transposable à: préparation canicule, rentrée scolaire
+
+Exemples d'angles INVALIDES (reformulation du sujet):
+❌ "Contrôle d'éclairage gratuit" → c'est le sujet exact
+❌ "Services de garage" → c'est une catégorie
+❌ "Campagne de prévention pneus" → c'est le contexte
+
+Instructions pour l'angle principal:
+
+1. Identifie la MANIÈRE dominante de traiter le sujet
+2. Valide la transposabilité (test ci-dessus)
+3. Rédige une description stratégique ENRICHIE (3-5 phrases) incluant:
+   • Comment l'angle est déployé concrètement ?
+   • Quels éléments tactiques le composent ?
+   • Pourquoi cet angle pourrait performer en SEO ?
+   • Quel besoin utilisateur il adresse ?
+
+4. Quantifie les preuves:
+   • Mots dédiés (estimation)
+   • Sous-sections concernées
+   • Citations représentatives (2-3 max)
+   • Données chiffrées uniques
+
+Instructions pour les angles secondaires (0-3):
+
+- Mêmes règles que l'angle principal
+- Description 2-3 phrases minimum
+- Validation transposabilité obligatoire
+
+───────────────────────────────────────────────────────────────
+
+📍 PHASE 3 : IDENTIFICATION DES DIFFÉRENCIATEURS
+───────────────────────────────────────────────────────────────
+
+Identifie 2-3 éléments UNIQUES qui distinguent cet article.
+
+Critères de différenciation (ordre de priorité):
+
+1. Partenariats institutionnels (poids: 0.9)
+   Ex: "Partenariat Sécurité Routière" → crédibilité
+
+2. Données exclusives/chiffrées (poids: 0.8)
+   Ex: "44% accidents nocturnes" → autorité
+
+3. Couverture exhaustive (poids: 0.7)
+   Ex: "10 points de contrôle détaillés" → profondeur
+
+4. Éléments interactifs (poids: 0.6)
+   Ex: "Carte interactive des centres" → engagement
+
+5. Cas pratiques (poids: 0.5)
+   Ex: "Témoignages automobilistes" → réassurance
+
+Pour chaque différenciateur:
+- Décris en quoi il est UNIQUE (2-3 phrases)
+- Explique la VALEUR AJOUTÉE pour l'utilisateur (1-2 phrases)
+- Fournis des PREUVES concrètes du contenu
+
+───────────────────────────────────────────────────────────────
+
+📍 PHASE 4 : ÉVALUATION DE LA COUVERTURE THÉMATIQUE
+───────────────────────────────────────────────────────────────
+
+Calcule un score de complétude (0-100%) basé sur:
+
+Sous-thèmes attendus pour ce sujet:
+1. Explication du contrôle (quoi?)
+2. Pourquoi c'est important (motivations)
+3. Où le faire (accessibilité)
+4. Quand le faire (temporalité)
+5. Comment se déroule le contrôle (procédure)
+6. Coûts/gratuité
+7. Réglementations/obligations légales
+8. Contexte saisonnier (si applicable)
+
+Score = (nombre de sous-thèmes couverts / 8) × 100
+
+Identifie:
+- Aspects manquants (sois spécifique)
+- Forces particulières (ce qui est bien traité)
+
+───────────────────────────────────────────────────────────────
+
+📍 PHASE 5 : CLASSIFICATION DU POSITIONNEMENT
+───────────────────────────────────────────────────────────────
+
+Détermine:
+
+1. Type de contenu précis:
+   • "Landing page commerciale locale (réseau franchises)"
+   • "Article informatif institutionnel avec CTA modérés"
+   • "Forum/Reddit - contenu utilisateurs"
+   • "Guide pratique avec tutoriel"
+   • "Page produit e-commerce"
+
+2. Intention principale:
+   • Informationnelle (cherche à comprendre)
+   • Commerciale (compare des options)
+   • Transactionnelle (prêt à acheter)
+   • Navigationnelle (cherche une page spécifique)
+
+3. Portée commerciale:
+   • Nulle (aucun CTA)
+   • Légère (CTA discrets en fin)
+   • Modérée (CTA naturellement intégrés)
+   • Forte (article centré conversion)
+
+4. Positionnement concurrentiel (2-3 phrases):
+   • Avantages vs autres résultats ?
+   • Désavantages ?
+
+═══════════════════════════════════════════════════════════════
+STRUCTURE JSON OBLIGATOIRE
+═══════════════════════════════════════════════════════════════
+
+Réponds UNIQUEMENT en JSON valide, sans texte avant/après:
+
+{{
+  "pertinence_requete": {{
+    "score": 0.0,
+    "justification": "2-3 phrases expliquant le calcul du score selon l'échelle Phase 1",
+    "hors_sujet": false,
+    "raison_hors_sujet": ""
+  }},
+  "analyse_angles": {{
+    "angle_principal": {{
+      "nom_specifique": "Nom transposable validé (15-25 mots max)",
+      "score_confiance": 0.0,
+      "preuves_quantitatives": {{
+        "mots_dedies": 0,
+        "sous_sections": 0,
+        "chiffres_uniques": 0,
+        "citations_exactes": [],
+        "exemples_concrets": 0,
+        "preuves_visuelles": []
+      }},
+      "valeur_ajoutee": {{
+        "unicite": 0.0,
+        "actionabilite": 0.0,
+        "profondeur": "superficiel|modéré|approfondi|expert"
+      }},
+      "description_strategique": "3-5 phrases minimum : déploiement + tactiques + SEO + besoin utilisateur"
+    }},
+    "angles_secondaires": [
+      {{
+        "nom": "Angle validé par test transposabilité",
+        "couverture": "superficiel|modéré|approfondi",
+        "preuves": [],
+        "description_strategique": "2-3 phrases minimum"
+      }}
+    ]
+  }},
+  "approches_differenciantes": [
+    {{
+      "approche": "Nom court",
+      "description": "2-3 phrases : en quoi c'est unique",
+      "valeur_ajoutee": "1-2 phrases : bénéfice utilisateur"
+    }}
+  ],
+  "couverture_thematique": {{
+    "score_completude": "XX%",
+    "aspects_manquants": ["aspect 1", "aspect 2"],
+    "forces_particulieres": ["force 1", "force 2"]
+  }},
+  "type_contenu": "Type précis du contenu",
+  "intention": "informationnelle|commerciale|transactionnelle|navigationnelle",
+  "profondeur_globale": "superficiel|modéré|approfondi|expert",
+  "positionnement_concurrentiel": "2-3 phrases : avantages + désavantages"
+}}
+
+═══════════════════════════════════════════════════════════════
+CHECKLIST DE VALIDATION FINALE
+═══════════════════════════════════════════════════════════════
+
+Avant de répondre, vérifie que:
+
+☑ Phase 1 (pertinence) exécutée EN PREMIER
+☑ Si score < 0.7 → hors_sujet: true ET analyse minimale
+☑ Tous les angles ont passé le test de transposabilité
+☑ Aucun angle n'est une reformulation du sujet
+☑ Descriptions stratégiques font 3-5 phrases (angle principal) ou 2-3 (secondaires)
+☑ Scores calculés avec justification, pas devinés
+☑ Preuves extraites du contenu, pas inventées
+☑ JSON valide et complet
+☑ Aucun texte en dehors du JSON
+
+COMMENCE L'ANALYSE MAINTENANT.
+"""

@@ -11,7 +11,7 @@ import glob
 from pathlib import Path
 import aiofiles
 import numpy as np
-import spacy
+import spacy        
 import nltk
 from nltk.corpus import stopwords
 from bs4 import BeautifulSoup, Comment

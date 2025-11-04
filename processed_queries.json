@@ -1,113 +1,56 @@
 {
   "processed_queries": [
-    "bde50c3848340e429e17aa76959b2b2b",
-    "50e819dd3e9491a9722b8d080c3d00b7",
-    "b1c2768c0ab91dcfbf8f62f11ba91b6d",
-    "53b79ac7fee7c14f47dd2eff0500f69f",
-    "5a6e913f7ffef1c677fd7a3cd613b4e0",
-    "20c3496a5b34a034362e9cf8dbcc37f6",
-    "f8dabd87ea25769ef48772fea243e325"
+    "0b68795cbd9fef2c6117d2d58b7c0743",
+    "bca913cb9147a67b95eda66e7130ecb1",
+    "751cbdca47670854788a5901dfd04828",
+    "71dd0696de769be37c753ffcbc62d074",
+    "2632fb0a5803dfef15d72e6bbc6d7c20",
+    "429ff6446bf4c7e22ed3c38e83c2d88f",
+    "414f26252a9c6960379767bd97ecb0cd",
+    "3bb4cf0f3a8fb20403fca5f58e863890"
   ],
   "query_details": {
-    "f8dabd87ea25769ef48772fea243e325": {
-      "id": 0,
-      "text": "changement serrure porte blindée prix",
-      "processed_at": "2025-09-24 13:55:13",
-      "semantic": 1,
-      "semantic_processed_at": "2025-09-24 13:57:49",
-      "semantic_analysis": {
-        "clusters_count": 5,
-        "relations_found": 10,
-        "entities_count": 5,
-        "angles_generated": 10,
-        "thematic_diversity": 0.01,
-        "semantic_complexity": 1.0
-      }
-    },
-    "50e819dd3e9491a9722b8d080c3d00b7": {
-      "id": 3,
-      "text": "comment renforcer une porte blindée",
-      "processed_at": "2025-09-24 13:55:22",
-      "semantic": 1,
-      "semantic_processed_at": "2025-09-24 13:57:49",
-      "semantic_analysis": {
-        "clusters_count": 5,
-        "relations_found": 10,
-        "entities_count": 5,
-        "angles_generated": 8,
-        "thematic_diversity": 0.01,
-        "semantic_complexity": 1.0
-      }
-    },
-    "bde50c3848340e429e17aa76959b2b2b": {
-      "id": 2,
-      "text": "changement barillet porte blindée",
-      "processed_at": "2025-09-24 13:55:22",
-      "semantic": 1,
-      "semantic_processed_at": "2025-09-24 13:57:49",
-      "semantic_analysis": {
-        "clusters_count": 5,
-        "relations_found": 10,
-        "entities_count": 5,
-        "angles_generated": 6,
-        "thematic_diversity": 0.04,
-        "semantic_complexity": 1.0
-      }
-    },
-    "b1c2768c0ab91dcfbf8f62f11ba91b6d": {
+    "429ff6446bf4c7e22ed3c38e83c2d88f": {
       "id": 1,
-      "text": "changer une serrure de porte blindée",
-      "processed_at": "2025-09-24 13:55:26",
-      "semantic": 1,
-      "semantic_processed_at": "2025-09-24 13:57:49",
-      "semantic_analysis": {
-        "clusters_count": 5,
-        "relations_found": 10,
-        "entities_count": 5,
-        "angles_generated": 10,
-        "thematic_diversity": 0.01,
-        "semantic_complexity": 1.0
-      }
+      "text": "comment faire le signe euros sur pc",
+      "processed_at": "2025-10-29 00:29:15"
     },
-    "20c3496a5b34a034362e9cf8dbcc37f6": {
-      "id": 6,
-      "text": "prix porte blindée avec pose",
-      "processed_at": "2025-09-24 13:55:44",
-      "semantic": 0,
-      "semantic_processed_at": "2025-09-24 13:57:49"
+    "2632fb0a5803dfef15d72e6bbc6d7c20": {
+      "id": 0,
+      "text": "comment faire un diaporama",
+      "processed_at": "2025-10-29 00:29:18"
     },
-    "5a6e913f7ffef1c677fd7a3cd613b4e0": {
-      "id": 4,
-      "text": "c est quoi une porte blindée",
-      "processed_at": "2025-09-24 13:55:47",
-      "semantic": 1,
-      "semantic_processed_at": "2025-09-24 13:57:49",
-      "semantic_analysis": {
-        "clusters_count": 5,
-        "relations_found": 10,
-        "entities_count": 5,
-        "angles_generated": 6,
-        "thematic_diversity": 0.02,
-        "semantic_complexity": 1.0
-      }
+    "414f26252a9c6960379767bd97ecb0cd": {
+      "id": 3,
+      "text": "meilleur éclairage pour garage",
+      "processed_at": "2025-10-29 00:29:19"
     },
-    "53b79ac7fee7c14f47dd2eff0500f69f": {
-      "id": 5,
-      "text": "installer une porte blindée",
-      "processed_at": "2025-09-24 13:55:57",
-      "semantic": 1,
-      "semantic_processed_at": "2025-09-24 13:57:49",
-      "semantic_analysis": {
-        "clusters_count": 5,
-        "relations_found": 10,
-        "entities_count": 5,
-        "angles_generated": 8,
-        "thematic_diversity": 0.03,
-        "semantic_complexity": 1.0
-      }
+    "3bb4cf0f3a8fb20403fca5f58e863890": {
+      "id": 2,
+      "text": "contrôle eclairage voiture gratuit",
+      "processed_at": "2025-10-29 00:29:20"
+    },
+    "0b68795cbd9fef2c6117d2d58b7c0743": {
+      "id": 0,
+      "text": "production video",
+      "processed_at": "2025-10-30 14:26:36"
+    },
+    "bca913cb9147a67b95eda66e7130ecb1": {
+      "id": 1,
+      "text": "video production conferences 2024",
+      "processed_at": "2025-10-30 14:26:39"
+    },
+    "71dd0696de769be37c753ffcbc62d074": {
+      "id": 2,
+      "text": "video production invoice breakdown guide",
+      "processed_at": "2025-10-30 14:26:41"
+    },
+    "751cbdca47670854788a5901dfd04828": {
+      "id": 3,
+      "text": "video and podcast production guide",
+      "processed_at": "2025-10-30 14:26:44"
     }
   },
-  "last_updated": "2025-09-24 13:57:49",
-  "total_processed": 7,
-  "semantic_processed": 6
+  "last_updated": "2025-10-30 14:26:44",
+  "total_processed": 8
 }

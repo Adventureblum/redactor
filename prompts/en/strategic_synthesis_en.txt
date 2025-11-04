@@ -1,0 +1,127 @@
+"STRATEGIC_SYNTHESIS_PROMPT_EN": """You are an SEO content strategist. Synthesize these analyses to create a SERP domination strategy.
+
+TARGET QUERY: {requete}
+
+ARTICLE ANALYSES (positions 1-10):
+{analyses}
+
+GENERATE A COMPREHENSIVE STRATEGIC SYNTHESIS:
+
+1. COMPETITIVE ANGLE ANALYSIS:
+   - Dominant angles: frequency, depth, successful examples
+   - Emerging angles: differentiation potential
+
+2. MANDATORY THEMES:
+   - Themes present among leaders (top 5)
+   - Minimum required level per theme
+   - Strategic justification
+
+3. UNIQUE ANGLE OPPORTUNITIES:
+   - Under-exploited angles by competition
+   - Potential justification
+   - Execution complexity
+   - Estimated added value
+
+4. COMPETITIVE GAPS & ANGLES TO EXCLUDE:
+   a) Gaps to exploit:             
+      - Poorly covered aspects in top 5
+      - Gap type (depth, freshness, expertise, etc.)
+      - SEO potential
+   
+   b) Angles to exclude:           
+      - Angles associated with positions 5-10 but absent from top 5
+      - Exclusion reason (poor performance, misaligned intent, etc.)
+      - Ranking risk
+
+5. POSITIONING STRATEGY:
+   a) Mandatory foundation:         
+      - Minimum angles to cover
+      - Required depth
+      - Essential themes
+   
+   b) Recommended differentiation: 
+      - Proposed unique angles
+      - Targeted deep dives
+      - Innovative approaches
+   
+   c) Ambition level + estimated editorial effort  
+
+Respond in valid JSON with this structure:
+{{
+  "analyse_angles_concurrentiels": {{
+    "angles_dominants": [
+      {{
+        "angle": "",
+        "frequence_utilisation": "",
+        "niveau_profondeur_moyen": "",
+        "positionnement_requis": "",
+        "exemples_reussis": []
+      }}
+    ],
+    "angles_emergents": [
+      {{
+        "angle": "",
+        "utilise_par": "",
+        "potentiel_differentiation": "",
+        "difficulte_execution": ""
+      }}
+    ]
+  }},
+  "themes_obligatoires": [
+    {{
+      "theme": "",
+      "present_chez": [],
+      "niveau_minimum_requis": "",
+      "profondeur_observee": "",
+      "justification": ""
+    }}
+  ],
+  "opportunites_angles_uniques": [
+    {{
+      "angle_propose": "",
+      "justification": "",
+      "niveau_ambition": "",
+      "valeur_ajoutee_estimee": "",
+      "complexite_execution": ""
+    }}
+  ],
+  "gaps_concurrentiels": [
+    {{
+      "gap_identifie": "",
+      "type": "",
+      "potentiel_seo": "",
+      "recommandation_exploitation": ""
+    }}
+  ],
+  "angles_a_exclure": [
+    {{
+      "angle_declasse": "",
+      "present_dans_positions": [],
+      "absent_top5_mais_present_bas_classement": [],
+      "raison_exclusion": "",
+      "risque_positionnement": ""
+    }}
+  ],
+  "strategie_positionnement": {{
+    "socle_obligatoire": {{
+      "angles_minimum": [],
+      "profondeur_requise": "",
+      "themes_incontournables": []
+    }},
+    "differentiation_recommandee": {{
+      "angles_uniques_proposes": [],
+      "approfondissements_cibles": [],
+      "approches_innovantes": []
+    }},
+    "niveau_ambition_global": "",
+    "effort_editorial_estime": ""
+  }},
+  "recommandation_positionnement_global": {{
+    "type_contenu_optimal": "",
+    "intention_cible": "",
+    "portee_commerciale_recommandee": "",
+    "orientation_ctal_optimale": ""
+  }}
+}}
+"""
+}

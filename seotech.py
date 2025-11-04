@@ -400,7 +400,7 @@ async def main():
         if not consigne_data:
             logger.error("❌ Impossible de charger les données de consigne")
             return
-
+                                            
         # Trouver les fichiers SERP correspondants
         logger.info("🔍 Recherche des fichiers SERP correspondants")
         matching_files = find_matching_serp_files(consigne_data)
