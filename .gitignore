@@ -2,3 +2,7 @@
 .env
 lib/
 lib64/
+
+# Logging files
+logging/*.log
+logging/*.log.*
