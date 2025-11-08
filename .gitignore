@@ -6,3 +6,8 @@ lib64/
 # Logging files
 logging/*.log
 logging/*.log.*
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo

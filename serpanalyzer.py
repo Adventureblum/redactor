@@ -7,6 +7,15 @@ import aiofiles
 from datetime import datetime
 from bs4 import BeautifulSoup
 import glob
+from tenacity import (
+    retry,
+    stop_after_attempt,
+    wait_exponential,
+    retry_if_exception_type,
+    before_log,
+    after_log,
+    RetryCallState
+)
 
 # Configuration du logging
 # Créer le dossier de logs s'il n'existe pas
@@ -64,6 +73,57 @@ logger = logging.getLogger(__name__)
 BASE_DIR = os.path.dirname(__file__)
 RESULTS_DIR = os.path.join(BASE_DIR, "results")
 
+# Configuration des retries
+MAX_RETRIES = 3
+RETRY_DELAY_MIN = 2  # secondes
+RETRY_DELAY_MAX = 10  # secondes
+
+# Callbacks pour logger les retries
+def log_retry_attempt(retry_state: RetryCallState):
+    """Log les tentatives de retry"""
+    if retry_state.attempt_number > 1:
+        exception_name = "Unknown"
+        if retry_state.outcome and retry_state.outcome.failed:
+            try:
+                exception_name = retry_state.outcome.exception().__class__.__name__
+            except:
+                pass
+        logger.warning(
+            f"🔄 Retry {retry_state.attempt_number}/{MAX_RETRIES} pour {retry_state.fn.__name__} "
+            f"(erreur: {exception_name})"
+        )
+
+def log_retry_attempt_html(retry_state: RetryCallState):
+    """Log les tentatives de retry pour HTML"""
+    if retry_state.attempt_number > 1:
+        exception_name = "Unknown"
+        if retry_state.outcome and retry_state.outcome.failed:
+            try:
+                exception_name = retry_state.outcome.exception().__class__.__name__
+            except:
+                pass
+        logger.warning(
+            f"🔄 Retry {retry_state.attempt_number}/2 pour {retry_state.fn.__name__} "
+            f"(erreur: {exception_name})"
+        )
+
+# Décorateur pour les opérations fichiers (lecture/écriture)
+file_retry = retry(
+    stop=stop_after_attempt(MAX_RETRIES),
+    wait=wait_exponential(multiplier=1, min=RETRY_DELAY_MIN, max=RETRY_DELAY_MAX),
+    retry=retry_if_exception_type((IOError, OSError, json.JSONDecodeError)),
+    before=log_retry_attempt,
+    reraise=True
+)
+
+# Décorateur pour le parsing HTML
+html_retry = retry(
+    stop=stop_after_attempt(2),
+    wait=wait_exponential(multiplier=1, min=1, max=5),
+    before=log_retry_attempt_html,
+    reraise=True
+)
+
 
 class SerpDomProcessor:
     """Processeur simplifié pour analyser le DOM des fichiers SERP"""
@@ -72,7 +132,31 @@ class SerpDomProcessor:
         self.logger = logging.getLogger(self.__class__.__name__)
         self.results_dir = RESULTS_DIR
         self.logger.debug(f"Initialisation SerpDomProcessor - Répertoire résultats: {self.results_dir}")
-    
+
+    @file_retry
+    async def _read_serp_file_with_retry(self, filepath):
+        """Lit un fichier SERP avec mécanisme de retry"""
+        try:
+            async with aiofiles.open(filepath, 'r', encoding='utf-8') as f:
+                content = await f.read()
+                data = json.loads(content)
+                self.logger.debug(f"✓ Fichier lu avec succès: {os.path.basename(filepath)}")
+                return data
+        except Exception as e:
+            self.logger.warning(f"🔄 Erreur lecture fichier {os.path.basename(filepath)}: {e}")
+            raise
+
+    @html_retry
+    def _parse_html_with_retry(self, html_raw, position):
+        """Parse le HTML avec mécanisme de retry"""
+        try:
+            soup = BeautifulSoup(html_raw, 'html.parser')
+            self.logger.debug(f"✓ HTML parsé avec succès pour position {position}")
+            return soup
+        except Exception as e:
+            self.logger.warning(f"🔄 Erreur parsing HTML position {position}: {e}")
+            raise
+
     def find_serp_files(self):
         """Recherche tous les fichiers SERP dans le dossier results"""
         try:
@@ -94,10 +178,8 @@ class SerpDomProcessor:
             self.logger.info(f"Traitement: {filename}")
             self.logger.debug(f"Lecture du fichier: {filepath}")
 
-            async with aiofiles.open(filepath, 'r', encoding='utf-8') as f:
-                content = await f.read()
-                data = json.loads(content)
-
+            # Utilisation du retry pour la lecture du fichier
+            data = await self._read_serp_file_with_retry(filepath)
             self.logger.debug(f"Fichier JSON parsé avec succès - Clés: {list(data.keys())}")
             
             # Vérification du succès
@@ -184,9 +266,9 @@ class SerpDomProcessor:
                 self.logger.debug(f"Position {position}: HTML vide, passage au suivant")
                 return None
 
-            # Parse HTML
+            # Parse HTML avec retry
             self.logger.debug(f"Parsing HTML pour position {position} ({len(html_raw)} caractères)")
-            soup = BeautifulSoup(html_raw, 'html.parser')
+            soup = self._parse_html_with_retry(html_raw, position)
             
             # Extraction des balises techniques de base
             self.logger.debug(f"Position {position}: extraction des balises techniques")
@@ -713,7 +795,31 @@ class ConsigneManager:
         self.consignes_dir = os.path.join(BASE_DIR, "static", "consignesrun")
         self.consigne_file = None
         self.logger.debug(f"Initialisation ConsigneManager - Répertoire consignes: {self.consignes_dir}")
-    
+
+    @file_retry
+    async def _load_consigne_with_retry(self, filepath):
+        """Charge un fichier consigne avec mécanisme de retry"""
+        try:
+            async with aiofiles.open(filepath, 'r', encoding='utf-8') as f:
+                content = await f.read()
+                data = json.loads(content)
+                self.logger.debug(f"✓ Fichier consigne lu avec succès: {os.path.basename(filepath)}")
+                return data
+        except Exception as e:
+            self.logger.warning(f"🔄 Erreur lecture consigne {os.path.basename(filepath)}: {e}")
+            raise
+
+    @file_retry
+    async def _write_consigne_with_retry(self, filepath, content):
+        """Écrit un fichier consigne avec mécanisme de retry"""
+        try:
+            async with aiofiles.open(filepath, 'w', encoding='utf-8') as f:
+                await f.write(content)
+                self.logger.debug(f"✓ Fichier consigne écrit avec succès: {os.path.basename(filepath)}")
+        except Exception as e:
+            self.logger.warning(f"🔄 Erreur écriture consigne {os.path.basename(filepath)}: {e}")
+            raise
+
     def find_consigne_file(self):
         """Trouve le fichier consigne dans le dossier consignesrun"""
         try:
@@ -746,11 +852,10 @@ class ConsigneManager:
             if not self.consigne_file:
                 return None
 
-            async with aiofiles.open(self.consigne_file, 'r', encoding='utf-8') as f:
-                content = await f.read()
-                data = json.loads(content)
-                self.logger.info(f"Fichier consigne chargé: {len(data.get('queries', []))} queries")
-                return data
+            # Utilisation du retry pour la lecture
+            data = await self._load_consigne_with_retry(self.consigne_file)
+            self.logger.info(f"Fichier consigne chargé: {len(data.get('queries', []))} queries")
+            return data
         except Exception as e:
             self.logger.error(f"Erreur chargement consigne: {e}")
             return None
@@ -824,9 +929,9 @@ class ConsigneManager:
             self.logger.debug("Sérialisation des données enrichies en JSON")
             content = json.dumps(consigne_data, indent=2, ensure_ascii=False)
 
+            # Utilisation du retry pour l'écriture
             self.logger.debug(f"Écriture du fichier enrichi: {self.consigne_file}")
-            async with aiofiles.open(self.consigne_file, 'w', encoding='utf-8') as f:
-                await f.write(content)
+            await self._write_consigne_with_retry(self.consigne_file, content)
 
             self.logger.info(f"✓ Fichier consigne enrichi avec données SERP")
             self.logger.info(f"✓ Fichier: {os.path.basename(self.consigne_file)}")
