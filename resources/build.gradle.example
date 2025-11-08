@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.example'
+version = '1.0.0'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Logback Classic (inclut logback-core et slf4j-api)
+    implementation 'ch.qos.logback:logback-classic:1.4.14'
+
+    // SLF4J API
+    implementation 'org.slf4j:slf4j-api:2.0.9'
+
+    // Optionnel: Support pour les logs JSON
+    implementation 'ch.qos.logback.contrib:logback-json-classic:0.1.5'
+    implementation 'ch.qos.logback.contrib:logback-jackson:0.1.5'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.16.0'
+}
+
+application {
+    mainClass = 'com.example.Main'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
