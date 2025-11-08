@@ -9,14 +9,55 @@ from bs4 import BeautifulSoup
 import glob
 
 # Configuration du logging
+# Créer le dossier de logs s'il n'existe pas
+LOG_DIR = os.path.join(os.path.dirname(__file__), 'logging')
+os.makedirs(LOG_DIR, exist_ok=True)
+
+# Format détaillé pour les logs complets
+detailed_formatter = logging.Formatter(
+    '%(asctime)s - %(name)s - %(levelname)s - %(funcName)s:%(lineno)d - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
+
+# Format minifié pour les logs essentiels
+minified_formatter = logging.Formatter(
+    '%(asctime)s - %(levelname)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
+
+# Handler pour les logs complets (serpanalyzer.log)
+full_log_handler = logging.FileHandler(
+    os.path.join(LOG_DIR, 'serpanalyzer.log'),
+    mode='a',
+    encoding='utf-8'
+)
+full_log_handler.setLevel(logging.DEBUG)
+full_log_handler.setFormatter(detailed_formatter)
+
+# Handler pour les logs minifiés (__main__.log) - WARNING et plus
+minified_log_handler = logging.FileHandler(
+    os.path.join(LOG_DIR, '__main__.log'),
+    mode='a',
+    encoding='utf-8'
+)
+minified_log_handler.setLevel(logging.WARNING)
+minified_log_handler.setFormatter(minified_formatter)
+
+# Handler pour la console
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.INFO)
+console_handler.setFormatter(minified_formatter)
+
+# Configuration du logger principal
 logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    level=logging.DEBUG,
     handlers=[
-        logging.FileHandler('seo_dom_analyzer_simple.log'),
-        logging.StreamHandler()
+        full_log_handler,
+        minified_log_handler,
+        console_handler
     ]
 )
+
 logger = logging.getLogger(__name__)
 
 # Configuration
@@ -26,20 +67,24 @@ RESULTS_DIR = os.path.join(BASE_DIR, "results")
 
 class SerpDomProcessor:
     """Processeur simplifié pour analyser le DOM des fichiers SERP"""
-    
+
     def __init__(self):
         self.logger = logging.getLogger(self.__class__.__name__)
         self.results_dir = RESULTS_DIR
+        self.logger.debug(f"Initialisation SerpDomProcessor - Répertoire résultats: {self.results_dir}")
     
     def find_serp_files(self):
         """Recherche tous les fichiers SERP dans le dossier results"""
         try:
             pattern = os.path.join(self.results_dir, "serp_*.json")
+            self.logger.debug(f"Recherche des fichiers SERP avec le pattern: {pattern}")
             files = glob.glob(pattern)
             self.logger.info(f"Fichiers SERP trouvés: {len(files)}")
+            if files:
+                self.logger.debug(f"Fichiers trouvés: {[os.path.basename(f) for f in files]}")
             return sorted(files)
         except Exception as e:
-            self.logger.error(f"Erreur recherche fichiers: {e}")
+            self.logger.error(f"Erreur recherche fichiers: {e}", exc_info=True)
             return []
     
     async def process_serp_file(self, filepath):
@@ -47,10 +92,13 @@ class SerpDomProcessor:
         try:
             filename = os.path.basename(filepath)
             self.logger.info(f"Traitement: {filename}")
-            
+            self.logger.debug(f"Lecture du fichier: {filepath}")
+
             async with aiofiles.open(filepath, 'r', encoding='utf-8') as f:
                 content = await f.read()
                 data = json.loads(content)
+
+            self.logger.debug(f"Fichier JSON parsé avec succès - Clés: {list(data.keys())}")
             
             # Vérification du succès
             if not data.get('success'):
@@ -66,23 +114,27 @@ class SerpDomProcessor:
             
             # Extraction des résultats organiques
             organic_results = data.get('organicResults', [])
-            
+
             if not organic_results:
                 self.logger.warning(f"Aucun résultat organique dans {filename}")
                 return None
+
+            self.logger.debug(f"Nombre de résultats organiques trouvés: {len(organic_results)}")
             
             # Analyse de chaque résultat
             analyzed_results = []
             for idx, result in enumerate(organic_results, 1):
                 html_content = result.get('html', '')
-                
+
                 if not html_content:
                     self.logger.debug(f"Position {idx}: pas de HTML")
                     continue
-                
+
+                self.logger.debug(f"Analyse du résultat position {idx} - URL: {result.get('url', 'N/A')}")
                 analysis = await self.analyze_result(result, idx)
                 if analysis:
                     analyzed_results.append(analysis)
+                    self.logger.debug(f"Position {idx} analysée avec succès - {analysis.get('words_count', 0)} mots")
             
             if not analyzed_results:
                 self.logger.warning(f"Aucune analyse réussie pour {filename}")
@@ -97,11 +149,12 @@ class SerpDomProcessor:
                 "total_results_analyzed": len(analyzed_results),
                 "results": analyzed_results
             }
-            
+
+            self.logger.info(f"Analyse terminée pour '{query}' - {len(analyzed_results)} résultats traités")
             return serp_analysis
         
         except Exception as e:
-            self.logger.error(f"Erreur traitement {filepath}: {e}")
+            self.logger.error(f"Erreur traitement {filepath}: {e}", exc_info=True)
             return None
     
     def count_words_in_content(self, content_dict):
@@ -126,21 +179,26 @@ class SerpDomProcessor:
             title = result.get('title', '')
             snippet = result.get('snippet', '')
             html_raw = result.get('html', '')
-            
+
             if not html_raw:
+                self.logger.debug(f"Position {position}: HTML vide, passage au suivant")
                 return None
-            
+
             # Parse HTML
+            self.logger.debug(f"Parsing HTML pour position {position} ({len(html_raw)} caractères)")
             soup = BeautifulSoup(html_raw, 'html.parser')
             
             # Extraction des balises techniques de base
+            self.logger.debug(f"Position {position}: extraction des balises techniques")
             technical_tags = self.extract_technical_tags(soup)
-            
+
             # Extraction du contenu dans l'ordre du DOM (headings + paragraphes mélangés)
+            self.logger.debug(f"Position {position}: extraction du contenu DOM")
             content = self.extract_content_in_dom_order(soup)
 
             # Comptage des mots dans le contenu
             words_count = self.count_words_in_content(content)
+            self.logger.debug(f"Position {position}: {words_count} mots comptabilisés")
 
             # Construction de l'analyse
             analysis = {
@@ -156,7 +214,7 @@ class SerpDomProcessor:
             return analysis
         
         except Exception as e:
-            self.logger.error(f"Erreur analyse résultat position {position}: {e}")
+            self.logger.error(f"Erreur analyse résultat position {position}: {e}", exc_info=True)
             return None
     
     def extract_technical_tags(self, soup):
@@ -654,15 +712,19 @@ class ConsigneManager:
         self.logger = logging.getLogger(self.__class__.__name__)
         self.consignes_dir = os.path.join(BASE_DIR, "static", "consignesrun")
         self.consigne_file = None
+        self.logger.debug(f"Initialisation ConsigneManager - Répertoire consignes: {self.consignes_dir}")
     
     def find_consigne_file(self):
         """Trouve le fichier consigne dans le dossier consignesrun"""
         try:
+            self.logger.debug(f"Recherche du fichier consigne dans: {self.consignes_dir}")
             if not os.path.exists(self.consignes_dir):
                 self.logger.error(f"Dossier consignesrun introuvable: {self.consignes_dir}")
                 return None
 
             consigne_files = glob.glob(os.path.join(self.consignes_dir, "*.json"))
+            self.logger.debug(f"Fichiers JSON trouvés: {len(consigne_files)}")
+
             if not consigne_files:
                 self.logger.error("Aucun fichier consigne trouvé")
                 return None
@@ -672,7 +734,7 @@ class ConsigneManager:
             self.logger.info(f"Fichier consigne trouvé: {os.path.basename(self.consigne_file)}")
             return self.consigne_file
         except Exception as e:
-            self.logger.error(f"Erreur recherche fichier consigne: {e}")
+            self.logger.error(f"Erreur recherche fichier consigne: {e}", exc_info=True)
             return None
 
     async def load_consigne_data(self):
@@ -696,8 +758,10 @@ class ConsigneManager:
     async def integrate_serp_analyses(self, serp_analyses):
         """Intègre les analyses SERP dans le fichier consigne en enrichissant les queries"""
         try:
+            self.logger.info(f"Intégration de {len(serp_analyses)} analyses SERP dans le fichier consigne")
             consigne_data = await self.load_consigne_data()
             if consigne_data is None:
+                self.logger.error("Impossible de charger les données de consigne")
                 return False
 
             # Ajouter les métadonnées d'analyse SERP
@@ -709,6 +773,7 @@ class ConsigneManager:
 
             # Pour chaque query de la consigne, essayer de trouver l'analyse SERP correspondante
             queries = consigne_data.get("queries", [])
+            self.logger.info(f"Traitement de {len(queries)} queries de la consigne")
 
             for query_info in queries:
                 query_id = query_info.get("id")
@@ -728,6 +793,7 @@ class ConsigneManager:
 
                 # Si on trouve une correspondance, enrichir la query
                 if matching_analysis:
+                    self.logger.debug(f"Correspondance trouvée pour query {query_id}: '{query_text}'")
                     query_info["serp_data"] = {
                         "serp_query": matching_analysis["query"],
                         "location": matching_analysis.get("location", ""),
@@ -755,8 +821,10 @@ class ConsigneManager:
                     self.logger.warning(f"Aucune correspondance SERP trouvée pour query {query_id}: '{query_text}'")
 
             # Sauvegarder le fichier consigne enrichi
+            self.logger.debug("Sérialisation des données enrichies en JSON")
             content = json.dumps(consigne_data, indent=2, ensure_ascii=False)
 
+            self.logger.debug(f"Écriture du fichier enrichi: {self.consigne_file}")
             async with aiofiles.open(self.consigne_file, 'w', encoding='utf-8') as f:
                 await f.write(content)
 
@@ -765,7 +833,7 @@ class ConsigneManager:
             return True
 
         except Exception as e:
-            self.logger.error(f"Erreur intégration SERP: {e}")
+            self.logger.error(f"Erreur intégration SERP: {e}", exc_info=True)
             return False
 
 
@@ -773,7 +841,9 @@ async def main():
     """Fonction principale"""
     try:
         logger.info("=== DÉMARRAGE ANALYSEUR DOM SEO SIMPLIFIÉ ===")
-        
+        logger.debug(f"Répertoire de base: {BASE_DIR}")
+        logger.debug(f"Répertoire des résultats: {RESULTS_DIR}")
+
         processor = SerpDomProcessor()
         consigne_manager = ConsigneManager()
         
@@ -781,8 +851,9 @@ async def main():
         if not serp_files:
             logger.warning("Aucun fichier SERP trouvé")
             return False
-        
+
         logger.info(f"Traitement de {len(serp_files)} fichiers SERP")
+        logger.debug(f"Début du traitement à: {datetime.now().isoformat()}")
         
         successful_analyses = []
         failed_count = 0
@@ -803,9 +874,10 @@ async def main():
         if not successful_analyses:
             logger.warning("Aucune analyse réussie")
             return False
-        
+
         elapsed = (datetime.now() - start_time).total_seconds()
         logger.info(f"Traitement terminé en {elapsed:.1f}s: {len(successful_analyses)} succès, {failed_count} échecs")
+        logger.debug(f"Taux de réussite: {len(successful_analyses)/(len(successful_analyses)+failed_count)*100:.1f}%")
         
         # Intégration dans le fichier consigne
         logger.info("Intégration des analyses SERP dans le fichier consigne...")
@@ -813,7 +885,8 @@ async def main():
         
         if save_success:
             logger.info("=== ANALYSE COMPLÈTE TERMINÉE AVEC SUCCÈS ===")
-            
+            logger.debug("Calcul des statistiques finales")
+
             # Statistiques finales
             total_results = sum(a['total_results_analyzed'] for a in successful_analyses)
             
@@ -894,16 +967,27 @@ async def main():
             return False
     
     except KeyboardInterrupt:
-        logger.info("Interruption utilisateur")
+        logger.warning("Interruption utilisateur détectée")
         return False
     except Exception as e:
-        logger.error(f"Erreur critique: {e}", exc_info=True)
+        logger.critical(f"Erreur critique dans la fonction main: {e}", exc_info=True)
         return False
 
 
 if __name__ == "__main__":
+    logger.info("Script serpanalyzer.py démarré")
+    logger.debug(f"Python version: {os.sys.version}")
+    logger.debug(f"Système: {os.name}")
+
     if os.name == 'nt':
+        logger.debug("Configuration de la politique d'event loop pour Windows")
         asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
-    
+
     success = asyncio.run(main())
+
+    if success:
+        logger.info("Script terminé avec succès")
+    else:
+        logger.error("Script terminé avec des erreurs")
+
     exit(0 if success else 1)
