@@ -1,11 +1,217 @@
 {
   "meta": {
     "requete_cible": "comment faire le signe euros sur pc",
-    "date_analyse": "2025-10-31T18:22:00.042251",
-    "language": "en",
+    "date_analyse": "2025-11-08T22:34:35.738305",
+    "language": "fr",
     "analyses_totales": 1
   },
   "syntheses_strategiques": {
-    "analysis_1": {}
+    "analysis_1": {
+      "analyse_angles_concurrentiels": {
+        "angles_dominants": [
+          {
+            "angle": "Approche comparative multi-plateformes (Windows, Mac, Linux)",
+            "frequence_utilisation": "Élevée - présent dans 2 des 3 contenus pertinents",
+            "niveau_profondeur_moyen": "Approfondi",
+            "positionnement_requis": "Obligatoire pour concurrencer le top 3",
+            "exemples_reussis": [
+              "Position 4 (GEEKOM)",
+              "Position 6 (Forum Apple)"
+            ]
+          },
+          {
+            "angle": "Résolution de problèmes techniques avec dépannage",
+            "frequence_utilisation": "Moyenne - présent dans les contenus les mieux positionnés",
+            "niveau_profondeur_moyen": "Approfondi",
+            "positionnement_requis": "Recommandé fortement",
+            "exemples_reussis": [
+              "Position 4 (section dépannage)",
+              "Position 6 (diagnostic progressif)"
+            ]
+          }
+        ],
+        "angles_emergents": [
+          {
+            "angle": "Interface interactive de copie instantanée",
+            "utilise_par": "Position 4 uniquement",
+            "potentiel_differentiation": "Très élevé - résout le besoin immédiat sans mémorisation",
+            "difficulte_execution": "Faible - simple script JavaScript"
+          },
+          {
+            "angle": "Support communautaire multi-utilisateurs",
+            "utilise_par": "Position 6 (forum Apple)",
+            "potentiel_differentiation": "Élevé - authenticité des expériences réelles",
+            "difficulte_execution": "Moyenne - nécessite une communauté active"
+          }
+        ]
+      },
+      "themes_obligatoires": [
+        {
+          "theme": "Raccourcis clavier AZERTY Windows (Alt Gr + E)",
+          "present_chez": [
+            "Position 4",
+            "Position 6"
+          ],
+          "niveau_minimum_requis": "Instructions détaillées avec captures si possible",
+          "profondeur_observee": "Approfondie",
+          "justification": "Configuration la plus courante en France - cœur de la requête"
+        },
+        {
+          "theme": "Méthodes alternatives (codes ASCII, copier-coller)",
+          "present_chez": [
+            "Position 4"
+          ],
+          "niveau_minimum_requis": "Au moins 2 méthodes alternatives",
+          "profondeur_observee": "Modérée",
+          "justification": "Solution de secours pour utilisateurs en difficulté"
+        },
+        {
+          "theme": "Configuration Mac (Option + E ou autres)",
+          "present_chez": [
+            "Position 4",
+            "Position 6"
+          ],
+          "niveau_minimum_requis": "Instructions spécifiques macOS",
+          "profondeur_observee": "Approfondie",
+          "justification": "Couverture complète des écosystèmes"
+        },
+        {
+          "theme": "Dépannage quand le raccourci ne fonctionne pas",
+          "present_chez": [
+            "Position 4",
+            "Position 6"
+          ],
+          "niveau_minimum_requis": "3-4 causes courantes identifiées",
+          "profondeur_observee": "Approfondie",
+          "justification": "Répond au besoin latent de résolution de problèmes"
+        }
+      ],
+      "opportunites_angles_uniques": [
+        {
+          "angle_propose": "Guide visuel interactif avec simulateur de clavier",
+          "justification": "Aucun concurrent n'offre de démonstration visuelle interactive - répond au besoin d'apprentissage kinesthésique",
+          "niveau_ambition": "Élevé - positionnement premium",
+          "valeur_ajoutee_estimee": "Très élevée - expérience utilisateur supérieure",
+          "complexite_execution": "Moyenne - développement frontend nécessaire"
+        },
+        {
+          "angle_propose": "Historique et design du symbole € avec infographie",
+          "justification": "Aspect culturel et historique complètement absent du SERP - valeur éducative ajoutée",
+          "niveau_ambition": "Modéré",
+          "valeur_ajoutee_estimee": "Élevée - différenciation thématique",
+          "complexite_execution": "Faible - recherche et création graphique"
+        },
+        {
+          "angle_propose": "Tableau comparatif exhaustif tous systèmes/logiciels",
+          "justification": "Les concurrents couvrent partiellement - opportunité de créer la ressource ultime",
+          "niveau_ambition": "Élevé",
+          "valeur_ajoutee_estimee": "Très élevée - potentiel de backlinks",
+          "complexite_execution": "Moyenne - recherche approfondie nécessaire"
+        }
+      ],
+      "gaps_concurrentiels": [
+        {
+          "gap_identifie": "Utilisation dans les logiciels (Word, Excel, PowerPoint)",
+          "type": "Profondeur thématique",
+          "potentiel_seo": "Élevé - nombreuses requêtes long tail",
+          "recommandation_exploitation": "Section dédiée avec captures d'écran par logiciel"
+        },
+        {
+          "gap_identifie": "Solutions pour smartphones et tablettes",
+          "type": "Couverture multi-appareils",
+          "potentiel_seo": "Moyen-Élevé - recherche mobile croissante",
+          "recommandation_exploitation": "Ajouter section iOS/Android avec méthodes spécifiques"
+        },
+        {
+          "gap_identifie": "Problèmes de clavier physique vs logiciel",
+          "type": "Expertise technique",
+          "potentiel_seo": "Moyen - répond aux problèmes avancés",
+          "recommandation_exploitation": "Guide de diagnostic différencié hardware/software"
+        }
+      ],
+      "angles_a_exclure": [
+        {
+          "angle_declasse": "Contenu vide ou non accessible",
+          "present_dans_positions": [
+            "1",
+            "3"
+          ],
+          "absent_top5_mais_present_bas_classement": [],
+          "raison_exclusion": "Pénalisé par Google - qualité nulle",
+          "risque_positionnement": "Désindexation probable"
+        },
+        {
+          "angle_declasse": "Contenu hors-sujet déguisé",
+          "present_dans_positions": [
+            "5",
+            "7"
+          ],
+          "absent_top5_mais_present_bas_classement": [],
+          "raison_exclusion": "Intention utilisateur non respectée - bounce rate élevé",
+          "risque_positionnement": "Mauvais signal UX - perte de positions"
+        },
+        {
+          "angle_declasse": "Promotion excessive de produits",
+          "present_dans_positions": [
+            "4 (partiellement)"
+          ],
+          "absent_top5_mais_present_bas_classement": [],
+          "raison_exclusion": "Dilue la valeur informationnelle - réduit la crédibilité",
+          "risque_positionnement": "Perte de confiance utilisateur - partage réduit"
+        }
+      ],
+      "strategie_positionnement": {
+        "socle_obligatoire": {
+          "angles_minimum": [
+            "Approche multi-plateformes",
+            "Instructions étape par étape",
+            "Section dépannage"
+          ],
+          "profondeur_requise": "Approfondie (600+ mots de contenu principal)",
+          "themes_incontournables": [
+            "AZERTY Windows",
+            "Mac OS",
+            "Méthodes alternatives",
+            "Problèmes courants"
+          ]
+        },
+        "differentiation_recommandee": {
+          "angles_uniques_proposes": [
+            "Guide visuel interactif",
+            "Historique du symbole",
+            "Tableau comparatif exhaustif"
+          ],
+          "approfondissements_cibles": [
+            "Utilisation dans logiciels",
+            "Solutions mobiles",
+            "Diagnostic hardware/software"
+          ],
+          "approches_innovantes": [
+            "Simulateur de clavier en ligne",
+            "Infographie téléchargeable",
+            "Quiz interactif de mémorisation"
+          ]
+        },
+        "niveau_ambition_global": "Positionnement premium - ressource de référence ultime",
+        "effort_editorial_estime": "Élevé (1200-1500 mots + éléments interactifs + visuels)"
+      },
+      "recommandation_positionnement_global": {
+        "type_contenu_optimal": "Guide pratique enrichi avec éléments interactifs",
+        "intention_cible": "Informationnelle pure avec forte dimension utilitaire",
+        "portee_commerciale_recommandee": "Zéro promotion - focus exclusif sur la valeur utilisateur",
+        "orientation_ctal_optimale": "Téléchargement d'infographie mémo ou accès à outils interactifs"
+      }
+    }
+  },
+  "angle_select": {
+    "angle_selectionne": "Guide visuel interactif avec simulateur de clavier",
+    "score_total": "10/12",
+    "justification_selection": "Cet angle comble un gap majeur dans le SERP en offrant une expérience d'apprentissage kinesthésique, tout en étant parfaitement complémentaire des instructions étape par étape du socle obligatoire.",
+    "scores_details": {
+      "alignement_intention": "3/3",
+      "non_redondance": "3/3",
+      "valeur_ajoutee": "3/3",
+      "faisabilite_roi": "1/3"
+    }
   }
 }

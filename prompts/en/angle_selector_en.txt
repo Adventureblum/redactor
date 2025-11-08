@@ -1,0 +1,127 @@
+# Prompt: Optimal Unique Angle Selection
+
+You are an SEO editorial strategy expert. Based on a complete competitive analysis, you must select THE best differentiating angle among the identified opportunities.
+
+---
+
+## INPUT DATA
+
+**TARGET QUERY**: {meta['requete_cible']}
+
+**MANDATORY ANGLES** (minimum foundation to cover):
+{json.dumps(strategie_positionnement['socle_obligatoire']['angles_minimum'], ensure_ascii=False, indent=2)}
+
+**ESSENTIAL THEMES**:
+{json.dumps(strategie_positionnement['socle_obligatoire']['themes_incontournables'], ensure_ascii=False, indent=2)}
+
+**UNIQUE ANGLE OPPORTUNITIES** (to evaluate):
+{json.dumps(opportunites_angles_uniques, ensure_ascii=False, indent=2)}
+
+---
+
+## MISSION
+
+Among the proposed unique angles, identify the one that offers the **best differentiation potential** while respecting these constraints:
+
+### 1. **Complementarity with mandatory foundation**
+- The unique angle must **complement** (not overlap with) the mandatory angles
+- It must bring an additional dimension, not duplicate what's already covered
+- Verify it doesn't create editorial conflict with essential themes
+
+### 2. **Scoring unique angles** (score out of 12)
+
+For each angle proposed in `opportunites_angles_uniques`, evaluate:
+
+**A. Search intent alignment (0-3 points)**
+- 3: Perfectly answers the main intent or a strong secondary intent
+- 2: Answers a relevant related intent
+- 1: Tangential but stays within scope
+- 0: Off-topic
+
+**B. Non-redundancy with mandatory foundation (0-3 points)**
+- 3: Totally complementary, brings a new dimension
+- 2: Partially complementary, minor overlaps
+- 1: Significant redundancy with mandatory angles
+- 0: Completely duplicates an already covered angle
+
+**C. User added value (0-3 points)**
+- 3: Solves a real problem not addressed elsewhere (major gap)
+- 2: Brings useful and concrete insights
+- 1: Correct but standard information
+- 0: Generic content without added value
+
+**D. Feasibility & editorial ROI (0-3 points)**
+- 3: Easy to execute + strong differentiation impact
+- 2: Medium complexity but strong impact OR easy but medium impact
+- 1: Complex and uncertain impact
+- 0: Too complex or negligible impact
+
+### 3. **Tiebreaker criteria**
+
+If multiple angles have the same score:
+- **Prioritize**: angle that fills the most important competitive gap
+- **Prioritize**: angle with the highest estimated added value (according to JSON)
+- **Prioritize**: angle with the lowest execution complexity (according to JSON)
+
+### 4. **Final validation**
+
+The selected angle must pass these 3 tests:
+
+**Intent test**: Does it answer what the user is really looking for?
+**Uniqueness test**: Does it bring something absent from the top 5?
+**Consistency test**: Does it integrate naturally with the mandatory foundation?
+
+---
+
+## REQUIRED ANALYSIS
+
+Before giving your answer, you MUST mentally analyze:
+
+1. **For each proposed angle**:
+   - Calculate its score /12 according to the 4 criteria
+   - Identify overlaps with the mandatory foundation
+   - Evaluate its relevance vs. query intent
+
+2. **Identify the winner**:
+   - The angle with the highest score
+   - In case of tie, apply tiebreaker criteria
+   - Verify it passes the 3 validation tests
+
+---
+
+## MANDATORY RESPONSE FORMAT
+
+You must respond ONLY with this JSON format, without any additional comments or explanations:
+```json
+{
+  "angle_selectionne": "complete angle_propose copied from opportunites_angles_uniques",
+  "score_total": "X/12",
+  "justification_selection": "1-2 sentence explanation of the choice",
+  "scores_details": {
+    "alignement_intention": "X/3",
+    "non_redondance": "X/3",
+    "valeur_ajoutee": "X/3",
+    "faisabilite_roi": "X/3"
+  }
+}
+```
+
+---
+
+## PROCESSING EXAMPLE
+
+**If opportunities are**:
+1. "DIY installation guide with wiring diagrams"
+2. "Complete 5-year cost analysis"
+3. "Solutions for specific uses"
+
+**And mandatory foundation already covers**:
+- Multi-criteria technology comparison
+- Technical dimensioning calculations
+
+**Then**:
+- ✅ "DIY guide" = complementary (practical vs. theoretical)
+- ⚠️ "5-year cost analysis" = partially redundant with "technical calculations"
+- ✅ "Specific use solutions" = complementary (use segmentation)
+
+Scoring will decide between complementary angles.

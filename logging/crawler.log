@@ -1,0 +1,1442 @@
+2025-06-08 13:28:59 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 13:31:46 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 13:33:27 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 13:33:27 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 13:33:59 - crawler - INFO - 🎯 Démarrage du crawl pour: https://autotruck42.com/fr
+2025-06-08 13:33:59 - crawler - INFO - 🚀 Début du crawl de https://autotruck42.com/fr
+2025-06-08 13:33:59 - crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-06-08 13:34:00 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr (depth: 0)
+2025-06-08 13:34:01 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/nous-contacter (depth: 1)
+2025-06-08 13:34:01 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/mon-compte (depth: 1)
+2025-06-08 13:34:01 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/index.php?controller=registration (depth: 1)
+2025-06-08 13:34:02 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/ (depth: 1)
+2025-06-08 13:34:02 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/nl (depth: 1)
+2025-06-08 13:34:02 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/es (depth: 1)
+2025-06-08 13:34:03 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/pt (depth: 1)
+2025-06-08 13:34:03 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/gb (depth: 1)
+2025-06-08 13:34:03 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/it (depth: 1)
+2025-06-08 13:34:04 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/panier?action=show (depth: 1)
+2025-06-08 13:34:04 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/de (depth: 1)
+2025-06-08 13:34:04 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/50-eclairage-poids-lourd-et-voitures (depth: 1)
+2025-06-08 13:34:05 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/53-feux-a-led-remorque-voiture-camion-12-24-volts (depth: 1)
+2025-06-08 13:34:05 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/401-feux-de-remorque-a-led (depth: 1)
+2025-06-08 13:34:05 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/402-feux-de-recul-a-led (depth: 1)
+2025-06-08 13:34:06 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/404-feux-rond-arriere-a-led (depth: 1)
+2025-06-08 13:34:06 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/405-feux-rectangulaire-arriere-a-led (depth: 1)
+2025-06-08 13:34:06 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/403-feux-phares-antibrouillard-a-led-avant-arriere (depth: 1)
+2025-06-08 13:34:08 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/406-feux-arriere-a-led-camion-semi-remorque-poids-lourd (depth: 1)
+2025-06-08 13:34:08 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/204-feux-de-gabarit-a-led (depth: 1)
+2025-06-08 13:34:08 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/189-corne-a-led-remorque (depth: 1)
+2025-06-08 13:34:09 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/490-feux-clignotant-led (depth: 1)
+2025-06-08 13:34:09 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/501-feu-lateral-orange-led (depth: 1)
+2025-06-08 13:34:09 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/455-eclaireur-de-plaque-led-remorque-camion-camping-car (depth: 1)
+2025-06-08 13:34:10 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/502-feux-de-position-avant-blanc-led (depth: 1)
+2025-06-08 13:34:10 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/503-feux-de-position-arriere-rouge-led (depth: 1)
+2025-06-08 13:34:10 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/83-ampoule-voitures-camions-semi-remorque (depth: 1)
+2025-06-08 13:34:11 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/451-ampoule-h7-12v-led (depth: 1)
+2025-06-08 13:34:11 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/450-ampoule-led-24v-camion-poids-lourd-tp-agricole (depth: 1)
+2025-06-08 13:34:11 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/449-ampoule-a-led-12v (depth: 1)
+2025-06-08 13:34:12 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/84-ampoule-6-v (depth: 1)
+2025-06-08 13:34:12 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/86-ampoule-24-v (depth: 1)
+2025-06-08 13:34:12 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/85-ampoule-12-v (depth: 1)
+2025-06-08 13:34:13 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/87-ampoule-xenon-pas-cher (depth: 1)
+2025-06-08 13:34:13 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/465-ampoule-xenon-d1s-pas-chere (depth: 1)
+2025-06-08 13:34:13 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/464-ampoule-xenon-d1r-pas-chere (depth: 1)
+2025-06-08 13:34:14 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/210-kit-conversion-led-et-xenon (depth: 1)
+2025-06-08 13:34:14 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/329-connecteur-ampoule-automobile (depth: 1)
+2025-06-08 13:34:14 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/328-porte-lampe-douille-a-ampoule (depth: 1)
+2025-06-08 13:34:16 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/282-ballast-de-phares-xenon (depth: 1)
+2025-06-08 13:34:16 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/114-feux-et-phares (depth: 1)
+2025-06-08 13:34:16 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/52-feux-arrieres (depth: 1)
+2025-06-08 13:34:17 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/51-feux-poids-lourdscamion (depth: 1)
+2025-06-08 13:34:17 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/286-feux-arriere-de-remorque (depth: 1)
+2025-06-08 13:34:17 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/113-feux-de-semi-remorque (depth: 1)
+2025-06-08 13:34:18 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/118-cabochon-de-phares-et-de-feux (depth: 1)
+2025-06-08 13:34:18 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/491-cabochon-disperseur-de-feux-arriere (depth: 1)
+2025-06-08 13:34:18 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/492-cabochon-disperseur-orange (depth: 1)
+2025-06-08 13:34:19 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/493-cabochon-disperseur-blanc (depth: 1)
+2025-06-08 13:34:19 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/494-cabochon-disperseur-blancrouge (depth: 1)
+2025-06-08 13:34:19 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/495-cabochon-disperseur-rouge (depth: 1)
+2025-06-08 13:34:21 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/54-feux-de-gabarit-ou-encombrement (depth: 1)
+2025-06-08 13:34:21 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/196-feux-de-gabarit-rouge-et-blanc (depth: 1)
+2025-06-08 13:34:21 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/242-feux-de-gabarit-tricolore (depth: 1)
+2025-06-08 13:34:22 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/148-feux-clignotant (depth: 1)
+2025-06-08 13:34:22 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/180-phares-et-projecteurs-longue-portee (depth: 1)
+2025-06-08 13:34:22 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/182-feux-eclaireur-de-plaque (depth: 1)
+2025-06-08 13:34:23 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/147-feux-avant (depth: 1)
+2025-06-08 13:34:23 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/112-feux-de-position (depth: 1)
+2025-06-08 13:34:23 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/239-feux-de-position-orange (depth: 1)
+2025-06-08 13:34:24 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/240-feux-de-position-rouge (depth: 1)
+2025-06-08 13:34:24 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/241-feux-de-position-blanc (depth: 1)
+2025-06-08 13:34:24 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/630-feux-remorque-arriere (depth: 1)
+2025-06-08 13:34:26 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/631-feux-de-position- (depth: 1)
+2025-06-08 13:34:26 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/202-feu-de-recul (depth: 1)
+2025-06-08 13:34:26 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/179-feux-antibrouillard (depth: 1)
+2025-06-08 13:34:27 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/293-feux-stop-additionnel-a-led (depth: 1)
+2025-06-08 13:34:27 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/276-connecteurs-de-feux (depth: 1)
+2025-06-08 13:34:27 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/632-phare-avant-led (depth: 1)
+2025-06-08 13:34:28 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/56-eclairage-led (depth: 1)
+2025-06-08 13:34:28 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/58-phare-de-travail-a-led (depth: 1)
+2025-06-08 13:34:28 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/57-rampe-longue-portee-a-led (depth: 1)
+2025-06-08 13:34:29 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/499-plafonnier-led-camion-remorque-camping-car (depth: 1)
+2025-06-08 13:34:29 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/506-projecteur-longue-portee-a-led (depth: 1)
+2025-06-08 13:34:30 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/353-r23-phare-feu-de-recul-led-homologue-r23 (depth: 1)
+2025-06-08 13:34:31 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/59-gyrophare (depth: 1)
+2025-06-08 13:34:31 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/504-gyrophares-led (depth: 1)
+2025-06-08 13:34:31 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/60-gyrophares-a-led-orange (depth: 1)
+2025-06-08 13:34:32 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/342-gyrophares-magnetique-led-aimante (depth: 1)
+2025-06-08 13:34:32 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/343-gyrophares-sur-hampe-tige (depth: 1)
+2025-06-08 13:34:32 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/505-gyrophares-led-allume-cigare (depth: 1)
+2025-06-08 13:34:33 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/191-feux-de-penetration-led (depth: 1)
+2025-06-08 13:34:33 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/158-cabochon-gyrophare (depth: 1)
+2025-06-08 13:34:33 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/61-gyrophare-a-ampoule (depth: 1)
+2025-06-08 13:34:35 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/62-gyrophare-a-eclat-xenon (depth: 1)
+2025-06-08 13:34:35 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/63-pieces-detachees-gyrophare (depth: 1)
+2025-06-08 13:34:35 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/327-gyrophare-deneigement-special-deneigement (depth: 1)
+2025-06-08 13:34:36 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/467-tige-hampe-support-de-gyrophare (depth: 1)
+2025-06-08 13:34:36 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/399-rampe-signalisation-led-depannage-agricole-poids-lourd-convoi-exceptionnel (depth: 1)
+2025-06-08 13:34:36 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/511-demarreurs-alternateurs (depth: 1)
+2025-06-08 13:34:37 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/72-alternateur-neuf (depth: 1)
+2025-06-08 13:34:37 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/250-alternateur-de-tracteur-fendt-massey-renault-case-same-ford-fiat (depth: 1)
+2025-06-08 13:34:37 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/251-alternateur-de-voiture-et-automobile (depth: 1)
+2025-06-08 13:34:38 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/253-alternateur-marine-bateaux (depth: 1)
+2025-06-08 13:34:38 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/252-alternateur-de-poids-lourd-et-camion (depth: 1)
+2025-06-08 13:34:38 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/263-alternateur-de-chariot-elevateur (depth: 1)
+2025-06-08 13:34:40 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/91-pieces-detachees-alternateur (depth: 1)
+2025-06-08 13:34:40 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/96-balais-et-charbon-alternateur-valeo-bosch-iskra-letrika-ducellier-paris-rhone-denso (depth: 1)
+2025-06-08 13:34:40 - crawler - INFO - 🔍 Crawling: https://autotruck42.com/fr/97-roulements-d-alternateur (depth: 1)
+2025-06-08 13:34:41 - crawler - INFO - ✅ Crawl terminé en 41.30s - 100 pages crawlées
+2025-06-08 13:34:41 - crawler - INFO - 📊 Statistiques: 100 URLs visitées, 100 succès
+2025-06-08 13:34:41 - crawler - INFO - crawl exécutée en 41.31s
+2025-06-08 13:34:41 - crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_autotruck42_com_20250608_133441.json
+2025-06-08 13:34:41 - crawler - INFO - start_crawl exécutée en 41.40s
+2025-06-08 13:40:47 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 13:40:48 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 13:54:41 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 13:54:46 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 13:54:53 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 13:55:02 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 13:55:39 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 13:55:49 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 13:56:45 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 13:57:14 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 13:57:43 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 13:58:32 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 13:58:45 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 13:58:48 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 13:59:03 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 13:59:15 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 14:08:05 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 14:08:24 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 14:08:38 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 14:08:49 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 14:09:06 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 14:10:40 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 14:10:50 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 14:52:10 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 14:52:10 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 14:57:48 - crawler - INFO - 🎯 Démarrage du crawl pour: https://3310street.com/
+2025-06-08 14:57:48 - crawler - INFO - 🚀 Début du crawl de https://3310street.com/
+2025-06-08 14:57:48 - crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-06-08 14:57:48 - crawler - INFO - ✅ Crawl terminé en 0.08s - 0 pages crawlées
+2025-06-08 14:57:48 - crawler - INFO - 📊 Statistiques: 0 URLs visitées, 0 succès
+2025-06-08 14:57:48 - crawler - INFO - crawl exécutée en 0.08s
+2025-06-08 14:57:48 - crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_3310street_com_20250608_145748.json
+2025-06-08 14:57:48 - crawler - INFO - start_crawl exécutée en 0.08s
+2025-06-08 15:15:10 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 15:16:29 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 15:20:14 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 15:20:53 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 15:21:38 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 15:22:14 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 15:22:37 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 15:23:07 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 15:23:13 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 15:23:36 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 15:23:47 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 15:23:56 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 15:26:58 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 15:27:28 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 15:28:00 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 15:28:16 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 15:29:16 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 15:29:22 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 15:33:03 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 15:33:09 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-08 15:33:24 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-09 15:22:31 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-09 15:22:32 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-09 15:27:15 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-09 15:49:43 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-09 15:49:43 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-09 15:50:11 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-09 15:50:13 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-09 17:10:39 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-09 17:10:39 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-09 17:10:42 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-09 17:12:15 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-09 17:12:52 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-09 17:13:03 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-09 17:13:09 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-09 17:13:23 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-09 17:13:28 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-09 17:25:44 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-09 17:25:45 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-11 17:01:56 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-11 17:01:56 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-11 17:27:40 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-11 17:27:40 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-14 14:10:31 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-14 14:10:31 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-14 14:22:52 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-14 14:22:53 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-14 15:14:08 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-14 15:14:08 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-14 16:54:07 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-14 16:54:08 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-24 13:52:19 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-24 13:52:20 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-24 15:35:51 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-24 15:35:51 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-24 15:36:08 - crawler - INFO - 🎯 Démarrage du crawl pour: https://www.fixersinparis.com/
+2025-06-24 15:36:08 - crawler - INFO - 🚀 Début du crawl de https://www.fixersinparis.com/
+2025-06-24 15:36:08 - crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-06-24 15:36:09 - crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/ (depth: 0)
+2025-06-24 15:36:11 - crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/crew-sourcing (depth: 1)
+2025-06-24 15:36:11 - crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/content-advisory (depth: 1)
+2025-06-24 15:36:11 - crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/cultural-sensitivities-counsel (depth: 1)
+2025-06-24 15:36:14 - crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/production (depth: 1)
+2025-06-24 15:36:14 - crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/rental-for-kit-and-gear (depth: 1)
+2025-06-24 15:36:14 - crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/remote-content-production (depth: 1)
+2025-06-24 15:36:17 - crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/shooting-permits-and-locations (depth: 1)
+2025-06-24 15:36:17 - crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/clients-and-testimonies (depth: 1)
+2025-06-24 15:36:17 - crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/scouting (depth: 1)
+2025-06-24 15:36:20 - crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/about-us (depth: 1)
+2025-06-24 15:36:20 - crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/contact (depth: 1)
+2025-06-24 15:36:20 - crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/our-services (depth: 1)
+2025-06-24 15:36:23 - crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/new-home (depth: 2)
+2025-06-24 15:36:24 - crawler - INFO - ✅ Crawl terminé en 15.77s - 14 pages crawlées
+2025-06-24 15:36:24 - crawler - INFO - 📊 Statistiques: 14 URLs visitées, 14 succès
+2025-06-24 15:36:24 - crawler - INFO - crawl exécutée en 15.77s
+2025-06-24 15:36:24 - crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_www_fixersinparis_com_20250624_153624.json
+2025-06-24 15:36:24 - crawler - INFO - start_crawl exécutée en 15.77s
+2025-06-24 22:43:48 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-24 22:43:49 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-25 00:09:04 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-25 00:09:04 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-30 14:20:22 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-30 14:20:23 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-06-30 14:21:06 - crawler - INFO - 🎯 Démarrage du crawl pour: https://www.sacem.fr/
+2025-06-30 14:21:06 - crawler - INFO - 🚀 Début du crawl de https://www.sacem.fr/
+2025-06-30 14:21:06 - crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-06-30 14:21:06 - crawler - INFO - 🔍 Crawling: https://www.sacem.fr/ (depth: 0)
+2025-06-30 14:21:07 - crawler - INFO - 🔍 Crawling: https://www.sacem.fr/mentions-legales (depth: 1)
+2025-06-30 14:21:07 - crawler - INFO - 🔍 Crawling: https://www.sacem.fr/politique-confidentialite (depth: 1)
+2025-06-30 14:21:07 - crawler - INFO - 🔍 Crawling: https://www.sacem.fr/informations-pratiques (depth: 1)
+2025-06-30 14:21:07 - crawler - INFO - ✅ Crawl terminé en 1.32s - 4 pages crawlées
+2025-06-30 14:21:07 - crawler - INFO - 📊 Statistiques: 4 URLs visitées, 4 succès
+2025-06-30 14:21:07 - crawler - INFO - crawl exécutée en 1.32s
+2025-06-30 14:21:07 - crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_www_sacem_fr_20250630_142107.json
+2025-06-30 14:21:07 - crawler - INFO - start_crawl exécutée en 1.32s
+2025-06-30 14:22:53 - crawler - INFO - 🎯 Démarrage du crawl pour: https://vidyalaya.fr
+2025-06-30 14:22:53 - crawler - INFO - 🚀 Début du crawl de https://vidyalaya.fr
+2025-06-30 14:22:53 - crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-06-30 14:22:54 - crawler - INFO - 🔍 Crawling: https://vidyalaya.fr/ (depth: 0)
+2025-06-30 14:22:56 - crawler - INFO - 🔍 Crawling: https://vidyalaya.fr/delf (depth: 1)
+2025-06-30 14:22:56 - crawler - INFO - 🔍 Crawling: https://vidyalaya.fr/soutien-scolaire (depth: 1)
+2025-06-30 14:22:56 - crawler - INFO - 🔍 Crawling: https://vidyalaya.fr/qui-sommes-nous (depth: 1)
+2025-06-30 14:22:57 - crawler - INFO - 🔍 Crawling: https://vidyalaya.fr/inscription-soutien-scolaire (depth: 1)
+2025-06-30 14:22:57 - crawler - INFO - 🔍 Crawling: https://vidyalaya.fr/elementor-1003 (depth: 1)
+2025-06-30 14:22:58 - crawler - INFO - ✅ Crawl terminé en 4.94s - 6 pages crawlées
+2025-06-30 14:22:58 - crawler - INFO - 📊 Statistiques: 6 URLs visitées, 6 succès
+2025-06-30 14:22:58 - crawler - INFO - crawl exécutée en 4.94s
+2025-06-30 14:22:58 - crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_vidyalaya_fr_20250630_142258.json
+2025-06-30 14:22:58 - crawler - INFO - start_crawl exécutée en 4.94s
+2025-06-30 14:23:34 - crawler - INFO - 🎯 Démarrage du crawl pour: https://vidyalaya.fr/
+2025-06-30 14:23:34 - crawler - INFO - 🚀 Début du crawl de https://vidyalaya.fr/
+2025-06-30 14:23:34 - crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-06-30 14:23:35 - crawler - INFO - 🔍 Crawling: https://vidyalaya.fr/ (depth: 0)
+2025-06-30 14:23:36 - crawler - INFO - 🔍 Crawling: https://vidyalaya.fr/delf (depth: 1)
+2025-06-30 14:23:36 - crawler - INFO - 🔍 Crawling: https://vidyalaya.fr/qui-sommes-nous (depth: 1)
+2025-06-30 14:23:36 - crawler - INFO - 🔍 Crawling: https://vidyalaya.fr/soutien-scolaire (depth: 1)
+2025-06-30 14:23:38 - crawler - INFO - 🔍 Crawling: https://vidyalaya.fr/inscription-soutien-scolaire (depth: 1)
+2025-06-30 14:23:38 - crawler - INFO - 🔍 Crawling: https://vidyalaya.fr/elementor-1003 (depth: 1)
+2025-06-30 14:23:39 - crawler - INFO - ✅ Crawl terminé en 4.75s - 6 pages crawlées
+2025-06-30 14:23:39 - crawler - INFO - 📊 Statistiques: 6 URLs visitées, 6 succès
+2025-06-30 14:23:39 - crawler - INFO - crawl exécutée en 4.75s
+2025-06-30 14:23:39 - crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_vidyalaya_fr_20250630_142339.json
+2025-06-30 14:23:39 - crawler - INFO - start_crawl exécutée en 4.75s
+2025-07-01 13:07:45 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-01 13:07:45 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-01 13:58:29 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-01 14:01:54 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-01 14:03:05 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-01 20:44:57 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-01 20:44:57 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-01 20:45:11 - crawler - INFO - 🎯 Démarrage du crawl pour: https://www.habitatetjardin.com/
+2025-07-01 20:45:11 - crawler - INFO - 🚀 Début du crawl de https://www.habitatetjardin.com/
+2025-07-01 20:45:11 - crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-07-01 20:45:11 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/ (depth: 0)
+2025-07-01 20:45:12 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/nous-contacter (depth: 1)
+2025-07-01 20:45:12 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/guides (depth: 1)
+2025-07-01 20:45:12 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/content/4-qui-sommes-nous- (depth: 1)
+2025-07-01 20:45:13 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/367-piscine (depth: 1)
+2025-07-01 20:45:13 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/476-canape-sejour (depth: 1)
+2025-07-01 20:45:13 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/372-jardin (depth: 1)
+2025-07-01 20:45:15 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/420-enfants (depth: 1)
+2025-07-01 20:45:15 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/409-chambre-literie (depth: 1)
+2025-07-01 20:45:15 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/463-piscines-hors-sol (depth: 1)
+2025-07-01 20:45:16 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/528-jeux-piscine (depth: 1)
+2025-07-01 20:45:16 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/686-spa-sauna (depth: 1)
+2025-07-01 20:45:16 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/557-robot-piscine (depth: 1)
+2025-07-01 20:45:18 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/370-produit-hivernage-piscine (depth: 1)
+2025-07-01 20:45:18 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/423-filtration-piscine (depth: 1)
+2025-07-01 20:45:18 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/507-chauffage-piscine (depth: 1)
+2025-07-01 20:45:19 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/383-bache-piscine (depth: 1)
+2025-07-01 20:45:19 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/433-traitement-piscine (depth: 1)
+2025-07-01 20:45:19 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/401-liner-piscine (depth: 1)
+2025-07-01 20:45:21 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/458-autour-de-la-piscine (depth: 1)
+2025-07-01 20:45:21 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/395-securite-piscine (depth: 1)
+2025-07-01 20:45:21 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/461-equipement-et-deco (depth: 1)
+2025-07-01 20:45:23 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/470-mobilier-de-jardin (depth: 1)
+2025-07-01 20:45:23 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/369-abri-de-piscine (depth: 1)
+2025-07-01 20:45:23 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/398-abri-de-jardin (depth: 1)
+2025-07-01 20:45:25 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/373-outillage (depth: 1)
+2025-07-01 20:45:25 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/454-animalerie (depth: 1)
+2025-07-01 20:45:25 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/451-decoration-de-jardin (depth: 1)
+2025-07-01 20:45:27 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/418-serre-jardin (depth: 1)
+2025-07-01 20:45:27 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/439-accessoires-de-jardin (depth: 1)
+2025-07-01 20:45:27 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/414-arrosage (depth: 1)
+2025-07-01 20:45:29 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/565-barbecue (depth: 1)
+2025-07-01 20:45:29 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/477-canape (depth: 1)
+2025-07-01 20:45:29 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/537-salon-sejour (depth: 1)
+2025-07-01 20:45:31 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/406-fitness (depth: 1)
+2025-07-01 20:45:31 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/375-decoration (depth: 1)
+2025-07-01 20:45:31 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/386-chauffage (depth: 1)
+2025-07-01 20:45:32 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/canape-d-angle/8263-canape-d-angle-convertible-reversible-axel-3-places-gris.html (depth: 1)
+2025-07-01 20:45:32 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/525-chambre-adulte (depth: 1)
+2025-07-01 20:45:32 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/618-chambre-enfant (depth: 1)
+2025-07-01 20:45:34 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/509-sommier (depth: 1)
+2025-07-01 20:45:34 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/482-linge-de-lit (depth: 1)
+2025-07-01 20:45:34 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/412-matelas (depth: 1)
+2025-07-01 20:45:36 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/410-matelas-sommier (depth: 1)
+2025-07-01 20:45:36 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/421-jeux-de-jardin (depth: 1)
+2025-07-01 20:45:36 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/lit/7174-lit-avec-coffre-carla-90-x-190-cm-blanc.html (depth: 1)
+2025-07-01 20:45:37 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/content/12-soldes (depth: 1)
+2025-07-01 20:45:37 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/portique-bois/10185-portique-bois-timo-avec-2-balancoires-et-1-echelle-de-corde.html (depth: 1)
+2025-07-01 20:45:37 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/590-loisir (depth: 1)
+2025-07-01 20:45:39 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/568-table-repas (depth: 1)
+2025-07-01 20:45:39 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/nouveaux-produits (depth: 1)
+2025-07-01 20:45:39 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/716-ventes-flash (depth: 1)
+2025-07-01 20:45:38 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/607-lit (depth: 1)
+2025-07-01 20:45:38 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/gazon-synthetique/6761-gazon-synthetique-verdi-3-3-couleurs-2-x-5-m-x-30-mm.html (depth: 1)
+2025-07-01 20:45:38 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/gazon-synthetique/8630-gazon-synthetique-verdi-3-1-x-3-m-x-h-30-mm-vert-3-couleurs.html (depth: 1)
+2025-07-01 20:45:40 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/canape-clic-clac-bz/6780-canape-clic-clac-john-179-x-91-x-79-cm-3-places-gris.html (depth: 1)
+2025-07-01 20:45:40 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/canape-clic-clac-bz/10721-canape-clic-clac-john-179-x-91-x-79-cm-3-places-noir.html (depth: 1)
+2025-07-01 20:45:40 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/accueil/33768-trampoline-yoopi-2-o-305-m-avec-filet-echelle-couverture-kit-d-ancrage.html (depth: 1)
+2025-07-01 20:45:41 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/serre-jardin-film/6844-serre-tomate-petunia-44m-25-x-17-x-21-m.html (depth: 1)
+2025-07-01 20:45:41 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/serre-jardin-film/6953-serre-tunnel-de-jardin-althea-9m-45-x-2-x-2.html (depth: 1)
+2025-07-01 20:45:41 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/eclairage-de-jardin/6888-lampe-led-deco-portative-et-rechargeable.html (depth: 1)
+2025-07-01 20:45:43 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/salon-de-jardin-repas/6935-salon-de-jardin-bois-exotique-hongkong-table-pliante-6-chaises-pliantes.html (depth: 1)
+2025-07-01 20:45:43 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/bache-ete/6972-bache-solaire-ovale-steel-pro-475-x-320-m.html (depth: 1)
+2025-07-01 20:45:43 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/bache-ete/6973-bache-solaire-ovale-steel-pro-645-x-330-m.html (depth: 1)
+2025-07-01 20:45:44 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/accueil/10913-trampoline-yoopi-o-305-m-avec-filet-echelle-couverture-kit-d-ancrage.html (depth: 1)
+2025-07-01 20:45:44 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/bain-de-soleil/6880-bain-de-soleil-en-bois-exotique-saigon-maple-ecru.html (depth: 1)
+2025-07-01 20:45:44 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/998-soldes (depth: 1)
+2025-07-01 20:45:46 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/salon-de-jardin-repas/327006-salon-de-jardin-repas-lagos-200-320-x-105-x-76-cm-12-chaises-gris-clair.html (depth: 1)
+2025-07-01 20:45:46 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/salon-de-jardin-repas/327005-salon-de-jardin-repas-lagos-200-320-x-105-x-76-cm-10-chaises-gris-clair.html (depth: 1)
+2025-07-01 20:45:46 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/bain-de-soleil/7518-bain-de-soleil-en-bois-exotique-saigon-maple-gris.html (depth: 1)
+2025-07-01 20:45:47 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/bain-de-soleil/326988-lot-de-2-bains-de-soleil-en-metal-sublima-180-x-54-x-104-cm-taupe.html (depth: 1)
+2025-07-01 20:45:47 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/bain-de-soleil/326989-lot-de-2-bains-de-soleil-en-metal-sublima-180-x-54-x-104-cm-terracotta.html (depth: 1)
+2025-07-01 20:45:47 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/bain-de-soleil/326990-lot-de-2-bains-de-soleil-en-metal-sublima-180-x-54-x-104-cm-beige.html (depth: 1)
+2025-07-01 20:45:49 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/bain-de-soleil/326987-lot-de-2-bains-de-soleil-en-metal-sublima-180-x-54-x-104-cm-anthracite.html (depth: 1)
+2025-07-01 20:45:49 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/tente-de-reception-tonnelle/326961-pergola-tonnelle-adossee-marvin-3-x-3-m-304-x-298-x-243-cm-gris-fonce.html (depth: 1)
+2025-07-01 20:45:49 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/accueil/326921-trampoline-avec-filet-interieur-jumper-o-460-m-gris.html (depth: 1)
+2025-07-01 20:45:51 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/parasol-jardin/326544-parasol-jardin-deporte-en-aluminium-sky-4-3-x-4-m-ecru-avec-housse.html (depth: 1)
+2025-07-01 20:45:51 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/salon-de-jardin/326800-salon-de-jardin-panoramique-en-resine-tressee-elia-6-places-beige.html (depth: 1)
+2025-07-01 20:45:51 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/parasol-jardin/326550-parasol-jardin-deporte-en-aluminium-sky-4-3-x-4-m-gris-avec-housse.html (depth: 1)
+2025-07-01 20:45:52 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/index.php?controller=new-products (depth: 1)
+2025-07-01 20:45:52 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/478-fauteuil (depth: 1)
+2025-07-01 20:45:52 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/salon-de-jardin/326801-salon-de-jardin-panoramique-en-resine-tressee-nelson-6-places-gris.html (depth: 1)
+2025-07-01 20:45:54 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/588-canape-d-angle (depth: 1)
+2025-07-01 20:45:54 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/603-canape-droit (depth: 1)
+2025-07-01 20:45:54 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/510-spa (depth: 1)
+2025-07-01 20:45:56 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/715-pouf (depth: 1)
+2025-07-01 20:45:56 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/544-canape-clic-clac-bz (depth: 1)
+2025-07-01 20:45:56 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/canape-d-angle/51821-canape-d-angle-convertible-tissu-chenille-3-places-trocadero-creme.html (depth: 1)
+2025-07-01 20:45:57 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/canape-d-angle/8264-canape-d-angle-convertible-reversible-axel-3-places-noir.html (depth: 1)
+2025-07-01 20:45:57 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/canape-d-angle/8265-canape-d-angle-convertible-reversible-avec-coffre-alain-3-places-gris.html (depth: 1)
+2025-07-01 20:45:57 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/canape-d-angle/8266-canape-d-angle-convertible-reversible-alain-221-x-145-x-85-cm-3-places-noir.html (depth: 1)
+2025-07-01 20:45:59 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/lit-superpose/7481-lit-superpose-en-metal-leo-sommiers-inclus-90-140-x-190-cm-noir.html (depth: 1)
+2025-07-01 20:45:59 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/710-chambre-bebe (depth: 1)
+2025-07-01 20:45:59 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/lit-superpose/7483-lit-superpose-adam-90-x-190-cm-metal-noir.html (depth: 1)
+2025-07-01 20:46:00 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/lit-superpose/179503-lit-mezzanine-en-metal-avec-escalier-lena-140-x-200-cm-noir.html (depth: 1)
+2025-07-01 20:46:00 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/lit-superpose/10403-lit-superpose-en-metal-triple-havin-90-x-190-cm-noir.html (depth: 1)
+2025-07-01 20:46:00 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/lit-superpose/10054-lit-superpose-en-metal-leo-sommiers-inclus-90-140-x-190-cm-gris.html (depth: 1)
+2025-07-01 20:46:02 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/959-meuble-d-entree (depth: 1)
+2025-07-01 20:46:02 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/621-bibliotheque-vitrine (depth: 1)
+2025-07-01 20:46:02 - crawler - INFO - 🔍 Crawling: https://www.habitatetjardin.com/620-console (depth: 1)
+2025-07-01 20:46:02 - crawler - INFO - ✅ Crawl terminé en 51.75s - 100 pages crawlées
+2025-07-01 20:46:02 - crawler - INFO - 📊 Statistiques: 100 URLs visitées, 100 succès
+2025-07-01 20:46:02 - crawler - INFO - crawl exécutée en 51.75s
+2025-07-01 20:46:02 - crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_www_habitatetjardin_com_20250701_204602.json
+2025-07-01 20:46:02 - crawler - INFO - start_crawl exécutée en 51.80s
+2025-07-17 20:43:33 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 20:43:48 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 20:43:48 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 21:04:46 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 21:04:53 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 21:04:54 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 21:07:03 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 21:21:08 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 21:21:08 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 21:30:23 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 21:30:44 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 21:30:44 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 21:44:29 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 21:44:29 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 22:22:38 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 22:43:20 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 22:43:21 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 22:50:54 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 22:50:55 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 22:52:45 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 22:53:07 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 22:53:17 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 22:53:39 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 22:53:47 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 22:54:18 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 23:01:31 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 23:02:01 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 23:02:24 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 23:03:44 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 23:04:36 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 23:04:59 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 23:07:24 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 23:07:24 - crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 23:27:32 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 23:27:32 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 23:27:54 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://mauvaisegraine.com/
+2025-07-17 23:27:54 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://mauvaisegraine.com/
+2025-07-17 23:27:54 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-07-17 23:27:56 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/ (depth: 0)
+2025-07-17 23:27:58 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/qui-sommes-nous (depth: 1)
+2025-07-17 23:27:58 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/ressources (depth: 1)
+2025-07-17 23:27:58 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/portfolio-2 (depth: 1)
+2025-07-17 23:27:59 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/faites-financer-votre-site-internet-par-la-region-ile-de-france (depth: 1)
+2025-07-17 23:27:59 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/les-differences-entre-le-seo-et-le-sea (depth: 2)
+2025-07-17 23:27:59 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/test (depth: 2)
+2025-07-17 23:28:01 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/contact (depth: 2)
+2025-07-17 23:28:03 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/qui-sommes-nous?amp=1 (depth: 2)
+2025-07-17 23:28:03 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/pollinisation (depth: 2)
+2025-07-17 23:28:05 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/faites-financer-votre-site-internet-par-la-region-ile-de-france?amp=1 (depth: 2)
+2025-07-17 23:28:05 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/portfolio-2?amp=1 (depth: 2)
+2025-07-17 23:28:06 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/contact?amp=1 (depth: 3)
+2025-07-17 23:28:06 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/?amp=1 (depth: 3)
+2025-07-17 23:28:06 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/test?amp=1 (depth: 3)
+2025-07-17 23:28:08 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/qui-sommes-nous?noamp=mobile (depth: 3)
+2025-07-17 23:28:08 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/sponsorisation-google-ads (depth: 3)
+2025-07-17 23:28:09 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/sponsorisation-reseaux-sociaux (depth: 3)
+2025-07-17 23:28:09 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/referencement-naturel-seo (depth: 3)
+2025-07-17 23:28:09 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/pollinisation-2?amp=1 (depth: 3)
+2025-07-17 23:28:11 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/faites-financer-votre-site-internet-par-la-region-ile-de-france?noamp=mobile (depth: 3)
+2025-07-17 23:28:12 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/pollinisation?amp=1 (depth: 3)
+2025-07-17 23:28:12 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/portfolio-2?noamp=mobile (depth: 3)
+2025-07-17 23:28:15 - services.crawler.crawler - INFO - ✅ Crawl terminé en 21.45s - 23 pages crawlées
+2025-07-17 23:28:15 - services.crawler.crawler - INFO - 📊 Statistiques: 23 URLs visitées, 23 succès
+2025-07-17 23:28:15 - services.crawler.crawler - INFO - crawl exécutée en 21.45s
+2025-07-17 23:28:15 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_mauvaisegraine_com_20250717_232815.json
+2025-07-17 23:28:15 - services.crawler.crawler - INFO - start_crawl exécutée en 21.46s
+2025-07-17 23:39:46 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-17 23:39:46 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 00:04:57 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 00:04:58 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 00:06:14 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 00:06:16 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 00:06:27 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 00:06:28 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 00:08:15 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 00:08:57 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 00:10:26 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 00:11:46 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 00:12:15 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 00:13:01 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 00:13:06 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 00:13:28 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 00:15:11 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 00:29:35 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 00:29:35 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 00:40:03 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://fixersinparis.com
+2025-07-18 00:40:03 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://fixersinparis.com
+2025-07-18 00:40:03 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-07-18 00:40:04 - services.crawler.crawler - INFO - 🔍 Crawling: https://fixersinparis.com/ (depth: 0)
+2025-07-18 00:40:06 - services.crawler.crawler - INFO - ✅ Crawl terminé en 2.87s - 1 pages crawlées
+2025-07-18 00:40:06 - services.crawler.crawler - INFO - 📊 Statistiques: 1 URLs visitées, 1 succès
+2025-07-18 00:40:06 - services.crawler.crawler - INFO - crawl exécutée en 2.87s
+2025-07-18 00:40:06 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_fixersinparis_com_20250718_004006.json
+2025-07-18 00:40:06 - services.crawler.crawler - INFO - start_crawl exécutée en 2.87s
+2025-07-18 00:40:32 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://mauvaisegraine.com/
+2025-07-18 00:40:32 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://mauvaisegraine.com/
+2025-07-18 00:40:32 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-07-18 00:40:35 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/ (depth: 0)
+2025-07-18 00:40:37 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/ressources (depth: 1)
+2025-07-18 00:40:37 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/portfolio-2 (depth: 1)
+2025-07-18 00:40:37 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/qui-sommes-nous (depth: 1)
+2025-07-18 00:40:39 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/test (depth: 2)
+2025-07-18 00:40:39 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/les-differences-entre-le-seo-et-le-sea (depth: 2)
+2025-07-18 00:40:39 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/faites-financer-votre-site-internet-par-la-region-ile-de-france (depth: 1)
+2025-07-18 00:40:42 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/pollinisation (depth: 2)
+2025-07-18 00:40:44 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/portfolio-2?amp=1 (depth: 2)
+2025-07-18 00:40:44 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/contact (depth: 2)
+2025-07-18 00:40:46 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/qui-sommes-nous?amp=1 (depth: 2)
+2025-07-18 00:40:46 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/faites-financer-votre-site-internet-par-la-region-ile-de-france?amp=1 (depth: 2)
+2025-07-18 00:40:47 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/test?amp=1 (depth: 3)
+2025-07-18 00:40:47 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/sponsorisation-reseaux-sociaux (depth: 3)
+2025-07-18 00:40:47 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/sponsorisation-google-ads (depth: 3)
+2025-07-18 00:40:49 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/referencement-naturel-seo (depth: 3)
+2025-07-18 00:40:49 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/pollinisation-2?amp=1 (depth: 3)
+2025-07-18 00:40:50 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/?amp=1 (depth: 3)
+2025-07-18 00:40:50 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/pollinisation?amp=1 (depth: 3)
+2025-07-18 00:40:50 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/portfolio-2?noamp=mobile (depth: 3)
+2025-07-18 00:40:53 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/contact?amp=1 (depth: 3)
+2025-07-18 00:40:55 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/faites-financer-votre-site-internet-par-la-region-ile-de-france?noamp=mobile (depth: 3)
+2025-07-18 00:40:56 - services.crawler.crawler - INFO - 🔍 Crawling: https://mauvaisegraine.com/qui-sommes-nous?noamp=mobile (depth: 3)
+2025-07-18 00:40:57 - services.crawler.crawler - INFO - ✅ Crawl terminé en 25.82s - 23 pages crawlées
+2025-07-18 00:40:57 - services.crawler.crawler - INFO - 📊 Statistiques: 23 URLs visitées, 23 succès
+2025-07-18 00:40:57 - services.crawler.crawler - INFO - crawl exécutée en 25.82s
+2025-07-18 00:40:57 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_mauvaisegraine_com_20250718_004057.json
+2025-07-18 00:40:57 - services.crawler.crawler - INFO - start_crawl exécutée en 25.82s
+2025-07-18 12:54:43 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 12:54:43 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 13:28:34 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 13:28:35 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 13:29:32 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 14:25:02 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 14:25:02 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 15:14:46 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 15:14:47 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 16:05:05 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 16:05:06 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 17:04:02 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-18 17:04:02 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-21 17:54:59 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-21 17:55:00 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-21 18:26:07 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-21 19:10:13 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-21 19:10:13 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-21 19:45:50 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-21 19:45:51 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-21 19:49:46 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-21 19:49:47 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-21 19:52:28 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-21 19:52:48 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-24 13:01:58 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-24 13:01:58 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-24 13:04:51 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-24 13:04:52 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-24 13:15:52 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-24 13:15:53 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-24 13:17:10 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-24 13:17:11 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-24 13:20:14 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-24 13:20:14 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-24 13:21:48 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-24 13:21:49 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-24 13:22:00 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-24 13:22:00 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-24 13:25:06 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-24 13:25:06 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-24 13:31:30 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-24 13:31:31 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-24 15:47:44 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-24 15:47:45 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-07-24 16:08:11 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://fixersinparis.com
+2025-07-24 16:08:11 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://fixersinparis.com
+2025-07-24 16:08:11 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-07-24 16:08:11 - services.crawler.crawler - INFO - 🔍 Crawling: https://fixersinparis.com/ (depth: 0)
+2025-07-24 16:08:12 - services.crawler.crawler - INFO - ✅ Crawl terminé en 1.06s - 1 pages crawlées
+2025-07-24 16:08:12 - services.crawler.crawler - INFO - 📊 Statistiques: 1 URLs visitées, 1 succès
+2025-07-24 16:08:12 - services.crawler.crawler - INFO - crawl exécutée en 1.06s
+2025-07-24 16:08:12 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_fixersinparis_com_20250724_160812.json
+2025-07-24 16:08:12 - services.crawler.crawler - INFO - start_crawl exécutée en 1.07s
+2025-08-18 23:44:06 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-18 23:44:06 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-19 12:38:23 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-19 12:38:24 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-19 12:53:36 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-19 12:53:37 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-19 17:43:02 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-19 17:43:02 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-19 19:43:43 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://www.saint-ouen.fr/
+2025-08-19 19:43:43 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://www.saint-ouen.fr/
+2025-08-19 19:43:43 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-08-19 19:43:44 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/ (depth: 0)
+2025-08-19 19:43:44 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/presse (depth: 1)
+2025-08-19 19:43:44 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/numeros-utiles (depth: 1)
+2025-08-19 19:43:44 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/abonnement-a-la-newsletter (depth: 1)
+2025-08-19 19:43:45 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne (depth: 1)
+2025-08-19 19:43:45 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/vie-quotidienne/guide-du-nouvel-arrivant (depth: 1)
+2025-08-19 19:43:45 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/vie-quotidienne/bienvenue-a-saint-ouen (depth: 1)
+2025-08-19 19:43:46 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne/commerce-et-artisanat (depth: 1)
+2025-08-19 19:43:46 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne/associations (depth: 1)
+2025-08-19 19:43:46 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne/culture-et-patrimoine (depth: 1)
+2025-08-19 19:43:47 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne/education (depth: 1)
+2025-08-19 19:43:47 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne/espaces-verts-et-animaux (depth: 1)
+2025-08-19 19:43:47 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne/environnement-et-proprete (depth: 1)
+2025-08-19 19:43:48 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/vie-quotidienne/sante/prevention-et-sante/hygiene-et-sante (depth: 1)
+2025-08-19 19:43:48 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne/education/jeunesse (depth: 1)
+2025-08-19 19:43:48 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/vie-quotidienne/location-de-salle-municipale (depth: 1)
+2025-08-19 19:43:49 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne/education/petite-enfance-0-3-ans (depth: 1)
+2025-08-19 19:43:49 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/vie-quotidienne/urbanisme/logement (depth: 1)
+2025-08-19 19:43:49 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/municipalite/le-maire-et-les-elus/plaine-commune-territoire-du-grand-paris (depth: 1)
+2025-08-19 19:43:50 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne/sante (depth: 1)
+2025-08-19 19:43:50 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne/seniors (depth: 1)
+2025-08-19 19:43:50 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/vie-quotidienne/prevention-et-securite (depth: 1)
+2025-08-19 19:43:51 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne/sport (depth: 1)
+2025-08-19 19:43:51 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne/solidarite-inclusion (depth: 1)
+2025-08-19 19:43:51 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne/transport-et-stationnement (depth: 1)
+2025-08-19 19:43:52 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/non-classe/toute-lactualite-des-travaux (depth: 1)
+2025-08-19 19:43:52 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne/urbanisme (depth: 1)
+2025-08-19 19:43:52 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vos-demarches-en-ligne (depth: 1)
+2025-08-19 19:43:53 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/vos-demarches-en-ligne/demarches-administratives/acte-de-naissance (depth: 1)
+2025-08-19 19:43:53 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/vos-demarches-en-ligne/demarches-administratives/acte-de-mariage (depth: 1)
+2025-08-19 19:43:53 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/vos-demarches-en-ligne/demarches-administratives (depth: 1)
+2025-08-19 19:43:54 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/vos-demarches-en-ligne/demarches-administratives/actes-de-deces (depth: 1)
+2025-08-19 19:43:54 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/vos-demarches-en-ligne/demarches-administratives/sinscrire-sur-les-listes-electorales (depth: 1)
+2025-08-19 19:43:54 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/vos-demarches-en-ligne/demarches-administratives/recensement-citoyen (depth: 1)
+2025-08-19 19:43:55 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/vos-demarches-en-ligne/demarches-administratives/portail-familles (depth: 1)
+2025-08-19 19:43:55 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/vos-demarches-en-ligne/demarches-administratives/voirie-stationnement (depth: 1)
+2025-08-19 19:43:55 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/vos-demarches-en-ligne/demarches-administratives/demarches-pour-les-professionnels (depth: 1)
+2025-08-19 19:43:56 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/actualites (depth: 1)
+2025-08-19 19:43:56 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/actualites/toutes-les-actualites (depth: 1)
+2025-08-19 19:43:56 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/infos-de-quartiers (depth: 1)
+2025-08-19 19:43:57 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/evenements (depth: 1)
+2025-08-19 19:43:57 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/municipalite/le-maire-et-les-elus (depth: 1)
+2025-08-19 19:43:57 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/municipalite (depth: 1)
+2025-08-19 19:43:58 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/municipalite/la-mairie-recrute (depth: 1)
+2025-08-19 19:43:58 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/municipalite/le-conseil-municipal (depth: 1)
+2025-08-19 19:43:58 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/municipalite/marches-publics/marches-publics-2 (depth: 1)
+2025-08-19 19:43:56 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/municipalite/lorientation-budgetaire (depth: 1)
+2025-08-19 19:43:56 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/municipalite/les-actes-administratifs/les-actes-administratifs (depth: 1)
+2025-08-19 19:43:56 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/municipalite/enquetes-publiques-et-consultations/enquetes-publiques-et-consultations (depth: 1)
+2025-08-19 19:43:57 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/publications/sortir-a-saint-ouen (depth: 1)
+2025-08-19 19:43:57 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/lemag (depth: 1)
+2025-08-19 19:43:57 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/publications/le-journal-de-saint-ouen-sur-seine (depth: 1)
+2025-08-19 19:43:58 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/actualites/saint-ouen-en-fete-lete-audonien-revient-du-5-juillet-au-24-aout (depth: 1)
+2025-08-19 19:43:58 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/actualites/saint-ouen-en-tete-du-classement-des-villes-francaises-les-mieux-gerees (depth: 1)
+2025-08-19 19:43:58 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/publications/autres-publications (depth: 1)
+2025-08-19 19:43:59 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne/associations/annuaire (depth: 1)
+2025-08-19 19:43:59 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/actualites/plan-fraicheur-la-ville-mobilisee-en-periode-de-fortes-chaleur (depth: 1)
+2025-08-19 19:43:59 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/municipalite/la-mairie-recrute/la-mairie-recrute (depth: 1)
+2025-08-19 19:44:00 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/actualites/les-travaux-boulevard-victor-hugo-commencent (depth: 1)
+2025-08-19 19:44:00 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/actualites/prolongation-des-travaux-rue-ardoin (depth: 1)
+2025-08-19 19:44:00 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/actualites/dispositif-daide-a-la-renovation-des-devantures-commerciales-a-saint-ouen-sur-seine (depth: 1)
+2025-08-19 19:44:01 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/actualites/apprendre-a-nager-et-a-faire-du-velo-cet-ete-avec-la-ville-de-saint-ouen (depth: 1)
+2025-08-19 19:44:01 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/actualites/une-aide-pour-lachat-de-velos-mecaniques-cargos-ou-adaptes (depth: 1)
+2025-08-19 19:44:01 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/actualites/des-espaces-barbecue-pour-un-ete-convivial-a-saint-ouen (depth: 1)
+2025-08-19 19:44:02 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/actualites/afro-resonances-vernissage-de-lexposition-dantonio-sergio-moreira-le-19-juillet-a-saint-ouen (depth: 1)
+2025-08-19 19:44:02 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/events/atelier-decouverte-du-miel-pour-les-seniors (depth: 1)
+2025-08-19 19:44:02 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/events/ete-audonien (depth: 1)
+2025-08-19 19:44:03 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/events/guinguette-seniors (depth: 1)
+2025-08-19 19:44:03 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/events/concert-des-artistes-alice-goudon-et-charlotte-vitaioli-pop-francaise (depth: 1)
+2025-08-19 19:44:03 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/events/pique-nique-au-parc-du-luxembourg-a-paris-pour-les-seniors (depth: 1)
+2025-08-19 19:44:03 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/events/dj-set-pepiitta-house (depth: 1)
+2025-08-19 19:44:03 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/events/dj-set-gatito-house-funk-bresilienne-et-techno (depth: 1)
+2025-08-19 19:44:03 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/infos-de-quartiers/vieux-saint-ouen (depth: 1)
+2025-08-19 19:44:04 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/infos-de-quartiers/centre-ville-cordon (depth: 1)
+2025-08-19 19:44:04 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/infos-de-quartiers/arago-pasteur-zola-hugo (depth: 1)
+2025-08-19 19:44:04 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/infos-de-quartiers/les-docks (depth: 1)
+2025-08-19 19:44:05 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/actualites/le-bal-de-saint-ouen-avec-radio-nova-fait-vibrer-le-grand-parc-le-13-juillet (depth: 1)
+2025-08-19 19:44:05 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/infos-de-quartiers/debain-michelet-bauer (depth: 1)
+2025-08-19 19:44:05 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/infos-de-quartiers/garibaldi-les-puces (depth: 1)
+2025-08-19 19:44:06 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/actualites/la-grande-bouffe-de-libe-sinstalle-a-saint-ouen-pour-une-journee-festive-et-engagee (depth: 1)
+2025-08-19 19:44:06 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/actualites/le-festival-du-livre-vert-debarque-a-saint-ouen (depth: 1)
+2025-08-19 19:44:06 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/actualites/saint-ouen-lance-la-1%ca%b3%e1%b5%89-fete-des-rues-partagees (depth: 1)
+2025-08-19 19:44:07 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/actualites/reunion-publique-sur-la-rehabilitation-du-marche-ottino (depth: 1)
+2025-08-19 19:44:07 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/actualites/semaine-transmission-culture-hip-hop-au-conservatoire (depth: 1)
+2025-08-19 19:44:07 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/publications (depth: 1)
+2025-08-19 19:44:08 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/mentions-legales (depth: 1)
+2025-08-19 19:44:08 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/plan-du-site (depth: 1)
+2025-08-19 19:44:08 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/formulaires/formulaire-de-contact (depth: 1)
+2025-08-19 19:44:09 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/accessibilite-2 (depth: 1)
+2025-08-19 19:44:10 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/presse/contact-presse (depth: 2)
+2025-08-19 19:44:11 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/presse/saint-ouen-dans-la-presse-2 (depth: 2)
+2025-08-19 19:44:11 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/viequotidienne/education/jeunesse (depth: 2)
+2025-08-19 19:44:11 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/vos-demarches-en-ligne/demarches-administratives/papiers-citoyennete (depth: 2)
+2025-08-19 19:44:11 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne/education/petite-enfance-0-3-ans/) (depth: 2)
+2025-08-19 19:44:13 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne/sante-et-action-sociale/annuaire-sante (depth: 2)
+2025-08-19 19:44:13 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne/sante-et-action-sociale (depth: 2)
+2025-08-19 19:44:13 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/suivez-nous (depth: 2)
+2025-08-19 19:44:16 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne/jeunesse (depth: 2)
+2025-08-19 19:44:17 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne/petite-enfance-0-3-ans (depth: 2)
+2025-08-19 19:44:17 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.saint-ouen.fr/category/vie-quotidienne/travaux (depth: 2)
+2025-08-19 19:44:18 - services.crawler.crawler - INFO - ✅ Crawl terminé en 34.68s - 100 pages crawlées
+2025-08-19 19:44:18 - services.crawler.crawler - INFO - 📊 Statistiques: 100 URLs visitées, 100 succès
+2025-08-19 19:44:18 - services.crawler.crawler - INFO - crawl exécutée en 34.68s
+2025-08-19 19:44:18 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_www_saint-ouen_fr_20250819_194418.json
+2025-08-19 19:44:18 - services.crawler.crawler - INFO - start_crawl exécutée en 34.70s
+2025-08-20 17:25:04 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-20 17:25:04 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 15:22:42 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 15:22:43 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 15:27:45 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 15:27:46 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 18:38:39 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 18:42:53 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 18:42:53 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 18:53:51 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 18:53:58 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 18:54:21 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 18:54:44 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 18:57:16 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 18:57:16 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 19:03:41 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 19:07:54 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 19:07:55 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 19:10:56 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 19:13:22 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 19:13:57 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 19:18:28 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 19:18:29 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 19:43:17 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 19:43:17 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 19:46:27 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 19:46:28 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 19:48:27 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-22 19:48:28 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-23 11:26:26 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-23 11:26:27 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-27 20:56:40 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-27 20:56:41 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-27 21:13:31 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-27 21:13:32 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-31 21:45:19 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-31 21:45:19 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-31 21:51:59 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://francerenovation-idf.com/
+2025-08-31 21:51:59 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://francerenovation-idf.com/
+2025-08-31 21:51:59 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-08-31 21:52:01 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/ (depth: 0)
+2025-08-31 21:52:04 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/garanties (depth: 1)
+2025-08-31 21:52:04 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/qui-sommes-nous (depth: 1)
+2025-08-31 21:52:04 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/nos-produits (depth: 1)
+2025-08-31 21:52:09 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/fenetres (depth: 1)
+2025-08-31 21:52:09 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/fenetre-pvc (depth: 1)
+2025-08-31 21:52:09 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/fenetre-aluminium (depth: 1)
+2025-08-31 21:52:54 - services.crawler.crawler - ERROR - ❌ Erreur lors du crawl de https://francerenovation-idf.com/fenetres: HTTPSConnectionPool(host='francerenovation-idf.com', port=443): Max retries exceeded with url: /fenetres/ (Caused by ReadTimeoutError("HTTPSConnectionPool(host='francerenovation-idf.com', port=443): Read timed out. (read timeout=10)"))
+2025-08-31 21:52:55 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/porte-fenetre-en-pvc (depth: 1)
+2025-08-31 21:52:55 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/portes-fenetres (depth: 1)
+2025-08-31 21:52:55 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/fenetre-bois (depth: 1)
+2025-08-31 21:53:42 - services.crawler.crawler - ERROR - ❌ Erreur lors du crawl de https://francerenovation-idf.com/portes-fenetres: HTTPSConnectionPool(host='francerenovation-idf.com', port=443): Max retries exceeded with url: /portes-fenetres/ (Caused by ReadTimeoutError("HTTPSConnectionPool(host='francerenovation-idf.com', port=443): Read timed out. (read timeout=10)"))
+2025-08-31 21:53:42 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/porte-fenetre-en-bois (depth: 1)
+2025-08-31 21:53:42 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/porte-fenetre-aluminium (depth: 1)
+2025-08-31 21:53:42 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/baies-coulissantes (depth: 1)
+2025-08-31 21:54:27 - services.crawler.crawler - ERROR - ❌ Erreur lors du crawl de https://francerenovation-idf.com/baies-coulissantes: HTTPSConnectionPool(host='francerenovation-idf.com', port=443): Max retries exceeded with url: /baies-coulissantes/ (Caused by ReadTimeoutError("HTTPSConnectionPool(host='francerenovation-idf.com', port=443): Read timed out. (read timeout=10)"))
+2025-08-31 21:54:28 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/baie-coulissante-en-pvc (depth: 1)
+2025-08-31 21:54:28 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/baie-vitree-aluminium (depth: 1)
+2025-08-31 21:54:28 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/volet-roulants (depth: 1)
+2025-08-31 21:55:14 - services.crawler.crawler - ERROR - ❌ Erreur lors du crawl de https://francerenovation-idf.com/volet-roulants: HTTPSConnectionPool(host='francerenovation-idf.com', port=443): Max retries exceeded with url: /volet-roulants/ (Caused by ReadTimeoutError("HTTPSConnectionPool(host='francerenovation-idf.com', port=443): Read timed out. (read timeout=10)"))
+2025-08-31 21:55:15 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/volet-roulant-en-pvc (depth: 1)
+2025-08-31 21:55:15 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/volet-roulant-aluminium (depth: 1)
+2025-08-31 21:55:15 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/volets (depth: 1)
+2025-08-31 21:56:01 - services.crawler.crawler - ERROR - ❌ Erreur lors du crawl de https://francerenovation-idf.com/volets: HTTPSConnectionPool(host='francerenovation-idf.com', port=443): Max retries exceeded with url: /volets/ (Caused by ReadTimeoutError("HTTPSConnectionPool(host='francerenovation-idf.com', port=443): Read timed out. (read timeout=10)"))
+2025-08-31 21:56:01 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/persiennes (depth: 1)
+2025-08-31 21:56:01 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/volet-battants (depth: 1)
+2025-08-31 21:56:01 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/stores-venitiens (depth: 1)
+2025-08-31 21:56:06 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/portes-dentrees (depth: 1)
+2025-08-31 21:56:06 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/porte-dentree (depth: 1)
+2025-08-31 21:56:06 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/porte-blindee (depth: 1)
+2025-08-31 21:56:53 - services.crawler.crawler - ERROR - ❌ Erreur lors du crawl de https://francerenovation-idf.com/portes-dentrees: HTTPSConnectionPool(host='francerenovation-idf.com', port=443): Max retries exceeded with url: /portes-dentrees/ (Caused by ReadTimeoutError("HTTPSConnectionPool(host='francerenovation-idf.com', port=443): Read timed out. (read timeout=10)"))
+2025-08-31 21:56:53 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/porte-fenetre-pvc-2 (depth: 1)
+2025-08-31 21:56:53 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/porte-garage-aluminium (depth: 1)
+2025-08-31 21:56:53 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/porte-de-garage (depth: 1)
+2025-08-31 21:56:57 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/devis (depth: 1)
+2025-08-31 21:56:57 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/stores-bannes (depth: 1)
+2025-08-31 21:56:57 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/installation-electrique (depth: 1)
+2025-08-31 21:57:04 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/blog (depth: 1)
+2025-08-31 21:57:04 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/conditions-generales (depth: 1)
+2025-08-31 21:57:04 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/politique-de-confidentialite (depth: 1)
+2025-08-31 21:57:08 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/categorie-produit/baies-vitrees (depth: 2)
+2025-08-31 21:57:08 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/categorie-produit/portes-fenetres (depth: 2)
+2025-08-31 21:57:08 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/categorie-produit/fenetres (depth: 2)
+2025-08-31 21:57:12 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/categorie-produit/volets-roulants (depth: 2)
+2025-08-31 21:57:12 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/categorie-produit/volets (depth: 2)
+2025-08-31 21:57:12 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/categorie-produit/stores-bannes (depth: 2)
+2025-08-31 21:57:16 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/categorie-produit/electricite (depth: 2)
+2025-08-31 21:57:16 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/categorie-produit/portes-dentree (depth: 2)
+2025-08-31 21:57:16 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/categorie-produit/porte-de-garage (depth: 2)
+2025-08-31 21:57:19 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/test (depth: 2)
+2025-08-31 21:57:23 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/categorie-produit/porte-blindee (depth: 2)
+2025-08-31 21:57:25 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/tableau-electrique (depth: 2)
+2025-08-31 21:57:28 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/wp-content/plugins/complianz-terms-conditions/download.php (depth: 2)
+2025-08-31 21:57:28 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/politique-de-cookies-ue (depth: 2)
+2025-08-31 21:57:28 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/contact (depth: 2)
+2025-08-31 21:57:31 - services.crawler.crawler - INFO - ⛔ Ignoré (non HTML): https://francerenovation-idf.com/wp-content/plugins/complianz-terms-conditions/download.php
+2025-08-31 21:57:32 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com//volets-roulants (depth: 2)
+2025-08-31 21:57:32 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/isolation-caisson-volet-roulant (depth: 2)
+2025-08-31 21:57:32 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/isolation-thermique-des-coffres-de-volets-roulants (depth: 2)
+2025-08-31 21:57:35 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/isolation-thermique-caisson-volet-roulant (depth: 2)
+2025-08-31 21:57:35 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/isolation-phonique-caisson-volet-roulant (depth: 2)
+2025-08-31 21:57:35 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/isolation-phonique-coffre-volet-roulant-liege (depth: 2)
+2025-08-31 21:57:39 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/poser-un-volet-roulant-en-applique (depth: 2)
+2025-08-31 21:57:39 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/isolation-phonique-caisson-volet-roulant-interieur (depth: 2)
+2025-08-31 21:57:39 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/isolation-phonique-caisson-volet-roulant-exterieur (depth: 2)
+2025-08-31 21:57:42 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/installation-volet-roulant-en-applique (depth: 2)
+2025-08-31 21:57:42 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/pose-volet-roulant-en-applique-exterieur (depth: 2)
+2025-08-31 21:57:42 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/pose-volet-roulant-en-applique-interieur (depth: 2)
+2025-08-31 21:57:45 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/installation-volet-roulant-electrique (depth: 2)
+2025-08-31 21:57:45 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/installation-motorisation-volet-roulant (depth: 2)
+2025-08-31 21:57:45 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/installation-de-volets-roulants (depth: 2)
+2025-08-31 21:57:49 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/installation-manivelle-volet-roulant (depth: 2)
+2025-08-31 21:57:49 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/pose-volet-roulant-electrique (depth: 2)
+2025-08-31 21:57:49 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/installer-un-volet-roulant-electrique (depth: 2)
+2025-08-31 21:57:52 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/installation-volet-roulant-manuel (depth: 2)
+2025-08-31 21:57:52 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/monter-volet-roulant-manuel (depth: 2)
+2025-08-31 21:57:52 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/pose-volet-roulant-manuel (depth: 2)
+2025-08-31 21:57:56 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com///volets-roulants (depth: 2)
+2025-08-31 21:57:56 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/isoler-une-fenetre-pvc (depth: 2)
+2025-08-31 21:57:56 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/isolation-cadre-fenetre-pvc (depth: 2)
+2025-08-31 21:57:58 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/isoler-cadre-fenetre-pvc (depth: 2)
+2025-08-31 21:57:58 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/isolation-des-fenetres-pvc (depth: 2)
+2025-08-31 21:57:58 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/isolation-chassis-pvc (depth: 2)
+2025-08-31 21:58:03 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/isolant-pour-fenetre-pvc (depth: 2)
+2025-08-31 21:58:03 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/froid-fenetre-pvc (depth: 2)
+2025-08-31 21:58:03 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/isolation-thermique-fenetre-pvc (depth: 2)
+2025-08-31 21:58:06 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/fenetre-pvc-isolante (depth: 2)
+2025-08-31 21:58:06 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/isolation-phonique-fenetre-pvc (depth: 2)
+2025-08-31 21:58:06 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/fenetre-pvc-double-vitrage-isolation-phonique (depth: 2)
+2025-08-31 21:58:11 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/fenetre-pvc-isolation-phonique (depth: 2)
+2025-08-31 21:58:11 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/renover-du-pvc-blanc (depth: 2)
+2025-08-31 21:58:11 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/pvc-isolation-phonique (depth: 2)
+2025-08-31 21:58:14 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/renover-fenetre-pvc-blanc (depth: 2)
+2025-08-31 21:58:14 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/fenetre-pvc-renovation-oscillo-battant (depth: 2)
+2025-08-31 21:58:14 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/renovation-fenetre-pvc (depth: 2)
+2025-08-31 21:58:18 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/pose-fenetre-pvc-avec-volet-roulant-en-renovation (depth: 2)
+2025-08-31 21:58:18 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/fenetre-pvc-avec-volet-roulant-integre-en-renovation (depth: 2)
+2025-08-31 21:58:18 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/fenetre-renovation-avec-volet-roulant-integre (depth: 2)
+2025-08-31 21:58:22 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/pose-fenetre-pvc-en-applique-renovation (depth: 2)
+2025-08-31 21:58:22 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/pose-fenetre-pvc-renovation (depth: 2)
+2025-08-31 21:58:22 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/pose-de-fenetres-pvc-en-renovation (depth: 2)
+2025-08-31 21:58:25 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/renover-fenetre-bois-ancienne (depth: 2)
+2025-08-31 21:58:25 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/restauration-fenetres-anciennes-bois (depth: 2)
+2025-08-31 21:58:25 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/pose-fenetre-pvc-sur-ancien-bati (depth: 2)
+2025-08-31 21:58:27 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/renovation-fenetres-bois (depth: 2)
+2025-08-31 21:58:27 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/renovation-fenetre-bois-double-vitrage (depth: 2)
+2025-08-31 21:58:27 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/restauration-fenetre-bois-double-vitrage (depth: 2)
+2025-08-31 21:58:30 - services.crawler.crawler - INFO - ✅ Crawl terminé en 391.80s - 99 pages crawlées
+2025-08-31 21:58:30 - services.crawler.crawler - INFO - 📊 Statistiques: 100 URLs visitées, 93 succès
+2025-08-31 21:58:30 - services.crawler.crawler - INFO - crawl exécutée en 391.80s
+2025-08-31 21:58:30 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_francerenovation-idf_com_20250831_215830.json
+2025-08-31 21:58:30 - services.crawler.crawler - INFO - start_crawl exécutée en 391.81s
+2025-08-31 22:31:50 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-31 22:31:51 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-31 22:48:51 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-31 22:55:36 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-31 22:55:37 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-31 22:57:37 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-08-31 22:57:38 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 16:45:57 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 16:45:58 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 16:48:20 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 16:48:28 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 16:48:35 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 16:48:42 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 16:48:58 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 16:49:09 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 16:49:22 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 16:49:36 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 16:49:48 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 16:50:28 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 16:50:38 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 17:00:24 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 17:00:50 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 17:01:00 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 17:01:11 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 17:01:22 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 17:02:13 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 17:02:19 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 17:02:43 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 17:02:58 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 17:21:03 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://fixersinparis.com
+2025-09-01 17:21:03 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://fixersinparis.com
+2025-09-01 17:21:03 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-09-01 17:21:04 - services.crawler.crawler - INFO - 🔍 Crawling: https://fixersinparis.com/ (depth: 0)
+2025-09-01 17:21:05 - services.crawler.crawler - INFO - ✅ Crawl terminé en 1.86s - 1 pages crawlées
+2025-09-01 17:21:05 - services.crawler.crawler - INFO - 📊 Statistiques: 1 URLs visitées, 1 succès
+2025-09-01 17:21:05 - services.crawler.crawler - INFO - crawl exécutée en 1.86s
+2025-09-01 17:21:05 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_fixersinparis_com_20250901_172105.json
+2025-09-01 17:21:05 - services.crawler.crawler - INFO - start_crawl exécutée en 1.88s
+2025-09-01 17:21:29 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://www.fixersinparis.com/
+2025-09-01 17:21:29 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://www.fixersinparis.com/
+2025-09-01 17:21:29 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-09-01 17:21:29 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/ (depth: 0)
+2025-09-01 17:21:30 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/content-advisory (depth: 1)
+2025-09-01 17:21:30 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/crew-sourcing (depth: 1)
+2025-09-01 17:21:30 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/cultural-sensitivities-counsel (depth: 1)
+2025-09-01 17:21:31 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/production (depth: 1)
+2025-09-01 17:21:31 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/remote-content-production (depth: 1)
+2025-09-01 17:21:31 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/rental-for-kit-and-gear (depth: 1)
+2025-09-01 17:21:33 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/shooting-permits-and-locations (depth: 1)
+2025-09-01 17:21:33 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/clients-and-testimonies (depth: 1)
+2025-09-01 17:21:33 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/scouting (depth: 1)
+2025-09-01 17:21:35 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/about-us (depth: 1)
+2025-09-01 17:21:35 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/contact (depth: 1)
+2025-09-01 17:21:35 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/our-services (depth: 1)
+2025-09-01 17:21:36 - services.crawler.crawler - INFO - ✅ Crawl terminé en 7.05s - 13 pages crawlées
+2025-09-01 17:21:36 - services.crawler.crawler - INFO - 📊 Statistiques: 13 URLs visitées, 13 succès
+2025-09-01 17:21:36 - services.crawler.crawler - INFO - crawl exécutée en 7.05s
+2025-09-01 17:21:36 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_www_fixersinparis_com_20250901_172136.json
+2025-09-01 17:21:36 - services.crawler.crawler - INFO - start_crawl exécutée en 7.05s
+2025-09-01 17:42:44 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-01 17:42:44 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-03 12:45:54 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-03 12:45:54 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-03 12:46:10 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://fondationcherqui.com/
+2025-09-03 12:46:10 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://fondationcherqui.com/
+2025-09-03 12:46:10 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-09-03 12:46:10 - services.crawler.crawler - INFO - 🔍 Crawling: https://fondationcherqui.com/ (depth: 0)
+2025-09-03 12:46:11 - services.crawler.crawler - INFO - 🔍 Crawling: https://fondationcherqui.com/programmation (depth: 1)
+2025-09-03 12:46:11 - services.crawler.crawler - INFO - 🔍 Crawling: https://fondationcherqui.com/groupes (depth: 1)
+2025-09-03 12:46:11 - services.crawler.crawler - INFO - 🔍 Crawling: https://fondationcherqui.com/artistes (depth: 1)
+2025-09-03 12:46:11 - services.crawler.crawler - INFO - ✅ Crawl terminé en 1.34s - 4 pages crawlées
+2025-09-03 12:46:11 - services.crawler.crawler - INFO - 📊 Statistiques: 4 URLs visitées, 4 succès
+2025-09-03 12:46:11 - services.crawler.crawler - INFO - crawl exécutée en 1.34s
+2025-09-03 12:46:11 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_fondationcherqui_com_20250903_124611.json
+2025-09-03 12:46:11 - services.crawler.crawler - INFO - start_crawl exécutée en 1.34s
+2025-09-03 12:49:56 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://fondationcherqui.com/
+2025-09-03 12:49:56 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://fondationcherqui.com/
+2025-09-03 12:49:56 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-09-03 12:49:57 - services.crawler.crawler - INFO - 🔍 Crawling: https://fondationcherqui.com/ (depth: 0)
+2025-09-03 12:49:57 - services.crawler.crawler - INFO - 🔍 Crawling: https://fondationcherqui.com/programmation (depth: 1)
+2025-09-03 12:49:57 - services.crawler.crawler - INFO - 🔍 Crawling: https://fondationcherqui.com/artistes (depth: 1)
+2025-09-03 12:49:57 - services.crawler.crawler - INFO - 🔍 Crawling: https://fondationcherqui.com/groupes (depth: 1)
+2025-09-03 12:49:57 - services.crawler.crawler - INFO - ✅ Crawl terminé en 1.12s - 4 pages crawlées
+2025-09-03 12:49:57 - services.crawler.crawler - INFO - 📊 Statistiques: 4 URLs visitées, 4 succès
+2025-09-03 12:49:57 - services.crawler.crawler - INFO - crawl exécutée en 1.12s
+2025-09-03 12:49:57 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_fondationcherqui_com_20250903_124957.json
+2025-09-03 12:49:57 - services.crawler.crawler - INFO - start_crawl exécutée en 1.12s
+2025-09-04 01:56:27 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-04 01:56:27 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-04 02:01:53 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-04 02:01:53 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-04 02:05:41 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-04 02:05:42 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-04 02:07:07 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-04 02:07:27 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-04 02:07:27 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-08 12:55:06 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-08 12:55:06 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-08 16:25:02 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-08 16:25:03 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-08 16:26:35 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-08 16:26:35 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-08 16:43:20 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-08 16:43:20 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-08 17:01:49 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-08 17:01:49 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-10 13:01:20 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-10 13:01:21 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-10 13:28:27 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-10 13:28:32 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-10 13:28:37 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-10 13:28:43 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-10 13:28:50 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-10 13:28:58 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-10 13:29:12 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-10 13:29:19 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-10 13:29:35 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-10 13:29:39 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-10 13:29:44 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-10 13:29:49 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-10 13:29:54 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-10 13:30:04 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-10 13:30:09 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-10 13:30:15 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-10 13:30:21 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-10 13:31:30 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-10 13:31:30 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 10:57:48 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 10:57:49 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 11:27:22 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 11:27:31 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 11:27:44 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 11:27:50 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 11:30:19 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 11:30:19 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 11:48:14 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 11:48:57 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 12:03:51 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 12:03:51 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 16:38:28 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 16:38:28 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 16:54:45 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 16:54:46 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 16:58:17 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 16:58:18 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 18:35:43 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 18:35:44 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 18:42:33 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 18:42:33 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 18:43:41 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 18:43:42 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 18:46:11 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 18:46:11 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 18:48:17 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 18:48:17 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 18:51:16 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 18:51:16 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 18:52:53 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 18:52:54 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 18:58:49 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-11 18:58:50 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-17 16:31:53 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-17 16:31:54 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-17 16:32:13 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://horizonweb.io/
+2025-09-17 16:32:13 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://horizonweb.io/
+2025-09-17 16:32:13 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-09-17 16:32:13 - services.crawler.crawler - INFO - 🔍 Crawling: https://horizonweb.io/ (depth: 0)
+2025-09-17 16:32:14 - services.crawler.crawler - INFO - ✅ Crawl terminé en 1.25s - 1 pages crawlées
+2025-09-17 16:32:14 - services.crawler.crawler - INFO - 📊 Statistiques: 1 URLs visitées, 1 succès
+2025-09-17 16:32:14 - services.crawler.crawler - INFO - crawl exécutée en 1.25s
+2025-09-17 16:32:14 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_horizonweb_io_20250917_163214.json
+2025-09-17 16:32:14 - services.crawler.crawler - INFO - start_crawl exécutée en 1.25s
+2025-09-17 16:32:21 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://horizonweb.io
+2025-09-17 16:32:21 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://horizonweb.io
+2025-09-17 16:32:21 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-09-17 16:32:22 - services.crawler.crawler - INFO - 🔍 Crawling: https://horizonweb.io/ (depth: 0)
+2025-09-17 16:32:22 - services.crawler.crawler - INFO - ✅ Crawl terminé en 0.89s - 1 pages crawlées
+2025-09-17 16:32:22 - services.crawler.crawler - INFO - 📊 Statistiques: 1 URLs visitées, 1 succès
+2025-09-17 16:32:22 - services.crawler.crawler - INFO - crawl exécutée en 0.89s
+2025-09-17 16:32:22 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_horizonweb_io_20250917_163222.json
+2025-09-17 16:32:22 - services.crawler.crawler - INFO - start_crawl exécutée en 0.89s
+2025-09-18 12:01:52 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-18 12:01:52 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-18 13:35:58 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-18 13:35:59 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-18 14:18:56 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-18 14:18:56 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-19 18:34:22 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-19 18:34:23 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 14:14:33 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 14:14:33 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 14:25:48 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 14:41:39 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 14:41:40 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 19:06:00 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 19:05:59 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 19:20:58 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 19:21:07 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 19:21:20 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 19:21:36 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 19:21:42 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 19:21:48 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 19:21:53 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 19:21:57 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 19:27:19 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 19:27:19 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 19:33:01 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 19:58:08 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 19:58:09 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 20:03:49 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 20:03:58 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 20:05:35 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 20:05:36 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 20:08:22 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 20:08:27 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 20:17:20 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 20:17:20 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 20:51:39 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 20:51:39 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 20:58:47 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 20:59:21 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 20:59:43 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 21:01:02 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 21:01:03 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 21:09:01 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 21:09:39 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 21:10:14 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 21:15:04 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 21:15:04 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 21:20:39 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 21:20:40 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 21:23:22 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-23 21:54:10 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-25 21:06:38 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-25 21:06:39 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-25 21:06:53 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://www.ifap.net
+2025-09-25 21:06:53 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://www.ifap.net
+2025-09-25 21:06:53 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-09-25 21:06:53 - services.crawler.crawler - INFO - ✅ Crawl terminé en 0.10s - 0 pages crawlées
+2025-09-25 21:06:53 - services.crawler.crawler - INFO - 📊 Statistiques: 0 URLs visitées, 0 succès
+2025-09-25 21:06:53 - services.crawler.crawler - INFO - crawl exécutée en 0.10s
+2025-09-25 21:06:53 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_www_ifap_net_20250925_210653.json
+2025-09-25 21:06:53 - services.crawler.crawler - INFO - start_crawl exécutée en 0.10s
+2025-09-25 21:07:18 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://www.ifap.net/
+2025-09-25 21:07:18 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://www.ifap.net/
+2025-09-25 21:07:18 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-09-25 21:07:18 - services.crawler.crawler - INFO - ✅ Crawl terminé en 0.05s - 0 pages crawlées
+2025-09-25 21:07:18 - services.crawler.crawler - INFO - 📊 Statistiques: 0 URLs visitées, 0 succès
+2025-09-25 21:07:18 - services.crawler.crawler - INFO - crawl exécutée en 0.05s
+2025-09-25 21:07:18 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_www_ifap_net_20250925_210718.json
+2025-09-25 21:07:18 - services.crawler.crawler - INFO - start_crawl exécutée en 0.06s
+2025-09-25 21:07:43 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://www.ifap.net/
+2025-09-25 21:07:43 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://www.ifap.net/
+2025-09-25 21:07:43 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-09-25 21:07:43 - services.crawler.crawler - INFO - ✅ Crawl terminé en 0.04s - 0 pages crawlées
+2025-09-25 21:07:43 - services.crawler.crawler - INFO - 📊 Statistiques: 0 URLs visitées, 0 succès
+2025-09-25 21:07:43 - services.crawler.crawler - INFO - crawl exécutée en 0.04s
+2025-09-25 21:07:43 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_www_ifap_net_20250925_210743.json
+2025-09-25 21:07:43 - services.crawler.crawler - INFO - start_crawl exécutée en 0.04s
+2025-09-25 21:07:53 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://www.leadin.fr/prospection-linkedin/
+2025-09-25 21:07:53 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://www.leadin.fr/prospection-linkedin/
+2025-09-25 21:07:53 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-09-25 21:07:53 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.leadin.fr/prospection-linkedin (depth: 0)
+2025-09-25 21:07:54 - services.crawler.crawler - INFO - ✅ Crawl terminé en 0.93s - 1 pages crawlées
+2025-09-25 21:07:54 - services.crawler.crawler - INFO - 📊 Statistiques: 1 URLs visitées, 1 succès
+2025-09-25 21:07:54 - services.crawler.crawler - INFO - crawl exécutée en 0.93s
+2025-09-25 21:07:54 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_www_leadin_fr_20250925_210754.json
+2025-09-25 21:07:54 - services.crawler.crawler - INFO - start_crawl exécutée en 0.93s
+2025-09-25 21:07:59 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://www.leadin.fr
+2025-09-25 21:07:59 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://www.leadin.fr
+2025-09-25 21:07:59 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-09-25 21:08:00 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.leadin.fr/ (depth: 0)
+2025-09-25 21:08:00 - services.crawler.crawler - INFO - ✅ Crawl terminé en 0.99s - 1 pages crawlées
+2025-09-25 21:08:00 - services.crawler.crawler - INFO - 📊 Statistiques: 1 URLs visitées, 1 succès
+2025-09-25 21:08:00 - services.crawler.crawler - INFO - crawl exécutée en 0.99s
+2025-09-25 21:08:00 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_www_leadin_fr_20250925_210800.json
+2025-09-25 21:08:00 - services.crawler.crawler - INFO - start_crawl exécutée en 0.99s
+2025-09-25 21:08:31 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://francerenovation-idf.com
+2025-09-25 21:08:31 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://francerenovation-idf.com
+2025-09-25 21:08:31 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-09-25 21:08:33 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/ (depth: 0)
+2025-09-25 21:08:35 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/nos-produits (depth: 1)
+2025-09-25 21:08:35 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/qui-sommes-nous (depth: 1)
+2025-09-25 21:08:35 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/garanties (depth: 1)
+2025-09-25 21:08:39 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/fenetres (depth: 1)
+2025-09-25 21:08:39 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/fenetre-pvc (depth: 1)
+2025-09-25 21:08:39 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/fenetre-aluminium (depth: 1)
+2025-09-25 21:08:50 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://outfit-shopnutrition.fr/
+2025-09-25 21:08:50 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://outfit-shopnutrition.fr/
+2025-09-25 21:08:50 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-09-25 21:08:51 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/ (depth: 0)
+2025-09-25 21:08:55 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/boutique (depth: 1)
+2025-09-25 21:08:55 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition (depth: 1)
+2025-09-25 21:08:55 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/proteines (depth: 1)
+2025-09-25 21:09:06 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/proteines/whey-concentree (depth: 1)
+2025-09-25 21:09:06 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/proteines/hydrolysee (depth: 1)
+2025-09-25 21:09:06 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/proteines/isolate (depth: 1)
+2025-09-25 21:09:17 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/proteines/clear-whey (depth: 1)
+2025-09-25 21:09:17 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/proteines/caseine (depth: 1)
+2025-09-25 21:09:17 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/proteines/whey-vegan (depth: 1)
+2025-09-25 21:09:20 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://www.ifap.net
+2025-09-25 21:09:20 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://www.ifap.net
+2025-09-25 21:09:20 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-09-25 21:09:20 - services.crawler.crawler - INFO - ✅ Crawl terminé en 0.08s - 0 pages crawlées
+2025-09-25 21:09:20 - services.crawler.crawler - INFO - 📊 Statistiques: 0 URLs visitées, 0 succès
+2025-09-25 21:09:20 - services.crawler.crawler - INFO - crawl exécutée en 0.08s
+2025-09-25 21:09:20 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_www_ifap_net_20250925_210920.json
+2025-09-25 21:09:20 - services.crawler.crawler - INFO - start_crawl exécutée en 0.08s
+2025-09-25 21:09:26 - services.crawler.crawler - ERROR - ❌ Erreur lors du crawl de https://francerenovation-idf.com/fenetres: HTTPSConnectionPool(host='francerenovation-idf.com', port=443): Max retries exceeded with url: /fenetres/ (Caused by ReadTimeoutError("HTTPSConnectionPool(host='francerenovation-idf.com', port=443): Read timed out. (read timeout=10)"))
+2025-09-25 21:09:26 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/fenetre-bois (depth: 1)
+2025-09-25 21:09:26 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/portes-fenetres (depth: 1)
+2025-09-25 21:09:26 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/porte-fenetre-en-pvc (depth: 1)
+2025-09-25 21:09:28 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/gainers/lean-gainer (depth: 1)
+2025-09-25 21:09:28 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/gainers (depth: 1)
+2025-09-25 21:09:28 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/gainers/hard-gainer (depth: 1)
+2025-09-25 21:09:40 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/creatines (depth: 1)
+2025-09-25 21:09:40 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/creatines/creapure (depth: 1)
+2025-09-25 21:09:40 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/creatines/monohydrate (depth: 1)
+2025-09-25 21:09:51 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/creatines/micronisee (depth: 1)
+2025-09-25 21:09:51 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/aminos (depth: 1)
+2025-09-25 21:09:51 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/creatines/stabilisee (depth: 1)
+2025-09-25 21:10:03 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/aminos/bcaa (depth: 1)
+2025-09-25 21:10:03 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/aminos/glutamine (depth: 1)
+2025-09-25 21:10:03 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/aminos/eaa (depth: 1)
+2025-09-25 21:10:14 - services.crawler.crawler - ERROR - ❌ Erreur lors du crawl de https://francerenovation-idf.com/portes-fenetres: HTTPSConnectionPool(host='francerenovation-idf.com', port=443): Max retries exceeded with url: /portes-fenetres/ (Caused by ReadTimeoutError("HTTPSConnectionPool(host='francerenovation-idf.com', port=443): Read timed out. (read timeout=10)"))
+2025-09-25 21:10:14 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/porte-fenetre-aluminium (depth: 1)
+2025-09-25 21:10:14 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/porte-fenetre-en-bois (depth: 1)
+2025-09-25 21:10:14 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/baies-coulissantes (depth: 1)
+2025-09-25 21:10:15 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/pre-workouts (depth: 1)
+2025-09-25 21:10:15 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/fat-burners (depth: 1)
+2025-09-25 21:10:15 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/fat-burners/bruleur (depth: 1)
+2025-09-25 21:10:27 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/fat-burners/draineur (depth: 1)
+2025-09-25 21:10:27 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/sante (depth: 1)
+2025-09-25 21:10:27 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/hormones (depth: 1)
+2025-09-25 21:10:37 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/sante/multi-vitamines (depth: 1)
+2025-09-25 21:10:37 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/sante/omega-3-6-9 (depth: 1)
+2025-09-25 21:10:37 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/sante/zma-zmb (depth: 1)
+2025-09-25 21:10:49 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/sante/supports-articulaire (depth: 1)
+2025-09-25 21:10:49 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/sante/autres-vitamines (depth: 1)
+2025-09-25 21:10:49 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/sante/detox (depth: 1)
+2025-09-25 21:10:52 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: http://www.ifap.net
+2025-09-25 21:10:52 - services.crawler.crawler - INFO - 🚀 Début du crawl de http://www.ifap.net
+2025-09-25 21:10:52 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-09-25 21:10:52 - services.crawler.crawler - INFO - ✅ Crawl terminé en 0.07s - 0 pages crawlées
+2025-09-25 21:10:52 - services.crawler.crawler - INFO - 📊 Statistiques: 0 URLs visitées, 0 succès
+2025-09-25 21:10:52 - services.crawler.crawler - INFO - crawl exécutée en 0.07s
+2025-09-25 21:10:52 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_www_ifap_net_20250925_211052.json
+2025-09-25 21:10:52 - services.crawler.crawler - INFO - start_crawl exécutée en 0.07s
+2025-09-25 21:11:00 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/carbohydrates/vitargo (depth: 1)
+2025-09-25 21:11:00 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/carbohydrates (depth: 1)
+2025-09-25 21:11:00 - services.crawler.crawler - INFO - 🔍 Crawling: https://outfit-shopnutrition.fr/categorie-produit/nutrition/boissons-ready-to-drink (depth: 1)
+2025-09-25 21:11:01 - services.crawler.crawler - ERROR - ❌ Erreur lors du crawl de https://francerenovation-idf.com/baies-coulissantes: HTTPSConnectionPool(host='francerenovation-idf.com', port=443): Max retries exceeded with url: /baies-coulissantes/ (Caused by ReadTimeoutError("HTTPSConnectionPool(host='francerenovation-idf.com', port=443): Read timed out. (read timeout=10)"))
+2025-09-25 21:11:02 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/baie-coulissante-en-pvc (depth: 1)
+2025-09-25 21:11:02 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/volet-roulants (depth: 1)
+2025-09-25 21:11:02 - services.crawler.crawler - INFO - 🔍 Crawling: https://francerenovation-idf.com/produit/baie-vitree-aluminium (depth: 1)
+2025-09-25 21:12:49 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-25 21:12:49 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-25 21:13:00 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://fixersinparis.com
+2025-09-25 21:13:00 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://fixersinparis.com
+2025-09-25 21:13:00 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-09-25 21:13:00 - services.crawler.crawler - INFO - 🔍 Crawling: https://fixersinparis.com/ (depth: 0)
+2025-09-25 21:13:01 - services.crawler.crawler - INFO - ✅ Crawl terminé en 1.93s - 1 pages crawlées
+2025-09-25 21:13:01 - services.crawler.crawler - INFO - 📊 Statistiques: 1 URLs visitées, 1 succès
+2025-09-25 21:13:01 - services.crawler.crawler - INFO - crawl exécutée en 1.93s
+2025-09-25 21:13:01 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_fixersinparis_com_20250925_211301.json
+2025-09-25 21:13:01 - services.crawler.crawler - INFO - start_crawl exécutée en 1.93s
+2025-09-25 21:13:56 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://www.fixersinparis.com
+2025-09-25 21:13:56 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://www.fixersinparis.com
+2025-09-25 21:13:56 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-09-25 21:13:56 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/ (depth: 0)
+2025-09-25 21:13:57 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/crew-sourcing (depth: 1)
+2025-09-25 21:13:57 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/content-advisory (depth: 1)
+2025-09-25 21:13:57 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/cultural-sensitivities-counsel (depth: 1)
+2025-09-25 21:14:00 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/production (depth: 1)
+2025-09-25 21:14:00 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/remote-content-production (depth: 1)
+2025-09-25 21:14:00 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/rental-for-kit-and-gear (depth: 1)
+2025-09-25 21:14:04 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/shooting-permits-and-locations (depth: 1)
+2025-09-25 21:14:04 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/scouting (depth: 1)
+2025-09-25 21:14:04 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/clients-and-testimonies (depth: 1)
+2025-09-25 21:14:07 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/about-us (depth: 1)
+2025-09-25 21:14:07 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/contact (depth: 1)
+2025-09-25 21:14:07 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/our-services (depth: 1)
+2025-09-25 21:14:11 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/services (depth: 2)
+2025-09-25 21:14:11 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/filming-in-paris-a-practical-guide (depth: 2)
+2025-09-25 21:14:11 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/test (depth: 2)
+2025-09-25 21:14:18 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/streamline-your-parisian-shoot-navigating-film-permits-with-expert-fixers (depth: 2)
+2025-09-25 21:14:18 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/tag/shoot (depth: 3)
+2025-09-25 21:14:18 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.fixersinparis.com/faq (depth: 3)
+2025-09-25 21:14:20 - services.crawler.crawler - INFO - ✅ Crawl terminé en 24.78s - 19 pages crawlées
+2025-09-25 21:14:20 - services.crawler.crawler - INFO - 📊 Statistiques: 19 URLs visitées, 19 succès
+2025-09-25 21:14:20 - services.crawler.crawler - INFO - crawl exécutée en 24.78s
+2025-09-25 21:14:20 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_www_fixersinparis_com_20250925_211420.json
+2025-09-25 21:14:20 - services.crawler.crawler - INFO - start_crawl exécutée en 24.78s
+2025-09-25 21:14:30 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://www.ifap.net
+2025-09-25 21:14:30 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://www.ifap.net
+2025-09-25 21:14:30 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-09-25 21:14:30 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/ (depth: 0)
+2025-09-25 21:14:31 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/calendrier (depth: 1)
+2025-09-25 21:14:31 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/categorie/10/tcf?ca-filter%5Bc_type_de_formation%5D=&ca-filter%5Bc_profil%5D=&keyword=&cpf=&categorie=10&filter= (depth: 1)
+2025-09-25 21:14:31 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap?ca-filter%5Bc_type_de_formation%5D=certifiante&ca-filter%5Bc_profil%5D=&keyword=&cpf=&categorie=&filter= (depth: 1)
+2025-09-25 21:14:34 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/formations-salaries-sap (depth: 1)
+2025-09-25 21:14:34 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap?ca-filter%5Bc_type_de_formation%5D=&ca-filter%5Bc_profil%5D=employe-familial (depth: 1)
+2025-09-25 21:14:34 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/bulletins-inscription-formations-ifap (depth: 1)
+2025-09-25 21:14:37 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap?ca-filter%5Bc_type_de_formation%5D=&ca-filter%5Bc_profil%5D=assistante-maternelle (depth: 1)
+2025-09-25 21:14:37 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap?ca-filter%5Bc_type_de_formation%5D=&ca-filter%5Bc_profil%5D=garde-enfants (depth: 1)
+2025-09-25 21:14:37 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap?ca-filter%5Bc_type_de_formation%5D=&ca-filter%5Bc_profil%5D=assistant-vie (depth: 1)
+2025-09-25 21:14:41 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/catalogue?ca-filter%5Bc_type_de_formation%5D=&ca-filter%5Bc_profil%5D=&keyword=&cpf=&categorie=&filter= (depth: 1)
+2025-09-25 21:14:41 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/organisme-formation-assistance-personne (depth: 1)
+2025-09-25 21:14:41 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/temoignages-institut-formation-assistance-personne (depth: 1)
+2025-09-25 21:14:44 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/politique-confidentialite (depth: 1)
+2025-09-25 21:14:44 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/formations-services-a-la-personne (depth: 1)
+2025-09-25 21:14:44 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/formations-diplomantes (depth: 1)
+2025-09-25 21:14:46 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/formations-diplomantes/diplome-advf (depth: 1)
+2025-09-25 21:14:46 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/formations-diplomantes/cap-petite-enfance (depth: 1)
+2025-09-25 21:14:46 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/formation-salaries-particulier-employeur (depth: 1)
+2025-09-25 21:14:48 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/formation-salaries-particulier-employeur/formation-assistant-maternel (depth: 1)
+2025-09-25 21:14:48 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/formation-salaries-particulier-employeur/formation-assistant-de-vie (depth: 1)
+2025-09-25 21:14:48 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/formation-salaries-particulier-employeur/formation-employe-familial-2 (depth: 1)
+2025-09-25 21:14:58 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-25 21:14:58 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-09-25 21:14:59 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://www.ifap.net
+2025-09-25 21:14:59 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://www.ifap.net
+2025-09-25 21:14:59 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-09-25 21:15:00 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/ (depth: 0)
+2025-09-25 21:15:01 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/calendrier (depth: 1)
+2025-09-25 21:15:01 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/categorie/10/tcf?ca-filter%5Bc_type_de_formation%5D=&ca-filter%5Bc_profil%5D=&keyword=&cpf=&categorie=10&filter= (depth: 1)
+2025-09-25 21:15:01 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap?ca-filter%5Bc_type_de_formation%5D=certifiante&ca-filter%5Bc_profil%5D=&keyword=&cpf=&categorie=&filter= (depth: 1)
+2025-09-25 21:15:04 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/formations-salaries-sap (depth: 1)
+2025-09-25 21:15:04 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/bulletins-inscription-formations-ifap (depth: 1)
+2025-09-25 21:15:04 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap?ca-filter%5Bc_type_de_formation%5D=&ca-filter%5Bc_profil%5D=employe-familial (depth: 1)
+2025-09-25 21:15:06 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap?ca-filter%5Bc_type_de_formation%5D=&ca-filter%5Bc_profil%5D=assistante-maternelle (depth: 1)
+2025-09-25 21:15:06 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap?ca-filter%5Bc_type_de_formation%5D=&ca-filter%5Bc_profil%5D=garde-enfants (depth: 1)
+2025-09-25 21:15:06 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap?ca-filter%5Bc_type_de_formation%5D=&ca-filter%5Bc_profil%5D=assistant-vie (depth: 1)
+2025-09-25 21:15:10 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/organisme-formation-assistance-personne (depth: 1)
+2025-09-25 21:15:10 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/catalogue?ca-filter%5Bc_type_de_formation%5D=&ca-filter%5Bc_profil%5D=&keyword=&cpf=&categorie=&filter= (depth: 1)
+2025-09-25 21:15:10 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/temoignages-institut-formation-assistance-personne (depth: 1)
+2025-09-25 21:15:13 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/formations-diplomantes (depth: 1)
+2025-09-25 21:15:13 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/formations-services-a-la-personne (depth: 1)
+2025-09-25 21:15:13 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/politique-confidentialite (depth: 1)
+2025-09-25 21:15:15 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/formations-diplomantes/diplome-advf (depth: 1)
+2025-09-25 21:15:15 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/formation-salaries-particulier-employeur (depth: 1)
+2025-09-25 21:15:15 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/formations-diplomantes/cap-petite-enfance (depth: 1)
+2025-09-25 21:15:17 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/formation-salaries-particulier-employeur/formation-assistant-maternel (depth: 1)
+2025-09-25 21:15:17 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/formation-salaries-particulier-employeur/formation-assistant-de-vie (depth: 1)
+2025-09-25 21:15:17 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/formation-salaries-particulier-employeur/formation-employe-familial-2 (depth: 1)
+2025-09-25 21:15:19 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/formation-salaries-particulier-employeur/formation-garde-enfant-2 (depth: 1)
+2025-09-25 21:15:19 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/formation-fle-paris (depth: 1)
+2025-09-25 21:15:19 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/examen-tcf-paris (depth: 1)
+2025-09-25 21:15:22 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/contacter-institut-formation-assistance-personne (depth: 1)
+2025-09-25 21:15:22 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/mentions-legales (depth: 1)
+2025-09-25 21:15:22 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/actualites-institut-formation-assistance-personne (depth: 1)
+2025-09-25 21:15:24 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/formation/162/passage-examen-tcf-anf (depth: 2)
+2025-09-25 21:15:24 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/catalogue (depth: 2)
+2025-09-25 21:15:24 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/formation/77/passage-examen-tcf-anf (depth: 2)
+2025-09-25 21:15:28 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/formation/194/preparation-a-lexamen-du-tcf-irn-cours-collectif (depth: 2)
+2025-09-25 21:15:28 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/formation/195/preparation-a-lexamen-du-tcf-irn-cours-collectif-niveau-b1 (depth: 2)
+2025-09-25 21:15:28 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/formation/207/preparation-a-lexamen-du-tcf-irn-cours-collectif-niveau-b2 (depth: 2)
+2025-09-25 21:15:31 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/formation/199/preparation-a-lexamen-du-tcf-irn-cours-individuel-niveau-a2 (depth: 2)
+2025-09-25 21:15:31 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/formation/204/preparation-a-lexamen-du-tcf-irn-cours-individuel-niveau-b1 (depth: 2)
+2025-09-25 21:15:31 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/formation/206/preparation-a-lexamen-du-tcf-irn-cours-individuel-niveau-b2 (depth: 2)
+2025-09-25 21:15:35 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/formation/151/preparation-au-tcf-irn-tcf-en-e-learning (depth: 2)
+2025-09-25 21:15:35 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/contact (depth: 2)
+2025-09-25 21:15:35 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/calendrier (depth: 2)
+2025-09-25 21:15:38 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/formation/207/preparation-a-lexamen-du-tcf-irn-cours-collectif-niveau-b2/2531 (depth: 2)
+2025-09-25 21:15:38 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/panier (depth: 2)
+2025-09-25 21:15:38 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/formation/77/passage-examen-tcf-anf/2685 (depth: 2)
+2025-09-25 21:15:41 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/formation/77/passage-examen-tcf-anf/2695 (depth: 2)
+2025-09-25 21:15:41 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/formation/194/preparation-a-lexamen-du-tcf-irn-cours-collectif/2532 (depth: 2)
+2025-09-25 21:15:41 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-particuliers/formation/77/passage-examen-tcf-anf/2686 (depth: 2)
+2025-09-25 21:15:45 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/151/preparation-au-tcf-irn-tcf-en-e-learning (depth: 2)
+2025-09-25 21:15:45 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/55/cap-aepe (depth: 2)
+2025-09-25 21:15:45 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/116/cap-accompagnement-educatif-a-la-petite-enfance (depth: 2)
+2025-09-25 21:15:48 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/172/advf-bloc-3-assurer-le-relai-du-parent-dans-la-garde-de-lenfant-a-domicile (depth: 2)
+2025-09-25 21:15:48 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/231/advf (depth: 2)
+2025-09-25 21:15:48 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/31/sauveteur-secouriste-du-travail-dans-le-cadre-de-la-prise-en-charge-denfants (depth: 2)
+2025-09-25 21:15:52 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/225/advf-bloc-1-et-bloc-2 (depth: 2)
+2025-09-25 21:15:52 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/170/advf-ccp2-entretenir-le-logement-et-le-linge-dun-particulier (depth: 2)
+2025-09-25 21:15:52 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/169/advf-ccp1-entretenir-le-logement-et-le-linge-dun-particulier (depth: 2)
+2025-09-25 21:15:55 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/catalogue (depth: 2)
+2025-09-25 21:15:55 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/contact (depth: 2)
+2025-09-25 21:15:55 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/panier (depth: 2)
+2025-09-25 21:15:58 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/150/cuisiner-au-quotidien/2640 (depth: 2)
+2025-09-25 21:15:58 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/152/assistance-administrative-dune-personne-en-situation-de-dependance/2659 (depth: 2)
+2025-09-25 21:15:58 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/96/acquerir-les-competences-de-base-en-francais-professionnel-niveau-a11-ou-a1-requis/2746 (depth: 2)
+2025-09-25 21:16:02 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/96/acquerir-les-competences-de-base-en-francais-professionnel-niveau-a11-ou-a1-requis/2750 (depth: 2)
+2025-09-25 21:16:02 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/96/acquerir-les-competences-de-base-en-francais-professionnel-niveau-a11-ou-a1-requis/2748 (depth: 2)
+2025-09-25 21:16:05 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/254/module-e-learning-cap-aepe (depth: 2)
+2025-09-25 21:16:05 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/169/advf-ccp1-entretenir-le-logement-et-le-linge-dun-particulier/sp_8 (depth: 2)
+2025-09-25 21:16:08 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/225/advf-bloc-1-et-bloc-2/sp_9 (depth: 2)
+2025-09-25 21:16:08 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/170/advf-ccp2-entretenir-le-logement-et-le-linge-dun-particulier/sp_10 (depth: 2)
+2025-09-25 21:16:08 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/172/advf-bloc-3-assurer-le-relai-du-parent-dans-la-garde-de-lenfant-a-domicile/sp_6 (depth: 2)
+2025-09-25 21:16:11 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/234/advf-blended-learning/sp_7 (depth: 2)
+2025-09-25 21:16:11 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/228/advf-bloc-1-et-bloc-2/sp_11 (depth: 2)
+2025-09-25 21:16:15 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/68/ameliorer-ses-competences-en-francais-professionnel/2751 (depth: 2)
+2025-09-25 21:16:15 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/68/ameliorer-ses-competences-en-francais-professionnel/2752 (depth: 2)
+2025-09-25 21:16:18 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/69/affiner-ses-competences-en-francais-professionnel/2756 (depth: 2)
+2025-09-25 21:16:18 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/212/entretien-du-cadre-de-vie-et-du-linge/2736 (depth: 2)
+2025-09-25 21:16:18 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/70/developper-ses-competences-a-lecrit-en-francais-professionnel/2760 (depth: 2)
+2025-09-25 21:16:22 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/211/soin-des-animaux-et-entretien-des-plantes/2737 (depth: 2)
+2025-09-25 21:16:22 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/19/comprendre-les-emotions-pour-mieux-accompagner-lenfant-au-quotidien/2743 (depth: 2)
+2025-09-25 21:16:22 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/71/ameliorer-la-qualite-de-ses-ecrits-professionnels/2762 (depth: 2)
+2025-09-25 21:16:25 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/150/cuisiner-au-quotidien/2738 (depth: 2)
+2025-09-25 21:16:25 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/68/ameliorer-ses-competences-en-francais-professionnel/2753 (depth: 2)
+2025-09-25 21:16:25 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/68/ameliorer-ses-competences-en-francais-professionnel/2754 (depth: 2)
+2025-09-25 21:16:29 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/69/affiner-ses-competences-en-francais-professionnel/2757 (depth: 2)
+2025-09-25 21:16:29 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/68/ameliorer-ses-competences-en-francais-professionnel/2755 (depth: 2)
+2025-09-25 21:16:29 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/70/developper-ses-competences-a-lecrit-en-francais-professionnel/2759 (depth: 2)
+2025-09-25 21:16:33 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/69/affiner-ses-competences-en-francais-professionnel/2758 (depth: 2)
+2025-09-25 21:16:33 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/71/ameliorer-la-qualite-de-ses-ecrits-professionnels/2761 (depth: 2)
+2025-09-25 21:16:33 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/213/travailler-de-nuit-aupres-dune-personne-en-situation-de-dependance/2744 (depth: 2)
+2025-09-25 21:16:37 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/214/le-sommeil-de-lenfant/2745 (depth: 2)
+2025-09-25 21:16:37 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/27/repas-de-fetes-et-receptions-familiales/2739 (depth: 2)
+2025-09-25 21:16:37 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/149/developper-et-perenniser-son-activite-professionnelle-aupres-de-particuliers-employeurs/2742 (depth: 2)
+2025-09-25 21:16:40 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/27/repas-de-fetes-et-receptions-familiales/2740 (depth: 2)
+2025-09-25 21:16:40 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/148/creer-et-entretenir-de-bonnes-relations-professionnelles-communiquer-et-sorganiser/2741 (depth: 2)
+2025-09-25 21:16:43 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-entreprises?ca-filter%5Bc_type_de_formation%5D=&ca-filter%5Bc_profil%5D=entreprise (depth: 2)
+2025-09-25 21:16:43 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-entreprises/categorie/8/cap-petite-enfance (depth: 2)
+2025-09-25 21:16:46 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-entreprises/categorie/4/personnes-aidees-adultes (depth: 2)
+2025-09-25 21:16:46 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap/formation/59/formation-matu (depth: 2)
+2025-09-25 21:16:46 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-entreprises/categorie/7/securite-et-prevention (depth: 2)
+2025-09-25 21:16:49 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-entreprises/categorie/12/petite-enfance (depth: 2)
+2025-09-25 21:16:49 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-entreprises/categorie/6/alimentation-et-accompagnement-au-repas (depth: 2)
+2025-09-25 21:16:49 - services.crawler.crawler - INFO - 🔍 Crawling: https://www.ifap.net/catalogue-ifap-entreprises/categorie/13/activite-professionnelle-et-communication (depth: 2)
+2025-09-25 21:16:52 - services.crawler.crawler - INFO - ✅ Crawl terminé en 112.27s - 100 pages crawlées
+2025-09-25 21:16:52 - services.crawler.crawler - INFO - 📊 Statistiques: 100 URLs visitées, 100 succès
+2025-09-25 21:16:52 - services.crawler.crawler - INFO - crawl exécutée en 112.27s
+2025-09-25 21:16:52 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_www_ifap_net_20250925_211652.json
+2025-09-25 21:16:52 - services.crawler.crawler - INFO - start_crawl exécutée en 112.28s
+2025-10-04 20:09:21 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-04 20:09:22 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-04 20:09:51 - services.crawler.crawler - INFO - 🎯 Démarrage du crawl pour: https://maison-massimo.com/
+2025-10-04 20:09:51 - services.crawler.crawler - INFO - 🚀 Début du crawl de https://maison-massimo.com/
+2025-10-04 20:09:51 - services.crawler.crawler - INFO - Configuration: max_pages=100, max_depth=3
+2025-10-04 20:09:51 - services.crawler.crawler - INFO - 🔍 Crawling: https://maison-massimo.com/ (depth: 0)
+2025-10-04 20:09:52 - services.crawler.crawler - INFO - 🔍 Crawling: https://maison-massimo.com/search (depth: 1)
+2025-10-04 20:09:52 - services.crawler.crawler - INFO - 🔍 Crawling: https://maison-massimo.com/cart (depth: 1)
+2025-10-04 20:09:52 - services.crawler.crawler - INFO - 🔍 Crawling: https://maison-massimo.com/collections/all (depth: 1)
+2025-10-04 20:09:53 - services.crawler.crawler - INFO - 🔍 Crawling: https://maison-massimo.com/pages/contact (depth: 1)
+2025-10-04 20:09:53 - services.crawler.crawler - INFO - 🔍 Crawling: https://maison-massimo.com/products/coeur-blanc (depth: 1)
+2025-10-04 20:09:53 - services.crawler.crawler - INFO - 🔍 Crawling: https://maison-massimo.com/pages/qui-sommes-nous (depth: 1)
+2025-10-04 20:09:53 - services.crawler.crawler - INFO - 🔍 Crawling: https://maison-massimo.com/collections/massimo (depth: 1)
+2025-10-04 20:09:53 - services.crawler.crawler - INFO - 🔍 Crawling: https://maison-massimo.com/products/gold-signature (depth: 1)
+2025-10-04 20:09:53 - services.crawler.crawler - INFO - 🔍 Crawling: https://maison-massimo.com/products/la-rose-bleu (depth: 1)
+2025-10-04 20:09:55 - services.crawler.crawler - INFO - 🔍 Crawling: https://maison-massimo.com/products/royal-oak (depth: 1)
+2025-10-04 20:09:55 - services.crawler.crawler - INFO - 🔍 Crawling: https://maison-massimo.com/products/coffret-decouverte (depth: 1)
+2025-10-04 20:09:55 - services.crawler.crawler - INFO - 🔍 Crawling: https://maison-massimo.com/pages/faq (depth: 1)
+2025-10-04 20:09:55 - services.crawler.crawler - INFO - 🔍 Crawling: https://maison-massimo.com/pages/conditions-generales-de-vente (depth: 1)
+2025-10-04 20:09:55 - services.crawler.crawler - INFO - 🔍 Crawling: https://maison-massimo.com/pages/mentions-legales (depth: 1)
+2025-10-04 20:09:55 - services.crawler.crawler - INFO - 🔍 Crawling: https://maison-massimo.com/pages/politique-de-confidentialite (depth: 1)
+2025-10-04 20:09:56 - services.crawler.crawler - INFO - 🔍 Crawling: https://maison-massimo.com/pages/politique-dexpedition (depth: 1)
+2025-10-04 20:09:56 - services.crawler.crawler - INFO - 🔍 Crawling: https://maison-massimo.com/policies/refund-policy (depth: 1)
+2025-10-04 20:09:57 - services.crawler.crawler - INFO - 🔍 Crawling: https://maison-massimo.com/products/voyage-de-nuit (depth: 2)
+2025-10-04 20:09:58 - services.crawler.crawler - INFO - 🔍 Crawling: https://maison-massimo.com/collections/vendors?q=Maison%20Massimo (depth: 2)
+2025-10-04 20:09:59 - services.crawler.crawler - INFO - 🔍 Crawling: https://maison-massimo.com/pages/espace-revendeur (depth: 2)
+2025-10-04 20:09:59 - services.crawler.crawler - INFO - ✅ Crawl terminé en 8.44s - 21 pages crawlées
+2025-10-04 20:09:59 - services.crawler.crawler - INFO - 📊 Statistiques: 21 URLs visitées, 21 succès
+2025-10-04 20:09:59 - services.crawler.crawler - INFO - crawl exécutée en 8.44s
+2025-10-04 20:09:59 - services.crawler.crawler - INFO - 💾 Rapport sauvegardé: crawl_data/crawl_maison-massimo_com_20251004_200959.json
+2025-10-04 20:09:59 - services.crawler.crawler - INFO - start_crawl exécutée en 8.44s
+2025-10-28 15:33:31 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 15:33:31 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 18:04:24 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 18:04:24 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 18:07:18 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 18:07:19 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 21:05:09 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 21:05:10 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 21:48:11 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 21:48:12 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 21:57:45 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 21:57:45 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 22:15:30 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 22:15:30 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 22:23:40 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 22:24:01 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 22:25:25 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 22:25:46 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 22:25:53 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 22:26:00 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 22:26:12 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 22:26:21 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 22:26:39 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 22:26:59 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 22:27:08 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 22:29:38 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 22:29:39 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 23:16:15 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 23:16:16 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 23:17:24 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 23:17:26 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 23:18:53 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 23:19:23 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 23:19:24 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 23:25:44 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 23:25:49 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 23:25:53 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 23:25:59 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 23:26:30 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 23:26:30 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 23:26:58 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 23:45:45 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 23:45:55 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 23:46:02 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 23:46:31 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-28 23:46:31 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-29 00:06:03 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-29 00:06:04 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-29 00:12:49 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-29 00:12:49 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-29 00:19:15 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-29 00:19:16 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-30 14:20:07 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log
+2025-10-30 14:20:07 - services.crawler.crawler - INFO - Logger initialisé pour crawler - Fichier: logging/crawler.log

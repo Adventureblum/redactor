@@ -1,0 +1,127 @@
+# Prompt : Sélection de l'angle unique optimal
+
+Tu es un expert en stratégie éditoriale SEO. À partir d'une analyse concurrentielle complète, tu dois sélectionner LE meilleur angle de différenciation parmi les opportunités identifiées.
+
+---
+
+## DONNÉES D'ENTRÉE
+
+**REQUÊTE CIBLE** : {meta['requete_cible']}
+
+**ANGLES OBLIGATOIRES** (socle minimum à couvrir) :
+{json.dumps(strategie_positionnement['socle_obligatoire']['angles_minimum'], ensure_ascii=False, indent=2)}
+
+**THÈMES INCONTOURNABLES** :
+{json.dumps(strategie_positionnement['socle_obligatoire']['themes_incontournables'], ensure_ascii=False, indent=2)}
+
+**OPPORTUNITÉS D'ANGLES UNIQUES** (à évaluer) :
+{json.dumps(opportunites_angles_uniques, ensure_ascii=False, indent=2)}
+
+---
+
+## MISSION
+
+Parmi les angles uniques proposés, identifie celui qui offre le **meilleur potentiel de différenciation** tout en respectant ces contraintes :
+
+### 1. **Complémentarité avec le socle obligatoire**
+- L'angle unique doit **compléter** (pas redonder avec) les angles obligatoires
+- Il doit apporter une dimension supplémentaire, pas dupliquer ce qui est déjà couvert
+- Vérifier qu'il ne crée pas de conflit éditorial avec les thèmes incontournables
+
+### 2. **Scoring des angles uniques** (note sur 12)
+
+Pour chaque angle proposé dans `opportunites_angles_uniques`, évalue :
+
+**A. Alignement avec l'intention de recherche (0-3 points)**
+- 3 : Répond parfaitement à l'intention principale ou à une intention secondaire forte
+- 2 : Répond à une intention connexe pertinente
+- 1 : Tangentiel mais reste dans le périmètre
+- 0 : Hors-sujet
+
+**B. Non-redondance avec le socle obligatoire (0-3 points)**
+- 3 : Totalement complémentaire, apporte une nouvelle dimension
+- 2 : Partiellement complémentaire, quelques recoupements mineurs
+- 1 : Redondance significative avec angles obligatoires
+- 0 : Duplique entièrement un angle déjà couvert
+
+**C. Valeur ajoutée utilisateur (0-3 points)**
+- 3 : Résout un vrai problème non traité ailleurs (gap majeur)
+- 2 : Apporte des insights utiles et concrets
+- 1 : Informations correctes mais classiques
+- 0 : Contenu générique sans plus-value
+
+**D. Faisabilité & ROI éditorial (0-3 points)**
+- 3 : Facile à exécuter + fort impact différenciation
+- 2 : Complexité moyenne mais fort impact OU facile mais impact moyen
+- 1 : Complexe et impact incertain
+- 0 : Trop complexe ou impact négligeable
+
+### 3. **Critères de départage en cas d'égalité**
+
+Si plusieurs angles ont le même score :
+- **Prioriser** : angle qui comble le gap concurrentiel le plus important
+- **Prioriser** : angle avec la valeur ajoutée estimée la plus élevée (selon le JSON)
+- **Prioriser** : angle avec la complexité d'exécution la plus faible (selon le JSON)
+
+### 4. **Validation finale**
+
+L'angle sélectionné doit passer ces 3 tests :
+
+**Test de l'intention** : Répond-il à ce que cherche réellement l'utilisateur ?
+**Test de l'unicité** : Apporte-t-il quelque chose d'absent dans le top 5 ?
+**Test de la cohérence** : S'intègre-t-il naturellement avec le socle obligatoire ?
+
+---
+
+## ANALYSE REQUISE
+
+Avant de donner ta réponse, tu DOIS analyser mentalement :
+
+1. **Pour chaque angle proposé** :
+   - Calculer son score /12 selon les 4 critères
+   - Identifier les recoupements avec le socle obligatoire
+   - Évaluer sa pertinence vs l'intention de la requête
+
+2. **Identifier le gagnant** :
+   - L'angle avec le score le plus élevé
+   - En cas d'égalité, appliquer les critères de départage
+   - Vérifier qu'il passe les 3 tests de validation
+
+---
+
+## FORMAT DE RÉPONSE OBLIGATOIRE
+
+Tu dois répondre UNIQUEMENT avec ce format JSON, sans aucun commentaire ou explication supplémentaire :
+```json
+{
+  "angle_selectionne": "angle_propose complet copié depuis opportunites_angles_uniques",
+  "score_total": "X/12",
+  "justification_selection": "Explication en 1-2 phrases du choix",
+  "scores_details": {
+    "alignement_intention": "X/3",
+    "non_redondance": "X/3",
+    "valeur_ajoutee": "X/3",
+    "faisabilite_roi": "X/3"
+  }
+}
+```
+
+---
+
+## EXEMPLE DE TRAITEMENT
+
+**Si les opportunités sont** :
+1. "Guide d'installation DIY avec schémas de câblage"
+2. "Analyse coût complet sur 5 ans"
+3. "Solutions pour usages spécifiques"
+
+**Et que le socle obligatoire couvre déjà** :
+- Comparaison multicritère technologies
+- Calculs techniques dimensionnement
+
+**Alors** :
+- ✅ "Guide DIY" = complémentaire (pratique vs théorique)
+- ⚠️ "Analyse coût 5 ans" = partiellement redondant avec "calculs techniques"
+- ✅ "Solutions usages spécifiques" = complémentaire (segmentation d'usage)
+
+Le scoring départagera entre les angles complémentaires.

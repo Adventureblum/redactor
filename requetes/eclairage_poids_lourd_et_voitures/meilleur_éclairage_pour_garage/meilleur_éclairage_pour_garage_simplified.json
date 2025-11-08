@@ -1,11 +1,207 @@
 {
   "meta": {
     "requete_cible": "meilleur éclairage pour garage",
-    "date_analyse": "2025-10-31T18:22:00.042251",
-    "language": "en",
+    "date_analyse": "2025-11-08T22:34:35.738305",
+    "language": "fr",
     "analyses_totales": 1
   },
   "syntheses_strategiques": {
-    "analysis_3": {}
+    "analysis_3": {
+      "analyse_angles_concurrentiels": {
+        "angles_dominants": [
+          {
+            "angle": "Approche technique comparative multi-critères",
+            "frequence_utilisation": "Élevée (2 articles sur 3 pertinents)",
+            "niveau_profondeur_moyen": "Expert à Approfondi",
+            "positionnement_requis": "Nécessaire pour concurrencer les leaders",
+            "exemples_reussis": [
+              "Article position 2 (guide expert)",
+              "Article position 4 (guide technique)"
+            ]
+          },
+          {
+            "angle": "Analyse économique et retour sur investissement",
+            "frequence_utilisation": "Moyenne",
+            "niveau_profondeur_moyen": "Approfondi",
+            "positionnement_requis": "Recommandé pour différenciation",
+            "exemples_reussis": [
+              "Article position 2 (calculs ROI détaillés)"
+            ]
+          }
+        ],
+        "angles_emergents": [
+          {
+            "angle": "Solutions modulaires et innovantes",
+            "utilise_par": "Article position 5",
+            "potentiel_differentiation": "Élevé",
+            "difficulte_execution": "Moyenne (nécessite expertise produits)"
+          },
+          {
+            "angle": "Focus sécurité et automatisation",
+            "utilise_par": "Articles positions 2 et 4",
+            "potentiel_differentiation": "Moyen",
+            "difficulte_execution": "Faible"
+          }
+        ]
+      },
+      "themes_obligatoires": [
+        {
+          "theme": "Comparaison LED vs fluorescents vs halogènes",
+          "present_chez": [
+            "Position 2",
+            "Position 4"
+          ],
+          "niveau_minimum_requis": "Approfondi avec chiffres",
+          "profondeur_observee": "Expert (calculs détaillés)",
+          "justification": "Thème central pour la décision d'achat"
+        },
+        {
+          "theme": "Calculs de luminosité (lux/lumens)",
+          "present_chez": [
+            "Position 2",
+            "Position 4"
+          ],
+          "niveau_minimum_requis": "Pratique avec exemples concrets",
+          "profondeur_observee": "Expert (formules personnalisables)",
+          "justification": "Permet le dimensionnement précis"
+        },
+        {
+          "theme": "Indices de protection (IP/IK)",
+          "present_chez": [
+            "Position 2",
+            "Position 4"
+          ],
+          "niveau_minimum_requis": "Approfondi avec recommandations",
+          "profondeur_observee": "Approfondi (explications détaillées)",
+          "justification": "Critère technique essentiel pour durabilité"
+        },
+        {
+          "theme": "Température de couleur adaptée",
+          "present_chez": [
+            "Position 2",
+            "Position 4",
+            "Position 5"
+          ],
+          "niveau_minimum_requis": "Approfondi avec cas d'usage",
+          "profondeur_observee": "Approfondi (Kelvin expliqués)",
+          "justification": "Impact direct sur le confort visuel"
+        }
+      ],
+      "opportunites_angles_uniques": [
+        {
+          "angle_propose": "Guide d'optimisation progressive (budget limité → solution idéale)",
+          "justification": "Absent dans le top, répond aux différents budgets utilisateurs",
+          "niveau_ambition": "Élevé",
+          "valeur_ajoutee_estimee": "Très élevée",
+          "complexite_execution": "Moyenne"
+        },
+        {
+          "angle_propose": "Analyse cycle de vie complet (achat → installation → maintenance → recyclage)",
+          "justification": "Approche holistique manquante chez les concurrents",
+          "niveau_ambition": "Élevé",
+          "valeur_ajoutee_estimee": "Élevée",
+          "complexite_execution": "Élevée"
+        },
+        {
+          "angle_propose": "Focus spécifique garage-atelier vs garage-stockage",
+          "justification": "Différenciation par usage réel manquante",
+          "niveau_ambition": "Moyen",
+          "valeur_ajoutee_estimee": "Élevée",
+          "complexite_execution": "Faible"
+        }
+      ],
+      "gaps_concurrentiels": [
+        {
+          "gap_identifie": "Éclairage naturel et optimisation lumière du jour",
+          "type": "Thématique complète manquante",
+          "potentiel_seo": "Élevé (long tail)",
+          "recommandation_exploitation": "Développer un chapitre dédié avec solutions hybrides"
+        },
+        {
+          "gap_identifie": "Réglementations et normes spécifiques",
+          "type": "Expertise technique avancée",
+          "potentiel_seo": "Moyen mais haute autorité",
+          "recommandation_exploitation": "Intégrer les normes françaises/européennes"
+        },
+        {
+          "gap_identifie": "Solutions temporaires/d'urgence",
+          "type": "Cas d'usage pratique",
+          "potentiel_seo": "Moyen",
+          "recommandation_exploitation": "Section dédiée aux solutions rapides"
+        }
+      ],
+      "angles_a_exclure": [
+        {
+          "angle_declasse": "Contenu purement promotionnel sans analyse technique",
+          "present_dans_positions": [
+            "Position 4 partiellement"
+          ],
+          "absent_top5_mais_present_bas_classement": [],
+          "raison_exclusion": "Perte de crédibilité et autorité",
+          "risque_positionnement": "Classement bas pour intention informationnelle"
+        },
+        {
+          "angle_declasse": "Approche trop générique sans chiffres concrets",
+          "present_dans_positions": [],
+          "absent_top5_mais_present_bas_classement": [
+            "Positions 1 et 3 (hors sujet)"
+          ],
+          "raison_exclusion": "Ne répond pas aux attentes techniques des chercheurs",
+          "risque_positionnement": "Impossible de concurrencer le top 3"
+        }
+      ],
+      "strategie_positionnement": {
+        "socle_obligatoire": {
+          "angles_minimum": [
+            "Comparaison technique détaillée",
+            "Calculs de dimensionnement",
+            "Analyse économique long terme"
+          ],
+          "profondeur_requise": "Expert avec chiffres vérifiables",
+          "themes_incontournables": [
+            "Technologies LED/fluorescents",
+            "Indices IP/IK",
+            "Températures couleur",
+            "Usages spécifiques"
+          ]
+        },
+        "differentiation_recommandee": {
+          "angles_uniques_proposes": [
+            "Optimisation progressive budget",
+            "Focus garage-atelier spécifique",
+            "Solutions hybrides naturel/artificiel"
+          ],
+          "approfondissements_cibles": [
+            "Cycle de vie complet",
+            "Réglementations spécifiques",
+            "Maintenance préventive"
+          ],
+          "approches_innovantes": [
+            "Calculateur interactif intégré",
+            "Arbre décisionnel visuel",
+            "Témoignages experts électriciens"
+          ]
+        },
+        "niveau_ambition_global": "Positionnement leader (top 3)",
+        "effort_editorial_estime": "Élevé (2500+ mots avec éléments interactifs)"
+      },
+      "recommandation_positionnement_global": {
+        "type_contenu_optimal": "Guide expert ultime avec éléments interactifs",
+        "intention_cible": "Informationnelle avancée avec orientation décisionnelle",
+        "portee_commerciale_recommandee": "Indirecte via recommandations produits objectives",
+        "orientation_ctal_optimale": "Outils pratiques (calculateurs, checklists) plutôt que vente directe"
+      }
+    }
+  },
+  "angle_select": {
+    "angle_selectionne": "Guide d'optimisation progressive (budget limité → solution idéale)",
+    "score_total": "10/12",
+    "justification_selection": "Cet angle comble un manque évident dans le top des résultats en répondant directement aux préoccupations budgétaires des utilisateurs, tout en étant parfaitement complémentaire du socle technique obligatoire.",
+    "scores_details": {
+      "alignement_intention": "3/3",
+      "non_redondance": "3/3",
+      "valeur_ajoutee": "3/3",
+      "faisabilite_roi": "1/3"
+    }
   }
 }

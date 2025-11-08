@@ -1,0 +1,526 @@
+2025-09-01 17:18:30 - services.suggest.enhanced_suggestion_logic - INFO - Initialisation du générateur de suggestions amélioré
+2025-09-01 17:18:30 - services.suggest.enhanced_suggestion_logic - INFO - Cache chargé: 1682 entrées
+2025-09-01 17:18:30 - services.suggest.enhanced_suggestion_logic - INFO - Génération des suggestions pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:30 - services.suggest.enhanced_suggestion_logic - INFO - Configuration: 15 suggestions/requête, 5 workers, max 200 suggestions
+2025-09-01 17:18:31 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations gratuit'
+2025-09-01 17:18:31 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:31 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:31 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:32 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations pas'
+2025-09-01 17:18:32 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:32 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:32 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:32 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:32 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:32 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:32 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:32 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:32 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:32 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:32 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:32 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:32 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:32 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:33 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:33 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations gratuit'
+2025-09-01 17:18:33 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:33 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:34 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:34 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:34 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:34 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:34 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:34 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:34 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:34 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:34 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:34 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:35 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:35 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:35 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:35 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:35 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:35 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:35 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:36 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations gratuit'
+2025-09-01 17:18:36 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:36 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:36 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations gratuit'
+2025-09-01 17:18:36 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:36 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:36 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations gratuit'
+2025-09-01 17:18:37 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:37 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:37 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:37 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:37 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations gratuit'
+2025-09-01 17:18:38 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:38 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:38 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:38 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:38 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:38 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:38 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:39 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:39 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:39 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:39 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:39 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:40 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:40 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:40 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:40 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:40 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:40 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:40 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:40 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:41 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations gratuit'
+2025-09-01 17:18:41 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:41 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:41 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:41 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations pas'
+2025-09-01 17:18:41 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:41 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:42 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:42 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:42 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:42 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:42 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:42 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:42 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:42 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:42 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:42 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:43 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations gratuit'
+2025-09-01 17:18:43 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:43 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations gratuit'
+2025-09-01 17:18:44 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:44 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:44 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:44 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:44 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:44 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:45 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:45 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:45 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:45 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:45 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:45 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:45 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:45 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations gratuit'
+2025-09-01 17:18:45 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:45 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:45 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:46 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'shooting-permits-and-locations'
+2025-09-01 17:18:46 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:46 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:46 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:47 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback Bing pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:47 - services.suggest.enhanced_suggestion_logic - INFO - Génération de suggestions intelligentes pour: 'shooting-permits-and-locations'
+2025-09-01 17:18:47 - services.suggest.enhanced_suggestion_logic - INFO - Généré 5 suggestions intelligentes pour 'shooting-permits-and-locations'
+2025-09-01 17:18:47 - services.suggest.enhanced_suggestion_logic - INFO - Cache sauvegardé
+2025-09-01 17:18:47 - services.suggest.enhanced_suggestion_logic - INFO - Résultats sauvegardés: static/suggestions_enhanced_shooting-permits-and-locations.json
+2025-09-01 17:18:47 - services.suggest.enhanced_suggestion_logic - INFO - Terminé: 2 suggestions uniques générées
+2025-09-01 17:42:43 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-01 17:42:44 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-01 17:42:51 - services.suggest.enhanced_suggestion_logic - INFO - Initialisation du générateur de suggestions amélioré
+2025-09-01 17:42:51 - services.suggest.enhanced_suggestion_logic - INFO - Cache chargé: 1682 entrées
+2025-09-01 17:42:51 - services.suggest.enhanced_suggestion_logic - INFO - Génération des suggestions pour: 'prospection linkedin'
+2025-09-01 17:42:51 - services.suggest.enhanced_suggestion_logic - INFO - Configuration: 15 suggestions/requête, 5 workers, max 200 suggestions
+2025-09-01 17:42:52 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:42:53 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:42:53 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:42:53 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:42:53 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:42:53 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:42:54 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:42:54 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:42:54 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:42:55 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:42:55 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:42:55 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:42:55 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:42:56 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:42:56 - services.suggest.enhanced_suggestion_logic - INFO - Cache sauvegardé
+2025-09-01 17:42:56 - services.suggest.enhanced_suggestion_logic - INFO - Résultats sauvegardés: static/suggestions_enhanced_prospection_linkedin.json
+2025-09-01 17:42:56 - services.suggest.enhanced_suggestion_logic - INFO - Terminé: 12 suggestions uniques générées
+2025-09-01 17:44:06 - services.suggest.enhanced_suggestion_logic - INFO - Initialisation du générateur de suggestions amélioré
+2025-09-01 17:44:06 - services.suggest.enhanced_suggestion_logic - INFO - Cache chargé: 1682 entrées
+2025-09-01 17:44:06 - services.suggest.enhanced_suggestion_logic - INFO - Génération des suggestions pour: 'prospection linkedin'
+2025-09-01 17:44:06 - services.suggest.enhanced_suggestion_logic - INFO - Configuration: 15 suggestions/requête, 5 workers, max 200 suggestions
+2025-09-01 17:44:06 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:06 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:07 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:07 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:07 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:07 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:08 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:08 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:09 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:09 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:09 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:09 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:09 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:09 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:09 - services.suggest.enhanced_suggestion_logic - INFO - Cache sauvegardé
+2025-09-01 17:44:09 - services.suggest.enhanced_suggestion_logic - INFO - Résultats sauvegardés: static/suggestions_enhanced_prospection_linkedin.json
+2025-09-01 17:44:09 - services.suggest.enhanced_suggestion_logic - INFO - Terminé: 13 suggestions uniques générées
+2025-09-01 17:44:21 - services.suggest.enhanced_suggestion_logic - INFO - Initialisation du générateur de suggestions amélioré
+2025-09-01 17:44:21 - services.suggest.enhanced_suggestion_logic - INFO - Cache chargé: 1682 entrées
+2025-09-01 17:44:21 - services.suggest.enhanced_suggestion_logic - INFO - Génération des suggestions pour: 'prospection linkedin'
+2025-09-01 17:44:21 - services.suggest.enhanced_suggestion_logic - INFO - Configuration: 15 suggestions/requête, 5 workers, max 200 suggestions
+2025-09-01 17:44:22 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'où prospection'
+2025-09-01 17:44:22 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:23 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:23 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:23 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:23 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:23 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'quelle prospection'
+2025-09-01 17:44:24 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:24 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:24 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:25 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:25 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'qui prospection'
+2025-09-01 17:44:25 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:25 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:25 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'quelle'
+2025-09-01 17:44:26 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'quel prospection'
+2025-09-01 17:44:26 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:26 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'qui'
+2025-09-01 17:44:26 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:27 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:27 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:27 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:28 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:28 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:44:28 - services.suggest.enhanced_suggestion_logic - INFO - Cache sauvegardé
+2025-09-01 17:44:28 - services.suggest.enhanced_suggestion_logic - INFO - Résultats sauvegardés: static/suggestions_enhanced_prospection_linkedin.json
+2025-09-01 17:44:28 - services.suggest.enhanced_suggestion_logic - INFO - Terminé: 39 suggestions uniques générées
+2025-09-01 17:45:10 - services.suggest.enhanced_suggestion_logic - INFO - Initialisation du générateur de suggestions amélioré
+2025-09-01 17:45:10 - services.suggest.enhanced_suggestion_logic - INFO - Cache chargé: 1682 entrées
+2025-09-01 17:45:10 - services.suggest.enhanced_suggestion_logic - INFO - Génération des suggestions pour: 'prospection linkedin'
+2025-09-01 17:45:10 - services.suggest.enhanced_suggestion_logic - INFO - Configuration: 20 suggestions/requête, 8 workers, max 500 suggestions
+2025-09-01 17:45:11 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:45:11 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'quel prospection'
+2025-09-01 17:45:11 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'qui prospection'
+2025-09-01 17:45:11 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'où prospection'
+2025-09-01 17:45:11 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:45:12 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:45:12 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:45:12 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:45:12 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:45:12 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:45:12 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'qui'
+2025-09-01 17:45:13 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:45:13 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:45:13 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:45:13 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:45:14 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:45:14 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:45:14 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:45:14 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:45:14 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:45:14 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:45:14 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'quelle prospection'
+2025-09-01 17:45:15 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-01 17:45:16 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'quelle'
+2025-09-01 17:45:16 - services.suggest.enhanced_suggestion_logic - INFO - Cache sauvegardé
+2025-09-01 17:45:16 - services.suggest.enhanced_suggestion_logic - INFO - Résultats sauvegardés: static/suggestions_enhanced_prospection_linkedin.json
+2025-09-01 17:45:16 - services.suggest.enhanced_suggestion_logic - INFO - Terminé: 35 suggestions uniques générées
+2025-09-03 12:45:53 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-03 12:45:54 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-04 01:56:26 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-04 01:56:27 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-04 02:01:53 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-04 02:01:53 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-04 02:05:41 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-04 02:05:41 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-04 02:07:07 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-04 02:07:27 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-04 02:07:27 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-08 12:55:05 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-08 12:55:06 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-08 12:55:38 - services.suggest.enhanced_suggestion_logic - INFO - Initialisation du générateur de suggestions amélioré
+2025-09-08 12:55:38 - services.suggest.enhanced_suggestion_logic - INFO - Cache chargé: 1682 entrées
+2025-09-08 12:55:38 - services.suggest.enhanced_suggestion_logic - INFO - Génération des suggestions pour: 'changement de porte blindé'
+2025-09-08 12:55:38 - services.suggest.enhanced_suggestion_logic - INFO - Configuration: 15 suggestions/requête, 5 workers, max 200 suggestions
+2025-09-08 12:55:46 - services.suggest.enhanced_suggestion_logic - INFO - Cache sauvegardé
+2025-09-08 12:55:46 - services.suggest.enhanced_suggestion_logic - INFO - Résultats sauvegardés: static/suggestions_enhanced_changement_de_porte_blindé.json
+2025-09-08 12:55:46 - services.suggest.enhanced_suggestion_logic - INFO - Terminé: 21 suggestions uniques générées
+2025-09-08 16:25:02 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-08 16:25:03 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-08 16:26:35 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-08 16:26:35 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-08 16:43:20 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-08 16:43:21 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-08 17:01:49 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-08 17:01:49 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-10 13:01:20 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-10 13:01:21 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-10 13:28:27 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-10 13:28:32 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-10 13:28:37 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-10 13:28:43 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-10 13:28:50 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-10 13:28:58 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-10 13:29:12 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-10 13:29:19 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-10 13:29:35 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-10 13:29:39 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-10 13:29:44 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-10 13:29:49 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-10 13:29:54 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-10 13:30:04 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-10 13:30:09 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-10 13:30:15 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-10 13:30:21 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-10 13:31:30 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-10 13:31:30 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 10:57:48 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 10:57:49 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 11:27:22 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 11:27:31 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 11:27:44 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 11:27:50 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 11:30:19 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 11:30:19 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 11:48:14 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 11:48:57 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 12:03:51 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 12:03:51 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 16:38:28 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 16:38:28 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 16:54:45 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 16:54:46 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 16:58:17 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 16:58:18 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 18:35:43 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 18:35:44 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 18:42:33 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 18:42:33 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 18:43:41 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 18:43:42 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 18:46:11 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 18:46:11 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 18:48:16 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 18:48:17 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 18:51:16 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 18:51:16 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 18:52:53 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 18:52:54 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 18:58:49 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-11 18:58:50 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-17 16:31:53 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-17 16:31:54 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-18 12:01:52 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-18 12:01:52 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-18 12:02:33 - services.suggest.enhanced_suggestion_logic - INFO - Initialisation du générateur de suggestions amélioré
+2025-09-18 12:02:33 - services.suggest.enhanced_suggestion_logic - INFO - Cache chargé: 1714 entrées
+2025-09-18 12:02:33 - services.suggest.enhanced_suggestion_logic - INFO - Génération des suggestions pour: 'SEO alternative agence'
+2025-09-18 12:02:33 - services.suggest.enhanced_suggestion_logic - INFO - Configuration: 15 suggestions/requête, 5 workers, max 200 suggestions
+2025-09-18 12:02:42 - services.suggest.enhanced_suggestion_logic - INFO - Cache sauvegardé
+2025-09-18 12:02:42 - services.suggest.enhanced_suggestion_logic - INFO - Résultats sauvegardés: static/suggestions_enhanced_SEO_alternative_agence.json
+2025-09-18 12:02:42 - services.suggest.enhanced_suggestion_logic - INFO - Terminé: 50 suggestions uniques générées
+2025-09-18 13:35:58 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-18 13:35:59 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-18 14:18:56 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-18 14:18:56 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-18 14:19:17 - services.suggest.enhanced_suggestion_logic - INFO - Initialisation du générateur de suggestions amélioré
+2025-09-18 14:19:17 - services.suggest.enhanced_suggestion_logic - INFO - Cache chargé: 1746 entrées
+2025-09-18 14:19:17 - services.suggest.enhanced_suggestion_logic - INFO - Génération des suggestions pour: 'prospection linkedin'
+2025-09-18 14:19:17 - services.suggest.enhanced_suggestion_logic - INFO - Configuration: 15 suggestions/requête, 5 workers, max 200 suggestions
+2025-09-18 14:19:18 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-18 14:19:18 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-18 14:19:17 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-18 14:19:18 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'où prospection'
+2025-09-18 14:19:19 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-18 14:19:21 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-18 14:19:21 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-18 14:19:22 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-18 14:19:22 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-18 14:19:23 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-18 14:19:25 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-18 14:19:27 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'qui prospection'
+2025-09-18 14:19:28 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-18 14:19:28 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'qui'
+2025-09-18 14:19:29 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-18 14:19:30 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-18 14:19:31 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'quel prospection'
+2025-09-18 14:19:31 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-18 14:19:32 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-18 14:19:32 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'quelle prospection'
+2025-09-18 14:19:33 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'quelle'
+2025-09-18 14:19:34 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-18 14:19:35 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-18 14:19:35 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-09-18 14:19:35 - services.suggest.enhanced_suggestion_logic - INFO - Cache sauvegardé
+2025-09-18 14:19:35 - services.suggest.enhanced_suggestion_logic - INFO - Résultats sauvegardés: static/suggestions_enhanced_prospection_linkedin.json
+2025-09-18 14:19:35 - services.suggest.enhanced_suggestion_logic - INFO - Terminé: 46 suggestions uniques générées
+2025-09-19 18:34:22 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-19 18:34:23 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 14:14:33 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 14:14:33 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 14:25:48 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 14:41:39 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 14:41:40 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 19:06:00 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 19:05:59 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 19:20:58 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 19:21:07 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 19:21:20 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 19:21:36 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 19:21:42 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 19:21:48 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 19:21:53 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 19:21:57 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 19:27:19 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 19:27:19 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 19:33:00 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 19:58:08 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 19:58:09 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 20:03:49 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 20:03:58 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 20:05:35 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 20:05:36 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 20:08:22 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 20:08:27 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 20:17:20 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 20:17:20 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 20:51:38 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 20:51:39 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 20:58:47 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 20:59:21 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 20:59:43 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 21:01:02 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 21:01:03 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 21:09:01 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 21:09:39 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 21:10:14 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 21:15:04 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 21:15:04 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 21:20:39 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 21:20:40 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 21:23:22 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-23 21:54:10 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-25 21:06:38 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-25 21:06:39 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-25 21:12:49 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-25 21:12:49 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-25 21:14:58 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-09-25 21:14:58 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-04 20:09:21 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-04 20:09:22 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 15:33:30 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 15:33:31 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 18:04:24 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 18:04:24 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 18:07:18 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 18:07:19 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 21:05:09 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 21:05:10 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 21:48:11 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 21:48:12 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 21:57:45 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 21:57:45 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 22:15:30 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 22:15:30 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 22:15:56 - services.suggest.enhanced_suggestion_logic - INFO - Initialisation du générateur de suggestions amélioré
+2025-10-28 22:15:56 - services.suggest.enhanced_suggestion_logic - INFO - Génération des suggestions pour: 'prospection linkedin'
+2025-10-28 22:15:56 - services.suggest.enhanced_suggestion_logic - INFO - Configuration: 15 suggestions/requête, 5 workers, max 200 suggestions
+2025-10-28 22:15:57 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-10-28 22:15:59 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'qui prospection'
+2025-10-28 22:16:00 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-10-28 22:16:00 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-10-28 22:16:00 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'qui'
+2025-10-28 22:16:00 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-10-28 22:16:00 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-10-28 22:16:01 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-10-28 22:16:01 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-10-28 22:16:03 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'où prospection'
+2025-10-28 22:16:04 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-10-28 22:16:05 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'quel prospection'
+2025-10-28 22:16:06 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-10-28 22:16:07 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-10-28 22:16:10 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-10-28 22:16:10 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-10-28 22:16:11 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-10-28 22:16:12 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-10-28 22:16:12 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-10-28 22:16:12 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-10-28 22:16:13 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'quelle prospection'
+2025-10-28 22:16:14 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-10-28 22:16:15 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'prospection linkedin'
+2025-10-28 22:16:15 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'quelle'
+2025-10-28 22:16:17 - services.suggest.enhanced_suggestion_logic - INFO - Cache sauvegardé
+2025-10-28 22:16:17 - services.suggest.enhanced_suggestion_logic - INFO - Résultats sauvegardés: static/suggestions_enhanced_prospection_linkedin.json
+2025-10-28 22:16:17 - services.suggest.enhanced_suggestion_logic - INFO - Terminé: 46 suggestions uniques générées
+2025-10-28 22:23:40 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 22:24:00 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 22:25:25 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 22:25:46 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 22:25:52 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 22:26:00 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 22:26:12 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 22:26:21 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 22:26:39 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 22:26:59 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 22:27:08 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 22:27:43 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 22:29:38 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 22:29:39 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 22:29:49 - services.suggest.enhanced_suggestion_logic - INFO - Initialisation du générateur de suggestions amélioré
+2025-10-28 22:29:49 - services.suggest.enhanced_suggestion_logic - INFO - Cache chargé: 54 entrées
+2025-10-28 22:29:49 - services.suggest.enhanced_suggestion_logic - INFO - Génération des suggestions pour: 'eclairage poids lourd et voitures'
+2025-10-28 22:29:49 - services.suggest.enhanced_suggestion_logic - INFO - Configuration: 15 suggestions/requête, 5 workers, max 200 suggestions
+2025-10-28 22:29:51 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'comment faire'
+2025-10-28 22:29:56 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'qu'est-ce que'
+2025-10-28 22:29:58 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'comment choisir'
+2025-10-28 22:30:00 - services.suggest.enhanced_suggestion_logic - INFO - Cache sauvegardé
+2025-10-28 22:30:00 - services.suggest.enhanced_suggestion_logic - INFO - Résultats sauvegardés: static/suggestions_enhanced_eclairage_poids_lourd_et_voitures.json
+2025-10-28 22:30:00 - services.suggest.enhanced_suggestion_logic - INFO - Terminé: 40 suggestions uniques générées
+2025-10-28 23:16:15 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 23:16:16 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 23:17:24 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 23:17:26 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 23:18:52 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 23:19:22 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 23:19:24 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 23:25:44 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 23:25:49 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 23:25:53 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 23:25:59 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 23:26:30 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 23:26:30 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 23:26:57 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 23:45:45 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 23:45:55 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 23:46:02 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 23:46:30 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-28 23:46:31 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-29 00:04:50 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-29 00:05:05 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-29 00:05:10 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-29 00:06:03 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-29 00:06:04 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-29 00:12:49 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-29 00:12:49 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-29 00:19:15 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-29 00:19:16 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-30 14:20:06 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-30 14:20:07 - services.suggest.enhanced_suggestion_logic - INFO - Logger initialisé pour enhanced_suggestion_logic - Fichier: logging/enhanced_suggestion_logic.log
+2025-10-30 14:22:29 - services.suggest.enhanced_suggestion_logic - INFO - Initialisation du générateur de suggestions amélioré
+2025-10-30 14:22:29 - services.suggest.enhanced_suggestion_logic - INFO - Cache chargé: 86 entrées
+2025-10-30 14:22:29 - services.suggest.enhanced_suggestion_logic - INFO - Génération des suggestions pour: 'production video'
+2025-10-30 14:22:29 - services.suggest.enhanced_suggestion_logic - INFO - Configuration: 15 suggestions/requête, 5 workers, max 200 suggestions
+2025-10-30 14:22:31 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'production video'
+2025-10-30 14:22:32 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'production video'
+2025-10-30 14:22:33 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'production video'
+2025-10-30 14:22:34 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'production video'
+2025-10-30 14:22:35 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'production video'
+2025-10-30 14:22:36 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'production video'
+2025-10-30 14:22:36 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'production video'
+2025-10-30 14:22:36 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'production video'
+2025-10-30 14:22:37 - services.suggest.enhanced_suggestion_logic - INFO - Tentative de fallback DuckDuckGo avec requête simplifiée: 'production video'
+2025-10-30 14:22:38 - services.suggest.enhanced_suggestion_logic - INFO - Cache sauvegardé
+2025-10-30 14:22:38 - services.suggest.enhanced_suggestion_logic - INFO - Résultats sauvegardés: static/suggestions/suggestions_enhanced_production_video.json
+2025-10-30 14:22:38 - services.suggest.enhanced_suggestion_logic - INFO - Terminé: 40 suggestions uniques générées

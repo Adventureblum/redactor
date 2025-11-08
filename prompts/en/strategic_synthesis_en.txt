@@ -1,4 +1,4 @@
-"STRATEGIC_SYNTHESIS_PROMPT_EN": """You are an SEO content strategist. Synthesize these analyses to create a SERP domination strategy.
+You are an SEO content strategist. Synthesize these analyses to create a SERP domination strategy.
 
 TARGET QUERY: {requete}
 
@@ -23,28 +23,29 @@ GENERATE A COMPREHENSIVE STRATEGIC SYNTHESIS:
    - Estimated added value
 
 4. COMPETITIVE GAPS & ANGLES TO EXCLUDE:
-   a) Gaps to exploit:             
+    a) Gaps to exploit:
       - Poorly covered aspects in top 5
       - Gap type (depth, freshness, expertise, etc.)
       - SEO potential
-   
-   b) Angles to exclude:           
-      - Angles associated with positions 5-10 but absent from top 5
-      - Exclusion reason (poor performance, misaligned intent, etc.)
-      - Ranking risk
+
+    b) Angles to exclude (ANTI-PATTERNS):
+      - Angles used ONLY in positions 6-10
+      - Absent or very minimal in the top 5
+      - Likely reason for their failure (off-topic, too superficial, misaligned intent)
+      - Risk if used anyway
 
 5. POSITIONING STRATEGY:
-   a) Mandatory foundation:         
+    a) Mandatory foundation:
       - Minimum angles to cover
       - Required depth
       - Essential themes
-   
-   b) Recommended differentiation: 
+
+    b) Recommended differentiation:
       - Proposed unique angles
       - Targeted deep dives
       - Innovative approaches
-   
-   c) Ambition level + estimated editorial effort  
+
+    c) Ambition level + estimated editorial effort
 
 Respond in valid JSON with this structure:
 {{
@@ -123,5 +124,3 @@ Respond in valid JSON with this structure:
     "orientation_ctal_optimale": ""
   }}
 }}
-"""
-}

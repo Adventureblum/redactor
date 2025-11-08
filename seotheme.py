@@ -9,6 +9,7 @@ import os
 import asyncio
 import re
 import time
+import logging
 from datetime import datetime
 from typing import List, Dict, Any, Optional
 from concurrent.futures import ThreadPoolExecutor
@@ -20,6 +21,115 @@ from langchain.schema import SystemMessage, HumanMessage
 DEEPSEEK_KEY = os.getenv("DEEPSEEK_KEY")
 if not DEEPSEEK_KEY:
     raise ValueError("DEEPSEEK_KEY environment variable required")
+
+
+class SEOAnalysisLogger:
+    """Gestionnaire de logs pour l'analyse SEO - log détaillé et minifié"""
+
+    def __init__(self):
+        # Créer le dossier logging s'il n'existe pas
+        self.logging_dir = "logging"
+        os.makedirs(self.logging_dir, exist_ok=True)
+
+        # Chemins des fichiers de log
+        self.detailed_log_path = os.path.join(self.logging_dir, "seotheme.log")
+        self.main_log_path = os.path.join(self.logging_dir, "__main__.log")
+
+        # Configuration du logger détaillé
+        self.detailed_logger = logging.getLogger("seotheme_detailed")
+        self.detailed_logger.setLevel(logging.INFO)
+
+        # Configuration du logger principal (minifié)
+        self.main_logger = logging.getLogger("seotheme_main")
+        self.main_logger.setLevel(logging.INFO)
+
+        # Formatter détaillé
+        detailed_formatter = logging.Formatter(
+            '%(asctime)s - %(levelname)s - %(message)s',
+            datefmt='%Y-%m-%d %H:%M:%S'
+        )
+
+        # Formatter minifié
+        main_formatter = logging.Formatter(
+            '%(asctime)s - %(message)s',
+            datefmt='%H:%M:%S'
+        )
+
+        # Handler pour le log détaillé
+        detailed_handler = logging.FileHandler(self.detailed_log_path, encoding='utf-8')
+        detailed_handler.setLevel(logging.INFO)
+        detailed_handler.setFormatter(detailed_formatter)
+
+        # Handler pour le log principal
+        main_handler = logging.FileHandler(self.main_log_path, encoding='utf-8')
+        main_handler.setLevel(logging.INFO)
+        main_handler.setFormatter(main_formatter)
+
+        # Éviter la duplication des logs
+        self.detailed_logger.handlers.clear()
+        self.main_logger.handlers.clear()
+
+        self.detailed_logger.addHandler(detailed_handler)
+        self.main_logger.addHandler(main_handler)
+
+        # Éviter la propagation vers le logger root
+        self.detailed_logger.propagate = False
+        self.main_logger.propagate = False
+
+    def log_agent_step(self, step_type: str, query: str, position: int = None,
+                      group_id: int = None, status: str = "started",
+                      details: dict = None, error: str = None):
+        """Log une étape d'agent avec informations détaillées et minifiées"""
+
+        timestamp = datetime.now()
+
+        # Construction du message de base
+        if position is not None:
+            base_info = f"Query '{query}' - Position {position}"
+        else:
+            base_info = f"Query '{query}'"
+
+        if group_id is not None:
+            base_info += f" (Group {group_id})"
+
+        # Message détaillé pour seotheme.log
+        if status == "started":
+            detailed_msg = f"AGENT_START - {step_type} - {base_info}"
+        elif status == "completed":
+            detailed_msg = f"AGENT_COMPLETE - {step_type} - {base_info}"
+        elif status == "error":
+            detailed_msg = f"AGENT_ERROR - {step_type} - {base_info} - Error: {error}"
+        else:
+            detailed_msg = f"AGENT_{status.upper()} - {step_type} - {base_info}"
+
+        # Ajouter les détails si fournis
+        if details:
+            details_str = json.dumps(details, ensure_ascii=False, separators=(',', ':'))
+            detailed_msg += f" - Details: {details_str}"
+
+        # Message minifié pour _main_.log
+        if status == "started":
+            main_msg = f"🚀 {step_type} - {base_info}"
+        elif status == "completed":
+            main_msg = f"✅ {step_type} - {base_info}"
+        elif status == "error":
+            main_msg = f"❌ {step_type} - {base_info} - {error}"
+        else:
+            main_msg = f"📊 {step_type} - {base_info}"
+
+        # Écrire dans les logs
+        self.detailed_logger.info(detailed_msg)
+        self.main_logger.info(main_msg)
+
+    def log_analysis_summary(self, total_articles: int, successful: int,
+                           groups: int, duration: float):
+        """Log un résumé d'analyse"""
+
+        detailed_msg = f"ANALYSIS_SUMMARY - Total Articles: {total_articles}, Successful: {successful}, Groups: {groups}, Duration: {duration:.2f}s"
+        main_msg = f"📊 Analysis Complete - {successful}/{total_articles} articles, {groups} groups, {duration:.2f}s"
+
+        self.detailed_logger.info(detailed_msg)
+        self.main_logger.info(main_msg)
 
 
 class SEOContentAnalyzer:
@@ -37,7 +147,10 @@ class SEOContentAnalyzer:
         else:
             self.language = language
         self.max_concurrent = max_concurrent
-        
+
+        # Initialiser le logger
+        self.logger = SEOAnalysisLogger()
+
         self.llm = ChatDeepSeek(
             model="deepseek-chat",
             api_key=DEEPSEEK_KEY,
@@ -49,10 +162,10 @@ class SEOContentAnalyzer:
         # Configuration pour la parallélisation
         self.max_concurrent = max_concurrent or 10
         self.executor = ThreadPoolExecutor(max_workers=self.max_concurrent)
-        
+
         # Charger les prompts selon la langue
         self._load_prompts()
-        
+
         self.articles = []
         self.results = []
 
@@ -91,15 +204,18 @@ class SEOContentAnalyzer:
         if self.language == "fr":
             article_file = os.path.join(language_prompts_dir, "article_analysis_fr.txt")
             synthesis_file = os.path.join(language_prompts_dir, "strategic_synthesis_fr.txt")
+            angle_selector_file = os.path.join(language_prompts_dir, "angle_selector.txt")
         elif self.language == "en":
             article_file = os.path.join(language_prompts_dir, "article_analysis_en.txt")
             synthesis_file = os.path.join(language_prompts_dir, "strategic_synthesis_en.txt")
+            angle_selector_file = os.path.join(language_prompts_dir, "angle_selector_en.txt")
         else:
             raise ValueError(f"Language '{self.language}' not supported. Use 'fr' or 'en'")
 
         print(f"🔍 Recherche des prompts dans: {language_prompts_dir}")
         print(f"📄 Fichier d'analyse: {article_file}")
         print(f"📄 Fichier de synthèse: {synthesis_file}")
+        print(f"📄 Fichier angle_selector: {angle_selector_file}")
 
         try:
             # Charger et extraire le prompt d'analyse d'article
@@ -132,6 +248,10 @@ class SEOContentAnalyzer:
             # Charger le prompt de synthèse
             with open(synthesis_file, 'r', encoding='utf-8') as f:
                 self.synthesis_prompt = f.read()
+
+            # Charger le prompt angle_selector
+            with open(angle_selector_file, 'r', encoding='utf-8') as f:
+                self.angle_selector_prompt = f.read()
         except FileNotFoundError as e:
             raise FileNotFoundError(f"Prompt file not found: {e}. Make sure prompts/{self.language}/ directory exists.")
     
@@ -270,6 +390,20 @@ class SEOContentAnalyzer:
         try:
             print(f"\n🔍 Analyse position {article['position']}: {article['title'][:60]}...")
 
+            # Log de début d'analyse
+            self.logger.log_agent_step(
+                step_type="ARTICLE_ANALYSIS",
+                query=article.get('query', 'N/A'),
+                position=article['position'],
+                group_id=article.get('analysis_group'),
+                status="started",
+                details={
+                    "article_id": article.get('id'),
+                    "title": article['title'][:100],
+                    "word_count": article.get('word_count', 0)
+                }
+            )
+
             # Construire le prompt
             prompt = self.article_prompt.format(
                 position=article['position'],
@@ -318,10 +452,34 @@ IMPORTANT: Your response MUST be in valid JSON format only, no additional text o
                 'overlap_warnings': []
             }
 
+            # Log de fin d'analyse réussie
+            self.logger.log_agent_step(
+                step_type="ARTICLE_ANALYSIS",
+                query=article.get('query', 'N/A'),
+                position=article['position'],
+                group_id=article.get('analysis_group'),
+                status="completed",
+                details={
+                    "article_id": article.get('id'),
+                    "analysis_success": True,
+                    "response_length": len(response_text)
+                }
+            )
+
             print(f"✅ Position {article['position']} analysée")
             return result
 
         except Exception as e:
+            # Log de l'erreur
+            self.logger.log_agent_step(
+                step_type="ARTICLE_ANALYSIS",
+                query=article.get('query', 'N/A'),
+                position=article['position'],
+                group_id=article.get('analysis_group'),
+                status="error",
+                error=str(e)
+            )
+
             print(f"❌ Erreur position {article['position']}: {e}")
             return None
     
@@ -329,6 +487,18 @@ IMPORTANT: Your response MUST be in valid JSON format only, no additional text o
         """Génère la synthèse stratégique pour un groupe d'analyses avec DeepSeek"""
         try:
             print(f"\n🎯 Génération synthèse stratégique groupe {group_id}...")
+
+            # Log de début de synthèse
+            self.logger.log_agent_step(
+                step_type="STRATEGIC_SYNTHESIS",
+                query=query,
+                group_id=group_id,
+                status="started",
+                details={
+                    "analyses_count": len(group_analyses),
+                    "group_id": group_id
+                }
+            )
 
             # Préparer les analyses pour le prompt
             analyses_text = json.dumps(group_analyses, indent=2, ensure_ascii=False)
@@ -370,11 +540,135 @@ IMPORTANT: Your response MUST be in valid JSON format only, no additional text o
             else:
                 synthesis = json.loads(response_text)
 
+            # Log de fin de synthèse réussie
+            self.logger.log_agent_step(
+                step_type="STRATEGIC_SYNTHESIS",
+                query=query,
+                group_id=group_id,
+                status="completed",
+                details={
+                    "analyses_count": len(group_analyses),
+                    "synthesis_success": True,
+                    "response_length": len(response_text)
+                }
+            )
+
             print(f"✅ Synthèse groupe {group_id} générée")
             return synthesis
 
         except Exception as e:
+            # Log de l'erreur
+            self.logger.log_agent_step(
+                step_type="STRATEGIC_SYNTHESIS",
+                query=query,
+                group_id=group_id,
+                status="error",
+                error=str(e)
+            )
+
             print(f"❌ Erreur synthèse groupe {group_id}: {e}")
+            return {}
+
+    async def generate_angle_selection(self, group_id: int, synthesis: Dict[str, Any], query: str) -> Dict[str, Any]:
+        """Génère la sélection d'angle optimal après la synthèse stratégique"""
+        try:
+            print(f"\n🎯 Sélection d'angle optimal groupe {group_id}...")
+
+            # Log de début de sélection d'angle
+            self.logger.log_agent_step(
+                step_type="ANGLE_SELECTION",
+                query=query,
+                group_id=group_id,
+                status="started",
+                details={
+                    "group_id": group_id,
+                    "synthesis_provided": bool(synthesis)
+                }
+            )
+
+            # Extraire les données nécessaires de la synthèse
+            meta = {"requete_cible": query}
+            strategie_positionnement = synthesis.get('strategie_positionnement', {})
+            opportunites_angles_uniques = synthesis.get('opportunites_angles_uniques', [])
+
+            # Préparer les données formatées pour le prompt
+            requete_cible = query
+            angles_minimum = strategie_positionnement.get('socle_obligatoire', {}).get('angles_minimum', [])
+            themes_incontournables = strategie_positionnement.get('socle_obligatoire', {}).get('themes_incontournables', [])
+
+            # Remplacer les placeholders dans le prompt
+            prompt = self.angle_selector_prompt.replace(
+                "{meta['requete_cible']}", requete_cible
+            ).replace(
+                "{json.dumps(strategie_positionnement['socle_obligatoire']['angles_minimum'], ensure_ascii=False, indent=2)}",
+                json.dumps(angles_minimum, ensure_ascii=False, indent=2)
+            ).replace(
+                "{json.dumps(strategie_positionnement['socle_obligatoire']['themes_incontournables'], ensure_ascii=False, indent=2)}",
+                json.dumps(themes_incontournables, ensure_ascii=False, indent=2)
+            ).replace(
+                "{json.dumps(opportunites_angles_uniques, ensure_ascii=False, indent=2)}",
+                json.dumps(opportunites_angles_uniques, ensure_ascii=False, indent=2)
+            )
+
+            # Appel LLM synchrone dans ThreadPoolExecutor pour DeepSeek
+            full_prompt = f"""You are an expert SEO editorial strategist. Always respond in valid JSON format.
+
+{prompt}
+
+IMPORTANT: Your response MUST be in valid JSON format only, no additional text or markdown."""
+
+            loop = asyncio.get_event_loop()
+            response = await loop.run_in_executor(
+                self.executor,
+                lambda: self.llm.invoke(full_prompt)
+            )
+
+            # Parser la réponse JSON
+            response_text = response.content.strip()
+
+            # Nettoyer la réponse si elle contient du markdown
+            if response_text.startswith('```json'):
+                response_text = response_text.replace('```json', '').replace('```', '').strip()
+            elif response_text.startswith('```'):
+                response_text = response_text.replace('```', '').strip()
+
+            # Extraire JSON si nécessaire
+            start = response_text.find('{')
+            end = response_text.rfind('}') + 1
+            if start != -1 and end > start:
+                json_text = response_text[start:end]
+                angle_selection = json.loads(json_text)
+            else:
+                angle_selection = json.loads(response_text)
+
+            # Log de fin de sélection d'angle réussie
+            self.logger.log_agent_step(
+                step_type="ANGLE_SELECTION",
+                query=query,
+                group_id=group_id,
+                status="completed",
+                details={
+                    "group_id": group_id,
+                    "angle_selected": angle_selection.get('angle_selectionne', 'N/A'),
+                    "selection_success": True,
+                    "response_length": len(response_text)
+                }
+            )
+
+            print(f"✅ Angle sélectionné groupe {group_id}: {angle_selection.get('angle_selectionne', 'N/A')}")
+            return angle_selection
+
+        except Exception as e:
+            # Log de l'erreur
+            self.logger.log_agent_step(
+                step_type="ANGLE_SELECTION",
+                query=query,
+                group_id=group_id,
+                status="error",
+                error=str(e)
+            )
+
+            print(f"❌ Erreur sélection angle groupe {group_id}: {e}")
             return {}
     
     async def run_analysis_optimized(self, use_queue: bool = True, num_workers: int = 10) -> Dict[str, Any]:
@@ -465,11 +759,31 @@ IMPORTANT: Your response MUST be in valid JSON format only, no additional text o
 
         print(f"✅ Phase 2 terminée: {len(syntheses)} synthèses générées")
 
+        # Phase 3: Sélection des angles en parallèle
+        print(f"\n🎯 Phase 3: Sélection des angles optimaux en parallèle")
+
+        angle_selection_tasks = []
+        for group_id, synthesis in syntheses.items():
+            query = groups_queries.get(group_id, "")
+            task = self.generate_angle_selection(group_id, synthesis, query)
+            angle_selection_tasks.append((group_id, task))
+
+        # Exécuter toutes les sélections d'angles en parallèle
+        angle_selection_results = await asyncio.gather(*[task for _, task in angle_selection_tasks])
+
+        # Associer les résultats aux group_ids
+        angle_selections = {}
+        for i, (group_id, _) in enumerate(angle_selection_tasks):
+            angle_selections[group_id] = angle_selection_results[i]
+
+        print(f"✅ Phase 3 terminée: {len(angle_selections)} angles sélectionnés")
+
         # Construction des résultats finaux par groupe
         final_results = {}
         for group_id, group_analyses in grouped_results.items():
             query = groups_queries.get(group_id, "")
             synthesis = syntheses.get(group_id, {})
+            angle_selection = angle_selections.get(group_id, {})
 
             group_result = {
                 "meta": {
@@ -479,11 +793,12 @@ IMPORTANT: Your response MUST be in valid JSON format only, no additional text o
                     "articles_analyses": len([a for a in self.articles if a['analysis_group'] == group_id]),
                     "articles_reussis": len(group_analyses),
                     "erreurs_rencontrees": len([a for a in self.articles if a['analysis_group'] == group_id]) - len(group_analyses),
-                    "agent_version": "v2.1-optimized",
+                    "agent_version": "v2.2-optimized-with-angle-selector",
                     "language": self.language
                 },
                 "analyses_individuelles": group_analyses,
                 f"synthese_strategique_analysis_{group_id}": synthesis,
+                "angle_select": angle_selection,
                 "controle_qualite": {
                     "articles_traites": len(group_analyses),
                     "erreurs_detectees": len([a for a in self.articles if a['analysis_group'] == group_id]) - len(group_analyses),
@@ -495,10 +810,20 @@ IMPORTANT: Your response MUST be in valid JSON format only, no additional text o
         end_time = datetime.now()
         duration = (end_time - start_time).total_seconds()
 
+        # Log du résumé d'analyse globale
+        total_articles_analyzed = sum(len(group_analyses) for group_analyses in grouped_results.values())
+        self.logger.log_analysis_summary(
+            total_articles=len(self.articles),
+            successful=total_articles_analyzed,
+            groups=len(final_results),
+            duration=duration
+        )
+
         print(f"\n⚡ OPTIMISATION TERMINÉE")
         print(f"   Durée totale: {round(duration, 2)}s")
         print(f"   Articles analysés: {len(all_results)}")
         print(f"   Synthèses générées: {len(syntheses)}")
+        print(f"   Angles sélectionnés: {len(angle_selections)}")
         print(f"   Groupes traités: {len(final_results)}")
 
         return final_results, groups_queries
@@ -556,6 +881,11 @@ IMPORTANT: Your response MUST be in valid JSON format only, no additional text o
 
         synthesis = await self.generate_strategic_synthesis(group_id, group_results, requete_cible)
 
+        # Phase 3: Sélection de l'angle optimal pour ce groupe
+        print(f"\n🎯 Phase 3: Sélection de l'angle optimal du groupe {group_id}")
+
+        angle_selection = await self.generate_angle_selection(group_id, synthesis, requete_cible)
+
         # Construction du résultat final pour ce groupe
         end_time = datetime.now()
         duration = (end_time - start_time).total_seconds()
@@ -568,12 +898,13 @@ IMPORTANT: Your response MUST be in valid JSON format only, no additional text o
                 "articles_analyses": len(group_articles),
                 "articles_reussis": len(group_results),
                 "erreurs_rencontrees": len(group_articles) - len(group_results),
-                "agent_version": "v2.0-generic",
+                "agent_version": "v2.2-with-angle-selector",
                 "language": self.language,
                 "duration_seconds": round(duration, 2)
             },
             "analyses_individuelles": group_results,
             f"synthese_strategique_analysis_{group_id}": synthesis,
+            "angle_select": angle_selection,
             "controle_qualite": {
                 "articles_traites": len(group_results),
                 "erreurs_detectees": len(group_articles) - len(group_results),
@@ -701,16 +1032,19 @@ IMPORTANT: Your response MUST be in valid JSON format only, no additional text o
             print(f"❌ Erreur sauvegarde: {e}")
     
     def _generate_simplified_output(self, results: Dict[str, Any]) -> Dict[str, Any]:
-        """Génère une version simplifiée intégrant TOUTE la synthèse stratégique"""
+        """Génère une version simplifiée intégrant TOUTE la synthèse stratégique et l'angle sélectionné"""
         meta = results.get("meta", {})
-        
+
         # Extraire toutes les synthèses stratégiques
         syntheses = {}
         for key, value in results.items():
             if key.startswith("synthese_strategique_"):
                 group_id = key.replace("synthese_strategique_", "")
                 syntheses[group_id] = value
-        
+
+        # Extraire l'angle sélectionné s'il existe
+        angle_select = results.get("angle_select", {})
+
         # Structure simplifiée qui PRESERVE toute l'information stratégique
         simplified = {
             "meta": {
@@ -721,7 +1055,11 @@ IMPORTANT: Your response MUST be in valid JSON format only, no additional text o
             },
             "syntheses_strategiques": syntheses
         }
-        
+
+        # Ajouter angle_select seulement s'il existe et n'est pas vide
+        if angle_select:
+            simplified["angle_select"] = angle_select
+
         return simplified
 
     @staticmethod

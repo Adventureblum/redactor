@@ -1,4 +1,4 @@
-STRATEGIC_SYNTHESIS_PROMPT_FR = """Tu es un stratège en contenu SEO. Synthétise ces analyses pour créer une stratégie de domination SERP.
+Tu es un stratège en contenu SEO. Synthétise ces analyses pour créer une stratégie de domination SERP.
 
 REQUÊTE CIBLE: {requete}
 
@@ -23,28 +23,29 @@ GÉNÈRE UNE SYNTHÈSE STRATÉGIQUE COMPLÈTE:
    - Valeur ajoutée estimée
 
 4. GAPS CONCURRENTIELS & ANGLES À EXCLURE:
-   a Gaps à exploiter:
+   a) Gaps à exploiter:
       - Aspects mal traités dans le top 5
       - Type de gap (profondeur, actualité, expertise, etc.)
       - Potentiel SEO
-   
-   b Angles à exclure:
-      - Angles associés aux positions 5-10 mais absents du top 5
-      - Raison de l'exclusion (mauvaise performance, intention non alignée, etc.)
-      - Risque de déclassement
 
+   b) Angles à exclure (ANTI-PATTERNS):
+      - Angles utilisés UNIQUEMENT dans les positions 6-10
+      - Absents ou très minoritaires dans le top 5
+      - Raison probable de leur échec (hors-sujet, trop superficiel, intention non alignée)
+      - Risque si on les utilise quand même
+      
 5. STRATÉGIE DE POSITIONNEMENT:
-   a Socle obligatoire:
+   a) Socle obligatoire:
       - Angles minimum à couvrir
       - Profondeur requise
       - Thèmes incontournables
-   
-   b Différenciation recommandée:
+
+   b) Différenciation recommandée:
       - Angles uniques proposés
       - Approfondissements ciblés
       - Approches innovantes
-   
-   c Niveau d'ambition + effort éditorial estimé
+
+   c) Niveau d'ambition + effort éditorial estimé
 
 Réponds en JSON valide avec cette structure:
 {{
@@ -123,4 +124,3 @@ Réponds en JSON valide avec cette structure:
     "orientation_ctal_optimale": ""
   }}
 }}
-"""

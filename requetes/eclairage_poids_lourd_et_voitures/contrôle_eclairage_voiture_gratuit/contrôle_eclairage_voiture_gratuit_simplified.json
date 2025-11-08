@@ -1,11 +1,188 @@
 {
   "meta": {
     "requete_cible": "contrôle eclairage voiture gratuit",
-    "date_analyse": "2025-10-31T18:22:00.042251",
-    "language": "en",
+    "date_analyse": "2025-11-08T22:34:35.738305",
+    "language": "fr",
     "analyses_totales": 1
   },
   "syntheses_strategiques": {
-    "analysis_2": {}
+    "analysis_2": {
+      "analyse_angles_concurrentiels": {
+        "angles_dominants": [
+          {
+            "angle": "Approche institutionnelle partenariale avec autorité",
+            "frequence_utilisation": "Très élevée (2/2 articles pertinents)",
+            "niveau_profondeur_moyen": "Approfondi",
+            "positionnement_requis": "Obligatoire pour crédibilité",
+            "exemples_reussis": [
+              "Sécurité Routière + ACL",
+              "Prévention Routière + Carglass + CNPA + ASNAV"
+            ]
+          },
+          {
+            "angle": "Cadre saisonnier avec urgence préventive",
+            "frequence_utilisation": "Élevée (2/2 articles pertinents)",
+            "niveau_profondeur_moyen": "Approfondi",
+            "positionnement_requis": "Fortement recommandé",
+            "exemples_reussis": [
+              "Préparation hivernale",
+              "Dégradation conditions nocturnes"
+            ]
+          }
+        ],
+        "angles_emergents": [
+          {
+            "angle": "Données techniques exclusives et chiffres choc",
+            "utilise_par": "Position 2 (statistiques sécurité nocturne)",
+            "potentiel_differentiation": "Élevé",
+            "difficulte_execution": "Moyenne (recherche nécessaire)"
+          }
+        ]
+      },
+      "themes_obligatoires": [
+        {
+          "theme": "Dates et lieux précis des opérations",
+          "present_chez": [
+            "Position 1",
+            "Position 2"
+          ],
+          "niveau_minimum_requis": "Détaillé avec 10+ localisations",
+          "profondeur_observee": "Exhaustif (15 lieux + dates exactes)",
+          "justification": "Besoins actionnables immédiats des utilisateurs"
+        },
+        {
+          "theme": "Partenaires institutionnels identifiés",
+          "present_chez": [
+            "Position 1",
+            "Position 2"
+          ],
+          "niveau_minimum_requis": "Explicite avec logos/organismes",
+          "profondeur_observee": "Détaillé (noms complets + rôles)",
+          "justification": "Crédibilité et confiance essentielle"
+        },
+        {
+          "theme": "Contexte sécurité et bénéfices préventifs",
+          "present_chez": [
+            "Position 1",
+            "Position 2"
+          ],
+          "niveau_minimum_requis": "Argumenté avec données",
+          "profondeur_observee": "Approfondi (statistiques + risques)",
+          "justification": "Justification de l'opération et motivation"
+        }
+      ],
+      "opportunites_angles_uniques": [
+        {
+          "angle_propose": "Guide visuel du contrôle idéal avec schémas",
+          "justification": "Absent dans le top 5 - répond au besoin de comprendre la procédure",
+          "niveau_ambition": "Élevé",
+          "valeur_ajoutee_estimee": "Très élevée",
+          "complexite_execution": "Moyenne (nécessite expertise technique)"
+        },
+        {
+          "angle_propose": "Comparatif réglementation légale vs recommandations sécurité",
+          "justification": "Manque criant dans l'analyse concurrentielle - valeur éducative forte",
+          "niveau_ambition": "Moyen",
+          "valeur_ajoutee_estimee": "Élevée",
+          "complexite_execution": "Moyenne"
+        }
+      ],
+      "gaps_concurrentiels": [
+        {
+          "gap_identifie": "Procédure détaillée du contrôle étape par étape",
+          "type": "Profondeur technique",
+          "potentiel_seo": "Élevé",
+          "recommandation_exploitation": "Créer une section dédiée avec checklist utilisateur"
+        },
+        {
+          "gap_identifie": "Éléments visuels illustrant le contrôle",
+          "type": "Support visuel",
+          "potentiel_seo": "Moyen-Élevé",
+          "recommandation_exploitation": "Intégrer photos/schémas des points contrôlés"
+        },
+        {
+          "gap_identifie": "Alternatives payantes et comparatif coûts",
+          "type": "Complétude informationnelle",
+          "potentiel_seo": "Moyen",
+          "recommandation_exploitation": "Ajouter section sur options payantes avec fourchettes de prix"
+        }
+      ],
+      "angles_a_exclure": [
+        {
+          "angle_declasse": "Contenu forum utilisateur non modéré",
+          "present_dans_positions": [
+            "Position 3"
+          ],
+          "absent_top5_mais_present_bas_classement": [
+            "Position 3"
+          ],
+          "raison_exclusion": "Manque d'autorité et fiabilité - format inadapté",
+          "risque_positionnement": "Très élevé (perte crédibilité)"
+        },
+        {
+          "angle_declasse": "Redirection commerciale pure sans contenu informatif",
+          "present_dans_positions": [
+            "Position 4"
+          ],
+          "absent_top5_mais_present_bas_classement": [
+            "Position 4"
+          ],
+          "raison_exclusion": "Intention non alignée - utilisateur cherche information avant achat",
+          "risque_positionnement": "Élevé (taux de rebond important)"
+        }
+      ],
+      "strategie_positionnement": {
+        "socle_obligatoire": {
+          "angles_minimum": [
+            "Approche institutionnelle crédible",
+            "Couverture territoriale exhaustive",
+            "Cadre saisonnier urgentiste"
+          ],
+          "profondeur_requise": "Approfondi (1500+ mots avec données actionnables)",
+          "themes_incontournables": [
+            "Dates/lieux opérations",
+            "Partenaires officiels",
+            "Bénéfices sécurité",
+            "Gratuité garantie"
+          ]
+        },
+        "differentiation_recommandee": {
+          "angles_uniques_proposes": [
+            "Guide visuel procédure contrôle",
+            "Comparatif réglementation vs sécurité",
+            "Foire aux questions exhaustive"
+          ],
+          "approfondissements_cibles": [
+            "Procédure détaillée étape par étape",
+            "Données techniques exclusives",
+            "Conseils entretien entre contrôles"
+          ],
+          "approches_innovantes": [
+            "Calculateur durée de vie batterie/pneus",
+            "Carte interactive des points de contrôle",
+            "Checklist pré-contrôle téléchargeable"
+          ]
+        },
+        "niveau_ambition_global": "Position 1-2 avec contenu ultime",
+        "effort_editorial_estime": "Élevé (recherche institutionnelle + création visuelle + données exclusives)"
+      },
+      "recommandation_positionnement_global": {
+        "type_contenu_optimal": "Article informatif institutionnel enrichi d'éléments pratiques",
+        "intention_cible": "Informationnelle avec orientation actionnable",
+        "portee_commerciale_recommandee": "Modérée (mentions alternatives payantes en fin d'article)",
+        "orientation_ctal_optimale": "Prise de rendez-vous/consultation plutôt que vente directe"
+      }
+    }
+  },
+  "angle_select": {
+    "angle_selectionne": "Guide visuel du contrôle idéal avec schémas",
+    "score_total": "11/12",
+    "justification_selection": "Cet angle comble un manque visuel évident dans les résultats existants tout en restant parfaitement complémentaire du socle institutionnel et territorial obligatoire.",
+    "scores_details": {
+      "alignement_intention": "3/3",
+      "non_redondance": "3/3",
+      "valeur_ajoutee": "3/3",
+      "faisabilite_roi": "2/3"
+    }
   }
 }

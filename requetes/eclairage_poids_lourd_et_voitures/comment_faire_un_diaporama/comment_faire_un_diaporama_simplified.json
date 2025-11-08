@@ -1,11 +1,200 @@
 {
   "meta": {
     "requete_cible": "comment faire un diaporama",
-    "date_analyse": "2025-10-31T18:22:00.042251",
-    "language": "en",
+    "date_analyse": "2025-11-08T22:34:35.738305",
+    "language": "fr",
     "analyses_totales": 1
   },
   "syntheses_strategiques": {
-    "analysis_0": {}
+    "analysis_0": {
+      "analyse_angles_concurrentiels": {
+        "angles_dominants": [
+          {
+            "angle": "Guide procédural étape par étape pour logiciels spécifiques",
+            "frequence_utilisation": "Faible (seulement 2 articles pertinents sur 10)",
+            "niveau_profondeur_moyen": "Approfondi à modéré",
+            "positionnement_requis": "Instructions détaillées avec captures d'écran et exemples concrets",
+            "exemples_reussis": [
+              "Article position 8 (Microsoft - diaporamas personnalisés PowerPoint)",
+              "Article position 6 (Google Slides - présentation multi-plateforme)"
+            ]
+          }
+        ],
+        "angles_emergents": [
+          {
+            "angle": "Approche multi-plateforme intégrée",
+            "utilise_par": "Article position 6 (Google)",
+            "potentiel_differentiation": "Élevé - répond au besoin croissant de compatibilité cross-device",
+            "difficulte_execution": "Moyenne - nécessite expertise technique sur plusieurs environnements"
+          },
+          {
+            "angle": "Segmentation d'audience et personnalisation avancée",
+            "utilise_par": "Article position 8 (Microsoft)",
+            "potentiel_differentiation": "Très élevé - valeur ajoutée professionnelle significative",
+            "difficulte_execution": "Élevée - expertise avancée requise"
+          }
+        ]
+      },
+      "themes_obligatoires": [
+        {
+          "theme": "Instructions détaillées création diaporama",
+          "present_chez": [
+            "Position 6",
+            "Position 8"
+          ],
+          "niveau_minimum_requis": "Approfondi avec étapes numérotées",
+          "profondeur_observee": "1200+ mots pour les leaders",
+          "justification": "Nécessaire pour répondre à l'intention informationnelle \"comment faire\""
+        },
+        {
+          "theme": "Compatibilité multi-logiciels (PowerPoint, Google Slides)",
+          "present_chez": [
+            "Position 6",
+            "Position 8"
+          ],
+          "niveau_minimum_requis": "Comparatif fonctionnel",
+          "profondeur_observee": "Couverture spécifique par logiciel",
+          "justification": "Les utilisateurs recherchent des solutions pour leur environnement spécifique"
+        },
+        {
+          "theme": "Raccourcis et fonctionnalités avancées",
+          "present_chez": [
+            "Position 6",
+            "Position 8"
+          ],
+          "niveau_minimum_requis": "Liste pratique organisée",
+          "profondeur_observee": "Raccourcis par OS et outils d'annotation",
+          "justification": "Améliore l'efficacité utilisateur et la valeur actionnable"
+        }
+      ],
+      "opportunites_angles_uniques": [
+        {
+          "angle_propose": "Guide universel comparatif multi-outils (PowerPoint, Google Slides, Canva, Keynote)",
+          "justification": "Absence totale de contenu comparatif dans le top 10 - répond au besoin de choix d'outil optimal",
+          "niveau_ambition": "Ultimate Guide 3000+ mots",
+          "valeur_ajoutee_estimee": "Très élevée - résout l'indécision outil",
+          "complexite_execution": "Élevée - expertise multi-plateforme requise"
+        },
+        {
+          "angle_propose": "Stratégie narrative et structure pour différents types de présentation (professionnelle, éducative, commerciale)",
+          "justification": "Les contenus existants se concentrent sur la technique, pas sur la stratégie de contenu",
+          "niveau_ambition": "Guide expert avec templates",
+          "valeur_ajoutee_estimee": "Élevée - différenciation qualitative",
+          "complexite_execution": "Moyenne - expertise en communication requise"
+        },
+        {
+          "angle_propose": "Workflow complet de création à présentation avec bonnes pratiques accessibilité",
+          "justification": "Aucun contenu ne couvre le processus end-to-end avec considérations d'accessibilité",
+          "niveau_ambition": "Guide complet 2500+ mots",
+          "valeur_ajoutee_estimee": "Élevée - approche holistique unique",
+          "complexite_execution": "Moyenne"
+        }
+      ],
+      "gaps_concurrentiels": [
+        {
+          "gap_identifie": "Absence totale de contenu pour outils alternatifs (Canva, Prezi, Keynote)",
+          "type": "Couverture thématique",
+          "potentiel_seo": "Très élevé - volume de recherche significatif non capturé",
+          "recommandation_exploitation": "Créer un guide comparatif exhaustif couvrant tous les outils populaires"
+        },
+        {
+          "gap_identifie": "Manque de conseils sur la conception visuelle et l'engagement",
+          "type": "Profondeur expertise",
+          "potentiel_seo": "Élevé - répond au besoin sous-jacent de créer des présentations impactantes",
+          "recommandation_exploitation": "Intégrer des sections design, psychologie des couleurs, typographie"
+        },
+        {
+          "gap_identifie": "Aucun contenu sur les présentations hybrides/à distance",
+          "type": "Actualité et contexte",
+          "potentiel_seo": "Élevé - besoin post-pandémie croissant",
+          "recommandation_exploitation": "Ajouter section dédiée aux outils de présentation à distance et bonnes pratiques hybrides"
+        }
+      ],
+      "angles_a_exclure": [
+        {
+          "angle_declasse": "Contenu vide ou minimaliste type pages Reddit/YouTube sans explication",
+          "present_dans_positions": [
+            "1",
+            "3",
+            "4",
+            "5",
+            "7"
+          ],
+          "absent_top5_mais_present_bas_classement": [
+            "1",
+            "3",
+            "4",
+            "5",
+            "7"
+          ],
+          "raison_exclusion": "Hors-sujet ou contenu insuffisant - pénalisé par Google pour thin content",
+          "risque_positionnement": "Déclassement immédiat pour non-réponse à l'intention de recherche"
+        },
+        {
+          "angle_declasse": "Contenu purement promotionnel sans valeur éducative",
+          "present_dans_positions": [
+            "4",
+            "6 partiellement"
+          ],
+          "absent_top5_mais_present_bas_classement": [
+            "4"
+          ],
+          "raison_exclusion": "Intention non alignée - utilisateur cherche à apprendre, pas à acheter",
+          "risque_positionnement": "Taux de rebond élevé, mauvais signal utilisateur"
+        }
+      ],
+      "strategie_positionnement": {
+        "socle_obligatoire": {
+          "angles_minimum": [
+            "Guide procédural PowerPoint",
+            "Guide procédural Google Slides",
+            "Comparatif fonctionnalités de base"
+          ],
+          "profondeur_requise": "Approfondi (1500+ mots avec étapes détaillées)",
+          "themes_incontournables": [
+            "Création diapositives",
+            "Ajout contenu",
+            "Personnalisation design",
+            "Présentation et partage"
+          ]
+        },
+        "differentiation_recommandee": {
+          "angles_uniques_proposes": [
+            "Guide universel multi-outils",
+            "Stratégie narrative et structure",
+            "Workflow complet avec accessibilité"
+          ],
+          "approfondissements_cibles": [
+            "Design et engagement visuel",
+            "Présentations hybrides",
+            "Optimisation performance"
+          ],
+          "approches_innovantes": [
+            "Matrice de choix d'outil par use-case",
+            "Templates téléchargeables",
+            "Checklist qualité présentation"
+          ]
+        },
+        "niveau_ambition_global": "Positionnement #1 avec contenu ultime définitif",
+        "effort_editorial_estime": "Élevé (3000-5000 mots avec visuels et ressources additionnelles)"
+      },
+      "recommandation_positionnement_global": {
+        "type_contenu_optimal": "Guide ultime définitif avec approche comparative",
+        "intention_cible": "Informationnelle approfondie avec éléments décisionnels",
+        "portee_commerciale_recommandee": "Minimale - focus sur l'éducation, liens commerciaux contextuels uniquement",
+        "orientation_ctal_optimale": "Téléchargement de templates premium ou checklist avancée"
+      }
+    }
+  },
+  "angle_select": {
+    "angle_selectionne": "Stratégie narrative et structure pour différents types de présentation (professionnelle, éducative, commerciale)",
+    "score_total": "10/12",
+    "justification_selection": "Cet angle comble un gap majeur sur la stratégie de contenu, absent des résultats existants, tout en étant parfaitement complémentaire des guides procéduraux techniques du socle obligatoire.",
+    "scores_details": {
+      "alignement_intention": "3/3",
+      "non_redondance": "3/3",
+      "valeur_ajoutee": "3/3",
+      "faisabilite_roi": "1/3"
+    }
   }
 }
