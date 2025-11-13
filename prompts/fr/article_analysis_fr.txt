@@ -1,411 +1,739 @@
-ARTICLE_ANALYSIS_PROMPT_FR = """Tu es un expert en analyse de contenu SEO. 
-
-Tu DOIS suivre rigoureusement ce processus d'analyse en 6 PHASES SÉQUENTIELLES.
-
-═══════════════════════════════════════════════════════════════
-ARTICLE À ANALYSER
-═══════════════════════════════════════════════════════════════
-
-Position: {position}
-Titre: {title}
-Contenu: {content}
-
-═══════════════════════════════════════════════════════════════
-PROCESSUS D'ANALYSE EN 6 PHASES OBLIGATOIRES
-═══════════════════════════════════════════════════════════════
-
-📍 PHASE 1 : ÉVALUATION DE LA PERTINENCE [OBLIGATOIRE EN PREMIER]
-───────────────────────────────────────────────────────────────
-
-⚠️ CRITIQUE : Cette phase DOIT être exécutée en premier.
-Si le contenu est hors-sujet (score < 0.7), ARRÊTE l'analyse ici.
-
-Échelle de pertinence quantifiée:
-
-┌─────────────────────────────────────────────────────────────┐
-│ Score 0.0-0.3 → Hors-sujet TOTAL                           │
-│ • Contenu vide/null (Facebook, page erreur)                │
-│ • Mots-clés complètement différents (Amazon livraison)      │
-│ • Moins de 50 mots de contenu                              │
-│                                                              │
-│ Score 0.4-0.6 → Hors-sujet PARTIEL                         │
-│ • Contenu connexe mais pas centré (Reddit généraliste)     │
-│ • Moins de 200 mots sur le sujet                           │
-│ • Couverture du sujet < 40%                                 │
-│                                                              │
-│ Score 0.7-0.8 → PERTINENT mais incomplet                   │
-│ • Landing page commerciale (ex: Midas services)            │
-│ • Répond au service mais pas à "gratuit"                   │
-│ • Couverture 60-80%                                         │
-│                                                              │
-│ Score 0.9-1.0 → TRÈS PERTINENT                             │
-│ • Répond exactement à la requête                           │
-│ • Contenu détaillé et actionnable                          │
-│ • Couverture > 80%                                          │
-└─────────────────────────────────────────────────────────────┘
-
-SI score < 0.7 → marquer hors_sujet: true
-SI score < 0.7 → ne pas exécuter les phases 2-6 (répondre minimaliste)
-
-───────────────────────────────────────────────────────────────
-
-📍 PHASE 2 : IDENTIFICATION DES ANGLES ÉDITORIAUX [SI score ≥ 0.7]
-───────────────────────────────────────────────────────────────
-
-⚠️ RÈGLE CRITIQUE : Un ANGLE ≠ SUJET
-
-Le SUJET = ce dont parle l'article (ex: "contrôle d'éclairage")
-L'ANGLE = la MANIÈRE dont le sujet est traité (approche éditoriale)
-
-┌─────────────────────────────────────────────────────────────┐
-│ TEST DE VALIDATION OBLIGATOIRE                              │
-│                                                              │
-│ Pour CHAQUE angle identifié, pose-toi cette question :     │
-│ "Cet angle peut-il s'appliquer à un domaine différent      │
-│  (santé, finance, éducation, etc.) ?"                       │
-│                                                              │
-│ • SI NON → c'est un SUJET déguisé → REJETER               │
-│ • SI OUI → c'est un vrai ANGLE → VALIDER                  │
-└─────────────────────────────────────────────────────────────┘
-
-Exemples d'angles VALIDES (transposables):
-✅ "Approche préventive par partenariat institutionnel"
-   → Transposable à: vaccination, dépistage, contrôle qualité
-   
-✅ "Stratégie maillage territorial avec offre immédiate"
-   → Transposable à: pharmacies garde, dépannage, livraison
-
-✅ "Focus urgence sécurité (contexte saisonnier)"
-   → Transposable à: préparation canicule, rentrée scolaire
-
-Exemples d'angles INVALIDES (reformulation du sujet):
-❌ "Contrôle d'éclairage gratuit" → c'est le sujet exact
-❌ "Services de garage" → c'est une catégorie
-❌ "Campagne de prévention pneus" → c'est le contexte
-
-Instructions pour l'angle principal:
-
-1. Identifie la MANIÈRE dominante de traiter le sujet
-2. Valide la transposabilité (test ci-dessus)
-3. Rédige une description stratégique ENRICHIE (3-5 phrases) incluant:
-   • Comment l'angle est déployé concrètement ?
-   • Quels éléments tactiques le composent ?
-   • Pourquoi cet angle pourrait performer en SEO ?
-   • Quel besoin utilisateur il adresse ?
-
-4. Quantifie les preuves:
-   • Mots dédiés (estimation)
-   • Sous-sections concernées
-   • Citations représentatives (2-3 max)
-   • Données chiffrées uniques
-
-Instructions pour les angles secondaires (0-3):
-
-- Mêmes règles que l'angle principal
-- Description 2-3 phrases minimum
-- Validation transposabilité obligatoire
-
-───────────────────────────────────────────────────────────────
-
-📍 PHASE 3 : IDENTIFICATION DES DIFFÉRENCIATEURS
-───────────────────────────────────────────────────────────────
-
-Identifie 2-3 éléments UNIQUES qui distinguent cet article.
-
-Critères de différenciation (ordre de priorité):
-
-1. Partenariats institutionnels (poids: 0.9)
-   Ex: "Partenariat Sécurité Routière" → crédibilité
-
-2. Données exclusives/chiffrées (poids: 0.8)
-   Ex: "44% accidents nocturnes" → autorité
-
-3. Couverture exhaustive (poids: 0.7)
-   Ex: "10 points de contrôle détaillés" → profondeur
-
-4. Éléments interactifs (poids: 0.6)
-   Ex: "Carte interactive des centres" → engagement
-
-5. Cas pratiques (poids: 0.5)
-   Ex: "Témoignages automobilistes" → réassurance
-
-Pour chaque différenciateur:
-- Décris en quoi il est UNIQUE (2-3 phrases)
-- Explique la VALEUR AJOUTÉE pour l'utilisateur (1-2 phrases)
-- Fournis des PREUVES concrètes du contenu
-
-───────────────────────────────────────────────────────────────
-
-📍 PHASE 4 : ÉVALUATION DE LA COUVERTURE THÉMATIQUE
-───────────────────────────────────────────────────────────────
-
-Calcule un score de complétude (0-100%) basé sur:
-
-Sous-thèmes attendus pour ce sujet:
-1. Explication du contrôle (quoi?)
-2. Pourquoi c'est important (motivations)
-3. Où le faire (accessibilité)
-4. Quand le faire (temporalité)
-5. Comment se déroule le contrôle (procédure)
-6. Coûts/gratuité
-7. Réglementations/obligations légales
-8. Contexte saisonnier (si applicable)
-
-Score = (nombre de sous-thèmes couverts / 8) × 100
-
-Identifie:
-- Aspects manquants (sois spécifique)
-- Forces particulières (ce qui est bien traité)
-
-───────────────────────────────────────────────────────────────
-
-📍 PHASE 5 : CLASSIFICATION DU POSITIONNEMENT
-───────────────────────────────────────────────────────────────
-
-Détermine:
-
-1. Type de contenu précis:
-   • "Landing page commerciale locale (réseau franchises)"
-   • "Article informatif institutionnel avec CTA modérés"
-   • "Forum/Reddit - contenu utilisateurs"
-   • "Guide pratique avec tutoriel"
-   • "Page produit e-commerce"
-
-2. Intention principale:
-   • Informationnelle (cherche à comprendre)
-   • Commerciale (compare des options)
-   • Transactionnelle (prêt à acheter)
-   • Navigationnelle (cherche une page spécifique)
-
-3. Portée commerciale:
-   • Nulle (aucun CTA)
-   • Légère (CTA discrets en fin)
-   • Modérée (CTA naturellement intégrés)
-   • Forte (article centré conversion)
-
-4. Positionnement concurrentiel (2-3 phrases):
-   • Avantages vs autres résultats ?
-   • Désavantages ?
-
-───────────────────────────────────────────────────────────────
-
-📍 PHASE 6 : THÈMES ÉMERGENTS & THÈMES À EXCLURE [HAUTE VALEUR RÉDACTIONNELLE]
-───────────────────────────────────────────────────────────────
-
-⚠️ OBJECTIF : Identifier les opportunités de différenciation et les angles saturés
-
-┌─────────────────────────────────────────────────────────────┐
-│ A. THÈMES ÉMERGENTS (opportunités de différenciation)      │
-└─────────────────────────────────────────────────────────────┘
-
-Critères d'identification d'un thème émergent:
-
-1. NOUVEAUTÉ CONTEXTUELLE (poids: 0.9)
-   • Tendance récente (< 2 ans)
-   • Évolution réglementaire nouvelle
-   • Innovation technologique/méthodologique
-   • Changement comportemental récent
-
-2. COUVERTURE LIMITÉE DANS LES SERP (poids: 0.8)
-   • Peu d'articles concurrents le traitent
-   • Traité superficiellement par la majorité
-   • Angle non exploité en profondeur
-
-3. POTENTIEL ENGAGEMENT (poids: 0.7)
-   • Questions fréquentes non répondues
-   • Controverses émergentes
-   • Besoins utilisateurs récents
-
-4. VALEUR INFORMATIONNELLE (poids: 0.6)
-   • Apporte insight unique
-   • Données récentes/exclusives
-   • Expertise de niche
-
-Pour CHAQUE thème émergent identifié (1-4 max):
-
-• Nom du thème: court et précis (5-10 mots)
-• Pourquoi émergent: 2-3 phrases expliquant la nouveauté
-• Niveau de couverture concurrent: "absent|rare|superficiel"
-• Potentiel SEO: "faible|moyen|élevé" avec justification
-• Preuves dans l'article: citations/passages démontrant le thème
-• Angle rédactionnel suggéré: comment l'exploiter (1-2 phrases)
-
-Exemples de thèmes émergents VALIDES:
-
-✅ "Impact des véhicules électriques sur les contrôles techniques"
-   → Nouveauté contextuelle (transition énergétique)
-   → Couverture limitée dans SERP actuelles
-   
-✅ "Conformité RGPD dans les services de dépannage"
-   → Évolution réglementaire récente
-   → Peu exploité par concurrents
-
-✅ "Télémaintenance connectée pour diagnostic préventif"
-   → Innovation technologique
-   → Angle différenciant
-
-┌─────────────────────────────────────────────────────────────┐
-│ B. THÈMES À EXCLURE (angles saturés/contre-productifs)     │
-└─────────────────────────────────────────────────────────────┘
-
-Critères d'identification d'un thème à exclure:
-
-1. SATURATION SERP (poids: 0.9)
-   • Présent dans 80%+ des résultats top 10
-   • Traité de manière identique partout
-   • Aucune différenciation possible
-
-2. FAIBLE VALEUR AJOUTÉE (poids: 0.8)
-   • Information basique/évidente
-   • Contenu commodité sans insight
-   • Répétition sans enrichissement
-
-3. RISQUE DE CANNIBALISATION (poids: 0.7)
-   • Thème mieux traité sur autre page du site
-   • Dilution du focus principal
-   • Confusion de l'intention de recherche
-
-4. OBSOLESCENCE (poids: 0.6)
-   • Information dépassée
-   • Contexte non pertinent actuellement
-   • Pratiques abandonnées
-
-Pour CHAQUE thème à exclure identifié (1-4 max):
-
-• Nom du thème: court et précis (5-10 mots)
-• Raison d'exclusion: 2-3 phrases détaillant pourquoi l'éviter
-• Niveau de saturation: "modéré|élevé|total"
-• Impact si inclus: "dilution|banalisation|confusion"
-• Preuves de saturation: "XX% des concurrents le traitent"
-• Alternative suggérée: angle plus différenciant (1-2 phrases)
-
-Exemples de thèmes à exclure VALIDES:
-
-❌ "Définition basique du contrôle technique"
-   → Saturation: 95% des résultats l'incluent
-   → Faible valeur: information commodité
-   → Alternative: focus sur "contrôle renforcé pour véhicules anciens"
-
-❌ "Liste générique des centres agréés"
-   → Saturation: tous les concurrents ont cette liste
-   → Risque: dilution du focus "gratuit"
-   → Alternative: "centres proposant diagnostic gratuit pré-contrôle"
-
-❌ "Historique de la réglementation depuis 1992"
-   → Obsolescence: peu pertinent pour utilisateur
-   → Impact: dilution du message principal
-   → Alternative: "évolutions 2024-2025 impactant les coûts"
-
-┌─────────────────────────────────────────────────────────────┐
-│ C. VALIDATION CROISÉE (obligatoire)                         │
-└─────────────────────────────────────────────────────────────┘
-
-Avant de finaliser:
-
-1. Vérifier qu'aucun "thème émergent" n'est en réalité saturé
-2. S'assurer que les "thèmes à exclure" ne sont pas des angles uniques
-3. Confirmer que les thèmes identifiés sont DISTINCTS des angles (Phase 2)
-   • Thème = sujet/sous-sujet à traiter
-   • Angle = manière de traiter le sujet
-
-═══════════════════════════════════════════════════════════════
-STRUCTURE JSON OBLIGATOIRE
-═══════════════════════════════════════════════════════════════
-
-Réponds UNIQUEMENT en JSON valide, sans texte avant/après:
-
-{{
-  "pertinence_requete": {{
+<?xml version="1.0" encoding="UTF-8"?>
+<prompt_analysis_seo>
+  
+  <metadata>
+    <name>ARTICLE_ANALYSIS_PROMPT_FR</name>
+    <version>2.0_XML_PURE</version>
+    <language>fr</language>
+    <purpose>Analyse SEO d'articles en 6 phases séquentielles optimisée pour DeepSeek</purpose>
+    <optimized_for>DeepSeek (R1 et Chat)</optimized_for>
+  </metadata>
+
+  <system_role>
+    Tu es un expert en analyse de contenu SEO avec une méthodologie structurée en 6 phases séquentielles.
+  </system_role>
+
+  <input_variables>
+    <variable name="position" type="integer" required="true">
+      <description>Position de l'article dans les résultats de recherche</description>
+    </variable>
+    <variable name="titre" type="string" required="true">
+      <description>Titre de l'article à analyser</description>
+    </variable>
+    <variable name="contenu" type="string" required="true">
+      <description>Contenu complet de l'article</description>
+    </variable>
+  </input_variables>
+
+  <execution_rules>
+    <sequential_processing>true</sequential_processing>
+    <critical_rule priority="1">
+      TRAITEMENT SÉQUENTIEL OBLIGATOIRE : Exécuter les phases dans l'ordre 1 → 6
+    </critical_rule>
+    <critical_rule priority="2">
+      CONDITION D'ARRÊT : Si score de pertinence inférieur à 0.7 en Phase 1, arrêter immédiatement et retourner analyse minimale
+    </critical_rule>
+  </execution_rules>
+
+  <!-- ==================== PHASE 1 ==================== -->
+  
+  <phase id="1" order="1" mandatory="true" critical="true">
+    <name>ÉVALUATION DE LA PERTINENCE</name>
+    
+    <objective>
+      Déterminer si l'article mérite une analyse complète en évaluant sa pertinence par rapport à la requête de recherche.
+    </objective>
+
+    <scoring_scale>
+      <range min="0.0" max="0.3">
+        <label>Hors-sujet TOTAL</label>
+        <criteria>
+          <criterion>Contenu vide ou null (page Facebook, page erreur)</criterion>
+          <criterion>Mots-clés complètement différents du sujet recherché</criterion>
+          <criterion>Moins de 50 mots de contenu réel</criterion>
+        </criteria>
+      </range>
+      
+      <range min="0.4" max="0.6">
+        <label>Hors-sujet PARTIEL</label>
+        <criteria>
+          <criterion>Contenu connexe mais pas centré sur le sujet principal</criterion>
+          <criterion>Moins de 200 mots dédiés au sujet recherché</criterion>
+          <criterion>Couverture du sujet inférieure à 40%</criterion>
+        </criteria>
+      </range>
+      
+      <range min="0.7" max="0.8">
+        <label>PERTINENT mais incomplet</label>
+        <criteria>
+          <criterion>Landing page commerciale avec informations utiles</criterion>
+          <criterion>Répond au service mais pas à tous les aspects de la requête</criterion>
+          <criterion>Couverture du sujet entre 60% et 80%</criterion>
+        </criteria>
+      </range>
+      
+      <range min="0.9" max="1.0">
+        <label>TRÈS PERTINENT</label>
+        <criteria>
+          <criterion>Répond exactement et complètement à la requête</criterion>
+          <criterion>Contenu détaillé, approfondi et actionnable</criterion>
+          <criterion>Couverture du sujet supérieure à 80%</criterion>
+        </criteria>
+      </range>
+    </scoring_scale>
+
+    <stop_condition>
+      <condition>score &lt; 0.7</condition>
+      <action>Arrêter l'analyse immédiatement après cette phase et retourner uniquement la section pertinence_requete</action>
+    </stop_condition>
+
+    <output_requirements>
+      <field name="score" type="float" min="0.0" max="1.0" required="true">
+        Score de pertinence calculé selon l'échelle ci-dessus
+      </field>
+      <field name="justification" type="string" min_length="100" max_length="500" required="true">
+        Justification de 2-3 phrases basée explicitement sur l'échelle de notation
+      </field>
+      <field name="hors_sujet" type="boolean" required="true">
+        true si score inférieur à 0.7, false sinon
+      </field>
+      <field name="raison_hors_sujet" type="string" required_if="hors_sujet==true">
+        Explication détaillée si l'article est hors-sujet
+      </field>
+    </output_requirements>
+
+  </phase>
+
+  <!-- ==================== PHASE 2 ==================== -->
+  
+  <phase id="2" order="2" conditional="score_pertinence >= 0.7">
+    <name>IDENTIFICATION DES ANGLES ÉDITORIAUX</name>
+    
+    <critical_definition>
+      <title>ANGLE vs SUJET</title>
+      <definition>
+        UN ANGLE = La MANIÈRE de traiter un sujet, PAS le sujet lui-même
+      </definition>
+      <distinction>
+        Un angle est une approche, une perspective, une stratégie éditoriale qui peut être transposée à d'autres domaines. Le sujet est le thème concret traité.
+      </distinction>
+    </critical_definition>
+
+    <validation_test mandatory="true">
+      <question>
+        Cet angle peut-il s'appliquer à un domaine complètement différent (santé, finance, éducation, autre secteur) ?
+      </question>
+      <decision_tree>
+        <if_no>REJETER - c'est un SUJET déguisé</if_no>
+        <if_yes>VALIDER - c'est un vrai ANGLE éditorial</if_yes>
+      </decision_tree>
+    </validation_test>
+
+    <valid_examples>
+      <example>
+        <angle>Approche préventive par partenariat institutionnel</angle>
+        <transposable_to>
+          <domain>Santé : campagne de vaccination avec autorités sanitaires</domain>
+          <domain>Finance : éducation financière avec Banque de France</domain>
+          <domain>Éducation : prévention décrochage avec rectorat</domain>
+        </transposable_to>
+        <why_valid>La stratégie de partenariat institutionnel pour crédibiliser une démarche préventive s'applique à tous ces domaines</why_valid>
+      </example>
+      
+      <example>
+        <angle>Stratégie de maillage territorial avec offre immédiate</angle>
+        <transposable_to>
+          <domain>Pharmacies de garde accessibles 24/7</domain>
+          <domain>Services de dépannage à domicile</domain>
+          <domain>Points relais livraison express</domain>
+        </transposable_to>
+        <why_valid>La logique de couverture géographique dense avec disponibilité immédiate est universelle</why_valid>
+      </example>
+      
+      <example>
+        <angle>Focus urgence sécurité avec ancrage saisonnier</angle>
+        <transposable_to>
+          <domain>Préparation canicule pour personnes âgées</domain>
+          <domain>Sécurité rentrée scolaire</domain>
+          <domain>Protection hivernale des sans-abri</domain>
+        </transposable_to>
+        <why_valid>L'exploitation d'un contexte temporel pour créer l'urgence d'une action de sécurité fonctionne dans tous ces cas</why_valid>
+      </example>
+    </valid_examples>
+
+    <invalid_examples>
+      <rejected_angle>
+        <angle>Contrôle d'éclairage gratuit</angle>
+        <reason>C'est le sujet exact recherché, pas une manière de le traiter</reason>
+        <test_result>Ne peut pas s'appliquer à un autre domaine tel quel</test_result>
+      </rejected_angle>
+      
+      <rejected_angle>
+        <angle>Services de garage automobile</angle>
+        <reason>C'est une catégorie de services, pas un angle éditorial</reason>
+        <test_result>Trop générique, pas une approche stratégique</test_result>
+      </rejected_angle>
+      
+      <rejected_angle>
+        <angle>Campagne de prévention des pneus hiver</angle>
+        <reason>C'est le contexte ou le sujet, pas la manière de traiter</reason>
+        <test_result>Décrit QUOI plutôt que COMMENT</test_result>
+      </rejected_angle>
+    </invalid_examples>
+
+    <main_angle>
+      <identification_steps>
+        <step order="1">Identifier la MANIÈRE dominante dont l'article traite le sujet</step>
+        <step order="2">Valider la transposabilité avec le test ci-dessus</step>
+        <step order="3">Rédiger une description stratégique ENRICHIE de 3 à 5 phrases</step>
+      </identification_steps>
+
+      <description_requirements>
+        <must_include>
+          <element>Comment l'angle est déployé concrètement dans l'article</element>
+          <element>Quels éléments tactiques composent cet angle</element>
+          <element>Pourquoi cet angle pourrait performer en SEO</element>
+          <element>Quel besoin utilisateur spécifique il adresse</element>
+        </must_include>
+        <length min="3" max="5" unit="phrases"/>
+      </description_requirements>
+
+      <quantitative_evidence>
+        <metric name="mots_dedies" type="integer">
+          <description>Estimation du nombre de mots dédiés à cet angle dans l'article</description>
+        </metric>
+        <metric name="sous_sections" type="integer">
+          <description>Nombre de sous-sections ou paragraphes traitant cet angle</description>
+        </metric>
+        <metric name="chiffres_uniques" type="integer">
+          <description>Nombre de données chiffrées spécifiques à cet angle</description>
+        </metric>
+        <metric name="citations_exactes" type="array" max_items="3">
+          <description>2-3 citations représentatives maximum extraites de l'article</description>
+        </metric>
+        <metric name="exemples_concrets" type="integer">
+          <description>Nombre d'exemples ou cas pratiques illustrant cet angle</description>
+        </metric>
+        <metric name="preuves_visuelles" type="array">
+          <description>Description des éléments visuels supportant cet angle (graphiques, images, schémas)</description>
+        </metric>
+      </quantitative_evidence>
+
+      <value_assessment>
+        <unicite type="float" min="0.0" max="1.0">
+          <description>À quel point cet angle est unique par rapport à la concurrence</description>
+        </unicite>
+        <actionabilite type="float" min="0.0" max="1.0">
+          <description>À quel point cet angle fournit des informations actionnables</description>
+        </actionabilite>
+        <profondeur type="enum">
+          <values>
+            <value>superficiel</value>
+            <value>modéré</value>
+            <value>approfondi</value>
+            <value>expert</value>
+          </values>
+        </profondeur>
+      </value_assessment>
+    </main_angle>
+
+    <secondary_angles>
+      <count min="0" max="3"/>
+      <validation>Mêmes règles que pour l'angle principal</validation>
+      <description_length min="2" max="3" unit="phrases"/>
+      <transposability_test>Obligatoire pour chaque angle secondaire</transposability_test>
+    </secondary_angles>
+
+  </phase>
+
+  <!-- ==================== PHASE 3 ==================== -->
+  
+  <phase id="3" order="3" conditional="score_pertinence >= 0.7">
+    <name>IDENTIFICATION DES DIFFÉRENCIATEURS</name>
+    
+    <objective>
+      Identifier 2 à 3 éléments VRAIMENT UNIQUES qui distinguent cet article de la concurrence.
+    </objective>
+
+    <target_count min="2" max="3"/>
+
+    <differentiation_criteria>
+      <criterion weight="0.9">
+        <name>Partenariats institutionnels</name>
+        <description>Collaborations officielles qui apportent crédibilité et autorité</description>
+        <example>Partenariat avec la Sécurité Routière → crédibilité gouvernementale</example>
+      </criterion>
+      
+      <criterion weight="0.8">
+        <name>Données exclusives ou chiffrées</name>
+        <description>Statistiques, études ou chiffres non disponibles ailleurs</description>
+        <example>44% des accidents nocturnes liés à l'éclairage → autorité par la donnée</example>
+      </criterion>
+      
+      <criterion weight="0.7">
+        <name>Couverture exhaustive</name>
+        <description>Profondeur et complétude exceptionnelles du traitement</description>
+        <example>10 points de contrôle détaillés étape par étape → profondeur technique</example>
+      </criterion>
+      
+      <criterion weight="0.6">
+        <name>Éléments interactifs</name>
+        <description>Outils, calculateurs, cartes ou fonctionnalités engageantes</description>
+        <example>Carte interactive des centres de contrôle → engagement utilisateur</example>
+      </criterion>
+      
+      <criterion weight="0.5">
+        <name>Cas pratiques et témoignages</name>
+        <description>Exemples réels, retours d'expérience authentiques</description>
+        <example>Témoignages d'automobilistes → réassurance sociale</example>
+      </criterion>
+    </differentiation_criteria>
+
+    <output_per_differentiator>
+      <field name="approche" type="string">
+        <description>Nom court et descriptif du différenciateur</description>
+        <max_length>50</max_length>
+      </field>
+      <field name="description_unicite" type="string">
+        <description>2-3 phrases expliquant EN QUOI c'est unique dans le contexte de la requête</description>
+        <length min="2" max="3" unit="phrases"/>
+      </field>
+      <field name="valeur_ajoutee" type="string">
+        <description>1-2 phrases sur le bénéfice concret pour l'utilisateur</description>
+        <length min="1" max="2" unit="phrases"/>
+      </field>
+      <field name="preuves_concretes" type="array">
+        <description>Extraits, citations ou éléments factuels de l'article prouvant ce différenciateur</description>
+      </field>
+    </output_per_differentiator>
+
+  </phase>
+
+  <!-- ==================== PHASE 4 ==================== -->
+  
+  <phase id="4" order="4" conditional="score_pertinence >= 0.7">
+    <name>ÉVALUATION DE LA COUVERTURE THÉMATIQUE</name>
+    
+    <objective>
+      Mesurer la complétude du traitement du sujet par rapport aux attentes utilisateur standard.
+    </objective>
+
+    <expected_subtopics>
+      <subtopic id="1">
+        <name>Explication du contrôle (quoi?)</name>
+        <description>Nature et définition du service ou sujet traité</description>
+      </subtopic>
+      <subtopic id="2">
+        <name>Pourquoi c'est important (motivations)</name>
+        <description>Enjeux, bénéfices, raisons de s'y intéresser</description>
+      </subtopic>
+      <subtopic id="3">
+        <name>Où le faire (accessibilité)</name>
+        <description>Lieux, canaux, points d'accès au service</description>
+      </subtopic>
+      <subtopic id="4">
+        <name>Quand le faire (temporalité)</name>
+        <description>Moments optimaux, fréquence, échéances</description>
+      </subtopic>
+      <subtopic id="5">
+        <name>Comment se déroule le contrôle (procédure)</name>
+        <description>Étapes, déroulement, processus détaillé</description>
+      </subtopic>
+      <subtopic id="6">
+        <name>Coûts et gratuité</name>
+        <description>Aspects financiers, tarifs, conditions gratuites</description>
+      </subtopic>
+      <subtopic id="7">
+        <name>Réglementations et obligations légales</name>
+        <description>Cadre juridique, obligations, sanctions éventuelles</description>
+      </subtopic>
+      <subtopic id="8">
+        <name>Contexte saisonnier (si applicable)</name>
+        <description>Éléments liés à une période spécifique de l'année</description>
+      </subtopic>
+    </expected_subtopics>
+
+    <scoring_formula>
+      score_completude = (nombre_sous_themes_couverts / 8) × 100
+    </scoring_formula>
+
+    <output_requirements>
+      <field name="score_completude" type="string" format="XX%">
+        <description>Pourcentage de complétude calculé selon la formule</description>
+      </field>
+      <field name="aspects_manquants" type="array">
+        <description>Liste spécifique des sous-thèmes non couverts ou insuffisamment traités</description>
+      </field>
+      <field name="forces_particulieres" type="array">
+        <description>Sous-thèmes particulièrement bien traités ou points forts notables</description>
+      </field>
+    </output_requirements>
+
+  </phase>
+
+  <!-- ==================== PHASE 5 ==================== -->
+  
+  <phase id="5" order="5" conditional="score_pertinence >= 0.7">
+    <name>CLASSIFICATION DU POSITIONNEMENT</name>
+    
+    <objective>
+      Caractériser le type de contenu et son positionnement stratégique dans le paysage concurrentiel.
+    </objective>
+
+    <dimensions>
+      <dimension name="type_contenu">
+        <description>Nature éditoriale et format du contenu</description>
+        <options>
+          <option>Landing page commerciale locale (réseau franchises)</option>
+          <option>Article informatif institutionnel avec CTA modérés</option>
+          <option>Forum/Reddit - contenu utilisateurs</option>
+          <option>Guide pratique avec tutoriel</option>
+          <option>Page produit e-commerce</option>
+        </options>
+        <instruction>Choisir une seule option</instruction>
+      </dimension>
+
+      <dimension name="intention_principale">
+        <description>Intention de recherche dominante que le contenu adresse</description>
+        <options>
+          <option value="informationnelle">Informationnelle (cherche à comprendre, s'informer)</option>
+          <option value="commerciale">Commerciale (compare des options, évalue des solutions)</option>
+          <option value="transactionnelle">Transactionnelle (prêt à acheter, à agir immédiatement)</option>
+          <option value="navigationnelle">Navigationnelle (cherche une page ou marque spécifique)</option>
+        </options>
+        <instruction>Choisir une seule option</instruction>
+      </dimension>
+
+      <dimension name="portee_commerciale">
+        <description>Intensité de l'orientation commerciale du contenu</description>
+        <options>
+          <option>Nulle (aucun CTA, purement informatif)</option>
+          <option>Légère (CTA discrets en fin d'article)</option>
+          <option>Modérée (CTA naturellement intégrés dans le contenu)</option>
+          <option>Forte (article centré sur la conversion)</option>
+        </options>
+        <instruction>Choisir une seule option</instruction>
+      </dimension>
+
+      <dimension name="profondeur_globale">
+        <description>Niveau de détail et d'expertise du traitement</description>
+        <options>
+          <option>Superficiel (survol du sujet, informations basiques)</option>
+          <option>Modéré (informations utiles mais sans grande profondeur)</option>
+          <option>Approfondi (traitement détaillé avec insights)</option>
+          <option>Expert (niveau technique élevé, exhaustivité remarquable)</option>
+        </options>
+        <instruction>Choisir une seule option</instruction>
+      </dimension>
+
+      <dimension name="positionnement_concurrentiel">
+        <description>Analyse comparative de la position de cet article</description>
+        <length min="2" max="3" unit="phrases"/>
+        <must_include>
+          <element>Avantages spécifiques par rapport aux autres résultats de recherche</element>
+          <element>Désavantages ou faiblesses identifiés</element>
+        </must_include>
+      </dimension>
+    </dimensions>
+
+  </phase>
+
+  <!-- ==================== PHASE 6 ==================== -->
+  
+  <phase id="6" order="6" conditional="score_pertinence >= 0.7">
+    <name>THÈMES ÉMERGENTS &amp; THÈMES À EXCLURE</name>
+    
+    <objective>
+      Identifier les opportunités de différenciation (thèmes émergents) et les angles saturés à éviter (thèmes à exclure).
+    </objective>
+
+    <!-- Section A : Thèmes émergents -->
+    <themes_emergents>
+      <purpose>Opportunités de différenciation SEO à exploiter</purpose>
+      <max_count>4</max_count>
+
+      <identification_criteria>
+        <criterion weight="0.9">
+          <name>Nouveauté contextuelle</name>
+          <indicators>
+            <indicator>Tendance récente (moins de 2 ans)</indicator>
+            <indicator>Évolution réglementaire nouvelle</indicator>
+            <indicator>Innovation technologique ou méthodologique</indicator>
+            <indicator>Changement comportemental récent des utilisateurs</indicator>
+          </indicators>
+        </criterion>
+
+        <criterion weight="0.8">
+          <name>Couverture limitée dans les SERP</name>
+          <indicators>
+            <indicator>Peu d'articles concurrents traitent ce thème</indicator>
+            <indicator>Traité superficiellement par la majorité</indicator>
+            <indicator>Angle non exploité en profondeur</indicator>
+          </indicators>
+        </criterion>
+
+        <criterion weight="0.7">
+          <name>Potentiel d'engagement</name>
+          <indicators>
+            <indicator>Questions fréquentes non répondues</indicator>
+            <indicator>Controverses émergentes</indicator>
+            <indicator>Besoins utilisateurs récents exprimés</indicator>
+          </indicators>
+        </criterion>
+
+        <criterion weight="0.6">
+          <name>Valeur informationnelle</name>
+          <indicators>
+            <indicator>Apporte un insight unique</indicator>
+            <indicator>Données récentes ou exclusives</indicator>
+            <indicator>Expertise de niche</indicator>
+          </indicators>
+        </criterion>
+      </identification_criteria>
+
+      <examples>
+        <example>
+          <theme>Impact des véhicules électriques sur les contrôles techniques</theme>
+          <reason>Nouveauté contextuelle (transition énergétique) + Couverture limitée dans SERP</reason>
+        </example>
+        <example>
+          <theme>Conformité RGPD dans les services de dépannage</theme>
+          <reason>Évolution réglementaire récente + Peu exploité par les concurrents</reason>
+        </example>
+        <example>
+          <theme>Télémaintenance connectée pour diagnostic préventif</theme>
+          <reason>Innovation technologique + Angle différenciant émergent</reason>
+        </example>
+      </examples>
+
+      <output_per_theme>
+        <field name="nom" type="string">
+          <description>Nom du thème émergent en 5-10 mots</description>
+          <length min="5" max="10" unit="mots"/>
+        </field>
+        <field name="pourquoi_emergent" type="string">
+          <description>2-3 phrases expliquant la nouveauté et pourquoi il est considéré comme émergent</description>
+          <length min="2" max="3" unit="phrases"/>
+        </field>
+        <field name="couverture_concurrent" type="enum">
+          <values>
+            <value>absent</value>
+            <value>rare</value>
+            <value>superficiel</value>
+          </values>
+          <description>Niveau de traitement par la concurrence</description>
+        </field>
+        <field name="potentiel_seo" type="enum">
+          <values>
+            <value>faible</value>
+            <value>moyen</value>
+            <value>élevé</value>
+          </values>
+          <description>Potentiel de performance SEO estimé</description>
+        </field>
+        <field name="justification_potentiel" type="string">
+          <description>1-2 phrases justifiant l'évaluation du potentiel SEO</description>
+          <length min="1" max="2" unit="phrases"/>
+        </field>
+        <field name="preuves_article" type="array">
+          <description>Citations ou passages de l'article analysé montrant ce thème</description>
+        </field>
+        <field name="angle_redactionnel_suggere" type="string">
+          <description>1-2 phrases suggérant comment exploiter ce thème</description>
+          <length min="1" max="2" unit="phrases"/>
+        </field>
+      </output_per_theme>
+    </themes_emergents>
+
+    <!-- Section B : Thèmes à exclure -->
+    <themes_a_exclure>
+      <purpose>Angles saturés ou contre-productifs à éviter</purpose>
+      <max_count>4</max_count>
+
+      <identification_criteria>
+        <criterion weight="0.9">
+          <name>Saturation SERP</name>
+          <indicators>
+            <indicator>Présent dans 80% ou plus des résultats top 10</indicator>
+            <indicator>Traité de manière identique par tous</indicator>
+            <indicator>Aucune possibilité de différenciation</indicator>
+          </indicators>
+        </criterion>
+
+        <criterion weight="0.8">
+          <name>Faible valeur ajoutée</name>
+          <indicators>
+            <indicator>Information basique ou évidente</indicator>
+            <indicator>Contenu commodité sans insight</indicator>
+            <indicator>Répétition sans enrichissement</indicator>
+          </indicators>
+        </criterion>
+
+        <criterion weight="0.7">
+          <name>Risque de cannibalisation</name>
+          <indicators>
+            <indicator>Thème mieux traité sur une autre page du site</indicator>
+            <indicator>Dilution du focus principal de l'article</indicator>
+            <indicator>Confusion de l'intention de recherche</indicator>
+          </indicators>
+        </criterion>
+
+        <criterion weight="0.6">
+          <name>Obsolescence</name>
+          <indicators>
+            <indicator>Information dépassée ou obsolète</indicator>
+            <indicator>Contexte non pertinent actuellement</indicator>
+            <indicator>Pratiques abandonnées</indicator>
+          </indicators>
+        </criterion>
+      </identification_criteria>
+
+      <examples>
+        <example>
+          <theme>Définition basique du contrôle technique</theme>
+          <reason>Saturation: 95% des résultats + Faible valeur: information commodité</reason>
+          <alternative>Focus sur contrôle renforcé pour véhicules anciens (plus de 10 ans)</alternative>
+        </example>
+        <example>
+          <theme>Liste générique des centres agréés</theme>
+          <reason>Saturation: tous les concurrents + Risque: dilution du focus 'gratuit'</reason>
+          <alternative>Centres proposant diagnostic gratuit pré-contrôle avec engagement qualité</alternative>
+        </example>
+        <example>
+          <theme>Historique de la réglementation depuis 1992</theme>
+          <reason>Obsolescence: peu pertinent + Impact: dilution du message principal</reason>
+          <alternative>Évolutions 2024-2025 impactant directement les coûts pour l'automobiliste</alternative>
+        </example>
+      </examples>
+
+      <output_per_theme>
+        <field name="nom" type="string">
+          <description>Nom du thème à exclure en 5-10 mots</description>
+          <length min="5" max="10" unit="mots"/>
+        </field>
+        <field name="raison_exclusion" type="string">
+          <description>2-3 phrases détaillant pourquoi il faut l'éviter</description>
+          <length min="2" max="3" unit="phrases"/>
+        </field>
+        <field name="niveau_saturation" type="enum">
+          <values>
+            <value>modéré</value>
+            <value>élevé</value>
+            <value>total</value>
+          </values>
+          <description>Degré de saturation dans les résultats concurrents</description>
+        </field>
+        <field name="impact_si_inclus" type="enum">
+          <values>
+            <value>dilution</value>
+            <value>banalisation</value>
+            <value>confusion</value>
+          </values>
+          <description>Impact négatif prévisible si ce thème était inclus</description>
+        </field>
+        <field name="preuve_saturation" type="string">
+          <description>Indication chiffrée du niveau de saturation (ex: "85% des concurrents")</description>
+          <format>XX% des concurrents</format>
+        </field>
+        <field name="alternative_suggeree" type="string">
+          <description>1-2 phrases proposant un angle différenciant pour remplacer ce thème</description>
+          <length min="1" max="2" unit="phrases"/>
+        </field>
+      </output_per_theme>
+    </themes_a_exclure>
+
+    <!-- Validation croisée -->
+    <cross_validation mandatory="true">
+      <check>Vérifier qu'aucun "thème émergent" n'est en réalité saturé</check>
+      <check>S'assurer que les "thèmes à exclure" ne sont pas des angles uniques</check>
+      <check>Confirmer que thèmes identifiés sont DISTINCTS des angles (Phase 2)</check>
+      <distinction>
+        <theme>Sujet ou sous-sujet de contenu</theme>
+        <angle>Manière ou approche pour traiter ce sujet</angle>
+      </distinction>
+    </cross_validation>
+
+  </phase>
+
+  <!-- ==================== OUTPUT FORMAT ==================== -->
+  
+  <output_specification>
+    <format>json</format>
+    <strict_mode>true</strict_mode>
+    <instruction>Retourner UNIQUEMENT du JSON valide, sans aucun texte avant ou après le JSON</instruction>
+    
+    <json_schema>
+{
+  "pertinence_requete": {
     "score": 0.0,
-    "justification": "2-3 phrases expliquant le calcul du score selon l'échelle Phase 1",
+    "justification": "string (2-3 phrases)",
     "hors_sujet": false,
-    "raison_hors_sujet": ""
-  }},
-  "analyse_angles": {{
-    "angle_principal": {{
-      "nom_specifique": "Nom transposable validé (15-25 mots max)",
+    "raison_hors_sujet": "string ou null"
+  },
+  "analyse_angles": {
+    "angle_principal": {
+      "nom_specifique": "string (15-25 mots max, transposable validé)",
       "score_confiance": 0.0,
-      "preuves_quantitatives": {{
+      "preuves_quantitatives": {
         "mots_dedies": 0,
         "sous_sections": 0,
         "chiffres_uniques": 0,
         "citations_exactes": [],
         "exemples_concrets": 0,
         "preuves_visuelles": []
-      }},
-      "valeur_ajoutee": {{
+      },
+      "valeur_ajoutee": {
         "unicite": 0.0,
         "actionabilite": 0.0,
         "profondeur": "superficiel|modéré|approfondi|expert"
-      }},
-      "description_strategique": "3-5 phrases minimum : déploiement + tactiques + SEO + besoin utilisateur"
-    }},
-    "angles_secondaires": [
-      {{
-        "nom": "Angle validé par test transposabilité",
-        "couverture": "superficiel|modéré|approfondi",
-        "preuves": [],
-        "description_strategique": "2-3 phrases minimum"
-      }}
-    ]
-  }},
-  "approches_differenciantes": [
-    {{
-      "approche": "Nom court",
-      "description": "2-3 phrases : en quoi c'est unique",
-      "valeur_ajoutee": "1-2 phrases : bénéfice utilisateur"
-    }}
-  ],
-  "couverture_thematique": {{
+      },
+      "description_strategique": "string (3-5 phrases)"
+    },
+    "angles_secondaires": []
+  },
+  "approches_differenciantes": [],
+  "couverture_thematique": {
     "score_completude": "XX%",
-    "aspects_manquants": ["aspect 1", "aspect 2"],
-    "forces_particulieres": ["force 1", "force 2"]
-  }},
-  "themes_emergents": [
-    {{
-      "nom": "Nom du thème émergent (5-10 mots)",
-      "pourquoi_emergent": "2-3 phrases expliquant nouveauté et opportunité",
-      "couverture_concurrent": "absent|rare|superficiel",
-      "potentiel_seo": "faible|moyen|élevé",
-      "justification_potentiel": "1-2 phrases",
-      "preuves_article": ["citation 1", "citation 2"],
-      "angle_redactionnel_suggere": "1-2 phrases : comment exploiter ce thème"
-    }}
-  ],
-  "themes_a_exclure": [
-    {{
-      "nom": "Nom du thème à éviter (5-10 mots)",
-      "raison_exclusion": "2-3 phrases expliquant pourquoi l'éviter",
-      "niveau_saturation": "modéré|élevé|total",
-      "impact_si_inclus": "dilution|banalisation|confusion",
-      "preuve_saturation": "XX% concurrents le traitent de manière identique",
-      "alternative_suggeree": "1-2 phrases : angle différenciant à privilégier"
-    }}
-  ],
-  "type_contenu": "Type précis du contenu",
+    "aspects_manquants": [],
+    "forces_particulieres": []
+  },
+  "themes_emergents": [],
+  "themes_a_exclure": [],
+  "type_contenu": "string",
   "intention": "informationnelle|commerciale|transactionnelle|navigationnelle",
   "profondeur_globale": "superficiel|modéré|approfondi|expert",
-  "positionnement_concurrentiel": "2-3 phrases : avantages + désavantages"
-}}
+  "positionnement_concurrentiel": "string (2-3 phrases)"
+}
+    </json_schema>
+  </output_specification>
 
-═══════════════════════════════════════════════════════════════
-CHECKLIST DE VALIDATION FINALE
-═══════════════════════════════════════════════════════════════
+  <!-- ==================== VALIDATION CHECKLIST ==================== -->
+  
+  <validation_checklist>
+    <title>Vérifications obligatoires avant de retourner l'analyse</title>
+    
+    <check priority="critical">Phase 1 (pertinence) exécutée EN PREMIER</check>
+    <check priority="critical">Si score inférieur à 0.7 → hors_sujet: true ET analyse minimale uniquement</check>
+    <check priority="high">Tous les angles ont passé le test de transposabilité</check>
+    <check priority="high">Aucun angle n'est une reformulation du sujet</check>
+    <check priority="medium">Descriptions stratégiques font 3-5 phrases (angle principal) ou 2-3 phrases (secondaires)</check>
+    <check priority="medium">Thèmes émergents sont bien des OPPORTUNITÉS (non saturés)</check>
+    <check priority="medium">Thèmes à exclure sont bien des RISQUES (saturés ou contre-productifs)</check>
+    <check priority="medium">Distinction claire maintenue : thèmes ≠ angles</check>
+    <check priority="high">Scores calculés avec justification basée sur l'échelle, pas devinés</check>
+    <check priority="high">Preuves extraites du contenu réel, pas inventées</check>
+    <check priority="critical">JSON valide et complet</check>
+    <check priority="critical">Aucun texte en dehors du JSON dans la réponse finale</check>
+  </validation_checklist>
 
-Avant de répondre, vérifie que:
+  <!-- ==================== EXECUTION ==================== -->
+  
+  <execution_instruction>
+    <step>Commence l'analyse maintenant avec les variables d'entrée fournies</step>
+    <step>Exécute la Phase 1 en premier</step>
+    <step>Applique la condition d'arrêt si le score de pertinence est inférieur à 0.7</step>
+    <step>Si le score est supérieur ou égal à 0.7, continue avec les phases 2 à 6</step>
+    <step>Retourne UNIQUEMENT du JSON valide sans texte d'accompagnement</step>
+  </execution_instruction>
 
-☑ Phase 1 (pertinence) exécutée EN PREMIER
-☑ Si score < 0.7 → hors_sujet: true ET analyse minimale
-☑ Tous les angles ont passé le test de transposabilité
-☑ Aucun angle n'est une reformulation du sujet
-☑ Descriptions stratégiques font 3-5 phrases (angle principal) ou 2-3 (secondaires)
-☑ Thèmes émergents sont bien des OPPORTUNITÉS (non saturés)
-☑ Thèmes à exclure sont bien des RISQUES (saturés/contre-productifs)
-☑ Thèmes ≠ angles (distinction claire)
-☑ Scores calculés avec justification, pas devinés
-☑ Preuves extraites du contenu, pas inventées
-☑ JSON valide et complet
-☑ Aucun texte en dehors du JSON
-
-COMMENCE L'ANALYSE MAINTENANT.
-"""
+</prompt_analysis_seo>

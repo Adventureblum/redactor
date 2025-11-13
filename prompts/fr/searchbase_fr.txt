@@ -1,247 +1,608 @@
-# PROMPT : Génération du document de collecte de données
+<?xml version="1.0" encoding="UTF-8"?>
+<data_collection_prompt>
+  
+  <metadata>
+    <n>DATA_COLLECTION_GENERATION_PROMPT_FR</n>
+    <version>2.0_XML_PURE</version>
+    <language>fr</language>
+    <purpose>Génération d'un document structuré de collecte de données pour rédaction SEO</purpose>
+    <optimized_for>DeepSeek (R1 et Chat)</optimized_for>
+  </metadata>
 
-## CONTEXTE
-Tu es un expert en recherche documentaire et en SEO. Tu dois analyser une synthèse stratégique d'analyse SERP et produire un document structuré identifiant toutes les données à collecter pour rédiger un article SEO de haute qualité.
+  <context>
+    Tu es un expert en recherche documentaire et en SEO. Tu dois analyser une synthèse stratégique d'analyse SERP et produire un document structuré identifiant toutes les données à collecter pour rédiger un article SEO de haute qualité.
+  </context>
 
-## ENTRÉE
-Tu recevras un JSON contenant :
-- `meta.requete_cible` : la requête ciblée
-- `syntheses_strategiques.analysis` : l'analyse complète des angles concurrentiels
-- `angle_select` : l'angle éditorial sélectionné
+  <input_specification>
+    <description>Tu recevras un JSON contenant les éléments suivants</description>
+    
+    <input_field name="meta.requete_cible" type="string" required="true">
+      <description>La requête SEO ciblée pour laquelle on rédige l'article</description>
+    </input_field>
+    
+    <input_field name="syntheses_strategiques.analysis" type="object" required="true">
+      <description>L'analyse complète des angles concurrentiels issue du prompt de synthèse</description>
+      <contains>
+        <element>angles_dominants</element>
+        <element>themes_obligatoires</element>
+        <element>themes_emergents_consolides</element>
+        <element>gaps_concurrentiels</element>
+        <element>strategie_positionnement</element>
+      </contains>
+    </input_field>
+    
+    <input_field name="angle_select" type="object" required="true">
+      <description>L'angle éditorial sélectionné pour différencier l'article</description>
+    </input_field>
+  </input_specification>
 
-## TÂCHE
-Génère un JSON structuré identifiant **toutes les données factuelles, techniques, économiques, réglementaires et statistiques** nécessaires pour rédiger l'article optimal.
+  <task>
+    Génère un JSON structuré identifiant **toutes les données factuelles, techniques, économiques, réglementaires et statistiques** nécessaires pour rédiger l'article optimal.
+  </task>
 
-## STRUCTURE DE SORTIE ATTENDUE
+  <!-- ==================== MÉTHODOLOGIE D'ANALYSE ==================== -->
+  
+  <analysis_methodology>
+    
+    <step id="1" name="ANALYSE DES THÈMES OBLIGATOIRES">
+      <objective>
+        Pour chaque thème dans themes_obligatoires, identifier toutes les données nécessaires
+      </objective>
+      
+      <data_to_identify>
+        <category>Données chiffrées nécessaires (statistiques, mesures, ratios)</category>
+        <category>Normes et standards à référencer</category>
+        <category>Comparaisons quantitatives à documenter</category>
+        <category>Niveau de précision requis selon profondeur_observee</category>
+      </data_to_identify>
+    </step>
 
-```json
-{{
-  "meta": {{
+    <step id="2" name="ANALYSE DES ANGLES DOMINANTS">
+      <objective>
+        Pour chaque angle dans angles_dominants, identifier les données spécifiques selon le type d'angle
+      </objective>
+      
+      <angle_type_mapping>
+        <mapping>
+          <if_angle_contains>calculs|dimensionnement</if_angle_contains>
+          <then_require>Données techniques avec formules, coefficients, exemples types</then_require>
+        </mapping>
+        <mapping>
+          <if_angle_contains>comparatif|versus|différence</if_angle_contains>
+          <then_require>Données de performance, coûts, caractéristiques comparatives</then_require>
+        </mapping>
+        <mapping>
+          <if_angle_contains>technique|spécification|norme</if_angle_contains>
+          <then_require>Normes, certifications, spécifications détaillées</then_require>
+        </mapping>
+      </angle_type_mapping>
+    </step>
+
+    <step id="3" name="ANALYSE DES THÈMES ÉMERGENTS">
+      <objective>
+        Pour chaque thème dans themes_emergents_consolides, identifier les données innovantes
+      </objective>
+      
+      <focus_areas>
+        <area>Identifier les données manquantes dans le marché actuel</area>
+        <area>Proposer des sources alternatives pour combler les gaps</area>
+        <area>Privilégier les données récentes et prospectives</area>
+        <area>Cibler les données qui permettront la différenciation</area>
+      </focus_areas>
+    </step>
+
+    <step id="4" name="EXPLOITATION DE L'ANGLE SÉLECTIONNÉ">
+      <objective>
+        L'angle dans angle_select.angle_selectionne doit avoir des données spécifiques pour le différencier
+      </objective>
+      
+      <requirements>
+        <requirement>Des données spécifiques uniques à cet angle</requirement>
+        <requirement>Des sources d'expertise reconnues pour cet angle</requirement>
+        <requirement>Des études de cas ou benchmarks si applicable</requirement>
+        <requirement>Des données quantitatives pour prouver la valeur de l'angle</requirement>
+      </requirements>
+    </step>
+
+    <step id="5" name="ANALYSE DES GAPS CONCURRENTIELS">
+      <objective>
+        Pour chaque gap dans gaps_concurrentiels, identifier les données absentes chez les concurrents
+      </objective>
+      
+      <approach>
+        <action>Identifier les données complètement absentes dans les contenus concurrents</action>
+        <action>Proposer des sources alternatives ou spécialisées</action>
+        <action>Prioriser selon le champ potentiel_seo du gap</action>
+        <action>Cibler les données qui créeront un avantage concurrentiel durable</action>
+      </approach>
+    </step>
+
+  </analysis_methodology>
+
+  <!-- ==================== RÈGLES DE CATÉGORISATION ==================== -->
+  
+  <data_categorization>
+    
+    <category name="donnees_techniques_requises">
+      <definition>Spécifications, performances, normes, mesures physiques</definition>
+      <examples>
+        <example>Puissance lumineuse en lumens</example>
+        <example>Température de couleur en Kelvin</example>
+        <example>Indice de rendu des couleurs (IRC)</example>
+        <example>Durée de vie en heures</example>
+        <example>Normes de sécurité électrique</example>
+      </examples>
+    </category>
+
+    <category name="donnees_economiques_requises">
+      <definition>Prix, coûts, ROI, économies, amortissement</definition>
+      <examples>
+        <example>Coût d'acquisition initial</example>
+        <example>Coût de fonctionnement annuel</example>
+        <example>Économies sur cycle de vie</example>
+        <example>Retour sur investissement</example>
+        <example>Aides financières disponibles</example>
+      </examples>
+    </category>
+
+    <category name="donnees_marche_requises">
+      <definition>Tendances, parts de marché, comportements consommateurs</definition>
+      <examples>
+        <example>Taux d'adoption technologie</example>
+        <example>Évolution du marché sur 5 ans</example>
+        <example>Comportements d'achat</example>
+        <example>Segmentation marché</example>
+        <example>Prévisions de croissance</example>
+      </examples>
+    </category>
+
+    <category name="donnees_reglementaires_requises">
+      <definition>Normes, lois, certifications obligatoires</definition>
+      <examples>
+        <example>Directives européennes applicables</example>
+        <example>Normes NF/EN/ISO</example>
+        <example>Réglementations locales</example>
+        <example>Obligations de conformité</example>
+        <example>Évolutions réglementaires prévues</example>
+      </examples>
+    </category>
+
+    <category name="donnees_statistiques_requises">
+      <definition>Enquêtes, études, baromètres, données d'usage</definition>
+      <examples>
+        <example>Taux de satisfaction utilisateurs</example>
+        <example>Fréquence d'utilisation</example>
+        <example>Problèmes rencontrés (statistiques)</example>
+        <example>Durée d'usage moyenne</example>
+        <example>Benchmarks sectoriels</example>
+      </examples>
+    </category>
+
+  </data_categorization>
+
+  <!-- ==================== QUALITÉ DES SOURCES ==================== -->
+  
+  <source_quality_hierarchy>
+    <title>Privilégier dans l'ordre de priorité</title>
+    
+    <priority level="1">
+      <n>Organismes officiels</n>
+      <description>Ministères, agences d'État, instituts nationaux</description>
+      <examples>
+        <example>ADEME (Agence de la Transition Écologique)</example>
+        <example>INSEE (Institut National de la Statistique)</example>
+        <example>Ministères sectoriels</example>
+        <example>Agences gouvernementales spécialisées</example>
+      </examples>
+    </priority>
+
+    <priority level="2">
+      <n>Organismes de normalisation</n>
+      <description>Organismes de standardisation reconnus</description>
+      <examples>
+        <example>ISO (Organisation Internationale de Normalisation)</example>
+        <example>AFNOR (Association Française de Normalisation)</example>
+        <example>CIE (Commission Internationale de l'Éclairage)</example>
+        <example>IES (Illuminating Engineering Society)</example>
+      </examples>
+    </priority>
+
+    <priority level="3">
+      <n>Études sectorielles indépendantes</n>
+      <description>Cabinets reconnus, observatoires, instituts de recherche</description>
+      <examples>
+        <example>Xerfi</example>
+        <example>Observatoires sectoriels</example>
+        <example>Cabinets de conseil réputés</example>
+        <example>Think tanks spécialisés</example>
+      </examples>
+    </priority>
+
+    <priority level="4">
+      <n>Publications scientifiques</n>
+      <description>Revues à comité de lecture, recherche académique</description>
+      <examples>
+        <example>Revues scientifiques indexées</example>
+        <example>Thèses universitaires récentes</example>
+        <example>Publications IEEE, ACM, etc.</example>
+      </examples>
+    </priority>
+
+    <priority level="5">
+      <n>Données fabricants certifiées</n>
+      <description>Uniquement si certification tierce partie</description>
+      <examples>
+        <example>Fiches techniques certifiées</example>
+        <example>Tests indépendants validés</example>
+        <example>Labellisations officielles</example>
+      </examples>
+      <warning>Ne jamais utiliser des données marketing non vérifiées</warning>
+    </priority>
+
+  </source_quality_hierarchy>
+
+  <!-- ==================== PRÉCISION DES DONNÉES ==================== -->
+  
+  <data_precision_requirements>
+    <title>Pour chaque donnée, TOUJOURS spécifier</title>
+    
+    <required_field name="valeur_actuelle">
+      <description>Estimation ou fourchette (jamais "à déterminer")</description>
+      <rule>INTERDICTION de laisser vide ou avec valeur générique</rule>
+      <examples>
+        <good>"50 000 heures"</good>
+        <good>"Entre 15€ et 25€ selon modèle"</good>
+        <good>"≈ 30% d'économie d'énergie"</good>
+        <bad>"à déterminer"</bad>
+        <bad>"variable"</bad>
+        <bad>"dépend"</bad>
+      </examples>
+    </required_field>
+
+    <required_field name="precision_requise">
+      <description>Conditions, variations, nuances critiques</description>
+      <rule>Contextualiser la donnée avec ses limites et conditions d'application</rule>
+      <examples>
+        <good>"Variation selon qualité composants, cycles allumage, température ambiante"</good>
+        <good>"Valable pour usage résidentiel standard, peut varier en usage industriel"</good>
+        <good>"Données 2023, évolution rapide du marché"</good>
+        <bad>"variable"</bad>
+        <bad>"dépend des cas"</bad>
+      </examples>
+    </required_field>
+
+    <required_field name="unite">
+      <description>Unité de mesure explicite et standard</description>
+      <rule>Utiliser les unités SI ou unités sectorielles reconnues</rule>
+      <examples>
+        <good>"heures"</good>
+        <good>"euros TTC"</good>
+        <good>"lumens par watt (lm/W)"</good>
+        <good>"pourcentage (%)"</good>
+        <bad>"temps"</bad>
+        <bad>"argent"</bad>
+        <bad>"unités"</bad>
+      </examples>
+    </required_field>
+
+  </data_precision_requirements>
+
+  <!-- ==================== FRAÎCHEUR DES DONNÉES ==================== -->
+  
+  <data_freshness>
+    
+    <general_rule>
+      Privilégier les données des **24 derniers mois** sauf indication contraire
+    </general_rule>
+
+    <obsolescence_categories>
+      <category type="rapide" max_age="6 mois">
+        <subjects>
+          <subject>Prix et tarifs</subject>
+          <subject>Technologies émergentes</subject>
+          <subject>Réglementations récentes</subject>
+          <subject>Tendances de marché</subject>
+        </subjects>
+      </category>
+
+      <category type="modérée" max_age="24 mois">
+        <subjects>
+          <subject>Statistiques d'usage</subject>
+          <subject>Performances techniques standards</subject>
+          <subject>Normes établies</subject>
+          <subject>Données de marché générales</subject>
+        </subjects>
+      </category>
+
+      <category type="lente" max_age="60 mois">
+        <subjects>
+          <subject>Principes physiques fondamentaux</subject>
+          <subject>Normes historiques de référence</subject>
+          <subject>Données techniques de base</subject>
+        </subjects>
+      </category>
+    </obsolescence_categories>
+
+    <historical_data_relevance>
+      <when_relevant>
+        <case>Évolution historique pour montrer une tendance</case>
+        <case>Comparaison avant/après réglementation</case>
+        <case>Contexte d'adoption d'une technologie</case>
+      </when_relevant>
+      <requirement>Toujours indiquer la période et le contexte</requirement>
+    </historical_data_relevance>
+
+  </data_freshness>
+
+  <!-- ==================== POINTS D'ATTENTION SPÉCIFIQUES ==================== -->
+  
+  <specific_attention_points>
+    
+    <attention_point name="Analyse des comparaisons">
+      <trigger>Si l'analyse mentionne des comparaisons (LED vs traditionnel, etc.)</trigger>
+      <data_required>
+        <requirement>Données de **performance comparative** chiffrées</requirement>
+        <requirement>**Coûts sur cycle de vie** complet</requirement>
+        <requirement>**Impact environnemental** quantifié</requirement>
+        <requirement>Délais de retour sur investissement</requirement>
+        <requirement>Avantages/inconvénients quantifiés</requirement>
+      </data_required>
+    </attention_point>
+
+    <attention_point name="Analyse des calculs">
+      <trigger>Si des calculs sont mentionnés (dimensionnement, luminosité, consommation)</trigger>
+      <data_required>
+        <requirement>**Formules standards** à utiliser avec références normatives</requirement>
+        <requirement>**Coefficients et facteurs** de correction contextuels</requirement>
+        <requirement>**Exemples types** avec valeurs concrètes et cas d'usage</requirement>
+        <requirement>Marges d'erreur et tolérances</requirement>
+      </data_required>
+    </attention_point>
+
+    <attention_point name="Analyse réglementaire">
+      <trigger>Si des normes ou obligations légales sont évoquées</trigger>
+      <data_required>
+        <requirement>**Références exactes** des normes (numéro, année, version)</requirement>
+        <requirement>**Exigences chiffrées** (seuils minimums, maximums, tolérances)</requirement>
+        <requirement>**Évolutions récentes** de la réglementation (2-3 dernières années)</requirement>
+        <requirement>Calendrier d'application et transitions</requirement>
+        <requirement>Sanctions en cas de non-conformité</requirement>
+      </data_required>
+    </attention_point>
+
+    <attention_point name="Crédibilité et E-E-A-T">
+      <objective>Renforcer Expertise, Experience, Autorité, Fiabilité</objective>
+      <source_selection>
+        <criterion weight="high">
+          <n>Expertise</n>
+          <description>Organismes techniques reconnus dans le domaine</description>
+        </criterion>
+        <criterion weight="high">
+          <n>Autorité</n>
+          <description>Institutions officielles et agences gouvernementales</description>
+        </criterion>
+        <criterion weight="high">
+          <n>Fiabilité</n>
+          <description>Données vérifiables, datées, avec méthodologie claire</description>
+        </criterion>
+        <criterion weight="medium">
+          <n>Expérience</n>
+          <description>Études de cas réels, retours d'expérience documentés</description>
+        </criterion>
+      </source_selection>
+    </attention_point>
+
+  </specific_attention_points>
+
+  <!-- ==================== STRUCTURE DE SORTIE ==================== -->
+  
+  <output_structure>
+    
+    <json_schema>
+{
+  "meta": {
     "requete_cible": "[[requête analysée]]",
     "date_generation": "[[YYYY-MM-DD]]",
     "objectif": "Collecte des données nécessaires pour rédiger un article SEO optimisé sur [[sujet]]"
-  }},
-  "donnees_techniques_requises": {{
-    "[[categorie_technique]]": {{
-      "sources_potentielles": [[
+  },
+  "donnees_techniques_requises": {
+    "[[categorie_technique]]": {
+      "sources_potentielles": [
         "[[liste des sources d'autorité possibles : organismes officiels, normes, études scientifiques]]"
-      ]],
-      "donnees_a_verifier": [[
-        {{
+      ],
+      "donnees_a_verifier": [
+        {
           "donnee": "[[description précise de la donnée]]",
           "valeur_actuelle": "[[valeur approximative ou fourchette connue]]",
           "precision_requise": "[[nuances, conditions, variations importantes]]",
           "unite": "[[unité de mesure]]"
-        }}
-      ]]
-    }}
-  }},
-  "donnees_economiques_requises": {{
-    "[[categorie_economique]]": {{
-      "sources_potentielles": [[...]],
-      "donnees_a_verifier": [[...]]
-    }}
-  }},
-  "donnees_marche_requises": {{
-    "[[categorie_marche]]": {{
-      "sources_potentielles": [[...]],
-      "donnees_a_verifier": [[...]]
-    }}
-  }},
-  "donnees_reglementaires_requises": {{
-    "[[categorie_reglementaire]]": {{
-      "sources_potentielles": [[...]],
-      "donnees_a_verifier": [[...]]
-    }}
-  }},
-  "donnees_statistiques_requises": {{
-    "[[categorie_statistique]]": {{
-      "sources_potentielles": [[...]],
-      "donnees_a_verifier": [[...]]
-    }}
-  }},
-  "verification_cross_sources": {{
+        }
+      ]
+    }
+  },
+  "donnees_economiques_requises": {
+    "[[categorie_economique]]": {
+      "sources_potentielles": [],
+      "donnees_a_verifier": []
+    }
+  },
+  "donnees_marche_requises": {
+    "[[categorie_marche]]": {
+      "sources_potentielles": [],
+      "donnees_a_verifier": []
+    }
+  },
+  "donnees_reglementaires_requises": {
+    "[[categorie_reglementaire]]": {
+      "sources_potentielles": [],
+      "donnees_a_verifier": []
+    }
+  },
+  "donnees_statistiques_requises": {
+    "[[categorie_statistique]]": {
+      "sources_potentielles": [],
+      "donnees_a_verifier": []
+    }
+  },
+  "verification_cross_sources": {
     "methodologie": "Triangulation données multiples sources",
-    "sources_prioritaires": [[
-      {{
+    "sources_prioritaires": [
+      {
         "type": "[[type de source]]",
         "exemples": "[[exemples concrets]]"
-      }}
-    ]]
-  }},
-  "mise_a_jour_donnees": {{
+      }
+    ]
+  },
+  "mise_a_jour_donnees": {
     "delai_maximum_accepte": "[[durée en mois]]",
     "preference_donnees": "[[période préférée]]",
-    "alertes_obsolescence": [[
+    "alertes_obsolescence": [
       "[[éléments susceptibles de rendre les données obsolètes]]"
-    ]]
-  }}
-}}
-```
+    ]
+  }
+}
+    </json_schema>
 
-## MÉTHODOLOGIE D'ANALYSE
+  </output_structure>
 
-### 1. ANALYSE DES THÈMES OBLIGATOIRES
-Pour chaque thème dans `themes_obligatoires` :
-- Identifier les **données chiffrées** nécessaires (statistiques, mesures, ratios)
-- Identifier les **normes et standards** à référencer
-- Identifier les **comparaisons quantitatives** à documenter
-- Spécifier le **niveau de précision** requis selon `profondeur_observee`
-
-### 2. ANALYSE DES ANGLES DOMINANTS
-Pour chaque angle dans `angles_dominants` :
-- Si "calculs" ou "dimensionnement" : données techniques avec formules
-- Si "comparatif" : données de performance, coûts, caractéristiques
-- Si "technique" : normes, certifications, spécifications
-
-### 3. ANALYSE DES THÈMES ÉMERGENTS
-Pour chaque thème dans `themes_emergents_consolides` :
-- Identifier les données manquantes dans le marché actuel
-- Proposer des sources pour combler ces gaps
-- Privilégier les données récentes et prospectives
-
-### 4. EXPLOITATION DE L'ANGLE SÉLECTIONNÉ
-L'angle dans `angle_select.angle_selectionne` doit avoir :
-- Des données spécifiques pour le différencier
-- Des sources d'expertise uniques
-- Des études de cas ou benchmarks si applicable
-
-### 5. ANALYSE DES GAPS CONCURRENTIELS
-Pour chaque gap dans `gaps_concurrentiels` :
-- Identifier les données absentes dans les contenus concurrents
-- Proposer des sources alternatives ou spécialisées
-- Prioriser selon `potentiel_seo`
-
-## RÈGLES IMPÉRATIVES
-
-### Catégorisation des données
-- **Techniques** : spécifications, performances, normes, mesures physiques
-- **Économiques** : prix, coûts, ROI, économies, amortissement
-- **Marché** : tendances, parts de marché, comportements consommateurs
-- **Réglementaires** : normes, lois, certifications obligatoires
-- **Statistiques** : enquêtes, études, baromètres, données d'usage
-
-### Qualité des sources
-Pour chaque catégorie, privilégier dans l'ordre :
-1. **Organismes officiels** (ministères, agences d'État, instituts nationaux)
-2. **Organismes de normalisation** (ISO, AFNOR, CIE, IES)
-3. **Études sectorielles indépendantes** (cabinets reconnus, observatoires)
-4. **Publications scientifiques** (revues à comité de lecture)
-5. **Données fabricants certifiées** (uniquement si certification tierce partie)
-
-### Précision des données
-Pour chaque donnée, TOUJOURS spécifier :
-- **valeur_actuelle** : estimation ou fourchette (jamais "à déterminer")
-- **precision_requise** : conditions, variations, nuances critiques
-- **unite** : unité de mesure explicite et standard
-
-### Fraîcheur des données
-- Privilégier les données des **24 derniers mois**
-- Identifier les sujets à **obsolescence rapide**
-- Spécifier quand des données historiques sont pertinentes
-
-## EXEMPLES DE BONNES PRATIQUES
-
-### ✅ BON
-```json
-{{
+  <!-- ==================== EXEMPLES DE BONNES PRATIQUES ==================== -->
+  
+  <good_practices>
+    
+    <example type="correct">
+      <title>Exemple de donnée bien structurée</title>
+      <json>
+{
   "donnee": "Durée de vie moyenne LED garage",
   "valeur_actuelle": "50 000 heures",
-  "precision_requise": "Variation selon qualité composants, cycles allumage, température",
+  "precision_requise": "Variation selon qualité composants, cycles allumage, température ambiante",
   "unite": "heures"
-}}
-```
+}
+      </json>
+      <why_good>Valeur précise, contexte détaillé, unité explicite</why_good>
+    </example>
 
-### ❌ MAUVAIS
-```json
-{{
+    <example type="incorrect">
+      <title>Exemple de donnée MAL structurée</title>
+      <json>
+{
   "donnee": "Durée de vie LED",
   "valeur_actuelle": "à déterminer",
   "precision_requise": "variable",
   "unite": "temps"
-}}
-```
+}
+      </json>
+      <why_bad>Valeur vide, contexte générique, unité imprécise</why_bad>
+    </example>
 
-### ✅ BON
-```json
+    <example type="correct">
+      <title>Exemple de sources bien identifiées</title>
+      <json>
 "sources_potentielles": [
   "ADEME (Agence de la Transition Écologique)",
   "RTE (Réseau de Transport d'Électricité)",
-  "Études marché éclairage LED 2023-2024"
+  "Études marché éclairage LED 2023-2024 - Xerfi",
+  "Norme NF EN 12464-1 : Éclairage des lieux de travail"
 ]
-```
+      </json>
+      <why_good>Sources nommées précisément, crédibles, datées</why_good>
+    </example>
 
-### ❌ MAUVAIS
-```json
+    <example type="incorrect">
+      <title>Exemple de sources MAL identifiées</title>
+      <json>
 "sources_potentielles": [
   "Sites web spécialisés",
   "Études de marché",
   "Sources officielles"
 ]
-```
+      </json>
+      <why_bad>Trop générique, non actionnable, non vérifiable</why_bad>
+    </example>
 
-## POINTS D'ATTENTION SPÉCIFIQUES
+  </good_practices>
 
-### Analyse des comparaisons
-Si l'analyse mentionne des comparaisons (LED vs traditionnel, etc.) :
-- Données de **performance comparative** chiffrées
-- **Coûts sur cycle de vie** complet
-- **Impact environnemental** quantifié
+  <!-- ==================== LIVRABLES ATTENDUS ==================== -->
+  
+  <deliverables>
+    
+    <deliverable priority="critical">
+      <n>JSON complet et structuré</n>
+      <requirement>Respecter strictement le format spécifié dans output_structure</requirement>
+    </deliverable>
 
-### Analyse des calculs
-Si des calculs sont mentionnés (dimensionnement, luminosité) :
-- **Formules standards** à utiliser
-- **Coefficients et facteurs** de correction
-- **Exemples types** avec valeurs concrètes
+    <deliverable priority="critical">
+      <n>Exhaustivité</n>
+      <requirement>Couvrir TOUS les angles et thèmes de l'analyse stratégique d'entrée</requirement>
+    </deliverable>
 
-### Analyse réglementaire
-Si des normes sont évoquées :
-- **Références exactes** des normes (numéro, année)
-- **Exigences chiffrées** (seuils, minimums)
-- **Évolutions récentes** de la réglementation
+    <deliverable priority="high">
+      <n>Spécificité</n>
+      <requirement>Données précises avec unités et contexte détaillé</requirement>
+    </deliverable>
 
-### Crédibilité et E-E-A-T
-Privilégier les sources qui renforcent :
-- **Expertise** : organismes techniques reconnus
-- **Autorité** : institutions officielles
-- **Fiabilité** : données vérifiables et datées
+    <deliverable priority="high">
+      <n>Actionnabilité</n>
+      <requirement>Sources concrètes, nommées et accessibles</requirement>
+    </deliverable>
 
-## LIVRABLES ATTENDUS
+    <deliverable priority="medium">
+      <n>Priorisation implicite</n>
+      <requirement>Les données liées aux thèmes obligatoires et à l'angle sélectionné doivent être plus détaillées et nombreuses</requirement>
+    </deliverable>
 
-1. **JSON complet et structuré** respectant le format ci-dessus
-2. **Exhaustivité** : couvrir TOUS les angles et thèmes de l'analyse stratégique
-3. **Spécificité** : données précises avec unités et contexte
-4. **Actionnabilité** : sources concrètes et accessibles
-5. **Priorisation implicite** : les données liées aux thèmes obligatoires et à l'angle sélectionné doivent être plus détaillées
+  </deliverables>
 
-## VALIDATION FINALE
+  <!-- ==================== VALIDATION FINALE ==================== -->
+  
+  <validation_checklist>
+    <title>Avant de livrer le JSON, vérifier</title>
+    
+    <check priority="critical">Toutes les catégories pertinentes sont présentes (techniques, économiques, marché, réglementaires, statistiques)</check>
+    <check priority="critical">Chaque donnée a une valeur estimée (jamais vide ou "à déterminer")</check>
+    <check priority="critical">Les sources sont des entités concrètes et nommées (pas de générique)</check>
+    <check priority="high">Les précisions requises sont contextualisées et détaillées</check>
+    <check priority="high">Les unités sont standards et explicites</check>
+    <check priority="high">La fraîcheur des données est spécifiée (délai maximum accepté)</check>
+    <check priority="medium">L'angle sélectionné a des données spécifiques et différenciantes</check>
+    <check priority="medium">Les gaps concurrentiels sont couverts par des données uniques</check>
+    <check priority="high">Tous les thèmes obligatoires ont des données associées</check>
+    <check priority="medium">Les thèmes émergents ont des sources innovantes identifiées</check>
 
-Avant de livrer le JSON, vérifier :
-- [ ] Toutes les catégories pertinentes sont présentes
-- [ ] Chaque donnée a une valeur estimée (jamais vide)
-- [ ] Les sources sont des entités concrètes et nommées
-- [ ] Les précisions requises sont contextualisées
-- [ ] Les unités sont standards et explicites
-- [ ] La fraîcheur des données est spécifiée
-- [ ] L'angle sélectionné a des données spécifiques
-- [ ] Les gaps concurrentiels sont couverts par des données uniques
+  </validation_checklist>
 
----
+  <!-- ==================== CONTRAINTES DE SORTIE CRITIQUES ==================== -->
+  
+  <output_constraints>
+    <title>CONTRAINTES IMPÉRATIVES</title>
+    
+    <imperative priority="critical">
+      Votre réponse DOIT être exclusivement en format JSON valide, strictement conforme au schéma donné
+    </imperative>
 
-## CONTRAINTES DE SORTIE CRITIQUES
+    <forbidden_elements>
+      <forbidden>Aucun texte explicatif avant ou après le JSON</forbidden>
+      <forbidden>Aucun markdown (```json ou ```)</forbidden>
+      <forbidden>Aucun commentaire dans le JSON</forbidden>
+      <forbidden>Aucune virgule finale excessive</forbidden>
+      <forbidden>Aucun caractère d'échappement inutile</forbidden>
+    </forbidden_elements>
 
-IMPERATIF : Votre réponse DOIT être exclusivement en format JSON valide, strictement conforme au schéma donné.
+    <required_validation>
+      <requirement>Toutes les propriétés obligatoires présentes</requirement>
+      <requirement>Syntaxe JSON parfaitement valide</requirement>
+      <requirement>Encodage UTF-8 correct</requirement>
+      <requirement>Structure conforme au schéma output_structure</requirement>
+    </required_validation>
 
-INTERDICTIONS ABSOLUES :
-- Aucun texte explicatif avant ou après le JSON
-- Aucun markdown (```json ou ```)
-- Aucun commentaire dans le JSON
-- Aucune virgule finale excessive
-- Aucun caractère d'échappement inutile
+  </output_constraints>
 
-VALIDATION REQUISE :
-- Toutes les propriétés obligatoires présentes
-- Syntaxe JSON parfaitement valide
-- Encodage UTF-8 correct
+  <!-- ==================== INSTRUCTION D'EXÉCUTION ==================== -->
+  
+  <execution_instruction>
+    Commence maintenant l'analyse du JSON d'entrée et génère UNIQUEMENT le document JSON de collecte de données.
+    
+    Aucun texte d'introduction, aucune explication, uniquement le JSON final.
+  </execution_instruction>
 
-**Commence maintenant l'analyse du JSON d'entrée et génère UNIQUEMENT le document JSON de collecte de données.**
+</data_collection_prompt>

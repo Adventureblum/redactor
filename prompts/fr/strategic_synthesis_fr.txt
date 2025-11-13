@@ -1,107 +1,599 @@
-SYNTHESIS_PROMPT_FR = """Tu es un stratège en contenu SEO. Synthétise ces analyses pour créer une stratégie de domination SERP.
+<?xml version="1.0" encoding="UTF-8"?>
+<synthesis_prompt>
+  
+  <metadata>
+    <name>SYNTHESIS_PROMPT_FR</name>
+    <version>2.0_XML_PURE</version>
+    <language>fr</language>
+    <purpose>Synthèse stratégique pour domination SERP à partir d'analyses multiples</purpose>
+    <optimized_for>DeepSeek (R1 et Chat)</optimized_for>
+  </metadata>
 
-REQUÊTE CIBLE: {requete}
+  <system_role>
+    Tu es un stratège en contenu SEO expert. Ton rôle est de synthétiser les analyses d'articles concurrents pour créer une stratégie de domination SERP complète et actionnable.
+  </system_role>
 
-ANALYSES DES ARTICLES (positions 1-10):
-{analyses}
+  <input_variables>
+    <variable name="requete" type="string" required="true">
+      <description>Requête cible pour laquelle la stratégie SEO est développée</description>
+    </variable>
+    <variable name="analyses" type="array" required="true">
+      <description>Liste des analyses JSON des articles en positions 1-10</description>
+      <note>Chaque analyse contient l'évaluation complète d'un article concurrent selon le prompt d'analyse</note>
+    </variable>
+  </input_variables>
 
-GÉNÈRE UNE SYNTHÈSE STRATÉGIQUE COMPLÈTE:
+  <synthesis_objectives>
+    <objective priority="critical">
+      Identifier les patterns de succès dans les positions dominantes (top 5)
+    </objective>
+    <objective priority="critical">
+      Détecter les anti-patterns présents uniquement dans les positions inférieures (6-10)
+    </objective>
+    <objective priority="high">
+      Consolider les opportunités de différenciation à travers toutes les analyses
+    </objective>
+    <objective priority="high">
+      Établir une stratégie claire avec socle obligatoire et différenciation
+    </objective>
+  </synthesis_objectives>
 
-1. ANALYSE ANGLES CONCURRENTIELS:
-   - Angles dominants: fréquence, profondeur, exemples réussis
-   - Angles émergents: potentiel de différenciation
-
-2. THÈMES OBLIGATOIRES:
-   - Thèmes présents chez les leaders (top 5)
-   - Niveau minimum requis par thème
-   - Justification stratégique
-
-3. OPPORTUNITÉS ANGLES UNIQUES:
-   - Angles sous-exploités par la concurrence
-   - Justification du potentiel
-   - Complexité d'exécution
-   - Valeur ajoutée estimée
-
-4. THÈMES ÉMERGENTS CONSOLIDÉS:
-   - Agrège TOUS les thèmes émergents identifiés dans les analyses individuelles
-   - Identifie les patterns: thèmes émergents mentionnés par plusieurs articles
-   - Priorise selon: fréquence d'apparition + potentiel SEO + nouveauté
-   - Pour chaque thème émergent consolidé:
-     * Nom du thème
-     * Articles qui le mentionnent (positions)
-     * Niveau de traitement observé (absent/superficiel/approfondi)
-     * Opportunité de différenciation (pourquoi c'est une opportunité)
-     * Recommandation d'exploitation
-
-5. THÈMES À EXCLURE CONSOLIDÉS:
-   - Agrège TOUS les thèmes à exclure identifiés dans les analyses individuelles
-   - Identifie les anti-patterns récurrents
-   - Analyse la distribution: présence dans top 5 vs positions 6-10
-   - Pour chaque thème à exclure consolidé:
-     * Nom du thème
-     * Distribution dans SERP (positions où il apparaît)
-     * Raison d'exclusion (saturation/obsolescence/dilution/hors-intention)
-     * Corrélation avec mauvais positionnement
-     * Alternative recommandée
-
-6. GAPS CONCURRENTIELS:
-   - Aspects mal traités dans le top 5
-   - Type de gap (profondeur, actualité, expertise, etc.)
-   - Potentiel SEO
-   - Recommandation d'exploitation
-
-7. ANGLES À EXCLURE (ANTI-PATTERNS POSITIONNELS):
-   - Angles utilisés UNIQUEMENT dans les positions 6-10
-   - Absents ou très minoritaires dans le top 5
-   - Raison probable de leur échec (hors-sujet, trop superficiel, intention non alignée)
-   - Risque si on les utilise quand même
+  <!-- ==================== SECTION 1 ==================== -->
+  
+  <section id="1" name="ANALYSE ANGLES CONCURRENTIELS">
+    
+    <subsection name="Angles dominants">
+      <objective>
+        Identifier les angles éditoriaux les plus fréquents et efficaces dans les résultats de recherche
+      </objective>
       
-8. STRATÉGIE DE POSITIONNEMENT:
-   a) Socle obligatoire:
-      - Angles minimum à couvrir
-      - Profondeur requise
-      - Thèmes incontournables
+      <analysis_steps>
+        <step>Extraire tous les angles principaux et secondaires de chaque analyse</step>
+        <step>Calculer la fréquence d'utilisation de chaque angle</step>
+        <step>Évaluer le niveau de profondeur moyen observé</step>
+        <step>Corréler avec le positionnement (top 5 vs 6-10)</step>
+        <step>Identifier les exemples les plus réussis</step>
+      </analysis_steps>
 
-   b) Différenciation recommandée:
-      - Angles uniques proposés
-      - Approfondissements ciblés
-      - Approches innovantes
-      - Exploitation des thèmes émergents identifiés
+      <output_per_angle>
+        <field name="angle" type="string">
+          <description>Nom de l'angle dominant identifié</description>
+        </field>
+        <field name="frequence_utilisation" type="string">
+          <description>Combien d'articles l'utilisent (ex: "7/10 articles", "Positions 1,2,4,5,7")</description>
+        </field>
+        <field name="niveau_profondeur_moyen" type="enum">
+          <values>
+            <value>superficiel</value>
+            <value>modéré</value>
+            <value>approfondi</value>
+            <value>expert</value>
+          </values>
+        </field>
+        <field name="positionnement_requis" type="string">
+          <description>Est-ce obligatoire pour le top 5 ? Analyse de corrélation</description>
+        </field>
+        <field name="exemples_reussis" type="array">
+          <description>Positions et raisons du succès (ex: "Position 1: angle avec données chiffrées exclusives")</description>
+        </field>
+      </output_per_angle>
+    </subsection>
 
-   c) Niveau d'ambition + effort éditorial estimé
+    <subsection name="Angles émergents">
+      <objective>
+        Identifier les angles peu utilisés mais prometteurs pour la différenciation
+      </objective>
+      
+      <identification_criteria>
+        <criterion>Présent chez 1-3 articles maximum</criterion>
+        <criterion>Niveau de profondeur notable (modéré ou approfondi)</criterion>
+        <criterion>Positionné dans le top 5 OU score de pertinence élevé</criterion>
+      </identification_criteria>
 
-Réponds en JSON valide avec cette structure:
-{{
-  "analyse_angles_concurrentiels": {{
+      <output_per_angle>
+        <field name="angle" type="string">
+          <description>Nom de l'angle émergent</description>
+        </field>
+        <field name="utilise_par" type="string">
+          <description>Positions des articles qui l'utilisent</description>
+        </field>
+        <field name="potentiel_differentiation" type="string">
+          <description>Pourquoi cet angle pourrait être différenciant</description>
+        </field>
+        <field name="difficulte_execution" type="enum">
+          <values>
+            <value>faible</value>
+            <value>moyenne</value>
+            <value>élevée</value>
+          </values>
+        </field>
+      </output_per_angle>
+    </subsection>
+
+  </section>
+
+  <!-- ==================== SECTION 2 ==================== -->
+  
+  <section id="2" name="THÈMES OBLIGATOIRES">
+    
+    <objective>
+      Identifier les thèmes de contenu incontournables présents chez les leaders (top 5)
+    </objective>
+
+    <identification_rules>
+      <rule priority="critical">
+        Un thème est considéré OBLIGATOIRE s'il est présent chez au moins 3 des 5 premiers résultats
+      </rule>
+      <rule priority="high">
+        Analyser le niveau de profondeur minimum requis pour chaque thème obligatoire
+      </rule>
+      <rule priority="medium">
+        Justifier stratégiquement pourquoi ce thème est incontournable
+      </rule>
+    </identification_rules>
+
+    <output_per_theme>
+      <field name="theme" type="string">
+        <description>Nom du thème obligatoire</description>
+      </field>
+      <field name="present_chez" type="array">
+        <description>Liste des positions où ce thème est traité (ex: [1, 2, 3, 5])</description>
+      </field>
+      <field name="niveau_minimum_requis" type="enum">
+        <values>
+          <value>mention</value>
+          <value>superficiel</value>
+          <value>modéré</value>
+          <value>approfondi</value>
+          <value>expert</value>
+        </values>
+        <description>Niveau de traitement minimum observé dans le top 5</description>
+      </field>
+      <field name="profondeur_observee" type="string">
+        <description>Description de comment les leaders traitent ce thème</description>
+      </field>
+      <field name="justification" type="string">
+        <description>Pourquoi ce thème est stratégiquement obligatoire (attentes utilisateurs, intention de recherche, etc.)</description>
+      </field>
+    </output_per_theme>
+
+  </section>
+
+  <!-- ==================== SECTION 3 ==================== -->
+  
+  <section id="3" name="OPPORTUNITÉS ANGLES UNIQUES">
+    
+    <objective>
+      Proposer des angles innovants sous-exploités par la concurrence pour se différencier
+    </objective>
+
+    <identification_method>
+      <step>Analyser les gaps dans le traitement des sujets</step>
+      <step>Identifier les angles mentionnés comme "émergents" mais non exploités</step>
+      <step>Évaluer la faisabilité et la complexité d'exécution</step>
+      <step>Estimer la valeur ajoutée pour le positionnement SEO</step>
+    </identification_method>
+
+    <output_per_opportunity>
+      <field name="angle_propose" type="string">
+        <description>Nom de l'angle unique proposé</description>
+      </field>
+      <field name="justification" type="string">
+        <description>Pourquoi cet angle est sous-exploité et pourquoi il a du potentiel</description>
+      </field>
+      <field name="niveau_ambition" type="enum">
+        <values>
+          <value>conservateur</value>
+          <value>modéré</value>
+          <value>ambitieux</value>
+          <value>très ambitieux</value>
+        </values>
+        <description>Niveau de prise de risque éditorial</description>
+      </field>
+      <field name="valeur_ajoutee_estimee" type="string">
+        <description>Bénéfice attendu pour le positionnement et l'expérience utilisateur</description>
+      </field>
+      <field name="complexite_execution" type="enum">
+        <values>
+          <value>faible</value>
+          <value>moyenne</value>
+          <value>élevée</value>
+        </values>
+        <description>Ressources et expertise nécessaires</description>
+      </field>
+    </output_per_opportunity>
+
+  </section>
+
+  <!-- ==================== SECTION 4 ==================== -->
+  
+  <section id="4" name="THÈMES ÉMERGENTS CONSOLIDÉS">
+    
+    <objective>
+      Agréger et prioriser TOUS les thèmes émergents identifiés dans les analyses individuelles pour identifier les opportunités de différenciation réelles
+    </objective>
+
+    <consolidation_process>
+      <step order="1">
+        Extraire TOUS les thèmes émergents de toutes les analyses individuelles
+      </step>
+      <step order="2">
+        Identifier les patterns : thèmes émergents mentionnés par plusieurs articles
+      </step>
+      <step order="3">
+        Analyser le niveau de traitement actuel (absent, superficiel, approfondi)
+      </step>
+      <step order="4">
+        Prioriser selon : fréquence d'apparition + potentiel SEO + nouveauté contextuelle
+      </step>
+    </consolidation_process>
+
+    <prioritization_formula>
+      Score priorité = (fréquence_mention × 0.3) + (potentiel_SEO × 0.4) + (nouveauté × 0.3)
+    </prioritization_formula>
+
+    <output_per_theme>
+      <field name="theme" type="string">
+        <description>Nom du thème émergent consolidé</description>
+      </field>
+      <field name="articles_mentionnant" type="array">
+        <description>Liste des positions d'articles qui mentionnent ce thème (ex: [2, 5, 7])</description>
+      </field>
+      <field name="frequence_apparition" type="string">
+        <description>Combien d'articles mentionnent ce thème (ex: "3/10 articles")</description>
+      </field>
+      <field name="niveau_traitement_observe" type="enum">
+        <values>
+          <value>absent</value>
+          <value>superficiel</value>
+          <value>modéré</value>
+          <value>approfondi</value>
+        </values>
+        <description>Niveau de profondeur moyen observé dans les articles qui le traitent</description>
+      </field>
+      <field name="opportunite_differentiation" type="string">
+        <description>Pourquoi c'est une opportunité (faible couverture concurrentielle, nouveauté, besoin utilisateur non satisfait)</description>
+      </field>
+      <field name="potentiel_seo" type="enum">
+        <values>
+          <value>faible</value>
+          <value>moyen</value>
+          <value>élevé</value>
+          <value>très élevé</value>
+        </values>
+        <description>Potentiel de performance SEO estimé</description>
+      </field>
+      <field name="justification_potentiel" type="string">
+        <description>Justification de l'évaluation du potentiel SEO</description>
+      </field>
+      <field name="recommandation_exploitation" type="string">
+        <description>Comment exploiter concrètement ce thème émergent</description>
+      </field>
+      <field name="complexite_execution" type="enum">
+        <values>
+          <value>faible</value>
+          <value>moyenne</value>
+          <value>élevée</value>
+        </values>
+        <description>Complexité de mise en œuvre éditoriale</description>
+      </field>
+    </output_per_theme>
+
+  </section>
+
+  <!-- ==================== SECTION 5 ==================== -->
+  
+  <section id="5" name="THÈMES À EXCLURE CONSOLIDÉS">
+    
+    <objective>
+      Agréger TOUS les thèmes à exclure pour identifier les anti-patterns récurrents et éviter les pièges de banalisation
+    </objective>
+
+    <consolidation_process>
+      <step order="1">
+        Extraire TOUS les thèmes à exclure de toutes les analyses individuelles
+      </step>
+      <step order="2">
+        Identifier les anti-patterns récurrents (thèmes fréquemment marqués comme saturés)
+      </step>
+      <step order="3">
+        Analyser la distribution : présence dans top 5 vs positions 6-10
+      </step>
+      <step order="4">
+        Corréler avec le mauvais positionnement (si présent majoritairement en 6-10 = risque)
+      </step>
+    </consolidation_process>
+
+    <critical_insight>
+      Un thème présent dans les positions 6-10 mais absent du top 5 est probablement un anti-pattern à éviter absolument
+    </critical_insight>
+
+    <output_per_theme>
+      <field name="theme" type="string">
+        <description>Nom du thème à exclure consolidé</description>
+      </field>
+      <field name="distribution_serp" type="object">
+        <subfield name="present_top5" type="array">
+          <description>Positions du top 5 où ce thème apparaît (peut être vide)</description>
+        </subfield>
+        <subfield name="present_positions_6_10" type="array">
+          <description>Positions 6-10 où ce thème apparaît</description>
+        </subfield>
+      </field>
+      <field name="raison_exclusion" type="enum">
+        <values>
+          <value>saturation</value>
+          <value>obsolescence</value>
+          <value>dilution</value>
+          <value>hors_intention</value>
+          <value>faible_valeur</value>
+        </values>
+        <description>Raison principale d'exclusion</description>
+      </field>
+      <field name="justification_exclusion" type="string">
+        <description>Explication détaillée de pourquoi il faut exclure ce thème</description>
+      </field>
+      <field name="correlation_mauvais_positionnement" type="string">
+        <description>Analyse de la corrélation entre présence de ce thème et mauvais positionnement</description>
+      </field>
+      <field name="alternative_recommandee" type="string">
+        <description>Angle ou thème différenciant à utiliser à la place</description>
+      </field>
+    </output_per_theme>
+
+  </section>
+
+  <!-- ==================== SECTION 6 ==================== -->
+  
+  <section id="6" name="GAPS CONCURRENTIELS">
+    
+    <objective>
+      Identifier les aspects mal traités par les leaders du top 5 pour créer des opportunités de surperformance
+    </objective>
+
+    <gap_types>
+      <type name="profondeur">
+        <description>Sujet traité superficiellement alors qu'il mérite un approfondissement</description>
+      </type>
+      <type name="actualité">
+        <description>Informations obsolètes ou non mises à jour</description>
+      </type>
+      <type name="expertise">
+        <description>Manque de perspective experte ou de données techniques</description>
+      </type>
+      <type name="actionabilité">
+        <description>Absence de conseils pratiques ou d'exemples concrets</description>
+      </type>
+      <type name="couverture">
+        <description>Aspects du sujet complètement omis</description>
+      </type>
+    </gap_types>
+
+    <output_per_gap>
+      <field name="gap_identifie" type="string">
+        <description>Description précise du gap concurrentiel</description>
+      </field>
+      <field name="type" type="string">
+        <description>Type de gap selon la classification ci-dessus</description>
+      </field>
+      <field name="potentiel_seo" type="enum">
+        <values>
+          <value>faible</value>
+          <value>moyen</value>
+          <value>élevé</value>
+          <value>très élevé</value>
+        </values>
+        <description>Potentiel d'impact sur le positionnement</description>
+      </field>
+      <field name="recommandation_exploitation" type="string">
+        <description>Comment exploiter concrètement ce gap pour se positionner</description>
+      </field>
+    </output_per_gap>
+
+  </section>
+
+  <!-- ==================== SECTION 7 ==================== -->
+  
+  <section id="7" name="ANGLES À EXCLURE (ANTI-PATTERNS POSITIONNELS)">
+    
+    <objective>
+      Identifier les angles éditoriaux corrélés avec un mauvais positionnement pour les éviter absolument
+    </objective>
+
+    <detection_method>
+      <criterion priority="critical">
+        Angles utilisés UNIQUEMENT dans les positions 6-10
+      </criterion>
+      <criterion priority="high">
+        Angles absents ou très minoritaires dans le top 5
+      </criterion>
+      <criterion priority="medium">
+        Angles associés à des scores de pertinence faibles
+      </criterion>
+    </detection_method>
+
+    <analysis_depth>
+      Pour chaque anti-pattern identifié, analyser :
+      - Raison probable de l'échec (hors-sujet, trop superficiel, intention non alignée)
+      - Risque si on utilise cet angle quand même
+      - Exemples concrets de son impact négatif dans les positions basses
+    </analysis_depth>
+
+    <output_per_antipattern>
+      <field name="angle_declasse" type="string">
+        <description>Nom de l'angle identifié comme anti-pattern</description>
+      </field>
+      <field name="present_dans_positions" type="array">
+        <description>Liste des positions où cet angle est utilisé</description>
+      </field>
+      <field name="absent_top5_mais_present_bas_classement" type="boolean">
+        <description>true si absent du top 5 mais présent en 6-10</description>
+      </field>
+      <field name="raison_exclusion" type="string">
+        <description>Pourquoi cet angle est inefficace (analyse détaillée)</description>
+      </field>
+      <field name="risque_positionnement" type="string">
+        <description>Impact négatif attendu si on utilise cet angle</description>
+      </field>
+    </output_per_antipattern>
+
+  </section>
+
+  <!-- ==================== SECTION 8 ==================== -->
+  
+  <section id="8" name="STRATÉGIE DE POSITIONNEMENT">
+    
+    <objective>
+      Établir une stratégie claire combinant socle obligatoire et différenciation pour dominer les SERP
+    </objective>
+
+    <subsection_a name="Socle obligatoire">
+      <description>
+        Éléments minimum requis pour être compétitif dans le top 5
+      </description>
+
+      <components>
+        <component name="angles_minimum">
+          <description>Liste des angles éditoriaux incontournables à couvrir</description>
+          <source>Extrait de la section 1 (angles dominants présents dans top 5)</source>
+        </component>
+        
+        <component name="profondeur_requise">
+          <description>Niveau de détail minimum à atteindre pour être crédible</description>
+          <values>
+            <value>modéré</value>
+            <value>approfondi</value>
+            <value>expert</value>
+          </values>
+        </component>
+        
+        <component name="themes_incontournables">
+          <description>Thèmes de contenu obligatoires identifiés en section 2</description>
+        </component>
+      </components>
+    </subsection_a>
+
+    <subsection_b name="Différenciation recommandée">
+      <description>
+        Éléments distinctifs pour surpasser la concurrence et viser le top 3
+      </description>
+
+      <components>
+        <component name="angles_uniques_proposes">
+          <description>Angles innovants de la section 3 à implémenter</description>
+        </component>
+        
+        <component name="approfondissements_cibles">
+          <description>Thèmes à approfondir au-delà de ce que fait la concurrence</description>
+        </component>
+        
+        <component name="approches_innovantes">
+          <description>Méthodes éditoriales différenciantes (formats, interactivité, données exclusives, etc.)</description>
+        </component>
+        
+        <component name="themes_emergents_a_exploiter">
+          <description>Liste prioritaire des thèmes émergents consolidés de la section 4 à intégrer</description>
+        </component>
+      </components>
+    </subsection_b>
+
+    <subsection_c name="Niveau d'ambition et effort">
+      <field name="niveau_ambition_global" type="enum">
+        <values>
+          <value>conservateur</value>
+          <value>équilibré</value>
+          <value>ambitieux</value>
+          <value>très ambitieux</value>
+        </values>
+        <description>Positionnement stratégique global de la recommandation</description>
+      </field>
+      
+      <field name="effort_editorial_estime" type="string">
+        <description>Estimation des ressources nécessaires (temps, expertise, recherche, production)</description>
+      </field>
+    </subsection_c>
+
+  </section>
+
+  <!-- ==================== SECTION 9 (BONUS) ==================== -->
+  
+  <section id="9" name="RECOMMANDATION POSITIONNEMENT GLOBAL">
+    
+    <objective>
+      Caractériser le format et le style de contenu optimal pour dominer cette requête
+    </objective>
+
+    <recommendations>
+      <field name="type_contenu_optimal" type="string">
+        <description>Format éditorial recommandé (guide complet, landing page, article informatif, etc.)</description>
+      </field>
+      
+      <field name="intention_cible" type="enum">
+        <values>
+          <value>informationnelle</value>
+          <value>commerciale</value>
+          <value>transactionnelle</value>
+          <value>navigationnelle</value>
+        </values>
+        <description>Intention de recherche dominante à adresser</description>
+      </field>
+      
+      <field name="portee_commerciale_recommandee" type="enum">
+        <values>
+          <value>nulle</value>
+          <value>légère</value>
+          <value>modérée</value>
+          <value>forte</value>
+        </values>
+        <description>Niveau de commercialité optimal basé sur le top 5</description>
+      </field>
+      
+      <field name="orientation_cta_optimale" type="string">
+        <description>Recommandations sur le placement et le type de CTA</description>
+      </field>
+    </recommendations>
+
+  </section>
+
+  <!-- ==================== OUTPUT FORMAT ==================== -->
+  
+  <output_specification>
+    <format>json</format>
+    <strict_mode>true</strict_mode>
+    <instruction>Réponds UNIQUEMENT en JSON valide avec cette structure exacte, sans texte avant ou après</instruction>
+    
+    <json_schema>
+{
+  "analyse_angles_concurrentiels": {
     "angles_dominants": [
-      {{
+      {
         "angle": "",
         "frequence_utilisation": "",
-        "niveau_profondeur_moyen": "",
+        "niveau_profondeur_moyen": "superficiel|modéré|approfondi|expert",
         "positionnement_requis": "",
         "exemples_reussis": []
-      }}
+      }
     ],
     "angles_emergents": [
-      {{
+      {
         "angle": "",
         "utilise_par": "",
         "potentiel_differentiation": "",
-        "difficulte_execution": ""
-      }}
+        "difficulte_execution": "faible|moyenne|élevée"
+      }
     ]
-  }},
+  },
   "themes_obligatoires": [
-    {{
+    {
       "theme": "",
       "present_chez": [],
-      "niveau_minimum_requis": "",
+      "niveau_minimum_requis": "mention|superficiel|modéré|approfondi|expert",
       "profondeur_observee": "",
       "justification": ""
-    }}
+    }
   ],
   "themes_emergents_consolides": [
-    {{
+    {
       "theme": "",
       "articles_mentionnant": [],
       "frequence_apparition": "",
@@ -111,67 +603,105 @@ Réponds en JSON valide avec cette structure:
       "justification_potentiel": "",
       "recommandation_exploitation": "",
       "complexite_execution": "faible|moyenne|élevée"
-    }}
+    }
   ],
   "themes_a_exclure_consolides": [
-    {{
+    {
       "theme": "",
-      "distribution_serp": {{
+      "distribution_serp": {
         "present_top5": [],
         "present_positions_6_10": []
-      }},
+      },
       "raison_exclusion": "saturation|obsolescence|dilution|hors_intention|faible_valeur",
       "justification_exclusion": "",
       "correlation_mauvais_positionnement": "",
       "alternative_recommandee": ""
-    }}
+    }
   ],
   "opportunites_angles_uniques": [
-    {{
+    {
       "angle_propose": "",
       "justification": "",
-      "niveau_ambition": "",
+      "niveau_ambition": "conservateur|modéré|ambitieux|très ambitieux",
       "valeur_ajoutee_estimee": "",
-      "complexite_execution": ""
-    }}
+      "complexite_execution": "faible|moyenne|élevée"
+    }
   ],
   "gaps_concurrentiels": [
-    {{
+    {
       "gap_identifie": "",
-      "type": "",
-      "potentiel_seo": "",
+      "type": "profondeur|actualité|expertise|actionabilité|couverture",
+      "potentiel_seo": "faible|moyen|élevé|très élevé",
       "recommandation_exploitation": ""
-    }}
+    }
   ],
   "angles_a_exclure": [
-    {{
+    {
       "angle_declasse": "",
       "present_dans_positions": [],
-      "absent_top5_mais_present_bas_classement": [],
+      "absent_top5_mais_present_bas_classement": false,
       "raison_exclusion": "",
       "risque_positionnement": ""
-    }}
+    }
   ],
-  "strategie_positionnement": {{
-    "socle_obligatoire": {{
+  "strategie_positionnement": {
+    "socle_obligatoire": {
       "angles_minimum": [],
-      "profondeur_requise": "",
+      "profondeur_requise": "modéré|approfondi|expert",
       "themes_incontournables": []
-    }},
-    "differentiation_recommandee": {{
+    },
+    "differentiation_recommandee": {
       "angles_uniques_proposes": [],
       "approfondissements_cibles": [],
       "approches_innovantes": [],
       "themes_emergents_a_exploiter": []
-    }},
-    "niveau_ambition_global": "",
+    },
+    "niveau_ambition_global": "conservateur|équilibré|ambitieux|très ambitieux",
     "effort_editorial_estime": ""
-  }},
-  "recommandation_positionnement_global": {{
+  },
+  "recommandation_positionnement_global": {
     "type_contenu_optimal": "",
-    "intention_cible": "",
-    "portee_commerciale_recommandee": "",
-    "orientation_ctal_optimale": ""
-  }}
-}}
-"""
+    "intention_cible": "informationnelle|commerciale|transactionnelle|navigationnelle",
+    "portee_commerciale_recommandee": "nulle|légère|modérée|forte",
+    "orientation_cta_optimale": ""
+  }
+}
+    </json_schema>
+  </output_specification>
+
+  <!-- ==================== EXECUTION INSTRUCTIONS ==================== -->
+  
+  <execution_instructions>
+    <instruction priority="critical">
+      Analyser TOUTES les analyses fournies de manière exhaustive
+    </instruction>
+    <instruction priority="critical">
+      Identifier les patterns positionnels (top 5 vs 6-10) systématiquement
+    </instruction>
+    <instruction priority="high">
+      Consolider les thèmes émergents et à exclure à travers toutes les analyses
+    </instruction>
+    <instruction priority="high">
+      Prioriser les recommandations selon leur impact SEO potentiel
+    </instruction>
+    <instruction priority="medium">
+      Être pragmatique : équilibrer ambition et faisabilité
+    </instruction>
+    <instruction priority="critical">
+      Retourner UNIQUEMENT du JSON valide sans aucun texte d'accompagnement
+    </instruction>
+  </execution_instructions>
+
+  <validation_checklist>
+    <check>Tous les angles dominants du top 5 sont identifiés</check>
+    <check>Les thèmes obligatoires sont justifiés par leur présence majoritaire en top 5</check>
+    <check>Les thèmes émergents sont consolidés à travers toutes les analyses</check>
+    <check>Les thèmes à exclure montrent une corrélation avec mauvais positionnement</check>
+    <check>Les anti-patterns positionnels (angles en 6-10 mais pas top 5) sont identifiés</check>
+    <check>La stratégie combine socle obligatoire ET différenciation</check>
+    <check>L'effort éditorial est réaliste et quantifié</check>
+    <check>JSON valide et complet selon le schéma fourni</check>
+    <check>Aucun texte en dehors du JSON</check>
+  </validation_checklist>
+
+</synthesis_prompt>
