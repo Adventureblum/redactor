@@ -1,4 +1,4 @@
-Tu es un stratège en contenu SEO. Synthétise ces analyses pour créer une stratégie de domination SERP.
+SYNTHESIS_PROMPT_FR = """Tu es un stratège en contenu SEO. Synthétise ces analyses pour créer une stratégie de domination SERP.
 
 REQUÊTE CIBLE: {requete}
 
@@ -22,19 +22,41 @@ GÉNÈRE UNE SYNTHÈSE STRATÉGIQUE COMPLÈTE:
    - Complexité d'exécution
    - Valeur ajoutée estimée
 
-4. GAPS CONCURRENTIELS & ANGLES À EXCLURE:
-   a) Gaps à exploiter:
-      - Aspects mal traités dans le top 5
-      - Type de gap (profondeur, actualité, expertise, etc.)
-      - Potentiel SEO
+4. THÈMES ÉMERGENTS CONSOLIDÉS:
+   - Agrège TOUS les thèmes émergents identifiés dans les analyses individuelles
+   - Identifie les patterns: thèmes émergents mentionnés par plusieurs articles
+   - Priorise selon: fréquence d'apparition + potentiel SEO + nouveauté
+   - Pour chaque thème émergent consolidé:
+     * Nom du thème
+     * Articles qui le mentionnent (positions)
+     * Niveau de traitement observé (absent/superficiel/approfondi)
+     * Opportunité de différenciation (pourquoi c'est une opportunité)
+     * Recommandation d'exploitation
 
-   b) Angles à exclure (ANTI-PATTERNS):
-      - Angles utilisés UNIQUEMENT dans les positions 6-10
-      - Absents ou très minoritaires dans le top 5
-      - Raison probable de leur échec (hors-sujet, trop superficiel, intention non alignée)
-      - Risque si on les utilise quand même
+5. THÈMES À EXCLURE CONSOLIDÉS:
+   - Agrège TOUS les thèmes à exclure identifiés dans les analyses individuelles
+   - Identifie les anti-patterns récurrents
+   - Analyse la distribution: présence dans top 5 vs positions 6-10
+   - Pour chaque thème à exclure consolidé:
+     * Nom du thème
+     * Distribution dans SERP (positions où il apparaît)
+     * Raison d'exclusion (saturation/obsolescence/dilution/hors-intention)
+     * Corrélation avec mauvais positionnement
+     * Alternative recommandée
+
+6. GAPS CONCURRENTIELS:
+   - Aspects mal traités dans le top 5
+   - Type de gap (profondeur, actualité, expertise, etc.)
+   - Potentiel SEO
+   - Recommandation d'exploitation
+
+7. ANGLES À EXCLURE (ANTI-PATTERNS POSITIONNELS):
+   - Angles utilisés UNIQUEMENT dans les positions 6-10
+   - Absents ou très minoritaires dans le top 5
+   - Raison probable de leur échec (hors-sujet, trop superficiel, intention non alignée)
+   - Risque si on les utilise quand même
       
-5. STRATÉGIE DE POSITIONNEMENT:
+8. STRATÉGIE DE POSITIONNEMENT:
    a) Socle obligatoire:
       - Angles minimum à couvrir
       - Profondeur requise
@@ -44,6 +66,7 @@ GÉNÈRE UNE SYNTHÈSE STRATÉGIQUE COMPLÈTE:
       - Angles uniques proposés
       - Approfondissements ciblés
       - Approches innovantes
+      - Exploitation des thèmes émergents identifiés
 
    c) Niveau d'ambition + effort éditorial estimé
 
@@ -75,6 +98,32 @@ Réponds en JSON valide avec cette structure:
       "niveau_minimum_requis": "",
       "profondeur_observee": "",
       "justification": ""
+    }}
+  ],
+  "themes_emergents_consolides": [
+    {{
+      "theme": "",
+      "articles_mentionnant": [],
+      "frequence_apparition": "",
+      "niveau_traitement_observe": "absent|superficiel|modéré|approfondi",
+      "opportunite_differentiation": "",
+      "potentiel_seo": "faible|moyen|élevé|très élevé",
+      "justification_potentiel": "",
+      "recommandation_exploitation": "",
+      "complexite_execution": "faible|moyenne|élevée"
+    }}
+  ],
+  "themes_a_exclure_consolides": [
+    {{
+      "theme": "",
+      "distribution_serp": {{
+        "present_top5": [],
+        "present_positions_6_10": []
+      }},
+      "raison_exclusion": "saturation|obsolescence|dilution|hors_intention|faible_valeur",
+      "justification_exclusion": "",
+      "correlation_mauvais_positionnement": "",
+      "alternative_recommandee": ""
     }}
   ],
   "opportunites_angles_uniques": [
@@ -112,7 +161,8 @@ Réponds en JSON valide avec cette structure:
     "differentiation_recommandee": {{
       "angles_uniques_proposes": [],
       "approfondissements_cibles": [],
-      "approches_innovantes": []
+      "approches_innovantes": [],
+      "themes_emergents_a_exploiter": []
     }},
     "niveau_ambition_global": "",
     "effort_editorial_estime": ""
@@ -124,3 +174,4 @@ Réponds en JSON valide avec cette structure:
     "orientation_ctal_optimale": ""
   }}
 }}
+"""

@@ -1,0 +1,240 @@
+{
+  "meta": {
+    "requete_cible": "comment faire le signe euros sur pc",
+    "requete_principale": "eclairage_poids_lourd_et_voitures",
+    "group_id": 1,
+    "date_generation": "2025-11-11T19:32:51.523273",
+    "agent_version": "searchbase-v2.2",
+    "type": "document_collecte_donnees"
+  },
+  "collecte_donnees": {
+    "meta": {
+      "requete_cible": "comment faire le signe euros sur pc",
+      "date_generation": "2024-12-19",
+      "objectif": "Collecte des données nécessaires pour rédiger un article SEO optimisé sur les méthodes pour taper le symbole euro sur différents supports"
+    },
+    "donnees_techniques_requises": {
+      "raccourcis_clavier": {
+        "sources_potentielles": [
+          "Documentation officielle Microsoft Windows",
+          "Documentation officielle Apple macOS",
+          "Normes ISO/IEC pour les claviers informatiques",
+          "Spécifications techniques des fabricants de claviers"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Raccourci clavier Windows AZERTY standard",
+            "valeur_actuelle": "Alt Gr + E",
+            "precision_requise": "Valide pour Windows 10/11, peut varier selon la version et la configuration régionale",
+            "unite": "combinaison de touches"
+          },
+          {
+            "donnee": "Raccourci clavier Mac standard",
+            "valeur_actuelle": "Alt + Shift + $",
+            "precision_requise": "Valide pour macOS récents, vérifier compatibilité avec différentes versions",
+            "unite": "combinaison de touches"
+          },
+          {
+            "donnee": "Code ASCII alternatif Windows",
+            "valeur_actuelle": "Alt + 0128",
+            "precision_requise": "Nécessite le pavé numérique, ne fonctionne pas sur tous les claviers",
+            "unite": "code numérique"
+          },
+          {
+            "donnee": "Code Unicode universel",
+            "valeur_actuelle": "U+20AC",
+            "precision_requise": "Standard international, compatible avec tous les systèmes modernes",
+            "unite": "code hexadécimal"
+          }
+        ]
+      },
+      "configurations_clavier_atypiques": {
+        "sources_potentielles": [
+          "Base de données des layouts de clavier Microsoft",
+          "Documentation Apple pour les claviers internationaux",
+          "Forums spécialisés en informatique",
+          "Documentation Linux pour les configurations clavier"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Pourcentage d'utilisateurs avec claviers QWERTY en France",
+            "valeur_actuelle": "15-20%",
+            "precision_requise": "Estimation basée sur les ventes et usages professionnels",
+            "unite": "pourcentage"
+          },
+          {
+            "donnee": "Méthode symbole euro sur clavier QWERTY US",
+            "valeur_actuelle": "Alt + Ctrl + E ou autres variantes",
+            "precision_requise": "Varie selon la version de Windows et la configuration logicielle",
+            "unite": "combinaison de touches"
+          },
+          {
+            "donnee": "Solutions pour claviers internationaux courants (QWERTZ, etc.)",
+            "valeur_actuelle": "3-5 méthodes principales selon le layout",
+            "precision_requise": "Nécessite vérification par pays et type de clavier spécifique",
+            "unite": "nombre de méthodes"
+          }
+        ]
+      },
+      "interfaces_mobiles": {
+        "sources_potentielles": [
+          "Documentation développeur iOS Apple",
+          "Documentation développeur Android Google",
+          "Guides utilisateur officiels smartphones/tablettes",
+          "Tests pratiques sur différents modèles"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Méthode symbole euro sur iOS",
+            "valeur_actuelle": "Appui long sur le signe dollar ou navigation dans les symboles",
+            "precision_requise": "Varie selon la version iOS et la configuration du clavier",
+            "unite": "méthode d'accès"
+          },
+          {
+            "donnee": "Méthode symbole euro sur Android",
+            "valeur_actuelle": "Navigation dans les symboles ou appui long sur certaines touches",
+            "precision_requise": "Dépend du fabricant et de la version Android",
+            "unite": "méthode d'accès"
+          },
+          {
+            "donnee": "Temps moyen d'accès au symbole sur mobile",
+            "valeur_actuelle": "2-5 secondes",
+            "precision_requise": "Estimation basée sur l'expérience utilisateur moyenne",
+            "unite": "secondes"
+          }
+        ]
+      }
+    },
+    "donnees_economiques_requises": {
+      "impact_utilisation": {
+        "sources_potentielles": [
+          "Études d'usage numérique Banque de France",
+          "Statistiques commerce électronique européen",
+          "Données d'utilisation des symboles monétaires"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Fréquence d'utilisation quotidienne du symbole euro en France",
+            "valeur_actuelle": "Plusieurs millions d'utilisations",
+            "precision_requise": "Estimation basée sur le volume de transactions et communications",
+            "unite": "utilisations par jour"
+          },
+          {
+            "donnee": "Temps perdu moyen par incident de saisie",
+            "valeur_actuelle": "30-60 secondes",
+            "precision_requise": "Estimation incluant recherche et résolution du problème",
+            "unite": "secondes"
+          }
+        ]
+      }
+    },
+    "donnees_marche_requises": {
+      "repartition_plateformes": {
+        "sources_potentielles": [
+          "Statistiques d'usage Statcounter",
+          "Études marché ARCEP",
+          "Données de trafic mobile/desktop"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Part des recherches mobiles pour ce type de requête",
+            "valeur_actuelle": "40-50%",
+            "precision_requise": "En croissance constante, à vérifier avec données récentes",
+            "unite": "pourcentage"
+          },
+          {
+            "donnee": "Répartition Windows/Mac parmi les utilisateurs français",
+            "valeur_actuelle": "Windows 75-80%, Mac 15-20%",
+            "precision_requise": "Varie selon les sources et la période de mesure",
+            "unite": "pourcentage"
+          },
+          {
+            "donnee": "Croissance des usages tablettes pour la productivité",
+            "valeur_actuelle": "10-15% par an",
+            "precision_requise": "Tendance observée sur les 3 dernières années",
+            "unite": "taux de croissance annuel"
+          }
+        ]
+      }
+    },
+    "donnees_reglementaires_requises": {
+      "standards_techniques": {
+        "sources_potentielles": [
+          "Norme Unicode Consortium",
+          "Spécifications ISO/CEI 9995",
+          "Recommandations W3C pour l'accessibilité web"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Code point Unicode officiel symbole euro",
+            "valeur_actuelle": "U+20AC",
+            "precision_requise": "Standard depuis 1998, vérifier compatibilité tous systèmes",
+            "unite": "code standard"
+          },
+          {
+            "donnee": "Exigences d'accessibilité pour les symboles monétaires",
+            "valeur_actuelle": "WCAG 2.1 niveau AA",
+            "precision_requise": "Nécessite des méthodes alternatives d'accès aux symboles",
+            "unite": "norme d'accessibilité"
+          }
+        ]
+      }
+    },
+    "donnees_statistiques_requises": {
+      "comportements_utilisateurs": {
+        "sources_potentielles": [
+          "Études d'ergonomie informatique",
+          "Analytics des sites concurrents",
+          "Enquêtes satisfaction utilisateurs"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Taux d'échec première tentative symbole euro",
+            "valeur_actuelle": "25-35%",
+            "precision_requise": "Estimation basée sur les patterns de recherche et retours utilisateurs",
+            "unite": "pourcentage"
+          },
+          {
+            "donnee": "Fréquence des problèmes avec claviers non-AZERTY",
+            "valeur_actuelle": "15-25% des cas problématiques",
+            "precision_requise": "Basé sur l'analyse des requêtes de dépannage",
+            "unite": "pourcentage"
+          },
+          {
+            "donnee": "Augmentation des recherches mobiles sur le sujet",
+            "valeur_actuelle": "30-40% sur 12 mois",
+            "precision_requise": "Tendance observée dans les données de recherche",
+            "unite": "taux de croissance"
+          }
+        ]
+      }
+    },
+    "verification_cross_sources": {
+      "methodologie": "Triangulation données multiples sources",
+      "sources_prioritaires": [
+        {
+          "type": "Documentation officielle éditeurs",
+          "exemples": "Microsoft Support, Apple Documentation, Google Developer Guides"
+        },
+        {
+          "type": "Organismes de standardisation",
+          "exemples": "Unicode Consortium, W3C, ISO"
+        },
+        {
+          "type": "Études d'usage indépendantes",
+          "exemples": "Statcounter, ARCEP, études ergonomie"
+        }
+      ]
+    },
+    "mise_a_jour_donnees": {
+      "delai_maximum_accepte": "12 mois",
+      "preference_donnees": "Dernières 24 mois",
+      "alertes_obsolescence": [
+        "Nouvelles versions de systèmes d'exploitation",
+        "Changements dans les layouts de clavier",
+        "Évolutions des interfaces mobiles",
+        "Mises à jour des standards d'accessibilité"
+      ]
+    }
+  }
+}

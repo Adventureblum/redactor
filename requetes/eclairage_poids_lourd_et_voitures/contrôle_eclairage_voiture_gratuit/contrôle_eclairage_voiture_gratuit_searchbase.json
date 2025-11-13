@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "requete_cible": "contrôle eclairage voiture gratuit",
+    "requete_principale": "eclairage_poids_lourd_et_voitures",
+    "group_id": 2,
+    "date_generation": "2025-11-11T19:32:51.524161",
+    "agent_version": "searchbase-v2.2",
+    "type": "document_collecte_donnees"
+  },
+  "collecte_donnees": {
+    "meta": {
+      "requete_cible": "contrôle eclairage voiture gratuit",
+      "date_generation": "2024-12-19",
+      "objectif": "Collecte des données nécessaires pour rédiger un article SEO optimisé sur le contrôle d'éclairage automobile gratuit"
+    },
+    "donnees_techniques_requises": {
+      "specifications_eclairage": {
+        "sources_potentielles": [
+          "Normes UNECE R48 et R112",
+          "Ministère de l'Intérieur - Sécurité Routière",
+          "Constructeurs automobiles (Renault, PSA, Volkswagen)",
+          "Centres de contrôle technique agréés"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Hauteur minimale des feux de croisement",
+            "valeur_actuelle": "0,5 à 1,2 mètres",
+            "precision_requise": "Variable selon type de véhicule et homologation",
+            "unite": "mètres"
+          },
+          {
+            "donnee": "Portée minimale feux de route",
+            "valeur_actuelle": "100 mètres",
+            "precision_requise": "Minimum réglementaire français",
+            "unite": "mètres"
+          },
+          {
+            "donnee": "Angle de diffusion autorisé feux de croisement",
+            "valeur_actuelle": "15° vers le haut, 45° vers le bas",
+            "precision_requise": "Tolérance selon norme R112",
+            "unite": "degrés"
+          }
+        ]
+      },
+      "impact_vibrations": {
+        "sources_potentielles": [
+          "Études techniques constructeurs automobiles",
+          "Laboratoires d'essais vibrations (UTAC)",
+          "Publications techniques automobile"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Fréquence moyenne de déréglage due aux vibrations",
+            "valeur_actuelle": "6-12 mois",
+            "precision_requise": "Dépend du type de routes fréquentées",
+            "unite": "mois"
+          },
+          {
+            "donnee": "Amplitude vibration causant le déréglage",
+            "valeur_actuelle": "0,5-2,0 mm",
+            "precision_requise": "Sur véhicules standards, routes normales",
+            "unite": "millimètres"
+          }
+        ]
+      },
+      "electronique_embarquee": {
+        "sources_potentielles": [
+          "Constructeurs véhicules électriques/hybrides",
+          "Études consommation énergétique automobile",
+          "Centres techniques spécialisés"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Consommation électrique système éclairage LED vs halogène",
+            "valeur_actuelle": "10-15W vs 55W par feu",
+            "precision_requise": "Sur véhicules récents équipés LED",
+            "unite": "watts"
+          },
+          {
+            "donnee": "Impact sur autonomie véhicules électriques",
+            "valeur_actuelle": "1-3% réduction autonomie",
+            "precision_requise": "Usage continu éclairage de nuit",
+            "unite": "pourcentage"
+          }
+        ]
+      }
+    },
+    "donnees_economiques_requises": {
+      "couts_comparatifs": {
+        "sources_potentielles": [
+          "Observatoire des prix automobile",
+          "Réseaux de centres de contrôle technique",
+          "Associations consommateur (UFC-Que Choisir)",
+          "Données partenaires institutionnels"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Coût moyen contrôle technique complet",
+            "valeur_actuelle": "60-120 euros",
+            "precision_requise": "Prix 2024 selon régions et prestataires",
+            "unite": "euros"
+          },
+          {
+            "donnee": "Économie moyenne contrôle préventif gratuit",
+            "valeur_actuelle": "30-50 euros",
+            "precision_requise": "Comparé à réglage feux en garage",
+            "unite": "euros"
+          },
+          {
+            "donnee": "Coût moyen remplacement ampoule défaillante",
+            "valeur_actuelle": "15-80 euros",
+            "precision_requise": "Selon type de véhicule et technologie",
+            "unite": "euros"
+          }
+        ]
+      },
+      "analyse_rentabilite": {
+        "sources_potentielles": [
+          "Études Sécurité Routière",
+          "Données assurances automobile",
+          "Statistiques réparations automobile"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Réduction risque accident avec éclairage optimal",
+            "valeur_actuelle": "20-30%",
+            "precision_requise": "Accidents de nuit par mauvaise visibilité",
+            "unite": "pourcentage"
+          },
+          {
+            "donnee": "Coût moyen accident évité",
+            "valeur_actuelle": "2000-5000 euros",
+            "precision_requise": "Frais réparation + franchise assurance",
+            "unite": "euros"
+          }
+        ]
+      }
+    },
+    "donnees_marche_requises": {
+      "comportement_utilisateurs": {
+        "sources_potentielles": [
+          "Baromètres Sécurité Routière",
+          "Enquêtes satisfaction utilisateurs",
+          "Données partenaires opérations gratuites"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Fréquence moyenne contrôle éclairage par automobiliste",
+            "valeur_actuelle": "1 fois tous les 2 ans",
+            "precision_requise": "Hors contrôle technique obligatoire",
+            "unite": "fois/année"
+          },
+          {
+            "donnee": "Taux de participation aux opérations gratuites",
+            "valeur_actuelle": "15-25% automobilistes informés",
+            "precision_requise": "Selon communication et localisation",
+            "unite": "pourcentage"
+          }
+        ]
+      },
+      "couverture_territoriale": {
+        "sources_potentielles": [
+          "Cartes opérations Sécurité Routière",
+          "Données ACL et Prévention Routière",
+          "Recensement points de contrôle partenaires"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Nombre moyen points de contrôle par opération",
+            "valeur_actuelle": "15-25 points",
+            "precision_requise": "Opérations nationales saisonnières",
+            "unite": "points"
+          },
+          {
+            "donnee": "Couverture départementale opérations gratuites",
+            "valeur_actuelle": "60-80% départements",
+            "precision_requise": "Sur année complète",
+            "unite": "pourcentage"
+          }
+        ]
+      }
+    },
+    "donnees_reglementaires_requises": {
+      "normes_controles": {
+        "sources_potentielles": [
+          "Code de la Route français",
+          "Arrêtés ministériels sécurité routière",
+          "Directives européennes véhicules"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Seuil de rejet contrôle technique éclairage",
+            "valeur_actuelle": "20% déviation axe",
+            "precision_requise": "Tolérance maximale admise",
+            "unite": "pourcentage"
+          },
+          {
+            "donnee": "Périodicité contrôle technique obligatoire",
+            "valeur_actuelle": "2 ans puis 1 an",
+            "precision_requise": "Véhicules de moins de 4 ans : 2 ans, puis annuel",
+            "unite": "années"
+          }
+        ]
+      },
+      "exigences_techniques": {
+        "sources_potentielles": [
+          "Normes UNECE applicables",
+          "Guide contrôle technique officiel",
+          "Documentation constructeurs"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Intensité lumineuse minimale feux de position",
+            "valeur_actuelle": "4 candelas",
+            "precision_requise": "Minimum réglementaire",
+            "unite": "candelas"
+          },
+          {
+            "donnee": "Température de couleur autorisée LED",
+            "valeur_actuelle": "3000-6500K",
+            "precision_requise": "Plage homologuée pour éclairage routier",
+            "unite": "kelvins"
+          }
+        ]
+      }
+    },
+    "donnees_statistiques_requises": {
+      "securite_routiere": {
+        "sources_potentielles": [
+          "ONISR (Observatoire National Interministériel de la Sécurité Routière)",
+          "Données préfectures",
+          "Études européennes sécurité automobile"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Pourcentage accidents nuit liés à mauvais éclairage",
+            "valeur_actuelle": "15-20%",
+            "precision_requise": "Accidents corporels de nuit",
+            "unite": "pourcentage"
+          },
+          {
+            "donnee": "Réduction accidents après opérations préventives",
+            "valeur_actuelle": "5-10%",
+            "precision_requise": "Sur zones couvertes par les opérations",
+            "unite": "pourcentage"
+          }
+        ]
+      },
+      "efficacite_operations": {
+        "sources_potentielles": [
+          "Bilans opérations ACL et Prévention Routière",
+          "Enquêtes satisfaction participants",
+          "Données centres de contrôle partenaires"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Taux de véhicules nécessitant réglage lors des contrôles",
+            "valeur_actuelle": "25-40%",
+            "precision_requise": "Sur échantillon opérations récentes",
+            "unite": "pourcentage"
+          },
+          {
+            "donnee": "Nombre moyen véhicules contrôlés par opération",
+            "valeur_actuelle": "200-500 véhicules",
+            "precision_requise": "Selon durée et localisation opération",
+            "unite": "véhicules"
+          }
+        ]
+      }
+    },
+    "verification_cross_sources": {
+      "methodologie": "Triangulation données multiples sources",
+      "sources_prioritaires": [
+        {
+          "type": "Institutions officielles",
+          "exemples": "ONISR, Sécurité Routière, Ministère de l'Intérieur"
+        },
+        {
+          "type": "Organismes partenaires opérations",
+          "exemples": "ACL, Prévention Routière, Carglass, CNPA"
+        },
+        {
+          "type": "Données constructeurs automobiles",
+          "exemples": "Renault, PSA, Volkswagen, Toyota"
+        },
+        {
+          "type": "Centres de contrôle technique",
+          "exemples": "Données agrégées réseaux agréés"
+        }
+      ]
+    },
+    "mise_a_jour_donnees": {
+      "delai_maximum_accepte": "12 mois",
+      "preference_donnees": "2023-2024",
+      "alertes_obsolescence": [
+        "Évolutions réglementaires sécurité routière",
+        "Nouvelles technologies éclairage automobile",
+        "Changements programmes partenaires institutionnels",
+        "Modifications calendrier opérations gratuites"
+      ]
+    }
+  }
+}

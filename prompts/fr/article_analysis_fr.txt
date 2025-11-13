@@ -1,6 +1,6 @@
 ARTICLE_ANALYSIS_PROMPT_FR = """Tu es un expert en analyse de contenu SEO. 
 
-Tu DOIS suivre rigoureusement ce processus d'analyse en 5 PHASES SÉQUENTIELLES.
+Tu DOIS suivre rigoureusement ce processus d'analyse en 6 PHASES SÉQUENTIELLES.
 
 ═══════════════════════════════════════════════════════════════
 ARTICLE À ANALYSER
@@ -11,7 +11,7 @@ Titre: {title}
 Contenu: {content}
 
 ═══════════════════════════════════════════════════════════════
-PROCESSUS D'ANALYSE EN 5 PHASES OBLIGATOIRES
+PROCESSUS D'ANALYSE EN 6 PHASES OBLIGATOIRES
 ═══════════════════════════════════════════════════════════════
 
 📍 PHASE 1 : ÉVALUATION DE LA PERTINENCE [OBLIGATOIRE EN PREMIER]
@@ -45,7 +45,7 @@ Si le contenu est hors-sujet (score < 0.7), ARRÊTE l'analyse ici.
 └─────────────────────────────────────────────────────────────┘
 
 SI score < 0.7 → marquer hors_sujet: true
-SI score < 0.7 → ne pas exécuter les phases 2-5 (répondre minimaliste)
+SI score < 0.7 → ne pas exécuter les phases 2-6 (répondre minimaliste)
 
 ───────────────────────────────────────────────────────────────
 
@@ -187,6 +187,127 @@ Détermine:
    • Avantages vs autres résultats ?
    • Désavantages ?
 
+───────────────────────────────────────────────────────────────
+
+📍 PHASE 6 : THÈMES ÉMERGENTS & THÈMES À EXCLURE [HAUTE VALEUR RÉDACTIONNELLE]
+───────────────────────────────────────────────────────────────
+
+⚠️ OBJECTIF : Identifier les opportunités de différenciation et les angles saturés
+
+┌─────────────────────────────────────────────────────────────┐
+│ A. THÈMES ÉMERGENTS (opportunités de différenciation)      │
+└─────────────────────────────────────────────────────────────┘
+
+Critères d'identification d'un thème émergent:
+
+1. NOUVEAUTÉ CONTEXTUELLE (poids: 0.9)
+   • Tendance récente (< 2 ans)
+   • Évolution réglementaire nouvelle
+   • Innovation technologique/méthodologique
+   • Changement comportemental récent
+
+2. COUVERTURE LIMITÉE DANS LES SERP (poids: 0.8)
+   • Peu d'articles concurrents le traitent
+   • Traité superficiellement par la majorité
+   • Angle non exploité en profondeur
+
+3. POTENTIEL ENGAGEMENT (poids: 0.7)
+   • Questions fréquentes non répondues
+   • Controverses émergentes
+   • Besoins utilisateurs récents
+
+4. VALEUR INFORMATIONNELLE (poids: 0.6)
+   • Apporte insight unique
+   • Données récentes/exclusives
+   • Expertise de niche
+
+Pour CHAQUE thème émergent identifié (1-4 max):
+
+• Nom du thème: court et précis (5-10 mots)
+• Pourquoi émergent: 2-3 phrases expliquant la nouveauté
+• Niveau de couverture concurrent: "absent|rare|superficiel"
+• Potentiel SEO: "faible|moyen|élevé" avec justification
+• Preuves dans l'article: citations/passages démontrant le thème
+• Angle rédactionnel suggéré: comment l'exploiter (1-2 phrases)
+
+Exemples de thèmes émergents VALIDES:
+
+✅ "Impact des véhicules électriques sur les contrôles techniques"
+   → Nouveauté contextuelle (transition énergétique)
+   → Couverture limitée dans SERP actuelles
+   
+✅ "Conformité RGPD dans les services de dépannage"
+   → Évolution réglementaire récente
+   → Peu exploité par concurrents
+
+✅ "Télémaintenance connectée pour diagnostic préventif"
+   → Innovation technologique
+   → Angle différenciant
+
+┌─────────────────────────────────────────────────────────────┐
+│ B. THÈMES À EXCLURE (angles saturés/contre-productifs)     │
+└─────────────────────────────────────────────────────────────┘
+
+Critères d'identification d'un thème à exclure:
+
+1. SATURATION SERP (poids: 0.9)
+   • Présent dans 80%+ des résultats top 10
+   • Traité de manière identique partout
+   • Aucune différenciation possible
+
+2. FAIBLE VALEUR AJOUTÉE (poids: 0.8)
+   • Information basique/évidente
+   • Contenu commodité sans insight
+   • Répétition sans enrichissement
+
+3. RISQUE DE CANNIBALISATION (poids: 0.7)
+   • Thème mieux traité sur autre page du site
+   • Dilution du focus principal
+   • Confusion de l'intention de recherche
+
+4. OBSOLESCENCE (poids: 0.6)
+   • Information dépassée
+   • Contexte non pertinent actuellement
+   • Pratiques abandonnées
+
+Pour CHAQUE thème à exclure identifié (1-4 max):
+
+• Nom du thème: court et précis (5-10 mots)
+• Raison d'exclusion: 2-3 phrases détaillant pourquoi l'éviter
+• Niveau de saturation: "modéré|élevé|total"
+• Impact si inclus: "dilution|banalisation|confusion"
+• Preuves de saturation: "XX% des concurrents le traitent"
+• Alternative suggérée: angle plus différenciant (1-2 phrases)
+
+Exemples de thèmes à exclure VALIDES:
+
+❌ "Définition basique du contrôle technique"
+   → Saturation: 95% des résultats l'incluent
+   → Faible valeur: information commodité
+   → Alternative: focus sur "contrôle renforcé pour véhicules anciens"
+
+❌ "Liste générique des centres agréés"
+   → Saturation: tous les concurrents ont cette liste
+   → Risque: dilution du focus "gratuit"
+   → Alternative: "centres proposant diagnostic gratuit pré-contrôle"
+
+❌ "Historique de la réglementation depuis 1992"
+   → Obsolescence: peu pertinent pour utilisateur
+   → Impact: dilution du message principal
+   → Alternative: "évolutions 2024-2025 impactant les coûts"
+
+┌─────────────────────────────────────────────────────────────┐
+│ C. VALIDATION CROISÉE (obligatoire)                         │
+└─────────────────────────────────────────────────────────────┘
+
+Avant de finaliser:
+
+1. Vérifier qu'aucun "thème émergent" n'est en réalité saturé
+2. S'assurer que les "thèmes à exclure" ne sont pas des angles uniques
+3. Confirmer que les thèmes identifiés sont DISTINCTS des angles (Phase 2)
+   • Thème = sujet/sous-sujet à traiter
+   • Angle = manière de traiter le sujet
+
 ═══════════════════════════════════════════════════════════════
 STRUCTURE JSON OBLIGATOIRE
 ═══════════════════════════════════════════════════════════════
@@ -240,6 +361,27 @@ Réponds UNIQUEMENT en JSON valide, sans texte avant/après:
     "aspects_manquants": ["aspect 1", "aspect 2"],
     "forces_particulieres": ["force 1", "force 2"]
   }},
+  "themes_emergents": [
+    {{
+      "nom": "Nom du thème émergent (5-10 mots)",
+      "pourquoi_emergent": "2-3 phrases expliquant nouveauté et opportunité",
+      "couverture_concurrent": "absent|rare|superficiel",
+      "potentiel_seo": "faible|moyen|élevé",
+      "justification_potentiel": "1-2 phrases",
+      "preuves_article": ["citation 1", "citation 2"],
+      "angle_redactionnel_suggere": "1-2 phrases : comment exploiter ce thème"
+    }}
+  ],
+  "themes_a_exclure": [
+    {{
+      "nom": "Nom du thème à éviter (5-10 mots)",
+      "raison_exclusion": "2-3 phrases expliquant pourquoi l'éviter",
+      "niveau_saturation": "modéré|élevé|total",
+      "impact_si_inclus": "dilution|banalisation|confusion",
+      "preuve_saturation": "XX% concurrents le traitent de manière identique",
+      "alternative_suggeree": "1-2 phrases : angle différenciant à privilégier"
+    }}
+  ],
   "type_contenu": "Type précis du contenu",
   "intention": "informationnelle|commerciale|transactionnelle|navigationnelle",
   "profondeur_globale": "superficiel|modéré|approfondi|expert",
@@ -257,6 +399,9 @@ Avant de répondre, vérifie que:
 ☑ Tous les angles ont passé le test de transposabilité
 ☑ Aucun angle n'est une reformulation du sujet
 ☑ Descriptions stratégiques font 3-5 phrases (angle principal) ou 2-3 (secondaires)
+☑ Thèmes émergents sont bien des OPPORTUNITÉS (non saturés)
+☑ Thèmes à exclure sont bien des RISQUES (saturés/contre-productifs)
+☑ Thèmes ≠ angles (distinction claire)
 ☑ Scores calculés avec justification, pas devinés
 ☑ Preuves extraites du contenu, pas inventées
 ☑ JSON valide et complet

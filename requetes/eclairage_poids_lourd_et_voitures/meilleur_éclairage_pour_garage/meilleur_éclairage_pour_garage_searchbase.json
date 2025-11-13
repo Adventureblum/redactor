@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "requete_cible": "meilleur éclairage pour garage",
+    "requete_principale": "eclairage_poids_lourd_et_voitures",
+    "group_id": 3,
+    "date_generation": "2025-11-11T19:32:51.525019",
+    "agent_version": "searchbase-v2.2",
+    "type": "document_collecte_donnees"
+  },
+  "collecte_donnees": {
+    "meta": {
+      "parsing_error": true
+    },
+    "raw_response_fallback": "{\n  \"meta\": {\n    \"requete_cible\": \"meilleur éclairage pour garage\",\n    \"date_generation\": \"2024-12-19\",\n    \"objectif\": \"Collecte des données nécessaires pour rédiger un article SEO optimisé sur l'automatisation complète du garage avec scénarios d'usage\"\n  },\n  \"donnees_techniques_requises\": {\n    \"comparaison_technologies_eclairage\": {\n      \"sources_potentielles\": [\n        \"Commission Internationale de l'Éclairage (CIE)\",\n        \"Institut National de Métrologie (LNE)\",\n        \"Études comparatives LED vs fluorescents ADEME\",\n        \"Normes techniques AFNOR éclairage\"\n      ],\n      \"donnees_a_verifier\": [\n        {\n          \"donnee\": \"Efficacité lumineuse LED garage moyenne\",\n          \"valeur_actuelle\": \"80-120 lm/W\",\n          \"precision_requise\": \"Variation selon qualité des puces LED et température de couleur\",\n          \"unite\": \"lumens/watt\"\n        },\n        {\n          \"donnee\": \"Efficacité lumineuse fluorescent garage moyenne\",\n          \"valeur_actuelle\": \"50-70 lm/W",
+    "parsing_error": true
+  }
+}

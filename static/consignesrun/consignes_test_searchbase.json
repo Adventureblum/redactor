@@ -1,0 +1,87 @@
+{
+  "id": "test001",
+  "filename": "consignes_test_searchbase.json",
+  "created_at": "2025-11-11T10:00:00.000000",
+  "timestamp": "20251111_100000",
+  "queries": [
+    {
+      "id": 0,
+      "text": "test eclairage led",
+      "serp_data": {
+        "serp_query": "test eclairage led",
+        "location": "",
+        "device": "desktop",
+        "timestamp": "2025-11-11T10:00:00.000000",
+        "total_results_analyzed": 3,
+        "position_data": {
+          "position_1": {
+            "url": "https://example.com/test1",
+            "title": "Guide éclairage LED pour débutants",
+            "snippet": "Découvrez tout sur l'éclairage LED : avantages, installation, comparaisons. Guide complet pour choisir ses LED.",
+            "technical_analysis": {
+              "doctype": "HTML5",
+              "lang": "fr-FR",
+              "charset": "UTF-8",
+              "viewport": "width=device-width, initial-scale=1",
+              "title_tag": "Guide éclairage LED pour débutants - Tout savoir",
+              "meta_description": "Guide complet éclairage LED : avantages, comparaisons, prix, installation. Conseils d'experts pour bien choisir.",
+              "canonical": "https://example.com/test1",
+              "h1_count": 1,
+              "h2_count": 5,
+              "h3_count": 12,
+              "meta_keywords": "led, éclairage, guide, ampoules",
+              "body_text": "L'éclairage LED révolutionne nos intérieurs. Plus économiques, plus durables, les LED offrent une qualité lumineuse exceptionnelle. Ce guide vous explique tout : types de LED, avantages économiques, installation facile, comparaisons avec autres technologies.",
+              "word_count": 850,
+              "entities": ["LED", "éclairage", "ampoules", "économie"],
+              "meta_robots": "index,follow"
+            }
+          },
+          "position_2": {
+            "url": "https://example.com/test2",
+            "title": "LED vs Halogène : comparaison détaillée 2024",
+            "snippet": "Comparatif complet LED vs halogène : consommation, durée de vie, prix, qualité lumineuse. Quel éclairage choisir ?",
+            "technical_analysis": {
+              "doctype": "HTML5",
+              "lang": "fr-FR",
+              "charset": "UTF-8",
+              "viewport": "width=device-width, initial-scale=1",
+              "title_tag": "LED vs Halogène : comparaison 2024",
+              "meta_description": "Comparaison détaillée LED vs halogène : consommation, durée de vie, coûts. Guide pour faire le bon choix.",
+              "canonical": "https://example.com/test2",
+              "h1_count": 1,
+              "h2_count": 4,
+              "h3_count": 8,
+              "meta_keywords": "led, halogène, comparaison, éclairage",
+              "body_text": "LED ou halogène ? Cette question revient souvent. Analyse comparative détaillée : consommation électrique, durée de vie, investissement initial, qualité de la lumière, impact environnemental. Tableau comparatif et recommandations d'experts.",
+              "word_count": 1200,
+              "entities": ["LED", "halogène", "comparaison", "consommation"],
+              "meta_robots": "index,follow"
+            }
+          },
+          "position_3": {
+            "url": "https://example.com/test3",
+            "title": "Installation éclairage LED : guide pratique",
+            "snippet": "Comment installer des LED ? Tutoriel step-by-step avec schémas. Outils nécessaires, sécurité, branchements.",
+            "technical_analysis": {
+              "doctype": "HTML5",
+              "lang": "fr-FR",
+              "charset": "UTF-8",
+              "viewport": "width=device-width, initial-scale=1",
+              "title_tag": "Installation éclairage LED : guide pratique complet",
+              "meta_description": "Tutoriel installation LED : outils, étapes, sécurité, branchements. Guide illustré pour réussir votre installation.",
+              "canonical": "https://example.com/test3",
+              "h1_count": 1,
+              "h2_count": 6,
+              "h3_count": 10,
+              "meta_keywords": "installation, led, tutoriel, bricolage",
+              "body_text": "Installer des LED soi-même est plus simple qu'il n'y paraît. Ce tutoriel détaille toutes les étapes : choix des LED, outils nécessaires, sécurité électrique, raccordements, tests. Avec nos schémas clairs, réussissez votre installation LED.",
+              "word_count": 950,
+              "entities": ["installation", "LED", "tutoriel", "électrique"],
+              "meta_robots": "index,follow"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

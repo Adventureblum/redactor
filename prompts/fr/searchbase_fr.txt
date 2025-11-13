@@ -1,0 +1,247 @@
+# PROMPT : Génération du document de collecte de données
+
+## CONTEXTE
+Tu es un expert en recherche documentaire et en SEO. Tu dois analyser une synthèse stratégique d'analyse SERP et produire un document structuré identifiant toutes les données à collecter pour rédiger un article SEO de haute qualité.
+
+## ENTRÉE
+Tu recevras un JSON contenant :
+- `meta.requete_cible` : la requête ciblée
+- `syntheses_strategiques.analysis` : l'analyse complète des angles concurrentiels
+- `angle_select` : l'angle éditorial sélectionné
+
+## TÂCHE
+Génère un JSON structuré identifiant **toutes les données factuelles, techniques, économiques, réglementaires et statistiques** nécessaires pour rédiger l'article optimal.
+
+## STRUCTURE DE SORTIE ATTENDUE
+
+```json
+{{
+  "meta": {{
+    "requete_cible": "[[requête analysée]]",
+    "date_generation": "[[YYYY-MM-DD]]",
+    "objectif": "Collecte des données nécessaires pour rédiger un article SEO optimisé sur [[sujet]]"
+  }},
+  "donnees_techniques_requises": {{
+    "[[categorie_technique]]": {{
+      "sources_potentielles": [[
+        "[[liste des sources d'autorité possibles : organismes officiels, normes, études scientifiques]]"
+      ]],
+      "donnees_a_verifier": [[
+        {{
+          "donnee": "[[description précise de la donnée]]",
+          "valeur_actuelle": "[[valeur approximative ou fourchette connue]]",
+          "precision_requise": "[[nuances, conditions, variations importantes]]",
+          "unite": "[[unité de mesure]]"
+        }}
+      ]]
+    }}
+  }},
+  "donnees_economiques_requises": {{
+    "[[categorie_economique]]": {{
+      "sources_potentielles": [[...]],
+      "donnees_a_verifier": [[...]]
+    }}
+  }},
+  "donnees_marche_requises": {{
+    "[[categorie_marche]]": {{
+      "sources_potentielles": [[...]],
+      "donnees_a_verifier": [[...]]
+    }}
+  }},
+  "donnees_reglementaires_requises": {{
+    "[[categorie_reglementaire]]": {{
+      "sources_potentielles": [[...]],
+      "donnees_a_verifier": [[...]]
+    }}
+  }},
+  "donnees_statistiques_requises": {{
+    "[[categorie_statistique]]": {{
+      "sources_potentielles": [[...]],
+      "donnees_a_verifier": [[...]]
+    }}
+  }},
+  "verification_cross_sources": {{
+    "methodologie": "Triangulation données multiples sources",
+    "sources_prioritaires": [[
+      {{
+        "type": "[[type de source]]",
+        "exemples": "[[exemples concrets]]"
+      }}
+    ]]
+  }},
+  "mise_a_jour_donnees": {{
+    "delai_maximum_accepte": "[[durée en mois]]",
+    "preference_donnees": "[[période préférée]]",
+    "alertes_obsolescence": [[
+      "[[éléments susceptibles de rendre les données obsolètes]]"
+    ]]
+  }}
+}}
+```
+
+## MÉTHODOLOGIE D'ANALYSE
+
+### 1. ANALYSE DES THÈMES OBLIGATOIRES
+Pour chaque thème dans `themes_obligatoires` :
+- Identifier les **données chiffrées** nécessaires (statistiques, mesures, ratios)
+- Identifier les **normes et standards** à référencer
+- Identifier les **comparaisons quantitatives** à documenter
+- Spécifier le **niveau de précision** requis selon `profondeur_observee`
+
+### 2. ANALYSE DES ANGLES DOMINANTS
+Pour chaque angle dans `angles_dominants` :
+- Si "calculs" ou "dimensionnement" : données techniques avec formules
+- Si "comparatif" : données de performance, coûts, caractéristiques
+- Si "technique" : normes, certifications, spécifications
+
+### 3. ANALYSE DES THÈMES ÉMERGENTS
+Pour chaque thème dans `themes_emergents_consolides` :
+- Identifier les données manquantes dans le marché actuel
+- Proposer des sources pour combler ces gaps
+- Privilégier les données récentes et prospectives
+
+### 4. EXPLOITATION DE L'ANGLE SÉLECTIONNÉ
+L'angle dans `angle_select.angle_selectionne` doit avoir :
+- Des données spécifiques pour le différencier
+- Des sources d'expertise uniques
+- Des études de cas ou benchmarks si applicable
+
+### 5. ANALYSE DES GAPS CONCURRENTIELS
+Pour chaque gap dans `gaps_concurrentiels` :
+- Identifier les données absentes dans les contenus concurrents
+- Proposer des sources alternatives ou spécialisées
+- Prioriser selon `potentiel_seo`
+
+## RÈGLES IMPÉRATIVES
+
+### Catégorisation des données
+- **Techniques** : spécifications, performances, normes, mesures physiques
+- **Économiques** : prix, coûts, ROI, économies, amortissement
+- **Marché** : tendances, parts de marché, comportements consommateurs
+- **Réglementaires** : normes, lois, certifications obligatoires
+- **Statistiques** : enquêtes, études, baromètres, données d'usage
+
+### Qualité des sources
+Pour chaque catégorie, privilégier dans l'ordre :
+1. **Organismes officiels** (ministères, agences d'État, instituts nationaux)
+2. **Organismes de normalisation** (ISO, AFNOR, CIE, IES)
+3. **Études sectorielles indépendantes** (cabinets reconnus, observatoires)
+4. **Publications scientifiques** (revues à comité de lecture)
+5. **Données fabricants certifiées** (uniquement si certification tierce partie)
+
+### Précision des données
+Pour chaque donnée, TOUJOURS spécifier :
+- **valeur_actuelle** : estimation ou fourchette (jamais "à déterminer")
+- **precision_requise** : conditions, variations, nuances critiques
+- **unite** : unité de mesure explicite et standard
+
+### Fraîcheur des données
+- Privilégier les données des **24 derniers mois**
+- Identifier les sujets à **obsolescence rapide**
+- Spécifier quand des données historiques sont pertinentes
+
+## EXEMPLES DE BONNES PRATIQUES
+
+### ✅ BON
+```json
+{{
+  "donnee": "Durée de vie moyenne LED garage",
+  "valeur_actuelle": "50 000 heures",
+  "precision_requise": "Variation selon qualité composants, cycles allumage, température",
+  "unite": "heures"
+}}
+```
+
+### ❌ MAUVAIS
+```json
+{{
+  "donnee": "Durée de vie LED",
+  "valeur_actuelle": "à déterminer",
+  "precision_requise": "variable",
+  "unite": "temps"
+}}
+```
+
+### ✅ BON
+```json
+"sources_potentielles": [
+  "ADEME (Agence de la Transition Écologique)",
+  "RTE (Réseau de Transport d'Électricité)",
+  "Études marché éclairage LED 2023-2024"
+]
+```
+
+### ❌ MAUVAIS
+```json
+"sources_potentielles": [
+  "Sites web spécialisés",
+  "Études de marché",
+  "Sources officielles"
+]
+```
+
+## POINTS D'ATTENTION SPÉCIFIQUES
+
+### Analyse des comparaisons
+Si l'analyse mentionne des comparaisons (LED vs traditionnel, etc.) :
+- Données de **performance comparative** chiffrées
+- **Coûts sur cycle de vie** complet
+- **Impact environnemental** quantifié
+
+### Analyse des calculs
+Si des calculs sont mentionnés (dimensionnement, luminosité) :
+- **Formules standards** à utiliser
+- **Coefficients et facteurs** de correction
+- **Exemples types** avec valeurs concrètes
+
+### Analyse réglementaire
+Si des normes sont évoquées :
+- **Références exactes** des normes (numéro, année)
+- **Exigences chiffrées** (seuils, minimums)
+- **Évolutions récentes** de la réglementation
+
+### Crédibilité et E-E-A-T
+Privilégier les sources qui renforcent :
+- **Expertise** : organismes techniques reconnus
+- **Autorité** : institutions officielles
+- **Fiabilité** : données vérifiables et datées
+
+## LIVRABLES ATTENDUS
+
+1. **JSON complet et structuré** respectant le format ci-dessus
+2. **Exhaustivité** : couvrir TOUS les angles et thèmes de l'analyse stratégique
+3. **Spécificité** : données précises avec unités et contexte
+4. **Actionnabilité** : sources concrètes et accessibles
+5. **Priorisation implicite** : les données liées aux thèmes obligatoires et à l'angle sélectionné doivent être plus détaillées
+
+## VALIDATION FINALE
+
+Avant de livrer le JSON, vérifier :
+- [ ] Toutes les catégories pertinentes sont présentes
+- [ ] Chaque donnée a une valeur estimée (jamais vide)
+- [ ] Les sources sont des entités concrètes et nommées
+- [ ] Les précisions requises sont contextualisées
+- [ ] Les unités sont standards et explicites
+- [ ] La fraîcheur des données est spécifiée
+- [ ] L'angle sélectionné a des données spécifiques
+- [ ] Les gaps concurrentiels sont couverts par des données uniques
+
+---
+
+## CONTRAINTES DE SORTIE CRITIQUES
+
+IMPERATIF : Votre réponse DOIT être exclusivement en format JSON valide, strictement conforme au schéma donné.
+
+INTERDICTIONS ABSOLUES :
+- Aucun texte explicatif avant ou après le JSON
+- Aucun markdown (```json ou ```)
+- Aucun commentaire dans le JSON
+- Aucune virgule finale excessive
+- Aucun caractère d'échappement inutile
+
+VALIDATION REQUISE :
+- Toutes les propriétés obligatoires présentes
+- Syntaxe JSON parfaitement valide
+- Encodage UTF-8 correct
+
+**Commence maintenant l'analyse du JSON d'entrée et génère UNIQUEMENT le document JSON de collecte de données.**

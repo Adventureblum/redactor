@@ -1,7 +1,7 @@
 {
   "meta": {
     "requete_cible": "meilleur éclairage pour garage",
-    "date_analyse": "2025-11-08T22:34:35.738305",
+    "date_analyse": "2025-11-11T19:28:38.295400",
     "language": "fr",
     "analyses_totales": 1
   },
@@ -10,193 +10,220 @@
       "analyse_angles_concurrentiels": {
         "angles_dominants": [
           {
-            "angle": "Approche technique comparative multi-critères",
-            "frequence_utilisation": "Élevée (2 articles sur 3 pertinents)",
-            "niveau_profondeur_moyen": "Expert à Approfondi",
-            "positionnement_requis": "Nécessaire pour concurrencer les leaders",
+            "angle": "Approche comparative multi-critères techniques",
+            "frequence_utilisation": "élevée",
+            "niveau_profondeur_moyen": "approfondi",
+            "positionnement_requis": "obligatoire",
             "exemples_reussis": [
-              "Article position 2 (guide expert)",
-              "Article position 4 (guide technique)"
+              "Position 2: comparaison LED/fluorescents/détecteurs mouvement",
+              "Position 4: calculs techniques précis lux/lumens"
             ]
           },
           {
             "angle": "Analyse économique et retour sur investissement",
-            "frequence_utilisation": "Moyenne",
-            "niveau_profondeur_moyen": "Approfondi",
-            "positionnement_requis": "Recommandé pour différenciation",
+            "frequence_utilisation": "moyenne",
+            "niveau_profondeur_moyen": "modéré",
+            "positionnement_requis": "recommandé",
             "exemples_reussis": [
-              "Article position 2 (calculs ROI détaillés)"
+              "Position 2: calcul durée de vie et économies énergie",
+              "Position 4: rentabilisation investissement LED"
             ]
           }
         ],
         "angles_emergents": [
           {
-            "angle": "Solutions modulaires et innovantes",
-            "utilise_par": "Article position 5",
-            "potentiel_differentiation": "Élevé",
-            "difficulte_execution": "Moyenne (nécessite expertise produits)"
-          },
-          {
-            "angle": "Focus sécurité et automatisation",
-            "utilise_par": "Articles positions 2 et 4",
-            "potentiel_differentiation": "Moyen",
-            "difficulte_execution": "Faible"
+            "angle": "Intégration domotique et détecteurs intelligents",
+            "utilise_par": "Positions 2 et 4",
+            "potentiel_differentiation": "élevé",
+            "difficulte_execution": "moyenne"
           }
         ]
       },
       "themes_obligatoires": [
         {
-          "theme": "Comparaison LED vs fluorescents vs halogènes",
+          "theme": "Comparaison technique LED vs fluorescents",
           "present_chez": [
             "Position 2",
             "Position 4"
           ],
-          "niveau_minimum_requis": "Approfondi avec chiffres",
-          "profondeur_observee": "Expert (calculs détaillés)",
-          "justification": "Thème central pour la décision d'achat"
+          "niveau_minimum_requis": "approfondi",
+          "profondeur_observee": "approfondi",
+          "justification": "Thème central présent chez tous les leaders, nécessitant données chiffrées et analyse détaillée"
         },
         {
-          "theme": "Calculs de luminosité (lux/lumens)",
+          "theme": "Calculs de dimensionnement lumens/lux",
           "present_chez": [
             "Position 2",
             "Position 4"
           ],
-          "niveau_minimum_requis": "Pratique avec exemples concrets",
-          "profondeur_observee": "Expert (formules personnalisables)",
-          "justification": "Permet le dimensionnement précis"
+          "niveau_minimum_requis": "approfondi",
+          "profondeur_observee": "approfondi",
+          "justification": "Différenciateur clé des contenus bien positionnés, fournissant une valeur actionnable"
         },
         {
-          "theme": "Indices de protection (IP/IK)",
+          "theme": "Analyse coût-durée de vie",
           "present_chez": [
             "Position 2",
             "Position 4"
           ],
-          "niveau_minimum_requis": "Approfondi avec recommandations",
-          "profondeur_observee": "Approfondi (explications détaillées)",
-          "justification": "Critère technique essentiel pour durabilité"
+          "niveau_minimum_requis": "modéré",
+          "profondeur_observee": "modéré",
+          "justification": "Présent chez les leaders pour justifier l'investissement initial"
+        }
+      ],
+      "themes_emergents_consolides": [
+        {
+          "theme": "Intégration détecteurs mouvement intelligents et domotique",
+          "articles_mentionnant": [
+            "Position 2",
+            "Position 4"
+          ],
+          "frequence_apparition": "élevée",
+          "niveau_traitement_observe": "superficiel",
+          "opportunite_differentiation": "Très élevée - thème émergent avec faible concurrence approfondie",
+          "potentiel_seo": "très élevé",
+          "justification_potentiel": "Recherches croissantes sur 'garage connecté' et 'détection mouvement garage' avec peu de contenu expert disponible",
+          "recommandation_exploitation": "Développer un guide comparatif des technologies de détection (infrarouge vs hyperfréquence) avec tests pratiques et intégration ecosystemes domotiques",
+          "complexite_execution": "moyenne"
         },
         {
-          "theme": "Température de couleur adaptée",
-          "present_chez": [
+          "theme": "Impact écologique et analyse cycle de vie",
+          "articles_mentionnant": [
             "Position 2",
-            "Position 4",
-            "Position 5"
+            "Position 4"
           ],
-          "niveau_minimum_requis": "Approfondi avec cas d'usage",
-          "profondeur_observee": "Approfondi (Kelvin expliqués)",
-          "justification": "Impact direct sur le confort visuel"
+          "frequence_apparition": "moyenne",
+          "niveau_traitement_observe": "superficiel",
+          "opportunite_differentiation": "Élevée - conscience environnementale croissante",
+          "potentiel_seo": "élevé",
+          "justification_potentiel": "Recherches niche mais engagement élevé, différenciation forte possible sur l'analyse écologique complète",
+          "recommandation_exploitation": "Analyser l'empreinte carbone complète des technologies avec données recyclabilité et durée de vie réelle",
+          "complexite_execution": "élevée"
+        }
+      ],
+      "themes_a_exclure_consolides": [
+        {
+          "theme": "Installation électrique basique garage",
+          "distribution_serp": {
+            "present_top5": [],
+            "present_positions_6_10": []
+          },
+          "raison_exclusion": "saturation",
+          "justification_exclusion": "Thème ultra-saturé traité de manière identique dans 90% des contenus concurrents",
+          "correlation_mauvais_positionnement": "Non corrélé directement mais contribue à la banalisation du contenu",
+          "alternative_recommandee": "Se concentrer sur les spécificités d'installation de chaque technologie plutôt que bases électriques génériques"
+        },
+        {
+          "theme": "Histoire de l'éclairage garage",
+          "distribution_serp": {
+            "present_top5": [],
+            "present_positions_6_10": []
+          },
+          "raison_exclusion": "dilution",
+          "justification_exclusion": "Information peu pertinente pour la décision d'achat, dilue le message actionnable",
+          "correlation_mauvais_positionnement": "Présent dans les articles moins performants comme élément superflu",
+          "alternative_recommandee": "Remplacer par analyse des tendances actuelles et futures du marché"
         }
       ],
       "opportunites_angles_uniques": [
         {
-          "angle_propose": "Guide d'optimisation progressive (budget limité → solution idéale)",
-          "justification": "Absent dans le top, répond aux différents budgets utilisateurs",
-          "niveau_ambition": "Élevé",
-          "valeur_ajoutee_estimee": "Très élevée",
-          "complexite_execution": "Moyenne"
+          "angle_propose": "Guide d'automatisation complète garage avec scénarios d'usage",
+          "justification": "Combinaison des thèmes émergents (domotique + écologie) avec approche centrée utilisateur et cas concrets",
+          "niveau_ambition": "élevé",
+          "valeur_ajoutee_estimee": "Très élevée - répond au besoin croissant de solutions intelligentes intégrées",
+          "complexite_execution": "élevée"
         },
         {
-          "angle_propose": "Analyse cycle de vie complet (achat → installation → maintenance → recyclage)",
-          "justification": "Approche holistique manquante chez les concurrents",
-          "niveau_ambition": "Élevé",
-          "valeur_ajoutee_estimee": "Élevée",
-          "complexite_execution": "Élevée"
-        },
-        {
-          "angle_propose": "Focus spécifique garage-atelier vs garage-stockage",
-          "justification": "Différenciation par usage réel manquante",
-          "niveau_ambition": "Moyen",
-          "valeur_ajoutee_estimee": "Élevée",
-          "complexite_execution": "Faible"
+          "angle_propose": "Analyse ROI multi-critères incluant écologie et confort",
+          "justification": "Approche holistique dépassant le simple calcul économique pour intégrer dimensions environnementale et qualitative",
+          "niveau_ambition": "moyen",
+          "valeur_ajoutee_estimee": "Élevée - différenciation sur la méthodologie d'évaluation",
+          "complexite_execution": "moyenne"
         }
       ],
       "gaps_concurrentiels": [
         {
-          "gap_identifie": "Éclairage naturel et optimisation lumière du jour",
-          "type": "Thématique complète manquante",
-          "potentiel_seo": "Élevé (long tail)",
-          "recommandation_exploitation": "Développer un chapitre dédié avec solutions hybrides"
+          "gap_identifie": "Éclairage de sécurité réglementaire",
+          "type": "profondeur",
+          "potentiel_seo": "moyen",
+          "recommandation_exploitation": "Développer une section sur les normes sécurité incendie et prévention accidents avec exigences légales"
         },
         {
-          "gap_identifie": "Réglementations et normes spécifiques",
-          "type": "Expertise technique avancée",
-          "potentiel_seo": "Moyen mais haute autorité",
-          "recommandation_exploitation": "Intégrer les normes françaises/européennes"
+          "gap_identifie": "Solutions pour garages sans électricité ou très humides",
+          "type": "couverture thématique",
+          "potentiel_seo": "élevé",
+          "recommandation_exploitation": "Créer un guide spécifique pour situations particulières (garages anciens, zones inondables)"
         },
         {
-          "gap_identifie": "Solutions temporaires/d'urgence",
-          "type": "Cas d'usage pratique",
-          "potentiel_seo": "Moyen",
-          "recommandation_exploitation": "Section dédiée aux solutions rapides"
+          "gap_identifie": "Éléments visuels comparatifs (schémas, photos)",
+          "type": "expertise",
+          "potentiel_seo": "élevé",
+          "recommandation_exploitation": "Intégrer des visuels comparatifs qualité lumière, schémas d'installation, photos avant/après"
         }
       ],
       "angles_a_exclure": [
         {
-          "angle_declasse": "Contenu purement promotionnel sans analyse technique",
+          "angle_declasse": "Contenu totalement hors-sujet détourné",
           "present_dans_positions": [
-            "Position 4 partiellement"
+            "Position 1",
+            "Position 3"
           ],
-          "absent_top5_mais_present_bas_classement": [],
-          "raison_exclusion": "Perte de crédibilité et autorité",
-          "risque_positionnement": "Classement bas pour intention informationnelle"
-        },
-        {
-          "angle_declasse": "Approche trop générique sans chiffres concrets",
-          "present_dans_positions": [],
           "absent_top5_mais_present_bas_classement": [
-            "Positions 1 et 3 (hors sujet)"
+            "Position 1",
+            "Position 3"
           ],
-          "raison_exclusion": "Ne répond pas aux attentes techniques des chercheurs",
-          "risque_positionnement": "Impossible de concurrencer le top 3"
+          "raison_exclusion": "hors_intention",
+          "risque_positionnement": "Très élevé - pénalité Google pour contenu trompeur"
         }
       ],
       "strategie_positionnement": {
         "socle_obligatoire": {
           "angles_minimum": [
-            "Comparaison technique détaillée",
-            "Calculs de dimensionnement",
-            "Analyse économique long terme"
+            "Comparaison technique approfondie LED/fluorescents",
+            "Calculs dimensionnement précis lumens/lux",
+            "Analyse économique retour investissement"
           ],
-          "profondeur_requise": "Expert avec chiffres vérifiables",
+          "profondeur_requise": "approfondi",
           "themes_incontournables": [
-            "Technologies LED/fluorescents",
-            "Indices IP/IK",
-            "Températures couleur",
-            "Usages spécifiques"
+            "Types d'éclairage garage",
+            "Critères de choix techniques",
+            "Guide d'installation pratique"
           ]
         },
         "differentiation_recommandee": {
           "angles_uniques_proposes": [
-            "Optimisation progressive budget",
-            "Focus garage-atelier spécifique",
-            "Solutions hybrides naturel/artificiel"
+            "Guide automatisation garage scénarios usage",
+            "Analyse ROI multi-critères écologie/confort"
           ],
           "approfondissements_cibles": [
-            "Cycle de vie complet",
-            "Réglementations spécifiques",
-            "Maintenance préventive"
+            "Détecteurs mouvement intelligents",
+            "Impact écologique cycle de vie",
+            "Solutions situations particulières"
           ],
           "approches_innovantes": [
-            "Calculateur interactif intégré",
-            "Arbre décisionnel visuel",
-            "Témoignages experts électriciens"
+            "Méthodologie calcul intégrée personnalisable",
+            "Approche holistique incluant sécurité et confort"
+          ],
+          "themes_emergents_a_exploiter": [
+            "Intégration domotique",
+            "Analyse environnementale"
           ]
         },
-        "niveau_ambition_global": "Positionnement leader (top 3)",
-        "effort_editorial_estime": "Élevé (2500+ mots avec éléments interactifs)"
+        "niveau_ambition_global": "leader SERP - position 1-3",
+        "effort_editorial_estime": "élevé - 2500+ mots avec éléments visuels"
       },
       "recommandation_positionnement_global": {
-        "type_contenu_optimal": "Guide expert ultime avec éléments interactifs",
-        "intention_cible": "Informationnelle avancée avec orientation décisionnelle",
-        "portee_commerciale_recommandee": "Indirecte via recommandations produits objectives",
-        "orientation_ctal_optimale": "Outils pratiques (calculateurs, checklists) plutôt que vente directe"
+        "type_contenu_optimal": "Guide pratique expert avec éléments calculatoires et comparatifs",
+        "intention_cible": "informationnelle avancée avec orientation décisionnelle",
+        "portee_commerciale_recommandee": "modérée - focus sur l'aide à la décision plutôt que promotion directe",
+        "orientation_ctal_optimale": "Téléchargement guide calcul ou consultation outil dimensionnement personnalisé"
       }
     }
   },
   "angle_select": {
-    "angle_selectionne": "Guide d'optimisation progressive (budget limité → solution idéale)",
+    "angle_selectionne": "Guide d'automatisation complète garage avec scénarios d'usage",
     "score_total": "10/12",
-    "justification_selection": "Cet angle comble un manque évident dans le top des résultats en répondant directement aux préoccupations budgétaires des utilisateurs, tout en étant parfaitement complémentaire du socle technique obligatoire.",
+    "justification_selection": "Cet angle comble un gap concurrentiel majeur en répondant à la demande émergente de domotique, tout en étant parfaitement complémentaire du socle technique obligatoire.",
     "scores_details": {
       "alignement_intention": "3/3",
       "non_redondance": "3/3",

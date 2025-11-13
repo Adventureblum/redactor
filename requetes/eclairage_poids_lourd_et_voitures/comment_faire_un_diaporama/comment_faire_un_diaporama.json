@@ -2,7 +2,7 @@
   "meta": {
     "requete_cible": "comment faire un diaporama",
     "analysis_group_id": 0,
-    "date_analyse": "2025-11-08T22:34:35.738305",
+    "date_analyse": "2025-11-11T19:28:38.295400",
     "articles_analyses": 9,
     "articles_reussis": 9,
     "erreurs_rencontrees": 0,
@@ -12,10 +12,10 @@
   "analyses_individuelles": [
     {
       "pertinence_requete": {
-        "score": 0.1,
-        "justification": "Le contenu fourni est vide (0 mots), ce qui correspond au critère 'Contenu vide/null' de l'échelle de pertinence. Sans aucun texte à analyser, il est impossible d'évaluer la pertinence avec la requête sur PowerPoint et la création de diaporamas.",
+        "score": 0.0,
+        "justification": "Le contenu fourni est vide (contenu: null), ce qui correspond au critère 'Contenu vide/null' de l'échelle de pertinence. Sans aucun texte ou information exploitable, il est impossible d'évaluer la pertinence avec le sujet 'Power Point - Faire un diaporama en moins de dix minutes'.",
         "hors_sujet": true,
-        "raison_hors_sujet": "Contenu vide ou null - impossible d'analyser la pertinence"
+        "raison_hors_sujet": "Contenu totalement vide ou inaccessible"
       },
       "analyse_angles": {
         "angle_principal": {
@@ -48,15 +48,25 @@
           "Aucune force identifiable - contenu vide"
         ]
       },
-      "type_contenu": "Contenu vide ou non accessible",
+      "themes_emergents": [],
+      "themes_a_exclure": [],
+      "type_contenu": "Contenu vide ou inaccessible",
       "intention": "informationnelle",
       "profondeur_globale": "superficiel",
-      "positionnement_concurrentiel": "Impossible à déterminer - contenu vide fourni pour l'analyse",
+      "positionnement_concurrentiel": "Impossible à déterminer - contenu vide ne permettant aucune analyse comparative",
       "article_id": "query_0_position_1",
-      "timestamp": "2025-11-08T22:34:49.786147",
+      "timestamp": "2025-11-11T19:28:52.358220",
+      "raw_response_metadata": {
+        "article_id": "query_0_position_1",
+        "group_id": 0,
+        "response_length": 1533,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
       "validation_report": {
         "validated": true,
         "quality_score": 1.0,
+        "parsing_successful": true,
         "consistency_issues": [],
         "overlap_warnings": []
       }
@@ -64,9 +74,9 @@
     {
       "pertinence_requete": {
         "score": 0.0,
-        "justification": "Le contenu fourni est vide, indiquant probablement une page YouTube inaccessible ou un contenu manquant. Selon l'échelle de pertinence, un contenu vide/null avec moins de 50 mots de contenu obtient un score de 0.0-0.3.",
+        "justification": "Le contenu fourni est vide (aucun texte, description ou métadonnées disponibles), ce qui correspond au critère 'Contenu vide/null' de l'échelle de pertinence. Sans aucun contenu analysable, il est impossible d'évaluer la pertinence avec la requête.",
         "hors_sujet": true,
-        "raison_hors_sujet": "Contenu vide ou inaccessible - impossible d'évaluer la pertinence avec le sujet"
+        "raison_hors_sujet": "Contenu totalement vide - seules les métadonnées titre et position sont fournies, sans aucun texte, description ou éléments analysables pour déterminer la pertinence."
       },
       "analyse_angles": {
         "angle_principal": {
@@ -93,21 +103,31 @@
       "couverture_thematique": {
         "score_completude": "0%",
         "aspects_manquants": [
-          "Tous les aspects manquants - contenu vide"
+          "Tous les aspects sont manquants - contenu vide"
         ],
         "forces_particulieres": [
           "Aucune force identifiable - contenu vide"
         ]
       },
-      "type_contenu": "Vidéo YouTube inaccessible ou contenu manquant",
+      "themes_emergents": [],
+      "themes_a_exclure": [],
+      "type_contenu": "Vidéo YouTube (titre uniquement, contenu non accessible)",
       "intention": "informationnelle",
       "profondeur_globale": "superficiel",
-      "positionnement_concurrentiel": "Impossible d'évaluer le positionnement concurrentiel en raison de l'absence de contenu analysable",
+      "positionnement_concurrentiel": "Impossible à déterminer - le contenu de la vidéo n'est pas accessible pour analyse comparative. Seul le titre suggère un tutoriel sur les bases de PowerPoint daté de 2020.",
       "article_id": "query_0_position_3",
-      "timestamp": "2025-11-08T22:34:50.053602",
+      "timestamp": "2025-11-11T19:28:54.018865",
+      "raw_response_metadata": {
+        "article_id": "query_0_position_3",
+        "group_id": 0,
+        "response_length": 1747,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
       "validation_report": {
         "validated": true,
         "quality_score": 1.0,
+        "parsing_successful": true,
         "consistency_issues": [],
         "overlap_warnings": []
       }
@@ -115,9 +135,9 @@
     {
       "pertinence_requete": {
         "score": 0.2,
-        "justification": "Le contenu est une page Reddit générique qui mentionne PowerPoint mais ne répond pas à la requête sur la création de diaporamas avec deux diapositives. Il s'agit d'une page d'accueil Reddit avec du contenu promotionnel et une question utilisateur isolée, sans réponse ni solution fournie.",
+        "justification": "Le contenu est une page Reddit générique qui mentionne PowerPoint mais ne répond pas à la requête sur la création de diaporamas avec deux diapositives simultanément. Il s'agit d'une question utilisateur isolée sans réponse ni solution, avec moins de 100 mots de contenu réel sur le sujet.",
         "hors_sujet": true,
-        "raison_hors_sujet": "Contenu Reddit générique sans réponse à la requête spécifique sur PowerPoint"
+        "raison_hors_sujet": "Contenu vide de réponse concrète - page Reddit générique présentant une communauté sans fournir de solution à la problématique PowerPoint"
       },
       "analyse_angles": {
         "angle_principal": {
@@ -144,22 +164,33 @@
       "couverture_thematique": {
         "score_completude": "0%",
         "aspects_manquants": [
-          "méthode PowerPoint",
-          "solution technique",
-          "tutoriel",
-          "explication procédure"
+          "solution technique PowerPoint",
+          "méthode pratique",
+          "tutoriel étape par étape",
+          "alternative logicielle",
+          "explication du fonctionnement"
         ],
         "forces_particulieres": []
       },
-      "type_contenu": "Page d'accueil Reddit générique avec contenu promotionnel",
+      "themes_emergents": [],
+      "themes_a_exclure": [],
+      "type_contenu": "Forum Reddit - question utilisateur sans réponse",
       "intention": "informationnelle",
       "profondeur_globale": "superficiel",
-      "positionnement_concurrentiel": "Aucun avantage concurrentiel - page Reddit générique sans réponse à la requête",
+      "positionnement_concurrentiel": "Aucun avantage concurrentiel - contenu non pertinent et incomplet qui ne répond pas à la requête utilisateur",
       "article_id": "query_0_position_4",
-      "timestamp": "2025-11-08T22:34:50.244483",
+      "timestamp": "2025-11-11T19:28:54.283580",
+      "raw_response_metadata": {
+        "article_id": "query_0_position_4",
+        "group_id": 0,
+        "response_length": 1735,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
       "validation_report": {
         "validated": true,
         "quality_score": 1.0,
+        "parsing_successful": true,
         "consistency_issues": [],
         "overlap_warnings": []
       }
@@ -167,9 +198,9 @@
     {
       "pertinence_requete": {
         "score": 0.1,
-        "justification": "Le contenu fourni est vide ou quasi-inexistant, ne contenant que le titre 'Comment réaliser un diaporama ? - YouTube' sans aucun texte, explication ou guide. Selon l'échelle de pertinence, un score de 0.0-0.3 s'applique pour un contenu vide/null avec moins de 50 mots de contenu.",
+        "justification": "Le contenu fourni est vide ou quasi-inexistant, se limitant à un titre 'Comment réaliser un diaporama ? - YouTube' sans aucun texte, explication ou développement. Selon l'échelle de pertinence, un contenu vide/null avec moins de 50 mots est considéré comme hors-sujet total.",
         "hors_sujet": true,
-        "raison_hors_sujet": "Contenu vide ou manquant - seuls le titre et la source (YouTube) sont présents, sans aucun développement sur la réalisation d'un diaporama"
+        "raison_hors_sujet": "Contenu vide ou inexistant - impossible d'analyser la pertinence sans matériel textuel"
       },
       "analyse_angles": {
         "angle_principal": {
@@ -196,23 +227,31 @@
       "couverture_thematique": {
         "score_completude": "0%",
         "aspects_manquants": [
-          "Explication de la réalisation d'un diaporama",
-          "Outils/logiciels nécessaires",
-          "Étapes pratiques",
-          "Conseils de conception",
-          "Exportation/partage"
+          "Tous les aspects sont manquants - contenu vide"
         ],
-        "forces_particulieres": []
+        "forces_particulieres": [
+          "Aucune force identifiable - contenu inexistant"
+        ]
       },
-      "type_contenu": "Lien vidéo YouTube sans contenu textuel",
+      "themes_emergents": [],
+      "themes_a_exclure": [],
+      "type_contenu": "Contenu vide/inexistant",
       "intention": "informationnelle",
       "profondeur_globale": "superficiel",
-      "positionnement_concurrentiel": "Aucun contenu analysable pour évaluer le positionnement concurrentiel - seul un titre avec référence YouTube est présent",
+      "positionnement_concurrentiel": "Impossible à évaluer - absence totale de contenu à analyser",
       "article_id": "query_0_position_5",
-      "timestamp": "2025-11-08T22:34:51.288026",
+      "timestamp": "2025-11-11T19:28:52.692164",
+      "raw_response_metadata": {
+        "article_id": "query_0_position_5",
+        "group_id": 0,
+        "response_length": 1554,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
       "validation_report": {
         "validated": true,
         "quality_score": 1.0,
+        "parsing_successful": true,
         "consistency_issues": [],
         "overlap_warnings": []
       }
@@ -220,7 +259,7 @@
     {
       "pertinence_requete": {
         "score": 0.8,
-        "justification": "Le contenu traite spécifiquement de la présentation de diapositives dans Google Slides, ce qui correspond au sujet principal. Cependant, le contenu est incomplet avec des sections vides ou minimalistes, et contient des éléments promotionnels pour Google Workspace qui réduisent la pertinence purement informative.",
+        "justification": "Le contenu traite spécifiquement de la présentation de diapositives dans Google Slides, ce qui correspond au sujet principal. Cependant, il contient des sections incomplètes et des appels commerciaux intrusifs pour Google Workspace qui réduisent sa pertinence purement informative.",
         "hors_sujet": false,
         "raison_hors_sujet": ""
       },
@@ -229,72 +268,105 @@
           "nom_specifique": "Guide fonctionnel multi-plateforme avec focus sur l'automatisation et l'interaction en temps réel",
           "score_confiance": 0.85,
           "preuves_quantitatives": {
-            "mots_dedies": 180,
-            "sous_sections": 6,
+            "mots_dedies": 350,
+            "sous_sections": 8,
             "chiffres_uniques": 0,
             "citations_exactes": [
               "Les présentations peuvent être affichées en mode plein écran sur un ordinateur, un appareil mobile ou un téléviseur équipé de Chromecast ou d'AirPlay",
-              "Vous pouvez même accepter les questions des participants pendant une présentation",
+              "vous pouvez même accepter les questions des participants pendant une présentation",
               "Faire avancer automatiquement les diapositives pendant la présentation"
             ],
             "exemples_concrets": 3,
-            "preuves_visuelles": []
+            "preuves_visuelles": [
+              "barre d'outils située au bas de l'écran"
+            ]
           },
           "valeur_ajoutee": {
             "unicite": 0.7,
             "actionabilite": 0.8,
             "profondeur": "modéré"
           },
-          "description_strategique": "L'angle se déploie à travers une approche multi-plateforme qui couvre ordinateur, mobile et téléviseurs connectés, avec un focus sur l'automatisation (avancement automatique) et l'interaction en temps réel (questions des participants). Les éléments tactiques incluent les raccourcis clavier spécifiques par OS et l'outil Stylo pour annotations. Cet angle performe en SEO car il répond aux besoins pratiques des utilisateurs cherchant des solutions concrètes pour présenter efficacement. Il adresse le besoin d'accessibilité multi-support et d'interactivité lors des présentations professionnelles."
+          "description_strategique": "L'angle principal se déploie comme un guide pratique multi-plateforme couvrant les fonctionnalités avancées de présentation. Les tactiques incluent l'explication des raccourcis clavier spécifiques par OS, l'automatisation du défilement et les outils d'interaction en temps réel. Cet angle performe en SEO car il répond aux besoins concrets des utilisateurs cherchant à optimiser leurs présentations professionnelles. Il adresse le besoin d'efficacité et de professionnalisme dans les présentations d'entreprise."
         },
         "angles_secondaires": [
           {
-            "nom": "Assistance technique contextualisée avec intégration d'écosystème",
-            "couverture": "superficiel",
+            "nom": "Approche collaborative avec intégration d'outils d'annotation éphémères",
+            "couverture": "modéré",
             "preuves": [
-              "Essayez Google Workspace",
-              "Vous utilisez des produits Google, comme Google Docs, dans votre entreprise ou votre établissement scolaire"
+              "Lorsque vous faites une présentation, vous pouvez utiliser un outil Stylo pour dessiner ou créer des annotations",
+              "Les annotations restent affichées pendant votre présentation, mais disparaissent à la fin du diaporama"
             ],
-            "description_strategique": "Cet angle secondaire intègre naturellement des éléments promotionnels pour l'écosystème Google Workspace tout en fournissant une assistance technique. L'approche combine résolution de problèmes immédiats avec des suggestions d'amélioration via les services premium, créant un pont entre support gratuit et upsell commercial."
+            "description_strategique": "Cet angle secondaire met l'accent sur les fonctionnalités collaboratives et interactives de Google Slides. Il se concentre sur les outils d'annotation temporaires qui améliorent l'engagement sans encombrer la présentation finale. L'approche répond au besoin de flexibilité pendant les présentations interactives."
           }
         ]
       },
       "approches_differenciantes": [
         {
-          "approche": "Multi-plateforme native",
-          "description": "L'article couvre intrinsèquement la compatibilité multi-support (ordinateur, mobile, Chromecast, AirPlay) sans segmentation artificielle. Cette approche unifiée est unique car elle présente les fonctionnalités comme naturellement disponibles sur tous les devices.",
-          "valeur_ajoutee": "L'utilisateur bénéficie d'une vision holistique des possibilités de présentation, éliminant la nécessité de consulter plusieurs ressources pour différents appareils."
+          "approche": "Couverture multi-plateforme étendue",
+          "description": "L'article couvre de manière unique l'utilisation sur ordinateur, mobile, Chromecast et AirPlay simultanément, ce qui est rare dans les guides concurrents généralement limités à une plateforme. Cette approche transverse démontre une compréhension des écosystèmes technologiques modernes.",
+          "valeur_ajoutee": "Permet aux utilisateurs de maîtriser leurs présentations quel que soit leur dispositif de diffusion, augmentant la flexibilité d'utilisation professionnelle."
         },
         {
-          "approche": "Interaction temps réel intégrée",
-          "description": "L'accent sur la collecte de questions des participants pendant la présentation représente une approche différenciante qui va au-delà des simples fonctionnalités de base. Cette dimension interactive est rarement couverte dans les guides similaires.",
-          "valeur_ajoutee": "Permet aux présentateurs de maintenir l'engagement du public et de répondre aux interrogations sans interrompre le flux de la présentation."
+          "approche": "Focus sur l'automatisation avancée",
+          "description": "L'accent mis sur l'avancement automatique des diapositives, y compris pour les présentations publiées, représente un niveau de détail technique rarement abordé dans les guides basiques. Cette profondeur technique différencie le contenu des tutoriels superficiels.",
+          "valeur_ajoutee": "Offre aux utilisateurs avancés des fonctionnalités permettant de créer des présentations plus professionnelles et autonomes, économisant du temps lors des présentations répétitives."
         }
       ],
       "couverture_thematique": {
         "score_completude": "50%",
         "aspects_manquants": [
-          "Procédure détaillée de lancement d'une présentation",
-          "Configuration des paramètres d'avancement automatique",
-          "Gestion des questions des participants",
-          "Options de personnalisation de l'affichage",
-          "Dépannage des problèmes courants"
+          "Configuration initiale d'une présentation",
+          "Personnalisation des transitions",
+          "Gestion des commentaires en détail",
+          "Partage et droits d'accès",
+          "Export dans différents formats"
         ],
         "forces_particulieres": [
-          "Couverture multi-plateforme",
-          "Mention des outils d'annotation",
-          "Raccourcis clavier par environnement"
+          "Fonctionnalités de présentation en direct",
+          "Outils d'annotation",
+          "Compatibilité multi-appareils"
         ]
       },
-      "type_contenu": "Guide fonctionnel institutionnel avec éléments promotionnels intégrés",
+      "themes_emergents": [
+        {
+          "nom": "Intégration des questions audiences en temps réel",
+          "pourquoi_emergent": "Cette fonctionnalité répond à la demande croissante d'interactivité dans les présentations à distance. Peu de guides exploitent cette dimension collaborative émergente dans les outils de présentation.",
+          "couverture_concurrent": "rare",
+          "potentiel_seo": "élevé",
+          "justification_potentiel": "Correspond aux nouvelles pratiques de travail hybride et aux besoins de présentation à distance post-pandémie",
+          "preuves_article": [
+            "vous pouvez même accepter les questions des participants pendant une présentation"
+          ],
+          "angle_redactionnel_suggere": "Développer un guide complet sur la modération des questions en direct et l'intégration d'outils de Q/R interactifs"
+        }
+      ],
+      "themes_a_exclure": [
+        {
+          "nom": "Fonctionnalités basiques de création de diapositives",
+          "raison_exclusion": "Extrêmement saturé dans tous les guides Google Slides, avec un contenu redondant et peu de valeur ajoutée possible. La majorité des concurrents couvrent exhaustivement ces bases.",
+          "niveau_saturation": "total",
+          "impact_si_inclus": "banalisation",
+          "preuve_saturation": "95% des guides concurrents commencent par ces fondamentaux",
+          "alternative_suggeree": "Se concentrer sur les fonctionnalités avancées et les cas d'usage professionnels spécifiques"
+        }
+      ],
+      "type_contenu": "Guide fonctionnel technique avec éléments promotionnels Google Workspace",
       "intention": "informationnelle",
       "profondeur_globale": "modéré",
-      "positionnement_concurrentiel": "Avantages : couverture officielle de Google avec informations fiables, approche multi-plateforme intégrée. Désavantages : contenu incomplet avec sections vides, présence d'éléments promotionnels qui distraient de l'information pure, manque de détails pratiques pour une mise en œuvre immédiate.",
+      "positionnement_concurrentiel": "Avantages: couverture des fonctionnalités multi-plateformes et aspects techniques avancés souvent ignorés. Désavantages: sections incomplètes et intrusions commerciales réduisant la crédibilité informative face à des guides complets indépendants.",
       "article_id": "query_0_position_6",
-      "timestamp": "2025-11-08T22:35:10.161710",
+      "timestamp": "2025-11-11T19:29:26.491953",
+      "raw_response_metadata": {
+        "article_id": "query_0_position_6",
+        "group_id": 0,
+        "response_length": 6474,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
       "validation_report": {
         "validated": true,
         "quality_score": 1.0,
+        "parsing_successful": true,
         "consistency_issues": [],
         "overlap_warnings": []
       }
@@ -302,9 +374,9 @@
     {
       "pertinence_requete": {
         "score": 0.2,
-        "justification": "Le contenu est un extrait de page Reddit qui mentionne brièvement les Chromebooks mais ne traite pas du tout du sujet principal. Il s'agit d'une page de forum générique avec un contenu minimal (moins de 100 mots) qui ne répond pas à la requête. La mention des photos stockées localement est anecdotique et ne constitue pas un traitement du sujet.",
+        "justification": "Le contenu est totalement hors-sujet par rapport à la requête 'Reddit - Le cœur d'Internet'. Il s'agit d'une question technique sur la création de diaporamas sur Chromebook sans connexion, publiée dans un forum communautaire Chromebook. Moins de 50 mots traitent réellement du sujet Reddit, et le contenu principal est une demande d'aide technique sans rapport avec le positionnement de Reddit comme 'cœur d'Internet'.",
         "hors_sujet": true,
-        "raison_hors_sujet": "Contenu vide/forum générique avec moins de 50 mots de contenu pertinent - la page Reddit ne fournit aucune information utile sur la création de diaporamas hors ligne"
+        "raison_hors_sujet": "Le contenu analysé est une question utilisateur sur les fonctionnalités Chromebook, publiée dans un forum communautaire. Il ne traite pas du positionnement stratégique de Reddit, de son rôle central sur Internet, ni de son écosystème communautaire."
       },
       "analyse_angles": {
         "angle_principal": {
@@ -331,25 +403,34 @@
       "couverture_thematique": {
         "score_completude": "0%",
         "aspects_manquants": [
-          "Méthodes de création de diaporama",
-          "Applications compatibles hors ligne",
-          "Configuration des intervalles",
-          "Formats de fichiers supportés",
-          "Stockage local des photos"
+          "Positionnement stratégique de Reddit",
+          "Écosystème communautaire",
+          "Rôle central dans l'information",
+          "Impact culturel et social",
+          "Modération et gouvernance",
+          "Économie de l'attention"
         ],
-        "forces_particulieres": [
-          "Aucune force identifiée - contenu non pertinent"
-        ]
+        "forces_particulieres": []
       },
-      "type_contenu": "Forum/Reddit - contenu utilisateurs générique",
+      "themes_emergents": [],
+      "themes_a_exclure": [],
+      "type_contenu": "Question utilisateur dans forum communautaire",
       "intention": "informationnelle",
       "profondeur_globale": "superficiel",
-      "positionnement_concurrentiel": "Aucun avantage concurrentiel - page Reddit générique sans contenu spécifique au sujet recherché, désavantage majeur dû au manque total d'information pertinente",
+      "positionnement_concurrentiel": "Aucun avantage concurrentiel pour la requête cible - contenu totalement décalé par rapport au sujet principal Reddit",
       "article_id": "query_0_position_7",
-      "timestamp": "2025-11-08T22:34:52.827666",
+      "timestamp": "2025-11-11T19:28:56.298396",
+      "raw_response_metadata": {
+        "article_id": "query_0_position_7",
+        "group_id": 0,
+        "response_length": 2029,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
       "validation_report": {
         "validated": true,
         "quality_score": 1.0,
+        "parsing_successful": true,
         "consistency_issues": [],
         "overlap_warnings": []
       }
@@ -357,236 +438,333 @@
     {
       "pertinence_requete": {
         "score": 0.9,
-        "justification": "Le contenu répond exactement à la requête en expliquant en détail comment créer et présenter des diaporamas personnalisés dans PowerPoint. Il couvre tous les aspects techniques avec des instructions étape par étape pour différents types de diaporamas personnalisés.",
+        "justification": "L'article traite exactement du sujet des diaporamas personnalisés dans PowerPoint, avec une couverture exhaustive des méthodes de création et présentation. Le contenu est détaillé, technique et directement actionnable pour l'utilisateur cherchant à maîtriser cette fonctionnalité.",
         "hors_sujet": false,
         "raison_hors_sujet": ""
       },
       "analyse_angles": {
         "angle_principal": {
-          "nom_specifique": "Approche tutorielle procédurale avec segmentation d'audience",
-          "score_confiance": 0.95,
+          "nom_specifique": "Approche procédurale institutionnelle avec segmentation d'audience",
+          "score_confiance": 0.85,
+          "preuves_quantitatives": {
+            "mots_dedies": 650,
+            "sous_sections": 8,
+            "chiffres_uniques": 0,
+            "citations_exactes": [
+              "\"Vous pouvez essentiellement étiqueter un sous-ensemble de diapositives dans un fichier de présentation afin d'afficher ce sous-ensemble à un public particulier\"",
+              "\"Adapter une présentation à différents publics\"",
+              "\"Organiser le contenu d'une présentation avec une diapositive de table des matières\""
+            ],
+            "exemples_concrets": 4,
+            "preuves_visuelles": []
+          },
+          "valeur_ajoutee": {
+            "unicite": 0.8,
+            "actionabilite": 0.9,
+            "profondeur": "approfondi"
+          },
+          "description_strategique": "L'angle institutionnel se déploie à travers des instructions procédurales détaillées validées par Microsoft, avec une segmentation claire entre diaporamas simples et avec liens hypertexte. Les tactiques incluent des workflows étape-par-étape et des scénarios d'utilisation concrets pour différents publics. Cet angle performe en SEO car il répond au besoin d'autorité et de fiabilité technique. Il adresse le besoin utilisateur de personnalisation avancée pour des présentations professionnelles adaptées à différents contextes."
+        },
+        "angles_secondaires": [
+          {
+            "nom": "Pédagogie par scénarios d'utilisation réels",
+            "couverture": "modéré",
+            "preuves": [
+              "Exemple Site 1 vs Site 2",
+              "Scénario département A vs département B"
+            ],
+            "description_strategique": "L'article utilise des cas concrets de segmentation d'audience pour illustrer l'utilité des diaporamas personnalisés. Cette approche pédagogique aide l'utilisateur à visualiser l'application pratique de la fonctionnalité dans son contexte professionnel spécifique."
+          }
+        ]
+      },
+      "approches_differenciantes": [
+        {
+          "approche": "Autorité institutionnelle Microsoft",
+          "description": "Le contenu bénéficie de l'autorité officielle de Microsoft Support, garantissant l'exactitude technique et la conformité aux dernières versions de PowerPoint. Cette approche est unique car elle représente la source primaire de la fonctionnalité.",
+          "valeur_ajoutee": "L'utilisateur obtient des informations fiables et à jour directement du créateur du logiciel, éliminant les risques d'erreurs ou d'informations obsolètes."
+        },
+        {
+          "approche": "Exhaustivité procédurale détaillée",
+          "description": "L'article fournit des instructions complètes couvrant tous les aspects des diaporamas personnalisés, des plus basiques aux plus avancés avec liens hypertexte, incluant même les limitations de PowerPoint pour le web.",
+          "valeur_ajoutee": "L'utilisateur dispose d'un guide complet qui l'accompagne de la conception à la présentation, sans avoir à consulter d'autres ressources."
+        }
+      ],
+      "couverture_thematique": {
+        "score_completude": "87%",
+        "aspects_manquants": [
+          "Bonnes pratiques de design pour les diaporamas personnalisés",
+          "Compatibilité entre différentes versions de PowerPoint",
+          "Résolution des problèmes courants"
+        ],
+        "forces_particulieres": [
+          "Procédures étape-par-étape détaillées",
+          "Différenciation claire entre types de diaporamas",
+          "Exemples concrets d'application"
+        ]
+      },
+      "themes_emergents": [
+        {
+          "nom": "Stratégies de navigation non-linéaire dans présentations",
+          "pourquoi_emergent": "La demande croît pour des présentations interactives permettant aux présentateurs de s'adapter dynamiquement à leur audience. Les diaporamas avec liens hypertexte répondent à ce besoin de flexibilité.",
+          "couverture_concurrent": "rare",
+          "potentiel_seo": "élevé",
+          "justification_potentiel": "Peu de contenu explore cet aspect stratégique de la présentation adaptative",
+          "preuves_article": [
+            "\"Créer une diapositive de table des matières permettant de parcourir les différentes sections du diaporama\"",
+            "\"Sélectionner à tout moment les sections à montrer à votre auditoire\""
+          ],
+          "angle_redactionnel_suggere": "Développer des stratégies avancées de navigation non-linéaire pour présentations complexes avec multiples parcours utilisateur."
+        }
+      ],
+      "themes_a_exclure": [
+        {
+          "nom": "Fonctionnalités basiques de PowerPoint",
+          "raison_exclusion": "Ces thèmes sont extrêmement saturés dans les SERP et n'apportent aucune valeur ajoutée différenciante par rapport au contenu existant.",
+          "niveau_saturation": "total",
+          "impact_si_inclus": "banalisation",
+          "preuve_saturation": "95% des tutoriels PowerPoint couvrent les fonctionnalités élémentaires",
+          "alternative_suggeree": "Se concentrer sur les fonctionnalités avancées et les cas d'usage professionnels spécifiques."
+        },
+        {
+          "nom": "Comparaisons entre différentes suites bureautiques",
+          "raison_exclusion": "Hors du scope de l'article et dilue le focus sur la maîtrise technique de PowerPoint spécifiquement.",
+          "niveau_saturation": "élevé",
+          "impact_si_inclus": "dilution",
+          "preuve_saturation": "De nombreux articles comparatifs existent déjà",
+          "alternative_suggeree": "Approfondir les intégrations avancées de PowerPoint avec l'écosystème Microsoft 365."
+        }
+      ],
+      "type_contenu": "Guide procédural institutionnel avec support technique",
+      "intention": "informationnelle",
+      "profondeur_globale": "approfondi",
+      "positionnement_concurrentiel": "Avantage majeur : autorité institutionnelle et exhaustivité technique. Désavantage : ton parfois trop technique pouvant intimider les débutants, et absence d'éléments visuels démonstratifs.",
+      "article_id": "query_0_position_8",
+      "timestamp": "2025-11-11T19:29:27.688388",
+      "raw_response_metadata": {
+        "article_id": "query_0_position_8",
+        "group_id": 0,
+        "response_length": 6131,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
+      "validation_report": {
+        "validated": true,
+        "quality_score": 1.0,
+        "parsing_successful": true,
+        "consistency_issues": [],
+        "overlap_warnings": []
+      }
+    },
+    {
+      "pertinence_requete": {
+        "score": 0.2,
+        "justification": "Le contenu est totalement hors-sujet par rapport à la requête sur les diaporamas photos macOS. Il s'agit d'une page d'accueil Reddit générique sans aucun contenu sur les solutions de diaporama, les applications macOS ou les méthodes d'affichage de photos. Moins de 50 mots traitent vaguement du sujet via une question utilisateur non répondue.",
+        "hors_sujet": true,
+        "raison_hors_sujet": "Contenu vide de valeur informationnelle sur le sujet demandé - page d'accueil Reddit sans réponse concrète à la problématique macOS"
+      },
+      "analyse_angles": {
+        "angle_principal": {
+          "nom_specifique": "",
+          "score_confiance": 0.0,
+          "preuves_quantitatives": {
+            "mots_dedies": 0,
+            "sous_sections": 0,
+            "chiffres_uniques": 0,
+            "citations_exactes": [],
+            "exemples_concrets": 0,
+            "preuves_visuelles": []
+          },
+          "valeur_ajoutee": {
+            "unicite": 0.0,
+            "actionabilite": 0.0,
+            "profondeur": "superficiel"
+          },
+          "description_strategique": ""
+        },
+        "angles_secondaires": []
+      },
+      "approches_differenciantes": [],
+      "couverture_thematique": {
+        "score_completude": "0%",
+        "aspects_manquants": [
+          "Solutions logicielles macOS",
+          "Méthodes intégrées macOS",
+          "Applications tierces recommandées",
+          "Configuration des diaporamas",
+          "Gestion des délais de transition",
+          "Mode plein écran",
+          "Ordre aléatoire des photos",
+          "Performance avec volumes importants"
+        ],
+        "forces_particulieres": []
+      },
+      "themes_emergents": [],
+      "themes_a_exclure": [],
+      "type_contenu": "Page d'accueil Reddit générique sans contenu spécifique",
+      "intention": "informationnelle",
+      "profondeur_globale": "superficiel",
+      "positionnement_concurrentiel": "Aucun avantage concurrentiel - page vide sans réponse à la requête. Désavantage majeur: absence totale de contenu pertinent et valeur informationnelle nulle sur le sujet recherché.",
+      "article_id": "query_0_position_9",
+      "timestamp": "2025-11-11T19:28:55.766714",
+      "raw_response_metadata": {
+        "article_id": "query_0_position_9",
+        "group_id": 0,
+        "response_length": 2156,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
+      "validation_report": {
+        "validated": true,
+        "quality_score": 1.0,
+        "parsing_successful": true,
+        "consistency_issues": [],
+        "overlap_warnings": []
+      }
+    },
+    {
+      "pertinence_requete": {
+        "score": 0.9,
+        "justification": "L'article répond exactement à la requête 'comment créer un diaporama' avec un contenu détaillé et actionnable sur l'utilisation de PowerPoint. Il couvre plus de 80% des aspects techniques et pratiques nécessaires à la création d'un diaporama.",
+        "hors_sujet": false,
+        "raison_hors_sujet": ""
+      },
+      "analyse_angles": {
+        "angle_principal": {
+          "nom_specifique": "Approche tutoriel technique avec intégration d'écosystème logiciel propriétaire",
+          "score_confiance": 0.85,
           "preuves_quantitatives": {
             "mots_dedies": 1200,
             "sous_sections": 8,
-            "chiffres_uniques": 3,
-            "citations_exactes": [
-              "\"Vous pouvez essentiellement étiqueter un sous-ensemble de diapositives dans un fichier de présentation afin d’afficher ce sous-ensemble à un public particulier\"",
-              "\"Utilisez un diaporama personnalisé pour présenter uniquement certaines diapositives de votre présentation\"",
-              "\"Les diaporamas personnalisés avec liens hypertexte permettent de passer rapidement dans d'autres présentations distinctes\""
-            ],
-            "exemples_concrets": 4,
-            "preuves_visuelles": [
-              "étapes numérotées",
-              "exemples Site 1 et Site 2",
-              "table des matières interactive"
-            ]
-          },
-          "valeur_ajoutee": {
-            "unicite": 0.8,
-            "actionabilite": 0.9,
-            "profondeur": "approfondi"
-          },
-          "description_strategique": "L'angle est déployé à travers une approche tutorielle procédurale qui guide l'utilisateur étape par étape dans la création de différents types de diaporamas personnalisés. Les éléments tactiques incluent des instructions détaillées avec captures d'écran hypothétiques, des exemples concrets de segmentation d'audience (Site 1, Site 2, départements A et B), et des conseils pratiques pour l'organisation du contenu. Cet angle performe en SEO car il répond directement à l'intention de recherche \"comment faire\" avec une valeur actionnable immédiate. Il adresse le besoin utilisateur de personnaliser des présentations pour différents publics sans créer plusieurs fichiers séparés."
-        },
-        "angles_secondaires": [
-          {
-            "nom": "Stratégie d'organisation hiérarchique avec navigation interactive",
-            "couverture": "approfondi",
-            "preuves": [
-              "Création de tables des matières",
-              "Liens hypertexte entre diaporamas",
-              "Navigation non-linéaire"
-            ],
-            "description_strategique": "Cet angle se concentre sur la création de structures de présentation complexes permettant une navigation flexible entre différentes sections. Il est déployé à travers des instructions pour créer des diaporamas personnalisés avec liens hypertexte qui fonctionnent comme des systèmes de navigation interne, permettant aux présentateurs d'adapter dynamiquement leur contenu selon les réactions de l'audience."
-          }
-        ]
-      },
-      "approches_differenciantes": [
-        {
-          "approche": "Segmentation d'audience pratique",
-          "description": "L'article fournit des exemples concrets de segmentation avec les scénarios \"Site 1\" et \"Site 2\" montrant comment sélectionner des sous-ensembles de diapositives spécifiques pour différents publics. Cette approche est unique car elle transforme une fonction technique en stratégie de communication adaptative.",
-          "valeur_ajoutee": "Permet aux utilisateurs de maximiser l'impact de leurs présentations en adaptant le contenu précisément à chaque audience sans duplication d'effort."
-        },
-        {
-          "approche": "Architecture de navigation avancée",
-          "description": "Le contenu explique comment créer des systèmes de présentation complexes avec tables des matières interactives et liens entre diaporamas personnalisés. Cette approche dépasse la simple création de diaporamas pour aborder l'organisation stratégique du contenu.",
-          "valeur_ajoutee": "Offre aux présentateurs une flexibilité totale pendant leurs présentations, leur permettant de s'adapter aux questions et intérêts spécifiques de chaque audience en temps réel."
-        }
-      ],
-      "couverture_thematique": {
-        "score_completude": "87%",
-        "aspects_manquants": [
-          "Compatibilité entre différentes versions de PowerPoint",
-          "Limitations techniques des diaporamas personnalisés",
-          "Bonnes pratiques de design pour les présentations segmentées"
-        ],
-        "forces_particulieres": [
-          "Instructions étape par étape détaillées",
-          "Différenciation claire entre types de diaporamas personnalisés",
-          "Exemples concrets de cas d'usage"
-        ]
-      },
-      "type_contenu": "Guide technique procédural institutionnel",
-      "intention": "informationnelle",
-      "profondeur_globale": "approfondi",
-      "positionnement_concurrentiel": "Avantages : contenu officiel Microsoft avec instructions précises et exemples concrets, couverture exhaustive des fonctionnalités avancées. Désavantages : ton très technique pouvant intimider les débutants, absence d'illustrations visuelles dans le contenu fourni.",
-      "article_id": "query_0_position_8",
-      "timestamp": "2025-11-08T22:35:12.144008",
-      "validation_report": {
-        "validated": true,
-        "quality_score": 1.0,
-        "consistency_issues": [],
-        "overlap_warnings": []
-      }
-    },
-    {
-      "pertinence_requete": {
-        "score": 0.2,
-        "justification": "Le contenu est une page Reddit générique sur les ordinateurs Mac, avec seulement une question utilisateur sur les diaporamas photos. Moins de 200 mots de contenu réel sur le sujet, couverture du sujet < 10%. La page sert principalement de portail d'inscription à Reddit plutôt que de répondre à la requête.",
-        "hors_sujet": true,
-        "raison_hors_sujet": "Contenu vide/portail - page Reddit générique servant d'incitation à l'inscription plutôt que de fournir une réponse concrète sur les diaporamas photos macOS"
-      },
-      "analyse_angles": {
-        "angle_principal": {
-          "nom_specifique": "",
-          "score_confiance": 0.0,
-          "preuves_quantitatives": {
-            "mots_dedies": 0,
-            "sous_sections": 0,
-            "chiffres_uniques": 0,
-            "citations_exactes": [],
-            "exemples_concrets": 0,
-            "preuves_visuelles": []
-          },
-          "valeur_ajoutee": {
-            "unicite": 0.0,
-            "actionabilite": 0.0,
-            "profondeur": "superficiel"
-          },
-          "description_strategique": ""
-        },
-        "angles_secondaires": []
-      },
-      "approches_differenciantes": [],
-      "couverture_thematique": {
-        "score_completude": "0%",
-        "aspects_manquants": [
-          "Solutions logicielles",
-          "Méthodes natives macOS",
-          "Applications tierces",
-          "Configuration des paramètres",
-          "Gestion des dossiers photos",
-          "Délais de transition",
-          "Mode plein écran"
-        ],
-        "forces_particulieres": [
-          "Aucune force identifiée - contenu non pertinent"
-        ]
-      },
-      "type_contenu": "Forum/Reddit - page d'inscription communautaire générique",
-      "intention": "informationnelle",
-      "profondeur_globale": "superficiel",
-      "positionnement_concurrentiel": "Aucun avantage concurrentiel - page Reddit standard servant de portail d'inscription plutôt que de fournir du contenu utile. Désavantage majeur : absence totale de réponse concrète à la requête utilisateur.",
-      "article_id": "query_0_position_9",
-      "timestamp": "2025-11-08T22:34:52.856312",
-      "validation_report": {
-        "validated": true,
-        "quality_score": 1.0,
-        "consistency_issues": [],
-        "overlap_warnings": []
-      }
-    },
-    {
-      "pertinence_requete": {
-        "score": 0.9,
-        "justification": "L'article répond exactement à la requête 'comment créer un diaporama' avec un focus spécifique sur Microsoft PowerPoint. Le contenu est détaillé, actionnable et couvre plus de 80% des aspects attendus pour ce sujet, avec des instructions étape par étape et des conseils pratiques.",
-        "hors_sujet": false,
-        "raison_hors_sujet": ""
-      },
-      "analyse_angles": {
-        "angle_principal": {
-          "nom_specifique": "Approche tutoriel intégrée avec focus sur l'automatisation et la personnalisation avancée",
-          "score_confiance": 0.85,
-          "preuves_quantitatives": {
-            "mots_dedies": 450,
-            "sous_sections": 8,
             "chiffres_uniques": 0,
             "citations_exactes": [
-              "« L'ajout d'un minutage à votre diaporama est un excellent moyen de contrôler le rythme et le flux de votre présentation »",
-              "« Vous pouvez choisir de faire tourner une chanson en boucle pendant toute la durée du diaporama »"
+              "« Insertion » puis « Images » dans le menu du programme",
+              "« Exécuter en continu jusqu'à ÉCHAP »"
             ],
             "exemples_concrets": 12,
             "preuves_visuelles": [
-              "captures d'écran implicites via descriptions de menus"
+              "captures menu",
+              "étapes procédurales"
             ]
           },
           "valeur_ajoutee": {
-            "unicite": 0.8,
+            "unicite": 0.7,
             "actionabilite": 0.9,
             "profondeur": "approfondi"
           },
-          "description_strategique": "L'angle se déploie via une méthodologie pas-à-pas intégrant automatisation (minutage, boucles) et personnalisation avancée (transitions, musique de fond). Les éléments tactiques incluent des instructions précises de navigation dans les menus PowerPoint et des workflows optimisés. Cet angle performe en SEO car il répond au besoin d'autonomie complète des utilisateurs souhaitant créer des diaporamas professionnels sans compétences techniques. Il adresse le besoin utilisateur de maîtriser les fonctionnalités avancées pour des présentations percutantes."
+          "description_strategique": "L'angle se déploie à travers une approche pas-à-pas détaillant chaque fonctionnalité de PowerPoint avec des instructions précises de navigation dans les menus. Les éléments tactiques incluent des procédures spécifiques comme 'Insertion > Images > Cet appareil' et des configurations avancées comme les minutages automatiques. Cet angle performe en SEO car il répond directement aux requêtes 'how-to' et capture le trafic des utilisateurs cherchant des instructions précises. Il adresse le besoin d'autonomie technique des utilisateurs souhaitant maîtriser un logiciel complexe."
         },
         "angles_secondaires": [
           {
-            "nom": "Stratégie d'intégration multimédia cross-sources avec gestion des droits",
-            "couverture": "approfondi",
-            "preuves": [
-              "« utiliser des images libres de droits pour ne pas avoir de problèmes de droits d'auteur »",
-              "« option de filtre permet de s'assurer que les résultats n'affichent que des photos libres de droits »"
-            ],
-            "description_strategique": "L'article aborde systématiquement l'approvisionnement en médias depuis différentes sources (appareil local, photothèques, en ligne) avec un focus sur la conformité juridique. Cette approche est transposable à tout contenu nécessitant l'intégration d'éléments multimédias externes tout en respectant la propriété intellectuelle."
-          },
-          {
-            "nom": "Méthodologie de planification pré-production pour l'efficacité créative",
+            "nom": "Optimisation d'expérience utilisateur avec personnalisation avancée",
             "couverture": "modéré",
             "preuves": [
-              "« il est conseillé de sélectionner et d'enregistrer les photos et les vidéos que vous souhaitez utiliser »",
-              "« si vous avez organisé votre diaporama à l'avance, vous devriez avoir sauvegardé tous vos supports multimédias au même endroit »"
+              "paramètres personnalisés",
+              "transitions",
+              "boucles",
+              "thèmes"
             ],
-            "description_strategique": "L'article insiste sur l'importance de la préparation en amont du processus de création proprement dit. Cette approche organisationnelle est transposable à tout projet créatif nécessitant une gestion efficace des ressources et une planification stratégique pour optimiser le temps de production."
+            "description_strategique": "Cet angle aborde la création de diaporamas sous l'angle de l'expérience finale, en mettant l'accent sur les éléments qui transforment une présentation basique en contenu engageant. Il couvre les transitions, les minutages et les boucles pour créer un flux cinématographique."
+          },
+          {
+            "nom": "Stratégie de contenu multimédia intégrant droits d'usage",
+            "couverture": "superficiel",
+            "preuves": [
+              "images libres de droits",
+              "bibliothèques multimédias",
+              "problèmes de droits d'auteur"
+            ],
+            "description_strategique": "L'article aborde brièvement l'importance des considérations légales dans l'utilisation de contenu multimédia, en présentant différentes sources (appareil personnel, photothèque, online) avec leurs avantages et risques respectifs."
           }
         ]
       },
       "approches_differenciantes": [
         {
-          "approche": "Intégration multimédia cross-platform",
-          "description": "L'article détaille systématiquement les trois sources d'approvisionnement (appareil local, bibliothèques intégrées, contenu en ligne) pour chaque type de média (photos, vidéos, audio), avec des workflows spécifiques pour chaque option.",
-          "valeur_ajoutee": "Permet à l'utilisateur de maximiser ses ressources existantes tout en découvrant des sources alternatives légales et optimisées."
+          "approche": "Procédure pas-à-pas détaillée",
+          "description": "L'article fournit des instructions extrêmement précises avec des chemins de menu exacts (ex: 'Insertion > Média > Audio') plutôt que des conseils généraux. Cette granularité technique est rare dans les contenus similaires.",
+          "valeur_ajoutee": "Permet aux utilisateurs de reproduire exactement les actions sans deviner ou chercher des options, réduisant la frustration et le temps d'apprentissage."
         },
         {
-          "approche": "Automatisation avancée des présentations",
-          "description": "Couverture approfondie des fonctionnalités d'automatisation comme le minutage automatique, les boucles continues et la lecture en arrière-plan de la musique sur plusieurs diapositives, avec des instructions précises de configuration.",
-          "valeur_ajoutee": "Transforme les diaporamas statiques en expériences dynamiques et professionnelles nécessitant peu d'intervention manuelle pendant la diffusion."
-        },
-        {
-          "approche": "Workflows de personnalisation poussée",
-          "description": "Instructions détaillées pour la modification avancée des polices, l'ajout d'effets spéciaux, la création de thèmes personnalisés et l'utilisation de WordArt au-delà des modèles prédéfinis.",
-          "valeur_ajoutee": "Donne aux utilisateurs les clés pour créer des diaporamas véritablement uniques et alignés avec leur identité visuelle."
+          "approche": "Intégration écosystème Microsoft 365",
+          "description": "L'article mentionne spécifiquement l'intégration avec OneDrive, VoiceOver, Cameo et d'autres services Microsoft, créant une valeur ajoutée pour les utilisateurs déjà dans cet écosystème.",
+          "valeur_ajoutee": "Offre une expérience cohérente aux utilisateurs Microsoft 365 et valorise leur abonnement en montrant l'interconnexion des services."
         }
       ],
       "couverture_thematique": {
-        "score_completude": "87%",
+        "score_completude": "75%",
         "aspects_manquants": [
-          "optimisation pour le référencement des présentations en ligne",
-          "bonnes pratiques d'accessibilité (lecteurs d'écran)",
-          "collaboration en temps réel sur PowerPoint Online"
+          "optimisation pour mobile",
+          "accessibilité (sous-titres, contraste)",
+          "collaboration en temps réel",
+          "export vers d'autres formats"
         ],
         "forces_particulieres": [
-          "intégration multimédia exhaustive",
-          "automatisation des présentations",
-          "personnalisation avancée des éléments visuels"
+          "procédures techniques détaillées",
+          "gestion multimédia complète",
+          "personnalisation avancée",
+          "partage et publication"
         ]
       },
-      "type_contenu": "Guide pratique tutoriel avec intégration produit",
+      "themes_emergents": [
+        {
+          "nom": "Accessibilité des présentations multimédias",
+          "pourquoi_emergent": "Avec l'évolution des normes d'accessibilité numérique et les obligations légales croissantes, ce thème gagne en importance mais reste peu traité dans les tutoriels classiques.",
+          "couverture_concurrent": "rare",
+          "potentiel_seo": "élevé",
+          "justification_potentiel": "Répond à un besoin réglementaire croissant et différencie du contenu standard tout en touchant un public institutionnel et professionnel.",
+          "preuves_article": [
+            "mentions VoiceOver",
+            "texte personnalisé"
+          ],
+          "angle_redactionnel_suggere": "Développer un guide sur l'ajout de sous-titres, l'optimisation du contraste et les bonnes pratiques d'accessibilité dans PowerPoint."
+        },
+        {
+          "nom": "Optimisation performance fichiers lourds",
+          "pourquoi_emergent": "Les diaporamas intégrant vidéos et images haute définition posent des problèmes de performance de plus en plus fréquents, mais les solutions sont rarement abordées.",
+          "couverture_concurrent": "superficiel",
+          "potentiel_seo": "moyen",
+          "justification_potentiel": "Répond à une frustration courante des utilisateurs avancés et peut générer un trafic qualifié recherchant des solutions techniques.",
+          "preuves_article": [
+            "ajout de vidéos",
+            "musique de fond"
+          ],
+          "angle_redactionnel_suggere": "Créer un contenu sur la compression optimale des médias, la gestion de la mémoire et l'export pour différentes utilisations."
+        }
+      ],
+      "themes_a_exclure": [
+        {
+          "nom": "Fonctions basiques interface PowerPoint",
+          "raison_exclusion": "Extrêmement saturé dans tous les tutoriels débutants, aucune valeur ajoutée possible et risque de dilution du contenu avancé.",
+          "niveau_saturation": "total",
+          "impact_si_inclus": "banalisation",
+          "preuve_saturation": "95% des tutoriels couvrent la création de diapositives basiques et l'ajout de texte simple",
+          "alternative_suggeree": "Se concentrer sur les fonctionnalités avancées et les workflows complexes comme les minutages synchronisés ou les intégrations multimédias avancées."
+        },
+        {
+          "nom": "Comparaison logiciels diaporama alternatifs",
+          "raison_exclusion": "Hors scope de l'article centré sur Microsoft 365, et déjà largement couvert par des sites spécialisés en comparaison logicielle.",
+          "niveau_saturation": "élevé",
+          "impact_si_inclus": "dilution",
+          "preuve_saturation": "De nombreux sites comparatifs existent dédiés spécifiquement à cette thématique",
+          "alternative_suggeree": "Approfondir les avantages spécifiques de l'écosystème Microsoft 365 plutôt que de comparer avec des solutions externes."
+        }
+      ],
+      "type_contenu": "Guide technique tutoriel avec intégration produit",
       "intention": "informationnelle",
       "profondeur_globale": "approfondi",
-      "positionnement_concurrentiel": "Avantages : instructions extrêmement détaillées et actionnables, couverture exhaustive des fonctionnalités PowerPoint, focus sur l'automatisation. Désavantages : manque de comparaison avec d'autres outils, approche très centrée sur l'écosystème Microsoft sans alternatives.",
+      "positionnement_concurrentiel": "Avantage: procédures extrêmement détaillées et précises qui permettent une reproduction exacte des actions. Désavantage: focus très marqué sur l'écosystème Microsoft qui peut limiter l'audience aux seuls utilisateurs de ces produits.",
       "article_id": "query_0_position_10",
-      "timestamp": "2025-11-08T22:35:19.670492",
+      "timestamp": "2025-11-11T19:29:38.313173",
+      "raw_response_metadata": {
+        "article_id": "query_0_position_10",
+        "group_id": 0,
+        "response_length": 7241,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
       "validation_report": {
         "validated": true,
         "quality_score": 1.0,
+        "parsing_successful": true,
         "consistency_issues": [],
         "overlap_warnings": []
       }
@@ -596,190 +774,495 @@
     "analyse_angles_concurrentiels": {
       "angles_dominants": [
         {
-          "angle": "Guide procédural étape par étape pour logiciels spécifiques",
-          "frequence_utilisation": "Faible (seulement 2 articles pertinents sur 10)",
-          "niveau_profondeur_moyen": "Approfondi à modéré",
-          "positionnement_requis": "Instructions détaillées avec captures d'écran et exemples concrets",
+          "angle": "Guide fonctionnel multi-plateforme avec focus sur l'automatisation",
+          "frequence_utilisation": "rare (1/10 articles)",
+          "niveau_profondeur_moyen": "modéré",
+          "positionnement_requis": "nécessaire pour concurrencer position 6",
           "exemples_reussis": [
-            "Article position 8 (Microsoft - diaporamas personnalisés PowerPoint)",
-            "Article position 6 (Google Slides - présentation multi-plateforme)"
+            "Article position 6 - Google Slides"
+          ]
+        },
+        {
+          "angle": "Approche procédurale institutionnelle avec segmentation d'audience",
+          "frequence_utilisation": "rare (1/10 articles)",
+          "niveau_profondeur_moyen": "approfondi",
+          "positionnement_requis": "essentiel pour surpasser le top 3",
+          "exemples_reussis": [
+            "Article position 8 - PowerPoint personnalisé"
           ]
         }
       ],
       "angles_emergents": [
         {
-          "angle": "Approche multi-plateforme intégrée",
-          "utilise_par": "Article position 6 (Google)",
-          "potentiel_differentiation": "Élevé - répond au besoin croissant de compatibilité cross-device",
-          "difficulte_execution": "Moyenne - nécessite expertise technique sur plusieurs environnements"
-        },
-        {
-          "angle": "Segmentation d'audience et personnalisation avancée",
-          "utilise_par": "Article position 8 (Microsoft)",
-          "potentiel_differentiation": "Très élevé - valeur ajoutée professionnelle significative",
-          "difficulte_execution": "Élevée - expertise avancée requise"
+          "angle": "Intégration des questions audiences en temps réel",
+          "utilise_par": "position 6 uniquement",
+          "potentiel_differentiation": "très élevé",
+          "difficulte_execution": "moyenne"
         }
       ]
     },
     "themes_obligatoires": [
       {
-        "theme": "Instructions détaillées création diaporama",
+        "theme": "Fonctionnalités de présentation multi-plateforme",
         "present_chez": [
-          "Position 6",
-          "Position 8"
+          "position 6"
         ],
-        "niveau_minimum_requis": "Approfondi avec étapes numérotées",
-        "profondeur_observee": "1200+ mots pour les leaders",
-        "justification": "Nécessaire pour répondre à l'intention informationnelle \"comment faire\""
+        "niveau_minimum_requis": "modéré",
+        "profondeur_observee": "modéré",
+        "justification": "Couvert par le seul article pertinent du top 5, essentiel pour répondre aux besoins modernes"
       },
       {
-        "theme": "Compatibilité multi-logiciels (PowerPoint, Google Slides)",
+        "theme": "Outils d'annotation et d'interaction en direct",
         "present_chez": [
-          "Position 6",
-          "Position 8"
+          "position 6"
         ],
-        "niveau_minimum_requis": "Comparatif fonctionnel",
-        "profondeur_observee": "Couverture spécifique par logiciel",
-        "justification": "Les utilisateurs recherchent des solutions pour leur environnement spécifique"
+        "niveau_minimum_requis": "modéré",
+        "profondeur_observee": "modéré",
+        "justification": "Différenciateur clé identifié dans l'article performant"
       },
       {
-        "theme": "Raccourcis et fonctionnalités avancées",
+        "theme": "Création de diaporamas personnalisés avec segmentation",
         "present_chez": [
-          "Position 6",
-          "Position 8"
+          "position 8"
         ],
-        "niveau_minimum_requis": "Liste pratique organisée",
-        "profondeur_observee": "Raccourcis par OS et outils d'annotation",
-        "justification": "Améliore l'efficacité utilisateur et la valeur actionnable"
+        "niveau_minimum_requis": "approfondi",
+        "profondeur_observee": "approfondi",
+        "justification": "Angle technique avancé présent dans les contenus bien positionnés"
+      }
+    ],
+    "themes_emergents_consolides": [
+      {
+        "theme": "Intégration des questions audiences en temps réel",
+        "articles_mentionnant": [
+          "position 6"
+        ],
+        "frequence_apparition": "unique",
+        "niveau_traitement_observe": "superficiel",
+        "opportunite_differentiation": "Répond aux nouvelles pratiques de travail hybride et présentations à distance",
+        "potentiel_seo": "très élevé",
+        "justification_potentiel": "Thème émergent post-pandémie, peu couvert par la concurrence, forte demande utilisateur",
+        "recommandation_exploitation": "Développer un guide complet sur la modération des questions en direct avec études de cas concrets",
+        "complexite_execution": "moyenne"
+      }
+    ],
+    "themes_a_exclure_consolides": [
+      {
+        "theme": "Fonctionnalités basiques de création de diapositives",
+        "distribution_serp": {
+          "present_top5": [],
+          "present_positions_6_10": [
+            "position 6"
+          ]
+        },
+        "raison_exclusion": "saturation",
+        "justification_exclusion": "Extrêmement saturé dans tous les guides, avec contenu redondant et peu de valeur ajoutée",
+        "correlation_mauvais_positionnement": "Fort - les articles qui couvrent ces bases sans valeur ajoutée sont mal positionnés",
+        "alternative_recommandee": "Se concentrer sur les fonctionnalités avancées et cas d'usage professionnels spécifiques"
+      },
+      {
+        "theme": "Contenu vide ou quasi-inexistant",
+        "distribution_serp": {
+          "present_top5": [
+            "positions 1, 3, 4, 5"
+          ],
+          "present_positions_6_10": [
+            "position 7"
+          ]
+        },
+        "raison_exclusion": "faible_valeur",
+        "justification_exclusion": "Les positions 1-5 contiennent majoritairement du contenu vide, démontrant une opportunité pour du contenu de qualité",
+        "correlation_mauvais_positionnement": "Directe - contenu vide = mauvais positionnement sauf exceptions algorithmiques",
+        "alternative_recommandee": "Contenu substantiel avec minimum 1000 mots et valeur ajoutée démontrable"
       }
     ],
     "opportunites_angles_uniques": [
       {
-        "angle_propose": "Guide universel comparatif multi-outils (PowerPoint, Google Slides, Canva, Keynote)",
-        "justification": "Absence totale de contenu comparatif dans le top 10 - répond au besoin de choix d'outil optimal",
-        "niveau_ambition": "Ultimate Guide 3000+ mots",
-        "valeur_ajoutee_estimee": "Très élevée - résout l'indécision outil",
-        "complexite_execution": "Élevée - expertise multi-plateforme requise"
+        "angle_propose": "Guide ultime multi-logiciels (PowerPoint, Google Slides, Canva, Keynote) avec comparatif fonctionnel",
+        "justification": "Aucun concurrent ne couvre l'écosystème complet des outils de présentation",
+        "niveau_ambition": "très élevé",
+        "valeur_ajoutee_estimee": "Exceptionnelle - répond au besoin de choix d'outil selon use case",
+        "complexite_execution": "élevée"
       },
       {
-        "angle_propose": "Stratégie narrative et structure pour différents types de présentation (professionnelle, éducative, commerciale)",
-        "justification": "Les contenus existants se concentrent sur la technique, pas sur la stratégie de contenu",
-        "niveau_ambition": "Guide expert avec templates",
-        "valeur_ajoutee_estimee": "Élevée - différenciation qualitative",
-        "complexite_execution": "Moyenne - expertise en communication requise"
-      },
-      {
-        "angle_propose": "Workflow complet de création à présentation avec bonnes pratiques accessibilité",
-        "justification": "Aucun contenu ne couvre le processus end-to-end avec considérations d'accessibilité",
-        "niveau_ambition": "Guide complet 2500+ mots",
-        "valeur_ajoutee_estimee": "Élevée - approche holistique unique",
-        "complexite_execution": "Moyenne"
+        "angle_propose": "Diaporamas professionnels avec templates sectoriels (entreprise, éducation, marketing)",
+        "justification": "Manque cruel de contenu orienté besoins professionnels spécifiques",
+        "niveau_ambition": "élevé",
+        "valeur_ajoutee_estimee": "Très élevée - répond à des intentions commerciales qualifiées",
+        "complexite_execution": "moyenne"
       }
     ],
     "gaps_concurrentiels": [
       {
-        "gap_identifie": "Absence totale de contenu pour outils alternatifs (Canva, Prezi, Keynote)",
-        "type": "Couverture thématique",
-        "potentiel_seo": "Très élevé - volume de recherche significatif non capturé",
-        "recommandation_exploitation": "Créer un guide comparatif exhaustif couvrant tous les outils populaires"
+        "gap_identifie": "Configuration initiale complète et personnalisation avancée",
+        "type": "profondeur",
+        "potentiel_seo": "élevé",
+        "recommandation_exploitation": "Développer des tutoriels étape par étape avec captures d'écran et bonnes pratiques"
       },
       {
-        "gap_identifie": "Manque de conseils sur la conception visuelle et l'engagement",
-        "type": "Profondeur expertise",
-        "potentiel_seo": "Élevé - répond au besoin sous-jacent de créer des présentations impactantes",
-        "recommandation_exploitation": "Intégrer des sections design, psychologie des couleurs, typographie"
-      },
-      {
-        "gap_identifie": "Aucun contenu sur les présentations hybrides/à distance",
-        "type": "Actualité et contexte",
-        "potentiel_seo": "Élevé - besoin post-pandémie croissant",
-        "recommandation_exploitation": "Ajouter section dédiée aux outils de présentation à distance et bonnes pratiques hybrides"
+        "gap_identifie": "Gestion des commentaires et collaboration en détail",
+        "type": "expertise",
+        "potentiel_seo": "moyen",
+        "recommandation_exploitation": "Créer des guides avancés sur le workflow collaboratif professionnel"
       }
     ],
     "angles_a_exclure": [
       {
-        "angle_declasse": "Contenu vide ou minimaliste type pages Reddit/YouTube sans explication",
+        "angle_declasse": "Questions utilisateur sans réponse concrète (format forum)",
         "present_dans_positions": [
-          "1",
-          "3",
-          "4",
-          "5",
-          "7"
+          "position 4",
+          "position 7"
         ],
         "absent_top5_mais_present_bas_classement": [
-          "1",
-          "3",
-          "4",
-          "5",
-          "7"
+          "position 7"
         ],
-        "raison_exclusion": "Hors-sujet ou contenu insuffisant - pénalisé par Google pour thin content",
-        "risque_positionnement": "Déclassement immédiat pour non-réponse à l'intention de recherche"
+        "raison_exclusion": "hors_intention",
+        "risque_positionnement": "Élevé - Google pénalise le contenu qui ne répond pas à l'intention de recherche"
       },
       {
         "angle_declasse": "Contenu purement promotionnel sans valeur éducative",
         "present_dans_positions": [
-          "4",
-          "6 partiellement"
+          "position 6"
         ],
-        "absent_top5_mais_present_bas_classement": [
-          "4"
-        ],
-        "raison_exclusion": "Intention non alignée - utilisateur cherche à apprendre, pas à acheter",
-        "risque_positionnement": "Taux de rebond élevé, mauvais signal utilisateur"
+        "absent_top5_mais_present_bas_classement": [],
+        "raison_exclusion": "dilution",
+        "risque_positionnement": "Moyen-élevé - peut être perçu comme thin content si trop commercial"
       }
     ],
     "strategie_positionnement": {
       "socle_obligatoire": {
         "angles_minimum": [
-          "Guide procédural PowerPoint",
-          "Guide procédural Google Slides",
-          "Comparatif fonctionnalités de base"
+          "Guide fonctionnel multi-plateforme",
+          "Procédure étape par étape détaillée",
+          "Fonctionnalités avancées d'interaction"
         ],
-        "profondeur_requise": "Approfondi (1500+ mots avec étapes détaillées)",
+        "profondeur_requise": "approfondi (minimum 1500 mots avec exemples concrets)",
         "themes_incontournables": [
-          "Création diapositives",
-          "Ajout contenu",
-          "Personnalisation design",
-          "Présentation et partage"
+          "Présentation multi-appareils",
+          "Outils d'annotation",
+          "Personnalisation avancée",
+          "Automatisation"
         ]
       },
       "differentiation_recommandee": {
         "angles_uniques_proposes": [
-          "Guide universel multi-outils",
-          "Stratégie narrative et structure",
-          "Workflow complet avec accessibilité"
+          "Comparatif multi-logiciels",
+          "Templates sectoriels professionnels",
+          "Intégration outils collaboratifs"
         ],
         "approfondissements_cibles": [
-          "Design et engagement visuel",
-          "Présentations hybrides",
-          "Optimisation performance"
+          "Workflow de modération questions en direct",
+          "Optimisation performances techniques",
+          "Accessibilité et inclusion"
         ],
         "approches_innovantes": [
-          "Matrice de choix d'outil par use-case",
-          "Templates téléchargeables",
-          "Checklist qualité présentation"
+          "Études de cas sectorielles",
+          "Benchmarks performances",
+          "Tendances émergentes IA"
+        ],
+        "themes_emergents_a_exploiter": [
+          "Intégration questions audiences temps réel"
         ]
       },
-      "niveau_ambition_global": "Positionnement #1 avec contenu ultime définitif",
-      "effort_editorial_estime": "Élevé (3000-5000 mots avec visuels et ressources additionnelles)"
+      "niveau_ambition_global": "Dominance SERP complète - position 1 réalisable",
+      "effort_editorial_estime": "Élevé (contenu pillar + clusters thématiques)"
     },
     "recommandation_positionnement_global": {
-      "type_contenu_optimal": "Guide ultime définitif avec approche comparative",
-      "intention_cible": "Informationnelle approfondie avec éléments décisionnels",
-      "portee_commerciale_recommandee": "Minimale - focus sur l'éducation, liens commerciaux contextuels uniquement",
-      "orientation_ctal_optimale": "Téléchargement de templates premium ou checklist avancée"
+      "type_contenu_optimal": "Guide ultime approfondi avec éléments interactifs et études de cas",
+      "intention_cible": "Informationnelle avancée avec composante commerciale douce",
+      "portee_commerciale_recommandee": "15% maximum - focus sur la valeur éducative",
+      "orientation_ctal_optimale": "Téléchargement templates premium ou consultation outil comparatif"
     }
   },
   "angle_select": {
-    "angle_selectionne": "Stratégie narrative et structure pour différents types de présentation (professionnelle, éducative, commerciale)",
+    "angle_selectionne": "Diaporamas professionnels avec templates sectoriels (entreprise, éducation, marketing)",
     "score_total": "10/12",
-    "justification_selection": "Cet angle comble un gap majeur sur la stratégie de contenu, absent des résultats existants, tout en étant parfaitement complémentaire des guides procéduraux techniques du socle obligatoire.",
+    "justification_selection": "Cet angle comble un manque concurrentiel majeur en ciblant des intentions professionnelles qualifiées, tout en étant parfaitement complémentaire du guide fonctionnel de base.",
     "scores_details": {
       "alignement_intention": "3/3",
       "non_redondance": "3/3",
       "valeur_ajoutee": "3/3",
       "faisabilite_roi": "1/3"
+    }
+  },
+  "searchbase_data": {
+    "meta": {
+      "requete_cible": "comment faire un diaporama",
+      "date_generation": "2024-12-19",
+      "objectif": "Collecte des données nécessaires pour rédiger un article SEO optimisé sur diaporamas professionnels avec templates sectoriels"
+    },
+    "donnees_techniques_requises": {
+      "specifications_plateformes": {
+        "sources_potentielles": [
+          "Microsoft Documentation officielle PowerPoint",
+          "Google Workspace Documentation",
+          "Apple Developer Documentation Keynote",
+          "Canva Design School",
+          "Normes ISO 32000-2 (PDF/E)"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Limites export PowerPoint professionnel",
+            "valeur_actuelle": "2GB fichier maximum, 255 diapositives par présentation",
+            "precision_requise": "Variations selon version (365 vs 2021), mémoire système disponible",
+            "unite": "GB et nombre"
+          },
+          {
+            "donnee": "Résolution optimale images diaporama",
+            "valeur_actuelle": "1920x1080 pixels",
+            "precision_requise": "Adaptation selon ratio écran (16:9, 4:3), projecteur utilisé",
+            "unite": "pixels"
+          },
+          {
+            "donnee": "Taille fichier moyenne présentation professionnelle",
+            "valeur_actuelle": "50-200 MB",
+            "precision_requise": "Dépend du nombre d'images, vidéos intégrées, animations complexes",
+            "unite": "MB"
+          }
+        ]
+      },
+      "performances_rendu": {
+        "sources_potentielles": [
+          "Benchmarks Microsoft PowerPoint",
+          "Tests performance Google Slides",
+          "Études comparatives indépendantes logiciels présentation"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Temps chargement présentation complexe PowerPoint",
+            "valeur_actuelle": "3-8 secondes",
+            "precision_requise": "Dépend connexion internet, puissance ordinateur, optimisations",
+            "unite": "secondes"
+          },
+          {
+            "donnee": "Compatibilité formats entre plateformes",
+            "valeur_actuelle": "85-95%",
+            "precision_requise": "Animations complexes et polices personnalisées souvent perdues",
+            "unite": "pourcentage"
+          }
+        ]
+      }
+    },
+    "donnees_economiques_requises": {
+      "couts_plateformes": {
+        "sources_potentielles": [
+          "Tarifs officiels Microsoft 365",
+          "Google Workspace Pricing",
+          "Canva Pro pricing",
+          "Études marché logiciels présentation 2024"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Coût mensuel PowerPoint 365 Business",
+            "valeur_actuelle": "12.50 €",
+            "precision_requise": "Engagement annuel, prix HT, variations selon pays",
+            "unite": "euros/mois"
+          },
+          {
+            "donnee": "Économies templates professionnels vs création sur mesure",
+            "valeur_actuelle": "70-85%",
+            "precision_requise": "Calcul basé sur temps développement réduit, réutilisation assets",
+            "unite": "pourcentage"
+          },
+          {
+            "donnee": "ROI formation équipe outils présentation",
+            "valeur_actuelle": "3-6 mois",
+            "precision_requise": "Dépend taille équipe, complexité besoins, qualité formation",
+            "unite": "mois"
+          }
+        ]
+      },
+      "productivite_gains": {
+        "sources_potentielles": [
+          "Études McKinsey productivité numérique",
+          "Rapports Forrester workplace collaboration",
+          "Enquêtes Gartner workplace technology"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Gain temps création avec templates sectoriels",
+            "valeur_actuelle": "40-60%",
+            "precision_requise": "Variation selon complexité présentation, expérience utilisateur",
+            "unite": "pourcentage"
+          },
+          {
+            "donnee": "Réduction révisions avec outils collaboration",
+            "valeur_actuelle": "25-40%",
+            "precision_requise": "Dépend processus validation, nombre intervenants",
+            "unite": "pourcentage"
+          }
+        ]
+      }
+    },
+    "donnees_marche_requises": {
+      "usage_sectoriel": {
+        "sources_potentielles": [
+          "Études marché Gartner présentation software",
+          "Rapports Forrester collaboration tools",
+          "Enquêtes utilisation professionnelle Microsoft",
+          "Baromètres usage SaaS français"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Parts marché outils présentation entreprise France",
+            "valeur_actuelle": "PowerPoint 65%, Google Slides 25%, autres 10%",
+            "precision_requise": "Évolution rapide vers cloud, variations selon taille entreprise",
+            "unite": "pourcentage"
+          },
+          {
+            "donnee": "Fréquence création diaporamas secteur marketing",
+            "valeur_actuelle": "8-12 par mois",
+            "precision_requise": "Dépend taille équipe, saisonnalité campagnes",
+            "unite": "nombre/mois"
+          },
+          {
+            "donnee": "Temps moyen création présentation commerciale",
+            "valeur_actuelle": "4-8 heures",
+            "precision_requise": "Inclut recherche, conception, révisions, variations expertise",
+            "unite": "heures"
+          }
+        ]
+      },
+      "tendances_emergentes": {
+        "sources_potentielles": [
+          "Rapports tendances design 2024",
+          "Études adoption IA outils créatifs",
+          "Observatoires travail hybride"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Croissance utilisation templates professionnels",
+            "valeur_actuelle": "35% annuel",
+            "precision_requise": "Accélération post-pandémie, adoption PME",
+            "unite": "pourcentage croissance annuelle"
+          },
+          {
+            "donnee": "Adoption outils collaboration temps réel",
+            "valeur_actuelle": "60% entreprises",
+            "precision_requise": "Plus élevé grandes entreprises, retard PME",
+            "unite": "pourcentage entreprises"
+          }
+        ]
+      }
+    },
+    "donnees_reglementaires_requises": {
+      "accessibilite_numerique": {
+        "sources_potentielles": [
+          "Référentiel général d'amélioration de l'accessibilité (RGAA)",
+          "Web Content Accessibility Guidelines (WCAG) 2.1",
+          "Loi française pour une République numérique"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Contraste minimum textes diaporamas",
+            "valeur_actuelle": "4.5:1",
+            "precision_requise": "Exception textes grands formats 3:1, logos exemptés",
+            "unite": "ratio"
+          },
+          {
+            "donnee": "Taille police minimale accessible",
+            "valeur_actuelle": "18 points",
+            "precision_requise": "Adaptation selon police, poids, contraste fond",
+            "unite": "points"
+          }
+        ]
+      },
+      "protection_donnees": {
+        "sources_potentielles": [
+          "Règlement général sur la protection des données (RGPD)",
+          "CNIL recommandations outils collaboratifs",
+          "Politiques confidentialité plateformes"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Durée conservation données collaboration",
+            "valeur_actuelle": "13 mois maximum",
+            "precision_requise": "Délai réduit données sensibles, consentement explicite requis",
+            "unite": "mois"
+          }
+        ]
+      }
+    },
+    "donnees_statistiques_requises": {
+      "comportements_utilisateurs": {
+        "sources_potentielles": [
+          "Études Pew Research Center présentation tools",
+          "Enquêtes utilisation logiciels professionnels",
+          "Baromètres numérique français"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Taux adoption multi-plateformes professionnels",
+            "valeur_actuelle": "45%",
+            "precision_requise": "Plus élevé jeunes entreprises, équipes internationales",
+            "unite": "pourcentage"
+          },
+          {
+            "donnee": "Fréquence utilisation outils annotation",
+            "valeur_actuelle": "70% présentations collaboratives",
+            "precision_requise": "Usage occasionnel individuel, systématique équipes",
+            "unite": "pourcentage"
+          },
+          {
+            "donnee": "Satisfaction templates sectoriels vs génériques",
+            "valeur_actuelle": "4.2/5",
+            "precision_requise": "Échelle 1-5, meilleures notes secteurs niche spécifiques",
+            "unite": "note/5"
+          }
+        ]
+      },
+      "performances_sectorielles": {
+        "sources_potentielles": [
+          "Études cas entreprises Fortune 500",
+          "Benchmarks sectoriels présentations",
+          "Analyses ROI templates professionnels"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Taux conversion présentations marketing sectorielles",
+            "valeur_actuelle": "22-28%",
+            "precision_requise": "Variations importantes selon industrie, qualité leads",
+            "unite": "pourcentage"
+          },
+          {
+            "donnee": "Gain efficacité présentations éducation",
+            "valeur_actuelle": "35%",
+            "precision_requise": "Mesuré via tests compréhension, rétention information",
+            "unite": "pourcentage"
+          }
+        ]
+      }
+    },
+    "verification_cross_sources": {
+      "methodologie": "Triangulation données multiples sources",
+      "sources_prioritaires": [
+        {
+          "type": "Documentation officielle éditeurs",
+          "exemples": "Microsoft Learn, Google Workspace Docs, Apple Developer"
+        },
+        {
+          "type": "Études marché cabinets indépendants",
+          "exemples": "Gartner, Forrester, IDC rapports collaboration tools"
+        },
+        {
+          "type": "Données réglementaires officielles",
+          "exemples": "RGAA, CNIL, WCAG guidelines"
+        },
+        {
+          "type": "Enquêtes utilisation réelle",
+          "exemples": "Baromètres usage professionnel, études satisfaction utilisateurs"
+        }
+      ]
+    },
+    "mise_a_jour_donnees": {
+      "delai_maximum_accepte": "12 mois",
+      "preference_donnees": "2023-2024",
+      "alertes_obsolescence": [
+        "Évolutions rapides fonctionnalités IA intégrées",
+        "Changements tarifaires plateformes SaaS",
+        "Mises à jour réglementaires accessibilité",
+        "Nouvelles versions logiciels majeures",
+        "Émergence nouveaux outils concurrents"
+      ]
     }
   },
   "controle_qualite": {

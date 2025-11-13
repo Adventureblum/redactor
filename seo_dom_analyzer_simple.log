@@ -50,3 +50,29 @@
 2025-11-08 22:38:41,333 - ConsigneManager - INFO - ✓ Fichier consigne enrichi avec données SERP
 2025-11-08 22:38:41,333 - ConsigneManager - INFO - ✓ Fichier: consignes_eclairage_poids_lourd_et_voitures.json
 2025-11-08 22:38:41,336 - __main__ - INFO - === ANALYSE COMPLÈTE TERMINÉE AVEC SUCCÈS ===
+2025-11-08 22:50:59,530 - __main__ - INFO - === DÉMARRAGE ANALYSEUR DOM SEO SIMPLIFIÉ ===
+2025-11-08 22:50:59,531 - SerpDomProcessor - INFO - Fichiers SERP trouvés: 4
+2025-11-08 22:50:59,531 - __main__ - INFO - Traitement de 4 fichiers SERP
+2025-11-08 22:50:59,531 - __main__ - INFO - [1/4] serp_000_production_video.json
+2025-11-08 22:50:59,531 - SerpDomProcessor - INFO - Traitement: serp_000_production_video.json
+2025-11-08 22:51:00,293 - __main__ - INFO -   ✓ 10 résultats analysés
+2025-11-08 22:51:00,294 - __main__ - INFO - [2/4] serp_001_video_production_conferences_2024.json
+2025-11-08 22:51:00,294 - SerpDomProcessor - INFO - Traitement: serp_001_video_production_conferences_2024.json
+2025-11-08 22:51:00,912 - __main__ - INFO -   ✓ 8 résultats analysés
+2025-11-08 22:51:00,913 - __main__ - INFO - [3/4] serp_002_video_production_invoice_breakdown_guide.json
+2025-11-08 22:51:00,913 - SerpDomProcessor - INFO - Traitement: serp_002_video_production_invoice_breakdown_guide.json
+2025-11-08 22:51:03,158 - __main__ - INFO -   ✓ 10 résultats analysés
+2025-11-08 22:51:03,158 - __main__ - INFO - [4/4] serp_003_video_and_podcast_production_guide.json
+2025-11-08 22:51:03,158 - SerpDomProcessor - INFO - Traitement: serp_003_video_and_podcast_production_guide.json
+2025-11-08 22:51:03,798 - __main__ - INFO -   ✓ 10 résultats analysés
+2025-11-08 22:51:03,798 - __main__ - INFO - Traitement terminé en 4.3s: 4 succès, 0 échecs
+2025-11-08 22:51:03,798 - __main__ - INFO - Intégration des analyses SERP dans le fichier consigne...
+2025-11-08 22:51:03,798 - ConsigneManager - INFO - Fichier consigne trouvé: consignes_eclairage_poids_lourd_et_voitures.json
+2025-11-08 22:51:03,802 - ConsigneManager - INFO - Fichier consigne chargé: 4 queries
+2025-11-08 22:51:03,802 - ConsigneManager - WARNING - Aucune correspondance SERP trouvée pour query 0: 'comment faire un diaporama'
+2025-11-08 22:51:03,802 - ConsigneManager - WARNING - Aucune correspondance SERP trouvée pour query 1: 'comment faire le signe euros sur pc'
+2025-11-08 22:51:03,803 - ConsigneManager - WARNING - Aucune correspondance SERP trouvée pour query 2: 'contrôle eclairage voiture gratuit'
+2025-11-08 22:51:03,803 - ConsigneManager - WARNING - Aucune correspondance SERP trouvée pour query 3: 'meilleur éclairage pour garage'
+2025-11-08 22:51:03,814 - ConsigneManager - INFO - ✓ Fichier consigne enrichi avec données SERP
+2025-11-08 22:51:03,814 - ConsigneManager - INFO - ✓ Fichier: consignes_eclairage_poids_lourd_et_voitures.json
+2025-11-08 22:51:03,814 - __main__ - INFO - === ANALYSE COMPLÈTE TERMINÉE AVEC SUCCÈS ===

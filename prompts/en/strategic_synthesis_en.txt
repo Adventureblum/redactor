@@ -22,19 +22,41 @@ GENERATE A COMPREHENSIVE STRATEGIC SYNTHESIS:
    - Execution complexity
    - Estimated added value
 
-4. COMPETITIVE GAPS & ANGLES TO EXCLUDE:
-    a) Gaps to exploit:
-      - Poorly covered aspects in top 5
-      - Gap type (depth, freshness, expertise, etc.)
-      - SEO potential
+4. EMERGING THEMES CONSOLIDATED:
+   - Aggregate ALL emerging themes identified in individual analyses
+   - Identify patterns: emerging themes mentioned by multiple articles
+   - Prioritize by: appearance frequency + SEO potential + novelty
+   - For each consolidated emerging theme:
+     * Theme name
+     * Articles mentioning it (positions)
+     * Observed treatment level (absent/superficial/deep)
+     * Differentiation opportunity (why it's an opportunity)
+     * Exploitation recommendation
 
-    b) Angles to exclude (ANTI-PATTERNS):
-      - Angles used ONLY in positions 6-10
-      - Absent or very minimal in the top 5
-      - Likely reason for their failure (off-topic, too superficial, misaligned intent)
-      - Risk if used anyway
+5. THEMES TO EXCLUDE CONSOLIDATED:
+   - Aggregate ALL themes to exclude identified in individual analyses
+   - Identify recurring anti-patterns
+   - Analyze distribution: presence in top 5 vs positions 6-10
+   - For each consolidated theme to exclude:
+     * Theme name
+     * SERP distribution (positions where it appears)
+     * Exclusion reason (saturation/obsolescence/dilution/off-intent)
+     * Correlation with poor positioning
+     * Recommended alternative
 
-5. POSITIONING STRATEGY:
+6. COMPETITIVE GAPS:
+   - Poorly covered aspects in top 5
+   - Gap type (depth, freshness, expertise, etc.)
+   - SEO potential
+   - Exploitation recommendation
+
+7. ANGLES TO EXCLUDE (POSITIONAL ANTI-PATTERNS):
+   - Angles used ONLY in positions 6-10
+   - Absent or very minimal in the top 5
+   - Likely reason for their failure (off-topic, too superficial, misaligned intent)
+   - Risk if used anyway
+
+8. POSITIONING STRATEGY:
     a) Mandatory foundation:
       - Minimum angles to cover
       - Required depth
@@ -77,6 +99,32 @@ Respond in valid JSON with this structure:
       "justification": ""
     }}
   ],
+  "themes_emergents_consolides": [
+    {{
+      "theme": "",
+      "articles_mentionnant": [],
+      "frequence_apparition": "",
+      "niveau_traitement_observe": "absent|superficiel|modéré|approfondi",
+      "opportunite_differentiation": "",
+      "potentiel_seo": "faible|moyen|élevé|très élevé",
+      "justification_potentiel": "",
+      "recommandation_exploitation": "",
+      "complexite_execution": "faible|moyenne|élevée"
+    }}
+  ],
+  "themes_a_exclure_consolides": [
+    {{
+      "theme": "",
+      "distribution_serp": {{
+        "present_top5": [],
+        "present_positions_6_10": []
+      }},
+      "raison_exclusion": "saturation|obsolescence|dilution|hors_intention|faible_valeur",
+      "justification_exclusion": "",
+      "correlation_mauvais_positionnement": "",
+      "alternative_recommandee": ""
+    }}
+  ],
   "opportunites_angles_uniques": [
     {{
       "angle_propose": "",
@@ -112,7 +160,8 @@ Respond in valid JSON with this structure:
     "differentiation_recommandee": {{
       "angles_uniques_proposes": [],
       "approfondissements_cibles": [],
-      "approches_innovantes": []
+      "approches_innovantes": [],
+      "themes_emergents_a_exploiter": []
     }},
     "niveau_ambition_global": "",
     "effort_editorial_estime": ""

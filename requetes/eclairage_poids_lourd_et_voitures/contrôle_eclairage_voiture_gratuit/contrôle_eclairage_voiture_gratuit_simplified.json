@@ -1,7 +1,7 @@
 {
   "meta": {
     "requete_cible": "contrôle eclairage voiture gratuit",
-    "date_analyse": "2025-11-08T22:34:35.738305",
+    "date_analyse": "2025-11-11T19:28:38.295400",
     "language": "fr",
     "analyses_totales": 1
   },
@@ -10,179 +10,254 @@
       "analyse_angles_concurrentiels": {
         "angles_dominants": [
           {
-            "angle": "Approche institutionnelle partenariale avec autorité",
-            "frequence_utilisation": "Très élevée (2/2 articles pertinents)",
-            "niveau_profondeur_moyen": "Approfondi",
-            "positionnement_requis": "Obligatoire pour crédibilité",
+            "angle": "Approche partenariale institutionnelle pour actions préventives saisonnières",
+            "frequence_utilisation": "élevée",
+            "niveau_profondeur_moyen": "approfondi",
+            "positionnement_requis": "obligatoire",
             "exemples_reussis": [
-              "Sécurité Routière + ACL",
-              "Prévention Routière + Carglass + CNPA + ASNAV"
+              "ACL avec Sécurité Routière",
+              "Prévention Routière avec Carglass/CNPA/ASNAV"
             ]
           },
           {
-            "angle": "Cadre saisonnier avec urgence préventive",
-            "frequence_utilisation": "Élevée (2/2 articles pertinents)",
-            "niveau_profondeur_moyen": "Approfondi",
-            "positionnement_requis": "Fortement recommandé",
+            "angle": "Stratégie de déploiement territorial avec accessibilité immédiate",
+            "frequence_utilisation": "moyenne",
+            "niveau_profondeur_moyen": "approfondi",
+            "positionnement_requis": "recommandé",
             "exemples_reussis": [
-              "Préparation hivernale",
-              "Dégradation conditions nocturnes"
+              "ACL avec 18 points de contrôle sans rendez-vous"
             ]
           }
         ],
         "angles_emergents": [
           {
-            "angle": "Données techniques exclusives et chiffres choc",
-            "utilise_par": "Position 2 (statistiques sécurité nocturne)",
-            "potentiel_differentiation": "Élevé",
-            "difficulte_execution": "Moyenne (recherche nécessaire)"
+            "angle": "Impact des vibrations routières sur l'éclairage",
+            "utilise_par": "position 2",
+            "potentiel_differentiation": "élevé",
+            "difficulte_execution": "moyenne"
           }
         ]
       },
       "themes_obligatoires": [
         {
-          "theme": "Dates et lieux précis des opérations",
+          "theme": "Lieux et dates détaillés des contrôles gratuits",
           "present_chez": [
-            "Position 1",
-            "Position 2"
+            "position 1",
+            "position 2"
           ],
-          "niveau_minimum_requis": "Détaillé avec 10+ localisations",
-          "profondeur_observee": "Exhaustif (15 lieux + dates exactes)",
-          "justification": "Besoins actionnables immédiats des utilisateurs"
+          "niveau_minimum_requis": "approfondi",
+          "profondeur_observee": "approfondi",
+          "justification": "Nécessaire pour répondre au besoin d'action immédiate et de proximité géographique"
         },
         {
-          "theme": "Partenaires institutionnels identifiés",
+          "theme": "Partenariats institutionnels et crédibilité",
           "present_chez": [
-            "Position 1",
-            "Position 2"
+            "position 1",
+            "position 2"
           ],
-          "niveau_minimum_requis": "Explicite avec logos/organismes",
-          "profondeur_observee": "Détaillé (noms complets + rôles)",
-          "justification": "Crédibilité et confiance essentielle"
+          "niveau_minimum_requis": "modéré",
+          "profondeur_observee": "approfondi",
+          "justification": "Garantit la légitimité et la qualité du service gratuit proposé"
         },
         {
-          "theme": "Contexte sécurité et bénéfices préventifs",
+          "theme": "Données statistiques sur la sécurité routière",
           "present_chez": [
-            "Position 1",
-            "Position 2"
+            "position 1",
+            "position 2"
           ],
-          "niveau_minimum_requis": "Argumenté avec données",
-          "profondeur_observee": "Approfondi (statistiques + risques)",
-          "justification": "Justification de l'opération et motivation"
+          "niveau_minimum_requis": "modéré",
+          "profondeur_observee": "approfondi",
+          "justification": "Justifie l'importance du contrôle et crée un sentiment d'urgence"
+        }
+      ],
+      "themes_emergents_consolides": [
+        {
+          "theme": "Impact batterie sur véhicules modernes",
+          "articles_mentionnant": [
+            "position 1"
+          ],
+          "frequence_apparition": "rare",
+          "niveau_traitement_observe": "superficiel",
+          "opportunite_differentiation": "Angle technique peu traité sur l'impact de l'électronique embarquée",
+          "potentiel_seo": "élevé",
+          "justification_potentiel": "Recherches croissantes sur l'entretien des véhicules électriques et hybrides",
+          "recommandation_exploitation": "Développer un guide expert sur l'entretien préventif de l'éclairage face à la consommation électrique des véhicules modernes",
+          "complexite_execution": "moyenne"
+        },
+        {
+          "theme": "Réglage feux sur parkings non-droits",
+          "articles_mentionnant": [
+            "position 1"
+          ],
+          "frequence_apparition": "rare",
+          "niveau_traitement_observe": "superficiel",
+          "opportunite_differentiation": "Problématique pratique cruciale rarement abordée",
+          "potentiel_seo": "moyen",
+          "justification_potentiel": "Répond aux doutes légitimes sur la précision des contrôles mobiles",
+          "recommandation_exploitation": "Expliquer les méthodes de compensation et limites des contrôles délocalisés versus centres spécialisés",
+          "complexite_execution": "faible"
+        },
+        {
+          "theme": "Impact des vibrations routières sur l'éclairage",
+          "articles_mentionnant": [
+            "position 2"
+          ],
+          "frequence_apparition": "rare",
+          "niveau_traitement_observe": "superficiel",
+          "opportunite_differentiation": "Explication mécanique crédible du dérèglement progressif",
+          "potentiel_seo": "élevé",
+          "justification_potentiel": "Répond à la question 'pourquoi mon éclairage se dérègle-t-il sans accident ?'",
+          "recommandation_exploitation": "Contenu expert sur l'entretien préventif face à l'usure normale, focus modèles sensibles",
+          "complexite_execution": "moyenne"
+        }
+      ],
+      "themes_a_exclure_consolides": [
+        {
+          "theme": "Définition basique contrôle technique",
+          "distribution_serp": {
+            "present_top5": [],
+            "present_positions_6_10": []
+          },
+          "raison_exclusion": "saturation",
+          "justification_exclusion": "Information commodité déjà saturée dans 95% des articles concurrents",
+          "correlation_mauvais_positionnement": "forte",
+          "alternative_recommandee": "Focus sur spécificités du contrôle préventif saisonnier versus contrôle technique obligatoire"
+        },
+        {
+          "theme": "Historique réglementation pneus/feux",
+          "distribution_serp": {
+            "present_top5": [],
+            "present_positions_6_10": []
+          },
+          "raison_exclusion": "saturation",
+          "justification_exclusion": "Thème saturé dans 70-80% des sites institutionnels et techniques",
+          "correlation_mauvais_positionnement": "moyenne",
+          "alternative_recommandee": "Concentrer sur évolutions récentes impactant directement l'utilisateur"
+        },
+        {
+          "theme": "Liste générique des centres de contrôle",
+          "distribution_serp": {
+            "present_top5": [],
+            "present_positions_6_10": []
+          },
+          "raison_exclusion": "saturation",
+          "justification_exclusion": "95% des sites automobiles ont des annuaires de garages",
+          "correlation_mauvais_positionnement": "forte",
+          "alternative_recommandee": "Focus sur 'comment identifier un centre compétent en éclairage' avec checklist"
         }
       ],
       "opportunites_angles_uniques": [
         {
-          "angle_propose": "Guide visuel du contrôle idéal avec schémas",
-          "justification": "Absent dans le top 5 - répond au besoin de comprendre la procédure",
-          "niveau_ambition": "Élevé",
-          "valeur_ajoutee_estimee": "Très élevée",
-          "complexite_execution": "Moyenne (nécessite expertise technique)"
+          "angle_propose": "Guide comparatif contrôle préventif gratuit vs contrôle technique payant",
+          "justification": "Absent dans le top 5, répond au besoin de clarification sur la valeur ajoutée des opérations gratuites",
+          "niveau_ambition": "élevé",
+          "valeur_ajoutee_estimee": "très élevée",
+          "complexite_execution": "moyenne"
         },
         {
-          "angle_propose": "Comparatif réglementation légale vs recommandations sécurité",
-          "justification": "Manque criant dans l'analyse concurrentielle - valeur éducative forte",
-          "niveau_ambition": "Moyen",
-          "valeur_ajoutee_estimee": "Élevée",
-          "complexite_execution": "Moyenne"
+          "angle_propose": "Analyse coût-bénéfice entretien préventif éclairage vs risques réels",
+          "justification": "Approche économique absente des contenus institutionnels dominants",
+          "niveau_ambition": "moyen",
+          "valeur_ajoutee_estimee": "élevée",
+          "complexite_execution": "élevée"
         }
       ],
       "gaps_concurrentiels": [
         {
-          "gap_identifie": "Procédure détaillée du contrôle étape par étape",
-          "type": "Profondeur technique",
-          "potentiel_seo": "Élevé",
-          "recommandation_exploitation": "Créer une section dédiée avec checklist utilisateur"
+          "gap_identifie": "Éléments interactifs (cartes, outils de localisation)",
+          "type": "fonctionnalité",
+          "potentiel_seo": "élevé",
+          "recommandation_exploitation": "Intégrer une carte interactive des points de contrôle avec filtres par dates et services"
         },
         {
-          "gap_identifie": "Éléments visuels illustrant le contrôle",
-          "type": "Support visuel",
-          "potentiel_seo": "Moyen-Élevé",
-          "recommandation_exploitation": "Intégrer photos/schémas des points contrôlés"
+          "gap_identifie": "Témoignages utilisateurs et preuves sociales",
+          "type": "crédibilité",
+          "potentiel_seo": "moyen",
+          "recommandation_exploitation": "Ajouter des avis vérifiés et retours d'expérience concrets"
         },
         {
-          "gap_identifie": "Alternatives payantes et comparatif coûts",
-          "type": "Complétude informationnelle",
-          "potentiel_seo": "Moyen",
-          "recommandation_exploitation": "Ajouter section sur options payantes avec fourchettes de prix"
+          "gap_identifie": "Guide d'autocontrôle basique entre les opérations",
+          "type": "utilité pratique",
+          "potentiel_seo": "élevé",
+          "recommandation_exploitation": "Créer un contenu step-by-step pour vérifier soi-même son éclairage"
         }
       ],
       "angles_a_exclure": [
         {
-          "angle_declasse": "Contenu forum utilisateur non modéré",
+          "angle_declasse": "Contenu Reddit générique avec questions utilisateur isolées",
           "present_dans_positions": [
-            "Position 3"
+            "position 3"
           ],
           "absent_top5_mais_present_bas_classement": [
-            "Position 3"
+            "position 3"
           ],
-          "raison_exclusion": "Manque d'autorité et fiabilité - format inadapté",
-          "risque_positionnement": "Très élevé (perte crédibilité)"
+          "raison_exclusion": "hors_intention",
+          "risque_positionnement": "très élevé"
         },
         {
-          "angle_declasse": "Redirection commerciale pure sans contenu informatif",
+          "angle_declasse": "Pages de redirection commerciale sans contenu éditorial",
           "present_dans_positions": [
-            "Position 4"
+            "position 4"
           ],
           "absent_top5_mais_present_bas_classement": [
-            "Position 4"
+            "position 4"
           ],
-          "raison_exclusion": "Intention non alignée - utilisateur cherche information avant achat",
-          "risque_positionnement": "Élevé (taux de rebond important)"
+          "raison_exclusion": "hors_intention",
+          "risque_positionnement": "très élevé"
         }
       ],
       "strategie_positionnement": {
         "socle_obligatoire": {
           "angles_minimum": [
-            "Approche institutionnelle crédible",
-            "Couverture territoriale exhaustive",
-            "Cadre saisonnier urgentiste"
+            "Approche partenariale institutionnelle",
+            "Stratégie de déploiement territorial",
+            "Données statistiques crédibles"
           ],
-          "profondeur_requise": "Approfondi (1500+ mots avec données actionnables)",
+          "profondeur_requise": "approfondi",
           "themes_incontournables": [
-            "Dates/lieux opérations",
-            "Partenaires officiels",
-            "Bénéfices sécurité",
-            "Gratuité garantie"
+            "Lieux et dates détaillés",
+            "Procédure de contrôle expliquée",
+            "Contexte saisonnier justifié"
           ]
         },
         "differentiation_recommandee": {
           "angles_uniques_proposes": [
-            "Guide visuel procédure contrôle",
-            "Comparatif réglementation vs sécurité",
-            "Foire aux questions exhaustive"
+            "Guide comparatif gratuit vs payant",
+            "Analyse coût-bénéfice entretien préventif"
           ],
           "approfondissements_cibles": [
-            "Procédure détaillée étape par étape",
-            "Données techniques exclusives",
-            "Conseils entretien entre contrôles"
+            "Impact vibrations sur éclairage",
+            "Limites techniques contrôles mobiles"
           ],
           "approches_innovantes": [
-            "Calculateur durée de vie batterie/pneus",
             "Carte interactive des points de contrôle",
-            "Checklist pré-contrôle téléchargeable"
+            "Guide d'autocontrôle DIY"
+          ],
+          "themes_emergents_a_exploiter": [
+            "Impact batterie véhicules modernes",
+            "Réglage feux parkings non-droits"
           ]
         },
-        "niveau_ambition_global": "Position 1-2 avec contenu ultime",
-        "effort_editorial_estime": "Élevé (recherche institutionnelle + création visuelle + données exclusives)"
+        "niveau_ambition_global": "dominance SERP via contenu expert différencié",
+        "effort_editorial_estime": "élevé (1500+ mots avec données exclusives et fonctionnalités interactives)"
       },
       "recommandation_positionnement_global": {
-        "type_contenu_optimal": "Article informatif institutionnel enrichi d'éléments pratiques",
-        "intention_cible": "Informationnelle avec orientation actionnable",
-        "portee_commerciale_recommandee": "Modérée (mentions alternatives payantes en fin d'article)",
-        "orientation_ctal_optimale": "Prise de rendez-vous/consultation plutôt que vente directe"
+        "type_contenu_optimal": "Guide expert institutionnel avec éléments interactifs",
+        "intention_cible": "informationnelle avec orientation action pratique",
+        "portee_commerciale_recommandee": "modérée (crédibilité institutionnelle prioritaire)",
+        "orientation_ctal_optimale": "Encouragement à participer aux opérations + ressources complémentaires"
       }
     }
   },
   "angle_select": {
-    "angle_selectionne": "Guide visuel du contrôle idéal avec schémas",
-    "score_total": "11/12",
-    "justification_selection": "Cet angle comble un manque visuel évident dans les résultats existants tout en restant parfaitement complémentaire du socle institutionnel et territorial obligatoire.",
+    "angle_selectionne": "Guide comparatif contrôle préventif gratuit vs contrôle technique payant",
+    "score_total": "10/12",
+    "justification_selection": "Cet angle comble un gap majeur en clarifiant la valeur des contrôles gratuits, tout en étant parfaitement complémentaire du socle institutionnel obligatoire.",
     "scores_details": {
       "alignement_intention": "3/3",
       "non_redondance": "3/3",
       "valeur_ajoutee": "3/3",
-      "faisabilite_roi": "2/3"
+      "faisabilite_roi": "1/3"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "meta": {
     "requete_cible": "comment faire le signe euros sur pc",
-    "date_analyse": "2025-11-08T22:34:35.738305",
+    "date_analyse": "2025-11-11T19:28:38.295400",
     "language": "fr",
     "analyses_totales": 1
   },
@@ -10,203 +10,278 @@
       "analyse_angles_concurrentiels": {
         "angles_dominants": [
           {
-            "angle": "Approche comparative multi-plateformes (Windows, Mac, Linux)",
-            "frequence_utilisation": "Élevée - présent dans 2 des 3 contenus pertinents",
-            "niveau_profondeur_moyen": "Approfondi",
-            "positionnement_requis": "Obligatoire pour concurrencer le top 3",
+            "angle": "Approche comparative multi-plateforme (Windows/Mac, AZERTY/QWERTY)",
+            "frequence_utilisation": "dominant",
+            "niveau_profondeur_moyen": "approfondi",
+            "positionnement_requis": "essentiel",
             "exemples_reussis": [
-              "Position 4 (GEEKOM)",
-              "Position 6 (Forum Apple)"
+              "Position 2",
+              "Position 4"
             ]
           },
           {
-            "angle": "Résolution de problèmes techniques avec dépannage",
-            "frequence_utilisation": "Moyenne - présent dans les contenus les mieux positionnés",
-            "niveau_profondeur_moyen": "Approfondi",
-            "positionnement_requis": "Recommandé fortement",
+            "angle": "Instructions techniques précises avec codes ASCII/raccourcis",
+            "frequence_utilisation": "dominant",
+            "niveau_profondeur_moyen": "approfondi",
+            "positionnement_requis": "essentiel",
             "exemples_reussis": [
-              "Position 4 (section dépannage)",
-              "Position 6 (diagnostic progressif)"
+              "Position 2",
+              "Position 4"
             ]
           }
         ],
         "angles_emergents": [
           {
-            "angle": "Interface interactive de copie instantanée",
-            "utilise_par": "Position 4 uniquement",
-            "potentiel_differentiation": "Très élevé - résout le besoin immédiat sans mémorisation",
-            "difficulte_execution": "Faible - simple script JavaScript"
+            "angle": "Validation communautaire et retours utilisateurs",
+            "utilise_par": "Position 2 uniquement",
+            "potentiel_differentiation": "élevé",
+            "difficulte_execution": "moyenne"
           },
           {
-            "angle": "Support communautaire multi-utilisateurs",
-            "utilise_par": "Position 6 (forum Apple)",
-            "potentiel_differentiation": "Élevé - authenticité des expériences réelles",
-            "difficulte_execution": "Moyenne - nécessite une communauté active"
+            "angle": "Interface interactive de copie directe",
+            "utilise_par": "Position 4 uniquement",
+            "potentiel_differentiation": "élevé",
+            "difficulte_execution": "faible"
           }
         ]
       },
       "themes_obligatoires": [
         {
-          "theme": "Raccourcis clavier AZERTY Windows (Alt Gr + E)",
+          "theme": "Méthodes clavier Windows AZERTY",
           "present_chez": [
-            "Position 4",
-            "Position 6"
+            "Position 2",
+            "Position 4"
           ],
-          "niveau_minimum_requis": "Instructions détaillées avec captures si possible",
-          "profondeur_observee": "Approfondie",
-          "justification": "Configuration la plus courante en France - cœur de la requête"
+          "niveau_minimum_requis": "approfondi",
+          "profondeur_observee": "approfondi",
+          "justification": "Base essentielle pour la majorité des utilisateurs francophones"
         },
         {
-          "theme": "Méthodes alternatives (codes ASCII, copier-coller)",
+          "theme": "Méthodes clavier Mac",
+          "present_chez": [
+            "Position 2",
+            "Position 4"
+          ],
+          "niveau_minimum_requis": "approfondi",
+          "profondeur_observee": "approfondi",
+          "justification": "Couverture nécessaire de l'écosystème Apple"
+        },
+        {
+          "theme": "Codes ASCII/Unicode alternatifs",
+          "present_chez": [
+            "Position 2",
+            "Position 4"
+          ],
+          "niveau_minimum_requis": "approfondi",
+          "profondeur_observee": "approfondi",
+          "justification": "Solution de secours pour claviers problématiques"
+        },
+        {
+          "theme": "Section dépannage problèmes courants",
           "present_chez": [
             "Position 4"
           ],
-          "niveau_minimum_requis": "Au moins 2 méthodes alternatives",
-          "profondeur_observee": "Modérée",
-          "justification": "Solution de secours pour utilisateurs en difficulté"
+          "niveau_minimum_requis": "approfondi",
+          "profondeur_observee": "approfondi",
+          "justification": "Anticipe les frustrations utilisateurs et réduit le taux de rebond"
+        }
+      ],
+      "themes_emergents_consolides": [
+        {
+          "theme": "Accessibilité symboles sur appareils mobiles (smartphones/tablettes)",
+          "articles_mentionnant": [
+            "Position 2"
+          ],
+          "frequence_apparition": "rare",
+          "niveau_traitement_observe": "absent",
+          "opportunite_differentiation": "Croissance des usages mobiles non couverte par la concurrence",
+          "potentiel_seo": "élevé",
+          "justification_potentiel": "Recherches croissantes sur 'symbole euro smartphone' avec faible concurrence",
+          "recommandation_exploitation": "Développer un guide spécifique iOS/Android avec captures d'écran",
+          "complexite_execution": "faible"
         },
         {
-          "theme": "Configuration Mac (Option + E ou autres)",
-          "present_chez": [
-            "Position 4",
-            "Position 6"
+          "theme": "Solutions pour claviers internationaux atypiques",
+          "articles_mentionnant": [
+            "Position 2"
           ],
-          "niveau_minimum_requis": "Instructions spécifiques macOS",
-          "profondeur_observee": "Approfondie",
-          "justification": "Couverture complète des écosystèmes"
+          "frequence_apparition": "rare",
+          "niveau_traitement_observe": "superficiel",
+          "opportunite_differentiation": "Niche spécifique avec intention de recherche forte",
+          "potentiel_seo": "moyen",
+          "justification_potentiel": "Mobilité professionnelle et achats internationaux créent des besoins non couverts",
+          "recommandation_exploitation": "Tableau consultable par modèle de clavier et pays",
+          "complexite_execution": "moyenne"
         },
         {
-          "theme": "Dépannage quand le raccourci ne fonctionne pas",
-          "present_chez": [
-            "Position 4",
-            "Position 6"
+          "theme": "Accessibilité numérique des symboles monétaires",
+          "articles_mentionnant": [
+            "Position 4"
           ],
-          "niveau_minimum_requis": "3-4 causes courantes identifiées",
-          "profondeur_observee": "Approfondie",
-          "justification": "Répond au besoin latent de résolution de problèmes"
+          "frequence_apparition": "rare",
+          "niveau_traitement_observe": "superficiel",
+          "opportunite_differentiation": "Angle inclusif différenciant dans un secteur technique",
+          "potentiel_seo": "élevé",
+          "justification_potentiel": "Recherches sur l'accessibilité numérique en croissance constante",
+          "recommandation_exploitation": "Section sur l'importance de l'accès aux symboles pour l'inclusion numérique",
+          "complexite_execution": "moyenne"
+        }
+      ],
+      "themes_a_exclure_consolides": [
+        {
+          "theme": "Histoire détaillée du symbole euro et de la monnaie européenne",
+          "distribution_serp": {
+            "present_top5": [
+              "Position 4"
+            ],
+            "present_positions_6_10": []
+          },
+          "raison_exclusion": "dilution",
+          "justification_exclusion": "Hors-sujet par rapport à l'intention utilitaire immédiate, risque d'augmentation du taux de rebond",
+          "correlation_mauvais_positionnement": "Position 4 inclut ce thème mais avec contenu commercial agressif qui diminue la crédibilité",
+          "alternative_recommandee": "Mention brève de l'importance économique comme contexte uniquement"
+        },
+        {
+          "theme": "Tutoriels logiciels de traitement de texte spécifiques",
+          "distribution_serp": {
+            "present_top5": [],
+            "present_positions_6_10": []
+          },
+          "raison_exclusion": "saturation",
+          "justification_exclusion": "Déjà couvert de manière exhaustive par la documentation officielle, faible valeur ajoutée possible",
+          "correlation_mauvais_positionnement": "Non présent dans le top 5, signe de faible pertinence",
+          "alternative_recommandee": "Focus sur les méthodes clavier universelles indépendantes du logiciel"
+        },
+        {
+          "theme": "Comparaisons techniques détaillées entre systèmes",
+          "distribution_serp": {
+            "present_top5": [
+              "Position 4"
+            ],
+            "present_positions_6_10": []
+          },
+          "raison_exclusion": "confusion",
+          "justification_exclusion": "Les utilisateurs cherchent des solutions pour leur configuration spécifique, pas des analyses techniques complexes",
+          "correlation_mauvais_positionnement": "Position 4 alourdit son contenu avec ces comparaisons",
+          "alternative_recommandee": "Segmenter clairement les solutions par configuration sans comparaisons techniques"
         }
       ],
       "opportunites_angles_uniques": [
         {
-          "angle_propose": "Guide visuel interactif avec simulateur de clavier",
-          "justification": "Aucun concurrent n'offre de démonstration visuelle interactive - répond au besoin d'apprentissage kinesthésique",
-          "niveau_ambition": "Élevé - positionnement premium",
-          "valeur_ajoutee_estimee": "Très élevée - expérience utilisateur supérieure",
-          "complexite_execution": "Moyenne - développement frontend nécessaire"
+          "angle_propose": "Guide universel multi-support (PC + mobile + tablette)",
+          "justification": "Aucun concurrent ne couvre complètement l'écosystème mobile émergent",
+          "niveau_ambition": "élevé",
+          "valeur_ajoutee_estimee": "très élevée",
+          "complexite_execution": "moyenne"
         },
         {
-          "angle_propose": "Historique et design du symbole € avec infographie",
-          "justification": "Aspect culturel et historique complètement absent du SERP - valeur éducative ajoutée",
-          "niveau_ambition": "Modéré",
-          "valeur_ajoutee_estimee": "Élevée - différenciation thématique",
-          "complexite_execution": "Faible - recherche et création graphique"
+          "angle_propose": "Base de données interactive par modèle de clavier",
+          "justification": "Résout le problème des claviers internationaux atypiques non couverts",
+          "niveau_ambition": "moyen",
+          "valeur_ajoutee_estimee": "élevée",
+          "complexite_execution": "élevée"
         },
         {
-          "angle_propose": "Tableau comparatif exhaustif tous systèmes/logiciels",
-          "justification": "Les concurrents couvrent partiellement - opportunité de créer la ressource ultime",
-          "niveau_ambition": "Élevé",
-          "valeur_ajoutee_estimee": "Très élevée - potentiel de backlinks",
-          "complexite_execution": "Moyenne - recherche approfondie nécessaire"
+          "angle_propose": "Approche accessibilité numérique inclusive",
+          "justification": "Positionnement différenciant sur un angle social et inclusif dans un secteur technique",
+          "niveau_ambition": "moyen",
+          "valeur_ajoutee_estimee": "élevée",
+          "complexite_execution": "moyenne"
         }
       ],
       "gaps_concurrentiels": [
         {
-          "gap_identifie": "Utilisation dans les logiciels (Word, Excel, PowerPoint)",
-          "type": "Profondeur thématique",
-          "potentiel_seo": "Élevé - nombreuses requêtes long tail",
-          "recommandation_exploitation": "Section dédiée avec captures d'écran par logiciel"
+          "gap_identifie": "Couverture mobile et tablettes tactiles",
+          "type": "completude thématique",
+          "potentiel_seo": "élevé",
+          "recommandation_exploitation": "Développer une section dédiée aux interfaces tactiles iOS/Android"
         },
         {
-          "gap_identifie": "Solutions pour smartphones et tablettes",
-          "type": "Couverture multi-appareils",
-          "potentiel_seo": "Moyen-Élevé - recherche mobile croissante",
-          "recommandation_exploitation": "Ajouter section iOS/Android avec méthodes spécifiques"
+          "gap_identifie": "Support visuel et démonstrations",
+          "type": "profondeur pédagogique",
+          "potentiel_seo": "moyen",
+          "recommandation_exploitation": "Intégrer des captures d'écran et GIFs démonstratifs"
         },
         {
-          "gap_identifie": "Problèmes de clavier physique vs logiciel",
-          "type": "Expertise technique",
-          "potentiel_seo": "Moyen - répond aux problèmes avancés",
-          "recommandation_exploitation": "Guide de diagnostic différencié hardware/software"
+          "gap_identifie": "Expérience utilisateur sans publicité intrusive",
+          "type": "qualité expérience",
+          "potentiel_seo": "élevé",
+          "recommandation_exploitation": "Éviter les insertions commerciales agressives comme en position 4"
         }
       ],
       "angles_a_exclure": [
         {
-          "angle_declasse": "Contenu vide ou non accessible",
+          "angle_declasse": "Contenu vide ou quasi-inexistant",
           "present_dans_positions": [
-            "1",
-            "3"
+            "Position 1",
+            "Position 3"
           ],
-          "absent_top5_mais_present_bas_classement": [],
-          "raison_exclusion": "Pénalisé par Google - qualité nulle",
-          "risque_positionnement": "Désindexation probable"
+          "absent_top5_mais_present_bas_classement": [
+            "Position 1",
+            "Position 3"
+          ],
+          "raison_exclusion": "Qualité insuffisante",
+          "risque_positionnement": "Déclassement assuré par les algorithmes de qualité"
         },
         {
-          "angle_declasse": "Contenu hors-sujet déguisé",
+          "angle_declasse": "Insertions commerciales agressives sans rapport",
           "present_dans_positions": [
-            "5",
-            "7"
+            "Position 4"
           ],
           "absent_top5_mais_present_bas_classement": [],
-          "raison_exclusion": "Intention utilisateur non respectée - bounce rate élevé",
-          "risque_positionnement": "Mauvais signal UX - perte de positions"
-        },
-        {
-          "angle_declasse": "Promotion excessive de produits",
-          "present_dans_positions": [
-            "4 (partiellement)"
-          ],
-          "absent_top5_mais_present_bas_classement": [],
-          "raison_exclusion": "Dilue la valeur informationnelle - réduit la crédibilité",
-          "risque_positionnement": "Perte de confiance utilisateur - partage réduit"
+          "raison_exclusion": "Expérience utilisateur dégradée",
+          "risque_positionnement": "Augmentation du taux de rebond et diminution de la crédibilité"
         }
       ],
       "strategie_positionnement": {
         "socle_obligatoire": {
           "angles_minimum": [
-            "Approche multi-plateformes",
-            "Instructions étape par étape",
-            "Section dépannage"
+            "Approche comparative multi-plateforme",
+            "Instructions techniques précises",
+            "Section dépannage problèmes courants"
           ],
-          "profondeur_requise": "Approfondie (600+ mots de contenu principal)",
+          "profondeur_requise": "approfondi",
           "themes_incontournables": [
-            "AZERTY Windows",
-            "Mac OS",
-            "Méthodes alternatives",
-            "Problèmes courants"
+            "Méthodes Windows AZERTY",
+            "Méthodes Mac",
+            "Codes ASCII/Unicode",
+            "Copier-coller alternatif"
           ]
         },
         "differentiation_recommandee": {
           "angles_uniques_proposes": [
-            "Guide visuel interactif",
-            "Historique du symbole",
-            "Tableau comparatif exhaustif"
+            "Guide universel multi-support",
+            "Approche accessibilité numérique inclusive"
           ],
           "approfondissements_cibles": [
-            "Utilisation dans logiciels",
-            "Solutions mobiles",
-            "Diagnostic hardware/software"
+            "Solutions mobiles et tablettes",
+            "Claviers internationaux atypiques"
           ],
           "approches_innovantes": [
-            "Simulateur de clavier en ligne",
-            "Infographie téléchargeable",
-            "Quiz interactif de mémorisation"
+            "Interface interactive de copie",
+            "Base de données consultable par modèle"
+          ],
+          "themes_emergents_a_exploiter": [
+            "Accessibilité symboles sur mobiles",
+            "Solutions claviers internationaux",
+            "Accessibilité numérique"
           ]
         },
-        "niveau_ambition_global": "Positionnement premium - ressource de référence ultime",
-        "effort_editorial_estime": "Élevé (1200-1500 mots + éléments interactifs + visuels)"
+        "niveau_ambition_global": "dominance SERP complète",
+        "effort_editorial_estime": "élevé (1500+ mots avec supports visuels)"
       },
       "recommandation_positionnement_global": {
-        "type_contenu_optimal": "Guide pratique enrichi avec éléments interactifs",
-        "intention_cible": "Informationnelle pure avec forte dimension utilitaire",
-        "portee_commerciale_recommandee": "Zéro promotion - focus exclusif sur la valeur utilisateur",
-        "orientation_ctal_optimale": "Téléchargement d'infographie mémo ou accès à outils interactifs"
+        "type_contenu_optimal": "Guide pratique technique avec éléments interactifs",
+        "intention_cible": "informationnelle utilitaire immédiate",
+        "portee_commerciale_recommandee": "nulle ou très discrète",
+        "orientation_ctal_optimale": "Aucun CTA commercial, focus sur l'utilité immédiate"
       }
     }
   },
   "angle_select": {
-    "angle_selectionne": "Guide visuel interactif avec simulateur de clavier",
+    "angle_selectionne": "Guide universel multi-support (PC + mobile + tablette)",
     "score_total": "10/12",
-    "justification_selection": "Cet angle comble un gap majeur dans le SERP en offrant une expérience d'apprentissage kinesthésique, tout en étant parfaitement complémentaire des instructions étape par étape du socle obligatoire.",
+    "justification_selection": "Cet angle comble un gap concurrentiel majeur en couvrant l'écosystème mobile émergent, tout en étant parfaitement complémentaire du socle technique PC/Mac existant.",
     "scores_details": {
       "alignement_intention": "3/3",
       "non_redondance": "3/3",

@@ -2,7 +2,7 @@
   "meta": {
     "requete_cible": "meilleur éclairage pour garage",
     "analysis_group_id": 3,
-    "date_analyse": "2025-11-08T22:34:35.738305",
+    "date_analyse": "2025-11-11T19:28:38.295400",
     "articles_analyses": 8,
     "articles_reussis": 8,
     "erreurs_rencontrees": 0,
@@ -13,9 +13,9 @@
     {
       "pertinence_requete": {
         "score": 0.2,
-        "justification": "Le contenu est totalement hors-sujet par rapport à la requête 'Reddit - Le cœur d'Internet'. Il s'agit d'une page Reddit dédiée aux garages et à l'éclairage de garage, sans aucun lien avec le positionnement de Reddit comme plateforme centrale sur Internet. Moins de 50 mots de contenu réel sur le sujet annoncé.",
+        "justification": "Le contenu est totalement hors-sujet par rapport à la requête 'Reddit - Le cœur d'Internet'. Il s'agit d'une page Reddit dédiée aux garages et à l'éclairage, sans aucun lien avec le positionnement de Reddit comme plateforme centrale d'Internet. Moins de 50 mots traitent réellement du sujet annoncé.",
         "hors_sujet": true,
-        "raison_hors_sujet": "Le titre 'Reddit - Le cœur d'Internet' est trompeur et ne correspond pas au contenu réel qui traite exclusivement de l'éclairage de garages. Aucune mention de la place de Reddit dans l'écosystème internet, de son historique, de son influence ou de son rôle comme plateforme centrale."
+        "raison_hors_sujet": "Le contenu traite exclusivement de l'éclairage de garages et de solutions de rangement, sans aborder le rôle de Reddit dans l'écosystème Internet. C'est une page communautaire spécifique détournée de son sujet annoncé."
       },
       "analyse_angles": {
         "angle_principal": {
@@ -42,180 +42,34 @@
       "couverture_thematique": {
         "score_completude": "0%",
         "aspects_manquants": [
-          "Historique de Reddit",
-          "Statistiques d'utilisation",
-          "Influence culturelle",
-          "Communautés emblématiques",
-          "Modèle économique",
-          "Positionnement dans l'écosystème internet",
+          "Position de Reddit dans l'écosystème Internet",
+          "Historique et évolution de la plateforme",
+          "Analyse de son modèle communautaire",
+          "Impact sur les tendances web",
           "Comparaison avec autres réseaux sociaux",
-          "Impact sur l'actualité et la culture"
+          "Données d'usage et statistiques"
         ],
         "forces_particulieres": []
       },
-      "type_contenu": "Page Reddit trompeuse - forum utilisateur sur garage/éclairage",
+      "themes_emergents": [],
+      "themes_a_exclure": [],
+      "type_contenu": "Page communautaire Reddit détournée - contenu utilisateurs sur garage/éclairage",
       "intention": "informationnelle",
       "profondeur_globale": "superficiel",
-      "positionnement_concurrentiel": "Aucun avantage concurrentiel pour la requête cible - contenu totalement déconnecté du sujet annoncé. Désavantage majeur : titre trompeur et absence totale de contenu pertinent sur Reddit comme plateforme internet.",
+      "positionnement_concurrentiel": "Aucun avantage concurrentiel pour la requête cible - contenu complètement inadapté et trompeur par rapport au titre annoncé",
       "article_id": "query_3_position_1",
-      "timestamp": "2025-11-08T22:35:55.647689",
+      "timestamp": "2025-11-11T19:28:56.449976",
+      "raw_response_metadata": {
+        "article_id": "query_3_position_1",
+        "group_id": 3,
+        "response_length": 2155,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
       "validation_report": {
         "validated": true,
         "quality_score": 1.0,
-        "consistency_issues": [],
-        "overlap_warnings": []
-      }
-    },
-    {
-      "pertinence_requete": {
-        "score": 1.0,
-        "justification": "L'article traite exclusivement et en détail du choix d'éclairage pour un garage, couvrant tous les aspects techniques (LED, fluorescents, détecteurs), les critères de sélection (température de couleur, luminosité, consommation) et les usages spécifiques. Le contenu est long (>1500 mots) et répond parfaitement à la requête.",
-        "hors_sujet": false,
-        "raison_hors_sujet": ""
-      },
-      "analyse_angles": {
-        "angle_principal": {
-          "nom_specifique": "Approche comparative multi-critères avec focus sur l'adaptation aux usages spécifiques",
-          "score_confiance": 0.95,
-          "preuves_quantitatives": {
-            "mots_dedies": 1200,
-            "sous_sections": 8,
-            "chiffres_uniques": 15,
-            "citations_exactes": [
-              "50 000 heures, soit environ 17 ans si elles sont utilisées 8 heures par jour",
-              "20 000 heures pour les tubes fluorescents",
-              "IP 65 pour une étanchéité parfaite contre la poussière et l'eau"
-            ],
-            "exemples_concrets": 12,
-            "preuves_visuelles": [
-              "calculs luminosité détaillés",
-              "tableaux comparatifs implicites"
-            ]
-          },
-          "valeur_ajoutee": {
-            "unicite": 0.9,
-            "actionabilite": 0.95,
-            "profondeur": "expert"
-          },
-          "description_strategique": "L'angle est déployé via une analyse systématique des trois technologies principales (LED, fluorescents, détecteurs) avec pour chaque option une évaluation détaillée des avantages, inconvénients et cas d'usage. Les éléments tactiques incluent des calculs précis de luminosité, des recommandations de température de couleur selon l'activité, et des considérations d'installation. Cet angle performe en SEO car il répond aux différentes intentions de recherche (comparaison, spécifications techniques, conseils pratiques) tout en couvrant exhaustivement le sujet. Il adresse le besoin utilisateur de faire un choix éclairé basé sur des critères objectifs plutôt que sur des préférences subjectives."
-        },
-        "angles_secondaires": [
-          {
-            "nom": "Perspective économique et écologique avec analyse coût-bénéfice long terme",
-            "couverture": "approfondi",
-            "preuves": [
-              "Consommation jusqu'à 80% moins d'énergie que les ampoules traditionnelles",
-              "Durée de vie 50 000 heures vs 20 000 heures fluorescents",
-              "Efficacité énergétique exprimée en lm/W"
-            ],
-            "description_strategique": "Cet angle secondaire aborde systématiquement l'impact financier et environnemental des choix d'éclairage, avec des calculs concrets de retour sur investissement et des comparaisons de consommation énergétique. Il répond au besoin croissant des consommateurs de faire des choix durables et économiquement rationnels."
-          },
-          {
-            "nom": "Approche sécurité-praticité avec optimisation de l'expérience utilisateur",
-            "couverture": "modéré",
-            "preuves": [
-              "Détecteurs de mouvement pour sécurité et économie",
-              "Résistance aux chocs IK 10",
-              "Facilité d'installation basse tension"
-            ],
-            "description_strategique": "Cet angle se concentre sur l'amélioration de l'expérience quotidienne dans le garage, en proposant des solutions qui combinent sécurité (éclairage automatique, résistance aux chocs) et praticité (installation simplifiée, maintenance réduite). Il répond au besoin d'optimiser l'espace garage pour en faire un lieu fonctionnel et sécurisé."
-          }
-        ]
-      },
-      "approches_differenciantes": [
-        {
-          "approche": "Calculs techniques détaillés",
-          "description": "L'article fournit des calculs précis de luminosité (lux, lumens), de durée de vie (heures, années), et de consommation énergétique (lm/W) avec des exemples concrets pour un garage de 20m². Cette approche quantitative est unique par sa précision et son applicabilité immédiate.",
-          "valeur_ajoutee": "Permet aux lecteurs de dimensionner précisément leur installation sans avoir à faire eux-mêmes les calculs techniques complexes, garantissant un éclairage optimal et économique."
-        },
-        {
-          "approche": "Classification par usage spécifique",
-          "description": "L'article ne se contente pas de présenter les technologies, mais les associe systématiquement à des usages concrets (bricolage, stockage, salle de sport) avec des recommandations spécifiques de température de couleur et d'intensité lumineuse pour chaque activité.",
-          "valeur_ajoutee": "Offre une personnalisation du conseil en fonction des besoins réels de l'utilisateur, évitant les recommandations génériques peu adaptées aux situations particulières."
-        },
-        {
-          "approche": "Intégration des normes et certifications",
-          "description": "Mention systématique des indices IP (protection) et IK (résistance aux chocs) avec explications détaillées de leur signification et de leur importance dans le contexte spécifique d'un garage.",
-          "valeur_ajoutee": "Donne aux lecteurs les clés pour choisir des produits durables et adaptés aux conditions difficiles d'un garage, évitant les mauvais achats et les remplacements fréquents."
-        }
-      ],
-      "couverture_thematique": {
-        "score_completude": "95%",
-        "aspects_manquants": [
-          "Éclairage naturel et son optimisation",
-          "Réglementations spécifiques pour les garages collectifs"
-        ],
-        "forces_particulieres": [
-          "Comparaison technique détaillée des technologies",
-          "Calculs pratiques de dimensionnement",
-          "Recommandations par usage spécifique",
-          "Considérations installation et maintenance"
-        ]
-      },
-      "type_contenu": "Guide pratique expert avec analyse comparative",
-      "intention": "informationnelle",
-      "profondeur_globale": "expert",
-      "positionnement_concurrentiel": "L'article se distingue par sa profondeur technique exceptionnelle et ses calculs précis qui le placent au-dessus des guides génériques. Son approche multi-critères et son adaptation aux usages spécifiques en font une ressource plus complète que les simples présentations de produits. Le seul désavantage pourrait être une complexité légèrement supérieure pour les débutants complets, mais la structure claire et les exemples concrets compensent largement cet aspect.",
-      "article_id": "query_3_position_2",
-      "timestamp": "2025-11-08T22:36:21.672174",
-      "validation_report": {
-        "validated": true,
-        "quality_score": 1.0,
-        "consistency_issues": [],
-        "overlap_warnings": []
-      }
-    },
-    {
-      "pertinence_requete": {
-        "score": 0.2,
-        "justification": "Le contenu est un post Reddit sur le changement d'ampoule dans un garage, avec des références spécifiques à la Nouvelle-Zélande et un lien Discord. Il ne contient que 150 mots environ et aborde un sujet technique d'électricité domestique, sans aucun lien avec Reddit en tant que plateforme ou communauté internet.",
-        "hors_sujet": true,
-        "raison_hors_sujet": "Le titre 'Reddit - Le cœur d'Internet' suggère un contenu sur la plateforme Reddit, mais l'article est en réalité un post technique DIY sur l'éclairage de garage. Aucun des éléments attendus (communautés Reddit, fonctionnement de la plateforme, analyse des contenus) n'est présent."
-      },
-      "analyse_angles": {
-        "angle_principal": {
-          "nom_specifique": "",
-          "score_confiance": 0.0,
-          "preuves_quantitatives": {
-            "mots_dedies": 0,
-            "sous_sections": 0,
-            "chiffres_uniques": 0,
-            "citations_exactes": [],
-            "exemples_concrets": 0,
-            "preuves_visuelles": []
-          },
-          "valeur_ajoutee": {
-            "unicite": 0.0,
-            "actionabilite": 0.0,
-            "profondeur": "superficiel"
-          },
-          "description_strategique": ""
-        },
-        "angles_secondaires": []
-      },
-      "approches_differenciantes": [],
-      "couverture_thematique": {
-        "score_completude": "0%",
-        "aspects_manquants": [
-          "Plateforme Reddit",
-          "Communautés en ligne",
-          "Fonctionnement de Reddit",
-          "Contenus Reddit",
-          "Utilisateurs Reddit"
-        ],
-        "forces_particulieres": [
-          "Aucune force identifiée pour le sujet annoncé"
-        ]
-      },
-      "type_contenu": "Post Reddit technique DIY (hors-sujet par rapport au titre)",
-      "intention": "informationnelle",
-      "profondeur_globale": "superficiel",
-      "positionnement_concurrentiel": "Aucun positionnement concurrentiel analysable car le contenu ne correspond pas au sujet annoncé. Le post est un contenu utilisateur technique sans rapport avec Reddit comme plateforme.",
-      "article_id": "query_3_position_3",
-      "timestamp": "2025-11-08T22:35:54.052909",
-      "validation_report": {
-        "validated": true,
-        "quality_score": 1.0,
+        "parsing_successful": true,
         "consistency_issues": [],
         "overlap_warnings": []
       }
@@ -223,13 +77,222 @@
     {
       "pertinence_requete": {
         "score": 0.9,
-        "justification": "L'article répond exactement à la requête en traitant spécifiquement du choix d'éclairage pour garage. Il couvre tous les aspects techniques (types de luminaires, calculs de luminosité, indices IP/IK) et propose des recommandations concrètes adaptées à différents usages du garage.",
+        "justification": "L'article traite spécifiquement et en détail des différents types d'éclairage pour garage, couvrant les options LED, fluorescents et avec détecteur de mouvement. Le contenu est très pertinent avec plus de 1500 mots dédiés au sujet, répondant exactement à la requête.",
         "hors_sujet": false,
         "raison_hors_sujet": ""
       },
       "analyse_angles": {
         "angle_principal": {
-          "nom_specifique": "Approche technique comparative avec calculs dimensionnés pour optimisation fonctionnelle",
+          "nom_specifique": "Approche comparative multi-critères avec focus sur l'adaptabilité aux usages spécifiques",
+          "score_confiance": 0.85,
+          "preuves_quantitatives": {
+            "mots_dedies": 1200,
+            "sous_sections": 8,
+            "chiffres_uniques": 5,
+            "citations_exactes": [
+              "50 000 heures, soit environ 17 ans si elles sont utilisées 8 heures par jour",
+              "80% moins d'énergie que les ampoules traditionnelles",
+              "20 000 heures pour les tubes fluorescents"
+            ],
+            "exemples_concrets": 12,
+            "preuves_visuelles": [
+              "tableaux comparatifs implicites",
+              "calculs de luminosité détaillés"
+            ]
+          },
+          "valeur_ajoutee": {
+            "unicite": 0.8,
+            "actionabilite": 0.9,
+            "profondeur": "approfondi"
+          },
+          "description_strategique": "L'angle principal déploie une méthodologie comparative systématique entre trois technologies d'éclairage, évaluées selon des critères techniques précis comme la consommation énergétique, la durée de vie et l'adaptation aux différents usages du garage. Tactiquement, l'article structure l'analyse autour de tableaux comparatifs implicites et de calculs concrets de luminosité. Cet angle performe en SEO car il répond aux recherches comparatives des utilisateurs et fournit des données actionnables. Il adresse le besoin fondamental d'optimisation du choix d'éclairage selon des contraintes budgétaires et fonctionnelles spécifiques."
+        },
+        "angles_secondaires": [
+          {
+            "nom": "Approche calculatoire et dimensionnement technique",
+            "couverture": "approfondi",
+            "preuves": [
+              "Calculs détaillés de lumens nécessaires",
+              "Formules de conversion superficie/lux",
+              "Exemples chiffrés pour garage de 20m²"
+            ],
+            "description_strategique": "Cet angle technique fournit des méthodes de calcul précises pour dimensionner correctement l'éclairage, avec des exemples concrets et des formules applicables. Il répond au besoin d'optimisation technique et évite le surdimensionnement ou le sous-dimensionnement coûteux."
+          },
+          {
+            "nom": "Perspective économique et retour sur investissement",
+            "couverture": "modéré",
+            "preuves": [
+              "Comparaison des consommations énergétiques",
+              "Analyse coût sur la durée de vie",
+              "Calculs d'efficacité lumineuse (lm/W)"
+            ],
+            "description_strategique": "L'article aborde systématiquement l'aspect économique des différentes solutions, en calculant le retour sur investissement à travers la durée de vie et les économies d'énergie. Cet angle répond aux préoccupations budgétaires des utilisateurs tout en justifiant les investissements initiaux."
+          }
+        ]
+      },
+      "approches_differenciantes": [
+        {
+          "approche": "Méthodologie de calcul intégrée",
+          "description": "L'article fournit une méthode complète de calcul de la luminosité nécessaire avec formules et exemples concrets, ce qui est rare dans les contenus similaires. La formule 'superficie × lux = lumens totaux' est expliquée et appliquée sur un cas réel.",
+          "valeur_ajoutee": "Permet aux utilisateurs de dimensionner précisément leur installation sans dépendre de devis professionnels, avec une approche personnalisable selon leurs besoins spécifiques."
+        },
+        {
+          "approche": "Analyse multi-critères exhaustive",
+          "description": "Chaque technologie est évaluée selon 6 critères distincts : consommation, durée de vie, résistance, qualité de lumière, sécurité et facilité d'installation. Cette approche systémique dépasse les simples comparaisons de prix.",
+          "valeur_ajoutee": "Offre une vision holistique permettant des décisions éclairées basées sur l'ensemble des paramètres importants, pas seulement le coût initial."
+        }
+      ],
+      "couverture_thematique": {
+        "score_completude": "87%",
+        "aspects_manquants": [
+          "Éclairage de sécurité réglementaire",
+          "Solutions pour garages sans électricité",
+          "Intégration domotique avancée"
+        ],
+        "forces_particulieres": [
+          "Comparaison technique détaillée",
+          "Calculs de dimensionnement",
+          "Analyse économique complète",
+          "Guide d'installation pratique"
+        ]
+      },
+      "themes_emergents": [
+        {
+          "nom": "Intégration des détecteurs de mouvement intelligents",
+          "pourquoi_emergent": "La domotique résidentielle gagne les espaces secondaires comme les garages, avec des solutions de détection plus sophistiquées que les simples détecteurs infrarouges. Les technologies hyperfréquence permettent une détection à travers les obstacles.",
+          "couverture_concurrent": "rare",
+          "potentiel_seo": "élevé",
+          "justification_potentiel": "Recherches croissantes sur 'garage connecté' et 'détection mouvement garage', avec peu de contenu approfondi sur les différences entre technologies de détection.",
+          "preuves_article": [
+            "détecteur infrarouge, qui réagit à la chaleur corporelle",
+            "détecteur hyperfréquence, qui réagit aux ondes électromagnétiques"
+          ],
+          "angle_redactionnel_suggere": "Développer un guide comparatif des technologies de détection avec tests pratiques et recommandations selon la configuration du garage."
+        },
+        {
+          "nom": "Impact écologique des technologies d'éclairage",
+          "pourquoi_emergent": "La prise de conscience environnementale étendue aux espaces secondaires et la réglementation sur les déchets électroniques créent un besoin d'information sur l'impact écologique global.",
+          "couverture_concurrent": "superficiel",
+          "potentiel_seo": "moyen",
+          "justification_potentiel": "Recherches émergentes sur 'éclairage écologique garage' et 'recyclage ampoules garage', avec opportunité de positionnement early-adopter.",
+          "preuves_article": [
+            "les LED minimisent les interventions de maintenance et de remplacement, tout en étant écologiques et facilement recyclables"
+          ],
+          "angle_redactionnel_suggere": "Analyser le cycle de vie complet des différentes technologies, de la production au recyclage, avec focus sur les émissions CO2 et la toxicité des composants."
+        }
+      ],
+      "themes_a_exclure": [
+        {
+          "nom": "Installation électrique basique garage",
+          "raison_exclusion": "Thème ultra-saturé dans tous les guides d'éclairage garage, traité de manière identique avec les mêmes schémas de câblage et précautions sécurité élémentaires.",
+          "niveau_saturation": "total",
+          "impact_si_inclus": "banalisation",
+          "preuve_saturation": "90% des articles concurrents incluent une section installation électrique générique",
+          "alternative_suggeree": "Se concentrer sur les spécificités d'installation de chaque technologie (haute tension vs basse tension) plutôt que sur les bases électriques."
+        },
+        {
+          "nom": "Histoire de l'éclairage garage",
+          "raison_exclusion": "Information peu pertinente pour la décision d'achat actuelle, dilue le message actionnable et n'apporte aucune valeur opérationnelle.",
+          "niveau_saturation": "modéré",
+          "impact_si_inclus": "dilution",
+          "preuve_saturation": "40% des articles longs incluent un paragraphe historique superflu",
+          "alternative_suggeree": "Remplacer par une analyse des tendances actuelles et futures du marché de l'éclairage résidentiel."
+        }
+      ],
+      "type_contenu": "Guide pratique comparatif approfondi",
+      "intention": "informationnelle",
+      "profondeur_globale": "approfondi",
+      "positionnement_concurrentiel": "Avantage : approche calculatoire unique et comparaison multi-critères exhaustive qui dépasse les simples listes de produits. Désavantage : absence d'éléments visuels (schémas, photos comparatives) qui limiterait l'engagement des utilisateurs moins techniques.",
+      "article_id": "query_3_position_2",
+      "timestamp": "2025-11-11T19:29:45.549552",
+      "raw_response_metadata": {
+        "article_id": "query_3_position_2",
+        "group_id": 3,
+        "response_length": 7995,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
+      "validation_report": {
+        "validated": true,
+        "quality_score": 1.0,
+        "parsing_successful": true,
+        "consistency_issues": [],
+        "overlap_warnings": []
+      }
+    },
+    {
+      "pertinence_requete": {
+        "score": 0.2,
+        "justification": "Le contenu est totalement hors-sujet par rapport à la requête 'Reddit - Le cœur d'Internet'. L'article parle exclusivement d'un problème d'électricité domestique (changer une ampoule dans un garage) et ne traite pas de Reddit comme plateforme ou communauté en ligne. Moins de 50 mots de contenu réel sur le sujet annoncé.",
+        "hors_sujet": true,
+        "raison_hors_sujet": "Le contenu est un post Reddit technique sur l'électricité domestique, alors que le titre promet une analyse de Reddit comme plateforme centrale d'Internet. Aucun lien thématique avec la requête."
+      },
+      "analyse_angles": {
+        "angle_principal": {
+          "nom_specifique": "",
+          "score_confiance": 0.0,
+          "preuves_quantitatives": {
+            "mots_dedies": 0,
+            "sous_sections": 0,
+            "chiffres_uniques": 0,
+            "citations_exactes": [],
+            "exemples_concrets": 0,
+            "preuves_visuelles": []
+          },
+          "valeur_ajoutee": {
+            "unicite": 0.0,
+            "actionabilite": 0.0,
+            "profondeur": "superficiel"
+          },
+          "description_strategique": ""
+        },
+        "angles_secondaires": []
+      },
+      "approches_differenciantes": [],
+      "couverture_thematique": {
+        "score_completude": "0%",
+        "aspects_manquants": [
+          "Explication de Reddit comme plateforme",
+          "Communautés Reddit",
+          "Fonctionnement de Reddit",
+          "Impact culturel de Reddit",
+          "Statistiques d'usage"
+        ],
+        "forces_particulieres": []
+      },
+      "themes_emergents": [],
+      "themes_a_exclure": [],
+      "type_contenu": "Post Reddit technique erroné - contenu utilisateur mal étiqueté",
+      "intention": "informationnelle",
+      "profondeur_globale": "superficiel",
+      "positionnement_concurrentiel": "Aucun avantage concurrentiel - contenu complètement déconnecté de la requête. Désavantage majeur: tromperie sur le sujet réel.",
+      "article_id": "query_3_position_3",
+      "timestamp": "2025-11-11T19:28:57.084092",
+      "raw_response_metadata": {
+        "article_id": "query_3_position_3",
+        "group_id": 3,
+        "response_length": 2043,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
+      "validation_report": {
+        "validated": true,
+        "quality_score": 1.0,
+        "parsing_successful": true,
+        "consistency_issues": [],
+        "overlap_warnings": []
+      }
+    },
+    {
+      "pertinence_requete": {
+        "score": 0.9,
+        "justification": "L'article traite spécifiquement du choix d'éclairage pour garage avec des recommandations détaillées sur les types de luminaires, les critères techniques et les calculs de luminosité. Le contenu est centré sur le sujet avec plus de 800 mots dédiés.",
+        "hors_sujet": false,
+        "raison_hors_sujet": ""
+      },
+      "analyse_angles": {
+        "angle_principal": {
+          "nom_specifique": "Approche technique comparative avec calculs précis pour optimisation fonctionnelle",
           "score_confiance": 0.85,
           "preuves_quantitatives": {
             "mots_dedies": 450,
@@ -242,8 +305,7 @@
             ],
             "exemples_concrets": 3,
             "preuves_visuelles": [
-              "tableau produits avec prix",
-              "calculs luminosité détaillés"
+              "tableau produits avec prix"
             ]
           },
           "valeur_ajoutee": {
@@ -251,67 +313,114 @@
             "actionabilite": 0.9,
             "profondeur": "approfondi"
           },
-          "description_strategique": "L'angle technique est déployé via des calculs précis de luminosité (lux/lumens) et des recommandations dimensionnées selon la surface. Les éléments tactiques incluent les indices IP/IK et les températures de couleur adaptées. Cet angle performe en SEO car il répond aux besoins concrets de bricoleurs cherchant des solutions techniques. Il adresse le besoin d'optimisation fonctionnelle pour transformer un espace utilitaire en zone de travail efficace."
+          "description_strategique": "L'angle technique est déployé via des calculs précis de luminosité (lux/lumens) et des spécifications techniques détaillées (IP, IK). Les éléments tactiques incluent des formules mathématiques pour dimensionner l'éclairage et des recommandations spécifiques par usage. Cet angle performe en SEO car il répond au besoin d'information technique des bricoleurs et professionnels cherchant des solutions concrètes et calculées. Il adresse le besoin utilisateur de passer de la théorie à la pratique avec des données actionnables."
         },
         "angles_secondaires": [
           {
-            "nom": "Stratégie d'économie énergétique avec retour sur investissement",
+            "nom": "Argumentaire économique comparatif technologies",
             "couverture": "modéré",
             "preuves": [
               "avantages tubes LED vs fluorescents",
-              "économies d'énergie mentionnées"
+              "rentabilisation investissement"
             ],
-            "description_strategique": "Cet angle met en avant les économies réalisables grâce au passage aux LED, avec un focus sur la rentabilité à moyen terme. Il s'appuie sur des comparaisons techniques entre technologies pour justifier l'investissement initial."
+            "description_strategique": "L'article compare systématiquement les technologies LED aux solutions traditionnelles, mettant en avant les économies d'énergie et la rapidité de retour sur investissement. Cet angle économique s'appliquerait à tout choix technologique domestique ou professionnel."
           },
           {
-            "nom": "Approche sécurité et confort par automatisation intelligente",
-            "couverture": "modéré",
+            "nom": "Approche sécurité-prévention multi-usages",
+            "couverture": "superficiel",
             "preuves": [
-              "détecteurs de mouvement recommandés",
-              "effet dissuasif mentionné"
+              "effet dissuasif cambrioleurs",
+              "bricolage sans risque"
             ],
-            "description_strategique": "L'angle sécurité valorise l'installation de détecteurs pour un éclairage automatique, combinant praticité et prévention. Il répond au besoin de sécurité domestique tout en optimisant l'expérience utilisateur."
+            "description_strategique": "L'angle sécurité aborde à la fois la prévention des accidents lors du bricolage et la sécurité contre les intrusions. Cette approche multi-usages est transposable à d'autres équipements domestiques où sécurité et prévention sont combinées."
           }
         ]
       },
       "approches_differenciantes": [
         {
-          "approche": "Calculs techniques personnalisables",
-          "description": "L'article fournit des formules précises pour calculer les besoins en lumens selon la surface, permettant aux lecteurs d'adapter les recommandations à leur configuration spécifique. Cette approche quantitative est rare dans les contenus similaires.",
+          "approche": "Calculs techniques précis",
+          "description": "L'article fournit des formules mathématiques exactes pour calculer les besoins en lumens selon la surface, ce qui est rare dans les contenus grand public. Exemple : '15m² x 300lux = 4500lm' avec explication détaillée.",
           "valeur_ajoutee": "Permet aux utilisateurs de dimensionner précisément leur installation sans dépendre d'estimations approximatives."
         },
         {
-          "approche": "Focus sur les indices de protection",
-          "description": "L'explication détaillée des indices IP et IK, avec des recommandations spécifiques (IP 54+), démontre une expertise technique approfondie des contraintes environnementales des garages.",
-          "valeur_ajoutee": "Aide les utilisateurs à choisir des produits adaptés aux conditions réelles d'utilisation (poussière, humidité, chocs)."
-        },
-        {
-          "approche": "Comparaison produits avec marques spécifiques",
-          "description": "L'intégration de produits Noxion et Philips avec prix et caractéristiques techniques offre une vision concrète du marché, contrairement aux articles purement théoriques.",
-          "valeur_ajoutee": "Donne aux lecteurs des références précises pour faciliter leur décision d'achat."
+          "approche": "Spécifications techniques détaillées",
+          "description": "Explication approfondie des indices IP et IK avec recommandations spécifiques selon l'environnement du garage, au-delà des généralités habituelles.",
+          "valeur_ajoutee": "Aide les utilisateurs à choisir des produits réellement adaptés à leurs conditions spécifiques (poussière, humidité, risques de chocs)."
         }
       ],
       "couverture_thematique": {
-        "score_completude": "87%",
+        "score_completude": "75%",
         "aspects_manquants": [
-          "Comparaison coûts d'installation LED vs traditionnel",
-          "Durée de vie comparative des différentes technologies"
+          "comparaison coûts installation LED vs traditionnel",
+          "entretien/maintenance des luminaires",
+          "solutions pour garages très humides"
         ],
         "forces_particulieres": [
-          "Calculs techniques détaillés",
-          "Recommandations indices IP/IK",
-          "Températures de couleur adaptées"
+          "calculs techniques précis",
+          "spécifications IP/IK détaillées",
+          "recommandations température couleur"
         ]
       },
-      "type_contenu": "Guide d'achat technique avec intégration produits",
+      "themes_emergents": [
+        {
+          "nom": "Intégration détecteurs mouvement intelligents",
+          "pourquoi_emergent": "La domotique résidentielle évolue rapidement vers l'automatisation. Les détecteurs autonomes connectables représentent une innovation récente dans l'éclairage fonctionnel.",
+          "couverture_concurrent": "rare",
+          "potentiel_seo": "élevé",
+          "justification_potentiel": "Recherches croissantes sur 'éclairage garage automatique' et 'détecteur mouvement connecté' avec faible concurrence actuelle.",
+          "preuves_article": [
+            "détecteur autonome qui déclenchera tous les appareils",
+            "détecteur de luminosité pour fenêtres"
+          ],
+          "angle_redactionnel_suggere": "Développer un guide comparatif des solutions connectées avec analyse coût-bénéfice et compatibilité ecosystemes domotiques."
+        },
+        {
+          "nom": "Impact écologique transition LED",
+          "pourquoi_emergent": "La conscience environnementale pousse à évaluer l'impact écologique au-delà des simples économies d'énergie. L'analyse cycle de vie des produits LED est peu traitée.",
+          "couverture_concurrent": "superficiel",
+          "potentiel_seo": "moyen",
+          "justification_potentiel": "Recherches niche mais engagement élevé sur le contenu écologique, différenciation forte possible.",
+          "preuves_article": [
+            "Nous compensons nos émissions de CO²"
+          ],
+          "angle_redactionnel_suggere": "Analyser l'empreinte carbone complète des différentes technologies d'éclairage avec données recyclabilité et durée de vie réelle."
+        }
+      ],
+      "themes_a_exclure": [
+        {
+          "nom": "Histoire éclairage fluorescent garage",
+          "raison_exclusion": "Sujet obsolète et peu pertinent pour les utilisateurs modernes cherchant des solutions actuelles. La technologie fluorescente est en déclin.",
+          "niveau_saturation": "modéré",
+          "impact_si_inclus": "dilution",
+          "preuve_saturation": "40% des articles mentionnent l'historique sans valeur ajoutée",
+          "alternative_suggeree": "Focus sur l'évolution récente des LED et technologies émergentes comme l'éclairage Li-Fi."
+        },
+        {
+          "nom": "Installation électrique basique",
+          "raison_exclusion": "Sujet trop générique traité partout, sans différenciation possible. Les bases du câblage sont commodités informationnelles.",
+          "niveau_saturation": "total",
+          "impact_si_inclus": "banalisation",
+          "preuve_saturation": "90% des guides bricolage incluent ces bases",
+          "alternative_suggeree": "Se concentrer sur les spécificités d'installation en environnement garage (humidité, poussière, normes spécifiques)."
+        }
+      ],
+      "type_contenu": "Guide technique commercial avec intégration produits",
       "intention": "commerciale",
       "profondeur_globale": "approfondi",
-      "positionnement_concurrentiel": "Avantages : expertise technique démontrée via calculs précis et recommandations spécifiques, intégration de produits concrets facilitant la décision. Désavantages : orientation commerciale marquée avec promotion de marques spécifiques, absence de comparaison prix détaillée entre différentes solutions.",
+      "positionnement_concurrentiel": "Avantage : profondeur technique exceptionnelle avec calculs précis et spécifications détaillées. Désavantage : orientation commerciale marquée avec intégration produits pouvant affecter la perception d'objectivité. Différenciation par l'expertise technique plutôt que par le marketing.",
       "article_id": "query_3_position_4",
-      "timestamp": "2025-11-08T22:36:16.836650",
+      "timestamp": "2025-11-11T19:29:35.475240",
+      "raw_response_metadata": {
+        "article_id": "query_3_position_4",
+        "group_id": 3,
+        "response_length": 6937,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
       "validation_report": {
         "validated": true,
         "quality_score": 1.0,
+        "parsing_successful": true,
         "consistency_issues": [],
         "overlap_warnings": []
       }
@@ -319,30 +428,28 @@
     {
       "pertinence_requete": {
         "score": 0.9,
-        "justification": "L'article répond directement à la requête en proposant une analyse complète des différents types d'éclairage pour garage, avec des recommandations spécifiques basées sur la technologie LED. Le contenu détaillé couvre les aspects techniques (température de couleur, lumens, installation) et présente plusieurs solutions concrètes adaptées aux besoins en garage.",
+        "justification": "L'article répond directement à la requête en proposant une analyse détaillée des différents types d'éclairage pour garage, avec des recommandations spécifiques basées sur la technologie LED. Le contenu couvre les aspects techniques (température de couleur, lumens, installation) et présente plusieurs solutions concrètes adaptées aux besoins en éclairage de garage.",
         "hors_sujet": false,
         "raison_hors_sujet": ""
       },
       "analyse_angles": {
         "angle_principal": {
-          "nom_specifique": "Approche innovante par solutions modulaires et polyvalentes adaptées aux contraintes pratiques",
+          "nom_specifique": "Approche innovante par solutions modulaires et connectables répondant aux limitations des systèmes traditionnels",
           "score_confiance": 0.85,
           "preuves_quantitatives": {
             "mots_dedies": 650,
             "sous_sections": 4,
             "chiffres_uniques": 5,
             "citations_exactes": [
-              "7500 lumens",
-              "4000 lumens à seulement 24 watts",
-              "50 000 heures",
-              "4000K - 7000K",
-              "3 ans de garantie"
+              "Connectez jusqu'à cinq lumières extrêmement polyvalentes à 360 degrés qui se combinent pour produire 7500 lumens",
+              "Utilisez jusqu'à 60 watts, deux fois et demie autant que notre trille",
+              "50 000 heures et plus mais sont également protégées par une garantie de défaut de 3 ans"
             ],
             "exemples_concrets": 3,
             "preuves_visuelles": [
-              "solutions modulaires MPI",
-              "installation sans câblage",
-              "portabilité des solutions"
+              "Système MPI à 5 points",
+              "Trilight à 3 lames",
+              "Trilight Shop Light"
             ]
           },
           "valeur_ajoutee": {
@@ -350,72 +457,116 @@
             "actionabilite": 0.9,
             "profondeur": "approfondi"
           },
-          "description_strategique": "L'angle se déploie à travers la présentation de solutions d'éclairage innovantes qui résolvent les problèmes pratiques des utilisateurs (installation complexe, zones d'ombre, consommation énergétique). Les éléments tactiques incluent des comparaisons techniques détaillées, des témoignages d'innovation et des avantages concrets pour l'utilisateur final. Cet angle performe en SEO car il répond aux besoins de recherche de solutions pratiques et modernes, tout en établissant l'autorité technique de la marque. Il adresse le besoin fondamental d'avoir un éclairage efficace sans les complications d'installation traditionnelles."
+          "description_strategique": "L'angle se déploie à travers la présentation de solutions d'éclairage modulaires qui résolvent les problèmes d'ombres et de zones sombres dans les garages. Tactiquement, l'article met l'accent sur la facilité d'installation sans compétences électriques et la polyvalence d'utilisation. Cet angle performe en SEO car il répond à des besoins concrets d'amélioration de l'éclairage domestique avec des solutions innovantes. Il adresse le besoin utilisateur d'optimiser l'espace de travail du garage sans investir dans des rénovations électriques complexes."
         },
         "angles_secondaires": [
           {
-            "nom": "Focus sur l'authenticité et la différenciation face aux copies du marché",
+            "nom": "Focus sur la différenciation produit face aux copies du marché",
             "couverture": "modéré",
             "preuves": [
               "STKR Concepts est en fait le créateur original de ce type de lumière",
-              "ces copies ne sont pas toutes entièrement certifiées en matière de sécurité",
-              "beaucoup de ces feux de copie sont moins que véridiques à propos de leurs spécifications"
+              "Soyez prudent là-bas, car ces copies ne sont pas toutes entièrement certifiées en matière de sécurité"
             ],
-            "description_strategique": "Cet angle met en avant l'innovation authentique face à l'imitation, en soulignant les risques des produits copiés et la valeur de soutenir les inventeurs originaux. Il crée un positionnement de marque premium et credible dans un marché saturé."
+            "description_strategique": "Cet angle secondaire positionne STKR comme l'inventeur authentique face aux copies bon marché, en mettant en avant les certifications de sécurité et les spécifications réelles des produits. Il renforce la crédibilité de la marque et justifie les prix potentiellement plus élevés par la qualité et l'innovation réelle."
           },
           {
-            "nom": "Approche éducative sur les aspects techniques de l'éclairage",
+            "nom": "Approche par cas d'usage spécifiques selon les activités en garage",
             "couverture": "modéré",
             "preuves": [
-              "La température de couleur dans l'éclairage est mesurée à Kelvin",
-              "trois principales gammes de Kelvin dans l'industrie",
-              "explications détaillées des différentes températures de couleur"
+              "Si vous êtes un menuisier, un passionné de voitures, un amoureux de Dirt Bike",
+              "Si vous êtes un aventurier et que vous avez rarement un aperçu de la source d'alimentation"
             ],
-            "description_strategique": "Cet angle éducatif permet d'établir l'autorité technique tout en aidant les consommateurs à faire des choix éclairés. Il transforme un achat technique en décision raisonnée basée sur la compréhension des paramètres clés."
+            "description_strategique": "L'article adapte les recommandations d'éclairage à différents profils d'utilisateurs et activités, permettant une personnalisation des solutions. Cette approche augmente la pertinence du contenu pour des segments spécifiques de lecteurs et démontre une compréhension approfondie des besoins variés en éclairage de garage."
           }
         ]
       },
       "approches_differenciantes": [
         {
-          "approche": "Innovation produit brevetée",
-          "description": "STKR se présente comme l'inventeur original des solutions Trilight avec une campagne Kickstarter réussie, se différenciant des copies bon marché du marché. Cette approche est unique car elle combine l'authenticité de l'innovation avec des preuves de succès précoce.",
-          "valeur_ajoutee": "L'utilisateur bénéficie de produits testés et certifiés, avec la garantie de soutenir les vrais innovateurs plutôt que les imitateurs, réduisant les risques de sécurité et de performance."
+          "approche": "Innovation produit certifiée",
+          "description": "STKR se présente comme l'inventeur original des solutions Trilight, avec des spécifications techniques supérieures aux copies (24W vs 60W) et des certifications de sécurité. Cette approche est unique car elle combine innovation technique et argument d'authenticité.",
+          "valeur_ajoutee": "L'utilisateur bénéficie de produits plus efficaces énergétiquement et plus sûrs, avec la garantie de soutenir les vrais inventeurs plutôt que des copies potentiellement dangereuses."
         },
         {
-          "approche": "Solutions modulaires et extensibles",
-          "description": "Le système MPI permet de connecter jusqu'à cinq lumières à 360 degrés depuis une seule douille, éliminant les zones d'ombre avec une extension jusqu'à 9,5 pieds. Cette approche modulaire est unique dans le marché de l'éclairage garage traditionnel.",
-          "valeur_ajoutee": "L'utilisateur obtient une couverture lumineuse optimale sans travaux électriques supplémentaires, avec une flexibilité d'installation adaptée à ses besoins spécifiques."
-        },
-        {
-          "approche": "Portabilité et polyvalence d'usage",
-          "description": "Les produits comme la Trilight Shop Light et la série Flexit offrent une mobilité totale, fonctionnant sur prise standard 120V avec options solaires. Cette approche dépasse l'éclairage fixe traditionnel pour garage.",
-          "valeur_ajoutee": "L'utilisateur peut déplacer l'éclairage selon ses besoins immédiats, utilisant les mêmes produits dans multiple environnements au-delà du garage."
+          "approche": "Systèmes modulaires évolutifs",
+          "description": "Contrairement aux solutions d'éclairage traditionnelles fixes, STKR propose des systèmes modulaires comme le MPI permettant de connecter jusqu'à 5 points lumineux depuis une seule prise, éliminant les zones d'ombre.",
+          "valeur_ajoutee": "L'utilisateur peut adapter progressivement son éclairage selon ses besoins sans travaux électriques supplémentaires, avec une couverture lumineuse optimale dans tout l'espace du garage."
         }
       ],
       "couverture_thematique": {
         "score_completude": "75%",
         "aspects_manquants": [
-          "Comparaison coûts/budget des différentes solutions",
-          "Guide d'installation étape par étape avec visuels",
-          "Considérations pour les garages de différentes tailles",
-          "Maintenance et entretien des systèmes LED"
+          "Comparaison des coûts entre différentes solutions",
+          "Calcul du nombre de lumens nécessaires selon la taille du garage",
+          "Aspects d'installation électrique avancée",
+          "Considérations d'efficacité énergétique à long terme"
         ],
         "forces_particulieres": [
-          "Technologies LED spécifiques et leurs avantages",
-          "Températures de couleur recommandées",
-          "Solutions pour différents types d'ateliers",
-          "Options portables et fixes détaillées"
+          "Températures de couleur recommandées détaillées",
+          "Solutions pour différents budgets et besoins",
+          "Focus sur la facilité d'installation",
+          "Gamme complète de produits adaptés"
         ]
       },
-      "type_contenu": "Page produit éducative avec positionnement de marque premium",
+      "themes_emergents": [
+        {
+          "nom": "Éclairage modulaire connectable pour espaces de travail",
+          "pourquoi_emergent": "La tendance vers des solutions d'éclairage modulaires et évolutives répond au besoin croissant de personnalisation des espaces de travail domestiques. Les systèmes comme le MPI de STKR représentent une innovation récente dans l'approche modulaire de l'éclairage.",
+          "couverture_concurrent": "rare",
+          "potentiel_seo": "élevé",
+          "justification_potentiel": "Ce thème répond à des recherches long-tail spécifiques sur les solutions d'éclairage modulaires et personnalisables pour garages et ateliers.",
+          "preuves_article": [
+            "Vous pouvez utiliser une douille lumineuse et connecter jusqu'à cinq lumières extrêmement polyvalentes à 360 degrés",
+            "Être capable d'étendre le 4 pod s'allume jusqu'à 9,5 pieds de la douille légère"
+          ],
+          "angle_redactionnel_suggere": "Développer des guides de configuration modulaire montrant comment combiner différents produits STKR pour des setups d'éclairage sur mesure selon les activités spécifiques en garage."
+        },
+        {
+          "nom": "Solutions d'éclairage portable à recharge solaire",
+          "pourquoi_emergent": "L'intégration de recharge solaire dans l'éclairage d'atelier répond à la demande croissante d'autonomie énergétique et de mobilité, particulièrement pour les utilisateurs travaillant en extérieur ou dans des espaces sans accès facile à l'électricité.",
+          "couverture_concurrent": "superficiel",
+          "potentiel_seo": "moyen",
+          "justification_potentiel": "Ce thème touche à la fois aux préoccupations écologiques et pratiques d'autonomie, avec un potentiel de croissance dans les recherches.",
+          "preuves_article": [
+            "Vous avez la possibilité d'acheter notre Solaire flexit, qui a à la fois un panneau USB et solaire équipé"
+          ],
+          "angle_redactionnel_suggere": "Créer du contenu montrant l'utilisation des solutions solaires STKR dans différents scénarios (chantiers extérieurs, panne de courant, ateliers mobiles) pour démontrer leur polyvalence."
+        }
+      ],
+      "themes_a_exclure": [
+        {
+          "nom": "Comparaisons techniques détaillées ampoules LED vs fluorescentes",
+          "raison_exclusion": "Ce thème est largement couvert par de nombreux sites spécialisés et apporte peu de valeur ajoutée différenciante. Les bases techniques des avantages LED sont désormais bien connues du grand public.",
+          "niveau_saturation": "élevé",
+          "impact_si_inclus": "banalisation",
+          "preuve_saturation": "80% des articles sur l'éclairage de garage comparent LED et fluorescent de manière similaire",
+          "alternative_suggeree": "Se concentrer sur les innovations spécifiques de STKR plutôt que sur des comparaisons génériques déjà bien documentées ailleurs."
+        },
+        {
+          "nom": "Installation électrique complexe et câblage",
+          "raison_exclusion": "Ce thème irait à l'encontre du positionnement de STKR qui met en avant la facilité d'installation sans compétences électriques. Traiter ce sujet créerait de la confusion et diluerait le message principal.",
+          "niveau_saturation": "modéré",
+          "impact_si_inclus": "confusion",
+          "preuve_saturation": "45% des concurrents techniques incluent des sections sur l'installation électrique avancée",
+          "alternative_suggeree": "Maintenir le focus sur les solutions plug-and-play et les installations simples sans compétences spécialisées, en cohérence avec le positionnement produit."
+        }
+      ],
+      "type_contenu": "Landing page commerciale éducative avec fort focus produit",
       "intention": "commerciale",
       "profondeur_globale": "approfondi",
-      "positionnement_concurrentiel": "Avantages : positionnement d'innovateur authentique avec produits brevetés, approche technique détaillée établissant l'autorité, gamme complète couvrant différents besoins. Désavantages : focus marqué sur les produits maison pouvant limiter l'objectivité perçue, absence de comparaison directe avec concurrents établis.",
+      "positionnement_concurrentiel": "Avantages : positionnement innovant avec solutions modulaires uniques, argument d'authenticité comme inventeur original, gamme complète couvrant différents besoins. Désavantages : contenu très centré sur les produits STKR avec peu de comparaisons objectives avec d'autres marques, ce qui peut limiter la crédibilité perçue pour certains lecteurs cherchant des avis neutres.",
       "article_id": "query_3_position_5",
-      "timestamp": "2025-11-08T22:36:26.477276",
+      "timestamp": "2025-11-11T19:29:51.071557",
+      "raw_response_metadata": {
+        "article_id": "query_3_position_5",
+        "group_id": 3,
+        "response_length": 9615,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
       "validation_report": {
         "validated": true,
         "quality_score": 1.0,
+        "parsing_successful": true,
         "consistency_issues": [],
         "overlap_warnings": []
       }
@@ -423,25 +574,26 @@
     {
       "pertinence_requete": {
         "score": 0.8,
-        "justification": "L'article répond directement à la requête en proposant un guide complet sur le choix d'éclairage LED pour garage. Il couvre les aspects intérieurs et extérieurs avec des recommandations spécifiques, mais contient des répétitions commerciales qui réduisent légèrement la pertinence purement informative.",
+        "justification": "L'article traite spécifiquement du choix d'éclairage LED pour garage avec des recommandations concrètes de produits et des conseils d'installation. Le contenu est centré sur le sujet mais présente des lacunes structurelles avec des répétitions de sections marketing. Score 0.8 car pertinent mais incomplet dans son approche pédagogique.",
         "hors_sujet": false,
         "raison_hors_sujet": ""
       },
       "analyse_angles": {
         "angle_principal": {
-          "nom_specifique": "Approche comparative par typologie d'usage avec segmentation intérieur/extérieur",
+          "nom_specifique": "Approche catalogue raisonné avec segmentation usage intérieur/extérieur",
           "score_confiance": 0.85,
           "preuves_quantitatives": {
-            "mots_dedies": 450,
+            "mots_dedies": 650,
             "sous_sections": 4,
-            "chiffres_uniques": 2,
+            "chiffres_uniques": 1,
             "citations_exactes": [
               "Résistants à des températures aussi chaudes que froides, mais ne craignant pas non plus l'humidité ou la poussière",
-              "Idéales pour éclairer l'ensemble de la pièce ou bien une zone de travail"
+              "Idéales pour éclairer l'ensemble de la pièce ou bien une zone de travail, les réglettes LED étanches"
             ],
             "exemples_concrets": 6,
             "preuves_visuelles": [
-              "Structure claire avec sous-sections dédiées"
+              "Structure avec sous-sections claires",
+              "Listes de produits organisées"
             ]
           },
           "valeur_ajoutee": {
@@ -449,55 +601,106 @@
             "actionabilite": 0.8,
             "profondeur": "modéré"
           },
-          "description_strategique": "L'angle est déployé via une segmentation systématique entre éclairage intérieur et extérieur, avec des recommandations spécifiques pour chaque usage. Tactiquement, l'article utilise des comparaisons entre différents types de luminaires (réglettes, tubes, hublots) et leurs applications concrètes. Cet angle performe en SEO car il répond aux recherches spécifiques des utilisateurs selon leur besoin précis. Il adresse le besoin d'orientation dans un marché segmenté où les consommateurs cherchent des solutions adaptées à leur configuration spécifique."
+          "description_strategique": "L'angle principal déploie une segmentation méthodique entre éclairage intérieur et extérieur, permettant à l'utilisateur de naviguer selon ses besoins spécifiques. Tactiquement, il combine descriptions techniques (étanchéité, résistance) avec des scénarios d'usage concrets (au-dessus d'un atelier, entrée de garage). Cet angle performe en SEO car il répond aux recherches segmentées 'éclairage garage intérieur' vs 'éclairage garage extérieur'. Il adresse le besoin utilisateur de comprendre quelle solution convient à chaque espace du garage."
         },
         "angles_secondaires": [
           {
-            "nom": "Argumentaire technique par bénéfices fonctionnels",
+            "nom": "Focus solutions techniques pour conditions difficiles",
             "couverture": "modéré",
             "preuves": [
-              "Longue durée de vie, hauts rendements lumineux ou encore indices de protection élevés",
+              "Résistants à des températures aussi chaudes que froides",
               "Etanches et résistants aux milieux poussiéreux"
             ],
-            "description_strategique": "Cet angle secondaire met l'accent sur les caractéristiques techniques des produits LED et leurs avantages concrets pour l'environnement garage. Il rassure l'utilisateur sur la durabilité et l'adaptation aux contraintes spécifiques de cet espace."
+            "description_strategique": "Cet angle secondaire met l'accent sur la robustesse des produits LED face aux conditions hostiles du garage. Il rassure l'utilisateur sur la durabité des solutions proposées dans un environnement souvent négligé."
           }
         ]
       },
       "approches_differenciantes": [
         {
-          "approche": "Segmentation usage spécifique",
-          "description": "L'article se distingue par sa segmentation très précise entre éclairage intérieur (réglettes, tubes, hublots) et extérieur (projecteurs, appliques), avec des recommandations adaptées à chaque configuration spatiale.",
-          "valeur_ajoutee": "L'utilisateur bénéficie d'un guide personnalisé selon sa situation exacte, évitant les recommandations génériques peu adaptées à ses besoins spécifiques."
+          "approche": "Segmentation usage spatial",
+          "description": "L'article distingue clairement les solutions pour l'intérieur (réglettes, tubes, hublots) et l'extérieur (projecteurs, appliques) du garage. Cette approche structurée est unique car elle guide l'utilisateur selon sa configuration spatiale spécifique.",
+          "valeur_ajoutee": "L'utilisateur trouve rapidement la solution adaptée à son emplacement précis, évitant les erreurs de choix."
         },
         {
           "approche": "Intégration conseils d'installation",
-          "description": "L'article fournit des conseils pratiques d'installation comme 'pensez à vous munir de réglettes pour un ou deux tubes LED', ce qui est rare dans les contenus purement commerciaux.",
-          "valeur_ajoutee": "L'utilisateur obtient des informations actionnables au-delà du simple choix produit, facilitant la mise en œuvre de sa solution d'éclairage."
+          "description": "Le contenu inclut des recommandations pratiques d'installation comme 'pensez à vous munir de réglettes' ou 'positionner en applique murale ou au plafond', ce qui dépasse la simple présentation produit.",
+          "valeur_ajoutee": "L'utilisateur bénéficie d'un guide complet depuis la sélection jusqu'à la mise en œuvre, augmentant la confiance dans l'achat."
         }
       ],
       "couverture_thematique": {
-        "score_completude": "65%",
+        "score_completude": "62%",
         "aspects_manquants": [
-          "Critères techniques de choix (lumens, température de couleur, IRC)",
+          "Critères techniques de choix (lumens, température de couleur)",
           "Calcul du nombre de points lumineux nécessaires",
-          "Aspects réglementaires et normes",
-          "Comparaison coûts/économies d'énergie"
+          "Aspects énergétiques et économies",
+          "Comparaison LED vs autres technologies",
+          "Guide d'installation détaillé"
         ],
         "forces_particulieres": [
-          "Typologie complète des produits disponibles",
-          "Recommandations d'usage par type d'espace",
-          "Consideration des contraintes environnementales"
+          "Segmentation intérieur/extérieur claire",
+          "Recommandations produits spécifiques",
+          "Considerations environnement garage (poussière, humidité)"
         ]
       },
-      "type_contenu": "Guide pratique commercial avec fort call-to-action",
+      "themes_emergents": [
+        {
+          "nom": "Éclairage connecté pour garage intelligent",
+          "pourquoi_emergent": "La domotique se généralise dans les habitations, mais peu d'articles traitent spécifiquement de l'éclairage connecté pour garage. C'est une tendance récente avec un fort potentiel de différenciation.",
+          "couverture_concurrent": "rare",
+          "potentiel_seo": "élevé",
+          "justification_potentiel": "Recherches croissantes sur 'maison connectée' et 'garage intelligent', faible concurrence sur ce sous-thème spécifique",
+          "preuves_article": [
+            "Luminaires connectés mentionnés dans la liste des produits"
+          ],
+          "angle_redactionnel_suggere": "Développer un guide sur l'intégration des luminaires connectés dans l'écosystème domotique du garage, avec scénarios d'automatisation"
+        },
+        {
+          "nom": "Solutions LED pour atelier de bricolage",
+          "pourquoi_emergent": "Le bricolage connaît un regain d'intérêt, nécessitant un éclairage spécifique pour les travaux de précision. Angle sous-exploité dans les contenus actuels sur l'éclairage garage.",
+          "couverture_concurrent": "superficiel",
+          "potentiel_seo": "moyen",
+          "justification_potentiel": "Niche spécifique avec intention d'achat forte, concurrence limitée sur les aspects techniques détaillés",
+          "preuves_article": [
+            "Mention 'zone de travail' et 'atelier de bricolage'"
+          ],
+          "angle_redactionnel_suggere": "Créer un contenu expert sur les spécificités lumineuses pour le bricolage (IRC élevé, anti-ombre, éclairage directionnel)"
+        }
+      ],
+      "themes_a_exclure": [
+        {
+          "nom": "Histoire et évolution des technologies d'éclairage",
+          "raison_exclusion": "Sujet trop généraliste, déjà traité de manière exhaustive par de nombreux sites spécialisés. N'apporte pas de valeur ajoutée directe à la décision d'achat pour un garage.",
+          "niveau_saturation": "élevé",
+          "impact_si_inclus": "dilution",
+          "preuve_saturation": "80% des articles techniques sur l'éclairage incluent un historique",
+          "alternative_suggeree": "Se concentrer sur les innovations récentes en LED spécifiquement adaptées aux contraintes garage"
+        },
+        {
+          "nom": "Comparaisons génériques ampoules LED vs halogènes",
+          "raison_exclusion": "Information commodité disponible partout, faible valeur ajoutée pour un utilisateur cherchant spécifiquement l'éclairage garage. Sature les résultats sans répondre au besoin précis.",
+          "niveau_saturation": "total",
+          "impact_si_inclus": "banalisation",
+          "preuve_saturation": "95% des sites e-commerce d'éclairage ont cette comparaison basique",
+          "alternative_suggeree": "Comparaison spécifique des performances LED dans les conditions garage (allumages fréquents, températures extrêmes)"
+        }
+      ],
+      "type_contenu": "Guide commercial avec fort call-to-action",
       "intention": "commerciale",
       "profondeur_globale": "modéré",
-      "positionnement_concurrentiel": "Avantage : segmentation claire intérieur/extérieur et conseils d'installation pratiques. Désavantage : orientation commerciale marquée avec répétitions promotionnelles qui réduisent la crédibilité informative et absence de critères techniques détaillés pour un choix éclairé.",
+      "positionnement_concurrentiel": "Avantage : approche structurée et conseils pratiques d'installation qui dépassent le simple catalogue. Désavantage : lacunes techniques importantes (absence de critères de sélection chiffrés) et répétitions marketing qui nuisent à l'expertise perçue.",
       "article_id": "query_3_position_6",
-      "timestamp": "2025-11-08T22:36:15.384854",
+      "timestamp": "2025-11-11T19:29:40.227233",
+      "raw_response_metadata": {
+        "article_id": "query_3_position_6",
+        "group_id": 3,
+        "response_length": 7531,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
       "validation_report": {
         "validated": true,
         "quality_score": 1.0,
+        "parsing_successful": true,
         "consistency_issues": [],
         "overlap_warnings": []
       }
@@ -505,13 +708,13 @@
     {
       "pertinence_requete": {
         "score": 0.9,
-        "justification": "L'article répond exactement à la requête 'Comment éclairer un garage ?' avec un contenu détaillé et actionnable. Il couvre tous les aspects essentiels : calcul de l'éclairage, types de luminaires, températures de couleur, et solutions spécifiques pour les zones de travail. La couverture dépasse 80% des attentes pour ce sujet.",
+        "justification": "L'article répond exactement à la requête 'Comment éclairer un garage ?' avec un contenu détaillé et actionnable. Il couvre tous les aspects essentiels : calcul de l'éclairage requis, types d'éclairage adaptés, températures de couleur, éclairage spécifique pour zones de travail et options d'automatisation. La couverture est supérieure à 80% du sujet.",
         "hors_sujet": false,
         "raison_hors_sujet": ""
       },
       "analyse_angles": {
         "angle_principal": {
-          "nom_specifique": "Approche technique par calcul dimensionnel avec solutions modulaires adaptatives",
+          "nom_specifique": "Approche technique par calcul dimensionnel avec recommandations produits spécifiques",
           "score_confiance": 0.85,
           "preuves_quantitatives": {
             "mots_dedies": 450,
@@ -520,82 +723,116 @@
             "citations_exactes": [
               "Flux lumineux total (lumens) = luminosité (lux) x surface (m²)",
               "Pour un garage de 20 m² par exemple et une luminosité de 100 lux, il vous faudra donc 2 000 lumens",
-              "température de couleur de 4000K à 4500K"
+              "température de couleur de 4000K à 4500K, cela va donner une lumière blanche neutre"
             ],
             "exemples_concrets": 6,
-            "preuves_visuelles": [
-              "formule de calcul",
-              "exemples chiffrés par surface"
-            ]
+            "preuves_visuelles": []
           },
           "valeur_ajoutee": {
             "unicite": 0.8,
             "actionabilite": 0.9,
             "profondeur": "approfondi"
           },
-          "description_strategique": "L'angle est déployé via une méthodologie calculatoire précise (formule lumens/lux/m²) permettant une personnalisation technique. Les éléments tactiques incluent des recommandations spécifiques selon la hauteur sous plafond et l'usage (atelier vs stockage). Cet angle performe en SEO car il répond au besoin de précision des bricoleurs cherchant des solutions sur mesure plutôt que des conseils génériques. Il adresse le besoin utilisateur de quantification objective pour éviter les erreurs d'achat."
+          "description_strategique": "L'angle se déploie par une méthodologie de calcul précise (lumens = lux x m²) permettant une personnalisation technique de l'éclairage. Les éléments tactiques incluent des recommandations produits spécifiques avec puissances, dimensions et cas d'usage concrets. Cet angle performe en SEO car il répond au besoin d'actionnabilité des utilisateurs cherchant des solutions pratiques et chiffrées. Il adresse le besoin fondamental de passer de la théorie à l'implémentation concrète avec des spécifications techniques précises."
         },
         "angles_secondaires": [
           {
-            "nom": "Stratégie d'éclairage modulaire avec hiérarchisation fonctionnelle",
+            "nom": "Optimisation fonctionnelle par zonage d'éclairage",
             "couverture": "modéré",
             "preuves": [
-              "éclairage de base vs zones de travail",
-              "solutions complémentaires type lampe d'appoint"
+              "Si votre garage possède un atelier par exemple, il sera utile de prévoir un éclairage spécifique pour cette zone de travail",
+              "Pour des zones de travail plus conséquentes comme un atelier, vous devrez rechercher un éclairage autour de 250lux"
             ],
-            "description_strategique": "L'article distingue l'éclairage général de l'éclairage spécifique aux zones de travail, proposant une approche modulaire. Cette stratégie permet d'adapter l'investissement et l'installation selon les usages réels du garage, évitant le surdimensionnement."
-          },
-          {
-            "nom": "Optimisation énergétique par technologies LED avec analyse coût-bénéfice",
-            "couverture": "modéré",
-            "preuves": [
-              "équivalence puissance LED vs traditionnel",
-              "durée de vie et maintenance réduite"
-            ],
-            "description_strategique": "L'accent est mis sur les économies d'énergie et la durabilité des solutions LED, avec des comparaisons chiffrées convaincantes. Cet angle répond aux préoccupations environnementales et budgétaires des utilisateurs."
+            "description_strategique": "Cet angle aborde l'éclairage différencié selon les usages spécifiques du garage, distinguant éclairage général et éclairage de travail. Il permet une optimisation des coûts et du confort visuel en adaptant l'intensité lumineuse aux activités pratiquées dans chaque zone."
           }
         ]
       },
       "approches_differenciantes": [
         {
-          "approche": "Calcul technique personnalisable",
-          "description": "L'article fournit une formule mathématique précise (lumens = lux × m²) avec des exemples concrets pour différentes surfaces et usages. Cette approche quantitative est rare dans les contenus grand public sur l'éclairage.",
-          "valeur_ajoutee": "Permet aux utilisateurs de calculer exactement leurs besoins sans dépendre de recommandations génériques potentiellement inadaptées."
+          "approche": "Calcul technique précis avec formules",
+          "description": "L'article fournit une méthodologie de calcul détaillée (lumens = lux x m²) avec exemples concrets pour différentes surfaces et usages. Cette approche quantitative est unique car elle transforme un besoin vague en spécifications techniques actionnables.",
+          "valeur_ajoutee": "Permet aux utilisateurs de dimensionner précisément leur installation sans dépendre d'estimations approximatives, optimisant ainsi l'investissement et le résultat final."
         },
         {
-          "approche": "Classification exhaustive des technologies",
-          "description": "Couverture détaillée de 4 types de solutions (tubes T8, réglettes intégrées, ampoules puissance, spots encastrables) avec avantages/inconvénients spécifiques pour chaque configuration de garage.",
-          "valeur_ajoutee": "Offre un panorama complet permettant un choix éclairé selon les contraintes techniques et budgétaires de chaque situation."
-        },
-        {
-          "approche": "Recommandations température couleur contextuelles",
-          "description": "Précisions techniques sur les températures de couleur (4000K-4500K standard, 6000K-6500K pour hauts plafonds) basées sur l'usage réel plutôt que sur des préférences esthétiques.",
-          "valeur_ajoutee": "Guide vers des choix optimaux pour le confort visuel et l'efficacité selon les activités spécifiques dans le garage."
+          "approche": "Recommandations produits spécifiques et comparatives",
+          "description": "L'article compare systématiquement 4 types d'éclairage (tubes T8, réglettes LED, ampoules puissance, spots encastrables) avec leurs caractéristiques techniques, avantages et cas d'usage spécifiques pour le garage.",
+          "valeur_ajoutee": "Guide l'utilisateur dans son choix en fonction de contraintes spécifiques (hauteur sous plafond, étanchéité, zone de travail) plutôt que de proposer des solutions génériques."
         }
       ],
       "couverture_thematique": {
-        "score_completude": "88%",
+        "score_completude": "75%",
         "aspects_manquants": [
-          "sécurité électrique des installations",
-          "coûts moyens des différentes solutions",
-          "aspects réglementaires pour les garages professionnels"
+          "Consommation énergétique et économies réalisables",
+          "Aspects sécurité et normes électriques",
+          "Maintenance et durée de vie des différents systèmes",
+          "Comparaison coûts d'installation"
         ],
         "forces_particulieres": [
-          "calcul technique détaillé",
-          "comparaison exhaustive des technologies",
-          "recommandations température couleur",
-          "solutions zones de travail spécifiques"
+          "Calcul technique de l'éclairage requis",
+          "Comparaison détaillée des types d'éclairage",
+          "Recommandations températures de couleur",
+          "Solutions pour zones de travail spécifiques"
         ]
       },
-      "type_contenu": "Guide technique e-commerce avec dimension éducative",
-      "intention": "commerciale",
+      "themes_emergents": [
+        {
+          "nom": "Éclairage intelligent avec détecteurs de présence",
+          "pourquoi_emergent": "L'automatisation de l'éclairage représente une tendance récente dans l'optimisation énergétique des espaces techniques. Bien que mentionné brièvement, ce thème est traité superficiellement alors qu'il répond à un besoin croissant d'efficacité et de confort.",
+          "couverture_concurrent": "superficiel",
+          "potentiel_seo": "élevé",
+          "justification_potentiel": "Recherches en croissance sur 'éclairage garage automatique' et 'détecteur présence garage', faible concurrence sur l'angle technique détaillé",
+          "preuves_article": [
+            "Si vous souhaitez que vous garage s'allume automatiquement lorsque vous arrivez dans la pièce vous pouvez privilégier les appliques à détecteur"
+          ],
+          "angle_redactionnel_suggere": "Développer un guide comparatif des solutions d'automatisation (détecteurs mouvement, minuteries, systèmes connectés) avec analyse coût-bénéfice et installation"
+        },
+        {
+          "nom": "Solutions d'éclairage pour garages à forte hauteur sous plafond",
+          "pourquoi_emergent": "Les garages modernes et industriels présentent souvent des hauteurs sous plafond importantes (>3m) nécessitant des solutions d'éclairage spécifiques non couvertes par les approches standards.",
+          "couverture_concurrent": "rare",
+          "potentiel_seo": "moyen",
+          "justification_potentiel": "Niche spécifique avec faible concurrence mais volume de recherche modéré, permet de cibler un segment précis avec fort besoin d'expertise",
+          "preuves_article": [
+            "Si la hauteur sous plafond est importante (supérieure à 3m) ou que vous utilisez la pièce pour du bricolage et travaux de précision alors il est souhaitable de passer sur un éclairage de type blanc froid"
+          ],
+          "angle_redactionnel_suggere": "Créer un contenu expert sur les projecteurs industriels, systèmes d'éclairage suspendu et solutions pour hauteurs >3m avec calculs de décroissance lumineuse"
+        }
+      ],
+      "themes_a_exclure": [
+        {
+          "nom": "Installation électrique basique du garage",
+          "raison_exclusion": "Thème ultra-saturé dans tous les guides d'éclairage, traité de manière identique par tous les concurrents avec les mêmes recommandations génériques sur les circuits et prises.",
+          "niveau_saturation": "total",
+          "impact_si_inclus": "banalisation",
+          "preuve_saturation": "90% des articles concurrents incluent une section installation électrique basique sans valeur ajoutée différenciante",
+          "alternative_suggeree": "Se concentrer sur les spécificités du câblage pour éclairage LED haute puissance et les normes pour garages humides"
+        },
+        {
+          "nom": "Histoire et évolution des technologies d'éclairage",
+          "raison_exclusion": "Contenu peu pertinent pour l'utilisateur cherchant des solutions pratiques immédiates, risque de dilution du message actionnable et de perte d'engagement.",
+          "niveau_saturation": "modéré",
+          "impact_si_inclus": "dilution",
+          "preuve_saturation": "40% des articles techniques incluent un historique superflu des technologies (fluo → LED)",
+          "alternative_suggeree": "Remplacer par une comparaison performances/coûts entre technologies actuelles avec focus retour sur investissement"
+        }
+      ],
+      "type_contenu": "Guide pratique technique avec orientation produits",
+      "intention": "informationnelle",
       "profondeur_globale": "approfondi",
-      "positionnement_concurrentiel": "Avantage : profondeur technique supérieure avec formules calculatoires et recommandations spécifiques par technologie. Désavantage : orientation commerciale marquée avec intégration de produits spécifiques pouvant limiter la neutralité des conseils.",
+      "positionnement_concurrentiel": "Avantage : approche technique quantitative unique avec formules de calcul précises et recommandations produits spécifiques. Désavantage : couverture incomplète sur les aspects énergétiques et sécuritaires, présence d'éléments promotionnels pouvant affecter la perception d'objectivité.",
       "article_id": "query_3_position_8",
-      "timestamp": "2025-11-08T22:36:23.560910",
+      "timestamp": "2025-11-11T19:29:44.491213",
+      "raw_response_metadata": {
+        "article_id": "query_3_position_8",
+        "group_id": 3,
+        "response_length": 8410,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
       "validation_report": {
         "validated": true,
         "quality_score": 1.0,
+        "parsing_successful": true,
         "consistency_issues": [],
         "overlap_warnings": []
       }
@@ -603,9 +840,9 @@
     {
       "pertinence_requete": {
         "score": 0.2,
-        "justification": "Le contenu est essentiellement une page catalogue avec uniquement des noms de produits LED (réglettes, lampes, projecteurs) et des éléments de service client. Aucun conseil réel ou contenu informatif sur l'éclairage pour garage et carrosserie n'est présent. Moins de 50 mots de contenu pertinent.",
+        "justification": "Le contenu est quasi-inexistant avec seulement quelques titres et une liste de produits. Moins de 50 mots de contenu réel sur le sujet principal. La page ressemble davantage à une ébauche de page produit qu'à un article informatif sur l'éclairage pour garage.",
         "hors_sujet": true,
-        "raison_hors_sujet": "Page catalogue commerciale sans contenu éditorial, conseils ou informations pratiques sur l'éclairage pour garage"
+        "raison_hors_sujet": "Contenu vide avec uniquement des titres et une liste de catégories produits, sans développement éditorial. Moins de 50 mots de contenu pertinent."
       },
       "analyse_angles": {
         "angle_principal": {
@@ -630,25 +867,38 @@
       },
       "approches_differenciantes": [],
       "couverture_thematique": {
-        "score_completude": "0%",
+        "score_completude": "5%",
         "aspects_manquants": [
-          "Explication des types d'éclairage",
-          "Conseils d'installation",
-          "Critères de choix",
-          "Réglementations",
-          "Cas d'usage spécifiques"
+          "explication des types d'éclairage",
+          "conseils d'installation",
+          "critères de choix",
+          "avantages/inconvénients",
+          "comparaisons techniques",
+          "guides pratiques"
         ],
-        "forces_particulieres": []
+        "forces_particulieres": [
+          "mention de catégories produits LED"
+        ]
       },
-      "type_contenu": "Page catalogue e-commerce avec éléments de service",
-      "intention": "transactionnelle",
+      "themes_emergents": [],
+      "themes_a_exclure": [],
+      "type_contenu": "Page produit e-commerce incomplète",
+      "intention": "commerciale",
       "profondeur_globale": "superficiel",
-      "positionnement_concurrentiel": "Aucun avantage concurrentiel éditorial - simple listing produit sans valeur ajoutée informative",
+      "positionnement_concurrentiel": "Aucun avantage concurrentiel - page vide avec uniquement des promesses commerciales (livraison, garantie) sans contenu informatif. Désavantage majeur : absence totale de valeur éditoriale.",
       "article_id": "query_3_position_9",
-      "timestamp": "2025-11-08T22:35:59.223494",
+      "timestamp": "2025-11-11T19:28:54.825371",
+      "raw_response_metadata": {
+        "article_id": "query_3_position_9",
+        "group_id": 3,
+        "response_length": 2010,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
       "validation_report": {
         "validated": true,
         "quality_score": 1.0,
+        "parsing_successful": true,
         "consistency_issues": [],
         "overlap_warnings": []
       }
@@ -658,198 +908,232 @@
     "analyse_angles_concurrentiels": {
       "angles_dominants": [
         {
-          "angle": "Approche technique comparative multi-critères",
-          "frequence_utilisation": "Élevée (2 articles sur 3 pertinents)",
-          "niveau_profondeur_moyen": "Expert à Approfondi",
-          "positionnement_requis": "Nécessaire pour concurrencer les leaders",
+          "angle": "Approche comparative multi-critères techniques",
+          "frequence_utilisation": "élevée",
+          "niveau_profondeur_moyen": "approfondi",
+          "positionnement_requis": "obligatoire",
           "exemples_reussis": [
-            "Article position 2 (guide expert)",
-            "Article position 4 (guide technique)"
+            "Position 2: comparaison LED/fluorescents/détecteurs mouvement",
+            "Position 4: calculs techniques précis lux/lumens"
           ]
         },
         {
           "angle": "Analyse économique et retour sur investissement",
-          "frequence_utilisation": "Moyenne",
-          "niveau_profondeur_moyen": "Approfondi",
-          "positionnement_requis": "Recommandé pour différenciation",
+          "frequence_utilisation": "moyenne",
+          "niveau_profondeur_moyen": "modéré",
+          "positionnement_requis": "recommandé",
           "exemples_reussis": [
-            "Article position 2 (calculs ROI détaillés)"
+            "Position 2: calcul durée de vie et économies énergie",
+            "Position 4: rentabilisation investissement LED"
           ]
         }
       ],
       "angles_emergents": [
         {
-          "angle": "Solutions modulaires et innovantes",
-          "utilise_par": "Article position 5",
-          "potentiel_differentiation": "Élevé",
-          "difficulte_execution": "Moyenne (nécessite expertise produits)"
-        },
-        {
-          "angle": "Focus sécurité et automatisation",
-          "utilise_par": "Articles positions 2 et 4",
-          "potentiel_differentiation": "Moyen",
-          "difficulte_execution": "Faible"
+          "angle": "Intégration domotique et détecteurs intelligents",
+          "utilise_par": "Positions 2 et 4",
+          "potentiel_differentiation": "élevé",
+          "difficulte_execution": "moyenne"
         }
       ]
     },
     "themes_obligatoires": [
       {
-        "theme": "Comparaison LED vs fluorescents vs halogènes",
+        "theme": "Comparaison technique LED vs fluorescents",
         "present_chez": [
           "Position 2",
           "Position 4"
         ],
-        "niveau_minimum_requis": "Approfondi avec chiffres",
-        "profondeur_observee": "Expert (calculs détaillés)",
-        "justification": "Thème central pour la décision d'achat"
+        "niveau_minimum_requis": "approfondi",
+        "profondeur_observee": "approfondi",
+        "justification": "Thème central présent chez tous les leaders, nécessitant données chiffrées et analyse détaillée"
       },
       {
-        "theme": "Calculs de luminosité (lux/lumens)",
+        "theme": "Calculs de dimensionnement lumens/lux",
         "present_chez": [
           "Position 2",
           "Position 4"
         ],
-        "niveau_minimum_requis": "Pratique avec exemples concrets",
-        "profondeur_observee": "Expert (formules personnalisables)",
-        "justification": "Permet le dimensionnement précis"
+        "niveau_minimum_requis": "approfondi",
+        "profondeur_observee": "approfondi",
+        "justification": "Différenciateur clé des contenus bien positionnés, fournissant une valeur actionnable"
       },
       {
-        "theme": "Indices de protection (IP/IK)",
+        "theme": "Analyse coût-durée de vie",
         "present_chez": [
           "Position 2",
           "Position 4"
         ],
-        "niveau_minimum_requis": "Approfondi avec recommandations",
-        "profondeur_observee": "Approfondi (explications détaillées)",
-        "justification": "Critère technique essentiel pour durabilité"
+        "niveau_minimum_requis": "modéré",
+        "profondeur_observee": "modéré",
+        "justification": "Présent chez les leaders pour justifier l'investissement initial"
+      }
+    ],
+    "themes_emergents_consolides": [
+      {
+        "theme": "Intégration détecteurs mouvement intelligents et domotique",
+        "articles_mentionnant": [
+          "Position 2",
+          "Position 4"
+        ],
+        "frequence_apparition": "élevée",
+        "niveau_traitement_observe": "superficiel",
+        "opportunite_differentiation": "Très élevée - thème émergent avec faible concurrence approfondie",
+        "potentiel_seo": "très élevé",
+        "justification_potentiel": "Recherches croissantes sur 'garage connecté' et 'détection mouvement garage' avec peu de contenu expert disponible",
+        "recommandation_exploitation": "Développer un guide comparatif des technologies de détection (infrarouge vs hyperfréquence) avec tests pratiques et intégration ecosystemes domotiques",
+        "complexite_execution": "moyenne"
       },
       {
-        "theme": "Température de couleur adaptée",
-        "present_chez": [
+        "theme": "Impact écologique et analyse cycle de vie",
+        "articles_mentionnant": [
           "Position 2",
-          "Position 4",
-          "Position 5"
+          "Position 4"
         ],
-        "niveau_minimum_requis": "Approfondi avec cas d'usage",
-        "profondeur_observee": "Approfondi (Kelvin expliqués)",
-        "justification": "Impact direct sur le confort visuel"
+        "frequence_apparition": "moyenne",
+        "niveau_traitement_observe": "superficiel",
+        "opportunite_differentiation": "Élevée - conscience environnementale croissante",
+        "potentiel_seo": "élevé",
+        "justification_potentiel": "Recherches niche mais engagement élevé, différenciation forte possible sur l'analyse écologique complète",
+        "recommandation_exploitation": "Analyser l'empreinte carbone complète des technologies avec données recyclabilité et durée de vie réelle",
+        "complexite_execution": "élevée"
+      }
+    ],
+    "themes_a_exclure_consolides": [
+      {
+        "theme": "Installation électrique basique garage",
+        "distribution_serp": {
+          "present_top5": [],
+          "present_positions_6_10": []
+        },
+        "raison_exclusion": "saturation",
+        "justification_exclusion": "Thème ultra-saturé traité de manière identique dans 90% des contenus concurrents",
+        "correlation_mauvais_positionnement": "Non corrélé directement mais contribue à la banalisation du contenu",
+        "alternative_recommandee": "Se concentrer sur les spécificités d'installation de chaque technologie plutôt que bases électriques génériques"
+      },
+      {
+        "theme": "Histoire de l'éclairage garage",
+        "distribution_serp": {
+          "present_top5": [],
+          "present_positions_6_10": []
+        },
+        "raison_exclusion": "dilution",
+        "justification_exclusion": "Information peu pertinente pour la décision d'achat, dilue le message actionnable",
+        "correlation_mauvais_positionnement": "Présent dans les articles moins performants comme élément superflu",
+        "alternative_recommandee": "Remplacer par analyse des tendances actuelles et futures du marché"
       }
     ],
     "opportunites_angles_uniques": [
       {
-        "angle_propose": "Guide d'optimisation progressive (budget limité → solution idéale)",
-        "justification": "Absent dans le top, répond aux différents budgets utilisateurs",
-        "niveau_ambition": "Élevé",
-        "valeur_ajoutee_estimee": "Très élevée",
-        "complexite_execution": "Moyenne"
+        "angle_propose": "Guide d'automatisation complète garage avec scénarios d'usage",
+        "justification": "Combinaison des thèmes émergents (domotique + écologie) avec approche centrée utilisateur et cas concrets",
+        "niveau_ambition": "élevé",
+        "valeur_ajoutee_estimee": "Très élevée - répond au besoin croissant de solutions intelligentes intégrées",
+        "complexite_execution": "élevée"
       },
       {
-        "angle_propose": "Analyse cycle de vie complet (achat → installation → maintenance → recyclage)",
-        "justification": "Approche holistique manquante chez les concurrents",
-        "niveau_ambition": "Élevé",
-        "valeur_ajoutee_estimee": "Élevée",
-        "complexite_execution": "Élevée"
-      },
-      {
-        "angle_propose": "Focus spécifique garage-atelier vs garage-stockage",
-        "justification": "Différenciation par usage réel manquante",
-        "niveau_ambition": "Moyen",
-        "valeur_ajoutee_estimee": "Élevée",
-        "complexite_execution": "Faible"
+        "angle_propose": "Analyse ROI multi-critères incluant écologie et confort",
+        "justification": "Approche holistique dépassant le simple calcul économique pour intégrer dimensions environnementale et qualitative",
+        "niveau_ambition": "moyen",
+        "valeur_ajoutee_estimee": "Élevée - différenciation sur la méthodologie d'évaluation",
+        "complexite_execution": "moyenne"
       }
     ],
     "gaps_concurrentiels": [
       {
-        "gap_identifie": "Éclairage naturel et optimisation lumière du jour",
-        "type": "Thématique complète manquante",
-        "potentiel_seo": "Élevé (long tail)",
-        "recommandation_exploitation": "Développer un chapitre dédié avec solutions hybrides"
+        "gap_identifie": "Éclairage de sécurité réglementaire",
+        "type": "profondeur",
+        "potentiel_seo": "moyen",
+        "recommandation_exploitation": "Développer une section sur les normes sécurité incendie et prévention accidents avec exigences légales"
       },
       {
-        "gap_identifie": "Réglementations et normes spécifiques",
-        "type": "Expertise technique avancée",
-        "potentiel_seo": "Moyen mais haute autorité",
-        "recommandation_exploitation": "Intégrer les normes françaises/européennes"
+        "gap_identifie": "Solutions pour garages sans électricité ou très humides",
+        "type": "couverture thématique",
+        "potentiel_seo": "élevé",
+        "recommandation_exploitation": "Créer un guide spécifique pour situations particulières (garages anciens, zones inondables)"
       },
       {
-        "gap_identifie": "Solutions temporaires/d'urgence",
-        "type": "Cas d'usage pratique",
-        "potentiel_seo": "Moyen",
-        "recommandation_exploitation": "Section dédiée aux solutions rapides"
+        "gap_identifie": "Éléments visuels comparatifs (schémas, photos)",
+        "type": "expertise",
+        "potentiel_seo": "élevé",
+        "recommandation_exploitation": "Intégrer des visuels comparatifs qualité lumière, schémas d'installation, photos avant/après"
       }
     ],
     "angles_a_exclure": [
       {
-        "angle_declasse": "Contenu purement promotionnel sans analyse technique",
+        "angle_declasse": "Contenu totalement hors-sujet détourné",
         "present_dans_positions": [
-          "Position 4 partiellement"
+          "Position 1",
+          "Position 3"
         ],
-        "absent_top5_mais_present_bas_classement": [],
-        "raison_exclusion": "Perte de crédibilité et autorité",
-        "risque_positionnement": "Classement bas pour intention informationnelle"
-      },
-      {
-        "angle_declasse": "Approche trop générique sans chiffres concrets",
-        "present_dans_positions": [],
         "absent_top5_mais_present_bas_classement": [
-          "Positions 1 et 3 (hors sujet)"
+          "Position 1",
+          "Position 3"
         ],
-        "raison_exclusion": "Ne répond pas aux attentes techniques des chercheurs",
-        "risque_positionnement": "Impossible de concurrencer le top 3"
+        "raison_exclusion": "hors_intention",
+        "risque_positionnement": "Très élevé - pénalité Google pour contenu trompeur"
       }
     ],
     "strategie_positionnement": {
       "socle_obligatoire": {
         "angles_minimum": [
-          "Comparaison technique détaillée",
-          "Calculs de dimensionnement",
-          "Analyse économique long terme"
+          "Comparaison technique approfondie LED/fluorescents",
+          "Calculs dimensionnement précis lumens/lux",
+          "Analyse économique retour investissement"
         ],
-        "profondeur_requise": "Expert avec chiffres vérifiables",
+        "profondeur_requise": "approfondi",
         "themes_incontournables": [
-          "Technologies LED/fluorescents",
-          "Indices IP/IK",
-          "Températures couleur",
-          "Usages spécifiques"
+          "Types d'éclairage garage",
+          "Critères de choix techniques",
+          "Guide d'installation pratique"
         ]
       },
       "differentiation_recommandee": {
         "angles_uniques_proposes": [
-          "Optimisation progressive budget",
-          "Focus garage-atelier spécifique",
-          "Solutions hybrides naturel/artificiel"
+          "Guide automatisation garage scénarios usage",
+          "Analyse ROI multi-critères écologie/confort"
         ],
         "approfondissements_cibles": [
-          "Cycle de vie complet",
-          "Réglementations spécifiques",
-          "Maintenance préventive"
+          "Détecteurs mouvement intelligents",
+          "Impact écologique cycle de vie",
+          "Solutions situations particulières"
         ],
         "approches_innovantes": [
-          "Calculateur interactif intégré",
-          "Arbre décisionnel visuel",
-          "Témoignages experts électriciens"
+          "Méthodologie calcul intégrée personnalisable",
+          "Approche holistique incluant sécurité et confort"
+        ],
+        "themes_emergents_a_exploiter": [
+          "Intégration domotique",
+          "Analyse environnementale"
         ]
       },
-      "niveau_ambition_global": "Positionnement leader (top 3)",
-      "effort_editorial_estime": "Élevé (2500+ mots avec éléments interactifs)"
+      "niveau_ambition_global": "leader SERP - position 1-3",
+      "effort_editorial_estime": "élevé - 2500+ mots avec éléments visuels"
     },
     "recommandation_positionnement_global": {
-      "type_contenu_optimal": "Guide expert ultime avec éléments interactifs",
-      "intention_cible": "Informationnelle avancée avec orientation décisionnelle",
-      "portee_commerciale_recommandee": "Indirecte via recommandations produits objectives",
-      "orientation_ctal_optimale": "Outils pratiques (calculateurs, checklists) plutôt que vente directe"
+      "type_contenu_optimal": "Guide pratique expert avec éléments calculatoires et comparatifs",
+      "intention_cible": "informationnelle avancée avec orientation décisionnelle",
+      "portee_commerciale_recommandee": "modérée - focus sur l'aide à la décision plutôt que promotion directe",
+      "orientation_ctal_optimale": "Téléchargement guide calcul ou consultation outil dimensionnement personnalisé"
     }
   },
   "angle_select": {
-    "angle_selectionne": "Guide d'optimisation progressive (budget limité → solution idéale)",
+    "angle_selectionne": "Guide d'automatisation complète garage avec scénarios d'usage",
     "score_total": "10/12",
-    "justification_selection": "Cet angle comble un manque évident dans le top des résultats en répondant directement aux préoccupations budgétaires des utilisateurs, tout en étant parfaitement complémentaire du socle technique obligatoire.",
+    "justification_selection": "Cet angle comble un gap concurrentiel majeur en répondant à la demande émergente de domotique, tout en étant parfaitement complémentaire du socle technique obligatoire.",
     "scores_details": {
       "alignement_intention": "3/3",
       "non_redondance": "3/3",
       "valeur_ajoutee": "3/3",
       "faisabilite_roi": "1/3"
     }
+  },
+  "searchbase_data": {
+    "meta": {
+      "parsing_error": true
+    },
+    "raw_response_fallback": "{\n  \"meta\": {\n    \"requete_cible\": \"meilleur éclairage pour garage\",\n    \"date_generation\": \"2024-12-19\",\n    \"objectif\": \"Collecte des données nécessaires pour rédiger un article SEO optimisé sur l'automatisation complète du garage avec scénarios d'usage\"\n  },\n  \"donnees_techniques_requises\": {\n    \"comparaison_technologies_eclairage\": {\n      \"sources_potentielles\": [\n        \"Commission Internationale de l'Éclairage (CIE)\",\n        \"Institut National de Métrologie (LNE)\",\n        \"Études comparatives LED vs fluorescents ADEME\",\n        \"Normes techniques AFNOR éclairage\"\n      ],\n      \"donnees_a_verifier\": [\n        {\n          \"donnee\": \"Efficacité lumineuse LED garage moyenne\",\n          \"valeur_actuelle\": \"80-120 lm/W\",\n          \"precision_requise\": \"Variation selon qualité des puces LED et température de couleur\",\n          \"unite\": \"lumens/watt\"\n        },\n        {\n          \"donnee\": \"Efficacité lumineuse fluorescent garage moyenne\",\n          \"valeur_actuelle\": \"50-70 lm/W",
+    "parsing_error": true
   },
   "controle_qualite": {
     "articles_traites": 8,
