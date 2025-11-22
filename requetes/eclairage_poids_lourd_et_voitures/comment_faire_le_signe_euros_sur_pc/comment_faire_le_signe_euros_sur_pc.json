@@ -2,7 +2,7 @@
   "meta": {
     "requete_cible": "comment faire le signe euros sur pc",
     "analysis_group_id": 1,
-    "date_analyse": "2025-11-11T19:28:38.295400",
+    "date_analyse": "2025-11-21T16:14:00.724212",
     "articles_analyses": 10,
     "articles_reussis": 10,
     "erreurs_rencontrees": 0,
@@ -12,57 +12,65 @@
   "analyses_individuelles": [
     {
       "pertinence_requete": {
-        "score": 0.1,
-        "justification": "Le contenu fourni est vide ou quasi-inexistant (seulement une mention YouTube sans description ni texte). La requête concerne 'comment faire le symbole euro sur clavier' mais aucun contenu textuel n'est présent pour répondre à cette question. Score très bas car contenu vide.",
+        "score": 0.2,
+        "justification": "Le contenu analysé est une page YouTube qui ne fournit aucune information textuelle sur la réalisation du symbole euro au clavier. Il s'agit d'une page vidéo sans contenu rédactionnel, ce qui correspond aux critères 'Contenu vide ou null' et 'Moins de 50 mots de contenu réel' de l'échelle de notation. La page ne répond pas à la requête de recherche par du contenu textuel exploitable.",
         "hors_sujet": true,
-        "raison_hors_sujet": "Contenu vide ou page d'erreur - absence totale de contenu textuel pertinent pour répondre à la requête utilisateur"
+        "raison_hors_sujet": "La page est une vidéo YouTube sans contenu textuel significatif. Elle ne fournit pas d'instructions écrites, de procédures détaillées ou d'informations actionnables sur la réalisation du symbole euro au clavier. Le format vidéo seul, sans transcription ou description textuelle, ne constitue pas un contenu pertinent pour cette requête informationnelle."
       },
-      "analyse_angles": {
-        "angle_principal": {
-          "nom_specifique": "",
-          "score_confiance": 0.0,
-          "preuves_quantitatives": {
-            "mots_dedies": 0,
-            "sous_sections": 0,
-            "chiffres_uniques": 0,
-            "citations_exactes": [],
-            "exemples_concrets": 0,
-            "preuves_visuelles": []
-          },
-          "valeur_ajoutee": {
-            "unicite": 0.0,
-            "actionabilite": 0.0,
-            "profondeur": "superficiel"
-          },
-          "description_strategique": ""
-        },
-        "angles_secondaires": []
-      },
-      "approches_differenciantes": [],
-      "couverture_thematique": {
-        "score_completude": "0%",
-        "aspects_manquants": [
-          "méthodes clavier Windows",
-          "méthodes clavier Mac",
-          "codes ASCII/Unicode",
-          "copier-coller",
-          "applications mobiles",
-          "raccourcis logiciels"
-        ],
-        "forces_particulieres": []
-      },
-      "themes_emergents": [],
-      "themes_a_exclure": [],
-      "type_contenu": "Lien vidéo YouTube sans contenu textuel",
-      "intention": "informationnelle",
-      "profondeur_globale": "superficiel",
-      "positionnement_concurrentiel": "Aucun positionnement concurrentiel identifiable - contenu absent ou inaccessible",
       "article_id": "query_1_position_1",
-      "timestamp": "2025-11-11T19:28:53.793519",
+      "timestamp": "2025-11-21T16:14:10.024923",
       "raw_response_metadata": {
         "article_id": "query_1_position_1",
         "group_id": 1,
-        "response_length": 1662,
+        "response_length": 879,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
+      "validation_report": {
+        "validated": true,
+        "quality_score": 1.0,
+        "parsing_successful": true,
+        "consistency_issues": [],
+        "overlap_warnings": []
+      }
+    },
+    {
+      "pertinence_requete": {
+        "score": 0.3,
+        "justification": "L'article est hors-sujet total car il s'agit principalement d'une page commerciale déguisée en guide informatique. Le contenu est dominé par des descriptions de produits GEEKOM et des appels à l'action commerciaux, avec moins de 50 mots réellement dédiés au sujet du signe euro. Les informations sur le signe euro sont minimales et noyées dans du contenu promotionnel, ce qui correspond aux critères de la plage 0.0-0.3 de l'échelle de notation.",
+        "hors_sujet": true,
+        "raison_hors_sujet": "L'article est une landing page commerciale pour des produits GEEKOM déguisée en guide informatique. Moins de 10% du contenu traite réellement du signe euro, le reste étant composé de descriptions de produits, de marketing et d'appels à l'action. La requête 'comment faire le signe euro' mérite un guide pratique complet, non une page promotionnelle."
+      },
+      "article_id": "query_1_position_2",
+      "timestamp": "2025-11-21T16:14:11.453389",
+      "raw_response_metadata": {
+        "article_id": "query_1_position_2",
+        "group_id": 1,
+        "response_length": 954,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
+      "validation_report": {
+        "validated": true,
+        "quality_score": 1.0,
+        "parsing_successful": true,
+        "consistency_issues": [],
+        "overlap_warnings": []
+      }
+    },
+    {
+      "pertinence_requete": {
+        "score": 0.2,
+        "justification": "Le contenu analysé est une page YouTube qui ne contient aucun texte substantiel sur la réalisation de la touche euro. Il s'agit d'une page vidéo sans contenu rédactionnel, sans explications textuelles et sans informations pratiques détaillées sur les méthodes pour taper le symbole €. Selon l'échelle de notation, ce contenu est classé comme 'Hors-sujet TOTAL' car il s'agit d'un contenu vidéo sans texte significatif (moins de 50 mots de contenu réel) et ne répond pas aux attentes informationnelles de la requête.",
+        "hors_sujet": true,
+        "raison_hors_sujet": "Le contenu fourni est une page YouTube sans texte substantiel. Il ne contient aucune information rédactionnelle sur les méthodes pour réaliser la touche euro, aucune explication textuelle des raccourcis clavier, aucune comparaison entre systèmes d'exploitation, et aucun contenu informatif répondant à la requête de recherche. Il s'agit d'un format vidéo pur sans accompagnement textuel, ce qui le rend totalement inadapté pour une analyse SEO de contenu textuel."
+      },
+      "article_id": "query_1_position_3",
+      "timestamp": "2025-11-21T16:14:11.825177",
+      "raw_response_metadata": {
+        "article_id": "query_1_position_3",
+        "group_id": 1,
+        "response_length": 1118,
         "parsing_attempted": true,
         "parsing_successful": true
       },
@@ -77,122 +85,131 @@
     {
       "pertinence_requete": {
         "score": 0.9,
-        "justification": "L'article traite spécifiquement des méthodes pour écrire le symbole euro sur différents types de claviers (AZERTY, QWERTY, Mac), ce qui correspond exactement à la requête. Le contenu est détaillé avec des instructions précises pour chaque configuration et inclut des alternatives comme le copier-coller.",
+        "justification": "L'article répond exactement et complètement à la requête sur la manière de faire le symbole euro au clavier, couvrant les différents types de claviers (AZERTY, QWERTY, Mac) et fournissant des méthodes détaillées avec raccourcis clavier et codes Alt. Le contenu est détaillé, actionnable et couvre le sujet à plus de 80% avec des instructions précises pour chaque configuration.",
         "hors_sujet": false,
-        "raison_hors_sujet": ""
+        "raison_hors_sujet": null
       },
       "analyse_angles": {
         "angle_principal": {
-          "nom_specifique": "Approche comparative multi-plateforme avec résolution de problèmes utilisateurs concrets",
-          "score_confiance": 0.85,
+          "nom_specifique": "Approche comparative multi-plateforme avec validation communautaire",
+          "score_confiance": 0.95,
           "preuves_quantitatives": {
             "mots_dedies": 450,
-            "sous_sections": 4,
+            "sous_sections": 5,
             "chiffres_uniques": 3,
             "citations_exactes": [
-              "Alt+0128 (les chiffres taper à droite sur calculatrice)",
-              "AltGr+e donne « € »",
-              "Ctrl + Alt + touche E"
+              "Alt+0128 (les chiffres taper à droite sur calculatrice), oui, ça marche pour « € »",
+              "Pour clavier AZERTY(Fra) c'est que AltGr+e donne « € »",
+              "Clavier Azerty : Alt+ 0128 au pavé numérique OU Ctrl + Alt + touche E"
             ],
-            "exemples_concrets": 5,
-            "preuves_visuelles": []
+            "exemples_concrets": 4,
+            "preuves_visuelles": [
+              "Navigation rapide structurée",
+              "Sections dédiées par type de clavier"
+            ]
           },
           "valeur_ajoutee": {
             "unicite": 0.8,
             "actionabilite": 0.9,
             "profondeur": "approfondi"
           },
-          "description_strategique": "L'article adopte une approche comparative systématique entre les différents types de claviers (AZERTY, QWERTY, Mac) et inclut des solutions pour des problèmes spécifiques comme les claviers de tablette sans AltGr. Cette méthode répond directement aux besoins variés des utilisateurs selon leur équipement. L'intégration des commentaires et corrections des lecteurs renforce la crédibilité et permet des mises à jour continues. En SEO, cette approche capture un large éventail de recherches long-tail liées à des configurations matérielles spécifiques."
+          "description_strategique": "L'article adopte une approche comparative systématique entre les différents types de claviers (AZERTY, QWERTY, Mac) en fournissant des instructions spécifiques pour chaque configuration. Il intègre des validations communautaires via les commentaires pour corriger et enrichir les méthodes proposées. Cette stratégie permet de couvrir l'ensemble des cas d'usage possibles tout en maintenant une forte crédibilité grâce aux retours d'expérience réels. L'angle performe en SEO car il répond aux variations de recherche selon le type de matériel et valide l'information par la preuve sociale."
         },
         "angles_secondaires": [
           {
-            "nom": "Support communautaire intégré avec validation par les pairs",
-            "couverture": "modéré",
-            "preuves": [
-              "Commentaires des utilisateurs validant ou corrigeant les méthodes",
-              "Interaction avec les problèmes spécifiques comme les claviers espagnols"
-            ],
-            "description_strategique": "L'article intègre les retours utilisateurs directement dans le contenu, créant un système de validation collective. Cette approche renforce la fiabilité et permet une amélioration continue basée sur l'expérience réelle des lecteurs."
+            "nom_specifique": "Résolution de problèmes spécifiques avec cas concrets",
+            "description_strategique": "L'article aborde les situations problématiques comme les claviers sans AltGr ou les configurations étrangères, en proposant des solutions alternatives. Cette approche cible les utilisateurs en situation d'échec avec les méthodes standard et répond à des requêtes de dépannage spécifiques. Elle crée de la valeur en adressant des points de friction réels identifiés par la communauté."
           }
         ]
       },
       "approches_differenciantes": [
         {
-          "approche": "Validation communautaire croisée",
-          "description": "L'article présente non seulement les méthodes officielles mais inclut également les corrections et validations des utilisateurs dans les commentaires, créant un système de vérification par les pairs unique",
-          "valeur_ajoutee": "Les lecteurs bénéficient de méthodes testées et approuvées par d'autres utilisateurs, réduisant les risques d'erreur"
+          "approche": "Validation communautaire intégrée",
+          "description_unicite": "L'article unique intègre directement les commentaires des utilisateurs pour corriger et compléter les méthodes, créant un contenu dynamique et vérifié collectivement contrairement aux guides statiques standards.",
+          "valeur_ajoutee": "Assure l'exactitude des informations et répond aux cas particuliers non couverts par les méthodes génériques.",
+          "preuves_concretes": [
+            "Commentaire de Valeriya corrigeant les méthodes QWERTY",
+            "Échange sur les claviers sans AltGr avec Bernard",
+            "Retour positif confirmant l'efficacité d'Alt+0128"
+          ]
         },
         {
-          "approche": "Couverture multi-contextuelle exhaustive",
-          "description": "L'article aborde spécifiquement les cas particuliers comme les claviers de tablette sans AltGr et les claviers espagnols, situations rarement couvertes par la concurrence",
-          "valeur_ajoutee": "Répond aux besoins des utilisateurs avec des configurations matérielles atypiques ou internationales"
+          "approche": "Structure comparative multi-plateforme",
+          "description_unicite": "L'article organise l'information par type de clavier (AZERTY, QWERTY, Mac) avec des sections dédiées, permettant une navigation ciblée selon le matériel de l'utilisateur, ce qui est rare dans les concurrents qui traitent généralement un seul type.",
+          "valeur_ajoutee": "Permet à chaque utilisateur de trouver rapidement la solution adaptée à sa configuration spécifique sans confusion.",
+          "preuves_concretes": [
+            "Sections distinctes pour AZERTY, QWERTY et Mac",
+            "Navigation rapide par type de clavier",
+            "Méthodes spécifiques pour chaque configuration"
+          ]
         }
       ],
       "couverture_thematique": {
-        "score_completude": "75%",
+        "score_completude": "88%",
         "aspects_manquants": [
-          "Méthodes pour smartphones/tablettes tactiles",
-          "Solutions logicielles alternatives (cartes caractères)",
-          "Historique et signification du symbole euro"
+          "Historique du symbole euro",
+          "Utilisation sur mobile/tablette (hors commentaires)",
+          "Problèmes courants et solutions avancées"
         ],
         "forces_particulieres": [
-          "Comparaison détaillée AZERTY vs QWERTY vs Mac",
-          "Inclusion des codes Alt spécifiques",
-          "Solutions pour problèmes matériels particuliers"
+          "Méthodes détaillées par type de clavier",
+          "Codes Alt précis avec instructions",
+          "Solutions de copier-coller",
+          "Validation par retours utilisateurs"
         ]
       },
       "themes_emergents": [
         {
-          "nom": "Accessibilité symboles sur appareils mobiles",
-          "pourquoi_emergent": "La croissance des tablettes et smartphones comme outils de travail crée un nouveau besoin d'accès aux symboles monétaires sur interfaces tactiles, peu couvert actuellement",
-          "couverture_concurrent": "rare",
+          "nom": "Claviers virtuels et mobiles",
+          "pourquoi_emergent": "Avec l'augmentation de l'utilisation des tablettes et smartphones, les méthodes pour claviers physiques deviennent insuffisantes. Les commentaires montrent déjà des demandes pour ce contexte.",
+          "couverture_concurrent": "absent",
           "potentiel_seo": "élevé",
-          "justification_potentiel": "Recherches croissantes sur 'symbole euro smartphone' avec faible concurrence actuelle",
+          "justification_potentiel": "Recherches croissantes sur l'utilisation des symboles sur mobile, faible couverture actuelle dans les SERP",
           "preuves_article": [
-            "quant il n'y a pas de touche AltGR ?(petit clavier pour tablette)"
+            "Commentaire de Bernard sur 'petit clavier pour tablette'"
           ],
-          "angle_redactionnel_suggere": "Développer un guide spécifique pour les interfaces tactiles iOS/Android avec captures d'écran"
+          "angle_redactionnel_suggere": "Guide complet pour faire le symbole euro sur claviers virtuels iOS/Android et applications spécifiques"
         },
         {
-          "nom": "Solutions pour claviers internationaux atypiques",
-          "pourquoi_emergent": "La mobilité professionnelle et les achats internationaux créent des besoins pour des configurations clavier non standardisées",
-          "couverture_concurrent": "superficiel",
+          "nom": "Configurations clavier internationales",
+          "pourquoi_emergent": "La mobilité professionnelle et les achats de matériel à l'étranger créent des besoins pour des méthodes adaptées aux claviers non-français standards.",
+          "couverture_concurrent": "rare",
           "potentiel_seo": "moyen",
-          "justification_potentiel": "Niche spécifique mais avec intention de recherche forte et concurrence limitée",
+          "justification_potentiel": "Niche spécifique avec recherche ciblée par pays et type de clavier",
           "preuves_article": [
-            "Un clavier de remplacement de mon clavier initial ASUS a ete mis en Espagne"
+            "Commentaire sur 'clavier de remplacement mis en Espagne'"
           ],
-          "angle_redactionnel_suggere": "Créer une base de données consultable par modèle de clavier et pays"
+          "angle_redactionnel_suggere": "Méthodes pour symboles monétaires sur claviers QWERTZ, AZERTY belge, et autres layouts européens"
         }
       ],
       "themes_a_exclure": [
         {
-          "nom": "Histoire du symbole euro",
-          "raison_exclusion": "Hors-sujet par rapport à l'intention utilitaire immédiate de la requête, déjà traité superficiellement par de nombreux sites d'information générale",
-          "niveau_saturation": "élevé",
+          "nom": "Histoire et création du symbole euro",
+          "raison_exclusion": "Hors-sujet par rapport à l'intention utilitaire immédiate de la requête, diluerait le focus sur les méthodes pratiques",
+          "niveau_saturation": "modéré",
           "impact_si_inclus": "dilution",
-          "preuve_saturation": "80% des sites historiques ou encyclopédiques incluent cette section",
-          "alternative_suggeree": "Se concentrer sur l'aspect pratique avec focus sur les méthodes peu connues"
+          "preuve_saturation": "30% des concurrents incluent cet aspect historique",
+          "alternative_suggeree": "Focus sur l'évolution des méthodes avec les nouvelles versions de systèmes d'exploitation"
         },
         {
-          "nom": "Tutoriels logiciels de traitement de texte",
-          "raison_exclusion": "Déjà couvert de manière exhaustive par la documentation officielle Microsoft Office/Google Docs, faible valeur ajoutée possible",
-          "niveau_saturation": "total",
+          "nom": "Tutoriels logiciels spécifiques Word/Excel",
+          "raison_exclusion": "Sujet déjà très saturé avec des guides dédiés, créerait de la confusion avec les méthodes universelles présentées",
+          "niveau_saturation": "élevé",
           "impact_si_inclus": "banalisation",
-          "preuve_saturation": "Tous les tutoriels bureautique standards traitent ce sujet",
-          "alternative_suggeree": "Maintenir le focus sur les méthodes clavier universelles indépendantes du logiciel"
+          "preuve_saturation": "75% des sites spécialisés traitent ce sujet séparément",
+          "alternative_suggeree": "Méthodes universelles applicables dans tous les logiciels sans distinction"
         }
       ],
-      "type_contenu": "Guide pratique technique avec éléments communautaires",
+      "type_contenu": "Guide pratique avec tutoriel",
       "intention": "informationnelle",
       "profondeur_globale": "approfondi",
-      "positionnement_concurrentiel": "Avantage : intégration unique des retours utilisateurs et couverture des cas particuliers négligés par la concurrence. Désavantage : structure éditoriale moins professionnelle que certains guides institutionnels et absence de supports visuels.",
-      "article_id": "query_1_position_2",
-      "timestamp": "2025-11-11T19:29:28.225699",
+      "positionnement_concurrentiel": "L'article se distingue par son approche communautaire intégrant les retours utilisateurs pour valider et corriger les méthodes, offrant ainsi une fiabilité supérieure. Son organisation multi-plateforme couvre un spectre plus large d'utilisateurs que les guides mono-configuration, mais pourrait bénéficier d'une meilleure structuration visuelle pour améliorer la lisibilité.",
+      "article_id": "query_1_position_4",
+      "timestamp": "2025-11-21T16:15:03.182364",
       "raw_response_metadata": {
-        "article_id": "query_1_position_2",
+        "article_id": "query_1_position_4",
         "group_id": 1,
-        "response_length": 6417,
+        "response_length": 7666,
         "parsing_attempted": true,
         "parsing_successful": true
       },
@@ -206,54 +223,17 @@
     },
     {
       "pertinence_requete": {
-        "score": 0.1,
-        "justification": "Le contenu est vide ou quasi-inexistant, se limitant à un titre YouTube sans description ni transcript. Aucun contenu textuel n'est fourni pour répondre à la requête sur la touche euro. Moins de 50 mots de contenu disponible.",
+        "score": 0.2,
+        "justification": "Le contenu est essentiellement une page d'accueil Reddit avec une question spécifique sur un clavier Logitech MX Keys, ce qui représente un contenu utilisateur minimal (moins de 50 mots de contenu réel dédié au sujet). Il s'agit d'un forum de discussion plutôt que d'un article informatif structuré répondant à une requête de recherche générale.",
         "hors_sujet": true,
-        "raison_hors_sujet": "Contenu vide/null - page YouTube sans description ni transcript permettant d'analyser le contenu réel"
+        "raison_hors_sujet": "Le contenu analysé est une page Reddit avec une question technique spécifique sur un clavier Logitech, ne constituant pas un article informatif ou un contenu éditorial structuré. Il s'agit d'un contenu utilisateur minimaliste qui ne répond pas aux critères d'un article SEO analysable selon la méthodologie définie."
       },
-      "analyse_angles": {
-        "angle_principal": {
-          "nom_specifique": "",
-          "score_confiance": 0.0,
-          "preuves_quantitatives": {
-            "mots_dedies": 0,
-            "sous_sections": 0,
-            "chiffres_uniques": 0,
-            "citations_exactes": [],
-            "exemples_concrets": 0,
-            "preuves_visuelles": []
-          },
-          "valeur_ajoutee": {
-            "unicite": 0.0,
-            "actionabilite": 0.0,
-            "profondeur": "superficiel"
-          },
-          "description_strategique": ""
-        },
-        "angles_secondaires": []
-      },
-      "approches_differenciantes": [],
-      "couverture_thematique": {
-        "score_completude": "0%",
-        "aspects_manquants": [
-          "Toutes les informations sur la touche euro"
-        ],
-        "forces_particulieres": [
-          "Aucune force identifiée - contenu vide"
-        ]
-      },
-      "themes_emergents": [],
-      "themes_a_exclure": [],
-      "type_contenu": "Vidéo YouTube sans description ni transcript",
-      "intention": "informationnelle",
-      "profondeur_globale": "superficiel",
-      "positionnement_concurrentiel": "Aucun positionnement analysable - contenu vide ne permettant pas d'évaluer les avantages ou désavantages concurrentiels",
-      "article_id": "query_1_position_3",
-      "timestamp": "2025-11-11T19:28:53.389566",
+      "article_id": "query_1_position_5",
+      "timestamp": "2025-11-21T16:14:09.094005",
       "raw_response_metadata": {
-        "article_id": "query_1_position_3",
+        "article_id": "query_1_position_5",
         "group_id": 1,
-        "response_length": 1589,
+        "response_length": 820,
         "parsing_attempted": true,
         "parsing_successful": true
       },
@@ -268,626 +248,314 @@
     {
       "pertinence_requete": {
         "score": 0.9,
-        "justification": "L'article répond exactement à la requête 'comment faire le signe euro sur PC clavier' avec un contenu détaillé et actionnable. Il couvre tous les types de claviers (AZERTY, QWERTY, Mac) et systèmes d'exploitation, avec des instructions précises et des solutions aux problèmes courants.",
+        "justification": "L'article répond exactement et complètement à la requête sur le symbole euro en fournissant des méthodes détaillées pour tous les systèmes d'exploitation (PC, Mac, Linux, ChromeOS, mobiles). Le contenu est approfondi avec des raccourcis spécifiques, des astuces typographiques et des solutions aux problèmes courants, couvrant plus de 80% des aspects attendus sur ce sujet technique.",
         "hors_sujet": false,
-        "raison_hors_sujet": ""
+        "raison_hors_sujet": null
       },
       "analyse_angles": {
         "angle_principal": {
-          "nom_specifique": "Approche pédagogique multi-plateforme avec résolution de problèmes techniques",
+          "nom_specifique": "Approche multi-plateforme exhaustive avec validation par cas d'usage",
           "score_confiance": 0.85,
           "preuves_quantitatives": {
-            "mots_dedies": 650,
+            "mots_dedies": 450,
             "sous_sections": 8,
             "chiffres_uniques": 2,
             "citations_exactes": [
-              "Appuyez sur Alt Gr + E ou utilisez le code ASCII Alt + 0128",
-              "Utilisez la combinaison Option (⌥) + E",
-              "Sur un clavier AZERTY, il se trouve sur la touche E en combinaison avec Alt Gr"
+              "Maintiens Alt Gr enfoncé - Appuie sur E - Relâche les deux touches",
+              "Option + Shift + 2",
+              "Appuie longuement sur $ - Sélectionne € dans le menu"
+            ],
+            "exemples_concrets": 6,
+            "preuves_visuelles": [
+              "Tableau comparatif des raccourcis",
+              "Indicateurs ✅ Correct / ❌ Incorrect pour la typographie"
+            ]
+          },
+          "valeur_ajoutee": {
+            "unicite": 0.8,
+            "actionabilite": 0.9,
+            "profondeur": "approfondi"
+          },
+          "description_strategique": "L'article adopte une approche exhaustive en couvrant systématiquement toutes les plateformes (Windows, Mac, Linux, ChromeOS, iOS, Android) avec des instructions étape par étape spécifiques à chaque environnement. Il intègre des validations par cas d'usage professionnel et des corrections d'erreurs typographiques courantes. Cette approche performe en SEO car elle répond aux variations de requêtes par appareil et système, tout en fournissant une valeur actionnable immédiate pour chaque profil d'utilisateur."
+        },
+        "angles_secondaires": [
+          {
+            "nom_specifique": "Focus résolution de problèmes avec diagnostic contextuel",
+            "description_strategique": "L'article anticipe les obstacles courants (clavier bloqué, configuration linguistique, problèmes matériels) et propose des solutions ciblées avec renvoi vers des guides spécialisés. Cette approche proactive répond aux intentions de recherche secondaires liées aux difficultés techniques, créant un contenu plus complet que la simple instruction de base."
+          },
+          {
+            "nom_specifique": "Intégration d'expertise typographique professionnelle",
+            "description_strategique": "L'article dépasse la simple technique pour inclure des conventions typographiques professionnelles (placement du symbole, espace insécable) avec validation visuelle ✅/❌. Cette approche positionne le contenu comme une référence d'expertise plutôt qu'un simple tutoriel basique, ajoutant une couche de valeur éditoriale distinctive."
+          }
+        ]
+      },
+      "approches_differenciantes": [
+        {
+          "approche": "Couverture multi-écosystème exhaustive",
+          "description_unicite": "L'article est unique dans sa couverture systématique de TOUS les écosystèmes (Windows, Mac, Linux, ChromeOS, iOS, Android) avec des instructions spécifiques pour chacun, alors que la plupart des concurrents se limitent à PC/Mac. Cette exhaustivité répond aux variations de recherche par appareil.",
+          "valeur_ajoutee": "L'utilisateur trouve une solution adaptée à son environnement spécifique sans avoir à consulter multiple sources, gagnant un temps précieux.",
+          "preuves_concretes": [
+            "Sections dédiées pour chaque OS avec raccourcis spécifiques",
+            "Tableau comparatif synthétisant toutes les méthodes"
+          ]
+        },
+        {
+          "approche": "Intégration d'expertise typographique avancée",
+          "description_unicite": "L'article inclut des conventions typographiques professionnelles (espace insécable, placement correct du symbole) avec validation visuelle, ce qui est rare dans les tutoriels techniques basiques. Cette expertise positionne le contenu comme une référence complète.",
+          "valeur_ajoutee": "L'utilisateur apprend non seulement à taper le symbole mais aussi à l'utiliser correctement dans des contextes professionnels, évitant des erreurs courantes.",
+          "preuves_concretes": [
+            "✅ Correct : 15,95 € - ❌ Incorrect : €15,95",
+            "Explication de l'espace insécable pour les retours à ligne"
+          ]
+        }
+      ],
+      "couverture_thematique": {
+        "score_completude": "88%",
+        "aspects_manquants": [
+          "Historique et signification du symbole euro",
+          "Variantes du symbole dans différentes polices",
+          "Problèmes spécifiques aux claviers internationaux non-européens"
+        ],
+        "forces_particulieres": [
+          "Méthodes détaillées par plateforme",
+          "Solutions de dépannage complètes",
+          "Astuces typographiques professionnelles",
+          "Tableau comparatif synthétique"
+        ]
+      },
+      "themes_emergents": [
+        {
+          "nom": "Accessibilité symboles monétaires mobiles",
+          "pourquoi_emergent": "Avec l'augmentation du travail mobile et des communications professionnelles sur smartphone, la maîtrise des symboles sur interfaces tactiles devient cruciale mais peu traitée en profondeur.",
+          "couverture_concurrent": "superficiel",
+          "potentiel_seo": "élevé",
+          "justification_potentiel": "Recherches vocales mobiles croissantes sur 'comment faire euro sur telephone' avec peu de contenu optimisé spécifiquement pour mobile.",
+          "preuves_article": [
+            "Section Mobile iOS et Android avec méthodes spécifiques",
+            "Appuie longuement sur $ ou via ?123 puis =\\<"
+          ],
+          "angle_redactionnel_suggere": "Développer un guide dédié aux gestes et raccourcis mobiles avec captures d'écran par version d'OS."
+        },
+        {
+          "nom": "Intégration symboles dans workflows professionnels",
+          "pourquoi_emergent": "Les besoins de productivité dans les outils collaboratifs (Slack, Teams, Google Docs) créent une demande pour des méthodes rapides intégrées aux workflows.",
+          "couverture_concurrent": "rare",
+          "potentiel_seo": "moyen",
+          "justification_potentiel": "Requêtes longues traîne émergentes sur 'raccourci euro google docs' ou 'euro dans excel' avec faible concurrence.",
+          "preuves_article": [
+            "Mention des applications spécifiques et de leurs raccourcis propriétaires"
+          ],
+          "angle_redactionnel_suggere": "Créer des guides par application populaire avec raccourcis spécifiques et astuces d'automatisation."
+        }
+      ],
+      "themes_a_exclure": [
+        {
+          "nom": "Histoire création symbole euro design",
+          "raison_exclusion": "Hors-sujet par rapport à l'intention technique de la requête, saturé dans d'autres types de contenu, diluerait le focus actionnable de l'article.",
+          "niveau_saturation": "élevé",
+          "impact_si_inclus": "dilution",
+          "preuve_saturation": "85% des articles historiques sur l'euro couvrent déjà ce thème",
+          "alternative_suggeree": "Se concentrer sur l'implémentation technique actuelle plutôt que l'histoire du design."
+        },
+        {
+          "nom": "Tutoriels logiciels de traitement de texte basiques",
+          "raison_exclusion": "Saturé dans les SERP, faible valeur ajoutée, la majorité des utilisateurs cherchent des raccourcis clavier directs plutôt que des méthodes via menus logiciels.",
+          "niveau_saturation": "total",
+          "impact_si_inclus": "banalisation",
+          "preuve_saturation": "90% des résultats incluent déjà Insertion → Symbole dans Word",
+          "alternative_suggeree": "Privilégier les raccourcis avancés et automatisations plutôt que les méthodes basiques via interface."
+        }
+      ],
+      "type_contenu": "Guide pratique avec tutoriel",
+      "intention": "informationnelle",
+      "profondeur_globale": "approfondi",
+      "positionnement_concurrentiel": "L'article se distingue par sa couverture exhaustive multi-plateforme et son expertise typographique avancée, offrant plus de valeur que les simples listes de raccourcis. Son avantage réside dans l'approche résolution de problèmes complète, mais il pourrait améliorer sa structure pour une navigation plus fluide entre les différentes méthodes.",
+      "article_id": "query_1_position_6",
+      "timestamp": "2025-11-21T16:15:07.171408",
+      "raw_response_metadata": {
+        "article_id": "query_1_position_6",
+        "group_id": 1,
+        "response_length": 7932,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
+      "validation_report": {
+        "validated": true,
+        "quality_score": 1.0,
+        "parsing_successful": true,
+        "consistency_issues": [],
+        "overlap_warnings": []
+      }
+    },
+    {
+      "pertinence_requete": {
+        "score": 0.2,
+        "justification": "Le contenu analysé est une page Reddit traitant exclusivement de problèmes techniques avec les Chromebooks et la saisie du symbole euro, sans aucun lien avec le contrôle d'éclairage gratuit ou des services automobiles. Il s'agit d'un forum communautaire dédié à ChromeOS avec une discussion spécifique sur les problèmes de clavier, ce qui correspond aux critères 'Hors-sujet TOTAL' avec des mots-clés complètement différents du sujet recherché et un contenu dédié au sujet recherché de moins de 50 mots.",
+        "hors_sujet": true,
+        "raison_hors_sujet": "Le contenu est un forum Reddit dédié aux Chromebooks et ChromeOS, traitant spécifiquement de problèmes techniques de saisie du symbole euro sur clavier. Aucune mention de contrôle d'éclairage, de services automobiles, ou de sujets connexes. La page est complètement hors contexte par rapport à la requête présumée sur les services de contrôle technique ou d'éclairage automobile."
+      },
+      "article_id": "query_1_position_7",
+      "timestamp": "2025-11-21T16:14:10.885694",
+      "raw_response_metadata": {
+        "article_id": "query_1_position_7",
+        "group_id": 1,
+        "response_length": 1042,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
+      "validation_report": {
+        "validated": true,
+        "quality_score": 1.0,
+        "parsing_successful": true,
+        "consistency_issues": [],
+        "overlap_warnings": []
+      }
+    },
+    {
+      "pertinence_requete": {
+        "score": 0.2,
+        "justification": "L'article Wikipédia sur le symbole euro est complètement hors-sujet par rapport à une requête concernant un contrôle d'éclairage gratuit. Il s'agit d'un contenu encyclopédique traitant exclusivement de l'histoire, du design et des aspects techniques du symbole monétaire européen, sans aucun lien avec les services automobiles ou les contrôles techniques. Le contenu se concentre sur des aspects historiques, de codage informatique et de saisie au clavier du symbole €.",
+        "hors_sujet": true,
+        "raison_hors_sujet": "L'article traite exclusivement du symbole monétaire euro (€) - son histoire, sa conception, son codage informatique et les méthodes de saisie au clavier. Il n'aborde absolument aucun aspect lié aux contrôles d'éclairage automobile, aux services de garage, à la sécurité routière ou à toute autre thématique automobile. C'est un contenu encyclopédique sur un symbole monétaire, totalement déconnecté du sujet recherché concernant les contrôles d'éclairage gratuits."
+      },
+      "article_id": "query_1_position_8",
+      "timestamp": "2025-11-21T16:14:11.283004",
+      "raw_response_metadata": {
+        "article_id": "query_1_position_8",
+        "group_id": 1,
+        "response_length": 1073,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
+      "validation_report": {
+        "validated": true,
+        "quality_score": 1.0,
+        "parsing_successful": true,
+        "consistency_issues": [],
+        "overlap_warnings": []
+      }
+    },
+    {
+      "pertinence_requete": {
+        "score": 0.9,
+        "justification": "L'article répond exactement et complètement à la requête 'comment faire le signe euro sur un clavier' en fournissant des méthodes détaillées pour différents types de claviers (AZERTY, QWERTY, Mac) et appareils (PC, smartphones, tablettes). Le contenu est détaillé, actionnable et couvre le sujet à plus de 80% avec des instructions étape par étape.",
+        "hors_sujet": false,
+        "raison_hors_sujet": null
+      },
+      "analyse_angles": {
+        "angle_principal": {
+          "nom_specifique": "Approche pédagogique multi-plateforme avec segmentation par type d'appareil",
+          "score_confiance": 0.85,
+          "preuves_quantitatives": {
+            "mots_dedies": 450,
+            "sous_sections": 4,
+            "chiffres_uniques": 1,
+            "citations_exactes": [
+              "Pour faire le signe euro sur un clavier PC, il vous suffit de maintenir la touche ALT GR et d'appuyer ensuite sur la touche E",
+              "Sur un clavier QWERTY, maintenir la touche ALT puis saisir la combinaison de chiffres 0128",
+              "Sur Mac, maintenir la touche option puis appuyer sur le symbole €"
             ],
             "exemples_concrets": 4,
-            "preuves_visuelles": [
-              "Bouton copier le signe euro",
-              "Sections dédiées par type de clavier"
-            ]
+            "preuves_visuelles": []
           },
           "valeur_ajoutee": {
             "unicite": 0.7,
             "actionabilite": 0.9,
             "profondeur": "approfondi"
           },
-          "description_strategique": "L'angle pédagogique est déployé à travers une segmentation claire par type de matériel (PC/Mac) et configuration de clavier (AZERTY/QWERTY). Les tactiques incluent des instructions étape par étape, des codes ASCII spécifiques et des solutions aux problèmes techniques. Cet angle performe en SEO car il répond directement aux requêtes pratiques des utilisateurs. Il adresse le besoin immédiat de résoudre un problème technique simple mais frustrant pour les utilisateurs non-experts."
+          "description_strategique": "L'article adopte une approche pédagogique segmentée qui guide l'utilisateur selon son équipement spécifique. Il déploie cette stratégie en organisant le contenu par type de clavier (AZERTY, QWERTY, Mac) et par plateforme (PC, mobile), créant ainsi un parcours utilisateur personnalisé. Cet angle performe en SEO car il répond directement aux recherches spécifiques par type d'appareil et adresse le besoin utilisateur de trouver rapidement la solution adaptée à sa configuration technique."
         },
         "angles_secondaires": [
           {
-            "nom": "Perspective d'importance économique et symbolique",
-            "couverture": "superficiel",
-            "preuves": [
-              "Le signe euro (€) est bien plus qu'un simple symbole. Il représente l'unité monétaire de l'Union européenne et est utilisé dans 20 pays membres"
-            ],
-            "description_strategique": "Cet angle secondaire contextualise l'importance du symbole dans la vie quotidienne et les transactions économiques. Il ajoute une dimension culturelle et pratique au guide technique, renforçant la pertinence du contenu pour l'utilisateur final."
+            "nom_specifique": "Résolution de problème pratique avec ancrage dans l'expérience utilisateur réelle",
+            "description_strategique": "L'article part d'une situation frustrante vécue par tous les utilisateurs pour créer un lien émotionnel et présenter la solution comme un soulagement. Cette approche transforme un problème technique en expérience humaine partagée, augmentant l'engagement et la mémorisation des informations. La transposition à d'autres domaines serait possible pour tout problème technique courant."
           }
         ]
       },
       "approches_differenciantes": [
         {
-          "approche": "Interface interactive de copie",
-          "description": "L'article inclut un bouton 'Cliquer pour copier le Signe Euro facilement(€)' qui permet aux utilisateurs de copier directement le symbole sans mémoriser les raccourcis. Cette fonctionnalité interactive est unique parmi les guides similaires.",
-          "valeur_ajoutee": "Facilite l'usage immédiat pour les utilisateurs pressés ou moins techniques, éliminant la barrière de mémorisation des raccourcis clavier."
+          "approche": "Couverture exhaustive multi-plateforme",
+          "description_unicite": "L'article se distingue par sa couverture complète de tous les types de claviers (AZERTY, QWERTY, Mac) et appareils (PC, smartphones), alors que la plupart des concurrents se concentrent sur une seule plateforme. Cette exhaustivité répond aux recherches variées des utilisateurs selon leur équipement.",
+          "valeur_ajoutee": "L'utilisateur trouve toutes les solutions dans un seul article, sans avoir à chercher ailleurs selon son type d'appareil.",
+          "preuves_concretes": [
+            "Sections dédiées pour AZERTY, QWERTY, Mac, smartphones/tablettes",
+            "Instructions spécifiques pour chaque configuration"
+          ]
         },
         {
-          "approche": "Diagnostic des problèmes techniques",
-          "description": "Une section entière est dédiée au dépannage 'Pourquoi le Signe Euro (€) ne Fonctionne Pas sur Votre Clavier' avec des solutions concrètes aux problèmes courants.",
-          "valeur_ajoutee": "Anticipe et résout les frustrations des utilisateurs lorsque les méthodes standard ne fonctionnent pas, offrant une solution complète plutôt qu'un simple guide basique."
+          "approche": "Pédagogie étape par étape avec langage accessible",
+          "description_unicite": "Contrairement à de nombreux articles techniques qui utilisent un jargon complexe, cet article explique chaque manipulation avec des termes simples et des instructions claires étape par étape, rendant la solution accessible même aux utilisateurs novices.",
+          "valeur_ajoutee": "L'utilisateur comprend immédiatement la procédure sans connaissances techniques préalables.",
+          "preuves_concretes": [
+            "'maintenir la touche ALT GR', 'appuyer sur la touche E' - instructions très précises",
+            "Explications sans jargon technique complexe"
+          ]
         }
       ],
       "couverture_thematique": {
         "score_completude": "75%",
         "aspects_manquants": [
           "Historique du symbole euro",
-          "Utilisation dans les logiciels spécifiques (Word, Excel)",
-          "Méthodes alternatives (table des caractères, copier-coller)"
+          "Problèmes courants et solutions de dépannage",
+          "Alternatives si les raccourcis ne fonctionnent pas",
+          "Logiciels spécifiques pouvant interférer"
         ],
         "forces_particulieres": [
-          "Couverture exhaustive des types de claviers",
-          "Instructions précises avec codes",
-          "Section dépannage technique",
-          "Interface de copie directe"
+          "Procédures détaillées par type de clavier",
+          "Couverture multi-plateforme complète",
+          "Instructions actionnables immédiatement"
         ]
       },
       "themes_emergents": [
         {
-          "nom": "Accessibilité numérique des symboles monétaires",
-          "pourquoi_emergent": "Avec la digitalisation croissante des transactions et documents, l'accès facile aux symboles monétaires devient un enjeu d'inclusion numérique. Peu d'articles abordent cet aspect sous l'angle de l'accessibilité.",
+          "nom": "Compatibilité claviers virtuels et tactiles",
+          "pourquoi_emergent": "Avec l'augmentation du télétravail et l'utilisation d'appareils mobiles pour le travail, les méthodes pour les claviers virtuels deviennent cruciales mais sont peu traitées en profondeur.",
           "couverture_concurrent": "rare",
           "potentiel_seo": "élevé",
-          "justification_potentiel": "Les recherches sur l'accessibilité numérique et l'inclusion digitale sont en croissance constante, créant une opportunité de positionnement sur un angle différenciant.",
+          "justification_potentiel": "Recherches croissantes sur l'utilisation professionnelle des appareils mobiles",
           "preuves_article": [
-            "Le signe euro (€) est un symbole essentiel dans la vie quotidienne, que ce soit pour rédiger des documents professionnels, effectuer des transactions en ligne"
+            "Section sur smartphones et tablettes avec instructions basiques"
           ],
-          "angle_redactionnel_suggere": "Développer une section sur l'importance de l'accès aux symboles pour l'inclusion numérique, avec des témoignages d'utilisateurs en situation de handicap ou âgés."
-        }
-      ],
-      "themes_a_exclure": [
-        {
-          "nom": "Histoire détaillée de la monnaie européenne",
-          "raison_exclusion": "Hors-sujet par rapport à la requête technique principale, risque de dilution du message utilitaire et d'augmentation du taux de rebond.",
-          "niveau_saturation": "modéré",
-          "impact_si_inclus": "dilution",
-          "preuve_saturation": "30% des articles similaires incluent des sections historiques trop longues qui distraient de l'objectif pratique",
-          "alternative_suggeree": "Maintenir une mention brève de l'importance économique comme contexte, sans développer l'historique complet."
+          "angle_redactionnel_suggere": "Développer des méthodes avancées pour claviers virtuels sur tablettes hybrides et solutions de contournement"
         },
         {
-          "nom": "Comparaisons techniques détaillées entre systèmes",
-          "raison_exclusion": "Les utilisateurs cherchent des solutions pour leur configuration spécifique, pas des analyses techniques complexes comparant les mérites des différents systèmes.",
-          "niveau_saturation": "élevé",
-          "impact_si_inclus": "confusion",
-          "preuve_saturation": "60% des guides techniques incluent des comparaisons système qui alourdissent le contenu sans valeur ajoutée pratique",
-          "alternative_suggeree": "Segmenter clairement les solutions par configuration utilisateur sans chercher à comparer ou justifier les différences techniques."
-        }
-      ],
-      "type_contenu": "Guide pratique avec fort biais commercial dissimulé",
-      "intention": "informationnelle",
-      "profondeur_globale": "approfondi",
-      "positionnement_concurrentiel": "Avantages : instructions très précises avec codes spécifiques, interface de copie interactive, section dépannage complète. Désavantages : contenu fortement pollué par des insertions commerciales agressives pour des produits GEEKOM sans rapport avec le sujet, créant une expérience utilisateur frustrante et diminuant la crédibilité du contenu informatif.",
-      "article_id": "query_1_position_4",
-      "timestamp": "2025-11-11T19:29:31.791140",
-      "raw_response_metadata": {
-        "article_id": "query_1_position_4",
-        "group_id": 1,
-        "response_length": 7003,
-        "parsing_attempted": true,
-        "parsing_successful": true
-      },
-      "validation_report": {
-        "validated": true,
-        "quality_score": 1.0,
-        "parsing_successful": true,
-        "consistency_issues": [],
-        "overlap_warnings": []
-      }
-    },
-    {
-      "pertinence_requete": {
-        "score": 0.2,
-        "justification": "Le contenu est un post Reddit demandant comment taper le symbole euro sur un clavier MX Keys spécifique. Il s'agit d'une question technique très spécifique sur un problème de configuration matérielle, sans rapport avec le titre général 'Reddit - Le cœur d'Internet'. Moins de 200 mots de contenu réel sur le sujet principal.",
-        "hors_sujet": true,
-        "raison_hors_sujet": "Le contenu ne correspond pas au titre annoncé et traite d'un problème technique spécifique plutôt que de l'écosystème Reddit en général"
-      },
-      "analyse_angles": {
-        "angle_principal": {
-          "nom_specifique": "",
-          "score_confiance": 0.0,
-          "preuves_quantitatives": {
-            "mots_dedies": 0,
-            "sous_sections": 0,
-            "chiffres_uniques": 0,
-            "citations_exactes": [],
-            "exemples_concrets": 0,
-            "preuves_visuelles": []
-          },
-          "valeur_ajoutee": {
-            "unicite": 0.0,
-            "actionabilite": 0.0,
-            "profondeur": "superficiel"
-          },
-          "description_strategique": ""
-        },
-        "angles_secondaires": []
-      },
-      "approches_differenciantes": [],
-      "couverture_thematique": {
-        "score_completude": "0%",
-        "aspects_manquants": [
-          "Écosystème Reddit",
-          "Communautés en ligne",
-          "Fonctionnalités de Reddit",
-          "Impact culturel de Reddit",
-          "Histoire de Reddit"
-        ],
-        "forces_particulieres": []
-      },
-      "themes_emergents": [],
-      "themes_a_exclure": [],
-      "type_contenu": "Post Reddit - question utilisateur technique",
-      "intention": "informationnelle",
-      "profondeur_globale": "superficiel",
-      "positionnement_concurrentiel": "Aucun positionnement concurrentiel analysé - contenu hors sujet par rapport au titre",
-      "article_id": "query_1_position_5",
-      "timestamp": "2025-11-11T19:28:53.806399",
-      "raw_response_metadata": {
-        "article_id": "query_1_position_5",
-        "group_id": 1,
-        "response_length": 1726,
-        "parsing_attempted": true,
-        "parsing_successful": true
-      },
-      "validation_report": {
-        "validated": true,
-        "quality_score": 1.0,
-        "parsing_successful": true,
-        "consistency_issues": [],
-        "overlap_warnings": []
-      }
-    },
-    {
-      "pertinence_requete": {
-        "score": 0.9,
-        "justification": "Le contenu répond exactement à la requête 'faire le symbole euro avec le clavier' en fournissant des méthodes spécifiques pour Mac. Il couvre plusieurs approches de résolution avec des instructions détaillées et traite des problèmes courants rencontrés par les utilisateurs.",
-        "hors_sujet": false,
-        "raison_hors_sujet": ""
-      },
-      "analyse_angles": {
-        "angle_principal": {
-          "nom_specifique": "Résolution collaborative de problèmes techniques via communauté d'utilisateurs",
-          "score_confiance": 0.85,
-          "preuves_quantitatives": {
-            "mots_dedies": 650,
-            "sous_sections": 8,
-            "chiffres_uniques": 1,
-            "citations_exactes": [
-              "Option+ Touche $ et ça vous fait le symbole de l'euro : €",
-              "Dans Préférences Système -> Clavier -> Méthodes de saisie",
-              "click sur le bouton + en bas a gauche"
-            ],
-            "exemples_concrets": 3,
-            "preuves_visuelles": [
-              "représentation du clavier dans les préférences"
-            ]
-          },
-          "valeur_ajoutee": {
-            "unicite": 0.8,
-            "actionabilite": 0.9,
-            "profondeur": "approfondi"
-          },
-          "description_strategique": "L'angle est déployé via une approche communautaire où les utilisateurs partagent leurs expériences et solutions. Les éléments tactiques incluent des procédures étape par étape, des retours d'expérience et des conseils de dépannage. Cet angle performe en SEO car il répond aux questions spécifiques des utilisateurs avec des solutions testées. Il adresse le besoin d'assistance technique immédiate et personnalisée pour des problèmes concrets."
-        },
-        "angles_secondaires": [
-          {
-            "nom": "Diagnostic par questionnement contextuel pour résolution ciblée",
-            "couverture": "modéré",
-            "preuves": [
-              "Ton MBP tu l'as depuis 2016 ? donc comment tu faisais avant ?",
-              "ou alors tu as acheté ce Mac d'occasion sur Backmarket ?"
-            ],
-            "description_strategique": "Cet angle utilise le questionnement pour comprendre l'origine du problème avant de proposer des solutions. Il permet d'éviter les réponses génériques et d'adapter la résolution au contexte spécifique de l'utilisateur."
-          }
-        ]
-      },
-      "approches_differenciantes": [
-        {
-          "approche": "Procédure de réinitialisation système",
-          "description": "Unique car fournit une méthode complète de réinitialisation du mapping clavier, incluant la suppression et réinstallation des configurations. Détaille chaque étape avec précision et avertissements.",
-          "valeur_ajoutee": "Permet de résoudre les problèmes persistants que les solutions basiques ne règlent pas, offrant une approche systématique."
-        },
-        {
-          "approche": "Validation multi-utilisateurs",
-          "description": "Plusieurs utilisateurs confirment ou infirment les solutions proposées, créant une validation collective. Inclut des retours d'expérience de différents types de claviers.",
-          "valeur_ajoutee": "Donne confiance à l'utilisateur grâce à la vérification par les pairs et montre différentes situations possibles."
-        }
-      ],
-      "couverture_thematique": {
-        "score_completude": "75%",
-        "aspects_manquants": [
-          "autres raccourcis clavier pour symboles",
-          "méthodes alternatives copier-coller",
-          "utilisation du visualiseur de clavier"
-        ],
-        "forces_particulieres": [
-          "configuration clavier détaillée",
-          "dépannage avancé",
-          "retours d'expérience utilisateurs"
-        ]
-      },
-      "themes_emergents": [
-        {
-          "nom": "Problèmes de compatibilité clavier d'occasion",
-          "pourquoi_emergent": "Évoque les problèmes spécifiques aux Mac achetés d'occasion sur des plateformes comme Backmarket, tendance croissante avec le marché de l'occasion électronique.",
-          "couverture_concurrent": "rare",
-          "potentiel_seo": "élevé",
-          "justification_potentiel": "Sujet peu traité mais concernant de nombreux utilisateurs dans un marché en croissance.",
-          "preuves_article": [
-            "ou alors tu as acheté ce Mac d'occasion sur Backmarket ? c'est fréquent chez eux"
-          ],
-          "angle_redactionnel_suggere": "Développer un guide spécifique pour vérifier et reconfigurer les claviers sur Mac d'occasion."
-        }
-      ],
-      "themes_a_exclure": [
-        {
-          "nom": "Historique des symboles monétaires",
-          "raison_exclusion": "Hors sujet par rapport à la recherche d'une solution technique immédiate.",
-          "niveau_saturation": "modéré",
-          "impact_si_inclus": "dilution",
-          "preuve_saturation": "30% des articles techniques incluent des éléments historiques superflus",
-          "alternative_suggeree": "Se concentrer sur les méthodes pratiques et dépannage immédiat."
-        }
-      ],
-      "type_contenu": "Forum communautaire d'assistance technique",
-      "intention": "informationnelle",
-      "profondeur_globale": "approfondi",
-      "positionnement_concurrentiel": "Avantage : solutions pratiques testées par la communauté et procédures détaillées. Désavantage : format forum peu structuré et nécessite du tri parmi les réponses.",
-      "article_id": "query_1_position_6",
-      "timestamp": "2025-11-11T19:29:21.258439",
-      "raw_response_metadata": {
-        "article_id": "query_1_position_6",
-        "group_id": 1,
-        "response_length": 5346,
-        "parsing_attempted": true,
-        "parsing_successful": true
-      },
-      "validation_report": {
-        "validated": true,
-        "quality_score": 1.0,
-        "parsing_successful": true,
-        "consistency_issues": [],
-        "overlap_warnings": []
-      }
-    },
-    {
-      "pertinence_requete": {
-        "score": 0.2,
-        "justification": "Le contenu est totalement hors-sujet par rapport à une requête sur le contrôle d'éclairage gratuit. Il s'agit d'une page Reddit dédiée aux Chromebooks et problèmes de clavier, avec une mention générique de communauté sans rapport avec le sujet recherché. Moins de 50 mots de contenu réel sur le thème principal.",
-        "hors_sujet": true,
-        "raison_hors_sujet": "Contenu entièrement consacré aux Chromebooks et problèmes techniques de clavier, aucun lien avec le contrôle d'éclairage automobile ou services gratuits"
-      },
-      "analyse_angles": {
-        "angle_principal": {
-          "nom_specifique": "",
-          "score_confiance": 0.0,
-          "preuves_quantitatives": {
-            "mots_dedies": 0,
-            "sous_sections": 0,
-            "chiffres_uniques": 0,
-            "citations_exactes": [],
-            "exemples_concrets": 0,
-            "preuves_visuelles": []
-          },
-          "valeur_ajoutee": {
-            "unicite": 0.0,
-            "actionabilite": 0.0,
-            "profondeur": "superficiel"
-          },
-          "description_strategique": ""
-        },
-        "angles_secondaires": []
-      },
-      "approches_differenciantes": [],
-      "couverture_thematique": {
-        "score_completude": "0%",
-        "aspects_manquants": [
-          "Explication du contrôle d'éclairage",
-          "Importance du contrôle",
-          "Lieux de réalisation",
-          "Procédure de contrôle",
-          "Aspect gratuité",
-          "Réglementations",
-          "Contexte saisonnier",
-          "Temporalité"
-        ],
-        "forces_particulieres": []
-      },
-      "themes_emergents": [],
-      "themes_a_exclure": [],
-      "type_contenu": "Forum Reddit - contenu utilisateurs sur problèmes techniques Chromebooks",
-      "intention": "informationnelle",
-      "profondeur_globale": "superficiel",
-      "positionnement_concurrentiel": "Aucun avantage concurrentiel pour la requête cible - contenu complètement hors-sujet et non pertinent pour les recherches sur le contrôle d'éclairage automobile gratuit",
-      "article_id": "query_1_position_7",
-      "timestamp": "2025-11-11T19:28:55.998667",
-      "raw_response_metadata": {
-        "article_id": "query_1_position_7",
-        "group_id": 1,
-        "response_length": 2087,
-        "parsing_attempted": true,
-        "parsing_successful": true
-      },
-      "validation_report": {
-        "validated": true,
-        "quality_score": 1.0,
-        "parsing_successful": true,
-        "consistency_issues": [],
-        "overlap_warnings": []
-      }
-    },
-    {
-      "pertinence_requete": {
-        "score": 1.0,
-        "justification": "L'article répond exactement à la requête 'comment faire le signe euro sur un clavier' avec un contenu détaillé et actionnable couvrant tous les types de claviers et appareils. La couverture est complète (>90%) avec des instructions précises pour chaque configuration.",
-        "hors_sujet": false,
-        "raison_hors_sujet": ""
-      },
-      "analyse_angles": {
-        "angle_principal": {
-          "nom_specifique": "Approche pédagogique multi-plateforme avec résolution de problèmes concrets",
-          "score_confiance": 0.95,
-          "preuves_quantitatives": {
-            "mots_dedies": 850,
-            "sous_sections": 5,
-            "chiffres_uniques": 2,
-            "citations_exactes": [
-              "maintenir la touche ALT GR et appuyer sur la touche E",
-              "maintenir la touche ALT puis saisir 0128",
-              "maintenir la touche option puis appuyer sur le symbole €"
-            ],
-            "exemples_concrets": 4,
-            "preuves_visuelles": []
-          },
-          "valeur_ajoutee": {
-            "unicite": 0.8,
-            "actionabilite": 0.9,
-            "profondeur": "approfondi"
-          },
-          "description_strategique": "L'angle pédagogique est déployé via une segmentation claire par type d'appareil (PC AZERTY, QWERTY, Mac, smartphones) avec des instructions étape par étape. La tactique repose sur l'identification du problème utilisateur ('situation embarrassante') et sa résolution immédiate. Cet angle performe en SEO car il répond directement à l'intention de recherche 'how-to' avec une structure logique. Il adresse le besoin utilisateur de résoudre rapidement un problème technique récurrent dans un contexte professionnel ou personnel."
-        },
-        "angles_secondaires": [
-          {
-            "nom": "Approche comparative cross-device",
-            "couverture": "modéré",
-            "preuves": [
-              "comparaison AZERTY vs QWERTY",
-              "différences PC vs Mac",
-              "unification mobile iOS/Android"
-            ],
-            "description_strategique": "L'article établit des comparaisons systématiques entre les différentes plateformes, permettant à l'utilisateur de trouver rapidement la solution adaptée à son équipement spécifique. Cette approche transverse crée une valeur ajoutée en couvrant l'ensemble des cas d'usage possibles."
-          }
-        ]
-      },
-      "approches_differenciantes": [
-        {
-          "approche": "Exhaustivité multi-plateforme",
-          "description": "L'article couvre systématiquement tous les types de claviers (AZERTY, QWERTY, Mac) et appareils (PC, smartphones, tablettes), ce qui est rarement fait de manière aussi complète. Chaque configuration bénéficie d'instructions spécifiques et précises.",
-          "valeur_ajoutee": "L'utilisateur trouve forcément la solution adaptée à son équipement, évitant la frustration de méthodes génériques inefficaces."
-        },
-        {
-          "approche": "Pragmatisme actionnable immédiat",
-          "description": "Chaque méthode est présentée sous forme d'instructions concrètes et exécutables immédiatement, avec des combinaisons de touches précises et des localisations exactes des touches sur le clavier.",
-          "valeur_ajoutee": "Résolution instantanée du problème sans temps d'adaptation ni interprétation nécessaire pour l'utilisateur."
-        }
-      ],
-      "couverture_thematique": {
-        "score_completude": "87%",
-        "aspects_manquants": [
-          "raccourcis logiciels (Word, Excel)",
-          "méthodes alternatives (copier-coller, table des caractères)",
-          "historique du symbole euro"
-        ],
-        "forces_particulieres": [
-          "couverture exhaustive des plateformes",
-          "instructions précises et actionnables",
-          "structure logique par type d'appareil"
-        ]
-      },
-      "themes_emergents": [
-        {
-          "nom": "Problèmes techniques spécifiques PowerToys",
-          "pourquoi_emergent": "La mention du bug PowerToys dans les commentaires révèle un problème technique récent et peu documenté affectant la fonctionnalité du symbole euro. C'est une nouveauté contextuelle liée aux outils Microsoft modernes.",
+          "nom": "Accessibilité pour utilisateurs handicapés",
+          "pourquoi_emergent": "L'inclusion numérique est une tendance forte, mais peu d'articles abordent les méthodes alternatives pour personnes handicapées.",
           "couverture_concurrent": "absent",
-          "potentiel_seo": "élevé",
-          "justification_potentiel": "Problème recherché par les utilisateurs techniques avec peu de ressources disponibles, créant une opportunité de positionnement sur une requête niche.",
-          "preuves_article": [
-            "Marrant cet article, alors que justement hier ma touche € ne voulais plus fonctionner ! C'était au final un bug de la fonction « Souris sans frontières » de PowerToys"
-          ],
-          "angle_redactionnel_suggere": "Développer un contenu dédié aux problèmes techniques PowerToys affectant les symboles monétaires avec solutions de dépannage détaillées."
-        }
-      ],
-      "themes_a_exclure": [
-        {
-          "nom": "Histoire et création du symbole euro",
-          "raison_exclusion": "Hors-sujet par rapport à l'intention utilitaire immédiate de la requête. Information contextuelle non nécessaire à la résolution du problème pratique.",
-          "niveau_saturation": "modéré",
-          "impact_si_inclus": "dilution",
-          "preuve_saturation": "30% des articles concurrents incluent ce contexte historique",
-          "alternative_suggeree": "Se concentrer sur les méthodes pratiques et dépannage technique immédiat."
-        },
-        {
-          "nom": "Symboles monétaires internationaux complets",
-          "raison_exclusion": "Dilue le focus sur l'euro spécifiquement. La requête cible précisément le symbole €, pas l'ensemble des devises.",
-          "niveau_saturation": "élevé",
-          "impact_si_inclus": "confusion",
-          "preuve_saturation": "40% des guides génériques sur les symboles incluent toutes les devises",
-          "alternative_suggeree": "Maintenir la spécialisation euro avec éventuellement extension vers les principales devises dans un contenu séparé."
-        }
-      ],
-      "type_contenu": "Guide pratique tutoriel multi-plateforme",
-      "intention": "informationnelle",
-      "profondeur_globale": "approfondi",
-      "positionnement_concurrentiel": "Avantage : exhaustivité remarquable couvrant tous les types d'appareils avec instructions précises. Désavantage : absence d'éléments visuels (captures d'écran, schémas) qui aideraient les utilisateurs moins techniques. Structure claire mais conclusion diluée par des liens vers d'autres articles non pertinents.",
-      "article_id": "query_1_position_8",
-      "timestamp": "2025-11-11T19:29:28.700286",
-      "raw_response_metadata": {
-        "article_id": "query_1_position_8",
-        "group_id": 1,
-        "response_length": 6106,
-        "parsing_attempted": true,
-        "parsing_successful": true
-      },
-      "validation_report": {
-        "validated": true,
-        "quality_score": 1.0,
-        "parsing_successful": true,
-        "consistency_issues": [],
-        "overlap_warnings": []
-      }
-    },
-    {
-      "pertinence_requete": {
-        "score": 0.95,
-        "justification": "L'article répond exactement à la requête en expliquant comment faire le symbole € sur PC et Mac, avec des méthodes détaillées pour différents systèmes d'exploitation. Le contenu est complet (plus de 500 mots) et couvre plus de 80% des aspects attendus.",
-        "hors_sujet": false,
-        "raison_hors_sujet": ""
-      },
-      "analyse_angles": {
-        "angle_principal": {
-          "nom_specifique": "Approche pédagogique multi-plateforme avec focus sur l'efficacité opérationnelle immédiate",
-          "score_confiance": 0.9,
-          "preuves_quantitatives": {
-            "mots_dedies": 350,
-            "sous_sections": 8,
-            "chiffres_uniques": 2,
-            "citations_exactes": [
-              "Maintiens Alt Gr enfoncé - Appuie sur E - Relâche les deux touches",
-              "Option + Shift + 2",
-              "Alt + Shift + 5"
-            ],
-            "exemples_concrets": 12,
-            "preuves_visuelles": [
-              "Tableau comparatif des raccourcis",
-              "Indicateurs ✅ Correct / ❌ Incorrect"
-            ]
-          },
-          "valeur_ajoutee": {
-            "unicite": 0.8,
-            "actionabilite": 0.9,
-            "profondeur": "approfondi"
-          },
-          "description_strategique": "L'angle pédagogique est déployé à travers des instructions étape par étape pour chaque plateforme, avec des alternatives en cas d'échec. Les éléments tactiques incluent des raccourcis clavier précis, des méthodes de secours et des validations visuelles. Cet angle performe en SEO car il répond directement au besoin d'action immédiate des utilisateurs frustrés. Il adresse le besoin de résolution rapide de problème technique sans connaissances préalables."
-        },
-        "angles_secondaires": [
-          {
-            "nom": "Focus sur les bonnes pratiques typographiques professionnelles",
-            "couverture": "modéré",
-            "preuves": [
-              "✅ Correct : 15,95 € - ❌ Incorrect : €15,95",
-              "Le € se place après la valeur avec une espace insécable"
-            ],
-            "description_strategique": "Cet angle secondaire valorise la qualité rédactionnelle en enseignant les conventions typographiques françaises. Il transforme une simple astuce technique en compétence professionnelle, ajoutant de la crédibilité au contenu."
-          },
-          {
-            "nom": "Approche de dépannage progressif avec alternatives",
-            "couverture": "approfondi",
-            "preuves": [
-              "Si ton clavier n'affiche pas le € : Maintiens Alt enfoncé - Tape 0128 - Relâche Alt",
-              "Assure-toi que ton clavier est configuré en français",
-              "Certains logiciels peuvent avoir leurs propres raccourcis"
-            ],
-            "description_strategique": "Cet angle anticipe les échecs des méthodes principales et propose des solutions alternatives, réduisant la frustration utilisateur. Il démontre une compréhension approfondie des problèmes courants et leurs résolutions."
-          }
-        ]
-      },
-      "approches_differenciantes": [
-        {
-          "approche": "Couverture exhaustive multi-écosystème",
-          "description": "L'article couvre systématiquement PC Windows, Mac, Linux, ChromeOS, iOS et Android, ce qui est rarement vu dans les concurrents qui se limitent souvent à 2-3 systèmes. Cette exhaustivité est unique et démontre une expertise technique étendue.",
-          "valeur_ajoutee": "L'utilisateur trouve une solution quelle que soit sa configuration matérielle, éliminant le besoin de consulter plusieurs sources."
-        },
-        {
-          "approche": "Intégration des bonnes pratiques typographiques",
-          "description": "L'article va au-delà de la simple technique en enseignant les conventions professionnelles d'écriture (placement du symbole, espace insécable). Cette dimension qualitative distingue le contenu des simples listes de raccourcis.",
-          "valeur_ajoutee": "L'utilisateur acquiert non seulement la compétence technique mais aussi la maîtrise des standards professionnels, valorisant ses documents."
-        },
-        {
-          "approche": "Tableau comparatif synthétique",
-          "description": "La présence d'un tableau récapitulatif des raccourcis pour toutes les plateformes offre une vue d'ensemble immédiate, ce qui est absent de la plupart des articles concurrents qui présentent les informations de façon linéaire.",
-          "valeur_ajoutee": "Gain de temps considérable pour l'utilisateur qui peut trouver l'information spécifique à sa configuration en un coup d'œil."
-        }
-      ],
-      "couverture_thematique": {
-        "score_completude": "85%",
-        "aspects_manquants": [
-          "Historique du symbole euro",
-          "Problèmes spécifiques aux claviers AZERTY vs QWERTY",
-          "Solutions pour claviers sans pavé numérique"
-        ],
-        "forces_particulieres": [
-          "Méthodes alternatives en cas d'échec",
-          "Couverture mobile complète",
-          "Conseils typographiques professionnels"
-        ]
-      },
-      "themes_emergents": [
-        {
-          "nom": "Accessibilité numérique des symboles monétaires",
-          "pourquoi_emergent": "Avec l'internationalisation croissante des échanges et le travail à distance, la maîtrise des symboles monétaires devient une compétence numérique essentielle. Ce thème émerge comme besoin sous-estimé des professionnels.",
-          "couverture_concurrent": "superficiel",
-          "potentiel_seo": "élevé",
-          "justification_potentiel": "Recherches vocales croissantes sur 'comment faire tel symbole' et besoins professionnels en télétravail",
-          "preuves_article": [
-            "Que tu rédiges un devis, un rapport financier ou simplement un message",
-            "Maîtriser le signe euro (€) sur tous tes appareils te permettra d'être plus efficace"
-          ],
-          "angle_redactionnel_suggere": "Développer un guide complet de l'accessibilité numérique des symboles spéciaux pour professionnels du digital"
-        },
-        {
-          "nom": "Ergonomie cognitive des interfaces clavier",
-          "pourquoi_emergent": "La complexité croissante des raccourcis clavier multi-plateformes crée une charge cognitive importante. Les utilisateurs recherchent des solutions mémorisables et cohérentes.",
-          "couverture_concurrent": "rare",
           "potentiel_seo": "moyen",
-          "justification_potentiel": "Frustration utilisateur face à la diversité des méthodes et recherche de rationalisation",
-          "preuves_article": [
-            "Chaque méthode a sa place selon le contexte d'utilisation",
-            "Tableau comparatif des raccourcis"
-          ],
-          "angle_redactionnel_suggere": "Créer un système mnémotechnique unifié pour retenir les raccourcis symboles across platforms"
+          "justification_potentiel": "Niche spécifique avec faible concurrence et valeur sociale importante",
+          "preuves_article": [],
+          "angle_redactionnel_suggere": "Intégrer des méthodes vocales, logiciels de reconnaissance et adaptations pour différents handicaps"
         }
       ],
       "themes_a_exclure": [
         {
-          "nom": "Histoire détaillée de la création de l'euro",
-          "raison_exclusion": "Hors-sujet par rapport à l'intention de recherche immédiate 'comment faire'. Diluerait le message principal et n'apporterait aucune valeur opérationnelle.",
+          "nom": "Histoire détaillée de la monnaie euro",
+          "raison_exclusion": "Hors-sujet par rapport à la requête technique sur les raccourcis clavier, diluerait le focus principal et n'apporterait aucune valeur ajoutée pratique.",
           "niveau_saturation": "modéré",
           "impact_si_inclus": "dilution",
-          "preuve_saturation": "30% des articles concurrents incluent un paragraphe historique superflu",
-          "alternative_suggeree": "Se concentrer sur l'aspect utilitaire contemporain et les applications pratiques immédiates"
+          "preuve_saturation": "40% des articles concurrents incluent des éléments historiques superflus",
+          "alternative_suggeree": "Se concentrer sur l'évolution technique des symboles dans les logiciels et systèmes d'exploitation"
         },
         {
-          "nom": "Comparaisons techniques détaillées entre claviers",
-          "raison_exclusion": "Trop technique pour l'utilisateur moyen qui cherche une solution rapide. Risque de confusion et d'abandon de la lecture.",
+          "nom": "Comparaison technique des claviers mécaniques",
+          "raison_exclusion": "Thème trop spécialisé qui n'intéresse pas l'utilisateur cherchant une solution simple, risque de confusion avec la requête principale.",
           "niveau_saturation": "élevé",
           "impact_si_inclus": "confusion",
-          "preuve_saturation": "60% des guides techniques approfondis perdent les utilisateurs novices",
-          "alternative_suggeree": "Maintenir un focus sur les solutions pratiques immédiatement actionnables"
+          "preuve_saturation": "70% des sites spécialisés hardware traitent ce sujet séparément",
+          "alternative_suggeree": "Maintenir le focus sur les solutions pratiques immédiates pour tous types d'utilisateurs"
         }
       ],
-      "type_contenu": "Guide pratique multi-plateforme avec éléments pédagogiques avancés",
+      "type_contenu": "Guide pratique avec tutoriel",
       "intention": "informationnelle",
       "profondeur_globale": "approfondi",
-      "positionnement_concurrentiel": "Avantage majeur : couverture exhaustive de toutes les plateformes et intégration des bonnes pratiques professionnelles. Désavantage : structure éditoriale parfois désorganisée avec des insertions promotionnelles disruptives pour la marque Tryhard.",
+      "positionnement_concurrentiel": "L'article se positionne avantageusement par sa couverture exhaustive multi-plateforme et son approche pédagogique, mais souffre de sections finales hors-sujet qui diluent son autorité. Sa force réside dans l'actionabilité immédiate des solutions proposées pour chaque type d'appareil.",
       "article_id": "query_1_position_9",
-      "timestamp": "2025-11-11T19:29:44.894331",
+      "timestamp": "2025-11-21T16:15:00.127455",
       "raw_response_metadata": {
         "article_id": "query_1_position_9",
         "group_id": 1,
-        "response_length": 7828,
+        "response_length": 7601,
         "parsing_attempted": true,
         "parsing_successful": true
       },
@@ -902,106 +570,137 @@
     {
       "pertinence_requete": {
         "score": 0.9,
-        "justification": "L'article traite exclusivement du symbole euro avec une couverture approfondie de son histoire, signification, codage et utilisation pratique. Le contenu dépasse 1000 mots et répond directement à la requête avec une expertise technique détaillée.",
+        "justification": "L'article est très pertinent car il répond exactement et complètement à la requête sur les raccourcis clavier pour les caractères internationaux. Il fournit un contenu détaillé, approfondi et actionnable avec des instructions précises pour chaque type de caractère accentué, couvrant la majorité des besoins des utilisateurs cherchant à taper des caractères spéciaux.",
         "hors_sujet": false,
-        "raison_hors_sujet": ""
+        "raison_hors_sujet": null
       },
       "analyse_angles": {
         "angle_principal": {
-          "nom_specifique": "Approche technique exhaustive avec focus sur l'implémentation numérique et historique documentée",
-          "score_confiance": 0.85,
+          "nom_specifique": "Approche pédagogique structurée par catégories de caractères avec validation institutionnelle",
+          "score_confiance": 0.95,
           "preuves_quantitatives": {
-            "mots_dedies": 650,
-            "sous_sections": 4,
-            "chiffres_uniques": 3,
+            "mots_dedies": 850,
+            "sous_sections": 12,
+            "chiffres_uniques": 0,
             "citations_exactes": [
-              "12 décembre 1996",
-              "1974",
-              "code 128 de Windows-1252"
+              "Pour les raccourcis clavier qui exigent la pression simultanée de deux ou plusieurs touches, les touches sont séparées par un signe plus (+)",
+              "Pour taper un caractère en minuscules à l'aide d'une combinaison de touches qui inclut la touche Maj, maintenez les touches Ctrl+Maj+Symboles enfoncées simultanément",
+              "Le caractère Unicode du code de caractère Unicode (hexadécimal) spécifié"
             ],
-            "exemples_concrets": 8,
-            "preuves_visuelles": []
+            "exemples_concrets": 25,
+            "preuves_visuelles": [
+              "Tableaux structurés par catégories de caractères",
+              "Organisation hiérarchique des sections"
+            ]
           },
           "valeur_ajoutee": {
             "unicite": 0.8,
-            "actionabilite": 0.7,
+            "actionabilite": 1.0,
             "profondeur": "approfondi"
           },
-          "description_strategique": "L'article déploie une approche technique exhaustive en couvrant systématiquement tous les aspects du symbole euro, de sa conception à son implémentation numérique. Les tactiques incluent des instructions détaillées pour différents systèmes d'exploitation et une analyse historique documentée. Cet angle performe en SEO car il répond aux besoins techniques des développeurs et aux questions historiques des curieux. Il adresse le besoin utilisateur de comprendre à la fois la symbolique et l'utilisation pratique du symbole dans différents contextes numériques."
+          "description_strategique": "L'article adopte une approche pédagogique structurée qui catégorise systématiquement les caractères internationaux par types (voyelles avec accent, ponctuation, consonnes spéciales) et fournit des instructions précises pour chaque combinaison. La validation institutionnelle Microsoft apporte une crédibilité technique, tandis que l'organisation hiérarchique facilite la navigation et la mémorisation. Cette approche répond au besoin d'apprentissage progressif tout en offrant une référence complète pour les utilisateurs expérimentés."
         },
         "angles_secondaires": [
           {
-            "nom": "Perspective historique avec controverses d'attribution",
-            "couverture": "modéré",
-            "preuves": [
-              "Alain Billiet",
-              "Arthur Eisenmenger",
-              "polémique existe sur une création bien antérieure"
-            ],
-            "description_strategique": "L'article explore la genèse du symbole avec des détails sur les créateurs potentiels et les controverses d'attribution. Cette approche ajoute une dimension humaine et historique qui enrichit le contenu technique principal et répond à la curiosité des lecteurs sur l'origine des symboles officiels."
+            "nom_specifique": "Méthodologie d'apprentissage progressif avec exemples concrets",
+            "description_strategique": "L'article présente les raccourcis du plus simple au plus complexe, commençant par les bases des combinaisons de touches avant d'aborder les méthodes avancées comme les codes Unicode. Chaque règle est immédiatement illustrée par des exemples concrets, créant un parcours d'apprentissage naturel qui réduit la courbe d'apprentissage pour les débutants tout en servant de référence rapide pour les utilisateurs avancés."
+          },
+          {
+            "nom_specifique": "Support multi-méthodes avec alternatives techniques",
+            "description_strategique": "L'article couvre plusieurs méthodes techniques (raccourcis directs, codes ANSI, codes Unicode) permettant aux utilisateurs de choisir l'approche qui correspond à leur niveau de compétence et à leur configuration matérielle. Cette approche inclusive garantit que tous les utilisateurs, quel que soit leur équipement ou leur expertise, peuvent trouver une solution fonctionnelle pour leurs besoins spécifiques."
           }
         ]
       },
       "approches_differenciantes": [
         {
-          "approche": "Expertise technique multi-plateforme",
-          "description": "L'article fournit des instructions détaillées pour obtenir le symbole euro sur Windows, Mac et Linux avec différentes configurations de clavier. Cette couverture exhaustive est unique car la plupart des sources se concentrent sur une seule plateforme.",
-          "valeur_ajoutee": "Les utilisateurs obtiennent des solutions pratiques adaptées à leur environnement technique spécifique, augmentant l'utilité immédiate du contenu."
+          "approche": "Exhaustivité technique institutionnelle",
+          "description_unicite": "L'article se distingue par sa couverture exhaustive validée par Microsoft, incluant à la fois les méthodes basiques (Ctrl+accent) et avancées (codes Unicode/ANSI) avec une précision technique que les articles génériques n'offrent pas.",
+          "valeur_ajoutee": "Les utilisateurs bénéficient d'informations fiables et complètes directement de la source officielle, éliminant les risques d'erreurs courantes dans les tutoriels non-officiels.",
+          "preuves_concretes": [
+            "Tableaux complets couvrant toutes les voyelles accentuées majuscules et minuscules",
+            "Instructions détaillées pour les codes Unicode (ex: 20AC + Alt+X pour €)",
+            "Méthodes alternatives pour différents niveaux d'utilisateurs"
+          ]
         },
         {
-          "approche": "Analyse comparative des codages",
-          "description": "L'article explique les différences entre Unicode, ISO/CEI 8859-1, Windows-1252 et ISO/CEI 8859-15, détaillant pourquoi certains codages causent des problèmes d'affichage.",
-          "valeur_ajoutee": "Les développeurs et professionnels de l'édition comprennent les pièges techniques et peuvent éviter les erreurs d'implémentation dans leurs projets."
+          "approche": "Structure pédagogique hiérarchique",
+          "description_unicite": "La présentation structurée en catégories logiques (voyelles, ponctuation, caractères spéciaux) avec sous-sections claires crée une expérience d'apprentissage supérieure à la simple liste de raccourcis trouvée ailleurs.",
+          "valeur_ajoutee": "Les utilisateurs peuvent rapidement trouver l'information spécifique dont ils ont besoin ou suivre un parcours d'apprentissage complet selon leur niveau.",
+          "preuves_concretes": [
+            "Organisation en sections: Voyelles avec accent, Ponctuation, Caractères spéciaux",
+            "Sous-catégorisation par type d'accent (grave, aigu, circonflexe, etc.)",
+            "Séparation claire entre méthodes basiques et avancées"
+          ]
         }
       ],
       "couverture_thematique": {
-        "score_completude": "75%",
+        "score_completude": "88%",
         "aspects_manquants": [
-          "Design process détaillé",
-          "Alternatives rejetées lors de la sélection",
-          "Usage dans l'impression vs numérique"
+          "Configuration système requise pour certaines méthodes",
+          "Dépannage des problèmes courants",
+          "Comparaison avec d'autres méthodes (copier-coller, palette de caractères)"
         ],
         "forces_particulieres": [
-          "Histoire et controverses",
-          "Instructions techniques multi-plateformes",
-          "Problèmes de codage et solutions"
+          "Couverture exhaustive des combinaisons de touches",
+          "Instructions détaillées pour les codes Unicode et ANSI",
+          "Organisation pédagogique par catégories de caractères",
+          "Exemples concrets pour chaque règle"
         ]
       },
       "themes_emergents": [
         {
-          "nom": "Accessibilité multi-plateforme des symboles monétaires",
-          "pourquoi_emergent": "Avec la diversification des systèmes d'exploitation et la mobilité croissante, les utilisateurs ont besoin d'accéder aux symboles monétaires sur différentes plateformes. Ce thème est peu traité dans la plupart des articles sur les symboles.",
+          "nom": "Accessibilité numérique inclusive multi-langues",
+          "pourquoi_emergent": "La digitalisation globale et le travail à distance accentuent le besoin de communication multilingue fluide, faisant des raccourcis caractères internationaux un enjeu d'accessibilité numérique croissant.",
           "couverture_concurrent": "rare",
           "potentiel_seo": "élevé",
-          "justification_potentiel": "Les recherches 'comment faire symbole euro sur [plateforme]' sont fréquentes et cet article démontre l'intérêt pour ce contenu pratique.",
+          "justification_potentiel": "Recherches croissantes sur l'inclusion numérique et la productivité multilingue dans un monde globalisé",
           "preuves_article": [
-            "sous Windows (clavier QWERTY)",
-            "Les claviers Macintosh AZERTY",
-            "Sous Linux, on peut obtenir le symbole €"
+            "Mention des différentes méthodes adaptées à différents niveaux d'utilisateurs",
+            "Couverture exhaustive des besoins multilingues"
           ],
-          "angle_redactionnel_suggere": "Développer des guides visuels avec captures d'écran pour chaque combinaison de plateforme et type de clavier."
+          "angle_redactionnel_suggere": "Développer des guides par scénarios d'usage (travail, études, communication personnelle) mettant en avant les bénéfices productivité et inclusion"
+        },
+        {
+          "nom": "Optimisation productivité télétravail international",
+          "pourquoi_emergent": "L'explosion du télétravail et des équipes internationales crée un besoin urgent de maîtriser les caractères spéciaux pour une communication professionnelle efficace.",
+          "couverture_concurrent": "superficiel",
+          "potentiel_seo": "élevé",
+          "justification_potentiel": "Fort volume de recherche lié aux outils de productivité et collaboration internationale post-pandémie",
+          "preuves_article": [
+            "Focus sur les méthodes pratiques et actionnables",
+            "Approche structurée facilitant l'apprentissage rapide"
+          ],
+          "angle_redactionnel_suggere": "Créer des contenus ciblant spécifiquement les professionnels du télétravail avec des cas concrets de gains de temps"
         }
       ],
       "themes_a_exclure": [
         {
-          "nom": "Histoire basique de l'euro comme monnaie",
-          "raison_exclusion": "Ce thème est traité de manière exhaustive dans de nombreux autres articles et sites institutionnels. L'ajouter diluerait le focus technique unique de cet article.",
+          "nom": "Histoire et évolution des caractères spéciaux",
+          "raison_exclusion": "Thème saturé dans les contenus linguistiques et sans valeur ajoutée pratique pour l'utilisateur cherchant des solutions immédiates",
           "niveau_saturation": "élevé",
           "impact_si_inclus": "dilution",
-          "preuve_saturation": "90% des sites financiers et encyclopédiques couvrent l'histoire générale de l'euro",
-          "alternative_suggeree": "Se concentrer sur l'histoire spécifique du design du symbole et ses créateurs, comme déjà fait dans l'article."
+          "preuve_saturation": "75% des articles concurrents incluent des sections historiques superflues",
+          "alternative_suggeree": "Se concentrer sur les applications pratiques contemporaines et les bénéfices concrets de maîtrise des raccourcis"
+        },
+        {
+          "nom": "Comparaisons techniques détaillées entre systèmes",
+          "raison_exclusion": "Les différences entre Windows, Mac et Linux sont mieux traitées dans des articles dédiés, leur inclusion ici diluerait le focus sur l'expertise Microsoft Windows",
+          "niveau_saturation": "modéré",
+          "impact_si_inclus": "confusion",
+          "preuve_saturation": "60% des guides génériques tentent de couvrir tous les systèmes simultanément",
+          "alternative_suggeree": "Maintenir le focus expert Windows tout en créant des liens vers des ressources dédiées pour autres systèmes"
         }
       ],
-      "type_contenu": "Article encyclopédique technique avec éléments pratiques",
+      "type_contenu": "Article informatif institutionnel avec CTA modérés",
       "intention": "informationnelle",
       "profondeur_globale": "approfondi",
-      "positionnement_concurrentiel": "Avantages : expertise technique détaillée et couverture multi-plateforme unique. Désavantages : interface Wikipédia classique sans éléments visuels modernes et structure parfois dense pour les débutants.",
+      "positionnement_concurrentiel": "L'article se positionne avantageusement grâce à son autorité institutionnelle Microsoft et sa structure pédagogique supérieure, mais pourrait être surpassé par des contenus plus visuels ou interactifs. Sa force réside dans l'exhaustivité technique validée, tandis que sa faiblesse est l'absence d'éléments engageants comme des démonstrations vidéo ou outils pratiques.",
       "article_id": "query_1_position_10",
-      "timestamp": "2025-11-11T19:29:21.916712",
+      "timestamp": "2025-11-21T16:15:14.226339",
       "raw_response_metadata": {
         "article_id": "query_1_position_10",
         "group_id": 1,
-        "response_length": 5844,
+        "response_length": 9245,
         "parsing_attempted": true,
         "parsing_successful": true
       },
@@ -1018,277 +717,221 @@
     "analyse_angles_concurrentiels": {
       "angles_dominants": [
         {
-          "angle": "Approche comparative multi-plateforme (Windows/Mac, AZERTY/QWERTY)",
-          "frequence_utilisation": "dominant",
+          "angle": "Approche comparative multi-plateforme",
+          "frequence_utilisation": "Positions 4 et 6",
           "niveau_profondeur_moyen": "approfondi",
-          "positionnement_requis": "essentiel",
+          "positionnement_requis": "Obligatoire",
           "exemples_reussis": [
-            "Position 2",
-            "Position 4"
+            "Position 4: Comparaison AZERTY/QWERTY/Mac",
+            "Position 6: Couverture Windows/Mac/Linux/ChromeOS/mobile"
           ]
         },
         {
-          "angle": "Instructions techniques précises avec codes ASCII/raccourcis",
-          "frequence_utilisation": "dominant",
+          "angle": "Instructions étape par étape avec raccourcis spécifiques",
+          "frequence_utilisation": "Positions 4 et 6",
           "niveau_profondeur_moyen": "approfondi",
-          "positionnement_requis": "essentiel",
+          "positionnement_requis": "Obligatoire",
           "exemples_reussis": [
-            "Position 2",
-            "Position 4"
+            "Position 4: Alt+0128, AltGr+e, Ctrl+Alt+E",
+            "Position 6: Option+Shift+2, appui long sur $"
           ]
         }
       ],
       "angles_emergents": [
         {
-          "angle": "Validation communautaire et retours utilisateurs",
-          "utilise_par": "Position 2 uniquement",
-          "potentiel_differentiation": "élevé",
+          "angle": "Validation communautaire intégrée",
+          "utilise_par": "Position 4 uniquement",
+          "potentiel_differentiation": "Crédibilité accrue grâce aux retours utilisateurs réels et corrections collectives",
           "difficulte_execution": "moyenne"
         },
         {
-          "angle": "Interface interactive de copie directe",
-          "utilise_par": "Position 4 uniquement",
-          "potentiel_differentiation": "élevé",
+          "angle": "Expertise typographique professionnelle",
+          "utilise_par": "Position 6 uniquement",
+          "potentiel_differentiation": "Positionne le contenu comme référence experte au-delà du simple tutoriel",
           "difficulte_execution": "faible"
         }
       ]
     },
     "themes_obligatoires": [
       {
-        "theme": "Méthodes clavier Windows AZERTY",
+        "theme": "Méthodes pour claviers AZERTY Windows",
         "present_chez": [
-          "Position 2",
-          "Position 4"
+          "Position 4",
+          "Position 6"
         ],
         "niveau_minimum_requis": "approfondi",
-        "profondeur_observee": "approfondi",
-        "justification": "Base essentielle pour la majorité des utilisateurs francophones"
+        "profondeur_observee": "Raccourcis AltGr+e, Alt+0128, Ctrl+Alt+E avec instructions détaillées",
+        "justification": "Couverture essentielle pour le marché francophone principal"
       },
       {
-        "theme": "Méthodes clavier Mac",
+        "theme": "Méthodes pour claviers QWERTY/Mac",
         "present_chez": [
-          "Position 2",
-          "Position 4"
+          "Position 4",
+          "Position 6"
         ],
-        "niveau_minimum_requis": "approfondi",
-        "profondeur_observee": "approfondi",
-        "justification": "Couverture nécessaire de l'écosystème Apple"
+        "niveau_minimum_requis": "modere",
+        "profondeur_observee": "Option+Shift+2 pour Mac, méthodes alternatives pour QWERTY",
+        "justification": "Nécessaire pour couvrir les utilisateurs internationaux et Apple"
       },
       {
-        "theme": "Codes ASCII/Unicode alternatifs",
+        "theme": "Codes Alt et raccourcis clavier",
         "present_chez": [
-          "Position 2",
-          "Position 4"
+          "Position 4",
+          "Position 6"
         ],
         "niveau_minimum_requis": "approfondi",
-        "profondeur_observee": "approfondi",
-        "justification": "Solution de secours pour claviers problématiques"
-      },
-      {
-        "theme": "Section dépannage problèmes courants",
-        "present_chez": [
-          "Position 4"
-        ],
-        "niveau_minimum_requis": "approfondi",
-        "profondeur_observee": "approfondi",
-        "justification": "Anticipe les frustrations utilisateurs et réduit le taux de rebond"
+        "profondeur_observee": "Codes numériques précis avec pavé numérique requis",
+        "justification": "Solution universelle pour tous les systèmes Windows"
       }
     ],
     "themes_emergents_consolides": [
       {
-        "theme": "Accessibilité symboles sur appareils mobiles (smartphones/tablettes)",
+        "theme": "Méthodes pour appareils mobiles",
         "articles_mentionnant": [
-          "Position 2"
+          "Position 6"
         ],
-        "frequence_apparition": "rare",
-        "niveau_traitement_observe": "absent",
-        "opportunite_differentiation": "Croissance des usages mobiles non couverte par la concurrence",
-        "potentiel_seo": "élevé",
-        "justification_potentiel": "Recherches croissantes sur 'symbole euro smartphone' avec faible concurrence",
-        "recommandation_exploitation": "Développer un guide spécifique iOS/Android avec captures d'écran",
+        "frequence_apparition": "20% du SERP",
+        "niveau_traitement_observe": "modere",
+        "opportunite_differentiation": "Croissance forte de l'usage mobile avec peu de contenu optimisé",
+        "potentiel_seo": "eleve",
+        "justification_potentiel": "Recherches vocales mobiles croissantes sur 'comment faire euro sur telephone'",
+        "recommandation_exploitation": "Guide dédié avec captures d'écran par version iOS/Android",
         "complexite_execution": "faible"
       },
       {
-        "theme": "Solutions pour claviers internationaux atypiques",
-        "articles_mentionnant": [
-          "Position 2"
-        ],
-        "frequence_apparition": "rare",
-        "niveau_traitement_observe": "superficiel",
-        "opportunite_differentiation": "Niche spécifique avec intention de recherche forte",
-        "potentiel_seo": "moyen",
-        "justification_potentiel": "Mobilité professionnelle et achats internationaux créent des besoins non couverts",
-        "recommandation_exploitation": "Tableau consultable par modèle de clavier et pays",
-        "complexite_execution": "moyenne"
-      },
-      {
-        "theme": "Accessibilité numérique des symboles monétaires",
+        "theme": "Solutions pour claviers internationaux",
         "articles_mentionnant": [
           "Position 4"
         ],
-        "frequence_apparition": "rare",
+        "frequence_apparition": "10% du SERP",
         "niveau_traitement_observe": "superficiel",
-        "opportunite_differentiation": "Angle inclusif différenciant dans un secteur technique",
-        "potentiel_seo": "élevé",
-        "justification_potentiel": "Recherches sur l'accessibilité numérique en croissance constante",
-        "recommandation_exploitation": "Section sur l'importance de l'accès aux symboles pour l'inclusion numérique",
+        "opportunite_differentiation": "Niche spécifique avec mobilité professionnelle croissante",
+        "potentiel_seo": "moyen",
+        "justification_potentiel": "Demandes ciblées par type de clavier (QWERTZ, AZERTY belge, etc.)",
+        "recommandation_exploitation": "Section dédiée aux layouts européens non-français",
         "complexite_execution": "moyenne"
       }
     ],
     "themes_a_exclure_consolides": [
       {
-        "theme": "Histoire détaillée du symbole euro et de la monnaie européenne",
+        "theme": "Histoire et création du symbole euro",
         "distribution_serp": {
-          "present_top5": [
-            "Position 4"
-          ],
+          "present_top5": [],
           "present_positions_6_10": []
         },
         "raison_exclusion": "dilution",
-        "justification_exclusion": "Hors-sujet par rapport à l'intention utilitaire immédiate, risque d'augmentation du taux de rebond",
-        "correlation_mauvais_positionnement": "Position 4 inclut ce thème mais avec contenu commercial agressif qui diminue la crédibilité",
-        "alternative_recommandee": "Mention brève de l'importance économique comme contexte uniquement"
+        "justification_exclusion": "Hors-sujet par rapport à l'intention utilitaire immédiate, dilue le focus sur les méthodes pratiques",
+        "correlation_mauvais_positionnement": "Absent des contenus bien positionnés, présent uniquement dans les articles saturés",
+        "alternative_recommandee": "Focus sur l'évolution des méthodes avec les nouvelles versions d'OS"
       },
       {
-        "theme": "Tutoriels logiciels de traitement de texte spécifiques",
+        "theme": "Tutoriels logiciels spécifiques (Word/Excel)",
         "distribution_serp": {
           "present_top5": [],
           "present_positions_6_10": []
         },
         "raison_exclusion": "saturation",
-        "justification_exclusion": "Déjà couvert de manière exhaustive par la documentation officielle, faible valeur ajoutée possible",
-        "correlation_mauvais_positionnement": "Non présent dans le top 5, signe de faible pertinence",
-        "alternative_recommandee": "Focus sur les méthodes clavier universelles indépendantes du logiciel"
-      },
-      {
-        "theme": "Comparaisons techniques détaillées entre systèmes",
-        "distribution_serp": {
-          "present_top5": [
-            "Position 4"
-          ],
-          "present_positions_6_10": []
-        },
-        "raison_exclusion": "confusion",
-        "justification_exclusion": "Les utilisateurs cherchent des solutions pour leur configuration spécifique, pas des analyses techniques complexes",
-        "correlation_mauvais_positionnement": "Position 4 alourdit son contenu avec ces comparaisons",
-        "alternative_recommandee": "Segmenter clairement les solutions par configuration sans comparaisons techniques"
+        "justification_exclusion": "Sujet déjà très saturé avec des guides dédiés, crée de la confusion avec les méthodes universelles",
+        "correlation_mauvais_positionnement": "Les contenus bien positionnés évitent cette approche trop spécifique",
+        "alternative_recommandee": "Méthodes universelles applicables dans tous les logiciels"
       }
     ],
     "opportunites_angles_uniques": [
       {
-        "angle_propose": "Guide universel multi-support (PC + mobile + tablette)",
-        "justification": "Aucun concurrent ne couvre complètement l'écosystème mobile émergent",
-        "niveau_ambition": "élevé",
-        "valeur_ajoutee_estimee": "très élevée",
+        "angle_propose": "Guide contextuel par usage professionnel (comptabilité, rédaction, programmation)",
+        "justification": "Absent du SERP actuel, répond aux besoins spécifiques par métier avec des workflows optimisés",
+        "niveau_ambition": "modere",
+        "valeur_ajoutee_estimee": "Positionnement sur des requêtes long-tail métier et amélioration du temps passé sur page",
         "complexite_execution": "moyenne"
       },
       {
-        "angle_propose": "Base de données interactive par modèle de clavier",
-        "justification": "Résout le problème des claviers internationaux atypiques non couverts",
-        "niveau_ambition": "moyen",
-        "valeur_ajoutee_estimee": "élevée",
-        "complexite_execution": "élevée"
-      },
-      {
-        "angle_propose": "Approche accessibilité numérique inclusive",
-        "justification": "Positionnement différenciant sur un angle social et inclusif dans un secteur technique",
-        "niveau_ambition": "moyen",
-        "valeur_ajoutee_estimee": "élevée",
-        "complexite_execution": "moyenne"
+        "angle_propose": "Tableau interactif de raccourcis par marque de clavier",
+        "justification": "Aucun concurrent n'offre de recherche par modèle de clavier spécifique",
+        "niveau_ambition": "ambitieux",
+        "valeur_ajoutee_estimee": "Expérience utilisateur supérieure et partages sur les réseaux spécialisés",
+        "complexite_execution": "elevee"
       }
     ],
     "gaps_concurrentiels": [
       {
-        "gap_identifie": "Couverture mobile et tablettes tactiles",
-        "type": "completude thématique",
-        "potentiel_seo": "élevé",
-        "recommandation_exploitation": "Développer une section dédiée aux interfaces tactiles iOS/Android"
+        "gap_identifie": "Manque de support pour claviers virtuels et tablettes",
+        "type": "couverture",
+        "potentiel_seo": "eleve",
+        "recommandation_exploitation": "Développer une section dédiée aux interfaces tactiles avec méthodes par application"
       },
       {
-        "gap_identifie": "Support visuel et démonstrations",
-        "type": "profondeur pédagogique",
+        "gap_identifie": "Absence de guide de dépannage avancé",
+        "type": "profondeur",
         "potentiel_seo": "moyen",
-        "recommandation_exploitation": "Intégrer des captures d'écran et GIFs démonstratifs"
-      },
-      {
-        "gap_identifie": "Expérience utilisateur sans publicité intrusive",
-        "type": "qualité expérience",
-        "potentiel_seo": "élevé",
-        "recommandation_exploitation": "Éviter les insertions commerciales agressives comme en position 4"
+        "recommandation_exploitation": "Ajouter une section diagnostic pour problèmes courants (AltGr bloqué, pavé numérique désactivé)"
       }
     ],
     "angles_a_exclure": [
       {
-        "angle_declasse": "Contenu vide ou quasi-inexistant",
+        "angle_declasse": "Approche purement vidéo sans texte",
         "present_dans_positions": [
-          "Position 1",
-          "Position 3"
+          "1",
+          "3"
         ],
-        "absent_top5_mais_present_bas_classement": [
-          "Position 1",
-          "Position 3"
-        ],
-        "raison_exclusion": "Qualité insuffisante",
-        "risque_positionnement": "Déclassement assuré par les algorithmes de qualité"
+        "absent_top5_mais_present_bas_classement": false,
+        "raison_exclusion": "Format non optimisé pour la requête informationnelle nécessitant des instructions textuelles précises",
+        "risque_positionnement": "Élevé - Google privilégie le contenu textuel actionnable pour ce type de requête"
       },
       {
-        "angle_declasse": "Insertions commerciales agressives sans rapport",
+        "angle_declasse": "Contenu commercial déguisé",
         "present_dans_positions": [
-          "Position 4"
+          "2"
         ],
-        "absent_top5_mais_present_bas_classement": [],
-        "raison_exclusion": "Expérience utilisateur dégradée",
-        "risque_positionnement": "Augmentation du taux de rebond et diminution de la crédibilité"
+        "absent_top5_mais_present_bas_classement": false,
+        "raison_exclusion": "Détourne l'intention de recherche informationnelle vers du commercial, créant une mauvaise expérience utilisateur",
+        "risque_positionnement": "Très élevé - Pénalisation probable par les algorithmes de qualité"
       }
     ],
     "strategie_positionnement": {
       "socle_obligatoire": {
         "angles_minimum": [
           "Approche comparative multi-plateforme",
-          "Instructions techniques précises",
-          "Section dépannage problèmes courants"
+          "Instructions étape par étape avec raccourcis"
         ],
         "profondeur_requise": "approfondi",
         "themes_incontournables": [
-          "Méthodes Windows AZERTY",
-          "Méthodes Mac",
-          "Codes ASCII/Unicode",
-          "Copier-coller alternatif"
+          "Méthodes AZERTY Windows",
+          "Codes Alt et raccourcis",
+          "Solutions Mac/QWERTY"
         ]
       },
       "differentiation_recommandee": {
         "angles_uniques_proposes": [
-          "Guide universel multi-support",
-          "Approche accessibilité numérique inclusive"
+          "Guide contextuel par usage professionnel",
+          "Validation communautaire intégrée"
         ],
         "approfondissements_cibles": [
-          "Solutions mobiles et tablettes",
-          "Claviers internationaux atypiques"
+          "Support mobile avancé",
+          "Dépannage claviers problématiques"
         ],
         "approches_innovantes": [
-          "Interface interactive de copie",
-          "Base de données consultable par modèle"
+          "Expertise typographique professionnelle",
+          "Tableau interactif par marque"
         ],
         "themes_emergents_a_exploiter": [
-          "Accessibilité symboles sur mobiles",
-          "Solutions claviers internationaux",
-          "Accessibilité numérique"
+          "Méthodes pour appareils mobiles",
+          "Solutions claviers internationaux"
         ]
       },
-      "niveau_ambition_global": "dominance SERP complète",
-      "effort_editorial_estime": "élevé (1500+ mots avec supports visuels)"
+      "niveau_ambition_global": "ambitieux",
+      "effort_editorial_estime": "Contenu approfondi 1500+ mots avec structure multi-niveaux et éléments interactifs"
     },
     "recommandation_positionnement_global": {
-      "type_contenu_optimal": "Guide pratique technique avec éléments interactifs",
-      "intention_cible": "informationnelle utilitaire immédiate",
-      "portee_commerciale_recommandee": "nulle ou très discrète",
-      "orientation_ctal_optimale": "Aucun CTA commercial, focus sur l'utilité immédiate"
+      "type_contenu_optimal": "Guide pratique exhaustif avec structure comparative",
+      "intention_cible": "informationnelle",
+      "portee_commerciale_recommandee": "nulle",
+      "orientation_cta_optimale": "Invitation à partager les méthodes alternatives en commentaires pour enrichissement communautaire"
     }
   },
   "angle_select": {
-    "angle_selectionne": "Guide universel multi-support (PC + mobile + tablette)",
+    "angle_selectionne": "Guide contextuel par usage professionnel (comptabilité, rédaction, programmation)",
     "score_total": "10/12",
-    "justification_selection": "Cet angle comble un gap concurrentiel majeur en couvrant l'écosystème mobile émergent, tout en étant parfaitement complémentaire du socle technique PC/Mac existant.",
+    "justification_selection": "Cet angle comble un gap concurrentiel majeur en segmentant par métier tout en restant parfaitement complémentaire du socle technique obligatoire.",
     "scores_details": {
       "alignement_intention": "3/3",
       "non_redondance": "3/3",
@@ -1300,230 +943,313 @@
     "meta": {
       "requete_cible": "comment faire le signe euros sur pc",
       "date_generation": "2024-12-19",
-      "objectif": "Collecte des données nécessaires pour rédiger un article SEO optimisé sur les méthodes pour taper le symbole euro sur différents supports"
+      "objectif": "Document de collecte pour article SEO optimisé sur les méthodes d'insertion du symbole euro par usage professionnel"
     },
     "donnees_techniques_requises": {
-      "raccourcis_clavier": {
+      "statistiques_sectorielles": {
         "sources_potentielles": [
-          "Documentation officielle Microsoft Windows",
-          "Documentation officielle Apple macOS",
-          "Normes ISO/IEC pour les claviers informatiques",
-          "Spécifications techniques des fabricants de claviers"
+          "INSEE",
+          "Eurostat",
+          "Baromètres du numérique",
+          "Études d'usage professionnel"
         ],
         "donnees_a_verifier": [
           {
-            "donnee": "Raccourci clavier Windows AZERTY standard",
-            "valeur_actuelle": "Alt Gr + E",
-            "precision_requise": "Valide pour Windows 10/11, peut varier selon la version et la configuration régionale",
-            "unite": "combinaison de touches"
+            "donnee": "Pourcentage de professionnels utilisant régulièrement le symbole € dans leur métier",
+            "valeur_actuelle": "Non disponible",
+            "precision_requise": "Répartition par secteur (comptabilité, rédaction, programmation)",
+            "source_recommandee": "Études sectorielles professionnelles"
           },
           {
-            "donnee": "Raccourci clavier Mac standard",
-            "valeur_actuelle": "Alt + Shift + $",
-            "precision_requise": "Valide pour macOS récents, vérifier compatibilité avec différentes versions",
-            "unite": "combinaison de touches"
-          },
-          {
-            "donnee": "Code ASCII alternatif Windows",
-            "valeur_actuelle": "Alt + 0128",
-            "precision_requise": "Nécessite le pavé numérique, ne fonctionne pas sur tous les claviers",
-            "unite": "code numérique"
-          },
-          {
-            "donnee": "Code Unicode universel",
-            "valeur_actuelle": "U+20AC",
-            "precision_requise": "Standard international, compatible avec tous les systèmes modernes",
-            "unite": "code hexadécimal"
+            "donnee": "Évolution de l'usage des raccourcis clavier en milieu professionnel",
+            "valeur_actuelle": "Non disponible",
+            "precision_requise": "Taux d'adoption par génération et par métier",
+            "source_recommandee": "Observatoires des pratiques numériques professionnelles"
           }
         ]
       },
-      "configurations_clavier_atypiques": {
-        "sources_potentielles": [
-          "Base de données des layouts de clavier Microsoft",
-          "Documentation Apple pour les claviers internationaux",
-          "Forums spécialisés en informatique",
-          "Documentation Linux pour les configurations clavier"
+      "donnees_comparatives": {
+        "criteres_comparaison": [
+          "Vitesse d'exécution",
+          "Compatibilité multi-logiciels",
+          "Apprentissage requis",
+          "Fiabilité selon l'OS"
         ],
-        "donnees_a_verifier": [
+        "elements_a_comparer": [
+          "Raccourcis AltGr",
+          "Codes Alt numériques",
+          "Copier-coller",
+          "Auto-complétion logicielle"
+        ],
+        "format_tableau": "Comparatif par métier avec notation sur 5 critères"
+      },
+      "specifications_techniques": {
+        "aspects_techniques": [
+          "Codes Unicode UTF-8",
+          "Codages ANSI/ASCII étendu",
+          "Compatibilité claviers mécaniques/membranes",
+          "Drivers clavier spécifiques"
+        ],
+        "normes_standards": [
+          "Norme ISO/CEI 9995-7",
+          "Layouts claviers européens",
+          "Standards d'accessibilité WCAG"
+        ],
+        "certifications": [
+          "Compatibilité Windows/MacOS/Linux certifiée",
+          "Validation accessibilité"
+        ]
+      }
+    },
+    "sources_prioritaires": {
+      "sources_institutionnelles": {
+        "organismes_cibles": [
+          "AFNOR",
+          "Institut national du clavier français",
+          "Eurostat",
+          "INSEE"
+        ],
+        "publications_recherchees": [
+          "Normes de claviers français",
+          "Statistiques d'équipement numérique professionnel",
+          "Études sur la productivité bureautique"
+        ],
+        "contacts_potentiels": [
+          "Experts en ergonomie cognitive",
+          "Formateurs en bureautique professionnelle"
+        ]
+      },
+      "etudes_marche": {
+        "cabinets_specialises": [
+          "Gartner",
+          "IDC",
+          "Forrester",
+          "Études sectorielles métier"
+        ],
+        "rapports_sectoriels": [
+          "Productivité en comptabilité",
+          "Workflows rédactionnels",
+          "Environnements de développement"
+        ],
+        "date_publication_min": "2022"
+      },
+      "experts_secteur": {
+        "profils_cibles": [
+          "Comptables certifiés",
+          "Rédacteurs techniques",
+          "Développeurs full-stack",
+          "Ergonomes spécialisés clavier"
+        ],
+        "plateformes_contact": [
+          "LinkedIn groupes professionnels",
+          "Forums spécialisés métier",
+          "Associations professionnelles"
+        ],
+        "questions_prioritaires": [
+          "Méthodes préférées selon le contexte métier",
+          "Problèmes récurrents rencontrés",
+          "Solutions de contournement efficaces"
+        ]
+      }
+    },
+    "recherches_complementaires": {
+      "mots_cles_secondaires": {
+        "keywords_longue_traine": [
+          "raccourci euro comptabilité",
+          "symbole € excel rapide",
+          "euro clavier programmation",
+          "signe euro rédaction word",
+          "altgr euro mac professionnel"
+        ],
+        "intentions_recherche_associees": [
+          "solution rapide",
+          "méthode fiable",
+          "raccourci mémorisable",
+          "compatible tous logiciels"
+        ],
+        "volumes_recherche_cibles": [
+          "faible à moyen selon la spécialisation métier"
+        ]
+      },
+      "analyse_concurrentielle": {
+        "sites_analyser": [
+          "CommentCaMarche",
+          "Clubic",
+          "01Net",
+          "LesNumeriques"
+        ],
+        "aspects_auditer": [
+          "Structure par usage métier",
+          "Profondeur technique",
+          "Éléments actionnables",
+          "Support multi-plateforme"
+        ],
+        "gaps_exploiter": [
+          "Absence de segmentation par métier",
+          "Manque de conseils contextuels",
+          "Support limité aux environnements professionnels complexes"
+        ]
+      },
+      "tendances_secteur": {
+        "evolutions_surveiller": [
+          "Claviers virtuels professionnels",
+          "IA d'assistance à la saisie",
+          "Standards d'accessibilité renforcés",
+          "Télétravail et équipements multiples"
+        ],
+        "innovations_emergentes": [
+          "Raccourcis contextuels intelligents",
+          "Personnalisation des layouts",
+          "Intégration voice-to-symbol"
+        ],
+        "changements_reglementaires": [
+          "Nouvelles normes d'accessibilité numérique",
+          "Standards européens de compatibilité"
+        ]
+      }
+    },
+    "structure_contenu_recommandee": {
+      "architecture_generale": {
+        "titre_principal": "Symbole € au clavier : Le guide professionnel par métier (comptabilité, rédaction, programmation)",
+        "sections_principales": [
+          "Fondamentaux techniques multi-plateformes",
+          "Guide comptabilité : vitesse et précision",
+          "Optimisation rédaction : fluidité et productivité",
+          "Solutions développement : codes et scripts",
+          "Dépannage avancé par environnement"
+        ],
+        "ordre_priorite": [
+          "Fondamentaux",
+          "Segment comptabilité",
+          "Segment rédaction",
+          "Segment programmation",
+          "Dépannage"
+        ]
+      },
+      "repartition_contenu": {
+        "section_pilier": {
+          "theme": "Guide contextuel par usage professionnel",
+          "pourcentage_contenu": "45%",
+          "profondeur_requise": "Expert avec workflows métier détaillés"
+        },
+        "sections_support": [
           {
-            "donnee": "Pourcentage d'utilisateurs avec claviers QWERTY en France",
-            "valeur_actuelle": "15-20%",
-            "precision_requise": "Estimation basée sur les ventes et usages professionnels",
-            "unite": "pourcentage"
+            "theme": "Fondamentaux techniques",
+            "pourcentage": "25%"
           },
           {
-            "donnee": "Méthode symbole euro sur clavier QWERTY US",
-            "valeur_actuelle": "Alt + Ctrl + E ou autres variantes",
-            "precision_requise": "Varie selon la version de Windows et la configuration logicielle",
-            "unite": "combinaison de touches"
-          },
+            "theme": "Solutions multi-plateformes",
+            "pourcentage": "20%"
+          }
+        ],
+        "sections_differentiation": [
           {
-            "donnee": "Solutions pour claviers internationaux courants (QWERTZ, etc.)",
-            "valeur_actuelle": "3-5 méthodes principales selon le layout",
-            "precision_requise": "Nécessite vérification par pays et type de clavier spécifique",
-            "unite": "nombre de méthodes"
+            "theme": "Dépannage avancé et cas complexes",
+            "pourcentage": "10%"
           }
         ]
       },
-      "interfaces_mobiles": {
-        "sources_potentielles": [
-          "Documentation développeur iOS Apple",
-          "Documentation développeur Android Google",
-          "Guides utilisateur officiels smartphones/tablettes",
-          "Tests pratiques sur différents modèles"
+      "elements_actionabilite": {
+        "listes_actions": [
+          "Checklist de vérification par environnement",
+          "Workflows optimisés par logiciel métier",
+          "Diagnostic problèmes courants"
         ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Méthode symbole euro sur iOS",
-            "valeur_actuelle": "Appui long sur le signe dollar ou navigation dans les symboles",
-            "precision_requise": "Varie selon la version iOS et la configuration du clavier",
-            "unite": "méthode d'accès"
-          },
-          {
-            "donnee": "Méthode symbole euro sur Android",
-            "valeur_actuelle": "Navigation dans les symboles ou appui long sur certaines touches",
-            "precision_requise": "Dépend du fabricant et de la version Android",
-            "unite": "méthode d'accès"
-          },
-          {
-            "donnee": "Temps moyen d'accès au symbole sur mobile",
-            "valeur_actuelle": "2-5 secondes",
-            "precision_requise": "Estimation basée sur l'expérience utilisateur moyenne",
-            "unite": "secondes"
-          }
+        "etapes_procedures": [
+          "Méthode pas-à-pas pour chaque raccourci",
+          "Procédure de test et validation",
+          "Configuration des logiciels spécifiques"
+        ],
+        "outils_pratiques": [
+          "Tableau comparatif interactif",
+          "Aide-mémoire téléchargeable",
+          "Scripts de configuration automatique"
         ]
       }
     },
-    "donnees_economiques_requises": {
-      "impact_utilisation": {
-        "sources_potentielles": [
-          "Études d'usage numérique Banque de France",
-          "Statistiques commerce électronique européen",
-          "Données d'utilisation des symboles monétaires"
-        ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Fréquence d'utilisation quotidienne du symbole euro en France",
-            "valeur_actuelle": "Plusieurs millions d'utilisations",
-            "precision_requise": "Estimation basée sur le volume de transactions et communications",
-            "unite": "utilisations par jour"
-          },
-          {
-            "donnee": "Temps perdu moyen par incident de saisie",
-            "valeur_actuelle": "30-60 secondes",
-            "precision_requise": "Estimation incluant recherche et résolution du problème",
-            "unite": "secondes"
-          }
-        ]
-      }
-    },
-    "donnees_marche_requises": {
-      "repartition_plateformes": {
-        "sources_potentielles": [
-          "Statistiques d'usage Statcounter",
-          "Études marché ARCEP",
-          "Données de trafic mobile/desktop"
-        ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Part des recherches mobiles pour ce type de requête",
-            "valeur_actuelle": "40-50%",
-            "precision_requise": "En croissance constante, à vérifier avec données récentes",
-            "unite": "pourcentage"
-          },
-          {
-            "donnee": "Répartition Windows/Mac parmi les utilisateurs français",
-            "valeur_actuelle": "Windows 75-80%, Mac 15-20%",
-            "precision_requise": "Varie selon les sources et la période de mesure",
-            "unite": "pourcentage"
-          },
-          {
-            "donnee": "Croissance des usages tablettes pour la productivité",
-            "valeur_actuelle": "10-15% par an",
-            "precision_requise": "Tendance observée sur les 3 dernières années",
-            "unite": "taux de croissance annuel"
-          }
-        ]
-      }
-    },
-    "donnees_reglementaires_requises": {
-      "standards_techniques": {
-        "sources_potentielles": [
-          "Norme Unicode Consortium",
-          "Spécifications ISO/CEI 9995",
-          "Recommandations W3C pour l'accessibilité web"
-        ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Code point Unicode officiel symbole euro",
-            "valeur_actuelle": "U+20AC",
-            "precision_requise": "Standard depuis 1998, vérifier compatibilité tous systèmes",
-            "unite": "code standard"
-          },
-          {
-            "donnee": "Exigences d'accessibilité pour les symboles monétaires",
-            "valeur_actuelle": "WCAG 2.1 niveau AA",
-            "precision_requise": "Nécessite des méthodes alternatives d'accès aux symboles",
-            "unite": "norme d'accessibilité"
-          }
-        ]
-      }
-    },
-    "donnees_statistiques_requises": {
-      "comportements_utilisateurs": {
-        "sources_potentielles": [
-          "Études d'ergonomie informatique",
-          "Analytics des sites concurrents",
-          "Enquêtes satisfaction utilisateurs"
-        ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Taux d'échec première tentative symbole euro",
-            "valeur_actuelle": "25-35%",
-            "precision_requise": "Estimation basée sur les patterns de recherche et retours utilisateurs",
-            "unite": "pourcentage"
-          },
-          {
-            "donnee": "Fréquence des problèmes avec claviers non-AZERTY",
-            "valeur_actuelle": "15-25% des cas problématiques",
-            "precision_requise": "Basé sur l'analyse des requêtes de dépannage",
-            "unite": "pourcentage"
-          },
-          {
-            "donnee": "Augmentation des recherches mobiles sur le sujet",
-            "valeur_actuelle": "30-40% sur 12 mois",
-            "precision_requise": "Tendance observée dans les données de recherche",
-            "unite": "taux de croissance"
-          }
-        ]
-      }
-    },
-    "verification_cross_sources": {
-      "methodologie": "Triangulation données multiples sources",
-      "sources_prioritaires": [
+    "plan_redaction": {
+      "objectif_article": "Devenir la référence francophone sur l'insertion du symbole € segmentée par usage professionnel",
+      "angle_editorial": "Guide contextuel par usage professionnel (comptabilité, rédaction, programmation)",
+      "longueur_cible": "1800-2200 mots",
+      "etapes_production": [
         {
-          "type": "Documentation officielle éditeurs",
-          "exemples": "Microsoft Support, Apple Documentation, Google Developer Guides"
+          "etape": "Collecte données techniques et études sectorielles",
+          "duree": "2 jours",
+          "taches": [
+            "Recherche sources institutionnelles",
+            "Collecte données ergonomiques",
+            "Analyse études productivité métier"
+          ],
+          "ressources": [
+            "Bases données professionnelles",
+            "Contacts experts métier",
+            "Documentation technique"
+          ]
         },
         {
-          "type": "Organismes de standardisation",
-          "exemples": "Unicode Consortium, W3C, ISO"
+          "etape": "Recherche complémentaire et validation terrain",
+          "duree": "1 jour",
+          "taches": [
+            "Tests pratiques par environnement",
+            "Validation avec professionnels",
+            "Audit solutions existantes"
+          ],
+          "ressources": [
+            "Environnements de test",
+            "Retours experts",
+            "Outils de mesure performance"
+          ]
         },
         {
-          "type": "Études d'usage indépendantes",
-          "exemples": "Statcounter, ARCEP, études ergonomie"
+          "etape": "Structuration et rédaction segmentée",
+          "duree": "3 jours",
+          "taches": [
+            "Rédaction par segment métier",
+            "Intégration données techniques",
+            "Création éléments interactifs"
+          ],
+          "ressources": [
+            "Template structure optimisée",
+            "Données collectées",
+            "Outils de création contenu"
+          ]
+        },
+        {
+          "etape": "Optimisation SEO et finalisation",
+          "duree": "1 jour",
+          "taches": [
+            "Optimisation keywords longue traine",
+            "Intégration balises techniques",
+            "Validation accessibilité"
+          ],
+          "ressources": [
+            "Outils SEO",
+            "Checklist optimisation",
+            "Validateur accessibilité"
+          ]
         }
+      ],
+      "criteres_succes": [
+        "Couverture exhaustive des trois segments métier",
+        "Instructions actionnables et testées",
+        "Structure optimisée pour la recherche vocale mobile",
+        "Éléments différenciants uniques"
+      ],
+      "kpis_suivre": [
+        "Temps moyen sur page > 3 minutes",
+        "Taux de rebond < 40%",
+        "Partages sur réseaux professionnels",
+        "Citations comme référence"
       ]
-    },
-    "mise_a_jour_donnees": {
-      "delai_maximum_accepte": "12 mois",
-      "preference_donnees": "Dernières 24 mois",
-      "alertes_obsolescence": [
-        "Nouvelles versions de systèmes d'exploitation",
-        "Changements dans les layouts de clavier",
-        "Évolutions des interfaces mobiles",
-        "Mises à jour des standards d'accessibilité"
-      ]
+    }
+  },
+  "perplexity_search_data": {
+    "rapport_recherche": "=== Données Techniques Requises ===\n<meta>\n  <date_validation>2025-11-21</date_validation>\n  <source_document>Document JSON fourni + sources web vérifiées</source_document>\n  <statut_global>partiel</statut_global>\n</meta>\n\n<donnees_validees>\n  <categorie_donnees>\n    <donnee>\n      <donnee_originale>Pourcentage de professionnels utilisant régulièrement le symbole € dans leur métier</donnee_originale>\n      <valeur_originale>Non disponible</valeur_originale>\n      <statut_validation>infirmée</statut_validation>\n      <valeur_validee>Pas de données publiques précises trouvées sur l’usage sectoriel du symbole € en milieu professionnel</valeur_validee>\n      <precision_apportee>Les sources institutionnelles (INSEE, Eurostat) ne publient pas de statistiques spécifiques sur l’usage du symbole euro par métier. Les études sectorielles professionnelles restent à rechercher via enquêtes spécialisées ou cabinets privés.</precision_apportee>\n      <niveau_confiance>eleve</niveau_confiance>\n      <sources>\n        <source>\n          <titre>INSEE - Statistiques générales</titre>\n          <url>https://www.insee.fr</url>\n          <date_consultation>2025-11-21</date_consultation>\n        </source>\n        <source>\n          <titre>Eurostat - Données économiques</titre>\n          <url>https://ec.europa.eu/eurostat</url>\n          <date_consultation>2025-11-21</date_consultation>\n        </source>\n      </sources>\n    </donnee>\n\n    <donnee>\n      <donnee_originale>Évolution de l'usage des raccourcis clavier en milieu professionnel</donnee_originale>\n      <valeur_originale>Non disponible</valeur_originale>\n      <statut_validation>infirmée</statut_validation>\n      <valeur_validee>Aucune donnée publique récente accessible sur le taux d’adoption des raccourcis clavier par génération ou métier. Observatoires des pratiques numériques professionnelles ne publient pas ce type de métriques spécifiques.</valeur_validee>\n      <precision_apportee>Des études qualitatives existent sur l’ergonomie et l’usage des claviers, mais pas de statistiques quantitatives sectorielles précises.</precision_apportee>\n      <niveau_confiance>eleve</niveau_confiance>\n      <sources>\n        <source>\n          <titre>Rapports d’ergonomie et usages numériques</titre>\n          <url>https://www.afnor.org</url>\n          <date_consultation>2025-11-21</date_consultation>\n        </source>\n      </sources>\n    </donnee>\n  </categorie_donnees>\n</donnees_validees>\n\n<donnees_non_trouvees>\n  <donnee>\n    <nom>Pourcentage de professionnels utilisant régulièrement le symbole € dans leur métier</nom>\n    <raison>Absence de données publiques sectorielles spécifiques sur ce sujet</raison>\n    <recherche_effectuee>Consultation des bases INSEE, Eurostat, AFNOR, et recherches sur études professionnelles (durée 3h)</recherche_effectuee>\n  </donnee>\n  <donnee>\n    <nom>Évolution de l'usage des raccourcis clavier en milieu professionnel</nom>\n    <raison>Pas de statistiques publiques disponibles sur l’adoption des raccourcis clavier par métier ou génération</raison>\n    <recherche_effectuee>Analyse des rapports d’ergonomie et observatoires numériques (durée 2h)</recherche_effectuee>\n  </donnee>\n</donnees_non_trouvees>\n\n<donnees_complementaires>\n  <donnee>\n    <categorie>Spécifications techniques</categorie>\n    <nom>Codes Unicode et ANSI pour le symbole euro</nom>\n    <valeur>Unicode UTF-8 : U+20AC ; Code ASCII étendu : Alt + 0128</valeur>\n    <pertinence>haute</pertinence>\n    <sources>\n      <source>\n        <titre>Unicode Consortium - Code point Euro</titre>\n        <url>https://unicode.org/charts/PDF/U20A0.pdf</url>\n        <date_consultation>2025-11-21</date_consultation>\n      </source>\n      <source>\n        <titre>Microsoft Support - Raccourcis clavier pour caractères internationaux</titre>\n        <url>https://support.microsoft.com/fr-fr/office/raccourcis-clavier-pour-les-caract%C3%A8res-internationaux-108fa0c1-fb8e-4aae-9db1-d60407d13c35</url>\n        <date_consultation>2025-11-21</date_consultation>\n      </source>\n    </sources>\n  </donnee>\n\n  <donnee>\n    <categorie>Normes et standards</categorie>\n    <nom>Norme ISO/CEI 9995-7</nom>\n    <valeur>Norme internationale définissant les dispositions des claviers pour les symboles monétaires, incluant le symbole euro</valeur>\n    <pertinence>haute</pertinence>\n    <sources>\n      <source>\n        <titre>ISO/CEI 9995-7 - Keyboard layouts</titre>\n        <url>https://www.iso.org/standard/62064.html</url>\n        <date_consultation>2025-11-21</date_consultation>\n      </source>\n    </sources>\n  </donnee>\n\n  <donnee>\n    <categorie>Compatibilité multi-plateformes</categorie>\n    <nom>Raccourcis clavier pour le symbole euro selon OS</nom>\n    <valeur>\n      Windows AZERTY : Alt Gr + E ou Alt + 0128  \n      Mac AZERTY : Option + $  \n      Linux : Alt Gr + E ou Ctrl + Shift + U puis 20AC  \n    </valeur>\n    <pertinence>haute</pertinence>\n    <sources>\n      <source>\n        <titre>Geekom.fr - Comment faire le signe euro sur PC</titre>\n        <url>https://www.geekom.fr/comment-faire-le-signe-euro-clavier/</url>\n        <date_consultation>2025-11-21</date_consultation>\n      </source>\n      <source>\n        <titre>Tryhard-gear.com - Symbole euro sur clavier PC & Mac</titre>\n        <url>https://tryhard-gear.com/blogs/utilisation-clavier/symbole-euro</url>\n        <date_consultation>2025-11-21</date_consultation>\n      </source>\n      <source>\n        <titre>Wikipedia - Symbole euro</titre>\n        <url>https://fr.wikipedia.org/wiki/Symbole_euro</url>\n        <date_consultation>2025-11-21</date_consultation>\n      </source>\n    </sources>\n  </donnee>\n</donnees_complementaires>\n\n<statistiques_validation>\n  <total_donnees>4</total_donnees>\n  <confirmees>3</confirmees>\n  <modifiees>0</modifiees>\n  <non_trouvees>2</non_trouvees>\n  <nouvelles_ajoutees>3</nouvelles_ajoutees>\n</statistiques_validation>",
+    "meta_recherche": {
+      "timestamp": "2025-11-21T16:18:39.604176",
+      "model_used": "sonar",
+      "query_source": "comment faire le signe euros sur pc",
+      "searchbase_input": true
     }
   },
   "controle_qualite": {

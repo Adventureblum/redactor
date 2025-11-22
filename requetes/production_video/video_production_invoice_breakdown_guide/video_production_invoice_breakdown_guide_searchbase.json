@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "requete_cible": "video production invoice breakdown guide",
+    "requete_principale": "production_video",
+    "group_id": 2,
+    "date_generation": "2025-11-21T16:26:01.285421",
+    "agent_version": "searchbase-v2.2",
+    "type": "document_collecte_donnees"
+  },
+  "collecte_donnees": {
+    "meta": {
+      "requete_cible": "video production invoice breakdown guide",
+      "date_generation": "2024-12-19",
+      "objectif": "Document de collecte pour article SEO optimisé sur la facturation et tarification en production vidéo"
+    },
+    "donnees_techniques_requises": {
+      "statistiques_sectorielles": {
+        "sources_potentielles": [
+          "Bureau of Labor Statistics",
+          "Statista",
+          "IBISWorld",
+          "Video Production Industry Reports"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Taux horaire moyen réalisateur vidéo",
+            "valeur_actuelle": "À déterminer",
+            "precision_requise": "Fourchettes par expérience et région",
+            "source_recommandee": "BLS Occupational Employment Statistics"
+          },
+          {
+            "donnee": "Coût moyen projet vidéo corporate",
+            "valeur_actuelle": "À déterminer",
+            "precision_requise": "Breakdown par type de projet (interview, produit, événement)",
+            "source_recommandee": "Industry surveys et rapports spécialisés"
+          },
+          {
+            "donnee": "Pourcentage budget alloué à chaque phase",
+            "valeur_actuelle": "À déterminer",
+            "precision_requise": "Répartition préproduction/production/postproduction",
+            "source_recommandee": "Études sectorielles production vidéo"
+          }
+        ]
+      },
+      "donnees_comparatives": {
+        "criteres_comparaison": [
+          "Taux horaire",
+          "Forfaits projets",
+          "Coûts équipement",
+          "Frais supplémentaires"
+        ],
+        "elements_a_comparer": [
+          "Freelance vs Agence",
+          "Débutant vs Expert",
+          "Régions différentes"
+        ],
+        "format_tableau": "Tableau comparatif avec indicateurs chiffrés"
+      },
+      "specifications_techniques": {
+        "aspects_techniques": [
+          "Structure facture standard",
+          "Éléments ligne obligatoires",
+          "Termes de paiement sectoriels"
+        ],
+        "normes_standards": [
+          "Format facture professionnel",
+          "Breakdown coûts accepté industrie"
+        ],
+        "certifications": [
+          "Aucune certification spécifique identifiée"
+        ]
+      }
+    },
+    "sources_prioritaires": {
+      "sources_institutionnelles": {
+        "organismes_cibles": [
+          "Bureau of Labor Statistics",
+          "Chambres de commerce locales",
+          "Associations professionnelles audiovisuel"
+        ],
+        "publications_recherchees": [
+          "Salary surveys production média",
+          "Industry pricing guides"
+        ],
+        "contacts_potentiels": [
+          "Présidents associations professionnelles",
+          "Experts comptables spécialisés"
+        ]
+      },
+      "etudes_marche": {
+        "cabinets_specialises": [
+          "Statista",
+          "IBISWorld",
+          "Wipster",
+          "Frame.io Industry Reports"
+        ],
+        "rapports_sectoriels": [
+          "Video Production Pricing Surveys",
+          "Freelance Rate Calculators"
+        ],
+        "date_publication_min": "2022"
+      },
+      "experts_secteur": {
+        "profils_cibles": [
+          "Producteurs vidéo expérimentés",
+          "Comptables spécialisés production",
+          "Responsables agences"
+        ],
+        "plateformes_contact": [
+          "LinkedIn groupes professionnels",
+          "Forums spécialisés",
+          "Associations"
+        ],
+        "questions_prioritaires": [
+          "Structure facturation optimale",
+          "Éléments souvent oubliés",
+          "Pratiques paiement secteur"
+        ]
+      }
+    },
+    "recherches_complementaires": {
+      "mots_cles_secondaires": {
+        "keywords_longue_traine": [
+          "video production pricing guide",
+          "freelance video rates",
+          "video invoice template",
+          "production cost breakdown",
+          "video project budgeting"
+        ],
+        "intentions_recherche_associees": [
+          "transactionnelle",
+          "informationnelle"
+        ],
+        "volumes_recherche_cibles": [
+          "Moyen à élevé pour termes facturation"
+        ]
+      },
+      "analyse_concurrentielle": {
+        "sites_analyser": [
+          "Position 1",
+          "Position 4",
+          "Sites spécialisés facturation créative"
+        ],
+        "aspects_auditer": [
+          "Structure contenu facturation",
+          "Présence templates",
+          "Profondeur conseils tarification"
+        ],
+        "gaps_exploiter": [
+          "Absence templates téléchargeables",
+          "Manque conseils négociation",
+          "Breakdown insuffisant coûts cachés"
+        ]
+      },
+      "tendances_secteur": {
+        "evolutions_surveiller": [
+          "Télétravail production",
+          "Équipements accessibles",
+          "Demande vidéo corporate"
+        ],
+        "innovations_emergentes": [
+          "Calculateurs prix en ligne",
+          "Plateformes facturation spécialisées"
+        ],
+        "changements_reglementaires": [
+          "Nouvelles taxes secteur créatif",
+          "Réglementation freelance"
+        ]
+      }
+    },
+    "structure_contenu_recommandee": {
+      "architecture_generale": {
+        "titre_principal": "Guide Complet Facturation Production Vidéo : Templates et Breakdown Détaillé",
+        "sections_principales": [
+          "Comprendre structure coûts",
+          "Éléments facture professionnelle",
+          "Templates personnalisables",
+          "Conseils négociation",
+          "Gestion paiements"
+        ],
+        "ordre_priorite": [
+          "Structure coûts",
+          "Templates",
+          "Conseils pratiques",
+          "Gestion administrative"
+        ]
+      },
+      "repartition_contenu": {
+        "section_pilier": {
+          "theme": "Breakdown détaillé facture production vidéo",
+          "pourcentage_contenu": "45%",
+          "profondeur_requise": "Expert avec exemples concrets"
+        },
+        "sections_support": [
+          {
+            "theme": "Processus production structuré",
+            "pourcentage": "25%"
+          },
+          {
+            "theme": "Équipements et coûts associés",
+            "pourcentage": "15%"
+          }
+        ],
+        "sections_differentiation": [
+          {
+            "theme": "Production lean petites entreprises",
+            "pourcentage": "15%"
+          }
+        ]
+      },
+      "elements_actionabilite": {
+        "listes_actions": [
+          "Checklist éléments facture",
+          "Étapes négociation tarifs",
+          "Procédure relance impayés"
+        ],
+        "etapes_procedures": [
+          "Création facture pas à pas",
+          "Calcul budget projet",
+          "Gestion modifications scope"
+        ],
+        "outils_pratiques": [
+          "Templates factures téléchargeables",
+          "Calculateur budget Excel",
+          "Modèles contrats"
+        ]
+      }
+    },
+    "plan_redaction": {
+      "objectif_article": "Devenir ressource référence sur facturation production vidéo",
+      "angle_editorial": "Guide pratique avec expertise professionnelle et ressources actionnables",
+      "longueur_cible": "2500-3000 mots",
+      "etapes_production": [
+        {
+          "etape": "Collecte données tarifaires et sectorielles",
+          "duree": "2-3 jours",
+          "taches": [
+            "Recherche statistiques BLS",
+            "Analyse études marché",
+            "Interview experts"
+          ],
+          "ressources": [
+            "Bases données officielles",
+            "Rapports sectoriels",
+            "Contacts professionnels"
+          ]
+        },
+        {
+          "etape": "Création templates et outils pratiques",
+          "duree": "1-2 jours",
+          "taches": [
+            "Développement templates factures",
+            "Création calculateur budget",
+            "Design ressources téléchargeables"
+          ],
+          "ressources": [
+            "Logiciels bureautique",
+            "Designer si nécessaire",
+            "Validation experts"
+          ]
+        },
+        {
+          "etape": "Rédaction et structuration contenu",
+          "duree": "2-3 jours",
+          "taches": [
+            "Rédaction sections principales",
+            "Intégration données collectées",
+            "Optimisation structure"
+          ],
+          "ressources": [
+            "Données collectées",
+            "Templates créés",
+            "Guidelines SEO"
+          ]
+        },
+        {
+          "etape": "Optimisation SEO et finalisation",
+          "duree": "1 jour",
+          "taches": [
+            "Optimisation balises",
+            "Intégration mots-clés",
+            "Validation technique"
+          ],
+          "ressources": [
+            "Outils SEO",
+            "Checklist optimisation",
+            "Test utilisabilité"
+          ]
+        }
+      ],
+      "criteres_succes": [
+        "Couverture complète breakdown facturation",
+        "Qualité templates proposés",
+        "Actionabilité conseils"
+      ],
+      "kpis_suivre": [
+        "Taux téléchargement templates",
+        "Temps lecture",
+        "Positionnement mots-clés cibles"
+      ]
+    }
+  }
+}

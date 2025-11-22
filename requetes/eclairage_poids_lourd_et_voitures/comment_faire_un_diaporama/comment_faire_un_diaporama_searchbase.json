@@ -3,7 +3,7 @@
     "requete_cible": "comment faire un diaporama",
     "requete_principale": "eclairage_poids_lourd_et_voitures",
     "group_id": 0,
-    "date_generation": "2025-11-11T19:32:51.522073",
+    "date_generation": "2025-11-21T16:18:15.811039",
     "agent_version": "searchbase-v2.2",
     "type": "document_collecte_donnees"
   },
@@ -11,280 +11,296 @@
     "meta": {
       "requete_cible": "comment faire un diaporama",
       "date_generation": "2024-12-19",
-      "objectif": "Collecte des données nécessaires pour rédiger un article SEO optimisé sur diaporamas professionnels avec templates sectoriels"
+      "objectif": "Document de collecte pour article SEO optimisé sur l'accessibilité des diaporamas professionnels"
     },
     "donnees_techniques_requises": {
-      "specifications_plateformes": {
+      "statistiques_sectorielles": {
         "sources_potentielles": [
-          "Microsoft Documentation officielle PowerPoint",
-          "Google Workspace Documentation",
-          "Apple Developer Documentation Keynote",
-          "Canva Design School",
-          "Normes ISO 32000-2 (PDF/E)"
+          "INSEE",
+          "DGEFP",
+          "Observatoire de la qualité de vie au travail",
+          "Associations de personnes handicapées"
         ],
         "donnees_a_verifier": [
           {
-            "donnee": "Limites export PowerPoint professionnel",
-            "valeur_actuelle": "2GB fichier maximum, 255 diapositives par présentation",
-            "precision_requise": "Variations selon version (365 vs 2021), mémoire système disponible",
-            "unite": "GB et nombre"
+            "donnee": "Pourcentage d'entreprises soumises à l'obligation d'emploi de travailleurs handicapés",
+            "valeur_actuelle": "Inconnue - à rechercher",
+            "precision_requise": "Chiffres récents (2023-2024)",
+            "source_recommandee": "DGEFP - Direction générale des entreprises"
           },
           {
-            "donnee": "Résolution optimale images diaporama",
-            "valeur_actuelle": "1920x1080 pixels",
-            "precision_requise": "Adaptation selon ratio écran (16:9, 4:3), projecteur utilisé",
-            "unite": "pixels"
-          },
-          {
-            "donnee": "Taille fichier moyenne présentation professionnelle",
-            "valeur_actuelle": "50-200 MB",
-            "precision_requise": "Dépend du nombre d'images, vidéos intégrées, animations complexes",
-            "unite": "MB"
+            "donnee": "Taux de pénétration des outils d'accessibilité numérique dans les entreprises françaises",
+            "valeur_actuelle": "Inconnue - à rechercher",
+            "precision_requise": "Données par secteur d'activité",
+            "source_recommandee": "Observatoires sectoriels du numérique"
           }
         ]
       },
-      "performances_rendu": {
-        "sources_potentielles": [
-          "Benchmarks Microsoft PowerPoint",
-          "Tests performance Google Slides",
-          "Études comparatives indépendantes logiciels présentation"
+      "donnees_comparatives": {
+        "criteres_comparaison": [
+          "Niveau d'accessibilité",
+          "Compatibilité lecteurs d'écran",
+          "Respect normes WCAG",
+          "Facilité d'implémentation"
         ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Temps chargement présentation complexe PowerPoint",
-            "valeur_actuelle": "3-8 secondes",
-            "precision_requise": "Dépend connexion internet, puissance ordinateur, optimisations",
-            "unite": "secondes"
-          },
-          {
-            "donnee": "Compatibilité formats entre plateformes",
-            "valeur_actuelle": "85-95%",
-            "precision_requise": "Animations complexes et polices personnalisées souvent perdues",
-            "unite": "pourcentage"
-          }
+        "elements_a_comparer": [
+          "PowerPoint",
+          "Google Slides",
+          "Keynote",
+          "Logiciels spécialisés accessibilité"
+        ],
+        "format_tableau": "Tableau comparatif avec notation sur 5 pour chaque critère"
+      },
+      "specifications_techniques": {
+        "aspects_techniques": [
+          "Balises alt images",
+          "Structure titres hiérarchique",
+          "Contraste couleurs",
+          "Sous-titrage vidéos",
+          "Navigation au clavier"
+        ],
+        "normes_standards": [
+          "WCAG 2.1 AA",
+          "RGAA 4.1",
+          "Normes accessibilité PowerPoint"
+        ],
+        "certifications": [
+          "AccessiWeb",
+          "Label e-accessible"
         ]
       }
     },
-    "donnees_economiques_requises": {
-      "couts_plateformes": {
-        "sources_potentielles": [
-          "Tarifs officiels Microsoft 365",
-          "Google Workspace Pricing",
-          "Canva Pro pricing",
-          "Études marché logiciels présentation 2024"
+    "sources_prioritaires": {
+      "sources_institutionnelles": {
+        "organismes_cibles": [
+          "DGEFP",
+          "Mission handicap",
+          "Associations agréées",
+          "FIPHFP"
         ],
-        "donnees_a_verifier": [
+        "publications_recherchees": [
+          "Guide RGAA",
+          "Référentiel accessibilité numérique",
+          "Rapports annuels accessibilité"
+        ],
+        "contacts_potentiels": [
+          "Référents handicap entreprises",
+          "Experts accessibilité numérique"
+        ]
+      },
+      "etudes_marche": {
+        "cabinets_specialises": [
+          "Gartner",
+          "Forrester",
+          "IDC",
+          "Cabinet spécialisé accessibilité"
+        ],
+        "rapports_sectoriels": [
+          "Études sur adoption accessibilité numérique",
+          "Benchmark solutions accessibilité"
+        ],
+        "date_publication_min": "2022"
+      },
+      "experts_secteur": {
+        "profils_cibles": [
+          "Consultants accessibilité numérique",
+          "Référents handicap",
+          "Formateurs PowerPoint avancé"
+        ],
+        "plateformes_contact": [
+          "LinkedIn groupes spécialisés",
+          "Associations professionnelles",
+          "Événements accessibilité"
+        ],
+        "questions_prioritaires": [
+          "Obligations légales entreprises",
+          "Meilleures pratiques implémentation",
+          "Retour expérience utilisateurs"
+        ]
+      }
+    },
+    "recherches_complementaires": {
+      "mots_cles_secondaires": {
+        "keywords_longue_traine": [
+          "accessibilité powerpoint",
+          "diaporama accessible malvoyant",
+          "normes rgaa présentation",
+          "sous-titrage automatique powerpoint",
+          "contraste couleurs accessible"
+        ],
+        "intentions_recherche_associees": [
+          "conformité légale",
+          "bonnes pratiques professionnelles",
+          "outils accessibilité"
+        ],
+        "volumes_recherche_cibles": [
+          "Faible à moyen - niche spécialisée"
+        ]
+      },
+      "analyse_concurrentielle": {
+        "sites_analyser": [
+          "Microsoft Support",
+          "Blogs spécialisés accessibilité",
+          "Sites institutionnels handicap"
+        ],
+        "aspects_auditer": [
+          "Couverture accessibilité diaporamas",
+          "Profondeur conseils techniques",
+          "Exemples pratiques"
+        ],
+        "gaps_exploiter": [
+          "Manque guides complets accessibilité",
+          "Absence templates accessibles",
+          "Peu conseils conformité légale"
+        ]
+      },
+      "tendances_secteur": {
+        "evolutions_surveiller": [
+          "Nouvelles réglementations accessibilité",
+          "Évolutions normes WCAG",
+          "Innovations outils accessibilité"
+        ],
+        "innovations_emergentes": [
+          "IA génération automatique sous-titres",
+          "Outils vérification accessibilité",
+          "Templates pré-conformes"
+        ],
+        "changements_reglementaires": [
+          "Renforcement obligations accessibilité numérique",
+          "Nouvelles sanctions non-conformité"
+        ]
+      }
+    },
+    "structure_contenu_recommandee": {
+      "architecture_generale": {
+        "titre_principal": "Guide complet : Rendre vos diaporamas accessibles à tous - Conformité légale et bonnes pratiques",
+        "sections_principales": [
+          "Fondamentaux accessibilité numérique",
+          "Configuration PowerPoint pour l'accessibilité",
+          "Création contenu accessible",
+          "Vérification et conformité",
+          "Ressources et templates"
+        ],
+        "ordre_priorite": [
+          "Configuration technique",
+          "Création contenu",
+          "Vérification conformité",
+          "Ressources pratiques"
+        ]
+      },
+      "repartition_contenu": {
+        "section_pilier": {
+          "theme": "Configuration complète PowerPoint pour l'accessibilité",
+          "pourcentage_contenu": "45%",
+          "profondeur_requise": "Très approfondie - étapes détaillées avec captures"
+        },
+        "sections_support": [
           {
-            "donnee": "Coût mensuel PowerPoint 365 Business",
-            "valeur_actuelle": "12.50 €",
-            "precision_requise": "Engagement annuel, prix HT, variations selon pays",
-            "unite": "euros/mois"
+            "theme": "Obligations légales et normes",
+            "pourcentage": "20%"
           },
           {
-            "donnee": "Économies templates professionnels vs création sur mesure",
-            "valeur_actuelle": "70-85%",
-            "precision_requise": "Calcul basé sur temps développement réduit, réutilisation assets",
-            "unite": "pourcentage"
-          },
+            "theme": "Création contenu multimédia accessible",
+            "pourcentage": "20%"
+          }
+        ],
+        "sections_differentiation": [
           {
-            "donnee": "ROI formation équipe outils présentation",
-            "valeur_actuelle": "3-6 mois",
-            "precision_requise": "Dépend taille équipe, complexité besoins, qualité formation",
-            "unite": "mois"
+            "theme": "Templates accessibles téléchargeables",
+            "pourcentage": "15%"
           }
         ]
       },
-      "productivite_gains": {
-        "sources_potentielles": [
-          "Études McKinsey productivité numérique",
-          "Rapports Forrester workplace collaboration",
-          "Enquêtes Gartner workplace technology"
+      "elements_actionabilite": {
+        "listes_actions": [
+          "Checklist validation accessibilité",
+          "Étapes configuration PowerPoint"
         ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Gain temps création avec templates sectoriels",
-            "valeur_actuelle": "40-60%",
-            "precision_requise": "Variation selon complexité présentation, expérience utilisateur",
-            "unite": "pourcentage"
-          },
-          {
-            "donnee": "Réduction révisions avec outils collaboration",
-            "valeur_actuelle": "25-40%",
-            "precision_requise": "Dépend processus validation, nombre intervenants",
-            "unite": "pourcentage"
-          }
+        "etapes_procedures": [
+          "Procédure ajout texte alternatif",
+          "Configuration vérificateur accessibilité",
+          "Test navigation clavier"
+        ],
+        "outils_pratiques": [
+          "Template accessible téléchargeable",
+          "Checklist conformité PDF",
+          "Tableau contrastes couleurs"
         ]
       }
     },
-    "donnees_marche_requises": {
-      "usage_sectoriel": {
-        "sources_potentielles": [
-          "Études marché Gartner présentation software",
-          "Rapports Forrester collaboration tools",
-          "Enquêtes utilisation professionnelle Microsoft",
-          "Baromètres usage SaaS français"
-        ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Parts marché outils présentation entreprise France",
-            "valeur_actuelle": "PowerPoint 65%, Google Slides 25%, autres 10%",
-            "precision_requise": "Évolution rapide vers cloud, variations selon taille entreprise",
-            "unite": "pourcentage"
-          },
-          {
-            "donnee": "Fréquence création diaporamas secteur marketing",
-            "valeur_actuelle": "8-12 par mois",
-            "precision_requise": "Dépend taille équipe, saisonnalité campagnes",
-            "unite": "nombre/mois"
-          },
-          {
-            "donnee": "Temps moyen création présentation commerciale",
-            "valeur_actuelle": "4-8 heures",
-            "precision_requise": "Inclut recherche, conception, révisions, variations expertise",
-            "unite": "heures"
-          }
-        ]
-      },
-      "tendances_emergentes": {
-        "sources_potentielles": [
-          "Rapports tendances design 2024",
-          "Études adoption IA outils créatifs",
-          "Observatoires travail hybride"
-        ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Croissance utilisation templates professionnels",
-            "valeur_actuelle": "35% annuel",
-            "precision_requise": "Accélération post-pandémie, adoption PME",
-            "unite": "pourcentage croissance annuelle"
-          },
-          {
-            "donnee": "Adoption outils collaboration temps réel",
-            "valeur_actuelle": "60% entreprises",
-            "precision_requise": "Plus élevé grandes entreprises, retard PME",
-            "unite": "pourcentage entreprises"
-          }
-        ]
-      }
-    },
-    "donnees_reglementaires_requises": {
-      "accessibilite_numerique": {
-        "sources_potentielles": [
-          "Référentiel général d'amélioration de l'accessibilité (RGAA)",
-          "Web Content Accessibility Guidelines (WCAG) 2.1",
-          "Loi française pour une République numérique"
-        ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Contraste minimum textes diaporamas",
-            "valeur_actuelle": "4.5:1",
-            "precision_requise": "Exception textes grands formats 3:1, logos exemptés",
-            "unite": "ratio"
-          },
-          {
-            "donnee": "Taille police minimale accessible",
-            "valeur_actuelle": "18 points",
-            "precision_requise": "Adaptation selon police, poids, contraste fond",
-            "unite": "points"
-          }
-        ]
-      },
-      "protection_donnees": {
-        "sources_potentielles": [
-          "Règlement général sur la protection des données (RGPD)",
-          "CNIL recommandations outils collaboratifs",
-          "Politiques confidentialité plateformes"
-        ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Durée conservation données collaboration",
-            "valeur_actuelle": "13 mois maximum",
-            "precision_requise": "Délai réduit données sensibles, consentement explicite requis",
-            "unite": "mois"
-          }
-        ]
-      }
-    },
-    "donnees_statistiques_requises": {
-      "comportements_utilisateurs": {
-        "sources_potentielles": [
-          "Études Pew Research Center présentation tools",
-          "Enquêtes utilisation logiciels professionnels",
-          "Baromètres numérique français"
-        ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Taux adoption multi-plateformes professionnels",
-            "valeur_actuelle": "45%",
-            "precision_requise": "Plus élevé jeunes entreprises, équipes internationales",
-            "unite": "pourcentage"
-          },
-          {
-            "donnee": "Fréquence utilisation outils annotation",
-            "valeur_actuelle": "70% présentations collaboratives",
-            "precision_requise": "Usage occasionnel individuel, systématique équipes",
-            "unite": "pourcentage"
-          },
-          {
-            "donnee": "Satisfaction templates sectoriels vs génériques",
-            "valeur_actuelle": "4.2/5",
-            "precision_requise": "Échelle 1-5, meilleures notes secteurs niche spécifiques",
-            "unite": "note/5"
-          }
-        ]
-      },
-      "performances_sectorielles": {
-        "sources_potentielles": [
-          "Études cas entreprises Fortune 500",
-          "Benchmarks sectoriels présentations",
-          "Analyses ROI templates professionnels"
-        ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Taux conversion présentations marketing sectorielles",
-            "valeur_actuelle": "22-28%",
-            "precision_requise": "Variations importantes selon industrie, qualité leads",
-            "unite": "pourcentage"
-          },
-          {
-            "donnee": "Gain efficacité présentations éducation",
-            "valeur_actuelle": "35%",
-            "precision_requise": "Mesuré via tests compréhension, rétention information",
-            "unite": "pourcentage"
-          }
-        ]
-      }
-    },
-    "verification_cross_sources": {
-      "methodologie": "Triangulation données multiples sources",
-      "sources_prioritaires": [
+    "plan_redaction": {
+      "objectif_article": "Devenir référence sur l'accessibilité des diaporamas professionnels en français",
+      "angle_editorial": "Guide pratique complet aligné obligations légales et besoins professionnels",
+      "longueur_cible": "2500-3000 mots",
+      "etapes_production": [
         {
-          "type": "Documentation officielle éditeurs",
-          "exemples": "Microsoft Learn, Google Workspace Docs, Apple Developer"
+          "etape": "Recherche données techniques et réglementaires",
+          "duree": "2 jours",
+          "taches": [
+            "Collecte normes RGAA",
+            "Recherche obligations légales",
+            "Benchmark solutions accessibilité"
+          ],
+          "ressources": [
+            "Sites institutionnels",
+            "Documentation Microsoft",
+            "Études accessibilité"
+          ]
         },
         {
-          "type": "Études marché cabinets indépendants",
-          "exemples": "Gartner, Forrester, IDC rapports collaboration tools"
+          "etape": "Tests pratiques et création templates",
+          "duree": "2 jours",
+          "taches": [
+            "Tests fonctionnalités accessibilité PowerPoint",
+            "Création templates conformes",
+            "Vérification lecteurs écran"
+          ],
+          "ressources": [
+            "PowerPoint 365",
+            "Lecteurs écran test",
+            "Outils vérification contraste"
+          ]
         },
         {
-          "type": "Données réglementaires officielles",
-          "exemples": "RGAA, CNIL, WCAG guidelines"
+          "etape": "Rédaction et structuration contenu",
+          "duree": "3 jours",
+          "taches": [
+            "Rédaction guide étape par étape",
+            "Intégration captures écran",
+            "Création ressources téléchargeables"
+          ],
+          "ressources": [
+            "Données collectées",
+            "Templates créés",
+            "Checklists validation"
+          ]
         },
         {
-          "type": "Enquêtes utilisation réelle",
-          "exemples": "Baromètres usage professionnel, études satisfaction utilisateurs"
+          "etape": "Optimisation SEO et finalisation",
+          "duree": "1 jour",
+          "taches": [
+            "Optimisation balises titres",
+            "Intégration mots-clés secondaires",
+            "Vérification structure technique"
+          ],
+          "ressources": [
+            "Outils SEO",
+            "Liste mots-clés",
+            "Guide bonnes pratiques SEO"
+          ]
         }
-      ]
-    },
-    "mise_a_jour_donnees": {
-      "delai_maximum_accepte": "12 mois",
-      "preference_donnees": "2023-2024",
-      "alertes_obsolescence": [
-        "Évolutions rapides fonctionnalités IA intégrées",
-        "Changements tarifaires plateformes SaaS",
-        "Mises à jour réglementaires accessibilité",
-        "Nouvelles versions logiciels majeures",
-        "Émergence nouveaux outils concurrents"
+      ],
+      "criteres_succes": [
+        "Couverture exhaustive accessibilité diaporamas",
+        "Instructions actionnables détaillées",
+        "Conformité normes RGAA démontrée",
+        "Ressources pratiques fournies"
+      ],
+      "kpis_suivre": [
+        "Taux conversion téléchargement templates",
+        "Temps lecture moyen",
+        "Partage réseaux sociaux",
+        "Positionnement mots-clés niche"
       ]
     }
   }

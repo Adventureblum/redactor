@@ -1,0 +1,327 @@
+{
+  "meta": {
+    "requete_cible": "production video",
+    "requete_principale": "production_video",
+    "group_id": 0,
+    "date_generation": "2025-11-21T16:26:01.283608",
+    "agent_version": "searchbase-v2.2",
+    "type": "document_collecte_donnees"
+  },
+  "collecte_donnees": {
+    "meta": {
+      "requete_cible": "production video",
+      "date_generation": "2024-12-19",
+      "objectif": "Document de collecte pour article SEO optimisé sur la production vidéo durable et éco-responsable"
+    },
+    "donnees_techniques_requises": {
+      "statistiques_sectorielles": {
+        "sources_potentielles": [
+          "ADEME",
+          "France Télévisions",
+          "CNC",
+          "Green Film Shooting",
+          "Ecoprod"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Impact carbone moyen d'une journée de tournage",
+            "valeur_actuelle": "Inconnue - données manquantes",
+            "precision_requise": "Équivalent CO2 par jour de production",
+            "source_recommandee": "Etude ADEME/Ecoprod"
+          },
+          {
+            "donnee": "Pourcentage de déchets générés par une production vidéo",
+            "valeur_actuelle": "Inconnue - données manquantes",
+            "precision_requise": "Tonnes de déchets par heure de contenu produit",
+            "source_recommandee": "Rapports Ecoprod"
+          },
+          {
+            "donnee": "Économies réalisables avec des pratiques durables",
+            "valeur_actuelle": "Inconnue - données manquantes",
+            "precision_requise": "Pourcentage d'économie sur budget production",
+            "source_recommandee": "Etudes de cas productions vertes"
+          }
+        ]
+      },
+      "donnees_comparatives": {
+        "criteres_comparaison": [
+          "Consommation énergétique",
+          "Production déchets",
+          "Coût transport",
+          "Utilisation ressources"
+        ],
+        "elements_a_comparer": [
+          "Production traditionnelle vs production durable",
+          "Tournage studio vs extérieur",
+          "Matériel professionnel vs solutions alternatives"
+        ],
+        "format_tableau": "Tableau comparatif avec métriques environnementales et économiques"
+      },
+      "specifications_techniques": {
+        "aspects_techniques": [
+          "Consommation énergie équipements",
+          "Alternatives matériel éco-responsable",
+          "Solutions transport bas carbone",
+          "Gestion déchets plateau"
+        ],
+        "normes_standards": [
+          "Normes Ecoprod",
+          "Certifications productions vertes",
+          "Labels durables audiovisuel"
+        ],
+        "certifications": [
+          "Ecoprod, Green Shooting, labels RSE secteur audiovisuel"
+        ]
+      }
+    },
+    "sources_prioritaires": {
+      "sources_institutionnelles": {
+        "organismes_cibles": [
+          "ADEME",
+          "CNC",
+          "Ministère de la Culture",
+          "Ecoprod"
+        ],
+        "publications_recherchees": [
+          "Guide des bonnes pratiques Ecoprod",
+          "Etude ADEME sur impact environnemental audiovisuel",
+          "Rapports développement durable CNC"
+        ],
+        "contacts_potentiels": [
+          "Référents RSE chaînes TV françaises",
+          "Responsables Ecoprod",
+          "Experts ADEME secteur culturel"
+        ]
+      },
+      "etudes_marche": {
+        "cabinets_specialises": [
+          "Ecoprod",
+          "Green Film Shooting",
+          "Observatoire européen audiovisuel"
+        ],
+        "rapports_sectoriels": [
+          "Baromètre RSE audiovisuel",
+          "Etude pratiques durables production européenne",
+          "Analyse coûts productions vertes"
+        ],
+        "date_publication_min": "2020"
+      },
+      "experts_secteur": {
+        "profils_cibles": [
+          "Chefs opérateurs spécialisés éclairage basse consommation",
+          "Régisseurs productions durables",
+          "Consultants RSE audiovisuel",
+          "Producteurs engagés écologie"
+        ],
+        "plateformes_contact": [
+          "LinkedIn groupes professionnels audiovisuel durable",
+          "Associations Ecoprod",
+          "Salons professionnels sectoriels"
+        ],
+        "questions_prioritaires": [
+          "Retour d'expérience concret sur productions durables",
+          "Obstacles rencontrés et solutions",
+          "Bénéfices mesurés",
+          "Conseils débutants"
+        ]
+      }
+    },
+    "recherches_complementaires": {
+      "mots_cles_secondaires": {
+        "keywords_longue_traine": [
+          "production vidéo éco-responsable",
+          "tournage durable",
+          "matériel vidéo écologique",
+          "économie énergie plateau",
+          "gestion déchets tournage",
+          "transport bas carbone production"
+        ],
+        "intentions_recherche_associees": [
+          "comment réduire impact environnemental tournage",
+          "astuces production vidéo verte",
+          "équipement vidéo durable pas cher",
+          "certifications productions écologiques"
+        ],
+        "volumes_recherche_cibles": [
+          "Faible à moyen - niche émergente"
+        ]
+      },
+      "analyse_concurrentielle": {
+        "sites_analyser": [
+          "Ecoprod.fr",
+          "Greenfilmshooting.com",
+          "Blogs productions durables",
+          "Sites institutions audiovisuel"
+        ],
+        "aspects_auditer": [
+          "Couverture thématique production durable",
+          "Profondeur conseils pratiques",
+          "Présence checklists/templates actionnables",
+          "Témoignages experts"
+        ],
+        "gaps_exploiter": [
+          "Manque contenu débutants",
+          "Absence guides pas-à-pas",
+          "Peu de retours d'expérience concrets",
+          "Manque focus optimisation coûts"
+        ]
+      },
+      "tendances_secteur": {
+        "evolutions_surveiller": [
+          "Croissance réglementation environnementale secteur",
+          "Développement technologies basse consommation",
+          "Demande croissante contenus responsables"
+        ],
+        "innovations_emergentes": [
+          "Batteries solaires plateau",
+          "Éclairage LED haute performance",
+          "Solutions numériques réduisant déplacements",
+          "Matériaux recyclables décors"
+        ],
+        "changements_reglementaires": [
+          "Obligations RSE productions subventionnées",
+          "Normes environnementales équipements",
+          "Incitations fiscales productions vertes"
+        ]
+      }
+    },
+    "structure_contenu_recommandee": {
+      "architecture_generale": {
+        "titre_principal": "Production Vidéo Durable : Le Guide Complet pour Débutants Éco-Responsables",
+        "sections_principales": [
+          "Les fondamentaux production vidéo durable",
+          "Optimisation ressources débutants",
+          "Solutions pratiques low-cost",
+          "Checklists actionnables",
+          "Témoignages experts"
+        ],
+        "ordre_priorite": [
+          "Pédagogie étapes durables",
+          "Conseils budget limité",
+          "Retours expérience",
+          "Ressources téléchargeables"
+        ]
+      },
+      "repartition_contenu": {
+        "section_pilier": {
+          "theme": "Processus production durable étape par étape",
+          "pourcentage_contenu": "45%",
+          "profondeur_requise": "Approfondi avec exemples concrets et alternatives selon budget"
+        },
+        "sections_support": [
+          {
+            "theme": "Optimisation équipement et énergie",
+            "pourcentage": "25%"
+          },
+          {
+            "theme": "Gestion déchets et transport",
+            "pourcentage": "15%"
+          }
+        ],
+        "sections_differentiation": [
+          {
+            "theme": "Production hybrid remote durable",
+            "pourcentage": "10%"
+          },
+          {
+            "theme": "Intégration pratiques sociales responsables",
+            "pourcentage": "5%"
+          }
+        ]
+      },
+      "elements_actionabilite": {
+        "listes_actions": [
+          "10 actions immédiates réduire impact",
+          "Checklist pré-production durable",
+          "Guide audit écologique existant"
+        ],
+        "etapes_procedures": [
+          "Méthodologie calcul empreinte carbone production",
+          "Processus sélection fournisseurs responsables",
+          "Protocole gestion déchets plateau"
+        ],
+        "outils_pratiques": [
+          "Template budget production durable",
+          "Checklist équipement éco-responsable",
+          "Calculateur simplifié impact environnemental"
+        ]
+      }
+    },
+    "plan_redaction": {
+      "objectif_article": "Devenir référence francophone production vidéo durable pour débutants",
+      "angle_editorial": "Pédagogique et pratique, focus accessibilité et économies",
+      "longueur_cible": "2500-3000 mots",
+      "etapes_production": [
+        {
+          "etape": "Collecte données techniques et études",
+          "duree": "3 jours",
+          "taches": [
+            "Recherche données ADEME/CNC",
+            "Contact experts Ecoprod",
+            "Collecte retours expérience productions vertes"
+          ],
+          "ressources": [
+            "Bases données institutionnelles",
+            "Plateformes professionnelles",
+            "Réseaux experts"
+          ]
+        },
+        {
+          "etape": "Recherches complémentaires et validation",
+          "duree": "2 jours",
+          "taches": [
+            "Analyse gaps concurrents",
+            "Validation données techniques",
+            "Recherche témoignages concrets"
+          ],
+          "ressources": [
+            "Outils SEO",
+            "Contacts terrain",
+            "Validation experts"
+          ]
+        },
+        {
+          "etape": "Structuration et rédaction",
+          "duree": "3 jours",
+          "taches": [
+            "Rédaction contenu pédagogique",
+            "Création checklists actionnables",
+            "Intégration témoignages experts"
+          ],
+          "ressources": [
+            "Données collectées",
+            "Template structure",
+            "Outils création visuels"
+          ]
+        },
+        {
+          "etape": "Optimisation SEO et finalisation",
+          "duree": "1 jour",
+          "taches": [
+            "Optimisation mots-clés",
+            "Création meta-description",
+            "Vérification structure SEO",
+            "Intégration éléments actionnables"
+          ],
+          "ressources": [
+            "Outils SEO",
+            "Checklist optimisation",
+            "Validation experte RSE"
+          ]
+        }
+      ],
+      "criteres_succes": [
+        "Couverture exhaustive processus durable",
+        "Accessibilité contenu débutants",
+        "Présence éléments actionnables téléchargeables",
+        "Intégration retours experts terrain"
+      ],
+      "kpis_suivre": [
+        "Temps lecture moyen",
+        "Taux téléchargement ressources",
+        "Positionnement mots-clés cibles",
+        "Partage réseaux sociaux professionnels"
+      ]
+    }
+  }
+}

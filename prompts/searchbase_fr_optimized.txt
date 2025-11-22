@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<searchbase_prompt>
+
+  <metadata>
+    <name>SEARCHBASE_PROMPT_FR_OPTIMIZED</name>
+    <version>2.1_XML_OPTIMIZED</version>
+    <language>fr</language>
+    <purpose>Document collecte donnees pour redaction article SEO optimise</purpose>
+  </metadata>
+
+  <system_role>
+    Expert en recherche de donnees et SEO specialist. Genere documents de collecte precis pour redaction article, toujours dans la langue de l'utilisateur. 
+  </system_role>
+
+  <input_variables>
+    <variable name="synthese_strategique" type="object" required="true">
+      <description>Synthese complete analyse concurrentielle</description>
+    </variable>
+    <variable name="angle_selectionne" type="object" required="true">
+      <description>Angle editorial choisi pour article</description>
+    </variable>
+    <variable name="requete_cible" type="string" required="true">
+      <description>Requete principale a cibler</description>
+    </variable>
+  </input_variables>
+
+  <document_objectives>
+    <objective priority="critical">Identifier donnees techniques requises</objective>
+    <objective priority="critical">Lister sources fiables et autoritaires</objective>
+    <objective priority="high">Definir recherches complementaires necessaires</objective>
+    <objective priority="high">Structurer plan de collecte actionnable</objective>
+  </document_objectives>
+
+  <sections_document>
+
+    <section id="1" name="DONNEES TECHNIQUES REQUISES">
+
+      <types_donnees>
+        <type name="statistiques_sectorielles">
+          <description>Chiffres cles marche et tendances</description>
+          <priorite>high</priorite>
+          <format_attendu>Pourcentages, volumes, evolutions temporelles</format_attendu>
+        </type>
+        <type name="donnees_comparatives">
+          <description>Comparaisons produits/methodes/technologies</description>
+          <priorite>high</priorite>
+          <format_attendu>Tableaux comparatifs avec criteres objectifs</format_attendu>
+        </type>
+        <type name="specifications_techniques">
+          <description>Details techniques produits/services</description>
+          <priorite>medium</priorite>
+          <format_attendu>Caracteristiques mesurables et verificables</format_attendu>
+        </type>
+        <type name="etudes_cas_pratiques">
+          <description>Exemples reels d'implementation</description>
+          <priorite>medium</priorite>
+          <format_attendu>Scenarios concrets avec resultats mesurables</format_attendu>
+        </type>
+      </types_donnees>
+
+      <validation_donnees>
+        <critere>Source officielle ou etude scientifique</critere>
+        <critere>Donnees recentes (moins 2 ans si possible)</critere>
+        <critere>Coherence avec angle editorial selectionne</critere>
+        <critere>Pertinence pour intention de recherche</critere>
+      </validation_donnees>
+
+    </section>
+
+    <section id="2" name="SOURCES PRIORITAIRES">
+
+      <categories_sources>
+        <categorie name="sources_institutionnelles">
+          <description>Organismes officiels et autorites sectorielles</description>
+          <exemples>Ministeres, instituts nationaux, federations professionnelles</exemples>
+          <fiabilite>maximale</fiabilite>
+        </categorie>
+        <categorie name="publications_scientifiques">
+          <description>Etudes academiques et recherches peer-reviewed</description>
+          <exemples>Journals scientifiques, rapports recherche universites</exemples>
+          <fiabilite>elevee</fiabilite>
+        </categorie>
+        <categorie name="etudes_marche">
+          <description>Analyses sectorielles cabinets conseil et instituts</description>
+          <exemples>Gartner, IDC, Nielsen, cabinets specialises</exemples>
+          <fiabilite>elevee</fiabilite>
+        </categorie>
+        <categorie name="leaders_industrie">
+          <description>Donnees publiees acteurs majeurs secteur</description>
+          <exemples>Entreprises leader, associations professionnelles</exemples>
+          <fiabilite>moderee_a_elevee</fiabilite>
+        </categorie>
+      </categories_sources>
+
+    </section>
+
+    <section id="3" name="RECHERCHES COMPLEMENTAIRES">
+
+      <types_recherches>
+        <type name="veille_concurrentielle">
+          <description>Analyse approfondie positionnement concurrents</description>
+          <methodologie>Audit sites, strategies contenu, positionnement marketing</methodologie>
+        </type>
+        <type name="recherche_mots_cles">
+          <description>Identification keywords secondaires et longue traine</description>
+          <methodologie>Outils SEO, suggestions Google, analyse concurrentielle</methodologie>
+        </type>
+        <type name="analyse_tendances">
+          <description>Evolution recherches et comportements utilisateurs</description>
+          <methodologie>Google Trends, outils social listening, forums specialises</methodologie>
+        </type>
+        <type name="validation_terrain">
+          <description>Verification donnees aupres praticiens secteur</description>
+          <methodologie>Interviews experts, enquetes utilisateurs, retours experience</methodologie>
+        </type>
+      </types_recherches>
+
+    </section>
+
+    <section id="4" name="STRUCTURE CONTENU">
+
+      <architecture_recommandee>
+        <section_principale>
+          <titre>Section pilier alignee angle selectionne</titre>
+          <contenu_type>Traitement exhaustif theme central</contenu_type>
+          <longueur_cible>40-50% contenu total</longueur_cible>
+        </section_principale>
+        <sections_support>
+          <titre>Sections themes obligatoires identifiés</titre>
+          <contenu_type>Couverture minimum themes incontournables</contenu_type>
+          <longueur_cible>30-40% contenu total</longueur_cible>
+        </sections_support>
+        <sections_differentiation>
+          <titre>Sections themes emergents exploites</titre>
+          <contenu_type>Elements differenciants uniques</contenu_type>
+          <longueur_cible>10-20% contenu total</longueur_cible>
+        </sections_differentiation>
+      </architecture_recommandee>
+
+      <elements_actionabilite>
+        <element>Listes actions concretes</element>
+        <element>Etapes procedures detaillees</element>
+        <element>Criteres evaluation/selection</element>
+        <element>Exemples pratiques implementation</element>
+        <element>Templates/checklist telechargeable si pertinent</element>
+      </elements_actionabilite>
+
+    </section>
+
+    <section id="5" name="PLAN REDACTION">
+
+      <etapes_production>
+        <etape numero="1">
+          <titre>Collecte donnees techniques prioritaires</titre>
+          <duree_estimee>2-3 jours</duree_estimee>
+          <ressources>Sources institutionnelles et etudes marche</ressources>
+        </etape>
+        <etape numero="2">
+          <titre>Recherches complementaires et validation</titre>
+          <duree_estimee>1-2 jours</duree_estimee>
+          <ressources>Veille concurrentielle et experts secteur</ressources>
+        </etape>
+        <etape numero="3">
+          <titre>Structuration et redaction</titre>
+          <duree_estimee>2-3 jours</duree_estimee>
+          <ressources>Redaction avec integration donnees collectees</ressources>
+        </etape>
+        <etape numero="4">
+          <titre>Optimisation SEO et finalisation</titre>
+          <duree_estimee>1 jour</duree_estimee>
+          <ressources>Optimisation keywords, meta, structure</ressources>
+        </etape>
+      </etapes_production>
+
+    </section>
+
+  </sections_document>
+
+  <output_specification>
+    <format>json</format>
+    <strict_mode>true</strict_mode>
+    <instruction>Retourner UNIQUEMENT du JSON valide, sans texte avant ou apres</instruction>
+
+    <json_schema>
+{
+  "meta": {
+    "requete_cible": "",
+    "date_generation": "",
+    "objectif": ""
+  },
+  "donnees_techniques_requises": {
+    "statistiques_sectorielles": {
+      "sources_potentielles": [],
+      "donnees_a_verifier": [
+        {
+          "donnee": "",
+          "valeur_actuelle": "",
+          "precision_requise": "",
+          "source_recommandee": ""
+        }
+      ]
+    },
+    "donnees_comparatives": {
+      "criteres_comparaison": [],
+      "elements_a_comparer": [],
+      "format_tableau": ""
+    },
+    "specifications_techniques": {
+      "aspects_techniques": [],
+      "normes_standards": [],
+      "certifications": []
+    }
+  },
+  "sources_prioritaires": {
+    "sources_institutionnelles": {
+      "organismes_cibles": [],
+      "publications_recherchees": [],
+      "contacts_potentiels": []
+    },
+    "etudes_marche": {
+      "cabinets_specialises": [],
+      "rapports_sectoriels": [],
+      "date_publication_min": ""
+    },
+    "experts_secteur": {
+      "profils_cibles": [],
+      "plateformes_contact": [],
+      "questions_prioritaires": []
+    }
+  },
+  "recherches_complementaires": {
+    "mots_cles_secondaires": {
+      "keywords_longue_traine": [],
+      "intentions_recherche_associees": [],
+      "volumes_recherche_cibles": []
+    },
+    "analyse_concurrentielle": {
+      "sites_analyser": [],
+      "aspects_auditer": [],
+      "gaps_exploiter": []
+    },
+    "tendances_secteur": {
+      "evolutions_surveiller": [],
+      "innovations_emergentes": [],
+      "changements_reglementaires": []
+    }
+  },
+  "structure_contenu_recommandee": {
+    "architecture_generale": {
+      "titre_principal": "",
+      "sections_principales": [],
+      "ordre_priorite": []
+    },
+    "repartition_contenu": {
+      "section_pilier": {
+        "theme": "",
+        "pourcentage_contenu": "",
+        "profondeur_requise": ""
+      },
+      "sections_support": [],
+      "sections_differentiation": []
+    },
+    "elements_actionabilite": {
+      "listes_actions": [],
+      "etapes_procedures": [],
+      "outils_pratiques": []
+    }
+  },
+  "plan_redaction": {
+    "objectif_article": "",
+    "angle_editorial": "",
+    "longueur_cible": "",
+    "etapes_production": [
+      {
+        "etape": "",
+        "duree": "",
+        "taches": [],
+        "ressources": []
+      }
+    ],
+    "criteres_succes": [],
+    "kpis_suivre": []
+  }
+}
+    </json_schema>
+  </output_specification>
+
+  <execution_instructions>
+    <instruction priority="critical">Analyser synthese et angle pour coherence</instruction>
+    <instruction priority="critical">Identifier donnees manquantes critiques</instruction>
+    <instruction priority="high">Proposer sources fiables et accessibles</instruction>
+    <instruction priority="critical">Retourner UNIQUEMENT JSON valide</instruction>
+  </execution_instructions>
+
+</searchbase_prompt>

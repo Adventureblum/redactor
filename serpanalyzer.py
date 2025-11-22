@@ -7,6 +7,9 @@ import aiofiles
 from datetime import datetime
 from bs4 import BeautifulSoup
 import glob
+import aiohttp
+import whois
+from urllib.parse import urlparse
 from tenacity import (
     retry,
     stop_after_attempt,
@@ -125,12 +128,285 @@ html_retry = retry(
 )
 
 
+class DomainAuthorityCalculator:
+    """Calculateur de scores d'autorité de domaine intégré depuis vol.py"""
+
+    def __init__(self, api_key=None, cse_id=None):
+        self.logger = logging.getLogger(self.__class__.__name__)
+        self.api_key = api_key or os.getenv('API_KEY')
+        self.cse_id = cse_id or os.getenv('CSE_ID')
+        self.session = None
+        self.domain_cache = {}  # Cache des domaines déjà analysés
+
+    def extract_domain_from_url(self, url):
+        """Extrait le domaine principal d'une URL"""
+        try:
+            parsed = urlparse(url)
+            domain = parsed.netloc.replace('www.', '')
+            return domain
+        except Exception as e:
+            self.logger.error(f"Erreur extraction domaine de {url}: {e}")
+            return url
+
+    def get_domain_age(self, domain):
+        """Récupère l'âge du domaine en années via WHOIS"""
+        try:
+            w = whois.whois(domain)
+            creation_date = w.creation_date
+
+            if isinstance(creation_date, list):
+                creation_date = creation_date[0]
+
+            if creation_date:
+                age_years = (datetime.now() - creation_date).days / 365.25
+                return max(0, age_years)
+
+        except Exception as e:
+            self.logger.debug(f"Erreur WHOIS pour {domain}: {e}")
+
+        return None
+
+    async def get_search_count(self, query):
+        """Effectue une requête Google Custom Search asynchrone et retourne le nombre de résultats"""
+        if not self.api_key or not self.cse_id:
+            self.logger.warning("API_KEY ou CSE_ID manquant pour les requêtes Google Search")
+            return None
+
+        url = "https://www.googleapis.com/customsearch/v1"
+        params = {
+            'key': self.api_key,
+            'cx': self.cse_id,
+            'q': query,
+            'num': 1,
+            'fields': 'searchInformation(totalResults,searchTime)'
+        }
+
+        try:
+            if not self.session:
+                self.session = aiohttp.ClientSession(
+                    timeout=aiohttp.ClientTimeout(total=30)
+                )
+
+            async with self.session.get(url, params=params) as response:
+                if response.status != 200:
+                    text = await response.text()
+                    self.logger.warning(f"Erreur HTTP {response.status}: {text}")
+                    return None
+
+                data = await response.json()
+
+                if 'error' in data:
+                    error_msg = data['error'].get('message', 'Erreur inconnue')
+                    self.logger.warning(f"Erreur API: {error_msg}")
+                    return None
+
+                search_info = data.get('searchInformation', {})
+                total_results = search_info.get('totalResults')
+                search_time = search_info.get('searchTime', 0)
+
+                return {
+                    'count': int(total_results) if total_results else 0,
+                    'search_time': float(search_time)
+                }
+
+        except Exception as e:
+            self.logger.debug(f"Erreur requête pour '{query}': {e}")
+            return None
+
+    async def analyze_domain_authority(self, domain):
+        """Analyse complète de l'autorité d'un domaine"""
+        try:
+            # Vérifier le cache
+            if domain in self.domain_cache:
+                self.logger.debug(f"Utilisation du cache pour {domain}")
+                return self.domain_cache[domain]
+
+            self.logger.debug(f"Analyse de l'autorité du domaine: {domain}")
+
+            # 1. Pages totales indexées
+            base_query = f"site:{domain}"
+            # 2. Contenu récent
+            fresh_query = f"site:{domain} after:2023"
+
+            # Exécuter les requêtes en parallèle si les clés API sont disponibles
+            if self.api_key and self.cse_id:
+                total_result, fresh_result = await asyncio.gather(
+                    self.get_search_count(base_query),
+                    self.get_search_count(fresh_query),
+                    return_exceptions=True
+                )
+
+                # Vérifier les erreurs
+                if isinstance(total_result, Exception) or not total_result or total_result['count'] == 0:
+                    self.logger.debug(f"Aucun résultat trouvé pour {domain}")
+                    # Valeurs par défaut
+                    total_count = 1000  # Estimation par défaut
+                    fresh_count = 50
+                    search_time = 0.1
+                else:
+                    total_count = total_result['count']
+                    fresh_count = fresh_result['count'] if not isinstance(fresh_result, Exception) and fresh_result else 0
+                    search_time = total_result['search_time']
+            else:
+                # Valeurs par défaut quand les API ne sont pas disponibles
+                self.logger.debug(f"API non disponible, utilisation de valeurs par défaut pour {domain}")
+                total_count = 1000  # Estimation par défaut
+                fresh_count = 50
+                search_time = 0.1
+
+            # 3. Âge du domaine
+            domain_age = self.get_domain_age(domain)
+
+            # 4. Calculs
+            freshness_ratio = fresh_count / total_count if total_count > 0 else 0
+
+            result = {
+                'domain': domain,
+                'indexed_pages': total_count,
+                'fresh_content_2023': fresh_count,
+                'freshness_ratio': round(freshness_ratio, 3),
+                'domain_age_years': round(domain_age, 1) if domain_age else None,
+                'search_time': search_time,
+                'authority_score': self.calculate_authority_score({
+                    'indexed_pages': total_count,
+                    'fresh_content_2023': fresh_count,
+                    'domain_age_years': domain_age,
+                    'domain': domain
+                }),
+                'classification': self.classify_domain_size(total_count),
+                'activity_level': self.get_activity_level(fresh_count)
+            }
+
+            # Mettre en cache
+            self.domain_cache[domain] = result
+            return result
+
+        except Exception as e:
+            self.logger.error(f"Erreur analyse autorité pour {domain}: {e}")
+            # Retourner des valeurs par défaut en cas d'erreur
+            return {
+                'domain': domain,
+                'indexed_pages': 1000,
+                'fresh_content_2023': 50,
+                'freshness_ratio': 0.05,
+                'domain_age_years': None,
+                'search_time': 0.1,
+                'authority_score': 25,  # Score moyen par défaut
+                'classification': 'Medium (1k+ pages)',
+                'activity_level': 'Modérément actif'
+            }
+
+    def classify_domain_size(self, count):
+        """Classifie la taille du domaine"""
+        if count > 1000000:
+            return "Giant (1M+ pages)"
+        elif count > 100000:
+            return "Large (100k+ pages)"
+        elif count > 10000:
+            return "Established (10k+ pages)"
+        elif count > 1000:
+            return "Medium (1k+ pages)"
+        elif count > 100:
+            return "Small (100+ pages)"
+        else:
+            return "Very Small (<100 pages)"
+
+    def get_activity_level(self, fresh_count):
+        """Détermine le niveau d'activité basé sur le volume absolu"""
+        if fresh_count >= 300:
+            return "Très dynamique"
+        elif fresh_count >= 150:
+            return "Actif"
+        elif fresh_count >= 50:
+            return "Modérément actif"
+        elif fresh_count >= 20:
+            return "Peu actif"
+        elif fresh_count >= 5:
+            return "Quasi-inactif"
+        else:
+            return "Abandonné"
+
+    def calculate_authority_score(self, data):
+        """Calcule le score d'autorité composite selon la logique de vol.py"""
+        indexed_count = data['indexed_pages']
+        domain_age = data.get('domain_age_years')
+        fresh_count = data['fresh_content_2023']
+        domain_name = data['domain']
+
+        # Score pages indexées (0-60 points)
+        if indexed_count > 1000000:
+            base_score = 60
+        elif indexed_count > 100000:
+            base_score = 50
+        elif indexed_count > 10000:
+            base_score = 40
+        elif indexed_count > 1000:
+            base_score = 25
+        elif indexed_count > 100:
+            base_score = 15
+        else:
+            base_score = 8
+
+        # Bonus âge (0-20 points)
+        age_bonus = 0
+        if domain_age:
+            if domain_age >= 20:
+                age_bonus = 20
+            elif domain_age >= 15:
+                age_bonus = 16
+            elif domain_age >= 10:
+                age_bonus = 12
+            elif domain_age >= 5:
+                age_bonus = 8
+            elif domain_age >= 2:
+                age_bonus = 4
+            else:
+                age_bonus = 2
+
+        # Bonus activité récente (0-15 points)
+        if fresh_count >= 300:
+            activity_bonus = 15
+        elif fresh_count >= 150:
+            activity_bonus = 12
+        elif fresh_count >= 50:
+            activity_bonus = 8
+        elif fresh_count >= 20:
+            activity_bonus = 5
+        elif fresh_count >= 5:
+            activity_bonus = 2
+        else:
+            activity_bonus = 0
+
+        # Bonus domaines géants (0-5 points)
+        giant_domains = ['google.com', 'linkedin.com', 'microsoft.com', 'amazon.com', 'apple.com', 'youtube.com']
+        giant_bonus = 5 if any(giant in domain_name.lower() for giant in giant_domains) else 0
+
+        # Malus volume faible
+        volume_malus = 0
+        if indexed_count < 100:
+            volume_malus = -8
+        elif indexed_count < 500:
+            volume_malus = -5
+        elif indexed_count < 1000:
+            volume_malus = -2
+
+        total_score = base_score + age_bonus + activity_bonus + giant_bonus + volume_malus
+        return max(total_score, 5)  # Score minimum de 5
+
+    async def close_session(self):
+        """Ferme la session HTTP"""
+        if self.session:
+            await self.session.close()
+            self.session = None
+
+
 class SerpDomProcessor:
     """Processeur simplifié pour analyser le DOM des fichiers SERP"""
 
     def __init__(self):
         self.logger = logging.getLogger(self.__class__.__name__)
         self.results_dir = RESULTS_DIR
+        self.authority_calculator = DomainAuthorityCalculator()
         self.logger.debug(f"Initialisation SerpDomProcessor - Répertoire résultats: {self.results_dir}")
 
     @file_retry
@@ -240,18 +516,51 @@ class SerpDomProcessor:
             return None
     
     def count_words_in_content(self, content_dict):
-        """Compte le nombre total de mots dans le dictionnaire de contenu"""
+        """Compte le nombre de mots basé sur les balises HTML selon la logique:
+        h1 = 150 mots, h2 = 300 mots, h3 = 200 mots, h4 = 75 mots"""
         try:
+            # Valeurs de mots par type de balise
+            tag_word_values = {
+                'h1': 150,
+                'h2': 300,
+                'h3': 200,
+                'h4': 75
+            }
+
+            # Compteurs pour chaque type de balise
+            tag_counts = {
+                'h1': 0,
+                'h2': 0,
+                'h3': 0,
+                'h4': 0
+            }
+
+            # Parcourir le dictionnaire de contenu pour compter les balises
+            for key in content_dict.keys():
+                # Identifier le type de balise selon la clé
+                if key == 'h1':
+                    tag_counts['h1'] += 1
+                elif key.startswith('h2_'):
+                    tag_counts['h2'] += 1
+                elif key.startswith('h3_'):
+                    tag_counts['h3'] += 1
+                elif key.startswith('h4_'):
+                    tag_counts['h4'] += 1
+                # On ignore h5, h6 et les paragraphes (p_) dans cette logique
+
+            # Calculer le total des mots basé sur les balises trouvées
             total_words = 0
-            for text in content_dict.values():
-                if text and isinstance(text, str):
-                    # Utiliser une expression régulière pour compter les mots
-                    # On compte les séquences de caractères alphanumériques
-                    words = re.findall(r'\b\w+\b', text)
-                    total_words += len(words)
+            for tag_type, count in tag_counts.items():
+                if count > 0:
+                    words_for_tag = count * tag_word_values[tag_type]
+                    total_words += words_for_tag
+                    self.logger.debug(f"  {tag_type}: {count} balises × {tag_word_values[tag_type]} mots = {words_for_tag} mots")
+
+            self.logger.debug(f"Total mots calculé: {total_words} (h1: {tag_counts['h1']}, h2: {tag_counts['h2']}, h3: {tag_counts['h3']}, h4: {tag_counts['h4']})")
             return total_words
+
         except Exception as e:
-            self.logger.error(f"Erreur comptage mots: {e}")
+            self.logger.error(f"Erreur comptage mots par balises: {e}")
             return 0
 
     async def analyze_result(self, result, position):
@@ -282,6 +591,11 @@ class SerpDomProcessor:
             words_count = self.count_words_in_content(content)
             self.logger.debug(f"Position {position}: {words_count} mots comptabilisés")
 
+            # Calcul des scores d'autorité du domaine
+            domain = self.authority_calculator.extract_domain_from_url(url)
+            self.logger.debug(f"Position {position}: calcul autorité pour domaine {domain}")
+            domain_authority = await self.authority_calculator.analyze_domain_authority(domain)
+
             # Construction de l'analyse
             analysis = {
                 "position": position,
@@ -290,7 +604,8 @@ class SerpDomProcessor:
                 "snippet": snippet,
                 "technical_analysis": technical_tags,
                 "content": content,
-                "words_count": words_count
+                "words_count": words_count,
+                "domain_authority": domain_authority
             }
             
             return analysis
@@ -786,6 +1101,14 @@ class SerpDomProcessor:
             "message": "Type detection feature removed"
         }
 
+    async def cleanup(self):
+        """Nettoie les ressources utilisées"""
+        try:
+            await self.authority_calculator.close_session()
+            self.logger.debug("Nettoyage des ressources terminé")
+        except Exception as e:
+            self.logger.error(f"Erreur lors du nettoyage: {e}")
+
 
 class ConsigneManager:
     """Gestionnaire pour intégrer les analyses dans le fichier consigne existant"""
@@ -918,7 +1241,8 @@ class ConsigneManager:
                                 "snippet": result.get("snippet", ""),
                                 "technical_analysis": result.get("technical_analysis", {}),
                                 "content": result.get("content", {}),
-                                "words_count": result.get("words_count", 0)
+                                "words_count": result.get("words_count", 0),
+                                "domain_authority": result.get("domain_authority", {})
                             }
 
                     self.logger.info(f"✓ Query {query_id} enrichie avec {len(query_info['serp_data']['position_data'])} positions")
@@ -984,10 +1308,13 @@ async def main():
         logger.info(f"Traitement terminé en {elapsed:.1f}s: {len(successful_analyses)} succès, {failed_count} échecs")
         logger.debug(f"Taux de réussite: {len(successful_analyses)/(len(successful_analyses)+failed_count)*100:.1f}%")
         
+        # Nettoyer les ressources avant de continuer
+        await processor.cleanup()
+
         # Intégration dans le fichier consigne
         logger.info("Intégration des analyses SERP dans le fichier consigne...")
         save_success = await consigne_manager.integrate_serp_analyses(successful_analyses)
-        
+
         if save_success:
             logger.info("=== ANALYSE COMPLÈTE TERMINÉE AVEC SUCCÈS ===")
             logger.debug("Calcul des statistiques finales")
@@ -1037,13 +1364,34 @@ async def main():
             
             avg_mobile_score = sum(
                 r['technical_analysis'].get('mobile_optimization', {}).get('mobile_first_score', 0)
-                for a in successful_analyses 
+                for a in successful_analyses
                 for r in a['results']
             ) / total_results if total_results > 0 else 0
-            
+
+            # Statistiques d'autorité de domaine
+            avg_authority_score = sum(
+                r.get('domain_authority', {}).get('authority_score', 0)
+                for a in successful_analyses
+                for r in a['results']
+            ) / total_results if total_results > 0 else 0
+
+            unique_domains = len(set(
+                r.get('domain_authority', {}).get('domain', '')
+                for a in successful_analyses
+                for r in a['results']
+                if r.get('domain_authority', {}).get('domain', '')
+            ))
+
+            high_authority_domains = sum(
+                1 for a in successful_analyses
+                for r in a['results']
+                if r.get('domain_authority', {}).get('authority_score', 0) >= 70
+            )
+
             print(f"\n📊 STATISTIQUES FINALES:")
             print(f"   • Requêtes analysées: {len(successful_analyses)}")
             print(f"   • Résultats SERP analysés: {total_results}")
+            print(f"   • Domaines uniques analysés: {unique_domains}")
             print(f"   • Éléments de contenu extraits: {total_content_items}")
             print(f"     - Balises Hn: {total_headings}")
             print(f"     - Paragraphes: {total_paragraphs}")
@@ -1052,6 +1400,8 @@ async def main():
             print(f"   • Pages avec table des matières: {toc_count}")
             print(f"   • Utilisation moyenne WebP: {webp_usage:.1f}%")
             print(f"   • Score Mobile First moyen: {avg_mobile_score:.1f}/100")
+            print(f"   • Score d'autorité moyen: {avg_authority_score:.1f}/100")
+            print(f"   • Domaines haute autorité (≥70): {high_authority_domains}")
             print(f"   • Temps d'exécution: {elapsed:.1f}s")
             print(f"   • Vitesse: {total_results/elapsed:.1f} pages/sec")
             print(f"   • Fichier enrichi: {os.path.basename(consigne_manager.consigne_file) if consigne_manager.consigne_file else 'consigne.json'}")
@@ -1065,6 +1415,7 @@ async def main():
             print(f"   ✅ Table of Contents")
             print(f"   ✅ Analyse WebP et images modernes")
             print(f"   ✅ Mobile First (viewport, responsive, PWA)")
+            print(f"   ✅ Autorité de domaine (scores, classification, activité)")
             
             return True
         else:

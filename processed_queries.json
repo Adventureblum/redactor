@@ -1,56 +1,32 @@
 {
   "processed_queries": [
-    "0b68795cbd9fef2c6117d2d58b7c0743",
-    "bca913cb9147a67b95eda66e7130ecb1",
-    "751cbdca47670854788a5901dfd04828",
-    "71dd0696de769be37c753ffcbc62d074",
-    "2632fb0a5803dfef15d72e6bbc6d7c20",
     "429ff6446bf4c7e22ed3c38e83c2d88f",
+    "3bb4cf0f3a8fb20403fca5f58e863890",
     "414f26252a9c6960379767bd97ecb0cd",
-    "3bb4cf0f3a8fb20403fca5f58e863890"
+    "2632fb0a5803dfef15d72e6bbc6d7c20"
   ],
   "query_details": {
     "429ff6446bf4c7e22ed3c38e83c2d88f": {
       "id": 1,
       "text": "comment faire le signe euros sur pc",
-      "processed_at": "2025-10-29 00:29:15"
-    },
-    "2632fb0a5803dfef15d72e6bbc6d7c20": {
-      "id": 0,
-      "text": "comment faire un diaporama",
-      "processed_at": "2025-10-29 00:29:18"
+      "processed_at": "2025-11-20 00:16:20"
     },
     "414f26252a9c6960379767bd97ecb0cd": {
       "id": 3,
       "text": "meilleur éclairage pour garage",
-      "processed_at": "2025-10-29 00:29:19"
+      "processed_at": "2025-11-20 00:16:22"
+    },
+    "2632fb0a5803dfef15d72e6bbc6d7c20": {
+      "id": 0,
+      "text": "comment faire un diaporama",
+      "processed_at": "2025-11-20 00:16:22"
     },
     "3bb4cf0f3a8fb20403fca5f58e863890": {
       "id": 2,
       "text": "contrôle eclairage voiture gratuit",
-      "processed_at": "2025-10-29 00:29:20"
-    },
-    "0b68795cbd9fef2c6117d2d58b7c0743": {
-      "id": 0,
-      "text": "production video",
-      "processed_at": "2025-10-30 14:26:36"
-    },
-    "bca913cb9147a67b95eda66e7130ecb1": {
-      "id": 1,
-      "text": "video production conferences 2024",
-      "processed_at": "2025-10-30 14:26:39"
-    },
-    "71dd0696de769be37c753ffcbc62d074": {
-      "id": 2,
-      "text": "video production invoice breakdown guide",
-      "processed_at": "2025-10-30 14:26:41"
-    },
-    "751cbdca47670854788a5901dfd04828": {
-      "id": 3,
-      "text": "video and podcast production guide",
-      "processed_at": "2025-10-30 14:26:44"
+      "processed_at": "2025-11-20 00:16:23"
     }
   },
-  "last_updated": "2025-10-30 14:26:44",
-  "total_processed": 8
+  "last_updated": "2025-11-20 00:16:23",
+  "total_processed": 4
 }

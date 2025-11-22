@@ -3,7 +3,7 @@
     "requete_cible": "comment faire le signe euros sur pc",
     "requete_principale": "eclairage_poids_lourd_et_voitures",
     "group_id": 1,
-    "date_generation": "2025-11-11T19:32:51.523273",
+    "date_generation": "2025-11-21T16:18:15.812449",
     "agent_version": "searchbase-v2.2",
     "type": "document_collecte_donnees"
   },
@@ -11,229 +11,303 @@
     "meta": {
       "requete_cible": "comment faire le signe euros sur pc",
       "date_generation": "2024-12-19",
-      "objectif": "Collecte des données nécessaires pour rédiger un article SEO optimisé sur les méthodes pour taper le symbole euro sur différents supports"
+      "objectif": "Document de collecte pour article SEO optimisé sur les méthodes d'insertion du symbole euro par usage professionnel"
     },
     "donnees_techniques_requises": {
-      "raccourcis_clavier": {
+      "statistiques_sectorielles": {
         "sources_potentielles": [
-          "Documentation officielle Microsoft Windows",
-          "Documentation officielle Apple macOS",
-          "Normes ISO/IEC pour les claviers informatiques",
-          "Spécifications techniques des fabricants de claviers"
+          "INSEE",
+          "Eurostat",
+          "Baromètres du numérique",
+          "Études d'usage professionnel"
         ],
         "donnees_a_verifier": [
           {
-            "donnee": "Raccourci clavier Windows AZERTY standard",
-            "valeur_actuelle": "Alt Gr + E",
-            "precision_requise": "Valide pour Windows 10/11, peut varier selon la version et la configuration régionale",
-            "unite": "combinaison de touches"
+            "donnee": "Pourcentage de professionnels utilisant régulièrement le symbole € dans leur métier",
+            "valeur_actuelle": "Non disponible",
+            "precision_requise": "Répartition par secteur (comptabilité, rédaction, programmation)",
+            "source_recommandee": "Études sectorielles professionnelles"
           },
           {
-            "donnee": "Raccourci clavier Mac standard",
-            "valeur_actuelle": "Alt + Shift + $",
-            "precision_requise": "Valide pour macOS récents, vérifier compatibilité avec différentes versions",
-            "unite": "combinaison de touches"
-          },
-          {
-            "donnee": "Code ASCII alternatif Windows",
-            "valeur_actuelle": "Alt + 0128",
-            "precision_requise": "Nécessite le pavé numérique, ne fonctionne pas sur tous les claviers",
-            "unite": "code numérique"
-          },
-          {
-            "donnee": "Code Unicode universel",
-            "valeur_actuelle": "U+20AC",
-            "precision_requise": "Standard international, compatible avec tous les systèmes modernes",
-            "unite": "code hexadécimal"
+            "donnee": "Évolution de l'usage des raccourcis clavier en milieu professionnel",
+            "valeur_actuelle": "Non disponible",
+            "precision_requise": "Taux d'adoption par génération et par métier",
+            "source_recommandee": "Observatoires des pratiques numériques professionnelles"
           }
         ]
       },
-      "configurations_clavier_atypiques": {
-        "sources_potentielles": [
-          "Base de données des layouts de clavier Microsoft",
-          "Documentation Apple pour les claviers internationaux",
-          "Forums spécialisés en informatique",
-          "Documentation Linux pour les configurations clavier"
+      "donnees_comparatives": {
+        "criteres_comparaison": [
+          "Vitesse d'exécution",
+          "Compatibilité multi-logiciels",
+          "Apprentissage requis",
+          "Fiabilité selon l'OS"
         ],
-        "donnees_a_verifier": [
+        "elements_a_comparer": [
+          "Raccourcis AltGr",
+          "Codes Alt numériques",
+          "Copier-coller",
+          "Auto-complétion logicielle"
+        ],
+        "format_tableau": "Comparatif par métier avec notation sur 5 critères"
+      },
+      "specifications_techniques": {
+        "aspects_techniques": [
+          "Codes Unicode UTF-8",
+          "Codages ANSI/ASCII étendu",
+          "Compatibilité claviers mécaniques/membranes",
+          "Drivers clavier spécifiques"
+        ],
+        "normes_standards": [
+          "Norme ISO/CEI 9995-7",
+          "Layouts claviers européens",
+          "Standards d'accessibilité WCAG"
+        ],
+        "certifications": [
+          "Compatibilité Windows/MacOS/Linux certifiée",
+          "Validation accessibilité"
+        ]
+      }
+    },
+    "sources_prioritaires": {
+      "sources_institutionnelles": {
+        "organismes_cibles": [
+          "AFNOR",
+          "Institut national du clavier français",
+          "Eurostat",
+          "INSEE"
+        ],
+        "publications_recherchees": [
+          "Normes de claviers français",
+          "Statistiques d'équipement numérique professionnel",
+          "Études sur la productivité bureautique"
+        ],
+        "contacts_potentiels": [
+          "Experts en ergonomie cognitive",
+          "Formateurs en bureautique professionnelle"
+        ]
+      },
+      "etudes_marche": {
+        "cabinets_specialises": [
+          "Gartner",
+          "IDC",
+          "Forrester",
+          "Études sectorielles métier"
+        ],
+        "rapports_sectoriels": [
+          "Productivité en comptabilité",
+          "Workflows rédactionnels",
+          "Environnements de développement"
+        ],
+        "date_publication_min": "2022"
+      },
+      "experts_secteur": {
+        "profils_cibles": [
+          "Comptables certifiés",
+          "Rédacteurs techniques",
+          "Développeurs full-stack",
+          "Ergonomes spécialisés clavier"
+        ],
+        "plateformes_contact": [
+          "LinkedIn groupes professionnels",
+          "Forums spécialisés métier",
+          "Associations professionnelles"
+        ],
+        "questions_prioritaires": [
+          "Méthodes préférées selon le contexte métier",
+          "Problèmes récurrents rencontrés",
+          "Solutions de contournement efficaces"
+        ]
+      }
+    },
+    "recherches_complementaires": {
+      "mots_cles_secondaires": {
+        "keywords_longue_traine": [
+          "raccourci euro comptabilité",
+          "symbole € excel rapide",
+          "euro clavier programmation",
+          "signe euro rédaction word",
+          "altgr euro mac professionnel"
+        ],
+        "intentions_recherche_associees": [
+          "solution rapide",
+          "méthode fiable",
+          "raccourci mémorisable",
+          "compatible tous logiciels"
+        ],
+        "volumes_recherche_cibles": [
+          "faible à moyen selon la spécialisation métier"
+        ]
+      },
+      "analyse_concurrentielle": {
+        "sites_analyser": [
+          "CommentCaMarche",
+          "Clubic",
+          "01Net",
+          "LesNumeriques"
+        ],
+        "aspects_auditer": [
+          "Structure par usage métier",
+          "Profondeur technique",
+          "Éléments actionnables",
+          "Support multi-plateforme"
+        ],
+        "gaps_exploiter": [
+          "Absence de segmentation par métier",
+          "Manque de conseils contextuels",
+          "Support limité aux environnements professionnels complexes"
+        ]
+      },
+      "tendances_secteur": {
+        "evolutions_surveiller": [
+          "Claviers virtuels professionnels",
+          "IA d'assistance à la saisie",
+          "Standards d'accessibilité renforcés",
+          "Télétravail et équipements multiples"
+        ],
+        "innovations_emergentes": [
+          "Raccourcis contextuels intelligents",
+          "Personnalisation des layouts",
+          "Intégration voice-to-symbol"
+        ],
+        "changements_reglementaires": [
+          "Nouvelles normes d'accessibilité numérique",
+          "Standards européens de compatibilité"
+        ]
+      }
+    },
+    "structure_contenu_recommandee": {
+      "architecture_generale": {
+        "titre_principal": "Symbole € au clavier : Le guide professionnel par métier (comptabilité, rédaction, programmation)",
+        "sections_principales": [
+          "Fondamentaux techniques multi-plateformes",
+          "Guide comptabilité : vitesse et précision",
+          "Optimisation rédaction : fluidité et productivité",
+          "Solutions développement : codes et scripts",
+          "Dépannage avancé par environnement"
+        ],
+        "ordre_priorite": [
+          "Fondamentaux",
+          "Segment comptabilité",
+          "Segment rédaction",
+          "Segment programmation",
+          "Dépannage"
+        ]
+      },
+      "repartition_contenu": {
+        "section_pilier": {
+          "theme": "Guide contextuel par usage professionnel",
+          "pourcentage_contenu": "45%",
+          "profondeur_requise": "Expert avec workflows métier détaillés"
+        },
+        "sections_support": [
           {
-            "donnee": "Pourcentage d'utilisateurs avec claviers QWERTY en France",
-            "valeur_actuelle": "15-20%",
-            "precision_requise": "Estimation basée sur les ventes et usages professionnels",
-            "unite": "pourcentage"
+            "theme": "Fondamentaux techniques",
+            "pourcentage": "25%"
           },
           {
-            "donnee": "Méthode symbole euro sur clavier QWERTY US",
-            "valeur_actuelle": "Alt + Ctrl + E ou autres variantes",
-            "precision_requise": "Varie selon la version de Windows et la configuration logicielle",
-            "unite": "combinaison de touches"
-          },
+            "theme": "Solutions multi-plateformes",
+            "pourcentage": "20%"
+          }
+        ],
+        "sections_differentiation": [
           {
-            "donnee": "Solutions pour claviers internationaux courants (QWERTZ, etc.)",
-            "valeur_actuelle": "3-5 méthodes principales selon le layout",
-            "precision_requise": "Nécessite vérification par pays et type de clavier spécifique",
-            "unite": "nombre de méthodes"
+            "theme": "Dépannage avancé et cas complexes",
+            "pourcentage": "10%"
           }
         ]
       },
-      "interfaces_mobiles": {
-        "sources_potentielles": [
-          "Documentation développeur iOS Apple",
-          "Documentation développeur Android Google",
-          "Guides utilisateur officiels smartphones/tablettes",
-          "Tests pratiques sur différents modèles"
+      "elements_actionabilite": {
+        "listes_actions": [
+          "Checklist de vérification par environnement",
+          "Workflows optimisés par logiciel métier",
+          "Diagnostic problèmes courants"
         ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Méthode symbole euro sur iOS",
-            "valeur_actuelle": "Appui long sur le signe dollar ou navigation dans les symboles",
-            "precision_requise": "Varie selon la version iOS et la configuration du clavier",
-            "unite": "méthode d'accès"
-          },
-          {
-            "donnee": "Méthode symbole euro sur Android",
-            "valeur_actuelle": "Navigation dans les symboles ou appui long sur certaines touches",
-            "precision_requise": "Dépend du fabricant et de la version Android",
-            "unite": "méthode d'accès"
-          },
-          {
-            "donnee": "Temps moyen d'accès au symbole sur mobile",
-            "valeur_actuelle": "2-5 secondes",
-            "precision_requise": "Estimation basée sur l'expérience utilisateur moyenne",
-            "unite": "secondes"
-          }
+        "etapes_procedures": [
+          "Méthode pas-à-pas pour chaque raccourci",
+          "Procédure de test et validation",
+          "Configuration des logiciels spécifiques"
+        ],
+        "outils_pratiques": [
+          "Tableau comparatif interactif",
+          "Aide-mémoire téléchargeable",
+          "Scripts de configuration automatique"
         ]
       }
     },
-    "donnees_economiques_requises": {
-      "impact_utilisation": {
-        "sources_potentielles": [
-          "Études d'usage numérique Banque de France",
-          "Statistiques commerce électronique européen",
-          "Données d'utilisation des symboles monétaires"
-        ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Fréquence d'utilisation quotidienne du symbole euro en France",
-            "valeur_actuelle": "Plusieurs millions d'utilisations",
-            "precision_requise": "Estimation basée sur le volume de transactions et communications",
-            "unite": "utilisations par jour"
-          },
-          {
-            "donnee": "Temps perdu moyen par incident de saisie",
-            "valeur_actuelle": "30-60 secondes",
-            "precision_requise": "Estimation incluant recherche et résolution du problème",
-            "unite": "secondes"
-          }
-        ]
-      }
-    },
-    "donnees_marche_requises": {
-      "repartition_plateformes": {
-        "sources_potentielles": [
-          "Statistiques d'usage Statcounter",
-          "Études marché ARCEP",
-          "Données de trafic mobile/desktop"
-        ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Part des recherches mobiles pour ce type de requête",
-            "valeur_actuelle": "40-50%",
-            "precision_requise": "En croissance constante, à vérifier avec données récentes",
-            "unite": "pourcentage"
-          },
-          {
-            "donnee": "Répartition Windows/Mac parmi les utilisateurs français",
-            "valeur_actuelle": "Windows 75-80%, Mac 15-20%",
-            "precision_requise": "Varie selon les sources et la période de mesure",
-            "unite": "pourcentage"
-          },
-          {
-            "donnee": "Croissance des usages tablettes pour la productivité",
-            "valeur_actuelle": "10-15% par an",
-            "precision_requise": "Tendance observée sur les 3 dernières années",
-            "unite": "taux de croissance annuel"
-          }
-        ]
-      }
-    },
-    "donnees_reglementaires_requises": {
-      "standards_techniques": {
-        "sources_potentielles": [
-          "Norme Unicode Consortium",
-          "Spécifications ISO/CEI 9995",
-          "Recommandations W3C pour l'accessibilité web"
-        ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Code point Unicode officiel symbole euro",
-            "valeur_actuelle": "U+20AC",
-            "precision_requise": "Standard depuis 1998, vérifier compatibilité tous systèmes",
-            "unite": "code standard"
-          },
-          {
-            "donnee": "Exigences d'accessibilité pour les symboles monétaires",
-            "valeur_actuelle": "WCAG 2.1 niveau AA",
-            "precision_requise": "Nécessite des méthodes alternatives d'accès aux symboles",
-            "unite": "norme d'accessibilité"
-          }
-        ]
-      }
-    },
-    "donnees_statistiques_requises": {
-      "comportements_utilisateurs": {
-        "sources_potentielles": [
-          "Études d'ergonomie informatique",
-          "Analytics des sites concurrents",
-          "Enquêtes satisfaction utilisateurs"
-        ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Taux d'échec première tentative symbole euro",
-            "valeur_actuelle": "25-35%",
-            "precision_requise": "Estimation basée sur les patterns de recherche et retours utilisateurs",
-            "unite": "pourcentage"
-          },
-          {
-            "donnee": "Fréquence des problèmes avec claviers non-AZERTY",
-            "valeur_actuelle": "15-25% des cas problématiques",
-            "precision_requise": "Basé sur l'analyse des requêtes de dépannage",
-            "unite": "pourcentage"
-          },
-          {
-            "donnee": "Augmentation des recherches mobiles sur le sujet",
-            "valeur_actuelle": "30-40% sur 12 mois",
-            "precision_requise": "Tendance observée dans les données de recherche",
-            "unite": "taux de croissance"
-          }
-        ]
-      }
-    },
-    "verification_cross_sources": {
-      "methodologie": "Triangulation données multiples sources",
-      "sources_prioritaires": [
+    "plan_redaction": {
+      "objectif_article": "Devenir la référence francophone sur l'insertion du symbole € segmentée par usage professionnel",
+      "angle_editorial": "Guide contextuel par usage professionnel (comptabilité, rédaction, programmation)",
+      "longueur_cible": "1800-2200 mots",
+      "etapes_production": [
         {
-          "type": "Documentation officielle éditeurs",
-          "exemples": "Microsoft Support, Apple Documentation, Google Developer Guides"
+          "etape": "Collecte données techniques et études sectorielles",
+          "duree": "2 jours",
+          "taches": [
+            "Recherche sources institutionnelles",
+            "Collecte données ergonomiques",
+            "Analyse études productivité métier"
+          ],
+          "ressources": [
+            "Bases données professionnelles",
+            "Contacts experts métier",
+            "Documentation technique"
+          ]
         },
         {
-          "type": "Organismes de standardisation",
-          "exemples": "Unicode Consortium, W3C, ISO"
+          "etape": "Recherche complémentaire et validation terrain",
+          "duree": "1 jour",
+          "taches": [
+            "Tests pratiques par environnement",
+            "Validation avec professionnels",
+            "Audit solutions existantes"
+          ],
+          "ressources": [
+            "Environnements de test",
+            "Retours experts",
+            "Outils de mesure performance"
+          ]
         },
         {
-          "type": "Études d'usage indépendantes",
-          "exemples": "Statcounter, ARCEP, études ergonomie"
+          "etape": "Structuration et rédaction segmentée",
+          "duree": "3 jours",
+          "taches": [
+            "Rédaction par segment métier",
+            "Intégration données techniques",
+            "Création éléments interactifs"
+          ],
+          "ressources": [
+            "Template structure optimisée",
+            "Données collectées",
+            "Outils de création contenu"
+          ]
+        },
+        {
+          "etape": "Optimisation SEO et finalisation",
+          "duree": "1 jour",
+          "taches": [
+            "Optimisation keywords longue traine",
+            "Intégration balises techniques",
+            "Validation accessibilité"
+          ],
+          "ressources": [
+            "Outils SEO",
+            "Checklist optimisation",
+            "Validateur accessibilité"
+          ]
         }
-      ]
-    },
-    "mise_a_jour_donnees": {
-      "delai_maximum_accepte": "12 mois",
-      "preference_donnees": "Dernières 24 mois",
-      "alertes_obsolescence": [
-        "Nouvelles versions de systèmes d'exploitation",
-        "Changements dans les layouts de clavier",
-        "Évolutions des interfaces mobiles",
-        "Mises à jour des standards d'accessibilité"
+      ],
+      "criteres_succes": [
+        "Couverture exhaustive des trois segments métier",
+        "Instructions actionnables et testées",
+        "Structure optimisée pour la recherche vocale mobile",
+        "Éléments différenciants uniques"
+      ],
+      "kpis_suivre": [
+        "Temps moyen sur page > 3 minutes",
+        "Taux de rebond < 40%",
+        "Partages sur réseaux professionnels",
+        "Citations comme référence"
       ]
     }
   }

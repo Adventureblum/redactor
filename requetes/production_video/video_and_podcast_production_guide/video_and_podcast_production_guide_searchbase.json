@@ -1,0 +1,323 @@
+{
+  "meta": {
+    "requete_cible": "video and podcast production guide",
+    "requete_principale": "production_video",
+    "group_id": 3,
+    "date_generation": "2025-11-21T16:26:01.286260",
+    "agent_version": "searchbase-v2.2",
+    "type": "document_collecte_donnees"
+  },
+  "collecte_donnees": {
+    "meta": {
+      "requete_cible": "video and podcast production guide",
+      "date_generation": "2024-01-15",
+      "objectif": "Document de collecte pour article SEO optimisé sur la production vidéo collaborative remote/post-COVID"
+    },
+    "donnees_techniques_requises": {
+      "statistiques_sectorielles": {
+        "sources_potentielles": [
+          "Statista",
+          "Gartner",
+          "IDC",
+          "Forrester",
+          "Rapports spécialisés production média"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Croissance marché production vidéo remote",
+            "valeur_actuelle": "Inconnue - recherche requise",
+            "precision_requise": "Pourcentage croissance annuelle, volume marché, adoption par les entreprises",
+            "source_recommandee": "Rapports Gartner sur transformation digitale média"
+          },
+          {
+            "donnee": "Adoption outils collaboration à distance dans production média",
+            "valeur_actuelle": "Inconnue - recherche requise",
+            "precision_requise": "Taux d'adoption par studios, satisfaction utilisateurs, ROI mesuré",
+            "source_recommandee": "Études Forrester sur outils collaboration creative"
+          },
+          {
+            "donnee": "Impact COVID sur méthodes production",
+            "valeur_actuelle": "Inconnue - recherche requise",
+            "precision_requise": "Pourcentage entreprises adoptant méthodes hybrides, économies réalisées",
+            "source_recommandee": "Enquêtes sectorielles associations professionnelles"
+          }
+        ]
+      },
+      "donnees_comparatives": {
+        "criteres_comparaison": [
+          "Coût",
+          "Temps production",
+          "Qualité finale",
+          "Complexité mise en œuvre",
+          "Collaboration équipe"
+        ],
+        "elements_a_comparer": [
+          "Production traditionnelle",
+          "Production hybride",
+          "Production 100% remote"
+        ],
+        "format_tableau": "Tableau comparatif avec métriques quantitatives et qualitatives"
+      },
+      "specifications_techniques": {
+        "aspects_techniques": [
+          "Bande passante requise",
+          "Spécifications matériel",
+          "Logiciels compatibles",
+          "Protocoles sécurité données"
+        ],
+        "normes_standards": [
+          "Normes compression vidéo remote",
+          "Standards qualité streaming",
+          "Protocoles collaboration temps réel"
+        ],
+        "certifications": [
+          "Certifications sécurité cloud",
+          "Accréditations qualité production"
+        ]
+      }
+    },
+    "sources_prioritaires": {
+      "sources_institutionnelles": {
+        "organismes_cibles": [
+          "CNC",
+          "CSA",
+          "Associations professionnelles audiovisuel",
+          "Ministère de la Culture"
+        ],
+        "publications_recherchees": [
+          "Études impact numérique secteur audiovisuel",
+          "Rapports transformation production"
+        ],
+        "contacts_potentiels": [
+          "Directeurs production studios",
+          "Responsables innovation médias"
+        ]
+      },
+      "etudes_marche": {
+        "cabinets_specialises": [
+          "Gartner",
+          "IDC",
+          "Forrester",
+          "Deloitte Digital Media"
+        ],
+        "rapports_sectoriels": [
+          "Future of Video Production",
+          "Remote Work in Creative Industries"
+        ],
+        "date_publication_min": "2022"
+      },
+      "experts_secteur": {
+        "profils_cibles": [
+          "Producteurs adaptés remote work",
+          "Directeurs techniques studios",
+          "Spécialistes outils collaboration creative"
+        ],
+        "plateformes_contact": [
+          "LinkedIn groupes professionnels",
+          "Associations sectorielles",
+          "Événements industry"
+        ],
+        "questions_prioritaires": [
+          "Défis techniques production remote",
+          "Solutions éprouvées",
+          "ROI mesuré",
+          "Meilleures pratiques"
+        ]
+      }
+    },
+    "recherches_complementaires": {
+      "mots_cles_secondaires": {
+        "keywords_longue_traine": [
+          "outils production vidéo distance",
+          "collaboration équipe remote vidéo",
+          "workflow production hybride",
+          "logiciels streaming production",
+          "gestion projet vidéo remote"
+        ],
+        "intentions_recherche_associees": [
+          "solution",
+          "comparaison",
+          "tutoriel",
+          "avis"
+        ],
+        "volumes_recherche_cibles": [
+          "moyen à faible volume mais haute intention"
+        ]
+      },
+      "analyse_concurrentielle": {
+        "sites_analyser": [
+          "Position 1 actuelle",
+          "Sites spécialisés production remote",
+          "Plateformes collaboration creative"
+        ],
+        "aspects_auditer": [
+          "Couverture thématique",
+          "Profondeur contenu",
+          "Éléments actionnables",
+          "Données techniques"
+        ],
+        "gaps_exploiter": [
+          "Aspects budgétaires",
+          "ROI concret",
+          "Études cas réels",
+          "Outils spécifiques"
+        ]
+      },
+      "tendances_secteur": {
+        "evolutions_surveiller": [
+          "IA dans production remote",
+          "Outils collaboration temps réel",
+          "Standards qualité streaming"
+        ],
+        "innovations_emergentes": [
+          "Plateformes production cloud-native",
+          "Outils review collaboratif",
+          "Solutions sécurité avancées"
+        ],
+        "changements_reglementaires": [
+          "Normes protection données",
+          "Droits diffusion contenu remote"
+        ]
+      }
+    },
+    "structure_contenu_recommandee": {
+      "architecture_generale": {
+        "titre_principal": "Guide complet : Production vidéo collaborative remote - Méthodes post-COVID éprouvées",
+        "sections_principales": [
+          "Fondamentaux production remote",
+          "Outils et technologies",
+          "Workflows optimisés",
+          "Gestion budgets et ROI",
+          "Études cas concrets"
+        ],
+        "ordre_priorite": [
+          "Workflows optimisés",
+          "Outils et technologies",
+          "Gestion budgets",
+          "Études cas",
+          "Fondamentaux"
+        ]
+      },
+      "repartition_contenu": {
+        "section_pilier": {
+          "theme": "Workflows production collaborative remote",
+          "pourcentage_contenu": "45%",
+          "profondeur_requise": "Très approfondi avec étapes détaillées"
+        },
+        "sections_support": [
+          {
+            "theme": "Processus production étape par étape",
+            "pourcentage": "25%"
+          },
+          {
+            "theme": "Différenciation corporate vs cinéma",
+            "pourcentage": "15%"
+          }
+        ],
+        "sections_differentiation": [
+          {
+            "theme": "Techniques direction non-acteurs à distance",
+            "pourcentage": "10%"
+          },
+          {
+            "theme": "Stratégie marketing intégrée remote",
+            "pourcentage": "5%"
+          }
+        ]
+      },
+      "elements_actionabilite": {
+        "listes_actions": [
+          "Checklist mise en place production remote",
+          "Étapes transition hybride",
+          "Critères choix outils"
+        ],
+        "etapes_procedures": [
+          "Workflow type projet remote",
+          "Procédures review collaboratif",
+          "Protocoles sécurité"
+        ],
+        "outils_pratiques": [
+          "Template planning production",
+          "Calculateur ROI remote",
+          "Grille évaluation outils"
+        ]
+      }
+    },
+    "plan_redaction": {
+      "objectif_article": "Devenir référence sur production vidéo remote avec approche pratique et données concrètes",
+      "angle_editorial": "Production vidéo collaborative remote/post-COVID - solutions éprouvées",
+      "longueur_cible": "2500-3000 mots",
+      "etapes_production": [
+        {
+          "etape": "Collecte données techniques et études marché",
+          "duree": "3 jours",
+          "taches": [
+            "Recherche statistiques sectorielles",
+            "Identification études récentes",
+            "Collecte données comparatives"
+          ],
+          "ressources": [
+            "Bases données études",
+            "Rapports cabinets",
+            "Sources institutionnelles"
+          ]
+        },
+        {
+          "etape": "Interviews experts et validation terrain",
+          "duree": "2 jours",
+          "taches": [
+            "Contact professionnels secteur",
+            "Collecte retours expérience",
+            "Validation pratiques recommandées"
+          ],
+          "ressources": [
+            "Réseaux professionnels",
+            "Associations sectorielles",
+            "Études cas existantes"
+          ]
+        },
+        {
+          "etape": "Structuration et rédaction contenu",
+          "duree": "3 jours",
+          "taches": [
+            "Organisation sections",
+            "Rédaction contenu principal",
+            "Intégration données techniques"
+          ],
+          "ressources": [
+            "Structure validée",
+            "Données collectées",
+            "Éléments actionnables"
+          ]
+        },
+        {
+          "etape": "Optimisation SEO et finalisation",
+          "duree": "1 jour",
+          "taches": [
+            "Intégration keywords",
+            "Optimisation meta",
+            "Vérification structure",
+            "Ajout éléments visuels"
+          ],
+          "ressources": [
+            "Outils SEO",
+            "Guidelines optimisation",
+            "Éléments multimédias"
+          ]
+        }
+      ],
+      "criteres_succes": [
+        "Couverture complète angle remote",
+        "Données techniques vérifiées",
+        "Éléments actionnables présents",
+        "Structure optimisée SEO"
+      ],
+      "kpis_suivre": [
+        "Positionnement requête cible",
+        "Temps lecture",
+        "Partages sociaux",
+        "Backlinks naturels"
+      ]
+    }
+  }
+}

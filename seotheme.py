@@ -13,6 +13,9 @@ import logging
 import random
 import signal
 import sys
+import aiohttp
+import requests
+import unicodedata
 from datetime import datetime
 from typing import List, Dict, Any, Optional
 from concurrent.futures import ThreadPoolExecutor
@@ -20,7 +23,7 @@ from pathlib import Path
 
 try:
     from langchain_deepseek import ChatDeepSeek
-    from langchain.schema import SystemMessage, HumanMessage
+    from langchain_core.messages import SystemMessage, HumanMessage
 except ImportError as e:
     print(f"❌ Erreur d'import des dépendances LangChain: {e}")
     print("💡 Installez les dépendances avec: pip install langchain-deepseek langchain")
@@ -36,6 +39,10 @@ def validate_environment():
     if len(deepseek_key.strip()) < 10:
         raise ValueError("❌ DEEPSEEK_KEY appears to be invalid (too short)")
 
+    perplexity_key = os.getenv("PERPLEXITY_API_KEY")
+    if not perplexity_key:
+        print("⚠️ PERPLEXITY_API_KEY not found - search functionality will be disabled")
+
     # Vérifier les permissions d'écriture dans le répertoire courant
     try:
         test_file = Path("temp_write_test.tmp")
@@ -44,14 +51,18 @@ def validate_environment():
     except (PermissionError, OSError) as e:
         raise ValueError(f"❌ No write permission in current directory: {e}")
 
-    return deepseek_key
+    return deepseek_key, perplexity_key
 
 # Initialisation sécurisée
 try:
-    DEEPSEEK_KEY = validate_environment()
+    DEEPSEEK_KEY, PERPLEXITY_API_KEY = validate_environment()
 except Exception as e:
     print(f"❌ Configuration error: {e}")
     sys.exit(1)
+
+# Configuration Perplexity API
+PERPLEXITY_API_URL = "https://api.perplexity.ai/chat/completions"
+PERPLEXITY_MODEL = "sonar"
 
 # Gestionnaire global pour les interruptions
 _global_analyzer = None
@@ -251,13 +262,13 @@ class SEOContentAnalyzer:
     def __init__(self, language: str = None, max_concurrent: int = None, consignes_file: str = None):
         """
         Args:
-            language: 'fr' ou 'en' (None = lecture depuis system.json)
+            language: 'fr' ou 'en' (None = français par défaut)
             max_concurrent: Nombre max de requêtes simultanées (None = illimité)
             consignes_file: Chemin vers le fichier de consignes
         """
-        # Si aucune langue n'est spécifiée, lire depuis system.json
+        # Si aucune langue n'est spécifiée, utiliser français par défaut
         if language is None:
-            self.language = self._load_language_from_system()
+            self.language = 'fr'
         else:
             self.language = language
 
@@ -286,25 +297,6 @@ class SEOContentAnalyzer:
         self.articles = []
         self.results = []
 
-    def _load_language_from_system(self) -> str:
-        """Charge la langue depuis system.json"""
-        try:
-            script_dir = os.path.dirname(os.path.abspath(__file__))
-            system_file = os.path.join(script_dir, "system.json")
-
-            with open(system_file, 'r', encoding='utf-8') as f:
-                system_config = json.load(f)
-
-            language = system_config.get('language', 'fr')
-            print(f"🌐 Langue chargée depuis system.json: {language}")
-            return language
-
-        except FileNotFoundError:
-            print("⚠️ system.json non trouvé, utilisation du français par défaut")
-            return "fr"
-        except Exception as e:
-            print(f"⚠️ Erreur lecture system.json: {e}, utilisation du français par défaut")
-            return "fr"
 
     def close(self):
         """Fermeture propre des ressources"""
@@ -341,72 +333,52 @@ class SEOContentAnalyzer:
             pass  # Ignore les erreurs lors de la destruction
     
     def _load_prompts(self):
-        """Charge les prompts depuis les fichiers texte dans les sous-dossiers de langue"""
+        """Charge les prompts depuis les fichiers directement dans le dossier prompts/"""
         script_dir = os.path.dirname(os.path.abspath(__file__))
+        prompts_dir = os.path.join(script_dir, "prompts")
 
-        # Nouveau chemin avec sous-dossier de langue
-        language_prompts_dir = os.path.join(script_dir, "prompts", self.language)
+        # Fichiers communs pour toutes les langues
+        article_file = os.path.join(prompts_dir, "article_analysis.txt")
+        synthesis_file = os.path.join(prompts_dir, "strategic_synthesis.txt")
+        angle_selector_file = os.path.join(prompts_dir, "angle_selector.txt")
+        searchbase_file = os.path.join(prompts_dir, "searchbase.txt")
+        search_file = os.path.join(prompts_dir, "search.txt")
 
-        if self.language == "fr":
-            article_file = os.path.join(language_prompts_dir, "article_analysis_fr.txt")
-            synthesis_file = os.path.join(language_prompts_dir, "strategic_synthesis_fr.txt")
-            angle_selector_file = os.path.join(language_prompts_dir, "angle_selector.txt")
-            searchbase_file = os.path.join(language_prompts_dir, "searchbase_fr.txt")
-        elif self.language == "en":
-            article_file = os.path.join(language_prompts_dir, "article_analysis_en.txt")
-            synthesis_file = os.path.join(language_prompts_dir, "strategic_synthesis_en.txt")
-            angle_selector_file = os.path.join(language_prompts_dir, "angle_selector_en.txt")
-            searchbase_file = os.path.join(language_prompts_dir, "searchbase_en.txt")
-        else:
-            raise ValueError(f"Language '{self.language}' not supported. Use 'fr' or 'en'")
-
-        print(f"🔍 Recherche des prompts dans: {language_prompts_dir}")
+        print(f"🔍 Recherche des prompts dans: {prompts_dir}")
         print(f"📄 Fichier d'analyse: {article_file}")
         print(f"📄 Fichier de synthèse: {synthesis_file}")
         print(f"📄 Fichier angle_selector: {angle_selector_file}")
         print(f"📄 Fichier searchbase: {searchbase_file}")
+        print(f"📄 Fichier search: {search_file}")
 
         try:
-            # Charger et extraire le prompt d'analyse d'article
+            # Charger le prompt XML d'analyse d'article (nouveau format)
             with open(article_file, 'r', encoding='utf-8') as f:
-                content = f.read()
+                self.article_prompt = f.read().strip()
+                print(f"✅ Prompt d'analyse chargé (XML format, {len(self.article_prompt)} caractères)")
 
-                # Définir le nom de variable selon la langue
-                if self.language == "fr":
-                    prompt_var_name = 'ARTICLE_ANALYSIS_PROMPT_FR'
-                elif self.language == "en":
-                    prompt_var_name = 'ARTICLE_ANALYSIS_PROMPT_EN'
-                else:
-                    raise ValueError(f"Language '{self.language}' not supported")
-
-                # Extraire le prompt entre les triple quotes
-                start_marker = f'{prompt_var_name} = """'
-                end_marker = '"""'
-
-                start_idx = content.find(start_marker)
-                if start_idx != -1:
-                    start_idx += len(start_marker)
-                    end_idx = content.find(end_marker, start_idx)
-                    if end_idx != -1:
-                        self.article_prompt = content[start_idx:end_idx].strip()
-                    else:
-                        raise ValueError(f"Could not find end marker for {prompt_var_name}")
-                else:
-                    raise ValueError(f"Could not find {prompt_var_name} in file")
-
-            # Charger le prompt de synthèse
+            # Charger le prompt XML de synthèse
             with open(synthesis_file, 'r', encoding='utf-8') as f:
-                self.synthesis_prompt = f.read()
+                self.synthesis_prompt = f.read().strip()
+                print(f"✅ Prompt de synthèse chargé (XML format, {len(self.synthesis_prompt)} caractères)")
 
             # Charger le prompt angle_selector
             with open(angle_selector_file, 'r', encoding='utf-8') as f:
-                self.angle_selector_prompt = f.read()
+                self.angle_selector_prompt = f.read().strip()
+                print(f"✅ Prompt angle_selector chargé ({len(self.angle_selector_prompt)} caractères)")
 
             # Charger le prompt searchbase
             with open(searchbase_file, 'r', encoding='utf-8') as f:
-                self.searchbase_prompt = f.read()
+                self.searchbase_prompt = f.read().strip()
+                print(f"✅ Prompt searchbase chargé ({len(self.searchbase_prompt)} caractères)")
+
+            # Charger le prompt search (Perplexity)
+            with open(search_file, 'r', encoding='utf-8') as f:
+                self.search_prompt = f.read().strip()
+                print(f"✅ Prompt search chargé ({len(self.search_prompt)} caractères)")
+
         except FileNotFoundError as e:
-            raise FileNotFoundError(f"Prompt file not found: {e}. Make sure prompts/{self.language}/ directory exists.")
+            raise FileNotFoundError(f"Prompt file not found: {e}. Make sure prompts/ directory exists and contains the required files.")
     
     def load_data(self, filepath: str):
         """Charge les données depuis un fichier JSON de consignes avec validation robuste"""
@@ -910,12 +882,18 @@ class SEOContentAnalyzer:
                 }
             )
 
-            # Construire le prompt
-            prompt = self.article_prompt.format(
-                position=article['position'],
-                title=article['title'],
-                content=article['content'][:15000]  # Limiter pour ne pas dépasser le token limit
-            )
+            # Construire le prompt avec les variables XML
+            # Le nouveau format XML contient tout le prompt, on ajoute juste les variables d'entrée
+            variables_section = f"""
+
+Variables d'entrée pour l'analyse :
+- Position: {article['position']}
+- Titre: {article['title']}
+- Contenu: {article['content'][:15000]}
+
+Analyser maintenant cet article selon les instructions XML ci-dessus."""
+
+            prompt = self.article_prompt + variables_section
 
             # Appel LLM synchrone dans ThreadPoolExecutor pour DeepSeek
             full_prompt = f"""You are an expert SEO content analyst. Always respond in valid JSON format.
@@ -1010,10 +988,16 @@ IMPORTANT: Your response MUST be in valid JSON format only, no additional text o
             # Préparer les analyses pour le prompt
             analyses_text = json.dumps(group_analyses, indent=2, ensure_ascii=False)
 
-            prompt = self.synthesis_prompt.format(
-                requete=query,
-                analyses=analyses_text[:20000]
-            )
+            # Construire le prompt avec les variables XML pour la synthèse
+            variables_section = f"""
+
+Variables d'entrée pour la synthèse :
+- Requête cible: {query}
+- Analyses des articles concurrents: {analyses_text[:20000]}
+
+Effectuer maintenant la synthèse stratégique selon les instructions XML ci-dessus."""
+
+            prompt = self.synthesis_prompt + variables_section
             
 
             # Appel LLM synchrone dans ThreadPoolExecutor pour DeepSeek
@@ -1100,19 +1084,18 @@ IMPORTANT: Your response MUST be in valid JSON format only, no additional text o
             angles_minimum = strategie_positionnement.get('socle_obligatoire', {}).get('angles_minimum', [])
             themes_incontournables = strategie_positionnement.get('socle_obligatoire', {}).get('themes_incontournables', [])
 
-            # Remplacer les placeholders dans le prompt
-            prompt = self.angle_selector_prompt.replace(
-                "{meta['requete_cible']}", requete_cible
-            ).replace(
-                "{json.dumps(strategie_positionnement['socle_obligatoire']['angles_minimum'], ensure_ascii=False, indent=2)}",
-                json.dumps(angles_minimum, ensure_ascii=False, indent=2)
-            ).replace(
-                "{json.dumps(strategie_positionnement['socle_obligatoire']['themes_incontournables'], ensure_ascii=False, indent=2)}",
-                json.dumps(themes_incontournables, ensure_ascii=False, indent=2)
-            ).replace(
-                "{json.dumps(opportunites_angles_uniques, ensure_ascii=False, indent=2)}",
-                json.dumps(opportunites_angles_uniques, ensure_ascii=False, indent=2)
-            )
+            # Construire le prompt avec les variables XML pour la sélection d'angle
+            variables_section = f"""
+
+Variables d'entrée pour la sélection d'angle :
+- Requête cible: {requete_cible}
+- Angles minimum (socle obligatoire): {json.dumps(angles_minimum, ensure_ascii=False, indent=2)}
+- Thèmes incontournables: {json.dumps(themes_incontournables, ensure_ascii=False, indent=2)}
+- Opportunités d'angles uniques: {json.dumps(opportunites_angles_uniques, ensure_ascii=False, indent=2)}
+
+Effectuer maintenant la sélection d'angle selon les instructions XML ci-dessus."""
+
+            prompt = self.angle_selector_prompt + variables_section
 
             # Appel LLM synchrone dans ThreadPoolExecutor pour DeepSeek
             full_prompt = f"""You are an expert SEO editorial strategist. Always respond in valid JSON format.
@@ -1209,13 +1192,20 @@ IMPORTANT: Your response MUST be in valid JSON format only, no additional text o
             # Convertir en JSON formaté pour le prompt
             input_json = json.dumps(input_data, indent=2, ensure_ascii=False)
 
+            # Construire le prompt avec les variables XML pour searchbase
+            variables_section = f"""
+
+Données d'entrée pour l'analyse searchbase :
+{input_json}
+
+Effectuer maintenant l'analyse des données selon les instructions XML ci-dessus."""
+
             # Construire le prompt complet
             full_prompt = f"""You are an expert data research analyst and SEO specialist. Always respond in valid JSON format.
 
 {self.searchbase_prompt}
 
-INPUT DATA:
-{input_json}
+{variables_section}
 
 IMPORTANT: Your response MUST be in valid JSON format only, no additional text or markdown."""
 
@@ -1268,7 +1258,161 @@ IMPORTANT: Your response MUST be in valid JSON format only, no additional text o
 
             print(f"❌ Erreur génération searchbase groupe {group_id}: {e}")
             return {}
-    
+
+    async def generate_perplexity_search(self, group_id: int, searchbase_data: Dict[str, Any], query: str) -> Dict[str, Any]:
+        """Génère une recherche web Perplexity basée sur les données searchbase"""
+        try:
+            print(f"\n🔍 Génération recherche Perplexity groupe {group_id}...")
+
+            # Vérifier si l'API key Perplexity est disponible
+            if not PERPLEXITY_API_KEY:
+                print(f"⚠️ PERPLEXITY_API_KEY non disponible - recherche désactivée pour groupe {group_id}")
+                return {}
+
+            # Log de début de recherche
+            self.logger.log_agent_step(
+                step_type="PERPLEXITY_SEARCH",
+                query=query,
+                group_id=group_id,
+                status="started",
+                details={
+                    "group_id": group_id,
+                    "searchbase_provided": bool(searchbase_data)
+                }
+            )
+
+            # Préparer les données JSON pour la recherche
+            searchbase_json = json.dumps(searchbase_data, ensure_ascii=False, indent=2)
+
+            # Construire le prompt avec les données
+            prompt_content = f"""
+Données d'entrée pour la recherche web :
+
+{searchbase_json}
+
+{self.search_prompt}
+"""
+
+            # Préparer la requête Perplexity
+            headers = {
+                'Authorization': f'Bearer {PERPLEXITY_API_KEY}',
+                'Content-Type': 'application/json'
+            }
+
+            payload = {
+                'model': PERPLEXITY_MODEL,
+                'messages': [
+                    {'role': 'system', 'content': self.search_prompt},
+                    {'role': 'user', 'content': f"JSON à analyser et enrichir :\n\n{searchbase_json}"}
+                ],
+                'max_tokens': 3000,
+                'temperature': 0.1
+            }
+
+            # Effectuer la requête avec aiohttp pour la compatibilité async
+            context = f"recherche perplexity groupe {group_id}"
+            async with aiohttp.ClientSession() as session:
+                async with session.post(
+                    PERPLEXITY_API_URL,
+                    headers=headers,
+                    json=payload,
+                    timeout=aiohttp.ClientTimeout(total=180)
+                ) as response:
+                    if response.status == 200:
+                        response_data = await response.json()
+                        raw_response_text = response_data['choices'][0]['message']['content']
+                    else:
+                        error_text = await response.text()
+                        raise Exception(f"Erreur API Perplexity: {response.status} - {error_text}")
+
+            # Sauvegarder la réponse brute avec structure similaire
+            raw_response = self._save_raw_response(
+                raw_response_text,
+                "PERPLEXITY_SEARCH",
+                group_id=group_id
+            )
+
+            # Extraire les données structurées (garder le texte tel quel car c'est un rapport de recherche)
+            perplexity_data = {
+                "rapport_recherche": raw_response_text,
+                "meta_recherche": {
+                    "timestamp": datetime.now().isoformat(),
+                    "model_used": PERPLEXITY_MODEL,
+                    "query_source": query,
+                    "searchbase_input": bool(searchbase_data)
+                }
+            }
+
+            # Log de succès
+            self.logger.log_agent_step(
+                step_type="PERPLEXITY_SEARCH",
+                query=query,
+                group_id=group_id,
+                status="completed",
+                details={
+                    "response_length": len(raw_response_text),
+                    "parsing_successful": True
+                }
+            )
+
+            print(f"✅ Recherche Perplexity groupe {group_id} générée")
+            return perplexity_data
+
+        except Exception as e:
+            # Log de l'erreur
+            self.logger.log_agent_step(
+                step_type="PERPLEXITY_SEARCH",
+                query=query,
+                group_id=group_id,
+                status="error",
+                error=str(e)
+            )
+
+            print(f"❌ Erreur recherche Perplexity groupe {group_id}: {e}")
+            return {}
+
+    def save_perplexity_data(self, perplexity_data: Dict[str, Any], query: str, main_query: str, group_id: int):
+        """Sauvegarde les données Perplexity (sonar) dans un fichier séparé"""
+        try:
+            # Utiliser la même logique de nommage que les autres fichiers
+            sanitized_individual_query = self.sanitize_query_for_filename(query)
+            sanitized_main_query = self.sanitize_query_for_filename(main_query)
+
+            # Créer la structure de dossiers identique
+            main_folder = f"requetes/{sanitized_main_query}"
+            individual_query_folder = f"{main_folder}/{sanitized_individual_query}"
+
+            # Créer le chemin pour le fichier sonar
+            sonar_filename = f"{sanitized_individual_query}_sonar.json"
+            output_path = f"{individual_query_folder}/{sonar_filename}"
+
+            # Créer le dossier si nécessaire
+            os.makedirs(individual_query_folder, exist_ok=True)
+
+            # Structure des données sonar avec métadonnées
+            sonar_output = {
+                "meta": {
+                    "requete_cible": query,
+                    "requete_principale": main_query,
+                    "group_id": group_id,
+                    "date_generation": datetime.now().isoformat(),
+                    "agent_version": "perplexity-sonar-v1.0",
+                    "type": "document_recherche_web"
+                },
+                "recherche_web": perplexity_data
+            }
+
+            # Sauvegarder le fichier
+            with open(output_path, 'w', encoding='utf-8') as f:
+                json.dump(sonar_output, f, ensure_ascii=False, indent=2)
+
+            print(f"💾 Données Perplexity sauvegardées: {output_path}")
+            return output_path
+
+        except Exception as e:
+            print(f"❌ Erreur sauvegarde Perplexity groupe {group_id}: {e}")
+            return None
+
     async def run_analysis_optimized(self, use_queue: bool = True, num_workers: int = 10) -> Dict[str, Any]:
         """Lance l'analyse complète optimisée - tous les groupes en parallèle"""
         print(f"\n{'='*60}")
@@ -1486,6 +1630,68 @@ IMPORTANT: Your response MUST be in valid JSON format only, no additional text o
             else:
                 print(f"⚠️ Groupe {group_id}: Données searchbase vides, pas de sauvegarde")
 
+        # ===== PHASE 5: RECHERCHE WEB PERPLEXITY =====
+        print(f"\n🔍 PHASE 5: RECHERCHE WEB PERPLEXITY")
+        print(f"{'='*60}")
+
+        # Identifier les groupes valides pour la recherche Perplexity (ceux qui ont des données searchbase)
+        valid_groups_for_perplexity = {}
+        skipped_perplexity_groups = []
+
+        for group_id, searchbase_result in searchbase_data.items():
+            if searchbase_result and not searchbase_result.get("parsing_error", False):
+                valid_groups_for_perplexity[group_id] = searchbase_result
+            else:
+                print(f"⚠️ Groupe {group_id} ignoré pour recherche Perplexity - données searchbase invalides")
+                skipped_perplexity_groups.append(group_id)
+
+        perplexity_data = {}
+
+        if valid_groups_for_perplexity and PERPLEXITY_API_KEY:
+            print(f"   🚀 Recherche Perplexity - {len(valid_groups_for_perplexity)} groupes à traiter")
+
+            perplexity_tasks = []
+            for group_id, searchbase_result in valid_groups_for_perplexity.items():
+                query = groups_queries.get(group_id, f"group_{group_id}")
+                task = self.generate_perplexity_search(group_id, searchbase_result, query)
+                perplexity_tasks.append((group_id, task))
+
+            # Exécuter toutes les recherches Perplexity en parallèle
+            perplexity_results = await asyncio.gather(*[task for _, task in perplexity_tasks])
+
+            # Associer les résultats aux group_ids
+            for i, (group_id, _) in enumerate(perplexity_tasks):
+                perplexity_data[group_id] = perplexity_results[i]
+
+        else:
+            if not PERPLEXITY_API_KEY:
+                print(f"   ⚠️ PERPLEXITY_API_KEY non disponible - recherche web désactivée")
+            else:
+                print(f"   ⚠️ Aucun groupe valide - phase recherche web ignorée")
+
+        # Sauvegarder immédiatement chaque fichier Perplexity séparément
+        if perplexity_data:
+            print(f"\n💾 SAUVEGARDE DES DONNÉES PERPLEXITY")
+            print(f"{'='*60}")
+
+            for group_id, perplexity_result in perplexity_data.items():
+                if perplexity_result:  # Seulement si les données existent et ne sont pas vides
+                    query = groups_queries.get(group_id, f"group_{group_id}")
+                    perplexity_path = self.save_perplexity_data(
+                        perplexity_result,
+                        query,
+                        main_query,
+                        group_id
+                    )
+                    if perplexity_path:
+                        print(f"✅ Groupe {group_id}: {os.path.basename(perplexity_path)}")
+                    else:
+                        print(f"❌ Groupe {group_id}: Échec sauvegarde Perplexity")
+                else:
+                    print(f"⚠️ Groupe {group_id}: Données Perplexity vides, pas de sauvegarde")
+
+        print(f"✅ Phase 5 terminée: {len(perplexity_data)} recherches Perplexity effectuées")
+
         # Construction des résultats finaux par groupe
         final_results = {}
         for group_id, group_analyses in grouped_results.items():
@@ -1493,6 +1699,7 @@ IMPORTANT: Your response MUST be in valid JSON format only, no additional text o
             synthesis = syntheses.get(group_id, {})
             angle_selection = angle_selections.get(group_id, {})
             searchbase = searchbase_data.get(group_id, {})
+            perplexity_search = perplexity_data.get(group_id, {})
 
             group_result = {
                 "meta": {
@@ -1509,6 +1716,7 @@ IMPORTANT: Your response MUST be in valid JSON format only, no additional text o
                 f"synthese_strategique_analysis_{group_id}": synthesis,
                 "angle_select": angle_selection,
                 "searchbase_data": searchbase,
+                "perplexity_search_data": perplexity_search,
                 "controle_qualite": {
                     "articles_traites": len(group_analyses),
                     "erreurs_detectees": len([a for a in self.articles if a['analysis_group'] == group_id]) - len(group_analyses),

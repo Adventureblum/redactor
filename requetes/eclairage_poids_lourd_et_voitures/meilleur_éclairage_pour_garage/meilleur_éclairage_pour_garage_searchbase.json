@@ -3,15 +3,322 @@
     "requete_cible": "meilleur éclairage pour garage",
     "requete_principale": "eclairage_poids_lourd_et_voitures",
     "group_id": 3,
-    "date_generation": "2025-11-11T19:32:51.525019",
+    "date_generation": "2025-11-21T16:18:15.814198",
     "agent_version": "searchbase-v2.2",
     "type": "document_collecte_donnees"
   },
   "collecte_donnees": {
     "meta": {
-      "parsing_error": true
+      "requete_cible": "meilleur éclairage pour garage",
+      "date_generation": "2024-12-19",
+      "objectif": "Document de collecte pour article SEO optimisé sur l'analyse coût-bénéfice des solutions d'éclairage garage"
     },
-    "raw_response_fallback": "{\n  \"meta\": {\n    \"requete_cible\": \"meilleur éclairage pour garage\",\n    \"date_generation\": \"2024-12-19\",\n    \"objectif\": \"Collecte des données nécessaires pour rédiger un article SEO optimisé sur l'automatisation complète du garage avec scénarios d'usage\"\n  },\n  \"donnees_techniques_requises\": {\n    \"comparaison_technologies_eclairage\": {\n      \"sources_potentielles\": [\n        \"Commission Internationale de l'Éclairage (CIE)\",\n        \"Institut National de Métrologie (LNE)\",\n        \"Études comparatives LED vs fluorescents ADEME\",\n        \"Normes techniques AFNOR éclairage\"\n      ],\n      \"donnees_a_verifier\": [\n        {\n          \"donnee\": \"Efficacité lumineuse LED garage moyenne\",\n          \"valeur_actuelle\": \"80-120 lm/W\",\n          \"precision_requise\": \"Variation selon qualité des puces LED et température de couleur\",\n          \"unite\": \"lumens/watt\"\n        },\n        {\n          \"donnee\": \"Efficacité lumineuse fluorescent garage moyenne\",\n          \"valeur_actuelle\": \"50-70 lm/W",
-    "parsing_error": true
+    "donnees_techniques_requises": {
+      "statistiques_sectorielles": {
+        "sources_potentielles": [
+          "ADEME",
+          "RTE",
+          "Eurostat",
+          "INSEE",
+          "Syndicat de l'Éclairage"
+        ],
+        "donnees_a_verifier": [
+          {
+            "donnee": "Prix moyen électricité résidentielle France",
+            "valeur_actuelle": "À collecter",
+            "precision_requise": "€/kWh avec évolution sur 5 ans",
+            "source_recommandee": "Eurostat / RTE"
+          },
+          {
+            "donnee": "Durée de vie moyenne LED vs technologies traditionnelles",
+            "valeur_actuelle": "À collecter",
+            "precision_requise": "Heures de fonctionnement avec conditions garage",
+            "source_recommandee": "Syndicat de l'Éclairage"
+          },
+          {
+            "donnee": "Taux d'équipement LED dans les garages français",
+            "valeur_actuelle": "À collecter",
+            "precision_requise": "Pourcentage avec segmentation habitat individuel/collectif",
+            "source_recommandee": "ADEME / études marché spécialisées"
+          }
+        ]
+      },
+      "donnees_comparatives": {
+        "criteres_comparaison": [
+          "Coût d'achat initial",
+          "Consommation énergétique annuelle",
+          "Durée de vie",
+          "Coût de maintenance",
+          "ROI sur 5 ans",
+          "Impact environnemental"
+        ],
+        "elements_a_comparer": [
+          "LED tubes",
+          "LED spots encastrables",
+          "LED panneaux",
+          "Fluorescents T8",
+          "Halogènes",
+          "Incandescents"
+        ],
+        "format_tableau": "Tableau comparatif avec calcul automatique ROI"
+      },
+      "specifications_techniques": {
+        "aspects_techniques": [
+          "Puissance (W)",
+          "Flux lumineux (lm)",
+          "Efficacité lumineuse (lm/W)",
+          "Indice de rendu des couleurs (IRC)",
+          "Température de couleur (K)",
+          "Angle d'éclairage"
+        ],
+        "normes_standards": [
+          "NF EN 60598-1",
+          "Directive ERP",
+          "Règlementation DEEE"
+        ],
+        "certifications": [
+          "NF Éclairage",
+          "Energy Star",
+          "TCO Certified"
+        ]
+      }
+    },
+    "sources_prioritaires": {
+      "sources_institutionnelles": {
+        "organismes_cibles": [
+          "ADEME",
+          "Ministère de la Transition Écologique",
+          "Syndicat de l'Éclairage"
+        ],
+        "publications_recherchees": [
+          "Études sur l'efficacité énergétique",
+          "Rapports sur les technologies LED",
+          "Statistiques prix énergie"
+        ],
+        "contacts_potentiels": [
+          "Experts ADEME habitat",
+          "Bureaux d'études énergétiques"
+        ]
+      },
+      "etudes_marche": {
+        "cabinets_specialises": [
+          "GfK",
+          "Ipsos",
+          "Xerfi"
+        ],
+        "rapports_sectoriels": [
+          "Marché de l'éclairage résidentiel France",
+          "Évolution technologies LED"
+        ],
+        "date_publication_min": "2022"
+      },
+      "experts_secteur": {
+        "profils_cibles": [
+          "Éclairagistes professionnels",
+          "Bureaux d'études énergétiques",
+          "Installateurs électriciens"
+        ],
+        "plateformes_contact": [
+          "LinkedIn groupes professionnels",
+          "Salons professionnels éclairage"
+        ],
+        "questions_prioritaires": [
+          "Coûts réels d'installation",
+          "Maintenance préventive",
+          "Retours expérience clients"
+        ]
+      }
+    },
+    "recherches_complementaires": {
+      "mots_cles_secondaires": {
+        "keywords_longue_traine": [
+          "prix éclairage garage LED",
+          "consommation luminaire garage",
+          "ROI éclairage LED garage",
+          "coût installation spots garage",
+          "éclairage garage économique"
+        ],
+        "intentions_recherche_associees": [
+          "transactionnelle",
+          "informationnelle approfondie"
+        ],
+        "volumes_recherche_cibles": [
+          "500-1000/mois"
+        ]
+      },
+      "analyse_concurrentielle": {
+        "sites_analyser": [
+          "Leroy Merlin",
+          "Castorama",
+          "Brico Dépôt",
+          "Manomano",
+          "Amazon"
+        ],
+        "aspects_auditer": [
+          "Stratégie tarifaire",
+          "Arguments de vente",
+          "Fiches techniques produits",
+          "Avis clients"
+        ],
+        "gaps_exploiter": [
+          "Manque analyse ROI détaillée",
+          "Absence comparaison coûts complets"
+        ]
+      },
+      "tendances_secteur": {
+        "evolutions_surveiller": [
+          "Baisse prix technologies LED",
+          "Nouvelles réglementations énergétiques",
+          "Innovations domotique éclairage"
+        ],
+        "innovations_emergentes": [
+          "LED connectées Wi-Fi",
+          "Détecteurs présence intelligents",
+          "Gestion énergétique optimisée"
+        ],
+        "changements_reglementaires": [
+          "Nouvelles normes ERP",
+          "Obligations performance énergétique"
+        ]
+      }
+    },
+    "structure_contenu_recommandee": {
+      "architecture_generale": {
+        "titre_principal": "Éclairage Garage : Analyse Coût-Bénéfice sur 5 Ans de Toutes les Solutions",
+        "sections_principales": [
+          "Introduction besoins spécifiques garage",
+          "Méthodologie calcul ROI",
+          "Analyse comparative technologies",
+          "Calcul détaillé sur 5 ans",
+          "Recommandations par usage",
+          "Guide d'optimisation budget"
+        ],
+        "ordre_priorite": [
+          "Analyse comparative",
+          "Calcul ROI",
+          "Recommandations",
+          "Guide optimisation"
+        ]
+      },
+      "repartition_contenu": {
+        "section_pilier": {
+          "theme": "Analyse coût-bénéfice détaillée sur 5 ans",
+          "pourcentage_contenu": "45%",
+          "profondeur_requise": "Très approfondie avec calculs détaillés"
+        },
+        "sections_support": [
+          {
+            "theme": "Comparaison techniques LED vs traditionnelles",
+            "pourcentage": "25%"
+          },
+          {
+            "theme": "Critères de sélection techniques",
+            "pourcentage": "15%"
+          }
+        ],
+        "sections_differentiation": [
+          {
+            "theme": "Solutions d'automatisation et détecteurs",
+            "pourcentage": "10%"
+          },
+          {
+            "theme": "Intégration domotique émergente",
+            "pourcentage": "5%"
+          }
+        ]
+      },
+      "elements_actionabilite": {
+        "listes_actions": [
+          "Checklist critères de choix",
+          "Étapes calcul besoins personnalisés",
+          "Guide comparaison devis"
+        ],
+        "etapes_procedures": [
+          "Méthode calcul consommation annuelle",
+          "Processus évaluation ROI",
+          "Plan d'installation optimisé"
+        ],
+        "outils_pratiques": [
+          "Calculateur consommation interactif",
+          "Tableau comparatif téléchargeable",
+          "Grille d'évaluation solutions"
+        ]
+      }
+    },
+    "plan_redaction": {
+      "objectif_article": "Devenir la référence sur l'analyse économique des solutions d'éclairage garage",
+      "angle_editorial": "Approche data-driven avec analyse financière précise",
+      "longueur_cible": "2500-3000 mots",
+      "etapes_production": [
+        {
+          "etape": "Collecte données techniques et tarifaires",
+          "duree": "3 jours",
+          "taches": [
+            "Recherche prix produits",
+            "Collecte données consommation",
+            "Analyse coûts installation"
+          ],
+          "ressources": [
+            "Sites distributeurs",
+            "Études ADEME",
+            "Experts secteur"
+          ]
+        },
+        {
+          "etape": "Calculs ROI et modélisations",
+          "duree": "2 jours",
+          "taches": [
+            "Développement modèles économiques",
+            "Validation calculs",
+            "Création tableaux comparatifs"
+          ],
+          "ressources": [
+            "Tableurs Excel/Sheets",
+            "Données collectées",
+            "Revue expert"
+          ]
+        },
+        {
+          "etape": "Rédaction et structuration",
+          "duree": "3 jours",
+          "taches": [
+            "Rédaction sections techniques",
+            "Intégration données économiques",
+            "Création éléments actionnables"
+          ],
+          "ressources": [
+            "Template article",
+            "Données modélisées",
+            "Guide style"
+          ]
+        },
+        {
+          "etape": "Optimisation SEO et finalisation",
+          "duree": "1 jour",
+          "taches": [
+            "Optimisation balises",
+            "Intégration mots-clés",
+            "Validation technique"
+          ],
+          "ressources": [
+            "Outils SEO",
+            "Checklist optimisation",
+            "Test lecture"
+          ]
+        }
+      ],
+      "criteres_succes": [
+        "Exhaustivité analyse économique",
+        "Clarté présentation calculs",
+        "Pertinence recommandations",
+        "Actionnabilité contenu"
+      ],
+      "kpis_suivre": [
+        "Temps moyen lecture",
+        "Taux conversion calculateurs",
+        "Partage contenu",
+        "Positionnement mots-clés cibles"
+      ]
+    }
   }
 }

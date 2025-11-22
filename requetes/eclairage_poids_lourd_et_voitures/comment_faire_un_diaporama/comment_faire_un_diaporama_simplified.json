@@ -1,7 +1,7 @@
 {
   "meta": {
     "requete_cible": "comment faire un diaporama",
-    "date_analyse": "2025-11-11T19:28:38.295400",
+    "date_analyse": "2025-11-21T16:14:00.724212",
     "language": "fr",
     "analyses_totales": 1
   },
@@ -10,210 +10,208 @@
       "analyse_angles_concurrentiels": {
         "angles_dominants": [
           {
-            "angle": "Guide fonctionnel multi-plateforme avec focus sur l'automatisation",
-            "frequence_utilisation": "rare (1/10 articles)",
-            "niveau_profondeur_moyen": "modéré",
-            "positionnement_requis": "nécessaire pour concurrencer position 6",
+            "angle": "Tutoriel étape par étape pour PowerPoint",
+            "frequence_utilisation": "Position 5",
+            "niveau_profondeur_moyen": "approfondi",
+            "positionnement_requis": "Obligatoire",
             "exemples_reussis": [
-              "Article position 6 - Google Slides"
+              "Position 5"
             ]
           },
           {
-            "angle": "Approche procédurale institutionnelle avec segmentation d'audience",
-            "frequence_utilisation": "rare (1/10 articles)",
+            "angle": "Guide des diaporamas personnalisés avancés",
+            "frequence_utilisation": "Position 6",
             "niveau_profondeur_moyen": "approfondi",
-            "positionnement_requis": "essentiel pour surpasser le top 3",
+            "positionnement_requis": "Recommande",
             "exemples_reussis": [
-              "Article position 8 - PowerPoint personnalisé"
+              "Position 6"
             ]
           }
         ],
         "angles_emergents": [
           {
-            "angle": "Intégration des questions audiences en temps réel",
-            "utilise_par": "position 6 uniquement",
-            "potentiel_differentiation": "très élevé",
+            "angle": "Utilisation responsable des images en ligne",
+            "utilise_par": "Position 5",
+            "potentiel_differentiation": "Thème rarement traité concernant les droits d'auteur et la conformité légale",
+            "difficulte_execution": "faible"
+          },
+          {
+            "angle": "Accessibilité des diaporamas publics",
+            "utilise_par": "Position 5 (mentionné)",
+            "potentiel_differentiation": "Niche spécialisée avec faible concurrence et haute valeur professionnelle",
             "difficulte_execution": "moyenne"
           }
         ]
       },
       "themes_obligatoires": [
         {
-          "theme": "Fonctionnalités de présentation multi-plateforme",
+          "theme": "Instructions détaillées étape par étape pour PowerPoint",
           "present_chez": [
-            "position 6"
-          ],
-          "niveau_minimum_requis": "modéré",
-          "profondeur_observee": "modéré",
-          "justification": "Couvert par le seul article pertinent du top 5, essentiel pour répondre aux besoins modernes"
-        },
-        {
-          "theme": "Outils d'annotation et d'interaction en direct",
-          "present_chez": [
-            "position 6"
-          ],
-          "niveau_minimum_requis": "modéré",
-          "profondeur_observee": "modéré",
-          "justification": "Différenciateur clé identifié dans l'article performant"
-        },
-        {
-          "theme": "Création de diaporamas personnalisés avec segmentation",
-          "present_chez": [
-            "position 8"
+            "Position 5",
+            "Position 6"
           ],
           "niveau_minimum_requis": "approfondi",
-          "profondeur_observee": "approfondi",
-          "justification": "Angle technique avancé présent dans les contenus bien positionnés"
+          "profondeur_observee": "Instructions spécifiques avec chemins de menu exacts et descriptions complètes",
+          "justification": "Présent dans 100% des articles pertinents top 5, corrélé avec bon positionnement"
+        },
+        {
+          "theme": "Intégration multimédia complète (photos, vidéos, audio)",
+          "present_chez": [
+            "Position 5"
+          ],
+          "niveau_minimum_requis": "approfondi",
+          "profondeur_observee": "Couverture exhaustive des sources et types de médias avec précautions d'usage",
+          "justification": "Essentiel pour répondre aux besoins complets des utilisateurs"
         }
       ],
       "themes_emergents_consolides": [
         {
-          "theme": "Intégration des questions audiences en temps réel",
+          "theme": "Droits d'auteur et utilisation légale des images",
           "articles_mentionnant": [
-            "position 6"
+            "Position 5"
           ],
-          "frequence_apparition": "unique",
+          "frequence_apparition": "20% des articles pertinents",
           "niveau_traitement_observe": "superficiel",
-          "opportunite_differentiation": "Répond aux nouvelles pratiques de travail hybride et présentations à distance",
-          "potentiel_seo": "très élevé",
-          "justification_potentiel": "Thème émergent post-pandémie, peu couvert par la concurrence, forte demande utilisateur",
-          "recommandation_exploitation": "Développer un guide complet sur la modération des questions en direct avec études de cas concrets",
+          "opportunite_differentiation": "Répond à un besoin croissant de conformité légale, rarement traité",
+          "potentiel_seo": "eleve",
+          "justification_potentiel": "Niche spécialisée avec faible concurrence et haute valeur ajoutée",
+          "recommandation_exploitation": "Développer un guide complet sur les sources d'images libres de droits",
+          "complexite_execution": "faible"
+        },
+        {
+          "theme": "Navigation hiérarchique et table des matières interactive",
+          "articles_mentionnant": [
+            "Position 6"
+          ],
+          "frequence_apparition": "20% des articles pertinents",
+          "niveau_traitement_observe": "modere",
+          "opportunite_differentiation": "Transforme les présentations linéaires en expériences interactives",
+          "potentiel_seo": "moyen",
+          "justification_potentiel": "Valeur ajoutée importante pour les présentations professionnelles",
+          "recommandation_exploitation": "Créer des templates de navigation hiérarchique",
           "complexite_execution": "moyenne"
         }
       ],
       "themes_a_exclure_consolides": [
         {
-          "theme": "Fonctionnalités basiques de création de diapositives",
+          "theme": "Définition basique du diaporama",
           "distribution_serp": {
             "present_top5": [],
-            "present_positions_6_10": [
-              "position 6"
-            ]
+            "present_positions_6_10": []
           },
           "raison_exclusion": "saturation",
-          "justification_exclusion": "Extrêmement saturé dans tous les guides, avec contenu redondant et peu de valeur ajoutée",
-          "correlation_mauvais_positionnement": "Fort - les articles qui couvrent ces bases sans valeur ajoutée sont mal positionnés",
-          "alternative_recommandee": "Se concentrer sur les fonctionnalités avancées et cas d'usage professionnels spécifiques"
+          "justification_exclusion": "Thème saturé dans 90% des résultats, n'apporte aucune valeur ajoutée",
+          "correlation_mauvais_positionnement": "Absent des articles bien positionnés",
+          "alternative_recommandee": "Se concentrer sur les types avancés de diaporamas"
         },
         {
-          "theme": "Contenu vide ou quasi-inexistant",
+          "theme": "Comparaison générique des logiciels",
           "distribution_serp": {
-            "present_top5": [
-              "positions 1, 3, 4, 5"
-            ],
-            "present_positions_6_10": [
-              "position 7"
-            ]
+            "present_top5": [],
+            "present_positions_6_10": []
           },
-          "raison_exclusion": "faible_valeur",
-          "justification_exclusion": "Les positions 1-5 contiennent majoritairement du contenu vide, démontrant une opportunité pour du contenu de qualité",
-          "correlation_mauvais_positionnement": "Directe - contenu vide = mauvais positionnement sauf exceptions algorithmiques",
-          "alternative_recommandee": "Contenu substantiel avec minimum 1000 mots et valeur ajoutée démontrable"
+          "raison_exclusion": "dilution",
+          "justification_exclusion": "Dilue le focus sur l'apprentissage pratique",
+          "correlation_mauvais_positionnement": "Non présent dans les contenus performants",
+          "alternative_recommandee": "Focus sur les fonctionnalités uniques de PowerPoint"
         }
       ],
       "opportunites_angles_uniques": [
         {
-          "angle_propose": "Guide ultime multi-logiciels (PowerPoint, Google Slides, Canva, Keynote) avec comparatif fonctionnel",
-          "justification": "Aucun concurrent ne couvre l'écosystème complet des outils de présentation",
-          "niveau_ambition": "très élevé",
-          "valeur_ajoutee_estimee": "Exceptionnelle - répond au besoin de choix d'outil selon use case",
-          "complexite_execution": "élevée"
+          "angle_propose": "Guide complet d'accessibilité pour diaporamas professionnels",
+          "justification": "Absent chez concurrents, aligné avec nouvelles réglementations numériques",
+          "niveau_ambition": "modere",
+          "valeur_ajoutee_estimee": "Positionnement sur niche spécialisée à faible concurrence",
+          "complexite_execution": "moyenne"
         },
         {
-          "angle_propose": "Diaporamas professionnels avec templates sectoriels (entreprise, éducation, marketing)",
-          "justification": "Manque cruel de contenu orienté besoins professionnels spécifiques",
-          "niveau_ambition": "élevé",
-          "valeur_ajoutee_estimee": "Très élevée - répond à des intentions commerciales qualifiées",
-          "complexite_execution": "moyenne"
+          "angle_propose": "Diaporamas interactifs avec navigation non-linéaire",
+          "justification": "Extension naturelle des diaporamas personnalisés, répond aux besoins de présentations adaptatives",
+          "niveau_ambition": "ambitieux",
+          "valeur_ajoutee_estimee": "Différenciation forte par rapport aux guides basiques",
+          "complexite_execution": "elevee"
         }
       ],
       "gaps_concurrentiels": [
         {
-          "gap_identifie": "Configuration initiale complète et personnalisation avancée",
-          "type": "profondeur",
-          "potentiel_seo": "élevé",
-          "recommandation_exploitation": "Développer des tutoriels étape par étape avec captures d'écran et bonnes pratiques"
+          "gap_identifie": "Optimisation pour différents contextes d'utilisation",
+          "type": "couverture",
+          "potentiel_seo": "eleve",
+          "recommandation_exploitation": "Créer des guides spécifiques par contexte (entreprise, éducation, personnel)"
         },
         {
-          "gap_identifie": "Gestion des commentaires et collaboration en détail",
-          "type": "expertise",
+          "gap_identifie": "Conseils sur la durée idéale selon le contexte",
+          "type": "profondeur",
           "potentiel_seo": "moyen",
-          "recommandation_exploitation": "Créer des guides avancés sur le workflow collaboratif professionnel"
+          "recommandation_exploitation": "Développer des recommandations basées sur la recherche en communication"
         }
       ],
       "angles_a_exclure": [
         {
-          "angle_declasse": "Questions utilisateur sans réponse concrète (format forum)",
+          "angle_declasse": "Questions utilisateur sans réponse",
           "present_dans_positions": [
-            "position 4",
-            "position 7"
+            "Position 2"
           ],
-          "absent_top5_mais_present_bas_classement": [
-            "position 7"
-          ],
-          "raison_exclusion": "hors_intention",
-          "risque_positionnement": "Élevé - Google pénalise le contenu qui ne répond pas à l'intention de recherche"
+          "absent_top5_mais_present_bas_classement": true,
+          "raison_exclusion": "Contenu non actionnable, faible valeur informative",
+          "risque_positionnement": "Très élevé - pénalité qualité contenu"
         },
         {
-          "angle_declasse": "Contenu purement promotionnel sans valeur éducative",
+          "angle_declasse": "Pages promotionnelles sans instructions",
           "present_dans_positions": [
-            "position 6"
+            "Position 3"
           ],
-          "absent_top5_mais_present_bas_classement": [],
-          "raison_exclusion": "dilution",
-          "risque_positionnement": "Moyen-élevé - peut être perçu comme thin content si trop commercial"
+          "absent_top5_mais_present_bas_classement": true,
+          "raison_exclusion": "Intention commerciale cachée, faible profondeur",
+          "risque_positionnement": "Élevé - non aligné avec intention recherche"
         }
       ],
       "strategie_positionnement": {
         "socle_obligatoire": {
           "angles_minimum": [
-            "Guide fonctionnel multi-plateforme",
-            "Procédure étape par étape détaillée",
-            "Fonctionnalités avancées d'interaction"
+            "Tutoriel étape par étape pour PowerPoint",
+            "Intégration multimédia complète"
           ],
-          "profondeur_requise": "approfondi (minimum 1500 mots avec exemples concrets)",
+          "profondeur_requise": "approfondi",
           "themes_incontournables": [
-            "Présentation multi-appareils",
-            "Outils d'annotation",
-            "Personnalisation avancée",
-            "Automatisation"
+            "Instructions détaillées PowerPoint",
+            "Gestion des médias",
+            "Personnalisation avancée"
           ]
         },
         "differentiation_recommandee": {
           "angles_uniques_proposes": [
-            "Comparatif multi-logiciels",
-            "Templates sectoriels professionnels",
-            "Intégration outils collaboratifs"
+            "Guide d'accessibilité professionnel",
+            "Diaporamas interactifs"
           ],
           "approfondissements_cibles": [
-            "Workflow de modération questions en direct",
-            "Optimisation performances techniques",
-            "Accessibilité et inclusion"
+            "Droits d'auteur images",
+            "Navigation hiérarchique"
           ],
           "approches_innovantes": [
-            "Études de cas sectorielles",
-            "Benchmarks performances",
-            "Tendances émergentes IA"
+            "Templates de navigation non-linéaire",
+            "Guides contextuels par usage"
           ],
           "themes_emergents_a_exploiter": [
-            "Intégration questions audiences temps réel"
+            "Utilisation responsable images",
+            "Accessibilité numérique"
           ]
         },
-        "niveau_ambition_global": "Dominance SERP complète - position 1 réalisable",
-        "effort_editorial_estime": "Élevé (contenu pillar + clusters thématiques)"
+        "niveau_ambition_global": "ambitieux",
+        "effort_editorial_estime": "Élevé - nécessite expertise technique et recherche approfondie"
       },
       "recommandation_positionnement_global": {
-        "type_contenu_optimal": "Guide ultime approfondi avec éléments interactifs et études de cas",
-        "intention_cible": "Informationnelle avancée avec composante commerciale douce",
-        "portee_commerciale_recommandee": "15% maximum - focus sur la valeur éducative",
-        "orientation_ctal_optimale": "Téléchargement templates premium ou consultation outil comparatif"
+        "type_contenu_optimal": "Guide pratique approfondi avec tutoriels détaillés",
+        "intention_cible": "informationnelle",
+        "portee_commerciale_recommandee": "nulle",
+        "orientation_cta_optimale": "Téléchargement de templates et accès à des ressources complémentaires"
       }
     }
   },
   "angle_select": {
-    "angle_selectionne": "Diaporamas professionnels avec templates sectoriels (entreprise, éducation, marketing)",
+    "angle_selectionne": "Guide complet d'accessibilité pour diaporamas professionnels",
     "score_total": "10/12",
-    "justification_selection": "Cet angle comble un manque concurrentiel majeur en ciblant des intentions professionnelles qualifiées, tout en étant parfaitement complémentaire du guide fonctionnel de base.",
+    "justification_selection": "Cet angle comble un gap concurrentiel majeur sur l'accessibilité tout en étant complémentaire du socle technique obligatoire, avec une valeur ajoutée forte pour les utilisateurs professionnels.",
     "scores_details": {
       "alignement_intention": "3/3",
       "non_redondance": "3/3",

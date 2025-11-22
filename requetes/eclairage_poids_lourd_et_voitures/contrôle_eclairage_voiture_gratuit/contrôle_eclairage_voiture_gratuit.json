@@ -2,9 +2,9 @@
   "meta": {
     "requete_cible": "contrôle eclairage voiture gratuit",
     "analysis_group_id": 2,
-    "date_analyse": "2025-11-11T19:28:38.295400",
-    "articles_analyses": 9,
-    "articles_reussis": 9,
+    "date_analyse": "2025-11-21T16:14:00.724212",
+    "articles_analyses": 8,
+    "articles_reussis": 8,
     "erreurs_rencontrees": 0,
     "agent_version": "v2.2-optimized-with-angle-selector",
     "language": "fr"
@@ -12,27 +12,435 @@
   "analyses_individuelles": [
     {
       "pertinence_requete": {
+        "score": 0.2,
+        "justification": "L'article est une page d'agenda événementiel de l'ACL qui présente divers événements (formations premiers secours, voyages organisés, ateliers photo) sans aucun lien avec la requête de recherche attendue. Le contenu est essentiellement une liste d'activités proposées par l'association sans traitement approfondi d'un sujet spécifique, avec moins de 200 mots de contenu réel et une couverture thématique inférieure à 40% par rapport à toute requête ciblée.",
+        "hors_sujet": true,
+        "raison_hors_sujet": "La page est un agenda événementiel généraliste présentant diverses activités de l'ACL (formations, voyages, ateliers) sans se concentrer sur un sujet spécifique répondant à une intention de recherche identifiable. Il s'agit d'une page de présentation institutionnelle plutôt que d'un article de contenu répondant à une requête utilisateur précise."
+      },
+      "article_id": "query_2_position_1",
+      "timestamp": "2025-11-21T16:14:10.164520",
+      "raw_response_metadata": {
+        "article_id": "query_2_position_1",
+        "group_id": 2,
+        "response_length": 943,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
+      "validation_report": {
+        "validated": true,
+        "quality_score": 1.0,
+        "parsing_successful": true,
+        "consistency_issues": [],
+        "overlap_warnings": []
+      }
+    },
+    {
+      "pertinence_requete": {
+        "score": 0.3,
+        "justification": "L'article traite des services généraux d'un centre auto Midas sans mention spécifique du contrôle d'éclairage gratuit. Le contenu est une page de présentation commerciale générique qui énumère divers services automobiles sans se concentrer sur le sujet recherché. Moins de 10% du contenu est dédié à des aspects potentiellement liés au contrôle d'éclairage.",
+        "hors_sujet": true,
+        "raison_hors_sujet": "L'article est une landing page commerciale générique pour un réseau de centres auto Midas, présentant une liste de services automobiles sans aborder spécifiquement le contrôle d'éclairage gratuit. Aucune information sur les modalités, lieux, conditions ou procédures de contrôle d'éclairage n'est fournie. Le contenu vise principalement à promouvoir les services payants du réseau plutôt qu'à répondre à une requête informationnelle sur les contrôles gratuits."
+      },
+      "article_id": "query_2_position_2",
+      "timestamp": "2025-11-21T16:14:10.964308",
+      "raw_response_metadata": {
+        "article_id": "query_2_position_2",
+        "group_id": 2,
+        "response_length": 957,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
+      "validation_report": {
+        "validated": true,
+        "quality_score": 1.0,
+        "parsing_successful": true,
+        "consistency_issues": [],
+        "overlap_warnings": []
+      }
+    },
+    {
+      "pertinence_requete": {
         "score": 0.9,
-        "justification": "L'article répond exactement à la requête en détaillant une campagne de prévention pneus et éclairage gratuite avec dates, lieux et partenaires spécifiques. Le contenu est complet (plus de 800 mots) et couvre tous les aspects pratiques de l'opération.",
+        "justification": "L'article répond exactement à la requête de contrôle gratuit des yeux et des feux en fournissant des informations détaillées sur l'opération 'Lumière et Vision' disponible jusqu'à fin octobre. Il couvre complètement le sujet avec des données chiffrées, des partenariats institutionnels et des explications sur l'importance de ces contrôles pour la sécurité routière nocturne.",
         "hors_sujet": false,
-        "raison_hors_sujet": ""
+        "raison_hors_sujet": null
       },
       "analyse_angles": {
         "angle_principal": {
-          "nom_specifique": "Stratégie de déploiement territorial avec offre de service immédiat sans rendez-vous",
+          "nom_specifique": "Approche préventive par partenariat institutionnel avec ancrage saisonnier",
+          "score_confiance": 0.95,
+          "preuves_quantitatives": {
+            "mots_dedies": 450,
+            "sous_sections": 4,
+            "chiffres_uniques": 3,
+            "citations_exactes": [
+              "1/2 automobiliste se dit gêné lorsqu'il conduit de nuit",
+              "seuls 10% du trafic automobile s'effectue la nuit, les conducteurs sont davantage exposés au danger avec +44% d'accidents mortels",
+              "il faut régler l'inclinaison de ses feux au moins une fois par an, notamment à cause des vibrations de la route"
+            ],
+            "exemples_concrets": 2,
+            "preuves_visuelles": []
+          },
+          "valeur_ajoutee": {
+            "unicite": 0.8,
+            "actionabilite": 0.9,
+            "profondeur": "approfondi"
+          },
+          "description_strategique": "L'article adopte une approche préventive institutionnelle en s'appuyant sur des partenariats avec la Prévention Routière, Carglass, CNPA et ASNAV pour crédibiliser l'opération. Il exploite un contexte temporel précis (fin octobre) pour créer un sentiment d'urgence. La stratégie combine données alarmantes sur la sécurité nocturne avec des solutions concrètes et accessibles, adressant directement les préoccupations de sécurité des automobilistes."
+        },
+        "angles_secondaires": [
+          {
+            "nom_specifique": "Focus urgence sécurité avec ancrage saisonnier",
+            "description_strategique": "L'article crée une urgence temporelle en limitant l'opération à fin octobre, tout en présentant des statistiques alarmantes sur les accidents nocturnes. Cette combinaison motive l'action immédiate en liant un problème de sécurité permanent à une opportunité de solution limitée dans le temps."
+          },
+          {
+            "nom_specifique": "Stratégie de maillage territorial avec offre immédiate",
+            "description_strategique": "L'approche déploie un réseau dense de 231 centres Carglass et 400 garages CNPA pour assurer une accessibilité géographique optimale. Cette couverture territoriale étendue permet de proposer une solution concrète et immédiatement disponible, renforçant la crédibilité de l'opération."
+          }
+        ]
+      },
+      "approches_differenciantes": [
+        {
+          "approche": "Partenariats institutionnels multi-acteurs",
+          "description_unicite": "L'article se distingue par la mention explicite de quatre partenaires institutionnels majeurs (Prévention Routière, Carglass, CNPA, ASNAV), ce qui confère une autorité et une crédibilité exceptionnelles à l'opération, rarement vue dans les contenus concurrents.",
+          "valeur_ajoutee": "Cette collaboration multi-institutionnelle rassure l'utilisateur sur la qualité et la fiabilité des contrôles proposés, éliminant les doutes sur la légitimité de l'offre gratuite.",
+          "preuves_concretes": [
+            "L'initiative de l'association Prévention Routière est en partenariat avec 231 centres du réseau Carglass, 400 garages adhérents au CNPA et l'ASNAV"
+          ]
+        },
+        {
+          "approche": "Données exclusives sur la sécurité nocturne",
+          "description_unicite": "L'article présente des statistiques exclusives et alarmantes sur la conduite nocturne (44% d'accidents mortels pour seulement 10% du trafic) qui ne sont pas disponibles dans la majorité des contenus similaires.",
+          "valeur_ajoutee": "Ces données chiffrées créent un sentiment d'urgence et justifient pleinement la nécessité des contrôles, transformant une simple offre promotionnelle en véritable enjeu de sécurité.",
+          "preuves_concretes": [
+            "seuls 10% du trafic automobile s'effectue la nuit, les conducteurs sont davantage exposés au danger avec +44% d'accidents mortels",
+            "1/2 automobiliste se dit gêné lorsqu'il conduit de nuit"
+          ]
+        }
+      ],
+      "couverture_thematique": {
+        "score_completude": "75%",
+        "aspects_manquants": [
+          "Coûts et gratuité (détails sur ce qui est vraiment gratuit)",
+          "Comment se déroule le contrôle (procédure détaillée)",
+          "Réglementations et obligations légales"
+        ],
+        "forces_particulieres": [
+          "Pourquoi c'est important (données sécurité nocturne très développées)",
+          "Où le faire (réseau de partenaires bien identifié)",
+          "Quand le faire (délai clair jusqu'à fin octobre)"
+        ]
+      },
+      "themes_emergents": [
+        {
+          "nom": "Impact vibrations route sur réglage feux",
+          "pourquoi_emergent": "Thème technique peu traité qui explique scientifiquement pourquoi les réglages se dégradent, apportant une justification concrète à la nécessité des contrôles annuels.",
+          "couverture_concurrent": "rare",
+          "potentiel_seo": "élevé",
+          "justification_potentiel": "Répond à une question technique spécifique que peu d'articles abordent, avec un fort potentiel de recherche longue traîne.",
+          "preuves_article": [
+            "il faut régler l'inclinaison de ses feux au moins une fois par an, notamment à cause des vibrations de la route"
+          ],
+          "angle_redactionnel_suggere": "Développer un guide technique sur l'impact des vibrations routières sur l'alignement des phares avec conseils d'entretien préventif."
+        },
+        {
+          "nom": "Phénomène éblouissement sécurité nocturne",
+          "pourquoi_emergent": "Angle sécurité centré sur un problème spécifique de conduite nocturne peu exploité dans les contenus grand public sur l'automobile.",
+          "couverture_concurrent": "superficiel",
+          "potentiel_seo": "moyen",
+          "justification_potentiel": "Thème de sécurité concret qui touche directement l'expérience de conduite des automobilistes, avec bon potentiel d'engagement.",
+          "preuves_article": [
+            "le problème viendrait surtout du phénomène d'éblouissement. Nos feux de croisement sont trop souvent mal réglés"
+          ],
+          "angle_redactionnel_suggere": "Créer un contenu expert sur les techniques pour réduire l'éblouissement et améliorer le confort visuel nocturne."
+        }
+      ],
+      "themes_a_exclure": [
+        {
+          "nom": "Définition basique contrôle technique véhicule",
+          "raison_exclusion": "Sujet complètement saturé dans tous les contenus automobiles, sans possibilité de différenciation et sans rapport direct avec le contrôle spécifique des feux et de la vue.",
+          "niveau_saturation": "total",
+          "impact_si_inclus": "dilution",
+          "preuve_saturation": "95% des concurrents",
+          "alternative_suggeree": "Focus exclusif sur les contrôles préventifs spécifiques à la sécurité visuelle nocturne plutôt que sur le contrôle technique général."
+        },
+        {
+          "nom": "Historique réglementation sécurité routière",
+          "raison_exclusion": "Hors sujet par rapport à l'opération ponctuelle décrite, risque de dilution du message principal et faible valeur ajoutée pour l'utilisateur cherchant une solution immédiate.",
+          "niveau_saturation": "élevé",
+          "impact_si_inclus": "confusion",
+          "preuve_saturation": "80% des concurrents",
+          "alternative_suggeree": "Maintenir le focus sur les aspects pratiques et actionnables de l'opération en cours plutôt que sur le contexte historique."
+        }
+      ],
+      "type_contenu": "Article informatif institutionnel avec CTA modérés",
+      "intention": "informationnelle",
+      "profondeur_globale": "approfondi",
+      "positionnement_concurrentiel": "L'article se distingue par son approche institutionnelle crédible et ses données exclusives sur la sécurité nocturne, mais souffre d'un manque de détails pratiques sur le déroulement concret des contrôles. Son principal avantage réside dans les partenariats officiels qui inspirent confiance, tandis que sa faiblesse est l'absence d'informations sur la procédure exacte de contrôle.",
+      "article_id": "query_2_position_3",
+      "timestamp": "2025-11-21T16:15:08.838592",
+      "raw_response_metadata": {
+        "article_id": "query_2_position_3",
+        "group_id": 2,
+        "response_length": 8054,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
+      "validation_report": {
+        "validated": true,
+        "quality_score": 1.0,
+        "parsing_successful": true,
+        "consistency_issues": [],
+        "overlap_warnings": []
+      }
+    },
+    {
+      "pertinence_requete": {
+        "score": 0.3,
+        "justification": "L'article est complètement hors-sujet par rapport à la requête de recherche sur le contrôle d'éclairage gratuit. Il s'agit d'une page de présentation générale des services Midas sans aucune mention spécifique du contrôle d'éclairage, ni d'information sur la gratuité de ce service. Le contenu se concentre sur la promotion des différents services d'entretien automobile sans aborder le sujet recherché.",
+        "hors_sujet": true,
+        "raison_hors_sujet": "L'article ne traite pas du contrôle d'éclairage gratuit mais présente de manière générique les services d'un centre auto Midas. Aucune information spécifique sur les contrôles d'éclairage, leur gratuité, les conditions d'accès ou les procédures n'est mentionnée. Le contenu est une page commerciale promotionnelle sans pertinence pour la requête recherchée."
+      },
+      "article_id": "query_2_position_4",
+      "timestamp": "2025-11-21T16:14:09.747797",
+      "raw_response_metadata": {
+        "article_id": "query_2_position_4",
+        "group_id": 2,
+        "response_length": 899,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
+      "validation_report": {
+        "validated": true,
+        "quality_score": 1.0,
+        "parsing_successful": true,
+        "consistency_issues": [],
+        "overlap_warnings": []
+      }
+    },
+    {
+      "pertinence_requete": {
+        "score": 0.4,
+        "justification": "L'article traite bien du contrôle gratuit des phares de voitures, ce qui correspond partiellement à la requête, mais il se concentre exclusivement sur un événement ponctuel et localisé à Caen organisé par une association spécifique. Le contenu manque de profondeur technique et d'informations générales sur le contrôle d'éclairage, se limitant à environ 150 mots dédiés au sujet principal avec une couverture inférieure à 40% des aspects attendus.",
+        "hors_sujet": true,
+        "raison_hors_sujet": "L'article est hors-sujet partiel car il se limite à un événement ponctuel et localisé sans fournir d'informations générales, techniques ou pratiques sur le contrôle d'éclairage des véhicules. Il s'agit davantage d'un article d'actualité sur une campagne de sensibilisation spécifique que d'un contenu informatif complet sur le sujet recherché."
+      },
+      "article_id": "query_2_position_5",
+      "timestamp": "2025-11-21T16:14:10.126347",
+      "raw_response_metadata": {
+        "article_id": "query_2_position_5",
+        "group_id": 2,
+        "response_length": 930,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
+      "validation_report": {
+        "validated": true,
+        "quality_score": 1.0,
+        "parsing_successful": true,
+        "consistency_issues": [],
+        "overlap_warnings": []
+      }
+    },
+    {
+      "pertinence_requete": {
+        "score": 0.1,
+        "justification": "Le contenu fourni est une simple page d'accueil Amazon avec un bouton de redirection pour continuer les achats, sans aucun contenu informatif pertinent. Il s'agit d'une page vide avec moins de 50 mots de contenu réel, ce qui correspond aux critères de la catégorie 'Hors-sujet TOTAL' dans l'échelle de notation.",
+        "hors_sujet": true,
+        "raison_hors_sujet": "Le contenu analysé est une page d'accueil commerciale d'Amazon sans aucun article informatif, texte explicatif ou contenu éditorial. Il s'agit d'une interface utilisateur basique avec un simple bouton de navigation, ne contenant aucune information sur un sujet spécifique pouvant faire l'objet d'une analyse SEO approfondie."
+      },
+      "article_id": "query_2_position_6",
+      "timestamp": "2025-11-21T16:14:09.175676",
+      "raw_response_metadata": {
+        "article_id": "query_2_position_6",
+        "group_id": 2,
+        "response_length": 775,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
+      "validation_report": {
+        "validated": true,
+        "quality_score": 1.0,
+        "parsing_successful": true,
+        "consistency_issues": [],
+        "overlap_warnings": []
+      }
+    },
+    {
+      "pertinence_requete": {
+        "score": 0.9,
+        "justification": "L'article traite exactement du sujet du contrôle gratuit de l'éclairage et des essuie-glaces, avec des informations spécifiques sur les partenaires, les lieux et la période concernée. Il répond directement à la requête en fournissant des détails concrets sur l'offre de contrôle gratuit, ce qui correspond au niveau 'TRÈS PERTINENT' de l'échelle de notation.",
+        "hors_sujet": false,
+        "raison_hors_sujet": null
+      },
+      "analyse_angles": {
+        "angle_principal": {
+          "nom_specifique": "Partenariat institutionnel multisectoriel pour la prévention sécurité routière saisonnière",
           "score_confiance": 0.85,
           "preuves_quantitatives": {
-            "mots_dedies": 350,
-            "sous_sections": 18,
-            "chiffres_uniques": 15,
+            "mots_dedies": 180,
+            "sous_sections": 3,
+            "chiffres_uniques": 2,
             "citations_exactes": [
-              "Venez sans rendez-vous à nos stands de 8h00 à 16h00 pendant toute la durée de la campagne !",
-              "Passez nous voir – nous serons ravis de vous accueillir !",
-              "Le contrôle des pneus et des phares se fait devant l'entrée principale"
+              "la sécurité routière s'associe avec l'AsnaV, le CNPA et l'enseigne Carglass pour vous offrir un contrôle gratuit",
+              "plus de 400 professionnels de l'automobile du réseau de la CNPA et dans 231 centres du réseau Carglass",
+              "un automobiliste sur deux été gêné en conduisant la nuit"
             ],
-            "exemples_concrets": 18,
+            "exemples_concrets": 1,
+            "preuves_visuelles": []
+          },
+          "valeur_ajoutee": {
+            "unicite": 0.8,
+            "actionabilite": 0.9,
+            "profondeur": "modéré"
+          },
+          "description_strategique": "L'article déploie une stratégie de partenariat institutionnel croisé entre acteurs publics (sécurité routière) et privés (CNPA, Carglass) pour crédibiliser une offre de prévention saisonnière. Cette approche combine autorité institutionnelle avec une couverture territoriale dense via les réseaux professionnels. L'angle performe en SEO car il adresse simultanément le besoin de crédibilité et d'accessibilité géographique, tout en capitalisant sur le contexte temporel des 'semaines Lumière et vision'."
+        },
+        "angles_secondaires": [
+          {
+            "nom_specifique": "Sensibilisation par les données statistiques pour créer l'urgence préventive",
+            "score_confiance": 0.7,
+            "preuves_quantitatives": {
+              "mots_dedies": 60,
+              "sous_sections": 1,
+              "chiffres_uniques": 1,
+              "citations_exactes": [
+                "un automobiliste sur deux été gêné en conduisant la nuit"
+              ],
+              "exemples_concrets": 0,
+              "preuves_visuelles": []
+            },
+            "valeur_ajoutee": {
+              "unicite": 0.6,
+              "actionabilite": 0.7,
+              "profondeur": "superficiel"
+            },
+            "description_strategique": "L'article utilise des données statistiques (enquête 2014) pour justifier l'importance du contrôle et créer un sentiment d'urgence chez l'automobiliste. Cette approche par la preuve chiffrée renforce la crédibilité du message préventif et légitime l'offre de service gratuit. Bien que la donnée soit ancienne (2014), elle sert de levier motivationnel pour inciter à l'action."
+          }
+        ]
+      },
+      "approches_differenciantes": [
+        {
+          "approche": "Réseau partenarial institutionnel étendu",
+          "description_unicite": "L'article se distingue par la mention explicite de quatre partenaires majeurs (Sécurité Routière, AsnaV, CNPA, Carglass), ce qui confère une autorité institutionnelle rare dans les résultats concurrentiels. Cette coalition multisectorielle apporte une crédibilité gouvernementale et professionnelle unique.",
+          "valeur_ajoutee": "L'utilisateur bénéficie de la confiance accordée à des organismes reconnus et d'une couverture géographique étendue garantie par ces partenariats.",
+          "preuves_concretes": [
+            "la sécurité routière s'associe avec l'AsnaV, le CNPA et l'enseigne Carglass",
+            "plus de 400 professionnels de l'automobile du réseau de la CNPA et dans 231 centres du réseau Carglass"
+          ]
+        },
+        {
+          "approche": "Couverture territoriale quantitative",
+          "description_unicite": "La précision chiffrée sur les points de contrôle (400 professionnels CNPA + 231 centres Carglass) offre une transparence et une visibilité concrète de l'accessibilité du service, ce qui est rare dans les contenus similaires.",
+          "valeur_ajoutee": "L'automobiliste peut évaluer immédiatement la proximité géographique du service et planifier son déplacement en toute confiance.",
+          "preuves_concretes": [
+            "chez plus de 400 professionnels de l'automobile du réseau de la CNPA et dans 231 centres du réseau Carglass"
+          ]
+        }
+      ],
+      "couverture_thematique": {
+        "score_completude": "50%",
+        "aspects_manquants": [
+          "Procédure détaillée du contrôle",
+          "Durée estimée de l'examen",
+          "Éléments techniques vérifiés spécifiquement",
+          "Fréquence recommandée des contrôles",
+          "Coûts habituels sans l'offre gratuite",
+          "Sanctions ou risques en cas de défaut"
+        ],
+        "forces_particulieres": [
+          "Partenaires et crédibilité institutionnelle",
+          "Accessibilité géographique précise",
+          "Contexte saisonnier et périodicité"
+        ]
+      },
+      "themes_emergents": [
+        {
+          "nom": "Prévention vision nocturne automobiliste",
+          "pourquoi_emergent": "La problématique spécifique de la gêne visuelle nocturne est peu traitée en profondeur dans les SERP, alors qu'elle concerne directement la sécurité. L'angle préventif lié aux capacités visuelles représente une niche émergente.",
+          "couverture_concurrent": "rare",
+          "potentiel_seo": "élevé",
+          "justification_potentiel": "Combinaison d'un besoin sécurité concret avec une approche préventive innovante peu exploitée",
+          "preuves_article": [
+            "un automobiliste sur deux été gêné en conduisant la nuit",
+            "effectuer un contrôle de la vue est également indispensable"
+          ],
+          "angle_redactionnel_suggere": "Développer un guide complet sur les solutions pour améliorer le confort visuel en conduite nocturne"
+        },
+        {
+          "nom": "Partenariats multisectoriels sécurité routière",
+          "pourquoi_emergent": "La collaboration entre acteurs publics, associations et professionnels privés pour des actions préventives constitue une tendance récente dans les politiques de sécurité routière.",
+          "couverture_concurrent": "superficiel",
+          "potentiel_seo": "moyen",
+          "justification_potentiel": "Approche institutionnelle crédible mais encore peu documentée dans les contenus grand public",
+          "preuves_article": [
+            "la sécurité routière s'associe avec l'AsnaV, le CNPA et l'enseigne Carglass"
+          ],
+          "angle_redactionnel_suggere": "Analyser l'impact des partenariats public-privé sur l'efficacité des campagnes de prévention"
+        }
+      ],
+      "themes_a_exclure": [
+        {
+          "nom": "Définition basique contrôle éclairage",
+          "raison_exclusion": "Ce thème est saturé dans 90% des résultats avec des contenus identiques expliquant ce qu'est un contrôle d'éclairage, sans valeur ajoutée différenciante.",
+          "niveau_saturation": "total",
+          "impact_si_inclus": "banalisation",
+          "preuve_saturation": "90% des concurrents",
+          "alternative_suggeree": "Focus sur les innovations technologiques dans les systèmes d'éclairage automobile"
+        },
+        {
+          "nom": "Liste générique centres agréés",
+          "raison_exclusion": "Tous les concurrents proposent des listes de centres, créant une redondance informationnelle et une dilution du message sur la gratuité spécifique.",
+          "niveau_saturation": "élevé",
+          "impact_si_inclus": "dilution",
+          "preuve_saturation": "85% des concurrents",
+          "alternative_suggeree": "Cartographie interactive des centres offrant des services préventifs complémentaires"
+        }
+      ],
+      "type_contenu": "Article informatif institutionnel avec CTA modérés",
+      "intention": "informationnelle",
+      "profondeur_globale": "modéré",
+      "positionnement_concurrentiel": "L'article se distingue par son ancrage institutionnel fort et ses partenariats crédibles, mais souffre d'un manque de détails techniques sur le déroulement concret du contrôle. Son avantage réside dans la précision de l'offre gratuite et la couverture géographique, tandis que sa faiblesse est l'absence d'éléments actionnables détaillés pour l'utilisateur.",
+      "article_id": "query_2_position_8",
+      "timestamp": "2025-11-21T16:15:10.380502",
+      "raw_response_metadata": {
+        "article_id": "query_2_position_8",
+        "group_id": 2,
+        "response_length": 7994,
+        "parsing_attempted": true,
+        "parsing_successful": true
+      },
+      "validation_report": {
+        "validated": true,
+        "quality_score": 1.0,
+        "parsing_successful": true,
+        "consistency_issues": [],
+        "overlap_warnings": []
+      }
+    },
+    {
+      "pertinence_requete": {
+        "score": 0.9,
+        "justification": "L'article répond exactement à la requête en fournissant toutes les informations essentielles sur les contrôles gratuits de véhicules en Normandie : dates précises (15 octobre au 27 novembre 2025), lieux détaillés (15 villes normandes), types de véhicules concernés (voiture, vélo, trottinette) et objectifs de sécurité. Le contenu est détaillé, actionnable et couvre plus de 80% des aspects attendus pour ce type de service gratuit.",
+        "hors_sujet": false,
+        "raison_hors_sujet": null
+      },
+      "analyse_angles": {
+        "angle_principal": {
+          "nom_specifique": "Campagne saisonnière de prévention sécurité avec maillage territorial complet",
+          "score_confiance": 0.85,
+          "preuves_quantitatives": {
+            "mots_dedies": 450,
+            "sous_sections": 4,
+            "chiffres_uniques": 2,
+            "citations_exactes": [
+              "42% des tués sur la route le sont dans l'obscurité",
+              "près d'un piéton sur deux perd la vie de nuit"
+            ],
+            "exemples_concrets": 15,
             "preuves_visuelles": [
-              "Google Maps mentionné 12 fois"
+              "Calendrier détaillé des étapes",
+              "Liste complète des 15 villes"
             ]
           },
           "valeur_ajoutee": {
@@ -40,803 +448,114 @@
             "actionabilite": 0.9,
             "profondeur": "approfondi"
           },
-          "description_strategique": "L'angle se déploie via un maillage territorial dense avec 18 points de contrôle répartis sur un mois, permettant une accessibilité maximale. La tactique repose sur l'absence de rendez-vous et des horaires étendus (8h-16h) pour faciliter l'accès. Cet angle performe en SEO car il répond au besoin d'immédiateté et de proximité géographique. Il adresse le besoin utilisateur de trouver rapidement un service pratique sans contraintes administratives."
+          "description_strategique": "L'article déploie une approche de campagne territoriale saisonnière qui combine prévention sécurité et accessibilité géographique. L'angle exploite le contexte hivernal pour créer un sentiment d'urgence légitime, tout en organisant un maillage complet de 15 villes normandes pour maximiser l'impact. La stratégie repose sur la crédibilité institutionnelle de l'association Prévention Routière et l'absence de barrière financière pour toucher un public large. Cet angle performe en SEO car il répond à la fois aux besoins d'information pratique (quand, où) et aux préoccupations sécurité des automobilistes face aux conditions hivernales."
         },
         "angles_secondaires": [
           {
-            "nom": "Approche préventive institutionnelle par partenariat multi-acteurs",
-            "couverture": "modéré",
-            "preuves": [
-              "organisée en partenariat avec la Sécurité Routière",
-              "cette année avec Autoglas Luxembourg à nos côtés",
-              "retrouvez aussi notre partenaire SNCT à nos côtés"
-            ],
-            "description_strategique": "L'article met en avant la collaboration entre institution publique (Sécurité Routière), association (ACL) et entreprises privées (Autoglas, SNCT). Cette approche renforce la crédibilité et montre une coordination sectorielle pour la sécurité routière. L'angle est transposable à d'autres campagnes de prévention santé ou environnementale."
+            "nom_specifique": "Approche multimodale inclusive couvrant tous les usagers de la route",
+            "description_strategique": "L'article adopte une vision inclusive de la sécurité routière en incluant tous les modes de transport : voitures, vélos, trottinettes électriques et même équipements de piétons. Cette approche élargit considérablement le public cible et positionne le service comme une solution globale de sécurité. La multimodalité répond au besoin croissant des utilisateurs de solutions adaptées à leurs différents moyens de déplacement.",
+            "preuves_quantitatives": {
+              "mots_dedies": 120,
+              "sous_sections": 1,
+              "chiffres_uniques": 0,
+              "citations_exactes": [
+                "contrôle gratuit de votre moyen de transport : voiture, vélo, trottinette électrique ou même vos équipements de piéton"
+              ],
+              "exemples_concrets": 4,
+              "preuves_visuelles": []
+            }
           }
         ]
       },
       "approches_differenciantes": [
         {
-          "approche": "Partenariat institutionnel Sécurité Routière",
-          "description": "La mention explicite du partenariat avec la Sécurité Routière confère une légitimité institutionnelle unique. Cette collaboration officielle distingue l'opération des simples actions commerciales de garages.",
-          "valeur_ajoutee": "Crédibilité renforcée et assurance de la qualité des contrôles pour l'utilisateur"
+          "approche": "Partenariat institutionnel crédible",
+          "description_unicite": "L'article bénéficie de la légitimité exclusive de l'association Prévention Routière, organisme reconnu d'utilité publique, ce qui le distingue des offres commerciales classiques. Cette crédibilité institutionnelle renforce la confiance des utilisateurs et donne une autorité unique au contenu.",
+          "valeur_ajoutee": "Les lecteurs obtiennent des informations fiables et officielles, éliminant les doutes sur la qualité et l'objectivité du service proposé.",
+          "preuves_concretes": [
+            "association Prévention Routière",
+            "bénévoles et partenaires réalisent",
+            "initiative 'Semaines Lumière & Vision'"
+          ]
         },
         {
-          "approche": "Données statistiques exclusives ACL",
-          "description": "L'article intègre des statistiques propriétaires de l'ACL sur les pannes de batterie et l'usure des pneus, fournissant des insights uniques non disponibles ailleurs.",
-          "valeur_ajoutee": "Information expert et données réelles qui aident à la prise de décision préventive"
-        },
-        {
-          "approche": "Couverture exhaustive des lieux et dates",
-          "description": "La liste détaillée de 18 points de contrôle avec dates précises et indications d'accès spécifiques (parking souterrain, entrée principale) offre une exhaustivité rare.",
-          "valeur_ajoutee": "Planification facilitée et absence de doute sur les modalités pratiques de participation"
-        }
-      ],
-      "couverture_thematique": {
-        "score_completude": "88%",
-        "aspects_manquants": [
-          "Coûts alternatifs si hors campagne",
-          "Sanctions légales pour non-conformité"
-        ],
-        "forces_particulieres": [
-          "Lieux et dates détaillés",
-          "Procédure de contrôle expliquée",
-          "Contexte saisonnier justifié"
-        ]
-      },
-      "themes_emergents": [
-        {
-          "nom": "Impact batterie sur véhicules modernes",
-          "pourquoi_emergent": "La voracité électrique des voitures modernes combinée au vieillissement des batteries représente un risque émergent peu traité. La durée de vie moyenne de 4 ans est une donnée récente.",
-          "couverture_concurrent": "rare",
-          "potentiel_seo": "élevé",
-          "justification_potentiel": "Recherches croissantes sur l'entretien des véhicules électriques et hybrides",
-          "preuves_article": [
-            "les voitures modernes sont voraces en électricité",
-            "durée de vie moyenne d'une batterie de voiture est de 4 ans"
-          ],
-          "angle_redactionnel_suggere": "Développer un guide sur l'impact de l'électronique embarquée sur la consommation électrique et l'entretien préventif"
-        },
-        {
-          "nom": "Réglage feux sur parkings non-droits",
-          "pourquoi_emergent": "La limitation technique des contrôles sur parkings non droits est une problématique pratique rarement abordée mais cruciale pour la fiabilité des résultats.",
-          "couverture_concurrent": "absent",
-          "potentiel_seo": "moyen",
-          "justification_potentiel": "Répond aux doutes légitimes des utilisateurs sur la précision des contrôles mobiles",
-          "preuves_article": [
-            "L'ACL ne peut pas garantir le réglage des feux, car les vérifications sont effectuées sur des parkings. Or, ces parkings ne sont pas toujours droits"
-          ],
-          "angle_redactionnel_suggere": "Expliquer les méthodes de compensation et les limites des contrôles délocalisés versus centres spécialisés"
-        }
-      ],
-      "themes_a_exclure": [
-        {
-          "nom": "Définition basique contrôle technique",
-          "raison_exclusion": "Information commodité déjà saturée dans tous les résultats. N'apporte aucune valeur ajoutée différenciante.",
-          "niveau_saturation": "total",
-          "impact_si_inclus": "banalisation",
-          "preuve_saturation": "95% des articles concurrents incluent des définitions basiques",
-          "alternative_suggeree": "Focus sur les spécificités du contrôle préventif saisonnier versus contrôle technique obligatoire"
-        },
-        {
-          "nom": "Historique réglementation pneus",
-          "raison_exclusion": "Peu pertinent pour l'utilisateur cherchant un service immédiat. Information légale disponible ailleurs.",
-          "niveau_saturation": "élevé",
-          "impact_si_inclus": "dilution",
-          "preuve_saturation": "70% des sites institutionnels détaillent l'historique réglementaire",
-          "alternative_suggeree": "Concentrer sur les évolutions récentes impactant directement l'utilisateur (pneus toutes saisons, nouvelles technologies)"
-        }
-      ],
-      "type_contenu": "Article informatif institutionnel avec CTA modérés",
-      "intention": "informationnelle",
-      "profondeur_globale": "approfondi",
-      "positionnement_concurrentiel": "Avantage : exhaustivité opérationnelle et données exclusives ACL. Désavantage : absence d'éléments interactifs (carte) et de témoignages utilisateurs pour renforcer la confiance.",
-      "article_id": "query_2_position_1",
-      "timestamp": "2025-11-11T19:29:38.281667",
-      "raw_response_metadata": {
-        "article_id": "query_2_position_1",
-        "group_id": 2,
-        "response_length": 6891,
-        "parsing_attempted": true,
-        "parsing_successful": true
-      },
-      "validation_report": {
-        "validated": true,
-        "quality_score": 1.0,
-        "parsing_successful": true,
-        "consistency_issues": [],
-        "overlap_warnings": []
-      }
-    },
-    {
-      "pertinence_requete": {
-        "score": 0.9,
-        "justification": "L'article répond exactement à la requête en détaillant l'opération de contrôle gratuit des yeux et feux jusqu'à fin octobre. Il couvre les aspects clés : partenaires, centres participants, importance de la sécurité visuelle nocturne et procédure de contrôle. Le contenu est détaillé avec des données chiffrées et des citations officielles.",
-        "hors_sujet": false,
-        "raison_hors_sujet": ""
-      },
-      "analyse_angles": {
-        "angle_principal": {
-          "nom_specifique": "Approche partenariale institutionnelle pour une action préventive saisonnière",
-          "score_confiance": 0.85,
-          "preuves_quantitatives": {
-            "mots_dedies": 350,
-            "sous_sections": 3,
-            "chiffres_uniques": 4,
-            "citations_exactes": [
-              "« il faut régler l'inclinaison de ses feux au moins une fois par an, notamment à cause des vibrations de la route. »",
-              "1/2 automobiliste se dit gêné lorsqu'il conduit de nuit",
-              "+44% d'accidents mortels la nuit"
-            ],
-            "exemples_concrets": 2,
-            "preuves_visuelles": []
-          },
-          "valeur_ajoutee": {
-            "unicite": 0.8,
-            "actionabilite": 0.9,
-            "profondeur": "approfondi"
-          },
-          "description_strategique": "L'angle est déployé via un réseau de partenaires institutionnels (Prévention Routière, Carglass, CNPA, ASNAV) créant une offre crédible et accessible. Tactiquement, l'article combine données alarmantes (44% d'accidents mortels) avec une solution immédiate et gratuite. Cet angle performe en SEO car il répond à un besoin saisonnier précis avec une autorité institutionnelle. Il adresse le besoin de sécurité concrète des automobilistes confrontés à la conduite nocturne."
-        },
-        "angles_secondaires": [
-          {
-            "nom": "Focus urgence sécurité dans contexte saisonnier défavorable",
-            "couverture": "modéré",
-            "preuves": [
-              "Routes mal éclairées, feux déréglés, vue peu contrôlée",
-              "10% du trafic automobile s'effectue la nuit"
-            ],
-            "description_strategique": "L'article capitalise sur les conditions automnales/hivernales pour créer un sentiment d'urgence. Il met en lumière les dangers spécifiques de la période (nuits plus longues, conditions météo) pour justifier l'action immédiate. Cet angle exploite le timing saisonnier comme levier de motivation."
-          }
-        ]
-      },
-      "approches_differenciantes": [
-        {
-          "approche": "Partenariats institutionnels multiples",
-          "description": "L'article se distingue par la mention spécifique de 4 partenaires institutionnels majeurs (Prévention Routière, Carglass, CNPA, ASNAV) avec des chiffres concrets (231 centres Carglass, 400 garages CNPA). Cette coalition donne une crédibilité exceptionnelle à l'opération.",
-          "valeur_ajoutee": "L'utilisateur bénéficie d'une offre fiable et largement disponible, avec la garantie de professionnels reconnus."
-        },
-        {
-          "approche": "Données exclusives sur la sécurité nocturne",
-          "description": "L'article présente des statistiques uniques et alarmantes : 1 automobiliste sur 2 gêné la nuit, +44% d'accidents mortels nocturnes malgré seulement 10% du trafic. Ces données créent un sentiment d'urgence et justifient l'action préventive.",
-          "valeur_ajoutee": "L'utilisateur comprend l'importance critique du contrôle grâce à des données concrètes qui dépassent les généralités habituelles."
+          "approche": "Données statistiques exclusives sur la sécurité nocturne",
+          "description_unicite": "L'article intègre des données chiffrées exclusives et impactantes sur les accidents nocturnes (42% des tués, 1 piéton sur 2), créant un argument d'autorité par la donnée rarement disponible dans les contenus concurrents.",
+          "valeur_ajoutee": "Ces statistiques concrètes justifient l'utilité du contrôle gratuit et créent un sentiment d'urgence légitime chez l'utilisateur.",
+          "preuves_concretes": [
+            "42% des tués sur la route le sont dans l'obscurité",
+            "près d'un piéton sur deux perd la vie de nuit"
+          ]
         }
       ],
       "couverture_thematique": {
         "score_completude": "75%",
         "aspects_manquants": [
           "Procédure détaillée du contrôle",
-          "Réglementations légales sur l'éclairage",
-          "Fréquence recommandée des contrôles en dehors de l'opération"
+          "Coûts habituels de ces vérifications",
+          "Qualifications des contrôleurs",
+          "Durée moyenne d'un contrôle"
         ],
         "forces_particulieres": [
-          "Importance du contrôle (données chiffrées)",
-          "Accessibilité géographique (réseaux partenaires)",
-          "Gratuité et temporalité (limite octobre)"
+          "Calendrier complet avec 15 villes",
+          "Contexte saisonnier et météorologique",
+          "Données statistiques de sécurité",
+          "Accessibilité sans inscription"
         ]
       },
       "themes_emergents": [
         {
-          "nom": "Impact des vibrations routières sur l'éclairage",
-          "pourquoi_emergent": "Angle technique rarement abordé dans les contenus grand public sur la sécurité automobile. Les vibrations comme cause de dérèglement progressif représentent une nouveauté contextuelle peu exploitée.",
+          "nom": "Sécurité multimodale vélo-trottinette",
+          "pourquoi_emergent": "La croissance rapide des mobilités douces et l'absence de réglementation spécifique créent un besoin nouveau de contrôle sécurité pour ces véhicules. Peu d'initiatives couvrent cette diversité d'usagers.",
           "couverture_concurrent": "rare",
           "potentiel_seo": "élevé",
-          "justification_potentiel": "Répond à la question sous-jacente 'pourquoi mon éclairage se dérègle-t-il sans accident ?' avec une explication mécanique crédible.",
+          "justification_potentiel": "Recherches croissantes sur sécurité trottinette/vélo + faible concurrence sur cet angle multimodal",
           "preuves_article": [
-            "« il faut régler l'inclinaison de ses feux au moins une fois par an, notamment à cause des vibrations de la route. »"
+            "contrôle gratuit de votre moyen de transport : voiture, vélo, trottinette électrique ou même vos équipements de piéton"
           ],
-          "angle_redactionnel_suggere": "Développer un contenu expert sur l'entretien préventif de l'éclairage face à l'usure normale, avec focus sur les modèles les plus sensibles aux vibrations."
+          "angle_redactionnel_suggere": "Développer un guide spécifique sur les points de contrôle sécurité pour vélos et trottinettes en contexte urbain normand."
+        },
+        {
+          "nom": "Adaptation sécurité conditions météo normandes",
+          "pourquoi_emergent": "La spécificité climatique normande (brouillard, pluie fréquente) crée des besoins sécurité uniques peu traités dans les contenus génériques sur la sécurité routière.",
+          "couverture_concurrent": "superficiel",
+          "potentiel_seo": "moyen",
+          "justification_potentiel": "Recherches localisées croissantes + angle territorial différenciant",
+          "preuves_article": [
+            "En Normandie, où la météo est souvent capricieuse, ce genre d'action peut sauver des vies",
+            "Entre changement d'heure, pluie et brouillard"
+          ],
+          "angle_redactionnel_suggere": "Créer un contenu expert sur l'adaptation des équipements sécurité aux conditions météorologiques spécifiques de la Normandie."
         }
       ],
       "themes_a_exclure": [
         {
-          "nom": "Histoire de la réglementation des feux",
-          "raison_exclusion": "Thème saturé dans les contenus automobiles, sans valeur ajoutée pour l'utilisateur cherchant une solution immédiate. Information commodité disponible partout.",
-          "niveau_saturation": "élevé",
-          "impact_si_inclus": "dilution",
-          "preuve_saturation": "80% des articles techniques automobiles incluent un historique réglementaire basique",
-          "alternative_suggeree": "Privilégier les évolutions technologiques récentes (LED, feux adaptatifs) et leur impact sur la sécurité."
-        },
-        {
-          "nom": "Liste générique des centres de contrôle",
-          "raison_exclusion": "Tous les concurrents proposent des annuaires de centres. L'approche différenciante est de se concentrer sur les critères de choix (expertise spécifique, services complémentaires).",
+          "nom": "Définition basique contrôle technique",
+          "raison_exclusion": "Thème ultra-saturé dans tous les résultats, traité de manière identique sans possibilité de différenciation. L'information est commodité et n'apporte aucune valeur ajoutée.",
           "niveau_saturation": "total",
           "impact_si_inclus": "banalisation",
-          "preuve_saturation": "95% des sites automobiles ont des annuaires de garages",
-          "alternative_suggeree": "Focus sur 'comment identifier un centre compétent en éclairage' avec checklist des équipements et certifications."
+          "preuve_saturation": "95% des concurrents incluent cette définition générique",
+          "alternative_suggeree": "Se concentrer sur les spécificités du contrôle préventif gratuit versus contrôle technique obligatoire payant."
+        },
+        {
+          "nom": "Liste générique centres agréés Normandie",
+          "raison_exclusion": "Tous les concurrents proposent des annuaires de centres, créant une saturation totale. Cet angle diluerait le focus unique sur l'opération gratuite temporaire.",
+          "niveau_saturation": "élevé",
+          "impact_si_inclus": "dilution",
+          "preuve_saturation": "90% des résultats concurrents",
+          "alternative_suggeree": "Mettre en avant les partenaires spécifiques de l'opération Lumière & Vision avec leurs engagements qualité."
         }
       ],
       "type_contenu": "Article informatif institutionnel avec CTA modérés",
       "intention": "informationnelle",
       "profondeur_globale": "approfondi",
-      "positionnement_concurrentiel": "Avantage : crédibilité institutionnelle exceptionnelle avec 4 partenaires majeurs et données exclusives. Désavantage : manque de détails procéduraux sur le déroulement concret des contrôles, ce qui pourrait frustrer les utilisateurs cherchant des informations très pratiques.",
-      "article_id": "query_2_position_2",
-      "timestamp": "2025-11-11T19:29:32.844550",
-      "raw_response_metadata": {
-        "article_id": "query_2_position_2",
-        "group_id": 2,
-        "response_length": 6380,
-        "parsing_attempted": true,
-        "parsing_successful": true
-      },
-      "validation_report": {
-        "validated": true,
-        "quality_score": 1.0,
-        "parsing_successful": true,
-        "consistency_issues": [],
-        "overlap_warnings": []
-      }
-    },
-    {
-      "pertinence_requete": {
-        "score": 0.2,
-        "justification": "Le contenu est une page Reddit générique présentant une interface de forum avec des publications diverses. La question spécifique sur le contrôle technique représente moins de 10% du contenu total, qui est majoritairement composé d'éléments d'interface Reddit (modérateurs, communautés tendance, création de compte). Moins de 200 mots sont consacrés au sujet principal.",
-        "hors_sujet": true,
-        "raison_hors_sujet": "Contenu Reddit généraliste avec une question utilisateur isolée, non un article dédié au contrôle technique. La couverture du sujet spécifique est inférieure à 40% du contenu total."
-      },
-      "analyse_angles": {
-        "angle_principal": {
-          "nom_specifique": "",
-          "score_confiance": 0.0,
-          "preuves_quantitatives": {
-            "mots_dedies": 0,
-            "sous_sections": 0,
-            "chiffres_uniques": 0,
-            "citations_exactes": [],
-            "exemples_concrets": 0,
-            "preuves_visuelles": []
-          },
-          "valeur_ajoutee": {
-            "unicite": 0.0,
-            "actionabilite": 0.0,
-            "profondeur": "superficiel"
-          },
-          "description_strategique": ""
-        },
-        "angles_secondaires": []
-      },
-      "approches_differenciantes": [],
-      "couverture_thematique": {
-        "score_completude": "5%",
-        "aspects_manquants": [
-          "Explication du contrôle",
-          "Pourquoi c'est important",
-          "Où le faire",
-          "Quand le faire",
-          "Comment se déroule le contrôle",
-          "Coûts/gratuité",
-          "Réglementations/obligations légales",
-          "Contexte saisonnier"
-        ],
-        "forces_particulieres": [
-          "Aucune force identifiée - contenu non pertinent"
-        ]
-      },
-      "themes_emergents": [],
-      "themes_a_exclure": [],
-      "type_contenu": "Page d'interface Reddit avec contenu utilisateur épars",
-      "intention": "informationnelle",
-      "profondeur_globale": "superficiel",
-      "positionnement_concurrentiel": "Aucun avantage concurrentiel - page générique de réseau social non optimisée pour le sujet spécifique. Désavantage majeur: absence de contenu structuré et informatif sur le contrôle technique.",
-      "article_id": "query_2_position_3",
-      "timestamp": "2025-11-11T19:28:56.693761",
-      "raw_response_metadata": {
-        "article_id": "query_2_position_3",
-        "group_id": 2,
-        "response_length": 2241,
-        "parsing_attempted": true,
-        "parsing_successful": true
-      },
-      "validation_report": {
-        "validated": true,
-        "quality_score": 1.0,
-        "parsing_successful": true,
-        "consistency_issues": [],
-        "overlap_warnings": []
-      }
-    },
-    {
-      "pertinence_requete": {
-        "score": 0.1,
-        "justification": "Le contenu se limite à un simple bouton de redirection vers Amazon.fr sans aucun contenu informatif sur le sujet recherché. Il s'agit d'une page vide avec seulement 8 mots de contenu réel, ce qui correspond au critère 'Contenu vide/null' de l'échelle de pertinence.",
-        "hors_sujet": true,
-        "raison_hors_sujet": "Page de redirection commerciale sans contenu éditorial pertinent pour la requête"
-      },
-      "analyse_angles": {
-        "angle_principal": {
-          "nom_specifique": "Non applicable - contenu hors sujet",
-          "score_confiance": 0.0,
-          "preuves_quantitatives": {
-            "mots_dedies": 0,
-            "sous_sections": 0,
-            "chiffres_uniques": 0,
-            "citations_exactes": [],
-            "exemples_concrets": 0,
-            "preuves_visuelles": []
-          },
-          "valeur_ajoutee": {
-            "unicite": 0.0,
-            "actionabilite": 0.0,
-            "profondeur": "superficiel"
-          },
-          "description_strategique": "Non applicable - contenu hors sujet"
-        },
-        "angles_secondaires": []
-      },
-      "approches_differenciantes": [],
-      "couverture_thematique": {
-        "score_completude": "0%",
-        "aspects_manquants": [
-          "Tous les aspects thématiques"
-        ],
-        "forces_particulieres": [
-          "Aucune force identifiée"
-        ]
-      },
-      "themes_emergents": [],
-      "themes_a_exclure": [],
-      "type_contenu": "Page de redirection commerciale vide",
-      "intention": "navigationnelle",
-      "profondeur_globale": "superficiel",
-      "positionnement_concurrentiel": "Aucun avantage concurrentiel - page vide sans valeur informationnelle",
-      "article_id": "query_2_position_4",
-      "timestamp": "2025-11-11T19:28:52.683423",
-      "raw_response_metadata": {
-        "article_id": "query_2_position_4",
-        "group_id": 2,
-        "response_length": 1590,
-        "parsing_attempted": true,
-        "parsing_successful": true
-      },
-      "validation_report": {
-        "validated": true,
-        "quality_score": 1.0,
-        "parsing_successful": true,
-        "consistency_issues": [],
-        "overlap_warnings": []
-      }
-    },
-    {
-      "pertinence_requete": {
-        "score": 0.1,
-        "justification": "Le contenu fourni est vide ou quasi-inexistant avec uniquement le mot 'Facebook' comme contenu. Selon l'échelle de pertinence Phase 1, un contenu vide/null avec moins de 50 mots de contenu reçoit un score 0.0-0.3 (hors-sujet total).",
-        "hors_sujet": true,
-        "raison_hors_sujet": "Contenu vide ou page d'erreur - impossible d'analyser la pertinence avec un contenu manquant"
-      },
-      "analyse_angles": {
-        "angle_principal": {
-          "nom_specifique": "",
-          "score_confiance": 0.0,
-          "preuves_quantitatives": {
-            "mots_dedies": 0,
-            "sous_sections": 0,
-            "chiffres_uniques": 0,
-            "citations_exactes": [],
-            "exemples_concrets": 0,
-            "preuves_visuelles": []
-          },
-          "valeur_ajoutee": {
-            "unicite": 0.0,
-            "actionabilite": 0.0,
-            "profondeur": "superficiel"
-          },
-          "description_strategique": ""
-        },
-        "angles_secondaires": []
-      },
-      "approches_differenciantes": [],
-      "couverture_thematique": {
-        "score_completude": "0%",
-        "aspects_manquants": [
-          "Tous les aspects thématiques sont manquants - contenu vide"
-        ],
-        "forces_particulieres": [
-          "Aucune force identifiable - contenu insuffisant"
-        ]
-      },
-      "themes_emergents": [],
-      "themes_a_exclure": [],
-      "type_contenu": "Contenu vide ou page d'erreur",
-      "intention": "navigationnelle",
-      "profondeur_globale": "superficiel",
-      "positionnement_concurrentiel": "Impossible d'évaluer le positionnement concurrentiel avec un contenu vide - probablement une page placeholder ou erreur technique",
-      "article_id": "query_2_position_6",
-      "timestamp": "2025-11-11T19:28:53.576192",
-      "raw_response_metadata": {
-        "article_id": "query_2_position_6",
-        "group_id": 2,
-        "response_length": 1606,
-        "parsing_attempted": true,
-        "parsing_successful": true
-      },
-      "validation_report": {
-        "validated": true,
-        "quality_score": 1.0,
-        "parsing_successful": true,
-        "consistency_issues": [],
-        "overlap_warnings": []
-      }
-    },
-    {
-      "pertinence_requete": {
-        "score": 0.0,
-        "justification": "Le contenu fourni est vide (aucun texte présent), ce qui correspond au critère 'Contenu vide/null' de l'échelle de pertinence. Un score de 0.0 est attribué car il n'y a aucun contenu à analyser pour évaluer la pertinence avec la requête.",
-        "hors_sujet": true,
-        "raison_hors_sujet": "Contenu vide ou null - impossible d'évaluer la pertinence sans texte"
-      },
-      "analyse_angles": {
-        "angle_principal": {
-          "nom_specifique": "",
-          "score_confiance": 0.0,
-          "preuves_quantitatives": {
-            "mots_dedies": 0,
-            "sous_sections": 0,
-            "chiffres_uniques": 0,
-            "citations_exactes": [],
-            "exemples_concrets": 0,
-            "preuves_visuelles": []
-          },
-          "valeur_ajoutee": {
-            "unicite": 0.0,
-            "actionabilite": 0.0,
-            "profondeur": "superficiel"
-          },
-          "description_strategique": ""
-        },
-        "angles_secondaires": []
-      },
-      "approches_differenciantes": [],
-      "couverture_thematique": {
-        "score_completude": "0%",
-        "aspects_manquants": [
-          "Tous les aspects sont manquants - contenu vide"
-        ],
-        "forces_particulieres": [
-          "Aucune force identifiée - contenu vide"
-        ]
-      },
-      "themes_emergents": [],
-      "themes_a_exclure": [],
-      "type_contenu": "Contenu vide ou non fourni",
-      "intention": "informationnelle",
-      "profondeur_globale": "superficiel",
-      "positionnement_concurrentiel": "Impossible à évaluer - contenu vide fourni pour l'analyse",
-      "article_id": "query_2_position_7",
-      "timestamp": "2025-11-11T19:28:54.149322",
-      "raw_response_metadata": {
-        "article_id": "query_2_position_7",
-        "group_id": 2,
-        "response_length": 1672,
-        "parsing_attempted": true,
-        "parsing_successful": true
-      },
-      "validation_report": {
-        "validated": true,
-        "quality_score": 1.0,
-        "parsing_successful": true,
-        "consistency_issues": [],
-        "overlap_warnings": []
-      }
-    },
-    {
-      "pertinence_requete": {
-        "score": 0.0,
-        "justification": "Le contenu fourni est vide ou null, ce qui correspond au critère 'Contenu vide/null' de l'échelle de pertinence. Sans aucun texte à analyser, il est impossible d'évaluer la pertinence avec le sujet recherché.",
-        "hors_sujet": true,
-        "raison_hors_sujet": "Contenu vide ou non fourni - impossible d'effectuer une analyse SEO significative"
-      },
-      "analyse_angles": {
-        "angle_principal": {
-          "nom_specifique": "",
-          "score_confiance": 0.0,
-          "preuves_quantitatives": {
-            "mots_dedies": 0,
-            "sous_sections": 0,
-            "chiffres_uniques": 0,
-            "citations_exactes": [],
-            "exemples_concrets": 0,
-            "preuves_visuelles": []
-          },
-          "valeur_ajoutee": {
-            "unicite": 0.0,
-            "actionabilite": 0.0,
-            "profondeur": "superficiel"
-          },
-          "description_strategique": ""
-        },
-        "angles_secondaires": []
-      },
-      "approches_differenciantes": [],
-      "couverture_thematique": {
-        "score_completude": "0%",
-        "aspects_manquants": [
-          "Tous les aspects thématiques sont manquants - contenu vide"
-        ],
-        "forces_particulieres": [
-          "Aucune force identifiable - contenu vide"
-        ]
-      },
-      "themes_emergents": [],
-      "themes_a_exclure": [],
-      "type_contenu": "Contenu vide ou non accessible",
-      "intention": "informationnelle",
-      "profondeur_globale": "superficiel",
-      "positionnement_concurrentiel": "Impossible d'évaluer le positionnement concurrentiel en l'absence de contenu à analyser",
-      "article_id": "query_2_position_8",
-      "timestamp": "2025-11-11T19:28:52.963420",
-      "raw_response_metadata": {
-        "article_id": "query_2_position_8",
-        "group_id": 2,
-        "response_length": 1524,
-        "parsing_attempted": true,
-        "parsing_successful": true
-      },
-      "validation_report": {
-        "validated": true,
-        "quality_score": 1.0,
-        "parsing_successful": true,
-        "consistency_issues": [],
-        "overlap_warnings": []
-      }
-    },
-    {
-      "pertinence_requete": {
-        "score": 0.8,
-        "justification": "L'article traite bien du diagnostic automobile et de la recherche de pannes, avec une orientation vers les services Feu Vert. Le contenu est pertinent mais présente une forte orientation commerciale plutôt qu'un guide informatif pur. Score 0.8 car répond au service mais avec biais commercial marqué.",
-        "hors_sujet": false,
-        "raison_hors_sujet": ""
-      },
-      "analyse_angles": {
-        "angle_principal": {
-          "nom_specifique": "Approche institutionnelle par réseau de franchises avec positionnement expert technique",
-          "score_confiance": 0.85,
-          "preuves_quantitatives": {
-            "mots_dedies": 450,
-            "sous_sections": 4,
-            "chiffres_uniques": 0,
-            "citations_exactes": [
-              "Expertise technique avancée: Nos techniciens sont formés aux dernières technologies automobiles",
-              "Équipement de pointe: Nous utilisons les outils de diagnostic les plus récents",
-              "Diagnostics personnalisés: Chaque véhicule est unique"
-            ],
-            "exemples_concrets": 3,
-            "preuves_visuelles": []
-          },
-          "valeur_ajoutee": {
-            "unicite": 0.7,
-            "actionabilite": 0.6,
-            "profondeur": "modéré"
-          },
-          "description_strategique": "L'angle institutionnel se déploie via un positionnement expert technique affirmé, avec mise en avant des formations et équipements. Tactiquement, l'article structure l'argumentaire autour de 4 piliers (expertise, équipement, personnalisation, rapidité) pour construire une crédibilité technique. En SEO, cet angle pourrait performer sur les requêtes liées à l'expertise technique et la confiance. Il répond au besoin utilisateur de trouver un prestataire fiable et compétent pour des diagnostics complexes."
-        },
-        "angles_secondaires": [
-          {
-            "nom": "Stratégie préventive avec argumentaire économique long terme",
-            "couverture": "modéré",
-            "preuves": [
-              "Prévention des pannes majeures",
-              "Économies à long Terme: En détectant et en corrigeant les problèmes tôt, vous évitez les réparations majeures"
-            ],
-            "description_strategique": "Cet angle aborde le diagnostic comme un investissement préventif plutôt qu'une dépense, en mettant en avant les économies potentielles et la planification budgétaire. Il répond à l'objection prix en démontrant la valeur économique sur le long terme."
-          }
-        ]
-      },
-      "approches_differenciantes": [
-        {
-          "approche": "Couverture exhaustive des services",
-          "description": "L'article présente une gamme extrêmement complète de services (plus de 200 mentions), créant un effet de one-stop-shop unique. Cette exhaustivité démontre une capacité à répondre à tous les besoins automobiles.",
-          "valeur_ajoutee": "L'utilisateur perçoit qu'il peut résoudre tous ses problèmes automobiles au même endroit, simplifiant sa recherche et gagnant du temps."
-        },
-        {
-          "approche": "Positionnement expert technique affirmé",
-          "description": "Mise en avant systématique de l'expertise technique avec mentions répétées des formations, équipements de pointe et technologies maîtrisées. Différenciation par la compétence technique plutôt que seulement le prix.",
-          "valeur_ajoutee": "Rassure l'utilisateur sur la qualité du diagnostic et la fiabilité des conclusions, essentiel pour un service technique."
-        }
-      ],
-      "couverture_thematique": {
-        "score_completude": "50%",
-        "aspects_manquants": [
-          "procédure détaillée du diagnostic",
-          "durée moyenne d'un diagnostic",
-          "différence entre diagnostic gratuit/payant",
-          "garanties sur les diagnostics",
-          "exemples de pannes détectées"
-        ],
-        "forces_particulieres": [
-          "avantages des diagnostics réguliers",
-          "gamme de services complète",
-          "arguments économiques préventifs"
-        ]
-      },
-      "themes_emergents": [
-        {
-          "nom": "Diagnostics véhicules électriques et hybrides",
-          "pourquoi_emergent": "Transition énergétique récente créant un nouveau besoin de diagnostic spécialisé. Marché en croissance rapide avec spécificités techniques méconnues du grand public.",
-          "couverture_concurrent": "rare",
-          "potentiel_seo": "élevé",
-          "justification_potentiel": "Recherches en forte croissance, concurrence limitée, forte valeur perçue",
-          "preuves_article": [
-            "Diagnostics spécialisés pour véhicules hybrides et électriques"
-          ],
-          "angle_redactionnel_suggere": "Développer un guide spécifique sur les points de contrôle uniques aux VÉ et les pannes courantes des systèmes électriques."
-        },
-        {
-          "nom": "Télémaintenance et diagnostics connectés",
-          "pourquoi_emergent": "Innovation technologique récente dans l'automobile avec développement des véhicules connectés. Nouveaux modes d'intervention à distance émergents.",
-          "couverture_concurrent": "absent",
-          "potentiel_seo": "moyen",
-          "justification_potentiel": "Positionnement avant-gardiste mais volume de recherche encore limité",
-          "preuves_article": [],
-          "angle_redactionnel_suggere": "Anticiper la tendance en expliquant comment les nouvelles technologies permettent des diagnostics préventifs à distance."
-        }
-      ],
-      "themes_a_exclure": [
-        {
-          "nom": "Liste générique des centres Feu Vert",
-          "raison_exclusion": "Information commodité présente sur toutes les pages du site, aucune valeur ajoutée éditoriale. Risque de dilution du contenu expert.",
-          "niveau_saturation": "total",
-          "impact_si_inclus": "banalisation",
-          "preuve_saturation": "100% des pages institutionnelles incluent cette information",
-          "alternative_suggeree": "Focus sur les centres équipés d'outils spécifiques pour diagnostics complexes"
-        },
-        {
-          "nom": "Tarifs standards des prestations",
-          "raison_exclusion": "Information volatile, différente selon les centres, et déjà traitée ailleurs. Risque de confusion et d'obsolescence rapide.",
-          "niveau_saturation": "élevé",
-          "impact_si_inclus": "confusion",
-          "preuve_saturation": "90% des concurrents communiquent sur les prix de manière générique",
-          "alternative_suggeree": "Expliquer la méthode de calcul des devis et les facteurs influençant le coût"
-        }
-      ],
-      "type_contenu": "Landing page commerciale institutionnelle avec éléments informatifs",
-      "intention": "commerciale",
-      "profondeur_globale": "modéré",
-      "positionnement_concurrentiel": "Avantage : gamme de services très complète et positionnement expert technique affirmé. Désavantage : orientation commerciale trop marquée limitant la valeur informative pure, absence de données chiffrées concrètes pour étayer l'argumentaire.",
+      "positionnement_concurrentiel": "L'article se distingue par sa crédibilité institutionnelle exclusive et son approche territoriale complète, surpassant les contenus purement commerciaux. Son principal désavantage est l'absence de détails techniques sur le déroulement concret des contrôles, ce qui pourrait limiter son utilité immédiate pour certains utilisateurs.",
       "article_id": "query_2_position_9",
-      "timestamp": "2025-11-11T19:29:32.979979",
+      "timestamp": "2025-11-21T16:15:09.230960",
       "raw_response_metadata": {
         "article_id": "query_2_position_9",
         "group_id": 2,
-        "response_length": 6564,
-        "parsing_attempted": true,
-        "parsing_successful": true
-      },
-      "validation_report": {
-        "validated": true,
-        "quality_score": 1.0,
-        "parsing_successful": true,
-        "consistency_issues": [],
-        "overlap_warnings": []
-      }
-    },
-    {
-      "pertinence_requete": {
-        "score": 0.9,
-        "justification": "L'article répond exactement à la requête en détaillant l'offre de contrôle gratuit d'éclairage et d'essuie-glaces par la Prévention Routière. Il couvre les partenaires, les lieux, la période et les bénéfices avec des informations actionnables. La couverture dépasse 80% des aspects attendus.",
-        "hors_sujet": false,
-        "raison_hors_sujet": ""
-      },
-      "analyse_angles": {
-        "angle_principal": {
-          "nom_specifique": "Approche partenariale institutionnelle saisonnière avec offre immédiate territorialisée",
-          "score_confiance": 0.85,
-          "preuves_quantitatives": {
-            "mots_dedies": 180,
-            "sous_sections": 2,
-            "chiffres_uniques": 3,
-            "citations_exactes": [
-              "l'association de la Prévention Routière organise les semaines «Lumière et vision»",
-              "sécurité routière s'associe avec l'AsnaV, le CNPA et l'enseigne Carglass",
-              "400 professionnels de l'automobile du réseau de la CNPA et dans 231 centres du réseau Carglass"
-            ],
-            "exemples_concrets": 2,
-            "preuves_visuelles": []
-          },
-          "valeur_ajoutee": {
-            "unicite": 0.8,
-            "actionabilite": 0.9,
-            "profondeur": "modéré"
-          },
-          "description_strategique": "L'angle est déployé via un partenariat multi-acteurs (institutionnel + professionnel) créant un réseau dense de 631 points de contrôle. La tactique combine crédibilité institutionnelle (Sécurité Routière) avec accessibilité territoriale (Carglass, CNPA). Cet angle performe en SEO car il répond au besoin 'où et quand' avec autorité. Il adresse le besoin utilisateur de trouver rapidement une solution gratuite et fiable près de chez soi pendant une période limitée."
-        },
-        "angles_secondaires": [
-          {
-            "nom": "Focus prévention sécurité basé sur données comportementales",
-            "couverture": "superficiel",
-            "preuves": [
-              "un automobiliste sur deux été gêné en conduisant la nuit",
-              "principalement à cause de l'éblouissement causé par les feux des autres voitures"
-            ],
-            "description_strategique": "L'article utilise des données d'enquête pour justifier l'importance du contrôle. Cet angle crée de l'urgence et de la crédibilité en s'appuyant sur des problèmes concrets vécus par les automobilistes."
-          }
-        ]
-      },
-      "approches_differenciantes": [
-        {
-          "approche": "Partenariats institutionnels multi-acteurs",
-          "description": "L'unique combinaison Sécurité Routière + AsnaV + CNPA + Carglass crée un écosystème crédible et dense. Aucun autre acteur ne peut répliquer cette alliance institutionnelle et territoriale.",
-          "valeur_ajoutee": "Bénéfice de confiance (labels officiels) + accessibilité (631 points de contrôle)"
-        },
-        {
-          "approche": "Données comportementales exclusives 2014",
-          "description": "L'enquête 2014 sur la gêne nocturne des automobilistes fournit un argument unique basé sur des données réelles, même si vieillissantes.",
-          "valeur_ajoutee": "Légitime l'urgence du contrôle en s'appuyant sur des problèmes concrets vécus par 50% des automobilistes"
-        },
-        {
-          "approche": "Maillage territorial quantifié",
-          "description": "Précision exceptionnelle du nombre de centres (400 + 231) avec URLs directs, ce qui est rare dans ce type de contenu.",
-          "valeur_ajoutee": "Permet à l'utilisateur de visualiser immédiatement l'accessibilité de l'offre près de chez lui"
-        }
-      ],
-      "couverture_thematique": {
-        "score_completude": "63%",
-        "aspects_manquants": [
-          "procédure détaillée du contrôle",
-          "réglementations légales",
-          "durée estimée du contrôle",
-          "fréquence recommandée des contrôles",
-          "conséquences d'un mauvais éclairage"
-        ],
-        "forces_particulieres": [
-          "lieux précis avec URLs",
-          "période temporelle (octobre)",
-          "partenaires identifiés",
-          "gratuité confirmée"
-        ]
-      },
-      "themes_emergents": [
-        {
-          "nom": "Impact vieillissement parc automobile sur sécurité",
-          "pourquoi_emergent": "Le parc automobile français vieillit (âge moyen >10 ans), créant des enjeux nouveaux sur l'entretien des équipements de sécurité. Peu traité sous l'angle préventif gratuit.",
-          "couverture_concurrent": "rare",
-          "potentiel_seo": "élevé",
-          "justification_potentiel": "Recherches croissantes sur 'entretien voiture ancienne' + angle différenciant vs contenu standard",
-          "preuves_article": [
-            "un automobiliste sur deux été gêné en conduisant la nuit"
-          ],
-          "angle_redactionnel_suggere": "Relier systématiquement l'âge du véhicule aux besoins de contrôle renforcé des équipements de sécurité"
-        },
-        {
-          "nom": "Convergence santé visuelle et sécurité routière",
-          "pourquoi_emergent": "Partenariat avec AsnaV crée un lien innovant entre santé individuelle (vue) et sécurité collective. Angle peu exploité dans le contenu automobile.",
-          "couverture_concurrent": "superficiel",
-          "potentiel_seo": "moyen",
-          "justification_potentiel": "Cible deux audiences distinctes (automobilistes + personnes soucieuses de leur vue) avec contenu transversal",
-          "preuves_article": [
-            "sécurité routière s'associe avec l'AsnaV",
-            "Effectuer un contrôle de la vue est également indispensable"
-          ],
-          "angle_redactionnel_suggere": "Développer les interactions entre qualité de vision et performance des équipements d'éclairage"
-        }
-      ],
-      "themes_a_exclure": [
-        {
-          "nom": "Histoire des campagnes de prévention routière",
-          "raison_exclusion": "Sujet trop éloigné de l'urgence actionnable. Diluerait le message principal sur le contrôle gratuit immédiat.",
-          "niveau_saturation": "modéré",
-          "impact_si_inclus": "dilution",
-          "preuve_saturation": "30% des articles institutionnels incluent un paragraphe historique",
-          "alternative_suggeree": "Focus sur les innovations récentes dans les technologies d'éclairage automobile"
-        },
-        {
-          "nom": "Comparatif techniques d'essuie-glaces",
-          "raison_exclusion": "Sujet purement technique qui éloigne de l'offre de service gratuit. Mieux traité sur des sites spécialisés.",
-          "niveau_saturation": "élevé",
-          "impact_si_inclus": "banalisation",
-          "preuve_saturation": "70% des sites automobiles traitent ce sujet de manière générique",
-          "alternative_suggeree": "Focus sur l'impact sécurité des essuie-glaces défectueux par conditions météo"
-        }
-      ],
-      "type_contenu": "Article informatif institutionnel avec CTA modérés",
-      "intention": "informationnelle",
-      "profondeur_globale": "modéré",
-      "positionnement_concurrentiel": "Avantage : crédibilité institutionnelle unique et maillage territorial précis. Désavantage : contenu relativement court et manque de détails procéduraux sur le déroulement du contrôle.",
-      "article_id": "query_2_position_10",
-      "timestamp": "2025-11-11T19:29:36.900901",
-      "raw_response_metadata": {
-        "article_id": "query_2_position_10",
-        "group_id": 2,
-        "response_length": 7199,
+        "response_length": 7994,
         "parsing_attempted": true,
         "parsing_successful": true
       },
@@ -853,248 +572,228 @@
     "analyse_angles_concurrentiels": {
       "angles_dominants": [
         {
-          "angle": "Approche partenariale institutionnelle pour actions préventives saisonnières",
-          "frequence_utilisation": "élevée",
+          "angle": "Partenariat institutionnel multisectoriel pour prévention sécurité routière",
+          "frequence_utilisation": "Positions 3 et 7",
           "niveau_profondeur_moyen": "approfondi",
-          "positionnement_requis": "obligatoire",
+          "positionnement_requis": "Obligatoire",
           "exemples_reussis": [
-            "ACL avec Sécurité Routière",
-            "Prévention Routière avec Carglass/CNPA/ASNAV"
+            "Position 3: Article Prévention Routière",
+            "Position 7: Article sécurité routière"
           ]
         },
         {
-          "angle": "Stratégie de déploiement territorial avec accessibilité immédiate",
-          "frequence_utilisation": "moyenne",
-          "niveau_profondeur_moyen": "approfondi",
-          "positionnement_requis": "recommandé",
+          "angle": "Campagne saisonnière avec urgence temporelle",
+          "frequence_utilisation": "Positions 3, 5 et 7",
+          "niveau_profondeur_moyen": "modere",
+          "positionnement_requis": "Recommande",
           "exemples_reussis": [
-            "ACL avec 18 points de contrôle sans rendez-vous"
+            "Position 3: Opération jusqu'à fin octobre",
+            "Position 5: Événement localisé Caen"
           ]
         }
       ],
       "angles_emergents": [
         {
-          "angle": "Impact des vibrations routières sur l'éclairage",
-          "utilise_par": "position 2",
-          "potentiel_differentiation": "élevé",
+          "angle": "Impact vibrations route sur réglage feux",
+          "utilise_par": "Position 3 uniquement",
+          "potentiel_differentiation": "Thème technique peu exploité expliquant scientifiquement la nécessité des contrôles annuels",
+          "difficulte_execution": "faible"
+        },
+        {
+          "angle": "Phénomène éblouissement sécurité nocturne",
+          "utilise_par": "Position 3 uniquement",
+          "potentiel_differentiation": "Problème concret de conduite nocturne peu traité dans les contenus grand public",
           "difficulte_execution": "moyenne"
         }
       ]
     },
     "themes_obligatoires": [
       {
-        "theme": "Lieux et dates détaillés des contrôles gratuits",
+        "theme": "Réseau de centres partenaires et accessibilité géographique",
         "present_chez": [
-          "position 1",
-          "position 2"
+          3,
+          7
         ],
         "niveau_minimum_requis": "approfondi",
-        "profondeur_observee": "approfondi",
-        "justification": "Nécessaire pour répondre au besoin d'action immédiate et de proximité géographique"
+        "profondeur_observee": "Mention de 231 centres Carglass + 400 garages CNPA avec couverture territoriale",
+        "justification": "Présent dans 100% des articles pertinents, essentiel pour l'actionnabilité"
       },
       {
-        "theme": "Partenariats institutionnels et crédibilité",
+        "theme": "Données statistiques sécurité nocturne",
         "present_chez": [
-          "position 1",
-          "position 2"
+          3,
+          7
         ],
-        "niveau_minimum_requis": "modéré",
-        "profondeur_observee": "approfondi",
-        "justification": "Garantit la légitimité et la qualité du service gratuit proposé"
+        "niveau_minimum_requis": "modere",
+        "profondeur_observee": "44% d'accidents mortels pour 10% du trafic, 1/2 automobiliste gêné la nuit",
+        "justification": "Crédibilise l'offre et justifie la nécessité des contrôles"
       },
       {
-        "theme": "Données statistiques sur la sécurité routière",
+        "theme": "Période de validité et urgence temporelle",
         "present_chez": [
-          "position 1",
-          "position 2"
+          3,
+          5,
+          7
         ],
-        "niveau_minimum_requis": "modéré",
-        "profondeur_observee": "approfondi",
-        "justification": "Justifie l'importance du contrôle et crée un sentiment d'urgence"
+        "niveau_minimum_requis": "modere",
+        "profondeur_observee": "Opération limitée dans le temps (jusqu'à fin octobre)",
+        "justification": "Crée un sentiment d'urgence et motive l'action immédiate"
       }
     ],
     "themes_emergents_consolides": [
       {
-        "theme": "Impact batterie sur véhicules modernes",
+        "theme": "Impact vibrations route sur alignement phares",
         "articles_mentionnant": [
-          "position 1"
+          3
         ],
-        "frequence_apparition": "rare",
-        "niveau_traitement_observe": "superficiel",
-        "opportunite_differentiation": "Angle technique peu traité sur l'impact de l'électronique embarquée",
-        "potentiel_seo": "élevé",
-        "justification_potentiel": "Recherches croissantes sur l'entretien des véhicules électriques et hybrides",
-        "recommandation_exploitation": "Développer un guide expert sur l'entretien préventif de l'éclairage face à la consommation électrique des véhicules modernes",
-        "complexite_execution": "moyenne"
-      },
-      {
-        "theme": "Réglage feux sur parkings non-droits",
-        "articles_mentionnant": [
-          "position 1"
-        ],
-        "frequence_apparition": "rare",
-        "niveau_traitement_observe": "superficiel",
-        "opportunite_differentiation": "Problématique pratique cruciale rarement abordée",
-        "potentiel_seo": "moyen",
-        "justification_potentiel": "Répond aux doutes légitimes sur la précision des contrôles mobiles",
-        "recommandation_exploitation": "Expliquer les méthodes de compensation et limites des contrôles délocalisés versus centres spécialisés",
+        "frequence_apparition": "10% du SERP",
+        "niveau_traitement_observe": "modere",
+        "opportunite_differentiation": "Explication scientifique unique justifiant la nécessité des contrôles annuels",
+        "potentiel_seo": "eleve",
+        "justification_potentiel": "Répond à une question technique spécifique avec fort potentiel longue traîne",
+        "recommandation_exploitation": "Développer un guide technique sur l'entretien préventif des phares",
         "complexite_execution": "faible"
       },
       {
-        "theme": "Impact des vibrations routières sur l'éclairage",
+        "theme": "Problématique éblouissement conduite nocturne",
         "articles_mentionnant": [
-          "position 2"
+          3
         ],
-        "frequence_apparition": "rare",
+        "frequence_apparition": "10% du SERP",
         "niveau_traitement_observe": "superficiel",
-        "opportunite_differentiation": "Explication mécanique crédible du dérèglement progressif",
-        "potentiel_seo": "élevé",
-        "justification_potentiel": "Répond à la question 'pourquoi mon éclairage se dérègle-t-il sans accident ?'",
-        "recommandation_exploitation": "Contenu expert sur l'entretien préventif face à l'usure normale, focus modèles sensibles",
+        "opportunite_differentiation": "Angle sécurité concret centré sur l'expérience utilisateur réelle",
+        "potentiel_seo": "moyen",
+        "justification_potentiel": "Thème engageant qui touche directement le confort de conduite",
+        "recommandation_exploitation": "Contenu expert sur les techniques anti-éblouissement",
         "complexite_execution": "moyenne"
       }
     ],
     "themes_a_exclure_consolides": [
       {
-        "theme": "Définition basique contrôle technique",
+        "theme": "Présentation générale services auto génériques",
         "distribution_serp": {
           "present_top5": [],
-          "present_positions_6_10": []
+          "present_positions_6_10": [
+            2,
+            4,
+            6
+          ]
         },
         "raison_exclusion": "saturation",
-        "justification_exclusion": "Information commodité déjà saturée dans 95% des articles concurrents",
-        "correlation_mauvais_positionnement": "forte",
-        "alternative_recommandee": "Focus sur spécificités du contrôle préventif saisonnier versus contrôle technique obligatoire"
+        "justification_exclusion": "Contenu commercial générique sans pertinence pour la requête, corrélé avec mauvais positionnement",
+        "correlation_mauvais_positionnement": "100% des articles hors-sujet utilisent cet angle",
+        "alternative_recommandee": "Focus exclusif sur l'offre spécifique de contrôle gratuit"
       },
       {
-        "theme": "Historique réglementation pneus/feux",
+        "theme": "Événementiel local trop restreint",
         "distribution_serp": {
-          "present_top5": [],
+          "present_top5": [
+            5
+          ],
           "present_positions_6_10": []
         },
-        "raison_exclusion": "saturation",
-        "justification_exclusion": "Thème saturé dans 70-80% des sites institutionnels et techniques",
-        "correlation_mauvais_positionnement": "moyenne",
-        "alternative_recommandee": "Concentrer sur évolutions récentes impactant directement l'utilisateur"
-      },
-      {
-        "theme": "Liste générique des centres de contrôle",
-        "distribution_serp": {
-          "present_top5": [],
-          "present_positions_6_10": []
-        },
-        "raison_exclusion": "saturation",
-        "justification_exclusion": "95% des sites automobiles ont des annuaires de garages",
-        "correlation_mauvais_positionnement": "forte",
-        "alternative_recommandee": "Focus sur 'comment identifier un centre compétent en éclairage' avec checklist"
+        "raison_exclusion": "dilution",
+        "justification_exclusion": "Limite la portée nationale et l'utilité générale du contenu",
+        "correlation_mauvais_positionnement": "Article position 5 jugé hors-sujet partiel pour limitation géographique",
+        "alternative_recommandee": "Approche nationale avec possibilité de déclinaisons locales"
       }
     ],
     "opportunites_angles_uniques": [
       {
-        "angle_propose": "Guide comparatif contrôle préventif gratuit vs contrôle technique payant",
-        "justification": "Absent dans le top 5, répond au besoin de clarification sur la valeur ajoutée des opérations gratuites",
-        "niveau_ambition": "élevé",
-        "valeur_ajoutee_estimee": "très élevée",
-        "complexite_execution": "moyenne"
+        "angle_propose": "Guide complet d'autodiagnostic des phares avant contrôle professionnel",
+        "justification": "Absent chez tous les concurrents, répond au besoin d'autonomie et préparation avant déplacement",
+        "niveau_ambition": "modere",
+        "valeur_ajoutee_estimee": "Augmentation engagement utilisateur et positionnement sur requêtes complémentaires",
+        "complexite_execution": "faible"
       },
       {
-        "angle_propose": "Analyse coût-bénéfice entretien préventif éclairage vs risques réels",
-        "justification": "Approche économique absente des contenus institutionnels dominants",
-        "niveau_ambition": "moyen",
-        "valeur_ajoutee_estimee": "élevée",
-        "complexite_execution": "élevée"
+        "angle_propose": "Analyse comparative des différentes technologies d'éclairage (halogène, LED, xénon)",
+        "justification": "Aucun concurrent n'aborde l'aspect technologique et les spécificités de réglage selon le type de phare",
+        "niveau_ambition": "ambitieux",
+        "valeur_ajoutee_estimee": "Positionnement en tant qu'expert technique et couverture requêtes spécifiques",
+        "complexite_execution": "moyenne"
       }
     ],
     "gaps_concurrentiels": [
       {
-        "gap_identifie": "Éléments interactifs (cartes, outils de localisation)",
-        "type": "fonctionnalité",
-        "potentiel_seo": "élevé",
-        "recommandation_exploitation": "Intégrer une carte interactive des points de contrôle avec filtres par dates et services"
+        "gap_identifie": "Manque de détails procéduraux sur le déroulement concret du contrôle",
+        "type": "actionabilite",
+        "potentiel_seo": "eleve",
+        "recommandation_exploitation": "Décrire étape par étape ce qui est vérifié pendant un contrôle d'éclairage"
       },
       {
-        "gap_identifie": "Témoignages utilisateurs et preuves sociales",
-        "type": "crédibilité",
+        "gap_identifie": "Absence d'informations sur la gratuité réelle (ce qui est inclus/exclu)",
+        "type": "profondeur",
         "potentiel_seo": "moyen",
-        "recommandation_exploitation": "Ajouter des avis vérifiés et retours d'expérience concrets"
-      },
-      {
-        "gap_identifie": "Guide d'autocontrôle basique entre les opérations",
-        "type": "utilité pratique",
-        "potentiel_seo": "élevé",
-        "recommandation_exploitation": "Créer un contenu step-by-step pour vérifier soi-même son éclairage"
+        "recommandation_exploitation": "Préciser clairement le périmètre de gratuité et éventuels coûts supplémentaires"
       }
     ],
     "angles_a_exclure": [
       {
-        "angle_declasse": "Contenu Reddit générique avec questions utilisateur isolées",
+        "angle_declasse": "Page événementielle générale sans focus spécifique",
         "present_dans_positions": [
-          "position 3"
+          1
         ],
-        "absent_top5_mais_present_bas_classement": [
-          "position 3"
-        ],
-        "raison_exclusion": "hors_intention",
-        "risque_positionnement": "très élevé"
+        "absent_top5_mais_present_bas_classement": false,
+        "raison_exclusion": "Dilution complète du message principal, hors sujet total",
+        "risque_positionnement": "Très élevé - pénalité contenu non pertinent"
       },
       {
-        "angle_declasse": "Pages de redirection commerciale sans contenu éditorial",
+        "angle_declasse": "Landing page commerciale générique sans information spécifique",
         "present_dans_positions": [
-          "position 4"
+          2,
+          4
         ],
-        "absent_top5_mais_present_bas_classement": [
-          "position 4"
-        ],
-        "raison_exclusion": "hors_intention",
-        "risque_positionnement": "très élevé"
+        "absent_top5_mais_present_bas_classement": false,
+        "raison_exclusion": "Approche purement commerciale sans valeur informative",
+        "risque_positionnement": "Élevé - faible valeur ajoutée pour l'utilisateur"
       }
     ],
     "strategie_positionnement": {
       "socle_obligatoire": {
         "angles_minimum": [
-          "Approche partenariale institutionnelle",
-          "Stratégie de déploiement territorial",
-          "Données statistiques crédibles"
+          "Partenariat institutionnel multisectoriel",
+          "Campagne saisonnière avec urgence temporelle"
         ],
         "profondeur_requise": "approfondi",
         "themes_incontournables": [
-          "Lieux et dates détaillés",
-          "Procédure de contrôle expliquée",
-          "Contexte saisonnier justifié"
+          "Réseau de centres partenaires",
+          "Données statistiques sécurité",
+          "Période de validité"
         ]
       },
       "differentiation_recommandee": {
         "angles_uniques_proposes": [
-          "Guide comparatif gratuit vs payant",
-          "Analyse coût-bénéfice entretien préventif"
+          "Guide d'autodiagnostic des phares",
+          "Analyse comparative technologies éclairage"
         ],
         "approfondissements_cibles": [
-          "Impact vibrations sur éclairage",
-          "Limites techniques contrôles mobiles"
+          "Impact vibrations sur réglage",
+          "Problématique éblouissement"
         ],
         "approches_innovantes": [
-          "Carte interactive des points de contrôle",
-          "Guide d'autocontrôle DIY"
+          "Contenu interactif de pré-diagnostic",
+          "Cartographie dynamique des centres"
         ],
         "themes_emergents_a_exploiter": [
-          "Impact batterie véhicules modernes",
-          "Réglage feux parkings non-droits"
+          "Impact vibrations route",
+          "Phénomène éblouissement"
         ]
       },
-      "niveau_ambition_global": "dominance SERP via contenu expert différencié",
-      "effort_editorial_estime": "élevé (1500+ mots avec données exclusives et fonctionnalités interactives)"
+      "niveau_ambition_global": "ambitieux",
+      "effort_editorial_estime": "Élevé - nécessite recherche technique approfondie et partenariats institutionnels"
     },
     "recommandation_positionnement_global": {
-      "type_contenu_optimal": "Guide expert institutionnel avec éléments interactifs",
-      "intention_cible": "informationnelle avec orientation action pratique",
-      "portee_commerciale_recommandee": "modérée (crédibilité institutionnelle prioritaire)",
-      "orientation_ctal_optimale": "Encouragement à participer aux opérations + ressources complémentaires"
+      "type_contenu_optimal": "Guide complet informatif avec éléments actionnables",
+      "intention_cible": "informationnelle",
+      "portee_commerciale_recommandee": "legere",
+      "orientation_cta_optimale": "Redirection vers centres partenaires avec transparence sur gratuité"
     }
   },
   "angle_select": {
-    "angle_selectionne": "Guide comparatif contrôle préventif gratuit vs contrôle technique payant",
+    "angle_selectionne": "Guide complet d'autodiagnostic des phares avant contrôle professionnel",
     "score_total": "10/12",
-    "justification_selection": "Cet angle comble un gap majeur en clarifiant la valeur des contrôles gratuits, tout en étant parfaitement complémentaire du socle institutionnel obligatoire.",
+    "justification_selection": "Cet angle comble parfaitement le besoin d'autonomie avant le contrôle gratuit tout en étant totalement complémentaire du socle institutionnel existant.",
     "scores_details": {
       "alignement_intention": "3/3",
       "non_redondance": "3/3",
@@ -1106,298 +805,324 @@
     "meta": {
       "requete_cible": "contrôle eclairage voiture gratuit",
       "date_generation": "2024-12-19",
-      "objectif": "Collecte des données nécessaires pour rédiger un article SEO optimisé sur le contrôle d'éclairage automobile gratuit"
+      "objectif": "Document de collecte pour article SEO optimisé sur le contrôle gratuit de l'éclairage automobile"
     },
     "donnees_techniques_requises": {
-      "specifications_eclairage": {
+      "statistiques_sectorielles": {
         "sources_potentielles": [
-          "Normes UNECE R48 et R112",
-          "Ministère de l'Intérieur - Sécurité Routière",
-          "Constructeurs automobiles (Renault, PSA, Volkswagen)",
-          "Centres de contrôle technique agréés"
+          "Prévention Routière",
+          "ONISR",
+          "Sécurité Routière",
+          "CNPA"
         ],
         "donnees_a_verifier": [
           {
-            "donnee": "Hauteur minimale des feux de croisement",
-            "valeur_actuelle": "0,5 à 1,2 mètres",
-            "precision_requise": "Variable selon type de véhicule et homologation",
-            "unite": "mètres"
+            "donnee": "Pourcentage d'accidents mortels la nuit",
+            "valeur_actuelle": "44%",
+            "precision_requise": "Source officielle et année de référence",
+            "source_recommandee": "ONISR - Observatoire National Interministériel de la Sécurité Routière"
           },
           {
-            "donnee": "Portée minimale feux de route",
-            "valeur_actuelle": "100 mètres",
-            "precision_requise": "Minimum réglementaire français",
-            "unite": "mètres"
+            "donnee": "Part du trafic nocturne",
+            "valeur_actuelle": "10%",
+            "precision_requise": "Chiffres récents et méthodologie de calcul",
+            "source_recommandee": "Cerema ou Ministère des Transports"
           },
           {
-            "donnee": "Angle de diffusion autorisé feux de croisement",
-            "valeur_actuelle": "15° vers le haut, 45° vers le bas",
-            "precision_requise": "Tolérance selon norme R112",
-            "unite": "degrés"
+            "donnee": "Proportion d'automobilistes gênés par l'éblouissement",
+            "valeur_actuelle": "1/2",
+            "precision_requise": "Étude spécifique sur l'éblouissement nocturne",
+            "source_recommandee": "Association Prévention Routière"
           }
         ]
       },
-      "impact_vibrations": {
-        "sources_potentielles": [
-          "Études techniques constructeurs automobiles",
-          "Laboratoires d'essais vibrations (UTAC)",
-          "Publications techniques automobile"
+      "donnees_comparatives": {
+        "criteres_comparaison": [
+          "Type de technologie",
+          "Durée de vie",
+          "Coût de remplacement",
+          "Spécificités de réglage"
         ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Fréquence moyenne de déréglage due aux vibrations",
-            "valeur_actuelle": "6-12 mois",
-            "precision_requise": "Dépend du type de routes fréquentées",
-            "unite": "mois"
-          },
-          {
-            "donnee": "Amplitude vibration causant le déréglage",
-            "valeur_actuelle": "0,5-2,0 mm",
-            "precision_requise": "Sur véhicules standards, routes normales",
-            "unite": "millimètres"
-          }
-        ]
+        "elements_a_comparer": [
+          "Phares halogènes",
+          "Phares LED",
+          "Phares xénon"
+        ],
+        "format_tableau": "Comparatif technique avec avantages/inconvénients pour chaque technologie"
       },
-      "electronique_embarquee": {
-        "sources_potentielles": [
-          "Constructeurs véhicules électriques/hybrides",
-          "Études consommation énergétique automobile",
-          "Centres techniques spécialisés"
+      "specifications_techniques": {
+        "aspects_techniques": [
+          "Angle de réglage des phares",
+          "Intensité lumineuse",
+          "Température de couleur",
+          "Consommation électrique"
         ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Consommation électrique système éclairage LED vs halogène",
-            "valeur_actuelle": "10-15W vs 55W par feu",
-            "precision_requise": "Sur véhicules récents équipés LED",
-            "unite": "watts"
-          },
-          {
-            "donnee": "Impact sur autonomie véhicules électriques",
-            "valeur_actuelle": "1-3% réduction autonomie",
-            "precision_requise": "Usage continu éclairage de nuit",
-            "unite": "pourcentage"
-          }
+        "normes_standards": [
+          "Règlementation UN/ECE",
+          "Normes françaises d'homologation",
+          "Contrôle technique obligatoire"
+        ],
+        "certifications": [
+          "Centres agréés",
+          "Techniciens certifiés",
+          "Équipements de contrôle homologués"
         ]
       }
     },
-    "donnees_economiques_requises": {
-      "couts_comparatifs": {
-        "sources_potentielles": [
-          "Observatoire des prix automobile",
-          "Réseaux de centres de contrôle technique",
-          "Associations consommateur (UFC-Que Choisir)",
-          "Données partenaires institutionnels"
+    "sources_prioritaires": {
+      "sources_institutionnelles": {
+        "organismes_cibles": [
+          "Prévention Routière",
+          "ONISR",
+          "Ministère de l'Intérieur",
+          "CNPA"
         ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Coût moyen contrôle technique complet",
-            "valeur_actuelle": "60-120 euros",
-            "precision_requise": "Prix 2024 selon régions et prestataires",
-            "unite": "euros"
-          },
-          {
-            "donnee": "Économie moyenne contrôle préventif gratuit",
-            "valeur_actuelle": "30-50 euros",
-            "precision_requise": "Comparé à réglage feux en garage",
-            "unite": "euros"
-          },
-          {
-            "donnee": "Coût moyen remplacement ampoule défaillante",
-            "valeur_actuelle": "15-80 euros",
-            "precision_requise": "Selon type de véhicule et technologie",
-            "unite": "euros"
-          }
+        "publications_recherchees": [
+          "Rapport annuel sécurité routière",
+          "Études sur accidents nocturnes",
+          "Chiffres clés éclairage automobile"
+        ],
+        "contacts_potentiels": [
+          "Service communication Prévention Routière",
+          "Délégués régionaux sécurité routière"
         ]
       },
-      "analyse_rentabilite": {
-        "sources_potentielles": [
-          "Études Sécurité Routière",
-          "Données assurances automobile",
-          "Statistiques réparations automobile"
+      "etudes_marche": {
+        "cabinets_specialises": [
+          "Carglass",
+          "Centres auto partenaires",
+          "Fédérations professionnelles"
         ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Réduction risque accident avec éclairage optimal",
-            "valeur_actuelle": "20-30%",
-            "precision_requise": "Accidents de nuit par mauvaise visibilité",
-            "unite": "pourcentage"
-          },
-          {
-            "donnee": "Coût moyen accident évité",
-            "valeur_actuelle": "2000-5000 euros",
-            "precision_requise": "Frais réparation + franchise assurance",
-            "unite": "euros"
-          }
+        "rapports_sectoriels": [
+          "Statistiques réseau de contrôle",
+          "Données sur fréquentation centres"
+        ],
+        "date_publication_min": "2022"
+      },
+      "experts_secteur": {
+        "profils_cibles": [
+          "Techniciens automobile spécialisés éclairage",
+          "Experts sécurité routière",
+          "Contrôleurs techniques"
+        ],
+        "plateformes_contact": [
+          "Forums spécialisés automobile",
+          "Associations professionnelles",
+          "Salons auto"
+        ],
+        "questions_prioritaires": [
+          "Fréquence optimale des contrôles",
+          "Symptômes courants de mauvais réglage",
+          "Impact réel des vibrations"
         ]
       }
     },
-    "donnees_marche_requises": {
-      "comportement_utilisateurs": {
-        "sources_potentielles": [
-          "Baromètres Sécurité Routière",
-          "Enquêtes satisfaction utilisateurs",
-          "Données partenaires opérations gratuites"
+    "recherches_complementaires": {
+      "mots_cles_secondaires": {
+        "keywords_longue_traine": [
+          "réglage phares voiture",
+          "contrôle éclairage gratuit près de moi",
+          "problème éblouissement phares",
+          "vérification feux automobile",
+          "centres contrôle phares partenaires"
         ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Fréquence moyenne contrôle éclairage par automobiliste",
-            "valeur_actuelle": "1 fois tous les 2 ans",
-            "precision_requise": "Hors contrôle technique obligatoire",
-            "unite": "fois/année"
-          },
-          {
-            "donnee": "Taux de participation aux opérations gratuites",
-            "valeur_actuelle": "15-25% automobilistes informés",
-            "precision_requise": "Selon communication et localisation",
-            "unite": "pourcentage"
-          }
+        "intentions_recherche_associees": [
+          "informationnelle",
+          "transactionnelle locale",
+          "diagnostic problème"
+        ],
+        "volumes_recherche_cibles": [
+          "moyen à faible pour longue traîne"
         ]
       },
-      "couverture_territoriale": {
-        "sources_potentielles": [
-          "Cartes opérations Sécurité Routière",
-          "Données ACL et Prévention Routière",
-          "Recensement points de contrôle partenaires"
+      "analyse_concurrentielle": {
+        "sites_analyser": [
+          "préventionroutière.asso.fr",
+          "securite-routiere.gouv.fr",
+          "carglass.fr",
+          "centres auto locaux"
         ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Nombre moyen points de contrôle par opération",
-            "valeur_actuelle": "15-25 points",
-            "precision_requise": "Opérations nationales saisonnières",
-            "unite": "points"
-          },
-          {
-            "donnee": "Couverture départementale opérations gratuites",
-            "valeur_actuelle": "60-80% départements",
-            "precision_requise": "Sur année complète",
-            "unite": "pourcentage"
-          }
+        "aspects_auditer": [
+          "Structure contenu",
+          "Profondeur technique",
+          "Éléments actionnables",
+          "Couverture géographique"
+        ],
+        "gaps_exploiter": [
+          "Manque procédures détaillées",
+          "Absence guide autodiagnostic",
+          "Faible profondeur technique"
+        ]
+      },
+      "tendances_secteur": {
+        "evolutions_surveiller": [
+          "Nouvelles technologies LED adaptative",
+          "Réglementations européennes",
+          "Systèmes d'éclairage intelligent"
+        ],
+        "innovations_emergentes": [
+          "Phares matriciels",
+          "Éclairage connecté",
+          "Systèmes anti-éblouissement automatiques"
+        ],
+        "changements_reglementaires": [
+          "Nouvelles normes contrôle technique",
+          "Exigences environnementales",
+          "Homologations européennes"
         ]
       }
     },
-    "donnees_reglementaires_requises": {
-      "normes_controles": {
-        "sources_potentielles": [
-          "Code de la Route français",
-          "Arrêtés ministériels sécurité routière",
-          "Directives européennes véhicules"
+    "structure_contenu_recommandee": {
+      "architecture_generale": {
+        "titre_principal": "Guide complet : Autodiagnostic de vos phares avant contrôle gratuit",
+        "sections_principales": [
+          "Introduction sécurité nocturne",
+          "Guide autodiagnostic pas à pas",
+          "Comparatif technologies éclairage",
+          "Réseau centres partenaires",
+          "FAQ technique"
         ],
-        "donnees_a_verifier": [
+        "ordre_priorite": [
+          "Guide autodiagnostic",
+          "Sécurité nocturne",
+          "Réseau centres",
+          "Technologies",
+          "FAQ"
+        ]
+      },
+      "repartition_contenu": {
+        "section_pilier": {
+          "theme": "Guide d'autodiagnostic des phares",
+          "pourcentage_contenu": "45%",
+          "profondeur_requise": "Très approfondi avec étapes détaillées et visuels"
+        },
+        "sections_support": [
           {
-            "donnee": "Seuil de rejet contrôle technique éclairage",
-            "valeur_actuelle": "20% déviation axe",
-            "precision_requise": "Tolérance maximale admise",
-            "unite": "pourcentage"
+            "theme": "Données sécurité nocturne",
+            "pourcentage": "20%"
           },
           {
-            "donnee": "Périodicité contrôle technique obligatoire",
-            "valeur_actuelle": "2 ans puis 1 an",
-            "precision_requise": "Véhicules de moins de 4 ans : 2 ans, puis annuel",
-            "unite": "années"
+            "theme": "Réseau centres partenaires",
+            "pourcentage": "15%"
+          }
+        ],
+        "sections_differentiation": [
+          {
+            "theme": "Comparatif technologies éclairage",
+            "pourcentage": "15%"
+          },
+          {
+            "theme": "Impact vibrations et éblouissement",
+            "pourcentage": "5%"
           }
         ]
       },
-      "exigences_techniques": {
-        "sources_potentielles": [
-          "Normes UNECE applicables",
-          "Guide contrôle technique officiel",
-          "Documentation constructeurs"
+      "elements_actionabilite": {
+        "listes_actions": [
+          "Checklist pré-contrôle",
+          "Symptômes à surveiller",
+          "Centres à contacter"
         ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Intensité lumineuse minimale feux de position",
-            "valeur_actuelle": "4 candelas",
-            "precision_requise": "Minimum réglementaire",
-            "unite": "candelas"
-          },
-          {
-            "donnee": "Température de couleur autorisée LED",
-            "valeur_actuelle": "3000-6500K",
-            "precision_requise": "Plage homologuée pour éclairage routier",
-            "unite": "kelvins"
-          }
+        "etapes_procedures": [
+          "Méthode de vérification hauteur phares",
+          "Test d'alignement visuel",
+          "Contrôle intensité lumineuse"
+        ],
+        "outils_pratiques": [
+          "Carte interactive des centres",
+          "Calculateur de distance de freinage",
+          "Guide de réglage basique"
         ]
       }
     },
-    "donnees_statistiques_requises": {
-      "securite_routiere": {
-        "sources_potentielles": [
-          "ONISR (Observatoire National Interministériel de la Sécurité Routière)",
-          "Données préfectures",
-          "Études européennes sécurité automobile"
-        ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Pourcentage accidents nuit liés à mauvais éclairage",
-            "valeur_actuelle": "15-20%",
-            "precision_requise": "Accidents corporels de nuit",
-            "unite": "pourcentage"
-          },
-          {
-            "donnee": "Réduction accidents après opérations préventives",
-            "valeur_actuelle": "5-10%",
-            "precision_requise": "Sur zones couvertes par les opérations",
-            "unite": "pourcentage"
-          }
-        ]
-      },
-      "efficacite_operations": {
-        "sources_potentielles": [
-          "Bilans opérations ACL et Prévention Routière",
-          "Enquêtes satisfaction participants",
-          "Données centres de contrôle partenaires"
-        ],
-        "donnees_a_verifier": [
-          {
-            "donnee": "Taux de véhicules nécessitant réglage lors des contrôles",
-            "valeur_actuelle": "25-40%",
-            "precision_requise": "Sur échantillon opérations récentes",
-            "unite": "pourcentage"
-          },
-          {
-            "donnee": "Nombre moyen véhicules contrôlés par opération",
-            "valeur_actuelle": "200-500 véhicules",
-            "precision_requise": "Selon durée et localisation opération",
-            "unite": "véhicules"
-          }
-        ]
-      }
-    },
-    "verification_cross_sources": {
-      "methodologie": "Triangulation données multiples sources",
-      "sources_prioritaires": [
+    "plan_redaction": {
+      "objectif_article": "Devenir la référence sur l'autodiagnostic des phares avant contrôle professionnel gratuit",
+      "angle_editorial": "Guide pratique d'autonomie complémentaire à l'offre institutionnelle",
+      "longueur_cible": "2500-3000 mots",
+      "etapes_production": [
         {
-          "type": "Institutions officielles",
-          "exemples": "ONISR, Sécurité Routière, Ministère de l'Intérieur"
+          "etape": "Collecte données techniques et statistiques",
+          "duree": "2 jours",
+          "taches": [
+            "Recherche sources institutionnelles",
+            "Vérification chiffres sécurité",
+            "Collecte données réseau centres"
+          ],
+          "ressources": [
+            "Sites institutionnels",
+            "Rapports officiels",
+            "Contacts professionnels"
+          ]
         },
         {
-          "type": "Organismes partenaires opérations",
-          "exemples": "ACL, Prévention Routière, Carglass, CNPA"
+          "etape": "Recherche complémentaire et validation technique",
+          "duree": "1 jour",
+          "taches": [
+            "Consultation experts",
+            "Validation procédures autodiagnostic",
+            "Recherche mots-clés secondaires"
+          ],
+          "ressources": [
+            "Techniciens automobile",
+            "Forums spécialisés",
+            "Outils SEO"
+          ]
         },
         {
-          "type": "Données constructeurs automobiles",
-          "exemples": "Renault, PSA, Volkswagen, Toyota"
+          "etape": "Rédaction et structuration",
+          "duree": "3 jours",
+          "taches": [
+            "Rédaction guide autodiagnostic",
+            "Intégration données techniques",
+            "Création éléments visuels"
+          ],
+          "ressources": [
+            "Modèles de guide",
+            "Logiciels création visuelle",
+            "Checklist qualité"
+          ]
         },
         {
-          "type": "Centres de contrôle technique",
-          "exemples": "Données agrégées réseaux agréés"
+          "etape": "Optimisation SEO et finalisation",
+          "duree": "1 jour",
+          "taches": [
+            "Optimisation balises",
+            "Intégration mots-clés",
+            "Validation responsive"
+          ],
+          "ressources": [
+            "Outils audit SEO",
+            "Checklist technique",
+            "Test mobile"
+          ]
         }
-      ]
-    },
-    "mise_a_jour_donnees": {
-      "delai_maximum_accepte": "12 mois",
-      "preference_donnees": "2023-2024",
-      "alertes_obsolescence": [
-        "Évolutions réglementaires sécurité routière",
-        "Nouvelles technologies éclairage automobile",
-        "Changements programmes partenaires institutionnels",
-        "Modifications calendrier opérations gratuites"
+      ],
+      "criteres_succes": [
+        "Couverture complète autodiagnostic",
+        "Données techniques vérifiées",
+        "Éléments actionnables présents",
+        "Structure SEO optimisée"
+      ],
+      "kpis_suivre": [
+        "Temps moyen lecture",
+        "Taux rebond",
+        "Positionnement mots-clés cibles",
+        "Partage social"
       ]
     }
   },
+  "perplexity_search_data": {
+    "rapport_recherche": "=== CONTRÔLE ÉCLAIRAGE VOITURE GRATUIT ===\n\n**Rapport de validation et enrichissement**\n\n---\n\n#### meta\n\n- **date_validation**: 2025-11-21\n- **source_document**: JSON de collecte pour article SEO\n- **statut_global**: partiel\n\n---\n\n### données_techniques_requises\n\n#### statistiques_sectorielles\n\n| Donnée | Valeur actuelle | Statut validation | Valeur validée | Précision apportée | Niveau confiance | Sources |\n|--------|-----------------|-------------------|----------------|--------------------|------------------|---------|\n| Pourcentage d'accidents mortels la nuit | 44% | modifiée | 42% | Selon le rapport 2024 de l’ONISR, 42% des tués sur la route sont victimes d’accidents la nuit, entre 19h et 7h. | élevé | [ONISR, Bilan 2024](https://www.onisr.securite-routiere.gouv.fr/bilans-thematiques/bilan-2024) (consulté le 2025-11-21) |\n| Part du trafic nocturne | 10% | confirmée | 10% | Selon les données Cerema 2023, environ 10% du trafic automobile se produit la nuit (19h-7h). | élevé | [Cerema, Trafic routier 2023](https://www.cerema.fr/fr/actualites/trafic-routier-2023) (consulté le 2025-11-21) |\n| Proportion d’automobilistes gênés par l’éblouissement | 1/2 | confirmée | 50% | L’Association Prévention Routière indique que près de la moitié des automobilistes se sentent gênés par l’éblouissement nocturne. | moyen | [Prévention Routière, campagne Lumière & Vision 2025](https://www.preventionroutiere.asso.fr/campagne/lumiere-et-vision-2025-passez-de-lombre-a-la-lumiere-pour-bien-voir-et-etre-vu/) (consulté le 2025-11-21) |\n\n**Statistiques de validation**\n- Total données : 3\n- Confirmées : 2\n- Modifiées : 1\n- Non trouvées : 0\n- Nouvelles ajoutées : 0\n\n---\n\n#### données_comparatives\n\n| Catégorie | Phares halogènes | Phares LED | Phares xénon |\n|-----------|------------------|------------|--------------|\n| **Durée de vie** | 400-1000 h | 15 000-30 000 h | 2 000-5 000 h | [Carglass, comparatif phares](https://www.carglass.fr/conseils/phares/choisir-son-type-de-phare/) (consulté le 2025-11-21) |\n| **Coût de remplacement** | 20-50 € | 100-300 € | 80-200 € | [Carglass, comparatif phares](https://www.carglass.fr/conseils/phares/choisir-son-type-de-phare/) (consulté le 2025-11-21) |\n| **Spécificités de réglage** | Réglage manuel simple | Réglage électronique, souvent automatique | Réglage manuel ou automatique selon modèle | [Carglass, comparatif phares](https://www.carglass.fr/conseils/phares/choisir-son-type-de-phare/) (consulté le 2025-11-21) |\n| **Avantages** | Faible coût, remplacement facile | Durée de vie élevée, consommation faible, éclairage puissant | Bon éclairage, durée de vie correcte | [Carglass, comparatif phares](https://www.carglass.fr/conseils/phares/choisir-son-type-de-phare/) (consulté le 2025-11-21) |\n| **Inconvénients** | Faible durée de vie, consommation élevée | Coût élevé, complexité de remplacement | Sensibilité aux chocs, coût élevé | [Carglass, comparatif phares](https://www.carglass.fr/conseils/phares/choisir-son-type-de-phare/) (consulté le 2025-11-21) |\n\n**Statistiques de validation**\n- Total données : 15 (3 technologies x 5 critères)\n- Confirmées : 15\n- Modifiées : 0\n- Non trouvées : 0\n- Nouvelles ajoutées : 0\n\n---\n\n#### specifications_techniques\n\n| Aspect technique | Valeur / Norme | Statut validation | Précision apportée | Niveau confiance | Sources |\n|------------------|----------------|-------------------|--------------------|------------------|---------|\n| Angle de réglage des phares | 1% à 1,5% de pente | confirmée | Selon la réglementation UN/ECE R48, l’angle de réglage doit être compris entre 1% et 1,5% pour les phares avant. | élevé | [UN/ECE R48](https://www.unece.org/transport/documents/2023/05/unece-r48-rev.10.pdf) (consulté le 2025-11-21) |\n| Intensité lumineuse | 1000-2000 lumens (halogène), 3000-5000 lumens (LED) | confirmée | Les phares LED offrent une intensité lumineuse supérieure à celle des halogènes. | élevé | [Carglass, comparatif phares](https://www.carglass.fr/conseils/phares/choisir-son-type-de-phare/) (consulté le 2025-11-21) |\n| Température de couleur | 3200 K (halogène), 5000-6000 K (LED), 4000-5000 K (xénon) | confirmée | La température de couleur influence la perception de la lumière. | élevé | [Carglass, comparatif phares](https://www.carglass.fr/conseils/phares/choisir-son-type-de-phare/) (consulté le 2025-11-21) |\n| Consommation électrique | 55-60 W (halogène), 10-20 W (LED), 35 W (xénon) | confirmée | Les phares LED sont les plus économes en énergie. | élevé | [Carglass, comparatif phares](https://www.carglass.fr/conseils/phares/choisir-son-type-de-phare/) (consulté le 2025-11-21) |\n| Règlementation UN/ECE | Oui | confirmée | Les phares doivent être homologués selon la réglementation UN/ECE. | élevé | [UN/ECE R48](https://www.unece.org/transport/documents/2023/05/unece-r48-rev.10.pdf) (consulté le 2025-11-21) |\n| Normes françaises d’homologation | Oui | confirmée | Les phares doivent respecter les normes françaises d’homologation. | élevé | [Ministère de l’Intérieur, homologation](https://www.interieur.gouv.fr/Services-et-procedures/Vehicules-et-permis/Homologation-des-vehicules) (consulté le 2025-11-21) |\n| Contrôle technique obligatoire | Oui | confirmée | Le contrôle technique vérifie l’état des phares. | élevé | [Ministère de l’Intérieur, contrôle technique](https://www.interieur.gouv.fr/Services-et-procedures/Vehicules-et-permis/Controle-technique-des-vehicules) (consulté le 2025-11-21) |\n| Centres agréés | Oui | confirmée | Les centres de contrôle technique sont agréés par l’État. | élevé | [Ministère de l’Intérieur, contrôle technique](https://www.interieur.gouv.fr/Services-et-procedures/Vehicules-et-permis/Controle-technique-des-vehicules) (consulté le 2025-11-21) |\n| Techniciens certifiés | Oui | confirmée | Les techniciens doivent être certifiés pour effectuer le contrôle technique. | élevé | [Ministère de l’Intérieur, contrôle technique](https://www.interieur.gouv.fr/Services-et-procedures/Vehicules-et-permis/Controle-technique-des-vehicules) (consulté le 2025-11-21) |\n| Équipements de contrôle homologués | Oui | confirmée | Les équipements de contrôle doivent être homologués. | élevé | [Ministère de l’Intérieur, contrôle technique](https://www.interieur.gouv.fr/Services-et-procedures/Vehicules-et-permis/Controle-technique-des-vehicules) (consulté le 2025-11-21) |\n\n**Statistiques de validation**\n- Total données : 10\n- Confirmées : 10\n- Modifiées : 0\n- Non trouvées : 0\n- Nouvelles ajoutées : 0\n\n---\n\n### sources_prioritaires\n\n#### sources_institutionnelles\n\n| Organisme | Publication recherchée | Statut validation | Précision apportée | Niveau confiance | Sources |\n|-----------|------------------------|-------------------|--------------------|------------------|---------|\n| Prévention Routière | Rapport annuel sécurité routière | confirmée | Disponible en ligne, mais pas de rapport spécifique sur l’éclairage. | élevé | [Prévention Routière](https://www.preventionroutiere.asso.fr/) (consulté le 2025-11-21) |\n| ONISR | Études sur accidents nocturnes | confirmée | Rapport annuel 2024 disponible, chiffres sur les accidents nocturnes. | élevé | [ONISR, Bilan 2024](https://www.onisr.securite-routiere.gouv.fr/bilans-thematiques/bilan-2024) (consulté le 2025-11-21) |\n| Ministère de l’Intérieur | Chiffres clés éclairage automobile | confirmée | Informations sur l’homologation et le contrôle technique. | élevé | [Ministère de l’Intérieur](https://www.interieur.gouv.fr/) (consulté le 2025-11-21) |\n| CNPA | Chiffres clés éclairage automobile | non trouvée | Pas de publication spécifique sur l’éclairage automobile. | faible | Recherche effectuée sur le site du CNPA, pas de résultat pertinent. |\n\n**Statistiques de validation**\n- Total données : 4\n- Confirmées : 3\n- Modifiées : 0\n- Non trouvées : 1\n- Nouvelles ajoutées : 0\n\n---\n\n#### etudes_marche\n\n| Cabinet spécialisé | Rapport sectoriel | Statut validation | Précision apportée | Niveau confiance | Sources |\n|--------------------|-------------------|-------------------|--------------------|------------------|---------|\n| Carglass | Statistiques réseau de contrôle | confirmée | Données sur les types de phares et les coûts de remplacement. | élevé | [Carglass, comparatif phares](https://www.carglass.fr/conseils/phares/choisir-son-type-de-phare/) (consulté le 2025-11-21) |\n| Centres auto partenaires | Données sur fréquentation centres | non trouvée | Pas de publication publique sur la fréquentation des centres. | faible | Recherche effectuée sur les sites des principaux centres auto, pas de résultat pertinent. |\n| Fédérations professionnelles | Statistiques réseau de contrôle | non trouvée | Pas de publication publique sur les statistiques de fréquentation. | faible | Recherche effectuée sur les sites des fédérations professionnelles, pas de résultat pertinent. |\n\n**Statistiques de validation**\n- Total données : 3\n- Confirmées : 1\n- Modifiées : 0\n- Non trouvées : 2\n- Nouvelles ajoutées : 0\n\n---\n\n#### experts_secteur\n\n| Profil cible | Plateforme contact | Statut",
+    "meta_recherche": {
+      "timestamp": "2025-11-21T16:18:55.409897",
+      "model_used": "sonar",
+      "query_source": "contrôle eclairage voiture gratuit",
+      "searchbase_input": true
+    }
+  },
   "controle_qualite": {
-    "articles_traites": 9,
+    "articles_traites": 8,
     "erreurs_detectees": 0,
-    "score_completude": "9/9 (100.0%)"
+    "score_completude": "8/8 (100.0%)"
   }
 }

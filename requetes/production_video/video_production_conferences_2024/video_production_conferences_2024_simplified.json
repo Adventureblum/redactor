@@ -1,0 +1,214 @@
+{
+  "meta": {
+    "requete_cible": "video production conferences 2024",
+    "date_analyse": "2025-11-21T16:21:43.791250",
+    "language": "fr",
+    "analyses_totales": 1
+  },
+  "syntheses_strategiques": {
+    "analysis_1": {
+      "analyse_angles_concurrentiels": {
+        "angles_dominants": [
+          {
+            "angle": "Guide pédagogique structuré par phases de production",
+            "frequence_utilisation": "Position 1",
+            "niveau_profondeur_moyen": "approfondi",
+            "positionnement_requis": "Obligatoire",
+            "exemples_reussis": [
+              "Position 1 - Adobe article"
+            ]
+          },
+          {
+            "angle": "Stratégie d'incitation fiscale progressive",
+            "frequence_utilisation": "Position 5",
+            "niveau_profondeur_moyen": "approfondi",
+            "positionnement_requis": "Recommandé",
+            "exemples_reussis": [
+              "Position 5 - Video Game Production Tax Credit"
+            ]
+          }
+        ],
+        "angles_emergents": [
+          {
+            "angle": "Production vidéo adaptée au contexte corporatif",
+            "utilise_par": "Position 1",
+            "potentiel_differentiation": "Faible couverture concurrentielle, demande croissante pour contenu corporate",
+            "difficulte_execution": "faible"
+          },
+          {
+            "angle": "Intégration early-stage du marketing vidéo",
+            "utilise_par": "Position 1",
+            "potentiel_differentiation": "Angle stratégique peu exploité pour maximiser ROI",
+            "difficulte_execution": "moyenne"
+          }
+        ]
+      },
+      "themes_obligatoires": [
+        {
+          "theme": "Processus de production structuré (préproduction, production, postproduction)",
+          "present_chez": [
+            1
+          ],
+          "niveau_minimum_requis": "approfondi",
+          "profondeur_observee": "Décomposition détaillée avec conseils pratiques par phase",
+          "justification": "Présent dans le seul article pertinent position 1, essentiel pour répondre à l'intention informationnelle"
+        },
+        {
+          "theme": "Outils et technologies de production vidéo",
+          "present_chez": [
+            1
+          ],
+          "niveau_minimum_requis": "modere",
+          "profondeur_observee": "Intégration contextuelle d'outils professionnels",
+          "justification": "Nécessaire pour fournir des solutions pratiques aux utilisateurs"
+        }
+      ],
+      "themes_emergents_consolides": [
+        {
+          "theme": "Production vidéo pour contextes corporatifs",
+          "articles_mentionnant": [
+            1
+          ],
+          "frequence_apparition": "10%",
+          "niveau_traitement_observe": "modere",
+          "opportunite_differentiation": "Demande croissante non satisfaite pour guides adaptés aux entreprises",
+          "potentiel_seo": "eleve",
+          "justification_potentiel": "Recherche vocale croissante, faible concurrence sur cet angle spécifique",
+          "recommandation_exploitation": "Développer des études de cas et meilleures pratiques pour entreprises",
+          "complexite_execution": "faible"
+        },
+        {
+          "theme": "Alignement production-marketing pour maximiser ROI",
+          "articles_mentionnant": [
+            1
+          ],
+          "frequence_apparition": "10%",
+          "niveau_traitement_observe": "superficiel",
+          "opportunite_differentiation": "Angle stratégique différenciant pour professionnels du marketing",
+          "potentiel_seo": "moyen",
+          "justification_potentiel": "Répond aux besoins stratégiques des décideurs marketing",
+          "recommandation_exploitation": "Créer un guide détaillé sur l'intégration marketing dès la production",
+          "complexite_execution": "moyenne"
+        }
+      ],
+      "themes_a_exclure_consolides": [
+        {
+          "theme": "Histoire générale de la production vidéo",
+          "distribution_serp": {
+            "present_top5": [],
+            "present_positions_6_10": []
+          },
+          "raison_exclusion": "saturation",
+          "justification_exclusion": "Information commodité déjà saturée, sans valeur ajoutée pour les débutants cherchant des conseils pratiques",
+          "correlation_mauvais_positionnement": "80% des concurrents traitent ce sujet sans succès",
+          "alternative_recommandee": "Focus sur les évolutions récentes impactant directement les débutants"
+        },
+        {
+          "theme": "Comparaisons techniques d'équipements spécifiques",
+          "distribution_serp": {
+            "present_top5": [],
+            "present_positions_6_10": []
+          },
+          "raison_exclusion": "saturation",
+          "justification_exclusion": "Sujet hautement concurrentiel et rapidement obsolète, mieux traité sur des sites spécialisés",
+          "correlation_mauvais_positionnement": "95% des concurrents sans positionnement fort",
+          "alternative_recommandee": "Principes fondamentaux du choix d'équipement adapté au budget"
+        }
+      ],
+      "opportunites_angles_uniques": [
+        {
+          "angle_propose": "Production vidéo événementielle pour conférences 2024",
+          "justification": "Alignement parfait avec la requête cible, angle totalement absent du SERP actuel",
+          "niveau_ambition": "ambitieux",
+          "valeur_ajoutee_estimee": "Positionnement unique sur un créneau spécifique et recherché",
+          "complexite_execution": "moyenne"
+        },
+        {
+          "angle_propose": "Guide des tendances production vidéo 2024 avec focus IA",
+          "justification": "Combinaison d'actualité et d'innovation technologique non exploitée",
+          "niveau_ambition": "modere",
+          "valeur_ajoutee_estimee": "Positionnement comme référence sur les évolutions récentes",
+          "complexite_execution": "faible"
+        }
+      ],
+      "gaps_concurrentiels": [
+        {
+          "gap_identifie": "Manque d'informations sur les budgets et coûts concrets",
+          "type": "profondeur",
+          "potentiel_seo": "eleve",
+          "recommandation_exploitation": "Inclure des fourchettes de budget pour différents types de projets"
+        },
+        {
+          "gap_identifie": "Absence totale de contenu sur les conférences spécifiques 2024",
+          "type": "couverture",
+          "potentiel_seo": "eleve",
+          "recommandation_exploitation": "Créer un calendrier complet des événements production vidéo 2024"
+        }
+      ],
+      "angles_a_exclure": [
+        {
+          "angle_declasse": "Contenu académique et programmes universitaires",
+          "present_dans_positions": [
+            2,
+            3,
+            4
+          ],
+          "absent_top5_mais_present_bas_classement": true,
+          "raison_exclusion": "Hors sujet par rapport à l'intention commerciale/informationnelle de la requête",
+          "risque_positionnement": "élevé - pénalité pour non-pertinence"
+        }
+      ],
+      "strategie_positionnement": {
+        "socle_obligatoire": {
+          "angles_minimum": [
+            "Guide pédagogique structuré par phases",
+            "Production adaptée aux entreprises"
+          ],
+          "profondeur_requise": "approfondi",
+          "themes_incontournables": [
+            "Processus production complet",
+            "Outils recommandés",
+            "Budget et planning"
+          ]
+        },
+        "differentiation_recommandee": {
+          "angles_uniques_proposes": [
+            "Production événementielle conférences 2024",
+            "Tendances IA production vidéo"
+          ],
+          "approfondissements_cibles": [
+            "Budgets détaillés par type de projet",
+            "Calendrier événements 2024"
+          ],
+          "approches_innovantes": [
+            "Intégration marketing dès la production",
+            "Témoignages experts intégrés"
+          ],
+          "themes_emergents_a_exploiter": [
+            "Production corporate",
+            "Alignement production-marketing"
+          ]
+        },
+        "niveau_ambition_global": "ambitieux",
+        "effort_editorial_estime": "Contenu approfondi 2000+ mots avec études de cas et données exclusives"
+      },
+      "recommandation_positionnement_global": {
+        "type_contenu_optimal": "Guide pratique complet avec calendrier événements",
+        "intention_cible": "informationnelle",
+        "portee_commerciale_recommandee": "legere",
+        "orientation_cta_optimale": "Téléchargement de ressources complémentaires (checklists, templates)"
+      }
+    }
+  },
+  "angle_select": {
+    "angle_selectionne": "Production vidéo événementielle pour conférences 2024",
+    "score_total": "11/12",
+    "justification_selection": "Cet angle comble un gap majeur dans le SERP tout en étant parfaitement complémentaire du socle obligatoire, offrant une différenciation forte sur un créneau spécifique très recherché.",
+    "scores_details": {
+      "alignement_intention": "3/3",
+      "non_redondance": "3/3",
+      "valeur_ajoutee": "3/3",
+      "faisabilite_roi": "2/3"
+    }
+  }
+}
