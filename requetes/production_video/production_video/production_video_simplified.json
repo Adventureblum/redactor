@@ -1,218 +1,25 @@
 {
   "meta": {
     "requete_cible": "production video",
-    "date_analyse": "2025-11-21T16:21:43.791250",
+    "date_analyse": "2025-12-03T13:27:57.614693",
     "language": "fr",
     "analyses_totales": 1
   },
   "syntheses_strategiques": {
     "analysis_0": {
       "analyse_angles_concurrentiels": {
-        "angles_dominants": [
-          {
-            "angle": "Approche pédagogique structurée par étapes",
-            "frequence_utilisation": "Position 1 uniquement",
-            "niveau_profondeur_moyen": "approfondi",
-            "positionnement_requis": "Obligatoire",
-            "exemples_reussis": [
-              "query_0_position_1"
-            ]
-          },
-          {
-            "angle": "Différenciation production commerciale vs cinématographique",
-            "frequence_utilisation": "Position 1 uniquement",
-            "niveau_profondeur_moyen": "approfondi",
-            "positionnement_requis": "Recommande",
-            "exemples_reussis": [
-              "query_0_position_1"
-            ]
-          },
-          {
-            "angle": "Optimisation des ressources pour débutants",
-            "frequence_utilisation": "Position 1 uniquement",
-            "niveau_profondeur_moyen": "approfondi",
-            "positionnement_requis": "Recommande",
-            "exemples_reussis": [
-              "query_0_position_1"
-            ]
-          }
-        ],
-        "angles_emergents": [
-          {
-            "angle": "Production vidéo hybrid remote et présentiel",
-            "utilise_par": "Aucun article actuellement",
-            "potentiel_differentiation": "Répond aux nouvelles réalités post-pandémie et contraintes géographiques modernes",
-            "difficulte_execution": "moyenne"
-          },
-          {
-            "angle": "Optimisation vidéo pour plateformes sociales",
-            "utilise_par": "Aucun article actuellement",
-            "potentiel_differentiation": "Demande exponentielle pour contenu adapté aux réseaux sociaux avec contraintes techniques spécifiques",
-            "difficulte_execution": "faible"
-          }
-        ]
+        "angles_dominants": [],
+        "angles_emergents": []
       },
-      "themes_obligatoires": [
-        {
-          "theme": "Processus étape par étape complet",
-          "present_chez": [
-            "query_0_position_1"
-          ],
-          "niveau_minimum_requis": "approfondi",
-          "profondeur_observee": "Décomposition détaillée préproduction, production, postproduction avec délais réalistes",
-          "justification": "Seul l'article positionné traite ce thème avec profondeur, essentiel pour répondre à l'intention de recherche"
-        },
-        {
-          "theme": "Conseils pratiques pour débutants",
-          "present_chez": [
-            "query_0_position_1"
-          ],
-          "niveau_minimum_requis": "approfondi",
-          "profondeur_observee": "Travail avec non-acteurs, optimisation ressources limitées, citations experts",
-          "justification": "Différenciateur clé de l'article performant, répond aux contraintes réelles des débutants"
-        }
-      ],
-      "themes_emergents_consolides": [
-        {
-          "theme": "Production vidéo hybrid remote",
-          "articles_mentionnant": [],
-          "frequence_apparition": "0%",
-          "niveau_traitement_observe": "absent",
-          "opportunite_differentiation": "Nouvelle réalité post-pandémie non couverte, forte demande pour workflows hybrides",
-          "potentiel_seo": "eleve",
-          "justification_potentiel": "Recherches croissantes sur coordination équipes distantes et tournage décentralisé",
-          "recommandation_exploitation": "Intégrer section dédiée outils collaboratifs cloud et méthodes hybrides",
-          "complexite_execution": "moyenne"
-        },
-        {
-          "theme": "Optimisation pour plateformes sociales",
-          "articles_mentionnant": [],
-          "frequence_apparition": "0%",
-          "niveau_traitement_observe": "absent",
-          "opportunite_differentiation": "Évolution rapide algorithmes sociaux, besoin spécifique formats par plateforme",
-          "potentiel_seo": "eleve",
-          "justification_potentiel": "Demande exponentielle contenu vidéo social media avec nombreuses questions techniques",
-          "recommandation_exploitation": "Ajouter guide formats optimaux TikTok/Reels/Shorts et intégration son social",
-          "complexite_execution": "faible"
-        }
-      ],
-      "themes_a_exclure_consolides": [
-        {
-          "theme": "Histoire technique caméra analogique",
-          "distribution_serp": {
-            "present_top5": [],
-            "present_positions_6_10": []
-          },
-          "raison_exclusion": "banalisation",
-          "justification_exclusion": "Information obsolète pour débutants modernes utilisant matériel numérique, dilution message pratique actuel",
-          "correlation_mauvais_positionnement": "70% guides techniques historiques incluent ce thème sans performance SEO",
-          "alternative_recommandee": "Focus technologies numériques actuelles et tendances émergentes (360°, VR)"
-        },
-        {
-          "theme": "Comparaison détaillée codecs techniques",
-          "distribution_serp": {
-            "present_top5": [],
-            "present_positions_6_10": []
-          },
-          "raison_exclusion": "confusion",
-          "justification_exclusion": "Trop technique pour public débutant, saturation forums spécialisés, faible valeur ajoutée",
-          "correlation_mauvais_positionnement": "85% forums techniques sans performance recherche principale",
-          "alternative_recommandee": "Guide simplifié formats export selon usage (web, social, projection)"
-        }
-      ],
-      "opportunites_angles_uniques": [
-        {
-          "angle_propose": "Production vidéo durable et éco-responsable",
-          "justification": "Absent totalement du SERP, alignement avec tendances RSE croissantes dans secteur créatif",
-          "niveau_ambition": "modere",
-          "valeur_ajoutee_estimee": "Positionnement éthique différenciant, attractivité public conscient écologie",
-          "complexite_execution": "moyenne"
-        },
-        {
-          "angle_propose": "Workflow IA intégrée dans production vidéo",
-          "justification": "Révolution technologique actuelle non abordée, forte demande outils IA créative",
-          "niveau_ambition": "ambitieux",
-          "valeur_ajoutee_estimee": "Positionnement avant-gardiste, réponse besoins optimisation temps/production",
-          "complexite_execution": "elevee"
-        }
-      ],
-      "gaps_concurrentiels": [
-        {
-          "gap_identifie": "Absence totale contenu actionnable pour débutants",
-          "type": "actionabilite",
-          "potentiel_seo": "eleve",
-          "recommandation_exploitation": "Créer guide pratique avec checklists téléchargeables et templates"
-        },
-        {
-          "gap_identifie": "Manque conseils équipement débutant budget limité",
-          "type": "couverture",
-          "potentiel_seo": "eleve",
-          "recommandation_exploitation": "Intégrer guide équipement entry-level avec alternatives économiques"
-        }
-      ],
-      "angles_a_exclure": [
-        {
-          "angle_declasse": "Contenu académique institutionnel",
-          "present_dans_positions": [
-            "2",
-            "3",
-            "4"
-          ],
-          "absent_top5_mais_present_bas_classement": true,
-          "raison_exclusion": "Hors-sujet complet, pertinence très faible (score 0.2-0.3)",
-          "risque_positionnement": "Dilution sémantique et perte autorité thématique"
-        }
-      ],
-      "strategie_positionnement": {
-        "socle_obligatoire": {
-          "angles_minimum": [
-            "Approche pédagogique structurée par étapes",
-            "Conseils pratiques pour débutants"
-          ],
-          "profondeur_requise": "approfondi",
-          "themes_incontournables": [
-            "Processus étape par étape complet",
-            "Optimisation ressources débutants"
-          ]
-        },
-        "differentiation_recommandee": {
-          "angles_uniques_proposes": [
-            "Production vidéo hybrid remote",
-            "Optimisation plateformes sociales"
-          ],
-          "approfondissements_cibles": [
-            "Workflow IA intégrée",
-            "Production durable"
-          ],
-          "approches_innovantes": [
-            "Checklists actionnables téléchargeables",
-            "Templates production"
-          ],
-          "themes_emergents_a_exploiter": [
-            "Production hybrid remote",
-            "Optimisation plateformes sociales"
-          ]
-        },
-        "niveau_ambition_global": "ambitieux",
-        "effort_editorial_estime": "Élevé - nécessite expertise technique et pédagogique combinée"
-      },
-      "recommandation_positionnement_global": {
-        "type_contenu_optimal": "Guide pratique approfondi avec éléments actionnables",
-        "intention_cible": "informationnelle",
-        "portee_commerciale_recommandee": "legere",
-        "orientation_cta_optimale": "Téléchargement ressources complémentaires (checklists, templates)"
-      }
+      "raw_response_fallback": "```json\n{\n    \"analyse_angles_concurrentiels\": {\n        \"angles_dominants\": [\n            {\n                \"angle\": \"Approche pédagogique structurée par étapes (préproduction, production, postproduction)\",\n                \"frequence_utilisation\": \"Position 1 uniquement\",\n                \"niveau_profondeur_moyen\": \"approfondi\",\n                \"positionnement_requis\": \"Obligatoire\",\n                \"exemples_reussis\": [\"Position 1: Guide détaillé avec citations d'experts et structure claire\"]\n            },\n            {\n                \"angle\": \"Différenciation conceptuelle entre production vidéo et cinéma\",\n                \"frequence_utilisation\": \"Position 1 uniquement\",\n                \"niveau_profondeur_moyen\": \"modere\",\n                \"positionnement_requis\": \"Recommande\",\n                \"exemples_reussis\": [\"Position 1: Section dédiée clarifiant les différences\"]\n            }\n        ],\n        \"angles_emergents\": [\n            {\n                \"angle\": \"Production vidéo ad",
+      "parsing_error": true
     }
   },
   "angle_select": {
-    "angle_selectionne": "Production vidéo durable et éco-responsable",
-    "score_total": "10/12",
-    "justification_selection": "Cet angle comble un gap concurrentiel majeur tout en restant parfaitement complémentaire du socle pédagogique pour débutants, avec une faisabilité supérieure à l'option IA.",
-    "scores_details": {
-      "alignement_intention": "3/3",
-      "non_redondance": "3/3",
-      "valeur_ajoutee": "3/3",
-      "faisabilite_roi": "1/3"
-    }
+    "angle_selectionne": "Analyse impossible - données préliminaires insuffisantes",
+    "score_total": "0/12",
+    "justification_selection": "Impossible de sélectionner un angle optimal car la synthèse stratégique a échoué",
+    "parsing_error": true,
+    "dependency_failed": true
   }
 }

@@ -1,214 +1,25 @@
 {
   "meta": {
     "requete_cible": "video and podcast production guide",
-    "date_analyse": "2025-11-21T16:21:43.791250",
+    "date_analyse": "2025-12-03T13:27:57.614693",
     "language": "fr",
     "analyses_totales": 1
   },
   "syntheses_strategiques": {
     "analysis_3": {
       "analyse_angles_concurrentiels": {
-        "angles_dominants": [
-          {
-            "angle": "Approche pédagogique structurée par étapes",
-            "frequence_utilisation": "Position 1 uniquement",
-            "niveau_profondeur_moyen": "approfondi",
-            "positionnement_requis": "Obligatoire",
-            "exemples_reussis": [
-              "query_3_position_1"
-            ]
-          },
-          {
-            "angle": "Stratégie d'incitation fiscale progressive",
-            "frequence_utilisation": "Position 5 uniquement",
-            "niveau_profondeur_moyen": "approfondi",
-            "positionnement_requis": "Optionnel",
-            "exemples_reussis": [
-              "query_3_position_5"
-            ]
-          }
-        ],
-        "angles_emergents": [
-          {
-            "angle": "Production vidéo adaptée aux non-acteurs",
-            "utilise_par": "Position 1",
-            "potentiel_differentiation": "Angle pratique répondant à un besoin croissant peu couvert, faible concurrence",
-            "difficulte_execution": "faible"
-          },
-          {
-            "angle": "Intégration early-stage du marketing vidéo",
-            "utilise_par": "Position 1",
-            "potentiel_differentiation": "Stratégie différenciante pour optimiser le ROI des productions",
-            "difficulte_execution": "moyenne"
-          }
-        ]
+        "angles_dominants": [],
+        "angles_emergents": []
       },
-      "themes_obligatoires": [
-        {
-          "theme": "Processus de production étape par étape",
-          "present_chez": [
-            "query_3_position_1"
-          ],
-          "niveau_minimum_requis": "approfondi",
-          "profondeur_observee": "Décomposition complète préproduction, production, postproduction avec conseils pratiques",
-          "justification": "Seul contenu pertinent positionné en top 1 utilise cette approche structurée"
-        },
-        {
-          "theme": "Différenciation production corporate vs cinématographique",
-          "present_chez": [
-            "query_3_position_1"
-          ],
-          "niveau_minimum_requis": "modere",
-          "profondeur_observee": "Comparaison structurée avec critères spécifiques pour chaque contexte",
-          "justification": "Angle différenciant présent dans le contenu le mieux positionné"
-        }
-      ],
-      "themes_emergents_consolides": [
-        {
-          "theme": "Techniques de direction pour non-acteurs",
-          "articles_mentionnant": [
-            "query_3_position_1"
-          ],
-          "frequence_apparition": "10% du SERP",
-          "niveau_traitement_observe": "modere",
-          "opportunite_differentiation": "Besoin pratique croissant peu couvert, permet de se différencier des guides génériques",
-          "potentiel_seo": "eleve",
-          "justification_potentiel": "Recherches spécifiques en croissance, faible concurrence sur cet angle pratique",
-          "recommandation_exploitation": "Développer un guide complet avec études de cas concrets",
-          "complexite_execution": "faible"
-        },
-        {
-          "theme": "Stratégie marketing intégrée dès la préproduction",
-          "articles_mentionnant": [
-            "query_3_position_1"
-          ],
-          "frequence_apparition": "10% du SERP",
-          "niveau_traitement_observe": "superficiel",
-          "opportunite_differentiation": "Angle stratégique rarement abordé dans les guides techniques",
-          "potentiel_seo": "moyen",
-          "justification_potentiel": "Répond au besoin d'optimisation ROI des productions vidéo",
-          "recommandation_exploitation": "Créer un contenu sur la synergie production-marketing avec calendrier intégré",
-          "complexite_execution": "moyenne"
-        }
-      ],
-      "themes_a_exclure_consolides": [
-        {
-          "theme": "Histoire évolution production vidéo",
-          "distribution_serp": {
-            "present_top5": [],
-            "present_positions_6_10": []
-          },
-          "raison_exclusion": "saturation",
-          "justification_exclusion": "Thème saturé dans les contenus basiques, faible valeur ajoutée pour des débutants cherchant des conseils pratiques immédiats",
-          "correlation_mauvais_positionnement": "Absent des contenus bien positionnés, présent uniquement dans les guides génériques de faible qualité",
-          "alternative_recommandee": "Focus sur les tendances actuelles et futures impactant directement les méthodes de travail"
-        },
-        {
-          "theme": "Comparaisons techniques équipements basique",
-          "distribution_serp": {
-            "present_top5": [],
-            "present_positions_6_10": []
-          },
-          "raison_exclusion": "saturation",
-          "justification_exclusion": "Contenu commodité très saturé, obsolescence rapide, mieux traité sur des sites spécialisés équipement",
-          "correlation_mauvais_positionnement": "Absent du contenu top 1, présent uniquement dans les articles de faible autorité",
-          "alternative_recommandee": "Concentrer sur les principes de choix d'équipement selon le type de projet plutôt que modèles spécifiques"
-        }
-      ],
-      "opportunites_angles_uniques": [
-        {
-          "angle_propose": "Guide production vidéo avec focus budget et ROI",
-          "justification": "Aucun contenu bien positionné ne traite des aspects budgétaires concrets, créant une opportunité de répondre à un besoin crucial des créateurs",
-          "niveau_ambition": "ambitieux",
-          "valeur_ajoutee_estimee": "Permet aux créateurs de planifier financièrement leurs projets et d'éviter les dépassements de budget",
-          "complexite_execution": "moyenne"
-        },
-        {
-          "angle_propose": "Production vidéo collaborative remote/post-COVID",
-          "justification": "Nouveaux modes de travail hybrides non couverts dans le SERP actuel, répondant aux réalités contemporaines de production",
-          "niveau_ambition": "modere",
-          "valeur_ajoutee_estimee": "Adresse les défis spécifiques du travail à distance dans la production vidéo",
-          "complexite_execution": "faible"
-        }
-      ],
-      "gaps_concurrentiels": [
-        {
-          "gap_identifie": "Absence totale de conseils budgétaires et financiers",
-          "type": "couverture",
-          "potentiel_seo": "eleve",
-          "recommandation_exploitation": "Intégrer une section dédiée aux budgets types selon les projets et stratégies d'optimisation des coûts"
-        },
-        {
-          "gap_identifie": "Manque d'orientation sur l'équipement débutant spécifique",
-          "type": "actionabilite",
-          "potentiel_seo": "moyen",
-          "recommandation_exploitation": "Ajouter des recommandations d'équipement par type de projet et budget"
-        }
-      ],
-      "angles_a_exclure": [
-        {
-          "angle_declasse": "Contenu académique/institutionnel",
-          "present_dans_positions": [
-            "2",
-            "3",
-            "4"
-          ],
-          "absent_top5_mais_present_bas_classement": false,
-          "raison_exclusion": "Hors-sujet par rapport à l'intention de recherche pratique",
-          "risque_positionnement": "élevé - pénalité pour non-pertinence"
-        }
-      ],
-      "strategie_positionnement": {
-        "socle_obligatoire": {
-          "angles_minimum": [
-            "Approche pédagogique structurée par étapes",
-            "Différenciation production corporate vs cinématographique"
-          ],
-          "profondeur_requise": "approfondi",
-          "themes_incontournables": [
-            "Processus de production étape par étape",
-            "Gestion des équipes et rôles",
-            "Conseils pour non-acteurs"
-          ]
-        },
-        "differentiation_recommandee": {
-          "angles_uniques_proposes": [
-            "Guide production vidéo avec focus budget et ROI",
-            "Production vidéo collaborative remote"
-          ],
-          "approfondissements_cibles": [
-            "Techniques de direction pour non-acteurs",
-            "Stratégie marketing intégrée"
-          ],
-          "approches_innovantes": [
-            "Citations d'experts intégrées",
-            "Études de cas concrets avec chiffres"
-          ],
-          "themes_emergents_a_exploiter": [
-            "Techniques de direction pour non-acteurs",
-            "Stratégie marketing intégrée dès la préproduction"
-          ]
-        },
-        "niveau_ambition_global": "ambitieux",
-        "effort_editorial_estime": "Élevé - nécessite recherche approfondie et intégration d'expertise terrain"
-      },
-      "recommandation_positionnement_global": {
-        "type_contenu_optimal": "Guide pratique approfondi avec études de cas",
-        "intention_cible": "informationnelle",
-        "portee_commerciale_recommandee": "legere",
-        "orientation_cta_optimale": "CTA modérés vers ressources complémentaires ou outils professionnels mentionnés naturellement"
-      }
+      "raw_response_fallback": "```json\n{\n    \"analyse_angles_concurrentiels\": {\n        \"angles_dominants\": [\n            {\n                \"angle\": \"Approche pédagogique structurée par phase (préproduction, production, postproduction)\",\n                \"frequence_utilisation\": \"Position 1\",\n                \"niveau_profondeur_moyen\": \"approfondi\",\n                \"positionnement_requis\": \"Obligatoire\",\n                \"exemples_reussis\": [\"Position 1\"]\n            },\n            {\n                \"angle\": \"Intégration de citations d'experts du secteur pour crédibiliser les conseils\",\n                \"frequence_utilisation\": \"Position 1\",\n                \"niveau_profondeur_moyen\": \"approfondi\",\n                \"positionnement_requis\": \"Recommande\",\n                \"exemples_reussis\": [\"Position 1\"]\n            },\n            {\n                \"angle\": \"Comparaison explicite video production vs filmmaking traditionnel\",\n                \"frequence_utilisation\": \"Position 1\",\n                \"niveau_profondeur_moyen\": \"",
+      "parsing_error": true
     }
   },
   "angle_select": {
-    "angle_selectionne": "Production vidéo collaborative remote/post-COVID",
-    "score_total": "10/12",
-    "justification_selection": "Cet angle comble un gap concurrentiel majeur sur les nouvelles réalités de travail post-COVID tout en étant parfaitement complémentaire du socle obligatoire qui traite des aspects pédagogiques et différenciation corporate/cinéma.",
-    "scores_details": {
-      "alignement_intention": "3/3",
-      "non_redondance": "3/3",
-      "valeur_ajoutee": "3/3",
-      "faisabilite_roi": "1/3"
-    }
+    "angle_selectionne": "Analyse impossible - données préliminaires insuffisantes",
+    "score_total": "0/12",
+    "justification_selection": "Impossible de sélectionner un angle optimal car la synthèse stratégique a échoué",
+    "parsing_error": true,
+    "dependency_failed": true
   }
 }
